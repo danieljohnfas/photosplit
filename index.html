@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhotoSplit Studio — Free Multi-Photo Scanner & Splitter</title>
+  <meta name="description" content="Free browser-based tool to scan, detect, and split multiple photos from a single scanned image. All processing happens on your device — your photos never leave your browser." />
+  <meta name="keywords" content="photo scanner, photo splitter, scan photos, split scanned photos, AutoSplitter alternative, free photo tool" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="PhotoSplit Studio — Free Multi-Photo Scanner & Splitter" />
+  <meta property="og:description" content="Split multiple photos from a single scan — entirely in your browser, 100% private." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✂️</text></svg>" />
+  
+  <!-- SEO Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "PhotoSplit Studio",
+    "url": "https://photosplitstudio.com",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "All",
+    "description": "Free browser-based tool to automatically detect, crop, and split multiple scanned photos from a single composite image.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Preconnect for Google Fonts (already in CSS @import — this just speeds it up) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+<div id="app-shell">
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       GOOGLE ADSENSE — TOP LEADERBOARD (728×90)
+       Replace the comment below with your AdSense ad unit code
+  ════════════════════════════════════════════════════════════════════════ -->
+  <div id="ad-leaderboard" role="complementary" aria-label="Advertisement">
+    <!-- GOOGLE ADSENSE AD UNIT HERE — leaderboard 728×90 -->
+    <span>Advertisement</span>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SITE HEADER
+  ════════════════════════════════════════════════════════════════════════ -->
+  <header id="site-header" role="banner">
+    <div class="logo-icon" aria-hidden="true">✂️</div>
+    <span class="logo">PhotoSplit Studio</span>
+
+    <div class="header-spacer"></div>
+
+    <!-- Privacy Badge -->
+    <div class="privacy-badge" role="status" aria-label="Privacy guarantee">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      <span>Your photos never leave your device</span>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <button class="icon-btn" id="dark-toggle" title="Switch to dark mode"
+            aria-label="Toggle dark mode">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
+
+    <!-- Help / Keyboard shortcuts button -->
+    <button class="icon-btn" id="btn-shortcuts" title="Keyboard shortcuts"
+            aria-label="Show keyboard shortcuts">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <rect x="2" y="6" width="20" height="12" rx="2"/>
+        <path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M8 14h8"/>
+      </svg>
+    </button>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       MAIN BODY (sidebar + canvas area)
+  ════════════════════════════════════════════════════════════════════════ -->
+  <main id="main-body" role="main">
+
+    <!-- ── SIDEBAR ──────────────────────────────────────────────────────── -->
+    <aside id="sidebar" aria-label="Controls">
+
+      <!-- Upload -->
+      <section class="sidebar-section">
+        <div class="section-label">📂 Upload Scans</div>
+
+        <div id="upload-zone" role="button" tabindex="0"
+             aria-label="Upload scan images by clicking or dragging files here"
+             onkeypress="if(event.key==='Enter'||event.key===' ')document.getElementById('file-input').click()">
+          <span class="upload-icon" aria-hidden="true">🖼️</span>
+          <div class="upload-text">
+            <strong>Click</strong> or drag &amp; drop scans here
+          </div>
+          <div class="upload-formats">JPEG · PNG · TIFF · BMP · GIF · WebP</div>
+        </div>
+
+        <input type="file" id="file-input" multiple
+               accept=".jpg,.jpeg,.png,.tif,.tiff,.bmp,.gif,.webp,image/*"
+               aria-label="Select scan image files" />
+      </section>
+
+      <!-- File list -->
+      <section class="sidebar-section" id="file-list-section">
+        <div class="section-label">📋 Loaded Scans</div>
+        <div id="file-list" role="list" aria-label="Loaded scan files"></div>
+      </section>
+
+      <!-- Detection settings -->
+      <section class="sidebar-section detect-settings">
+        <div class="section-label">🔍 Detection Settings</div>
+
+        <div class="label-row">
+          <label class="form-label" for="bg-threshold-slider">
+            Background threshold
+          </label>
+          <span class="range-val" id="bg-threshold-val">240</span>
+        </div>
+        <div class="range-row">
+          <input type="range" id="bg-threshold-slider"
+                 min="150" max="254" value="240" step="1"
+                 aria-label="Background brightness threshold" />
+        </div>
+
+        <div class="label-row">
+          <label class="form-label" for="min-area-slider">
+            Min photo area
+          </label>
+          <span class="range-val" id="min-area-val">0.5%</span>
+        </div>
+        <div class="range-row">
+          <input type="range" id="min-area-slider"
+                 min="0.1" max="5" value="0.5" step="0.1"
+                 aria-label="Minimum photo area as percentage of scan" />
+        </div>
+      </section>
+
+      <!-- Enhancements -->
+      <section class="sidebar-section">
+        <div class="section-label">✨ Enhancements</div>
+
+        <div class="toggle-row">
+          <span class="toggle-label">Auto-straighten splits</span>
+          <label class="toggle" aria-label="Auto-straighten detected photos">
+            <input type="checkbox" id="auto-straighten-toggle" />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="toggle-row">
+          <span class="toggle-label">Auto color enhance</span>
+          <label class="toggle" aria-label="Auto color enhance faded photos">
+            <input type="checkbox" id="auto-enhance-toggle" />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </section>
+
+      <!-- Output settings -->
+      <section class="sidebar-section">
+        <div class="section-label">💾 Output Settings</div>
+
+        <label class="form-label" for="format-select">Format</label>
+        <select class="form-control" id="format-select"
+                aria-label="Output image format">
+          <option value="jpeg">JPEG</option>
+          <option value="png">PNG (lossless)</option>
+        </select>
+
+        <div class="label-row" id="quality-row">
+          <label class="form-label" for="quality-slider">JPEG quality</label>
+          <span class="range-val" id="quality-val">90%</span>
+        </div>
+        <div class="range-row" id="quality-range-row">
+          <input type="range" id="quality-slider"
+                 min="10" max="100" value="90" step="1"
+                 aria-label="JPEG output quality" />
+        </div>
+
+        <label class="form-label" for="filename-input">Base filename</label>
+        <input type="text" class="form-control" id="filename-input"
+               value="photo_" placeholder="e.g. family_1960_"
+               aria-label="Base filename for exported photos"
+               maxlength="80" />
+        <div style="font-size:0.68rem;color:var(--text-muted);margin-top:-6px;margin-bottom:8px">
+          Files will be named: <em id="filename-preview">photo_01.jpg</em>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════════
+           GOOGLE ADSENSE — SIDEBAR RECTANGLE (300×250)
+           Replace the comment below with your AdSense ad unit code
+      ════════════════════════════════════════════════════════════════════ -->
+      <div id="ad-sidebar" role="complementary" aria-label="Advertisement">
+        <!-- GOOGLE ADSENSE AD UNIT HERE — sidebar rectangle 300×250 -->
+        <span>Advertisement</span>
+      </div>
+
+    </aside>
+    <!-- END SIDEBAR -->
+
+    <!-- ── CANVAS AREA ──────────────────────────────────────────────────── -->
+    <section id="canvas-area" aria-label="Photo split editor">
+
+      <!-- Toolbar -->
+      <div id="canvas-toolbar" role="toolbar" aria-label="Editor tools">
+
+        <div class="toolbar-group">
+          <button class="btn btn-primary" id="btn-detect"
+                  title="Auto-detect photos in the loaded scan (Ctrl+D)"
+                  aria-label="Auto-detect photos">
+            <span class="btn-icon" aria-hidden="true">🔍</span> Detect Photos
+          </button>
+        </div>
+
+        <div class="toolbar-sep" role="separator"></div>
+
+        <div class="toolbar-group">
+          <button class="btn btn-secondary" id="btn-add-crop"
+                  title="Draw a manual crop region on the scan"
+                  aria-label="Add manual crop region">
+            <span class="btn-icon" aria-hidden="true">✏️</span> Add Crop
+          </button>
+        </div>
+
+        <div class="toolbar-sep" role="separator"></div>
+
+        <div class="toolbar-group">
+          <button class="btn btn-secondary" id="btn-undo"
+                  title="Undo (Ctrl+Z)" aria-label="Undo" disabled>
+            <span aria-hidden="true">↩</span> Undo
+          </button>
+          <button class="btn btn-secondary" id="btn-redo"
+                  title="Redo (Ctrl+Y or Ctrl+Shift+Z)" aria-label="Redo" disabled>
+            <span aria-hidden="true">↪</span> Redo
+          </button>
+        </div>
+
+        <div class="toolbar-sep" role="separator"></div>
+
+        <div class="toolbar-group">
+          <button class="btn btn-secondary" id="btn-zoom-out"
+                  title="Zoom out (-)" aria-label="Zoom out">
+            <span aria-hidden="true">🔍−</span>
+          </button>
+          <button class="btn btn-secondary" id="btn-zoom-fit"
+                  title="Zoom to fit (0)" aria-label="Fit to window">
+            Fit
+          </button>
+          <button class="btn btn-secondary" id="btn-zoom-in"
+                  title="Zoom in (+)" aria-label="Zoom in">
+            <span aria-hidden="true">🔍+</span>
+          </button>
+        </div>
+
+        <div class="toolbar-spacer"></div>
+
+        <div class="toolbar-group">
+          <button class="btn btn-success" id="btn-save-all"
+                  title="Download all detected splits" aria-label="Save all splits">
+            <span class="btn-icon" aria-hidden="true">⬇️</span> Save All
+          </button>
+        </div>
+      </div>
+
+      <!-- Canvas scroll container -->
+      <div id="canvas-scroll" role="region" aria-label="Scan preview">
+
+        <!-- Empty state (shown when no scan loaded) -->
+        <div id="empty-state" aria-live="polite">
+          <div class="empty-icon" aria-hidden="true">🖼️</div>
+          <h2>No scan loaded</h2>
+          <p>Upload a scanned image on the left to get started. PhotoSplit Studio will automatically detect individual photos.</p>
+          <button class="btn btn-primary" style="margin-top:8px"
+                  onclick="document.getElementById('file-input').click()"
+                  aria-label="Upload scan images">
+            📂 Upload Scans
+          </button>
+        </div>
+
+        <!-- Canvas wrapper (hidden until scan loaded) -->
+        <div id="canvas-wrapper" style="display:none" aria-label="Scan canvas with bounding boxes">
+
+          <!-- The main display canvas -->
+          <canvas id="main-canvas" aria-label="Scanned image"></canvas>
+
+          <!-- SVG overlay for bounding boxes -->
+          <svg id="overlay-svg" xmlns="http://www.w3.org/2000/svg"
+               role="img" aria-label="Photo detection overlay"></svg>
+
+          <!-- Transparent overlay for manual crop drawing -->
+          <div id="draw-overlay" aria-hidden="true"></div>
+
+          <!-- Visual preview rect while drawing -->
+          <div id="draw-preview-rect" aria-hidden="true"></div>
+
+        </div>
+      </div>
+
+      <!-- Progress bar -->
+      <div id="progress-container" role="status" aria-live="polite" aria-label="Processing progress">
+        <div id="progress-bar-track">
+          <div id="progress-bar-fill"></div>
+        </div>
+        <div id="progress-label">Processing…</div>
+      </div>
+
+      <!-- Splits strip -->
+      <section id="splits-panel" aria-label="Detected photo splits">
+        <div id="splits-header">
+          <h3>Detected Splits</h3>
+          <span id="splits-count" aria-live="polite">0</span>
+          <button class="btn btn-secondary" style="padding:4px 10px;font-size:0.72rem"
+                  onclick="ExportManager.saveAll()" aria-label="Download all splits">
+            ⬇ Download All
+          </button>
+        </div>
+        <div id="splits-strip" role="list" aria-label="Photo split thumbnails"></div>
+      </section>
+
+      <!-- Keyboard hint bar -->
+      <div id="kbd-hint" role="note" aria-label="Keyboard shortcuts quick reference">
+        <span><kbd>↑↓←→</kbd> Nudge box</span>
+        <span><kbd>Shift</kbd>+<kbd>↑↓</kbd> Nudge ×10</span>
+        <span><kbd>Del</kbd> Delete selected</span>
+        <span><kbd>Ctrl</kbd>+<kbd>Z</kbd> Undo</span>
+        <span><kbd>Ctrl</kbd>+<kbd>Y</kbd> Redo</span>
+        <span><kbd>+</kbd>/<kbd>−</kbd> Zoom</span>
+        <span><kbd>0</kbd> Fit</span>
+        <span><kbd>Esc</kbd> Deselect</span>
+        <span><kbd>Ctrl</kbd>+<kbd>Wheel</kbd> Zoom</span>
+      </div>
+
+    </section>
+    <!-- END CANVAS AREA -->
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       ZOOM CONTROLS (floating)
+  ════════════════════════════════════════════════════════════════════════ -->
+  <div id="zoom-controls" role="group" aria-label="Zoom level">
+    <button class="icon-btn" onclick="zoomOut()" title="Zoom out" aria-label="Zoom out">−</button>
+    <span id="zoom-label" aria-live="polite">100%</span>
+    <button class="icon-btn" onclick="zoomIn()"  title="Zoom in"  aria-label="Zoom in">+</button>
+  </div>
+
+</div><!-- #app-shell -->
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SEO CONTENT & FOOTER (Scrollable below main app)
+════════════════════════════════════════════════════════════════════════════ -->
+<article id="seo-content" class="seo-wrapper">
+  <div class="seo-container">
+    <h1>Free Online Photo Scanner & Splitter</h1>
+    <p>Welcome to <strong>PhotoSplit Studio</strong>, your free browser-based solution to extract, crop, and split multiple printed photos from a single scan. If you've been digitizing old family albums by placing 3 or 4 photos on the scanner glass at once, you know how tedious it is to manually crop them later. Our tool automates that completely.</p>
+    
+    <h2>How to split scanned photos automatically</h2>
+    <ol>
+      <li><strong>Scan multiple photos:</strong> Place your printed old photos on your flatbed scanner. Ensure there is a small gap between them so they don't overlap, then scan.</li>
+      <li><strong>Upload the scan:</strong> Drag and drop your scanned digital image (JPEG, PNG, or TIFF format) into the PhotoSplit Studio upload zone.</li>
+      <li><strong>Auto-Detection:</strong> Our advanced <em>client-side computer vision algorithm</em> acts as an automatic photo cropper, instantly detecting the edges of your photos.</li>
+      <li><strong>Review and Save:</strong> You can adjust bounds, manually straighten rotated pictures, and hit <strong>Save All</strong> to instantly download all your cropped photos perfectly separated.</li>
+    </ol>
+
+    <h2>100% Private, Zero Server Uploads</h2>
+    <p>Unlike many online photo splitter tools, PhotoSplit Studio is built with uncompromising privacy. <strong>Your photos literally never leave your device.</strong> The entire detection, scaling, and cropping process happens directly inside your web browser using HTML5 Canvas and Web Workers. We have no servers handling your image data, we do not upload your memories, and your data remains 100% safe and local to your computer.</p>
+
+    <!-- Feedback Wall Display -->
+    <div id="feedback-wall" style="display:none; margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border);">
+      <h2>Community Feedback</h2>
+      <p>See what others are saying about PhotoSplit Studio:</p>
+      <div id="feedback-list" style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+        <!-- Feedback items populate here via JS -->
+      </div>
+    </div>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="#" onclick="openTextModal('privacy-modal', event)">Privacy Policy</a>
+      <a href="#" onclick="openTextModal('terms-modal', event)">Terms of Use</a>
+      <a href="#" onclick="openTextModal('contact-modal', event)">Contact Us</a>
+      <a href="#" onclick="openTextModal('feedback-modal', event)">Feedback</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 PhotoSplit Studio. All rights reserved. Built for private archiving.</div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     LEGAL MODALS
+════════════════════════════════════════════════════════════════════════════ -->
+<div id="privacy-modal" class="text-modal-backdrop" aria-hidden="true" onclick="if(event.target===this)closeTextModal('privacy-modal')">
+  <div class="text-modal-box">
+    <div class="text-modal-header">
+      <h2>Privacy Policy</h2>
+      <button class="icon-btn" onclick="closeTextModal('privacy-modal')">✕</button>
+    </div>
+    <div class="text-modal-content">
+      <p><strong>Effective Date: April 8, 2026</strong></p>
+      <p>At PhotoSplit Studio, your privacy is our absolute priority. Our tool is designed to be a completely client-side application running exclusively in your browser.</p>
+      <ul>
+        <li><strong>No External File Uploads:</strong> When you process an image, it is loaded locally into your device's browser memory. We do not transmit, upload, or backup your personal photos to any remote servers.</li>
+        <li><strong>Zero Data Retention:</strong> As soon as you refresh or close the tab, all image data is instantly and permanently erased from your computer's active memory.</li>
+      </ul>
+      <p>We partner with Google AdSense to display advertisements which keep our service free. Third-party vendors like Google may use cookies to serve ads based on your prior visits to our website. You can easily opt out of personalized advertising by visiting your Google Ads Settings.</p>
+    </div>
+  </div>
+</div>
+
+<div id="terms-modal" class="text-modal-backdrop" aria-hidden="true" onclick="if(event.target===this)closeTextModal('terms-modal')">
+  <div class="text-modal-box">
+    <div class="text-modal-header">
+      <h2>Terms of Use</h2>
+      <button class="icon-btn" onclick="closeTextModal('terms-modal')">✕</button>
+    </div>
+    <div class="text-modal-content">
+      <p>By using PhotoSplit Studio, you agree that this tool is provided "as is" and intended strictly for personal, non-commercial use. We provide no ultimate warranties on the availability or precision of the detection engine. You retain all copyrights to the images you process.</p>
+    </div>
+  </div>
+</div>
+
+<div id="contact-modal" class="text-modal-backdrop" aria-hidden="true" onclick="if(event.target===this)closeTextModal('contact-modal')">
+  <div class="text-modal-box">
+    <div class="text-modal-header">
+      <h2>Contact Us</h2>
+      <button class="icon-btn" onclick="closeTextModal('contact-modal')">✕</button>
+    </div>
+    <div class="text-modal-content">
+      <p>If you encounter bugs, have feature requests, or have business inquiries regarding our free photo cropper platform, please feel free to reach out.</p>
+      <p>Email: <strong>support@photosplitstudio.com</strong></p>
+    </div>
+  </div>
+</div>
+
+<div id="feedback-modal" class="text-modal-backdrop" aria-hidden="true" onclick="if(event.target===this)closeTextModal('feedback-modal')">
+  <div class="text-modal-box">
+    <div class="text-modal-header">
+      <h2>Provide Feedback</h2>
+      <button class="icon-btn" onclick="closeTextModal('feedback-modal')">✕</button>
+    </div>
+    
+    <!-- Form View -->
+    <div id="feedback-form-view" class="text-modal-content">
+      <form id="feedback-form" onsubmit="handleFeedbackSubmit(event)">
+        <div style="margin-bottom: 15px;">
+          <label class="form-label">Name</label>
+          <input type="text" id="fb-name" class="form-control" placeholder="Your Name" required />
+        </div>
+        <div style="margin-bottom: 15px;">
+          <label class="form-label">Email</label>
+          <input type="email" id="fb-email" class="form-control" placeholder="your@email.com" required />
+        </div>
+        <div style="margin-bottom: 15px;">
+          <label class="form-label">Phone Number</label>
+          <input type="tel" id="fb-phone" class="form-control" placeholder="(Optional)" />
+        </div>
+        <div style="margin-bottom: 20px;">
+          <label class="form-label">Feedback</label>
+          <textarea id="fb-desc" class="form-control" rows="4" placeholder="How can we improve?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Submit Feedback</button>
+      </form>
+    </div>
+    
+    <!-- Success View -->
+    <div id="feedback-success-view" class="text-modal-content" style="display: none;">
+      <div style="text-align: center; margin-bottom: 20px;">
+        <div style="font-size: 3rem; margin-bottom: 10px;">✅</div>
+        <h3 style="color: var(--text-primary); margin-bottom: 10px;">Feedback Received!</h3>
+        <p>Thank you for helping us improve PhotoSplit Studio.</p>
+      </div>
+      <div style="background: var(--bg-surface-2); padding: 15px; border-radius: var(--radius-sm); font-size: 0.85rem;">
+        <p><strong>Name:</strong> <span id="fb-res-name"></span></p>
+        <p><strong>Email:</strong> <span id="fb-res-email"></span></p>
+        <p><strong>Phone:</strong> <span id="fb-res-phone"></span></p>
+        <p style="margin-top: 10px;"><strong>Description:</strong></p>
+        <p id="fb-res-desc" style="background: var(--bg-base); border: 1px solid var(--border); padding: 10px; border-radius: 4px; margin-top: 5px; white-space: pre-wrap;"></p>
+      </div>
+      <button type="button" class="btn btn-secondary" style="width: 100%; justify-content: center; margin-top: 20px;" onclick="closeTextModal('feedback-modal')">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     PREVIEW MODAL
+════════════════════════════════════════════════════════════════════════════ -->
+<div id="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div id="modal-box">
+    <div id="modal-header">
+      <h2 id="modal-title">Photo Preview</h2>
+      <button class="icon-btn" onclick="closeModal()" title="Close" aria-label="Close preview">✕</button>
+    </div>
+    <div id="modal-img-wrap">
+      <img id="modal-preview-img" src="" alt="Full-size photo preview" />
+    </div>
+    <div id="modal-actions"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SHORTCUTS MODAL
+════════════════════════════════════════════════════════════════════════════ -->
+<div id="shortcuts-modal" class="modal-backdrop" role="dialog" aria-modal="true"
+     aria-labelledby="shortcuts-title"
+     style="position:fixed;inset:0;background:rgba(0,0,0,.65);backdrop-filter:blur(8px);
+            z-index:300;display:none;align-items:center;justify-content:center;">
+  <div style="background:var(--bg-surface);border:1px solid var(--border-strong);
+              border-radius:var(--radius-xl);padding:28px;max-width:480px;width:90%;
+              box-shadow:var(--shadow-lg);animation:slideIn .22s ease">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+      <h2 id="shortcuts-title" style="flex:1;font-size:1rem;font-weight:700">⌨️ Keyboard Shortcuts</h2>
+      <button class="icon-btn" aria-label="Close shortcuts"
+              onclick="document.getElementById('shortcuts-modal').style.display='none'">✕</button>
+    </div>
+    <table style="width:100%;border-collapse:collapse;font-size:0.82rem">
+      <tbody>
+        <tr><td style="padding:6px 0;color:var(--text-secondary)"><kbd>↑ ↓ ← →</kbd></td><td style="padding:6px 0">Nudge selected box by 1 px</td></tr>
+        <tr><td style="padding:6px 0;color:var(--text-secondary)"><kbd>Shift</kbd>+<kbd>↑↓←→</kbd></td><td style="padding:6px 0">Nudge selected box by 10 px</td></tr>
+        <tr><td style="padding:6px 0;color:var(--text-secondary)"><kbd>Delete</kbd> / <kbd>Backspace</kbd></td><td style="padding:6px 0">Delete selected box</td></tr>
+        <tr><td style="padding:6px 0;color:var(--text-secondary)"><kbd>Ctrl</kbd>+<kbd>Z</kbd></td><td style="padding:6px 0">Undo</td></tr>
+        <tr><td style="padding:6px 0;color:var(--text-secondary)"><kbd>Ctrl</kbd>+<kbd>Y</kbd> / <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd></td><td style="padding:6px 0">Redo</td></tr>
+        <tr><td style="padding:6px 0;color:var(--text-secondary)"><kbd>+</kbd> / <kbd>−</kbd></td><td style="padding:6px 0">Zoom in / out</td></tr>
+        <tr><td style="padding:6px 0;color:var(--text-secondary)"><kbd>0</kbd></td><td style="padding:6px 0">Zoom to fit</td></tr>
+        <tr><td style="padding:6px 0;color:var(--text-secondary)"><kbd>Ctrl</kbd>+<kbd>Wheel</kbd></td><td style="padding:6px 0">Zoom with mouse wheel</td></tr>
+        <tr><td style="padding:6px 0;color:var(--text-secondary)"><kbd>Esc</kbd></td><td style="padding:6px 0">Deselect / exit crop mode</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     GLOBAL SPINNER
+════════════════════════════════════════════════════════════════════════════ -->
+<div id="global-spinner" role="status" aria-live="assertive" aria-label="Processing">
+  <div class="spinner-ring"></div>
+  <span id="global-spinner-msg">Processing…</span>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     TOAST CONTAINER
+════════════════════════════════════════════════════════════════════════════ -->
+<div id="toast-container" role="status" aria-live="polite" aria-label="Notifications"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SCRIPTS — external deps loaded from CDN
+════════════════════════════════════════════════════════════════════════════ -->
+<script src="https://cdn.jsdelivr.net/npm/utif@3.1.0/UTIF.min.js"></script>
+<script src="app.js"></script>
+
+<script>
+  /* ── Inline boot helpers (app.js already loaded above) ─────────────── */
+
+  // Shortcuts modal — single handler on the toggle button
+  (function () {
+    var modal = document.getElementById('shortcuts-modal');
+    modal.style.display = 'none';
+
+    document.getElementById('btn-shortcuts').addEventListener('click', function () {
+      modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
+    });
+
+    // Close on backdrop click
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) modal.style.display = 'none';
+    });
+
+    // Close with Escape
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        if (modal.style.display === 'flex') modal.style.display = 'none';
+        closeTextModal('privacy-modal');
+        closeTextModal('terms-modal');
+        closeTextModal('contact-modal');
+      }
+    });
+  }());
+
+  // Handlers for generic text modals
+  window.openTextModal = function(id, e) {
+    if (e) e.preventDefault();
+    if (id === 'feedback-modal') {
+      document.getElementById('feedback-form').reset();
+      document.getElementById('feedback-form-view').style.display = 'block';
+      document.getElementById('feedback-success-view').style.display = 'none';
+    }
+    document.getElementById(id).classList.add('open');
+  };
+  window.closeTextModal = function(id) {
+    document.getElementById(id).classList.remove('open');
+  };
+
+  // State Machine CSV Parser
+  function parseCSV(text) {
+    let p = '', row = [''], ret = [row], i = 0, r = 0, s = !0, l;
+    for (l of text) {
+      if ('"' === l) {
+        if (s && l === p) row[i] += l;
+        s = !s;
+      } else if (',' === l && s) l = row[++i] = '';
+      else if ('\n' === l && s) {
+        if ('\r' === p) row[i] = row[i].slice(0, -1);
+        row = ret[++r] = [l = '']; i = 0;
+      } else row[i] += l;
+      p = l;
+    }
+    return ret;
+  }
+
+  // Handle Feedback Submission & Live Wall Display
+  window.fetchAndRenderFeedbackWall = function() {
+    var csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQUEeGMkaanwb_bNhevhYnmdDp18gwZnIvkrOoo3T3PHrhEsjXf77P0DLYOniCL_Xm3pRLduwWrEVp8/pub?output=csv";
+    
+    fetch(csvUrl, { cache: "no-store" })
+      .then(function(res) { return res.text(); })
+      .then(function(csvText) {
+        var arr = parseCSV(csvText);
+        arr.shift(); // Remove header row
+        
+        var list = document.getElementById('feedback-list');
+        list.innerHTML = '';
+        var validRows = arr.filter(function(row) { return row.length >= 5 && row[1] && row[4]; });
+        
+        if (validRows.length > 0) {
+          document.getElementById('feedback-wall').style.display = 'block';
+          validRows.reverse().forEach(function(cols) {
+            var cDate = cols[0];  var cName = cols[1];
+            var cDesc = cols[4];
+            
+            var div = document.createElement('div');
+            div.style.background = 'var(--bg-surface)';
+            div.style.padding = '20px';
+            div.style.borderRadius = 'var(--radius-md)';
+            div.style.border = '1px solid var(--border)';
+            
+            var header = document.createElement('div');
+            header.style.display = 'flex';
+            header.style.justifyContent = 'space-between';
+            header.style.marginBottom = '12px';
+            
+            var nameNode = document.createElement('strong');
+            nameNode.textContent = cName;
+            nameNode.style.color = 'var(--text-primary)';
+            nameNode.style.fontSize = '0.95rem';
+            
+            var dateNode = document.createElement('span');
+            var d = new Date(cDate);
+            dateNode.textContent = !isNaN(d) ? d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' }) : cDate;
+            dateNode.style.color = 'var(--text-muted)';
+            dateNode.style.fontSize = '0.8rem';
+            
+            header.appendChild(nameNode);
+            header.appendChild(dateNode);
+            
+            var descNode = document.createElement('div');
+            descNode.textContent = cDesc;
+            descNode.style.color = 'var(--text-secondary)';
+            descNode.style.fontSize = '0.95rem';
+            descNode.style.lineHeight = '1.6';
+            descNode.style.whiteSpace = 'pre-wrap';
+            
+            div.appendChild(header);
+            div.appendChild(descNode);
+            list.appendChild(div);
+          });
+        }
+      })
+      .catch(function(err) { console.error('Failed fetching feedback CSV:', err); });
+  };
+  
+  // Call immediately on script load
+  window.fetchAndRenderFeedbackWall();
+
+  window.handleFeedbackSubmit = function(e) {
+    e.preventDefault();
+    var fName = document.getElementById('fb-name').value;
+    var fEmail = document.getElementById('fb-email').value;
+    var fPhone = document.getElementById('fb-phone').value || '';
+    var fDesc = document.getElementById('fb-desc').value;
+    
+    document.getElementById('fb-res-name').textContent = fName;
+    document.getElementById('fb-res-email').textContent = fEmail;
+    document.getElementById('fb-res-phone').textContent = fPhone || 'Not provided';
+    document.getElementById('fb-res-desc').textContent = fDesc;
+    
+    // POST to Google Forms
+    var url = "https://docs.google.com/forms/d/e/1FAIpQLSeJe_jw0IHHXeT4w4hzcZJ2WXREaT8aD4_R4LFBGVZNazsehg/formResponse";
+    var params = new URLSearchParams();
+    params.append('entry.1051903221', fName);
+    params.append('entry.371950700', fEmail);
+    params.append('entry.359432186', fPhone);
+    params.append('entry.852578852', fDesc);
+    
+    fetch(url, { method: "POST", mode: "no-cors", body: params })
+      .then(function() {
+        // Form submitted. Re-fetch sheets in 3 seconds to let Google propagate it to published CSV.
+        setTimeout(window.fetchAndRenderFeedbackWall, 3000);
+      })
+      .catch(function(e) { console.error('Form POST error:', e); });
+    
+    document.getElementById('feedback-form-view').style.display = 'none';
+    document.getElementById('feedback-success-view').style.display = 'block';
+  };
+
+  // Filename preview live update
+  function updateFilenamePreview() {
+    var base = (document.getElementById('filename-input').value.trim() || 'photo_');
+    var fmt  = document.getElementById('format-select').value;
+    var ext  = fmt === 'png' ? 'png' : 'jpg';
+    document.getElementById('filename-preview').textContent = base + '01.' + ext;
+  }
+  document.getElementById('filename-input').addEventListener('input',  updateFilenamePreview);
+  document.getElementById('format-select') .addEventListener('change', updateFilenamePreview);
+  updateFilenamePreview();
+
+  // Quality row visibility on format change
+  document.getElementById('format-select').addEventListener('change', function () {
+    var isPng = this.value === 'png';
+    document.getElementById('quality-row')      .style.display = isPng ? 'none' : '';
+    document.getElementById('quality-range-row').style.display = isPng ? 'none' : '';
+  });
+
+  // Min-area slider label — ensure '%' suffix
+  document.getElementById('min-area-slider').addEventListener('input', function () {
+    document.getElementById('min-area-val').textContent = this.value + '%';
+  });
+</script>
+
+</body>
+</html>
