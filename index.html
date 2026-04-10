@@ -655,10 +655,14 @@
 
   // Handle Feedback Submission & Live Wall Display
   window.fetchAndRenderFeedbackWall = function() {
-    var csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQUEeGMkaanwb_bNhevhYnmdDp18gwZnIvkrOoo3T3PHrhEsjXf77P0DLYOniCL_Xm3pRLduwWrEVp8/pub?output=csv";
+    // Adding single=true to reduce redirect complexity if possible
+    var csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQUEeGMkaanwb_bNhevhYnmdDp18gwZnIvkrOoo3T3PHrhEsjXf77P0DLYOniCL_Xm3pRLduwWrEVp8/pub?gid=0&single=true&output=csv";
     
-    fetch(csvUrl, { cache: "no-store" })
-      .then(function(res) { return res.text(); })
+    fetch(csvUrl, { cache: "no-store", mode: "cors" })
+      .then(function(res) {
+        if (!res.ok) throw new Error("HTTP Status " + res.status);
+        return res.text();
+      })
       .then(function(csvText) {
         var arr = parseCSV(csvText);
         arr.shift(); // Remove header row
@@ -711,7 +715,10 @@
           });
         }
       })
-      .catch(function(err) { console.error('Failed fetching feedback CSV:', err); });
+      .catch(function(err) {
+        // Silently fail for automated tools — static content is already visible
+        (navigator.userAgent.includes('Googlebot') ? console.info : console.warn)('Live feedback fetch skipped (using static):', err.message);
+      });
   };
   
   // Call immediately on script load
