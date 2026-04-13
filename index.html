@@ -728,6 +728,7 @@
         <tr><td style="padding:6px 0;color:var(--text-secondary)"><kbd>↑ ↓ ← →</kbd></td><td style="padding:6px 0">Nudge selected box by 1 px</td></tr>
         <tr><td style="padding:6px 0;color:var(--text-secondary)"><kbd>Shift</kbd>+<kbd>↑↓←→</kbd></td><td style="padding:6px 0">Nudge selected box by 10 px</td></tr>
         <tr><td style="padding:6px 0;color:var(--text-secondary)"><kbd>Delete</kbd> / <kbd>Backspace</kbd></td><td style="padding:6px 0">Delete selected box</td></tr>
+        <tr><td style="padding:6px 0;color:var(--text-secondary)"><kbd>Q</kbd> / <kbd>E</kbd></td><td style="padding:6px 0">Rotate selected box</td></tr>
         <tr><td style="padding:6px 0;color:var(--text-secondary)"><kbd>Ctrl</kbd>+<kbd>Z</kbd></td><td style="padding:6px 0">Undo</td></tr>
         <tr><td style="padding:6px 0;color:var(--text-secondary)"><kbd>Ctrl</kbd>+<kbd>Y</kbd> / <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd></td><td style="padding:6px 0">Redo</td></tr>
         <tr><td style="padding:6px 0;color:var(--text-secondary)"><kbd>+</kbd> / <kbd>−</kbd></td><td style="padding:6px 0">Zoom in / out</td></tr>
@@ -822,6 +823,12 @@
     // Adding single=true to reduce redirect complexity if possible
     var csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQUEeGMkaanwb_bNhevhYnmdDp18gwZnIvkrOoo3T3PHrhEsjXf77P0DLYOniCL_Xm3pRLduwWrEVp8/pub?gid=0&single=true&output=csv";
     
+    // Prevent Googlebot/crawlers from making network calls to blocked Google Sheets endpoints
+    if (/bot|google|baidu|bing|msn|duckduckbot|teoma|slurp|yandex/i.test(navigator.userAgent)) {
+      console.info("Bot detected: Live feedback fetch skipped (using static HTML)");
+      return;
+    }
+
     fetch(csvUrl, { cache: "no-store", mode: "cors" })
       .then(function(res) {
         if (!res.ok) throw new Error("HTTP Status " + res.status);

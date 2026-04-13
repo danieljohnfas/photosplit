@@ -582,9 +582,6 @@ function applyDetectedBoxes(boxes) {
   showToast(`Detected ${state.boxes.length} photo${state.boxes.length !== 1 ? 's' : ''}.`, 'success');
 }
 
-  return mergeOverlappingMT(boxes, width, height);
-}
-
 function dilateMT(mask, width, height, r) {
   const tmp = new Uint8Array(width * height);
   const out = new Uint8Array(width * height);
@@ -922,6 +919,12 @@ function initKeyboard() {
         nudgeSelected(0, -NUDGE); e.preventDefault(); break;
       case 'ArrowDown':
         nudgeSelected(0,  NUDGE); e.preventDefault(); break;
+      case 'e': case 'E':
+        if (state.selectedBoxId !== null) { rotateBox(state.selectedBoxId, 90); e.preventDefault(); }
+        break;
+      case 'q': case 'Q':
+        if (state.selectedBoxId !== null) { rotateBox(state.selectedBoxId, -90); e.preventDefault(); }
+        break;
       case 'Escape':
         state.selectedBoxId = null;
         stopCropMode();
