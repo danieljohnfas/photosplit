@@ -135,8 +135,7 @@
     gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
   </script>
 
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✂️</text></svg>" />
+  <link rel="icon" href="/logo.png" type="image/png" />
   <link rel="preload" href="style.css" as="style" />
   <link rel="preload" href="app.js" as="script" />
   <link rel="preload" href="https://docs.opencv.org/4.8.0/opencv.js" as="script" fetchpriority="high" />
@@ -156,7 +155,8 @@
        SITE HEADER
   ════════════════════════════════════════════════════════════════════════ -->
     <header id="site-header" role="banner">
-      <div class="logo-icon" aria-hidden="true">✂️</div>
+      <img src="/logo.png" alt="Logo" class="logo-icon" aria-hidden="true"
+        style="width: 28px; height: 28px; border-radius: 6px; object-fit: cover;" />
       <span class="logo">PhotoSplit Studio</span>
 
       <nav class="main-nav" aria-label="Main Navigation">
@@ -377,6 +377,10 @@
               aria-label="Download ZIP">
               <span class="btn-icon" aria-hidden="true">🗜️</span> ZIP
             </button>
+            <button class="btn btn-secondary" id="btn-global-share" title="Share selected photo to Social Media"
+              aria-label="Share Photo">
+              <span class="btn-icon" aria-hidden="true">📤</span> Social Share
+            </button>
           </div>
 
           <div class="toolbar-sep" role="separator"></div>
@@ -552,7 +556,8 @@
             Sensitivity</h3>
           <p style="margin-bottom: 0;">Got cream-colored scanner beds or ultra-faded vintage borders? Simply tweak the
             <strong>background threshold</strong> and <strong>minimum area</strong> sliders to flawlessly detect photos
-            that other automated tools completely miss.</p>
+            that other automated tools completely miss.
+          </p>
         </div>
 
         <div
@@ -1031,7 +1036,8 @@
           </tr>
           <tr>
             <td style="padding:6px 0;color:var(--text-secondary)"><kbd>Ctrl</kbd>+<kbd>Y</kbd> /
-              <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd></td>
+              <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd>
+            </td>
             <td style="padding:6px 0">Redo</td>
           </tr>
           <tr>

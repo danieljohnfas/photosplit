@@ -1901,6 +1901,19 @@ function initButtons() {
   const btnZip = $('btn-save-zip');
   if (btnZip) btnZip.addEventListener('click', () => ZipManager.saveAllAsZip(state.boxes));
 
+  // Global Social Share Button
+  const btnGlobalShare = $('btn-global-share');
+  if (btnGlobalShare) {
+    btnGlobalShare.addEventListener('click', () => {
+      if (state.boxes.length === 0) {
+        showToast('No photos detected yet. Run detection first.', 'warning');
+        return;
+      }
+      const targetId = state.selectedId || state.boxes[0].id;
+      SocialManager.openModal(targetId);
+    });
+  }
+
   // Carousel Button
   const btnCarousel = $('btn-carousel-split');
   if (btnCarousel) btnCarousel.addEventListener('click', () => CarouselSplitter.openModal());
