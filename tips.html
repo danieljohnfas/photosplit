@@ -3,20 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How to Split Image from Scans — Digitization Tips | PhotoSplit Studio</title>
+  <title>How to Scan and Split Multiple Photos — Complete Guide | PhotoSplit Studio</title>
   <meta name="description" content="Complete guide to separating multiple photos from a single scan. Learn how to scan photos for best quality, DPI settings, and how to split image groups automatically." />
   <meta name="keywords" content="how to split image, split scan, separate photos from scan, get multiple images or photos from a file, scan photos, digitize old photos, photo scanning tips, best resolution for scanning photos" />
   <meta name="robots" content="index, follow" />
+  <meta name="author" content="PhotoSplit Studio" />
   <link rel="canonical" href="https://photosplitstudio.com/tips.html" />
 
   <meta property="og:type"        content="article" />
-  <meta property="og:title"       content="How to Split Image from Scans — Digitization Tips" />
+  <meta property="article:published_time" content="2026-03-01T12:00:00Z" />
+  <meta property="article:author" content="PhotoSplit Studio" />
+  <meta property="og:title"       content="How to Scan and Split Multiple Photos — Complete Guide" />
   <meta property="og:description" content="Complete guide on how to digitize and split batches of scanned photos with maximum efficiency." />
   <meta property="og:url"         content="https://photosplitstudio.com/tips.html" />
   <meta property="og:image"       content="https://photosplitstudio.com/og-image.png" />
+  <meta property="og:image:alt"   content="PhotoSplit Studio automatic scan splitter" />
   
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="How to Split Image from Scans — Digitization Tips" />
+  <meta name="twitter:title"       content="How to Scan and Split Multiple Photos — Complete Guide" />
+  <meta name="twitter:description" content="Complete guide on how to digitize and split batches of scanned photos with maximum efficiency." />
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✂️</text></svg>" />
   <meta name="google-adsense-account" content="ca-pub-2501499631331261">
@@ -24,76 +29,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #f8f9fb; --bg-surface: #ffffff; --text: #1a1d23;
-      --text-secondary: #4a5568; --text-muted: #718096;
-      --accent: #5c6ac4; --accent-dark: #3d4bb3;
-      --border: #e2e8f0; --radius: 12px;
-      --shadow: 0 2px 12px rgba(0,0,0,.08);
-    }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* NAV */
-    .site-nav {
-      background: var(--bg-surface); border-bottom: 1px solid var(--border);
-      padding: 0 24px; display: flex; align-items: center; gap: 20px; height: 56px;
-      position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow);
-    }
-    .site-nav .logo { font-weight: 700; font-size: 1.05rem; color: var(--text); text-decoration: none; display: flex; align-items: center; gap: 8px; }
-    .site-nav .nav-links { display: flex; gap: 20px; margin-left: auto; }
-    .site-nav .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-secondary); }
-    .site-nav .nav-links a:hover { color: var(--accent); text-decoration: none; }
-    .site-nav .cta { background: var(--accent); color: #fff; padding: 7px 16px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; }
-    .site-nav .cta:hover { background: var(--accent-dark); text-decoration: none; }
-
-    /* HERO */
-    .hero {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: #fff; padding: 64px 24px; text-align: center;
-    }
-    .hero h1 { font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 700; margin-bottom: 16px; line-height: 1.25; }
-    .hero p { font-size: 1.05rem; opacity: 0.9; max-width: 620px; margin: 0 auto; }
-
-    /* CONTENT */
-    .content-wrap { max-width: 800px; margin: 0 auto; padding: 56px 24px; }
-
-    h2 { font-size: 1.45rem; font-weight: 700; margin: 48px 0 16px; color: var(--text); border-left: 4px solid var(--accent); padding-left: 14px; }
-    h3 { font-size: 1.1rem; font-weight: 600; margin: 28px 0 10px; color: var(--text); }
-    p  { margin-bottom: 16px; color: var(--text-secondary); }
-    ul, ol { margin: 0 0 20px 24px; color: var(--text-secondary); }
-    li { margin-bottom: 8px; }
-
-    .tip-card {
-      background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 24px; margin: 24px 0; box-shadow: var(--shadow);
-    }
-    .tip-card h3 { margin-top: 0; color: var(--accent); }
-
-    .callout {
-      background: #ebf4ff; border-left: 4px solid var(--accent);
-      padding: 16px 20px; border-radius: 0 var(--radius) var(--radius) 0; margin: 24px 0;
-    }
-    .callout p { margin: 0; color: #2b4e8a; font-weight: 500; }
-
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.9rem; }
-    th { background: var(--accent); color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
-    td { padding: 10px 14px; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
-    tr:hover td { background: #f0f4ff; }
-
-    .breadcrumb { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 32px; }
-    .breadcrumb a { color: var(--text-muted); }
-    .breadcrumb span { margin: 0 6px; }
-
-    /* FOOTER */
-    .site-footer { background: var(--text); color: #aaa; text-align: center; padding: 32px 24px; font-size: 0.82rem; margin-top: 80px; }
-    .site-footer a { color: #ccc; margin: 0 10px; }
-    .site-footer a:hover { color: #fff; }
-    .footer-links { margin-bottom: 12px; }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="secondary.css" />
 </head>
 <body>
 
@@ -107,7 +44,7 @@
   </div>
 </nav>
 
-<div class="hero">
+<div class="hero tips-hero">
   <h1>How to Digitize Your Old Photo Collection</h1>
   <p>A practical, step-by-step guide to scanning, splitting, and archiving hundreds of printed photos quickly and efficiently.</p>
 </div>

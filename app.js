@@ -153,6 +153,7 @@ function pushUndo() {
   if (state.undoStack.length > CONFIG.UNDO_LIMIT) state.undoStack.shift();
   state.redoStack = [];
   refreshUndoButtons();
+  saveSession();
 }
 
 function undo() {
@@ -163,6 +164,7 @@ function undo() {
   refreshUndoButtons();
   renderOverlay();
   renderStrip();
+  saveSession();
 }
 
 function redo() {
@@ -173,6 +175,24 @@ function redo() {
   refreshUndoButtons();
   renderOverlay();
   renderStrip();
+  saveSession();
+}
+
+function saveSession() {
+  if (state.activeFileIdx < 0 || !state.files[state.activeFileIdx]) return;
+  const currentFile = state.files[state.activeFileIdx];
+  const sessionData = { filename: currentFile.name, boxes: state.boxes };
+  localStorage.setItem('photosplit_session', JSON.stringify(sessionData));
+}
+
+function restoreSession(currentFile) {
+  try {
+    const data = JSON.parse(localStorage.getItem('photosplit_session'));
+    if (data && data.filename === currentFile.name && data.boxes && data.boxes.length > 0) {
+      state.boxes = data.boxes;
+      showToast('Restored previous session', 'info', 2000);
+    }
+  } catch(e) {}
 }
 
 function refreshUndoButtons() {
@@ -267,6 +287,11 @@ function initFileManager() {
 
 const ALLOWED_TYPES = ['image/jpeg','image/png','image/tiff','image/bmp','image/gif','image/webp'];
 
+function refreshUndoButtons() {
+  DOM.btnUndo().disabled = state.undoStack.length === 0;
+  DOM.btnRedo().disabled = state.redoStack.length === 0;
+}
+
 async function handleFiles(files) {
   const valid = files.filter(f => ALLOWED_TYPES.includes(f.type) ||
     /\.(jpe?g|png|tiff?|bmp|gif|webp)$/i.test(f.name));
@@ -359,9 +384,7 @@ function addFileChip(idx) {
 
 function removeFile(idx) {
   state.files.splice(idx, 1);
-  const chip = $(`file-chip-${idx}`);
-  if (chip) chip.remove();
-  // Rebuild chips
+  // Rebuild the whole list so IDs stay consistent
   DOM.fileList().innerHTML = '';
   state.files.forEach((_, i) => addFileChip(i));
 
@@ -392,13 +415,39 @@ function activateFile(idx) {
   });
 
   const entry = state.files[idx];
+  restoreSession(entry);
+
   drawScanToCanvas(entry.img);
   showCanvas();
   zoomFit();
   renderOverlay();
   renderStrip();
   DOM.splitsPanel().classList.remove('visible');
+  if (state.boxes.length > 0) DOM.splitsPanel().classList.add('visible');
+
   showToast(`Loaded: ${entry.name}`, 'info', 2000);
+}
+
+// Async wrappers for batch processing
+async function activateFileAsync(idx) {
+  return new Promise(resolve => {
+    activateFile(idx);
+    setTimeout(resolve, 50); // Yield to render
+  });
+}
+
+function runDetectionAsync() {
+  return new Promise(resolve => {
+    runDetection();
+    if (!state.workerBusy) { resolve(); return; }
+    
+    const check = setInterval(() => {
+      if (!state.workerBusy) {
+        clearInterval(check);
+        resolve();
+      }
+    }, 100);
+  });
 }
 
 /* ══════════════════════════════════════════════════════════════════════════ *
@@ -579,103 +628,19 @@ function applyDetectedBoxes(boxes) {
   renderOverlay();
   renderStrip();
   DOM.splitsPanel().classList.add('visible');
+  if (typeof gtag !== 'undefined') gtag('event', 'photos_detected', { count: state.boxes.length });
   showToast(`Detected ${state.boxes.length} photo${state.boxes.length !== 1 ? 's' : ''}.`, 'success');
 }
 
-function dilateMT(mask, width, height, r) {
-  const tmp = new Uint8Array(width * height);
-  const out = new Uint8Array(width * height);
-  for (let y = 0; y < height; y++) {
-    const ro = y * width;
-    for (let x = 0; x < width; x++) {
-      const x0=Math.max(0,x-r), x1=Math.min(width-1,x+r);
-      let f=false; for (let nx=x0;nx<=x1;nx++) if(mask[ro+nx]){f=true;break;}
-      tmp[ro+x]=f?1:0;
-    }
-  }
-  for (let x = 0; x < width; x++) {
-    for (let y = 0; y < height; y++) {
-      const y0=Math.max(0,y-r), y1=Math.min(height-1,y+r);
-      let f=false; for (let ny=y0;ny<=y1;ny++) if(tmp[ny*width+x]){f=true;break;}
-      out[y*width+x]=f?1:0;
-    }
-  }
-  return out;
-}
-
-function erodeMT(mask, width, height, r) {
-  const tmp = new Uint8Array(width * height);
-  const out = new Uint8Array(width * height);
-  for (let y = 0; y < height; y++) {
-    const ro = y * width;
-    for (let x = 0; x < width; x++) {
-      if (!mask[ro+x]) { tmp[ro+x]=0; continue; }
-      const x0=Math.max(0,x-r), x1=Math.min(width-1,x+r);
-      let all=true; for (let nx=x0;nx<=x1;nx++) if(!mask[ro+nx]){all=false;break;}
-      tmp[ro+x]=all?1:0;
-    }
-  }
-  for (let x = 0; x < width; x++) {
-    for (let y = 0; y < height; y++) {
-      if (!tmp[y*width+x]) { out[y*width+x]=0; continue; }
-      const y0=Math.max(0,y-r), y1=Math.min(height-1,y+r);
-      let all=true; for (let ny=y0;ny<=y1;ny++) if(!tmp[ny*width+x]){all=false;break;}
-      out[y*width+x]=all?1:0;
-    }
-  }
-  return out;
-}
 
 
 
-function labelComponentsMT(mask, width, height) {
-  const parent = new Int32Array(width*height);
-  const labels = new Int32Array(width*height);
-  for (let i=0;i<parent.length;i++) parent[i]=i;
-  function find(x){while(parent[x]!==x){parent[x]=parent[parent[x]];x=parent[x];}return x;}
-  function union(a,b){const ra=find(a),rb=find(b);if(ra!==rb)parent[ra]=rb;}
-  for (let y=0;y<height;y++) for (let x=0;x<width;x++) {
-    const idx=y*width+x;
-    if (!mask[idx]) continue;
-    if (x>0&&mask[idx-1]) union(idx,idx-1);
-    if (y>0&&mask[idx-width]) union(idx,idx-width);
-  }
-  let next=1; const m={};
-  for (let i=0;i<mask.length;i++) {
-    if (!mask[i]){labels[i]=0;continue;}
-    const r=find(i);
-    if (m[r]===undefined) m[r]=next++;
-    labels[i]=m[r];
-  }
-  return labels;
-}
 
-function mergeOverlappingMT(boxes, width, height) {
-  if (!boxes.length) return [];
-  let changed=true;
-  while(changed){
-    changed=false;
-    const used=new Array(boxes.length).fill(false), merged=[];
-    for(let i=0;i<boxes.length;i++){
-      if(used[i]) continue;
-      let a=boxes[i];
-      for(let j=i+1;j<boxes.length;j++){
-        if(used[j]) continue;
-        const b=boxes[j];
-        if(!(a.x+a.w+5<b.x||b.x+b.w+5<a.x||a.y+a.h+5<b.y||b.y+b.h+5<a.y)){
-          a={x:Math.min(a.x,b.x),y:Math.min(a.y,b.y),
-             w:Math.max(a.x+a.w,b.x+b.w)-Math.min(a.x,b.x),
-             h:Math.max(a.y+a.h,b.y+b.h)-Math.min(a.y,b.y)};
-          used[j]=true; changed=true;
-        }
-      }
-      merged.push(a);
-    }
-    boxes=merged;
-  }
-  return boxes.map(b=>({x:Math.max(0,b.x),y:Math.max(0,b.y),
-    w:Math.min(width-b.x,b.w),h:Math.min(height-b.y,b.h)}));
-}
+
+
+
+
+
 
 /* ══════════════════════════════════════════════════════════════════════════ *
  *  AUTO STRAIGHTEN                                                           *
@@ -1102,6 +1067,7 @@ function createThumbElement(box, idx) {
       <button class="split-action-btn" title="Rotate 90° CW"  data-action="rotatecw">↻</button>
       <button class="split-action-btn" title="Rotate 90° CCW" data-action="rotateccw">↺</button>
       <button class="split-action-btn" title="Preview" data-action="preview">🔍</button>
+      <button class="split-action-btn" title="Share" data-action="share">📤</button>
       <button class="split-action-btn" title="Delete"  data-action="delete">✕</button>
     </div>`;
   wrap.appendChild(ov);
@@ -1114,10 +1080,35 @@ function createThumbElement(box, idx) {
   }
 
   // Events
+  wrap.draggable = true;
+  wrap.addEventListener('dragstart', e => {
+    e.dataTransfer.setData('text/plain', idx);
+    wrap.classList.add('dragging');
+  });
+  wrap.addEventListener('dragend', () => wrap.classList.remove('dragging'));
+  wrap.addEventListener('dragover', e => {
+    e.preventDefault();
+    wrap.classList.add('drag-over');
+  });
+  wrap.addEventListener('dragleave', () => wrap.classList.remove('drag-over'));
+  wrap.addEventListener('drop', e => {
+    e.preventDefault();
+    wrap.classList.remove('drag-over');
+    const fromIdx = parseInt(e.dataTransfer.getData('text/plain'), 10);
+    const toIdx = idx;
+    if (fromIdx !== toIdx && !isNaN(fromIdx)) {
+      const moved = state.boxes.splice(fromIdx, 1)[0];
+      state.boxes.splice(toIdx, 0, moved);
+      pushUndo();
+      renderStrip();
+    }
+  });
+
   wrap.addEventListener('click', () => { selectBox(box.id); scrollToBox(box.id); });
   ov.querySelector('[data-action="rotatecw"]') .addEventListener('click', e => { e.stopPropagation(); rotateBox(box.id,  90); });
   ov.querySelector('[data-action="rotateccw"]').addEventListener('click', e => { e.stopPropagation(); rotateBox(box.id, -90); });
   ov.querySelector('[data-action="preview"]')  .addEventListener('click', e => { e.stopPropagation(); previewBox(box.id); });
+  ov.querySelector('[data-action="share"]')    .addEventListener('click', e => { e.stopPropagation(); SocialManager.openModal(box.id); });
   ov.querySelector('[data-action="delete"]')   .addEventListener('click', e => { e.stopPropagation(); deleteBox(box.id); });
 
   return wrap;
@@ -1237,17 +1228,47 @@ function previewBox(id) {
   DOM.modalTitle().textContent = box.label || `Photo ${idx + 1}`;
   DOM.modalPreviewImg().src = dataUrl;
 
-  DOM.modalActions().innerHTML = `
+  const actionsEl = DOM.modalActions();
+  actionsEl.innerHTML = `
     <button class="btn btn-secondary" id="modal-rotate-ccw">↺ Rotate CCW</button>
     <button class="btn btn-secondary" id="modal-rotate-cw">↻ Rotate CW</button>
     <button class="btn btn-primary" id="modal-save-one">⬇ Save This Photo</button>
+    <button class="btn btn-secondary" id="modal-share-one">📤 Share</button>
+    <button class="btn btn-secondary" id="modal-ba-toggle" style="display:none">🔄 Before/After</button>
     <button class="btn btn-secondary" id="modal-close">Close</button>
   `;
 
   $('modal-rotate-cw') .addEventListener('click', () => { rotateBox(id,  90); previewBox(id); });
   $('modal-rotate-ccw').addEventListener('click', () => { rotateBox(id, -90); previewBox(id); });
   $('modal-save-one')  .addEventListener('click', () => { ExportManager.saveOne(id); });
+  $('modal-share-one') .addEventListener('click', () => { closeModal(); SocialManager.openModal(id); });
   $('modal-close')     .addEventListener('click', closeModal);
+
+  // Before/After toggle — only when Auto Enhance is on
+  const baBtn = $('modal-ba-toggle');
+  if (DOM.autoEnhanceToggle()?.checked) {
+    baBtn.style.display = '';
+    let baActive = false;
+    baBtn.addEventListener('click', () => {
+      baActive = !baActive;
+      const box = state.boxes.find(b => b.id === id);
+      if (!box) return;
+      const enhanced = renderBoxToCanvas(box, { enhance: true });
+      const original = renderBoxToCanvas(box, { enhance: false });
+      const img = $('modal-preview-img');
+      if (baActive) {
+        img.src = original.toDataURL();
+        img.setAttribute('data-ba', 'original');
+        baBtn.textContent = '← See Enhanced';
+        baBtn.title = 'Showing original — click for enhanced version';
+      } else {
+        img.src = enhanced.toDataURL();
+        img.setAttribute('data-ba', 'enhanced');
+        baBtn.textContent = '🔄 Before/After';
+        baBtn.title = 'Showing enhanced — click for original version';
+      }
+    });
+  }
 
   DOM.modalBackdrop().classList.add('open');
 }
@@ -1271,18 +1292,79 @@ function initModal() {
 
 const ExportManager = {
   getSettings() {
+    const yearRaw = $('photo-year-input')?.value?.trim();
     return {
-      format:   DOM.formatSelect().value,
-      quality:  parseFloat(DOM.qualitySlider().value) / 100,
-      baseName: DOM.filenameInput().value.trim() || 'photo_',
+      format:    DOM.formatSelect().value,
+      quality:   parseFloat(DOM.qualitySlider().value) / 100,
+      baseName:  DOM.filenameInput().value.trim() || 'photo_',
+      photoYear: yearRaw ? parseInt(yearRaw, 10) : null,
     };
   },
 
   canvasToBlob(canvas, format, quality) {
     return new Promise(resolve => {
       const mime = format === 'png' ? 'image/png' : 'image/jpeg';
-      canvas.toBlob(resolve, mime, quality);
+      canvas.toBlob(blob => {
+        if (format === 'jpeg' || format === 'jpg') {
+          const { photoYear } = ExportManager.getSettings();
+          if (photoYear) {
+            ExportManager.injectExifYear(blob, photoYear).then(resolve);
+            return;
+          }
+        }
+        resolve(blob);
+      }, mime, quality);
     });
+  },
+
+  /*
+   * Pure-JS minimal EXIF writer: injects DateTimeOriginal into a JPEG blob.
+   * Works by prepending a crafted APP1/EXIF segment between the SOI and
+   * existing APP0/APP1 markers. No external library required.
+   */
+  async injectExifYear(blob, year) {
+    try {
+      const dt = `${year}:01:01 00:00:00`; // EXIF datetime format
+      const dtBytes = [...dt].map(c => c.charCodeAt(0));
+      // EXIF IFD0 with DateTimeOriginal (tag 0x9003)
+      // Header: 'Exif\0\0' + TIFF header (little-endian)
+      const exifMarker = [
+        0xFF, 0xE1,    // APP1 marker
+        0x00, 0x00,    // length placeholder (2 bytes)
+        0x45, 0x78, 0x69, 0x66, 0x00, 0x00, // 'Exif\0\0'
+        // TIFF: little-endian 'II', magic 42, offset to IFD0 = 8
+        0x49, 0x49, 0x2A, 0x00, 0x08, 0x00, 0x00, 0x00,
+        // IFD0: 1 entry
+        0x01, 0x00, // count = 1
+        // DateTimeOriginal tag: 0x9003, type=2(ASCII), count=20, offset from TIFF start
+        0x03, 0x90, // tag 0x9003
+        0x02, 0x00, // type ASCII
+        0x14, 0x00, 0x00, 0x00, // count = 20
+        0x1A, 0x00, 0x00, 0x00, // offset = 26 from TIFF start (8+2+12+4)
+        // Next IFD offset = 0
+        0x00, 0x00, 0x00, 0x00,
+        // DateTime string (20 bytes incl null)
+        ...dtBytes, 0x00,
+      ];
+      // Fix APP1 length (length field = segment length including the 2-byte length field itself)
+      const app1Len = exifMarker.length - 2; // subtract the 0xFF 0xE1 marker bytes
+      exifMarker[2] = (app1Len >> 8) & 0xFF;
+      exifMarker[3] = app1Len & 0xFF;
+
+      // Read original JPEG
+      const origBuf = await blob.arrayBuffer();
+      const orig = new Uint8Array(origBuf);
+      // Find insertion point: after SOI (bytes 0,1 = FF D8)
+      // Insert our APP1 right after SOI
+      const exifArr = new Uint8Array(exifMarker);
+      const out = new Uint8Array(2 + exifArr.length + (orig.length - 2));
+      out.set(orig.subarray(0, 2), 0);          // SOI
+      out.set(exifArr, 2);                       // our APP1
+      out.set(orig.subarray(2), 2 + exifArr.length); // rest of JPEG
+      return new Blob([out], { type: 'image/jpeg' });
+    } catch {
+      return blob; // fallback: return original if EXIF injection fails
+    }
   },
 
   triggerDownload(blob, filename) {
@@ -1335,7 +1417,451 @@ const ExportManager = {
     }
 
     hideSpinner();
+    if (typeof gtag !== 'undefined') gtag('event', 'images_downloaded', { count: saved, type: 'individual' });
     showToast(`✅ Saved ${saved} photo${saved !== 1 ? 's' : ''}!`, 'success', 4000);
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════════════════ *
+ *  ZIP MANAGER                                                               *
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+const ZipManager = {
+  async saveAllAsZip(boxes, prefix = 'photo_', customFormat = null) {
+    if (!boxes || boxes.length === 0) {
+      showToast('No splits to save. Run detection or draw crop regions first.', 'warning');
+      return;
+    }
+    if (typeof JSZip === 'undefined') {
+      showToast('JSZip library not loaded. Check your internet connection.', 'error');
+      return;
+    }
+
+    const { format, quality, baseName } = ExportManager.getSettings();
+    const usedFormat  = customFormat || format;
+    const usedBaseName = prefix !== 'photo_' ? prefix : baseName;
+    const mime = usedFormat === 'png' ? 'image/png' : 'image/jpeg';
+    const ext  = usedFormat === 'png' ? 'png' : 'jpg';
+
+    showSpinner(`Building ZIP for ${boxes.length} photos…`);
+    setProgress(0, 'Compressing…');
+
+    const zip = new JSZip();
+    let done = 0;
+
+    for (const [idx, box] of boxes.entries()) {
+      const canvas = renderBoxToCanvas(box, { enhance: DOM.autoEnhanceToggle()?.checked });
+      const blob   = await ExportManager.canvasToBlob(canvas, usedFormat, quality);
+      const num    = String(idx + 1).padStart(2, '0');
+      zip.file(`${usedBaseName}${num}.${ext}`, blob);
+      done++;
+      setProgress(Math.round(done / boxes.length * 80), `Compressing ${done} of ${boxes.length}…`);
+    }
+
+    setProgress(90, 'Generating archive…');
+    const zipBlob = await zip.generateAsync({ type: 'blob', compression: 'DEFLATE', compressionOptions: { level: 6 } });
+    setProgress(100, 'Done!');
+    ExportManager.triggerDownload(zipBlob, `${usedBaseName}photos.zip`);
+    hideSpinner();
+    if (typeof gtag !== 'undefined') gtag('event', 'zip_downloaded', { count: boxes.length });
+    showToast(`✅ ZIP ready — ${boxes.length} photo${boxes.length !== 1 ? 's' : ''} archived!`, 'success', 4000);
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════════════════ *
+ *  SOCIAL MANAGER                                                            *
+ *    Platform presets, resize/letterbox, watermark, clipboard, share API     *
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+const PLATFORM_PRESETS = [
+  { key: 'ig-square',    name: 'Instagram\nSquare',   icon: '🟣', w: 1080, h: 1080 },
+  { key: 'ig-portrait',  name: 'Instagram\nPortrait', icon: '🟣', w: 1080, h: 1350 },
+  { key: 'ig-landscape', name: 'Instagram\nLandscape',icon: '🟣', w: 1080, h: 566  },
+  { key: 'ig-story',     name: 'Story /\nTikTok',     icon: '🎵', w: 1080, h: 1920 },
+  { key: 'twitter',      name: 'Twitter /\nX Card',   icon: '𝕏',  w: 1200, h: 675  },
+  { key: 'facebook',     name: 'Facebook\nPost',       icon: '📘', w: 1200, h: 630  },
+  { key: 'pinterest',    name: 'Pinterest\nPin',        icon: '📌', w: 1000, h: 1500 },
+  { key: 'linkedin',     name: 'LinkedIn\nPost',        icon: '💼', w: 1200, h: 627  },
+  { key: 'whatsapp',     name: 'WhatsApp\n(Optimised)', icon: '💬', w: 0,    h: 0    },
+  { key: 'original',     name: 'Original\nSize',        icon: '🗇', w: 0,    h: 0    },
+];
+
+const SocialManager = {
+  _activeBoxId: null,
+  _activePlatform: PLATFORM_PRESETS[0],
+
+  /* ── Open the social export modal for a given box id ──────────────── */
+  openModal(boxId) {
+    const box = state.boxes.find(b => b.id === boxId);
+    if (!box) { showToast('No split selected.', 'warning'); return; }
+    this._activeBoxId = boxId;
+    this._activePlatform = PLATFORM_PRESETS[0];
+
+    // Build platform grid
+    this._renderPlatformGrid();
+
+    // Show native share button on capable browsers
+    const shareBtn = $('social-btn-share');
+    if (shareBtn) shareBtn.style.display = navigator.share ? 'inline-flex' : 'none';
+
+    // Bind live-update listeners
+    $('social-bg-color').addEventListener('input', () => this._refreshPreview());
+    $('social-watermark-text').addEventListener('input', () => this._refreshPreview());
+    $('social-watermark-pos').addEventListener('change', () => this._refreshPreview());
+
+    // Open modal
+    $('social-modal-backdrop').classList.add('open');
+    this._refreshPreview();
+  },
+
+  closeModal() {
+    $('social-modal-backdrop').classList.remove('open');
+    this._activeBoxId = null;
+  },
+
+  _renderPlatformGrid() {
+    const grid = $('platform-grid');
+    if (!grid) return;
+    grid.innerHTML = '';
+    PLATFORM_PRESETS.forEach(preset => {
+      const btn = document.createElement('button');
+      btn.className = 'platform-btn' + (preset.key === this._activePlatform.key ? ' active' : '');
+      const dims = preset.w && preset.h ? `${preset.w}×${preset.h}` : 'Original';
+      btn.innerHTML = `
+        <span class="platform-btn-icon">${preset.icon}</span>
+        <span class="platform-btn-name">${preset.name.replace('\n','<br>')}</span>
+        <span class="platform-btn-dims">${dims}</span>`;
+      btn.addEventListener('click', () => {
+        this._activePlatform = preset;
+        grid.querySelectorAll('.platform-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        this._refreshPreview();
+      });
+      grid.appendChild(btn);
+    });
+  },
+
+  /* ── Build the composited canvas (resize + letterbox + watermark) ────── */
+  _buildCanvas() {
+    const box = state.boxes.find(b => b.id === this._activeBoxId);
+    if (!box) return null;
+
+    const srcCanvas = renderBoxToCanvas(box, { enhance: DOM.autoEnhanceToggle()?.checked });
+    const preset    = this._activePlatform;
+    const bgColor   = $('social-bg-color')?.value   || '#ffffff';
+    const wmText    = $('social-watermark-text')?.value.trim() || '';
+    const wmPos     = $('social-watermark-pos')?.value  || 'bottom-center';
+
+    return this._compose(srcCanvas, preset, bgColor, wmText, wmPos);
+  },
+
+  /* ── Compose: contain-scale src into target, letterbox, add watermark ─ */
+  _compose(srcCanvas, preset, bgColor, wmText, wmPos) {
+    const sw = srcCanvas.width;
+    const sh = srcCanvas.height;
+
+    let tw, th;
+    if (!preset.w || !preset.h) {
+      // Original / WhatsApp — cap at 2000px longest side
+      const maxSide = preset.key === 'whatsapp' ? 2000 : Math.max(sw, sh);
+      const scaleDown = Math.min(1, maxSide / Math.max(sw, sh));
+      tw = Math.round(sw * scaleDown);
+      th = Math.round(sh * scaleDown);
+    } else {
+      tw = preset.w;
+      th = preset.h;
+    }
+
+    const dst  = document.createElement('canvas');
+    dst.width  = tw;
+    dst.height = th;
+    const dctx = dst.getContext('2d');
+
+    // Fill background
+    dctx.fillStyle = bgColor;
+    dctx.fillRect(0, 0, tw, th);
+
+    // Contain-scale source
+    const scale = Math.min(tw / sw, th / sh);
+    const dw    = Math.round(sw * scale);
+    const dh    = Math.round(sh * scale);
+    const dx    = Math.round((tw - dw) / 2);
+    const dy    = Math.round((th - dh) / 2);
+    dctx.drawImage(srcCanvas, 0, 0, sw, sh, dx, dy, dw, dh);
+
+    // Watermark
+    if (wmText) {
+      this._drawWatermark(dctx, tw, th, wmText, wmPos);
+    }
+
+    return dst;
+  },
+
+  _drawWatermark(ctx, W, H, text, position) {
+    const size   = Math.max(14, Math.round(Math.min(W, H) * 0.028));
+    ctx.font     = `700 ${size}px Inter, sans-serif`;
+    const metrics = ctx.measureText(text);
+    const tw     = metrics.width;
+    const padH   = size * 0.5;
+    const padV   = size * 0.35;
+    const boxW   = tw + padH * 2;
+    const boxH   = size + padV * 2;
+    const margin = Math.round(Math.min(W, H) * 0.025);
+
+    let bx, by;
+    switch (position) {
+      case 'bottom-right':  bx = W - boxW - margin; by = H - boxH - margin; break;
+      case 'bottom-left':   bx = margin;            by = H - boxH - margin; break;
+      case 'top-center':    bx = (W - boxW) / 2;   by = margin;            break;
+      default: /* bottom-center */
+        bx = (W - boxW) / 2; by = H - boxH - margin;
+    }
+
+    // Pill background
+    ctx.save();
+    ctx.fillStyle = 'rgba(0,0,0,0.55)';
+    const r = boxH / 2;
+    ctx.beginPath();
+    ctx.moveTo(bx + r, by);
+    ctx.arcTo(bx + boxW, by, bx + boxW, by + boxH, r);
+    ctx.arcTo(bx + boxW, by + boxH, bx, by + boxH, r);
+    ctx.arcTo(bx, by + boxH, bx, by, r);
+    ctx.arcTo(bx, by, bx + boxW, by, r);
+    ctx.closePath();
+    ctx.fill();
+
+    // Text
+    ctx.fillStyle = '#ffffff';
+    ctx.font      = `700 ${size}px Inter, sans-serif`;
+    ctx.textBaseline = 'middle';
+    ctx.fillText(text, bx + padH, by + boxH / 2);
+    ctx.restore();
+  },
+
+  /* ── Refresh live preview canvas ──────────────────────────────── */
+  _refreshPreview() {
+    const composed = this._buildCanvas();
+    if (!composed) return;
+
+    const previewEl = $('social-preview-canvas');
+    const badge     = $('social-dim-badge');
+    if (!previewEl) return;
+
+    // Scale down to fit the preview pane (max 380×260 display)
+    const maxW = 380, maxH = 240;
+    const scale = Math.min(1, maxW / composed.width, maxH / composed.height);
+    previewEl.width  = Math.round(composed.width  * scale);
+    previewEl.height = Math.round(composed.height * scale);
+    const pctx = previewEl.getContext('2d');
+    pctx.drawImage(composed, 0, 0, previewEl.width, previewEl.height);
+
+    if (badge) badge.textContent = `${composed.width}×${composed.height} px`;
+  },
+
+  /* ── Copy composited image to system clipboard ───────────────── */
+  async copyPreviewToClipboard() {
+    const composed = this._buildCanvas();
+    if (!composed) return;
+    try {
+      const blob = await ExportManager.canvasToBlob(composed, 'png', 1);
+      await navigator.clipboard.write([
+        new ClipboardItem({ 'image/png': blob })
+      ]);
+      showToast('📋 Image copied to clipboard!', 'success');
+    } catch (err) {
+      showToast('Could not copy to clipboard: ' + err.message, 'error');
+    }
+  },
+
+  /* ── Download for currently selected platform ───────────────── */
+  async downloadForPlatform() {
+    const composed = this._buildCanvas();
+    if (!composed) return;
+    const { format, quality, baseName } = ExportManager.getSettings();
+    const box = state.boxes.find(b => b.id === this._activeBoxId);
+    const idx = box ? state.boxes.indexOf(box) : 0;
+    const preset  = this._activePlatform;
+    const ext     = format === 'png' ? 'png' : 'jpg';
+    const fname   = `${baseName}${String(idx+1).padStart(2,'0')}_${preset.key}.${ext}`;
+    const blob    = await ExportManager.canvasToBlob(composed, format, quality);
+    ExportManager.triggerDownload(blob, fname);
+    showToast(`✅ Downloaded for ${preset.key}!`, 'success');
+  },
+
+  /* ── Native Web Share API (mobile) ────────────────────────── */
+  async nativeShare() {
+    const composed = this._buildCanvas();
+    if (!composed) return;
+    const blob = await ExportManager.canvasToBlob(composed, 'png', 1);
+    const file = new File([blob], 'photo.png', { type: 'image/png' });
+    try {
+      await navigator.share({
+        title: 'PhotoSplit Studio',
+        text: 'Shared via PhotoSplit Studio — free photo scanner splitter',
+        files: [file],
+      });
+    } catch (err) {
+      if (err.name !== 'AbortError') showToast('Share failed: ' + err.message, 'error');
+    }
+  },
+
+  /* ── Copy tool URL to clipboard ───────────────────────────── */
+  async copyToolUrl() {
+    const url = 'https://photosplitstudio.com';
+    try {
+      await navigator.clipboard.writeText(url);
+      showToast('🔗 Link copied! Share it with friends.', 'success');
+    } catch {
+      showToast('Could not copy — please copy manually: ' + url, 'info', 6000);
+    }
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════════════════ *
+ *  CAROUSEL SPLITTER                                                         *
+ *    Divides the active scan image into an N×M grid of tiles                 *
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+const CarouselSplitter = {
+  openModal() {
+    if (state.activeFileIdx < 0) {
+      showToast('Upload a scan first.', 'warning'); return;
+    }
+    $('carousel-modal-backdrop').classList.add('open');
+    this._drawGridPreview();
+
+    // Wire preset buttons
+    document.querySelectorAll('.grid-preset-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.grid-preset-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        $('carousel-cols').value = btn.dataset.cols;
+        $('carousel-rows').value = btn.dataset.rows;
+        this._drawGridPreview();
+      });
+    });
+
+    // Wire custom inputs
+    ['carousel-cols','carousel-rows'].forEach(id => {
+      $(id).addEventListener('input', () => {
+        document.querySelectorAll('.grid-preset-btn').forEach(b => b.classList.remove('active'));
+        this._drawGridPreview();
+      });
+    });
+  },
+
+  closeModal() {
+    $('carousel-modal-backdrop').classList.remove('open');
+  },
+
+  _getCols() { return Math.max(1, Math.min(10, parseInt($('carousel-cols').value, 10) || 3)); },
+  _getRows() { return Math.max(1, Math.min(10, parseInt($('carousel-rows').value, 10) || 1)); },
+
+  _drawGridPreview() {
+    const cols = this._getCols();
+    const rows = this._getRows();
+    const canvas = $('grid-preview-canvas');
+    if (!canvas) return;
+    const W = 240, H = Math.round(W * (rows / cols)) || 60;
+    canvas.width  = W;
+    canvas.height = Math.max(H, 40);
+    const ctx = canvas.getContext('2d');
+    const cw = W / cols, rh = canvas.height / rows;
+
+    // Draw source image thumbnail as background
+    const srcEl = DOM.mainCanvas();
+    if (srcEl && srcEl.width) {
+      ctx.drawImage(srcEl, 0, 0, W, canvas.height);
+    } else {
+      ctx.fillStyle = 'var(--bg-surface-2, #f7f8fc)';
+      ctx.fillRect(0, 0, W, canvas.height);
+    }
+
+    // Grid lines
+    ctx.strokeStyle = 'rgba(99,102,241,0.9)';
+    ctx.lineWidth = 2;
+    for (let c = 1; c < cols; c++) {
+      ctx.beginPath();
+      ctx.moveTo(Math.round(c * cw), 0);
+      ctx.lineTo(Math.round(c * cw), canvas.height);
+      ctx.stroke();
+    }
+    for (let r = 1; r < rows; r++) {
+      ctx.beginPath();
+      ctx.moveTo(0, Math.round(r * rh));
+      ctx.lineTo(W, Math.round(r * rh));
+      ctx.stroke();
+    }
+
+    // Label
+    ctx.fillStyle = 'rgba(0,0,0,0.55)';
+    ctx.fillRect(0, 0, W, 18);
+    ctx.fillStyle = '#fff';
+    ctx.font = 'bold 11px Inter, sans-serif';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(`${cols}×${rows} = ${cols * rows} tiles`, 6, 9);
+  },
+
+  _splitTiles(cols, rows) {
+    const srcCanvas = DOM.mainCanvas();
+    if (!srcCanvas || !srcCanvas.width) return [];
+    const W   = srcCanvas.width;
+    const H   = srcCanvas.height;
+    const tw  = Math.floor(W / cols);
+    const th  = Math.floor(H / rows);
+    const tiles = [];
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < cols; c++) {
+        const tile = document.createElement('canvas');
+        tile.width  = tw;
+        tile.height = th;
+        tile.getContext('2d').drawImage(srcCanvas, c * tw, r * th, tw, th, 0, 0, tw, th);
+        tiles.push({ canvas: tile, col: c + 1, row: r + 1, idx: r * cols + c });
+      }
+    }
+    return tiles;
+  },
+
+  async splitAndDownload() {
+    const cols  = this._getCols();
+    const rows  = this._getRows();
+    const tiles = this._splitTiles(cols, rows);
+    if (!tiles.length) { showToast('No image loaded.', 'warning'); return; }
+    const { format, quality, baseName } = ExportManager.getSettings();
+    const ext = format === 'png' ? 'png' : 'jpg';
+    showSpinner(`Exporting ${tiles.length} tiles…`);
+    for (const tile of tiles) {
+      const blob = await ExportManager.canvasToBlob(tile.canvas, format, quality);
+      const num  = String(tile.idx + 1).padStart(2, '0');
+      ExportManager.triggerDownload(blob, `${baseName}tile_${num}.${ext}`);
+      await new Promise(r => setTimeout(r, 80));
+    }
+    hideSpinner();
+    showToast(`✅ ${tiles.length} carousel tiles downloaded!`, 'success', 4000);
+    this.closeModal();
+  },
+
+  async splitAndZip() {
+    const cols  = this._getCols();
+    const rows  = this._getRows();
+    const tiles = this._splitTiles(cols, rows);
+    if (!tiles.length) { showToast('No image loaded.', 'warning'); return; }
+    if (typeof JSZip === 'undefined') { showToast('JSZip not loaded.', 'error'); return; }
+
+    const { format, quality, baseName } = ExportManager.getSettings();
+    const ext = format === 'png' ? 'png' : 'jpg';
+    showSpinner(`Zipping ${tiles.length} tiles…`);
+    const zip = new JSZip();
+    for (const tile of tiles) {
+      const blob = await ExportManager.canvasToBlob(tile.canvas, format, quality);
+      const num  = String(tile.idx + 1).padStart(2, '0');
+      zip.file(`${baseName}tile_${num}.${ext}`, blob);
+    }
+    const zipBlob = await zip.generateAsync({ type: 'blob', compression: 'DEFLATE', compressionOptions: { level: 6 } });
+    ExportManager.triggerDownload(zipBlob, `${baseName}carousel_${cols}x${rows}.zip`);
+    hideSpinner();
+    showToast(`✅ Carousel ZIP ready — ${tiles.length} tiles!`, 'success', 4000);
+    this.closeModal();
   },
 };
 
@@ -1354,10 +1880,47 @@ function initButtons() {
   DOM.btnZoomFit() .addEventListener('click', zoomFit);
   DOM.darkToggle() .addEventListener('click', toggleDarkMode);
 
+  // ZIP Button
+  const btnZip = $('btn-save-zip');
+  if (btnZip) btnZip.addEventListener('click', () => ZipManager.saveAllAsZip(state.boxes));
+
+  // Carousel Button
+  const btnCarousel = $('btn-carousel-split');
+  if (btnCarousel) btnCarousel.addEventListener('click', () => CarouselSplitter.openModal());
+
+  // Detect All Button — runs detection on every loaded file sequentially
+  const btnDetectAll = $('btn-detect-all');
+  if (btnDetectAll) {
+    btnDetectAll.addEventListener('click', async () => {
+      if (state.files.length === 0) {
+        showToast('Load some scans first.', 'warning'); return;
+      }
+      const total = state.files.length;
+      showToast(`⚡ Running detection on ${total} scan${total !== 1 ? 's' : ''}…`, 'info', 3000);
+      for (let i = 0; i < total; i++) {
+        await activateFileAsync(i);
+        await runDetectionAsync();
+        setProgress(Math.round((i + 1) / total * 100), `Processed ${i + 1} of ${total}…`);
+      }
+      showToast(`✅ Detected photos in all ${total} scan${total !== 1 ? 's' : ''}!`, 'success', 4000);
+    });
+  }
+
+  // Social + carousel modal close on Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      SocialManager.closeModal();
+      CarouselSplitter.closeModal();
+    }
+  });
+
   // Format / quality
   DOM.formatSelect().addEventListener('change', () => {
     const isPng = DOM.formatSelect().value === 'png';
     $('quality-row').style.display = isPng ? 'none' : 'flex';
+    if ($('quality-range-row')) {
+      $('quality-range-row').style.display = isPng ? 'none' : 'block';
+    }
   });
 
   DOM.qualitySlider().addEventListener('input', () => {
@@ -1413,13 +1976,17 @@ document.addEventListener('DOMContentLoaded', init);
 /* ══════════════════════════════════════════════════════════════════════════ *
  *  GLOBAL EXPORTS — accessible from HTML onclick attributes                  *
  * ══════════════════════════════════════════════════════════════════════════ */
-window.ExportManager  = ExportManager;
-window.applyZoom      = applyZoom;
-window.zoomIn         = zoomIn;
-window.zoomOut        = zoomOut;
-window.zoomFit        = zoomFit;
-window.closeModal     = closeModal;
-window.previewBox     = previewBox;
-window.deleteBox      = deleteBox;
-window.rotateBox      = rotateBox;
-window.selectBox      = selectBox;
+window.ExportManager    = ExportManager;
+window.ZipManager       = ZipManager;
+window.SocialManager    = SocialManager;
+window.CarouselSplitter = CarouselSplitter;
+window.applyZoom        = applyZoom;
+window.zoomIn           = zoomIn;
+window.zoomOut          = zoomOut;
+window.zoomFit          = zoomFit;
+window.closeModal       = closeModal;
+window.previewBox       = previewBox;
+window.deleteBox        = deleteBox;
+window.rotateBox        = rotateBox;
+window.selectBox        = selectBox;
+
