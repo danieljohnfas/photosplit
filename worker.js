@@ -88,24 +88,30 @@ function detectPhotosOpenCV(imageData, opts = {}) {
   // Using a 5x5 kernel
   cv.GaussianBlur(gray, blurred, new cv.Size(5, 5), 0, 0, cv.BORDER_DEFAULT);
 
-  // 4. Adaptive Canny Edge Detection
-  // The bgThreshold slider maps to how tightly we look for edges.
-  // Higher slider -> lower threshold -> finds more edges (more sensitive).
-  const upperThresh = Math.max(20, (260 - bgThreshold) * 1.5); // increased sensitivity
-  const lowerThresh = Math.max(10, upperThresh * 0.3); // enhanced detection of faint white edges
-  
+  // 4. Multi-Pass Edge & Region Detection
+  // Pass A: Canny Edge (great for sharp borders)
+  const upperThresh = Math.max(20, (260 - bgThreshold) * 1.5);
+  const lowerThresh = Math.max(10, upperThresh * 0.3);
+  const canny = new cv.Mat();
+  cv.Canny(blurred, canny, lowerThresh, upperThresh, 3, false);
+
+  // Pass B: Adaptive Threshold (captures faint white-bordered photos by looking for regional density)
+  const thresh = new cv.Mat();
+  cv.adaptiveThreshold(gray, thresh, 255, cv.ADAPTIVE_THRESH_GAUSSIAN_C, cv.THRESH_BINARY_INV, 71, 6);
+
+  // Combine both passes
   const edges = new cv.Mat();
-  cv.Canny(blurred, edges, lowerThresh, upperThresh, 3, false);
+  cv.bitwise_or(canny, thresh, edges);
 
   self.postMessage({ type: 'PROGRESS', value: 50, label: 'Closing photo boundaries…' });
 
-  // 5. Morphological Closing (Dilate then Erode) to bridge gaps in faded photo borders
-  // Scale the kernel size based on image resolution
-  const kSizeVal = Math.max(7, Math.floor(Math.min(width, height) * 0.005) * 2 + 1);
-  const M = cv.getStructuringElement(cv.MORPH_RECT, new cv.Size(kSizeVal, kSizeVal));
+  // 5. Morphological Closing (Dilate then Erode)
+  // Hard-lock the kernel size to 5x5. Scaling it dynamically previously caused 
+  // massive overlaps (up to 40px radius) merging distinctly separated photos.
+  const M = cv.getStructuringElement(cv.MORPH_RECT, new cv.Size(5, 5));
   
   const closed = new cv.Mat();
-  // We use dilate to bridge tiny gaps, but keep iterations low (1) to prevent merging uniquely placed photos
+  // One single light pass to bridge micro-gaps, ensuring NO proximity merging
   cv.dilate(edges, closed, M, new cv.Point(-1, -1), 1);
   cv.erode(closed, closed, M, new cv.Point(-1, -1), 1);
 
@@ -164,6 +170,8 @@ function detectPhotosOpenCV(imageData, opts = {}) {
   src.delete();
   gray.delete();
   blurred.delete();
+  canny.delete();
+  thresh.delete();
   edges.delete();
   M.delete();
   closed.delete();
