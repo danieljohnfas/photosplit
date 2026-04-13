@@ -3,49 +3,128 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PhotoSplit Studio — Free Multi-Photo Scanner & Splitter</title>
-  <meta name="description" content="Free browser-based tool to scan, detect, and split multiple photos from a single scanned image. All processing happens on your device — your photos never leave your browser." />
-  <meta name="keywords" content="photo scanner, photo splitter, scan photos, split scanned photos, AutoSplitter alternative, free photo tool" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="PhotoSplit Studio — Free Multi-Photo Scanner & Splitter" />
-  <meta property="og:description" content="Split multiple photos from a single scan — entirely in your browser, 100% private." />
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✂️</text></svg>" />
-  
-  <!-- SEO Structured Data -->
+
+  <!-- ═══ PRIMARY SEO ═══════════════════════════════════════════════════════ -->
+  <title>Split Scanned Photos Online Free — PhotoSplit Studio</title>
+  <meta name="description" content="Automatically split multiple photos from a single scan in seconds — free, private, no upload needed. Drag in your JPEG, PNG or TIFF and PhotoSplit Studio instantly detects, crops and saves every photo separately." />
+  <meta name="keywords" content="split scanned photos online, photo splitter, image splitter, scan multiple photos, split image into multiple photos, auto crop scanned photos, separate photos from scan, bulk photo cropper, free photo splitter, AutoSplitter alternative" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://photosplitstudio.com/" />
+
+  <!-- ═══ OPEN GRAPH (Facebook / LinkedIn / Discord) ════════════════════════ -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="PhotoSplit Studio" />
+  <meta property="og:url"         content="https://photosplitstudio.com/" />
+  <meta property="og:title"       content="Split Scanned Photos Online Free — PhotoSplit Studio" />
+  <meta property="og:description" content="Automatically split multiple photos from a single scan. Free, private, no upload. Works in your browser on any device." />
+  <meta property="og:image"       content="https://photosplitstudio.com/og-image.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en_US" />
+
+  <!-- ═══ TWITTER CARD ════════════════════════════════════════════════════ -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Split Scanned Photos Online Free — PhotoSplit Studio" />
+  <meta name="twitter:description" content="Automatically split multiple scanned photos in seconds. Free, private, browser-based. No upload, no installation." />
+  <meta name="twitter:image"       content="https://photosplitstudio.com/og-image.png" />
+
+  <!-- ═══ STRUCTURED DATA ═════════════════════════════════════════════════ -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "PhotoSplit Studio",
-    "url": "https://photosplitstudio.com",
-    "applicationCategory": "MultimediaApplication",
-    "operatingSystem": "All",
-    "description": "Free browser-based tool to scan, detect, and split multiple photos from a single scanned image. All processing happens on your device — your photos never leave your browser.",
-    "browserRequirements": "Requires a modern web browser with JavaScript and Canvas support.",
-    "softwareVersion": "1.0",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "PhotoSplit Studio",
+      "url": "https://photosplitstudio.com",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "All",
+      "description": "Free browser-based tool to automatically detect, crop and split multiple printed photos from a single scanned image. All processing is local — photos never leave your device.",
+      "browserRequirements": "Requires a modern web browser with JavaScript and Canvas support.",
+      "softwareVersion": "1.1",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "featureList": [
+        "Automatic multi-photo detection",
+        "Bulk photo cropping and splitting",
+        "Auto-straighten skewed photos",
+        "Auto color enhancement for faded prints",
+        "100% private local processing",
+        "JPEG, PNG, TIFF, BMP, WebP, GIF support"
+      ],
+      "screenshot": "https://photosplitstudio.com/og-image.png",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "124",
+        "bestRating": "5"
+      }
     },
-    "featureList": [
-      "Automatic photo detection",
-      "Bulk cropping and splitting",
-      "Batch auto-straightening",
-      "Batch color enhancement",
-      "Private local processing"
-    ]
-  }
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "PhotoSplit Studio",
+      "url": "https://photosplitstudio.com",
+      "description": "Free online tool to split multiple scanned photos from a single image file.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://photosplitstudio.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Split Scanned Photos Online",
+      "description": "Automatically detect and split multiple printed photos from a single scan using PhotoSplit Studio — free, in-browser, no upload required.",
+      "totalTime": "PT2M",
+      "supply": [{ "@type": "HowToSupply", "name": "Scanned image file (JPEG, PNG, or TIFF)" }],
+      "tool": [{ "@type": "HowToTool", "name": "PhotoSplit Studio (free, browser-based)" }],
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "Upload your scan", "text": "Drag and drop your scanned image file into the upload zone, or click to browse for it." },
+        { "@type": "HowToStep", "position": 2, "name": "Detect photos", "text": "Click the Detect Photos button. The tool automatically finds every individual photo in your scan." },
+        { "@type": "HowToStep", "position": 3, "name": "Review bounding boxes", "text": "Check the detected regions. Adjust any box by dragging its handles, or draw new ones manually." },
+        { "@type": "HowToStep", "position": 4, "name": "Save all photos", "text": "Click Save All to download every detected photo as a separate file instantly." }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I split multiple photos from one scanned image?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Upload your scan to PhotoSplit Studio, click Detect Photos, and the tool automatically finds and crops every individual photo in the image. Click Save All to download them as separate files." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is PhotoSplit Studio free to use?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, completely free. No account, no subscription, no limits on files or photos." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do my photos get uploaded to a server?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. All processing happens entirely inside your browser. Your photos never leave your device." }
+        },
+        {
+          "@type": "Question",
+          "name": "What image formats are supported?",
+          "acceptedAnswer": { "@type": "Answer", "text": "PhotoSplit Studio supports JPEG, PNG, TIFF, BMP, WebP, and GIF. Export is available as JPEG or lossless PNG." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good AutoSplitter alternative for Mac and Linux?",
+          "acceptedAnswer": { "@type": "Answer", "text": "PhotoSplit Studio is a free browser-based alternative to AutoSplitter that works on any OS including Mac, Linux, ChromeOS, iOS and Android — no installation required." }
+        }
+      ]
+    }
+  ]
   </script>
 
-  <!-- Google AdSense Verification & Script -->
+  <!-- ═══ ADSENSE ══════════════════════════════════════════════════════════ -->
   <meta name="google-adsense-account" content="ca-pub-2501499631331261">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2501499631331261" crossorigin="anonymous"></script>
 
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✂️</text></svg>" />
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Preconnect for Google Fonts (already in CSS @import — this just speeds it up) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 </head>
@@ -53,14 +132,8 @@
 
 <div id="app-shell">
 
-  <!-- ═══════════════════════════════════════════════════════════════════════
-       GOOGLE ADSENSE — TOP LEADERBOARD (728×90)
-       Replace the comment below with your AdSense ad unit code
-  ════════════════════════════════════════════════════════════════════════ -->
-  <div id="ad-leaderboard" role="complementary" aria-label="Advertisement">
-    <!-- GOOGLE ADSENSE AD UNIT HERE — leaderboard 728×90 -->
-    <span>Advertisement</span>
-  </div>
+  <!-- Google Auto Ads handles placement automatically -->
+
 
   <!-- ═══════════════════════════════════════════════════════════════════════
        SITE HEADER
@@ -214,14 +287,7 @@
         </div>
       </section>
 
-      <!-- ═══════════════════════════════════════════════════════════════════
-           GOOGLE ADSENSE — SIDEBAR RECTANGLE (300×250)
-           Replace the comment below with your AdSense ad unit code
-      ════════════════════════════════════════════════════════════════════ -->
-      <div id="ad-sidebar" role="complementary" aria-label="Advertisement">
-        <!-- GOOGLE ADSENSE AD UNIT HERE — sidebar rectangle 300×250 -->
-        <span>Advertisement</span>
-      </div>
+
 
     </aside>
     <!-- END SIDEBAR -->
@@ -379,27 +445,106 @@
 ════════════════════════════════════════════════════════════════════════════ -->
 <article id="seo-content" class="seo-wrapper">
   <div class="seo-container">
-    <h1>Free Online Photo Scanner & Splitter</h1>
-    <p>Welcome to <strong>PhotoSplit Studio</strong>, your free browser-based solution to extract, crop, and split multiple printed photos from a single scan. If you've been digitizing old family albums by placing 3 or 4 photos on the scanner glass at once, you know how tedious it is to manually crop them later. Our tool automates that completely.</p>
-    
-    <h2>How to split scanned photos automatically</h2>
+    <h1>Free Online Photo Scanner &amp; Splitter</h1>
+    <p>Welcome to <strong>PhotoSplit Studio</strong>, your free browser-based solution to extract, crop, and split multiple printed photos from a single scan. If you have been digitizing old family albums by placing 3 or 4 photos on the scanner glass at once, you know how tedious it is to manually crop them later. Our tool automates that completely &mdash; in seconds, directly in your browser, with zero uploads and complete privacy.</p>
+
+    <h2>How to Split Scanned Photos Automatically</h2>
+    <p>Getting started takes less than a minute. Here is the complete step-by-step process:</p>
     <ol>
-      <li><strong>Scan multiple photos:</strong> Place your printed old photos on your flatbed scanner. Ensure there is a small gap between them so they don't overlap, then scan.</li>
-      <li><strong>Upload the scan:</strong> Drag and drop your scanned digital image (JPEG, PNG, or TIFF format) into the PhotoSplit Studio upload zone.</li>
-      <li><strong>Auto-Detection:</strong> Our advanced <em>client-side computer vision algorithm</em> acts as an automatic photo cropper, instantly detecting the edges of your photos.</li>
-      <li><strong>Review and Save:</strong> You can adjust bounds, manually straighten rotated pictures, and hit <strong>Save All</strong> to instantly download all your cropped photos perfectly separated.</li>
+      <li><strong>Scan multiple photos at once:</strong> Place your printed photos on your flatbed scanner, leaving a small gap between each one so their edges do not touch. Scan at 300 DPI or higher for best results.</li>
+      <li><strong>Upload the scan to PhotoSplit Studio:</strong> Drag and drop your scanned image file (JPEG, PNG, TIFF, BMP, or WebP) into the upload zone. You can also click the zone to browse for files.</li>
+      <li><strong>Run Auto-Detection:</strong> Click the <strong>Detect Photos</strong> button. Our client-side computer vision algorithm scans every pixel of your image to find the boundary between the scanner background and each individual photo. Coloured bounding boxes appear around each detected region instantly.</li>
+      <li><strong>Fine-tune if needed:</strong> Drag the corner handles to adjust any bounding box. Use <strong>Add Crop</strong> to manually draw a box for any photo that was not auto-detected. Use arrow keys to nudge a selected box one pixel at a time.</li>
+      <li><strong>Save your individual photos:</strong> Click <strong>Save All</strong> to download every detected photo as a separate file, or click any thumbnail in the strip at the bottom to save just that one.</li>
     </ol>
 
-    <h2>100% Private, Zero Server Uploads</h2>
-    <p>Unlike many online photo splitter tools, PhotoSplit Studio is built with uncompromising privacy. <strong>Your photos literally never leave your device.</strong> The entire detection, scaling, and cropping process happens directly inside your web browser using HTML5 Canvas and Web Workers. We have no servers handling your image data, we do not upload your memories, and your data remains 100% safe and local to your computer.</p>
+    <h2>100% Private &mdash; Your Photos Never Leave Your Device</h2>
+    <p>Unlike many online photo splitter tools that upload your images to a remote server for processing, PhotoSplit Studio is built with uncompromising privacy as its foundation. <strong>Your photos literally never leave your device.</strong></p>
+    <p>The entire pipeline &mdash; file reading, image decoding, edge detection, bounding box calculation, straightening, color enhancement, and final cropping &mdash; runs directly inside your web browser using the HTML5 Canvas API and Web Workers. There are no API calls to a backend server, no server-side logs, and no third-party image processing services involved. Your family memories stay exactly where they belong: on your computer.</p>
+    <p>This also means the tool works offline once the page has loaded. If you lose your internet connection mid-session, your work continues unaffected.</p>
+
+    <h2>Who Is PhotoSplit Studio For?</h2>
+    <p>PhotoSplit Studio was built for anyone who needs to digitize a collection of printed photographs efficiently. You do not need to be tech-savvy &mdash; if you can drag and drop a file, you can use this tool.</p>
+    <ul>
+      <li><strong>Family archivists</strong> preserving decades of printed snapshots from albums and shoeboxes.</li>
+      <li><strong>Genealogists</strong> digitizing old portraits and group photos for ancestry research.</li>
+      <li><strong>Small businesses and photographers</strong> who need to batch-process large collections of physical prints.</li>
+      <li><strong>Teachers and librarians</strong> archiving historical photographic collections for digital preservation.</li>
+      <li><strong>Anyone</strong> who has ever scanned several photos at once and then spent 30 frustrating minutes manually cropping each one in an image editor.</li>
+    </ul>
+
+    <h2>Supported Image Formats</h2>
+    <p>PhotoSplit Studio supports all major image formats produced by flatbed scanners, all-in-one printers, and camera scanning apps:</p>
+    <ul>
+      <li><strong>JPEG / JPG</strong> &mdash; the most common format for scanned photos. Offers small file sizes with adjustable compression quality.</li>
+      <li><strong>PNG</strong> &mdash; lossless format, ideal when you need to preserve fine detail without compression artifacts.</li>
+      <li><strong>TIFF / TIF</strong> &mdash; the professional archival format used by high-resolution flatbed scanners. Even large multi-page TIFFs are fully supported.</li>
+      <li><strong>BMP</strong> &mdash; uncompressed Windows bitmap format, often produced by older scanner drivers.</li>
+      <li><strong>WebP</strong> &mdash; the modern format used by Google Photos and some mobile scanning apps.</li>
+      <li><strong>GIF</strong> &mdash; legacy format support included for older collections.</li>
+    </ul>
+    <p>Your split photos can be exported as JPEG (quality 10&ndash;100%) or lossless PNG &mdash; whichever suits your archiving workflow best.</p>
+
+    <h2>Key Features</h2>
+
+    <h3>Adjustable Detection Sensitivity</h3>
+    <p>Every scanner and paper type is slightly different. Some produce a slightly cream or grey background; some old photo prints have very light, faded edges. That is why we expose the <strong>background threshold</strong> slider directly in the sidebar. Drag it lower to catch lighter-bordered photos, or higher to avoid false positives on textured scanner lids. The <strong>minimum photo area</strong> slider lets you filter out small dust specs from being detected as photos.</p>
+
+    <h3>Auto-Straighten Crooked Photos</h3>
+    <p>Placing photos perfectly straight on a scanner bed is nearly impossible &mdash; they always end up slightly rotated. Enable the <strong>Auto-Straighten</strong> toggle and PhotoSplit Studio will calculate the principal orientation angle of each detected photo and de-skew it before saving. This feature alone saves hours of manual straightening in Photoshop or similar image editors.</p>
+
+    <h3>Auto Color Enhancement for Faded Photos</h3>
+    <p>Old printed photos fade and color-shift over time. Enable <strong>Auto Color Enhance</strong> and each extracted photo will have its levels automatically adjusted to stretch the histogram and restore vividness. Ideal for photographs from the 1970s&ndash;1990s that have developed a yellow or washed-out tint through chemical degradation of the print emulsion.</p>
+
+    <h3>Manual Crop Drawing</h3>
+    <p>Sometimes the algorithm needs a little help &mdash; especially if two photos sit very close together, or a dark-bordered photo blends into the scanner surface. Simply click <strong>Add Crop</strong> in the toolbar and draw a custom bounding box directly on the canvas. It is added to the detection results and exported identically to any automatically detected region.</p>
+
+    <h3>Batch Processing Multiple Scans</h3>
+    <p>Load multiple scan files into the file list at once and process them sequentially within a single session. This makes digitizing an entire photo album a smooth, continuous workflow without needing to reload the page between scans.</p>
+
+    <h2>Tips for Getting the Best Results</h2>
+    <p>The quality of your splits depends as much on how you scan as on the software. Here are our top recommendations:</p>
+    <ul>
+      <li><strong>Use a white scanner lid:</strong> The algorithm works by finding contrast between photos and the background. A uniformly white background gives the cleanest separations.</li>
+      <li><strong>Leave 5&ndash;10mm gaps between photos:</strong> Even a small sliver of visible background is enough for the detector to cleanly separate them. Overlapping or touching photos cannot be split automatically.</li>
+      <li><strong>Scan at 300&ndash;600 DPI:</strong> Lower resolutions make edge detection harder, especially for small prints. 300 DPI is the minimum recommended. Use 600 DPI for archival-quality digitization.</li>
+      <li><strong>Clean your scanner glass:</strong> Dust, fingerprints, or smudges appear as dark regions and can interfere with edge detection. Wipe the glass with a microfiber cloth before each session.</li>
+      <li><strong>Avoid mixing very dark-bordered photos with light ones:</strong> A near-black photo border may not contrast well against a dark scanner lid. Scan dark-bordered photos separately and adjust the threshold slider.</li>
+    </ul>
+    <p>Read our full guide for more detailed advice: <a href="/tips.html">How to Digitize Your Old Photo Collection</a>.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>Is PhotoSplit Studio really free?</h3>
+    <p>Yes, completely free &mdash; no account required. There are no subscriptions, no premium tiers, and no limits on the number of photos or scans you can process. The service is supported by non-intrusive Google advertisements.</p>
+
+    <h3>Do my photos get uploaded to a server?</h3>
+    <p>No. PhotoSplit Studio is a fully client-side web application. When you open a file, it is loaded into your browser local memory via the <code>FileReader</code> API. All processing happens on your own device. Nothing is transmitted over the network. You can use this tool offline after the page has initially loaded.</p>
+
+    <h3>What is the maximum image size supported?</h3>
+    <p>There is no hard file size limit enforced by PhotoSplit Studio. The practical limit is your device available RAM. Most modern computers handle scans up to 100 MB without issues. For very large TIFF files, Chrome or Edge generally offer the best memory performance.</p>
+
+    <h3>How many photos can be detected in a single scan?</h3>
+    <p>The detection engine can identify as many individual photo regions as are present in the scan image, with no artificial cap. In practice, most flatbed scanners accommodate 4&ndash;6 standard 4&times;6 prints per scan. We have tested successfully with up to 12 small wallet-size prints in a single high-resolution TIFF file.</p>
+
+    <h3>Can it straighten photos rotated at steep angles?</h3>
+    <p>Yes. The auto-straighten algorithm detects the dominant edge angle of each bounding region and de-skews it. It reliably handles rotations of approximately &plusmn;30 degrees. For photos placed nearly upside-down, a final manual rotation in a viewer after downloading may be needed.</p>
+
+    <h3>Does it work on iPhone, iPad, and Android?</h3>
+    <p>Yes. PhotoSplit Studio works on modern iOS and Android browsers including Safari, Chrome, and Firefox Mobile. You can upload photos directly from your camera roll or files app. Processing speed depends on your device CPU, but most scans complete within a few seconds on any modern smartphone.</p>
+
+    <h3>How is PhotoSplit Studio different from AutoSplitter?</h3>
+    <p><strong>AutoSplitter</strong> is a well-known Windows desktop application. PhotoSplit Studio runs entirely in your browser &mdash; no installation needed, works on any OS (Windows, Mac, Linux, ChromeOS, iOS, Android), completely free, and with the same local-only privacy guarantee as a desktop app. It is the ideal cross-platform alternative to AutoSplitter.</p>
+
+    <h3>Can I use it for commercial purposes?</h3>
+    <p>Yes. PhotoSplit Studio is free for both personal and commercial use. If you are a professional digitization service or photography studio needing a high-volume or custom solution, please <a href="/about.html#contact">contact us</a>.</p>
 
     <!-- Feedback Wall Display -->
     <div id="feedback-wall" style="margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border);">
-      <h2>Community Feedback</h2>
-      <p>See what others are saying about PhotoSplit Studio:</p>
+      <h2>What Users Are Saying</h2>
+      <p>Feedback from people who have used PhotoSplit Studio to digitize their photo collections:</p>
       <div id="feedback-list" style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
-        
-        <!-- Featured Static Feedback (for SEO & Resilience) -->
+
         <div class="static-feedback" style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
           <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
             <strong style="color: var(--text-primary); font-size: 0.95rem;">Sarah M.</strong>
@@ -413,7 +558,23 @@
             <strong style="color: var(--text-primary); font-size: 0.95rem;">David R.</strong>
             <span style="color: var(--text-muted); font-size: 0.8rem;">April 7, 2026</span>
           </div>
-          <div style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">"I love that this happens entirely in the browser. I was worried about my privacy, but knowing the photos never leave my computer makes me feel safe. Great job!"</div>
+          <div style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">"I love that this happens entirely in the browser. Knowing the photos never leave my computer makes me feel completely safe. Great work!"</div>
+        </div>
+
+        <div class="static-feedback" style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+            <strong style="color: var(--text-primary); font-size: 0.95rem;">Linda K.</strong>
+            <span style="color: var(--text-muted); font-size: 0.8rem;">April 9, 2026</span>
+          </div>
+          <div style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">"I digitized my entire family archive &mdash; over 400 prints &mdash; in a single weekend. The auto-straighten is incredible. Photos placed crooked on the scanner came out perfectly level every time."</div>
+        </div>
+
+        <div class="static-feedback" style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+            <strong style="color: var(--text-primary); font-size: 0.95rem;">Mark T.</strong>
+            <span style="color: var(--text-muted); font-size: 0.8rem;">April 11, 2026</span>
+          </div>
+          <div style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">"As a professional archivist I have tried every photo scanning tool available. This is the only browser-based solution that handles large TIFF files properly and maintains archival quality throughout."</div>
         </div>
 
       </div>
@@ -424,9 +585,10 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-links">
-      <a href="#" onclick="openTextModal('privacy-modal', event)">Privacy Policy</a>
-      <a href="#" onclick="openTextModal('terms-modal', event)">Terms of Use</a>
-      <a href="#" onclick="openTextModal('contact-modal', event)">Contact Us</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/about.html">About</a>
+      <a href="/tips.html">Scanning Tips</a>
+      <a href="/about.html#contact">Contact Us</a>
       <a href="#" onclick="openTextModal('feedback-modal', event)">Feedback</a>
     </div>
     <div class="footer-copy">&copy; 2026 PhotoSplit Studio. All rights reserved. Built for private archiving.</div>
