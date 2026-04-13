@@ -142,6 +142,12 @@
     <div class="logo-icon" aria-hidden="true">✂️</div>
     <span class="logo">PhotoSplit Studio</span>
 
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="/tips.html">Scanning Tips</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
+
     <div class="header-spacer"></div>
 
     <!-- Privacy Badge -->
@@ -459,9 +465,7 @@
     </ol>
 
     <h2>100% Private &mdash; Your Photos Never Leave Your Device</h2>
-    <p>Unlike many online photo splitter tools that upload your images to a remote server for processing, PhotoSplit Studio is built with uncompromising privacy as its foundation. <strong>Your photos literally never leave your device.</strong></p>
-    <p>The entire pipeline &mdash; file reading, image decoding, edge detection, bounding box calculation, straightening, color enhancement, and final cropping &mdash; runs directly inside your web browser using the HTML5 Canvas API and Web Workers. There are no API calls to a backend server, no server-side logs, and no third-party image processing services involved. Your family memories stay exactly where they belong: on your computer.</p>
-    <p>This also means the tool works offline once the page has loaded. If you lose your internet connection mid-session, your work continues unaffected.</p>
+    <p>Unlike many online photo splitter tools that upload your images to a remote server for processing, PhotoSplit Studio is built with uncompromising privacy as its foundation. <strong>Your photos literally never leave your device.</strong> All processing occurs locally within your browser. You can read the full technical details in our <a href="/privacy.html">Privacy Policy</a> or <a href="/about.html">About Page</a>.</p>
 
     <h2>Who Is PhotoSplit Studio For?</h2>
     <p>PhotoSplit Studio was built for anyone who needs to digitize a collection of printed photographs efficiently. You do not need to be tech-savvy &mdash; if you can drag and drop a file, you can use this tool.</p>
@@ -503,15 +507,13 @@
     <p>Load multiple scan files into the file list at once and process them sequentially within a single session. This makes digitizing an entire photo album a smooth, continuous workflow without needing to reload the page between scans.</p>
 
     <h2>Tips for Getting the Best Results</h2>
-    <p>The quality of your splits depends as much on how you scan as on the software. Here are our top recommendations:</p>
-    <ul>
-      <li><strong>Use a white scanner lid:</strong> The algorithm works by finding contrast between photos and the background. A uniformly white background gives the cleanest separations.</li>
-      <li><strong>Leave 5&ndash;10mm gaps between photos:</strong> Even a small sliver of visible background is enough for the detector to cleanly separate them. Overlapping or touching photos cannot be split automatically.</li>
-      <li><strong>Scan at 300&ndash;600 DPI:</strong> Lower resolutions make edge detection harder, especially for small prints. 300 DPI is the minimum recommended. Use 600 DPI for archival-quality digitization.</li>
-      <li><strong>Clean your scanner glass:</strong> Dust, fingerprints, or smudges appear as dark regions and can interfere with edge detection. Wipe the glass with a microfiber cloth before each session.</li>
-      <li><strong>Avoid mixing very dark-bordered photos with light ones:</strong> A near-black photo border may not contrast well against a dark scanner lid. Scan dark-bordered photos separately and adjust the threshold slider.</li>
-    </ul>
-    <p>Read our full guide for more detailed advice: <a href="/tips.html">How to Digitize Your Old Photo Collection</a>.</p>
+    <p>The quality of your splits depends heavily on how you scan your original photos. For the cleanest detection, we highly recommend reading our comprehensive scanning guide.</p>
+    
+    <div style="background: var(--bg-surface-2); padding: 20px; border-radius: var(--radius-md); border-left: 4px solid var(--accent); margin: 24px 0;">
+      <h3 style="margin-top: 0;">📚 Official Scanning Guide</h3>
+      <p style="margin-bottom: 12px; color: var(--text-secondary);">Learn the optimal DPI settings, file formats to use, and how to properly space your prints on the scanner glass to guarantee 100% detection accuracy.</p>
+      <a href="/tips.html" class="btn btn-secondary">Read the Scanning Guide &rarr;</a>
+    </div>
 
     <h2>Frequently Asked Questions</h2>
 

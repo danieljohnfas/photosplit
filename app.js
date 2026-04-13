@@ -550,16 +550,7 @@ async function runDetection() {
     state.worker.postMessage({ type: 'DETECT_PHOTOS', imageData, options: opts },
       [imageData.data.buffer]);
   } else {
-    // Fallback: run on main thread (will block UI briefly)
-    showSpinner('Detecting photos (main thread)…');
-    await new Promise(r => setTimeout(r, 50));
-    try {
-      const boxes = detectPhotosFallback(imageData, opts);
-      applyDetectedBoxes(boxes);
-    } catch (err) {
-      showToast('Detection failed: ' + err.message, 'error');
-    }
-    hideSpinner();
+    showToast('Web worker not initialized. Cannot run detection.', 'error');
   }
 
   btn.disabled = false;
@@ -576,7 +567,7 @@ function applyDetectedBoxes(boxes) {
   state.boxes = boxes.map(b => ({
     id: genId(),
     x: b.x, y: b.y, w: b.w, h: b.h,
-    rotation: 0,
+    rotation: b.suggestedAngle || 0,
     label: '',
   }));
   state.selectedBoxId = null;
@@ -591,83 +582,6 @@ function applyDetectedBoxes(boxes) {
   showToast(`Detected ${state.boxes.length} photo${state.boxes.length !== 1 ? 's' : ''}.`, 'success');
 }
 
-/* ── Fallback detection (main thread — mirrors worker logic) ──────────────── */
-function detectPhotosFallback(imageData, opts = {}) {
-  const { width, height, data } = imageData;
-  const {
-    bgThreshold  = 240,
-    minAreaRatio = 0.005,
-    padding      = 10,
-  } = opts;
-
-  const neutralTolerance = 35;
-  const dilateRadius = Math.max(12, Math.min(80, Math.round(Math.min(width, height) * 0.015)));
-
-  // Step 1: Background segmentation + Sobel supplement
-  const gray = new Uint8Array(width * height);
-  const mask = new Uint8Array(width * height);
-
-  for (let i = 0; i < width * height; i++) {
-    const r = data[i * 4], g = data[i * 4 + 1], b = data[i * 4 + 2];
-    gray[i] = (0.299 * r + 0.587 * g + 0.114 * b) | 0;
-    const lo = r < g ? (r < b ? r : b) : (g < b ? g : b);
-    const hi = r > g ? (r > b ? r : b) : (g > b ? g : b);
-    mask[i] = (gray[i] >= bgThreshold && (hi - lo) < neutralTolerance) ? 0 : 1;
-  }
-
-  const edgeSuppThresh = 28;
-  for (let y = 1; y < height - 1; y++) {
-    let off = y * width + 1;
-    for (let x = 1; x < width - 1; x++, off++) {
-      if (mask[off]) continue;
-      const p00=gray[off-width-1],p01=gray[off-width],p02=gray[off-width+1];
-      const p10=gray[off-1],p12=gray[off+1];
-      const p20=gray[off+width-1],p21=gray[off+width],p22=gray[off+width+1];
-      const gx=p02-p00+2*(p12-p10)+p22-p20;
-      const gy=p20-p00+2*(p21-p01)+p22-p02;
-      if ((gx<0?-gx:gx)+(gy<0?-gy:gy) > edgeSuppThresh) mask[off]=1;
-    }
-  }
-
-  // Step 2: Morphological close
-  const dilated  = dilateMT(mask, width, height, dilateRadius);
-  const erodeRad = Math.max(4, Math.round(dilateRadius * 0.35));
-  const closed   = erodeMT(dilated, width, height, erodeRad);
-
-  // Step 3: Connected components
-  const labels = labelComponentsMT(closed, width, height);
-
-  // Step 4: Bounding boxes
-  const bboxMap = Object.create(null);
-  for (let y = 0; y < height; y++) {
-    for (let x = 0; x < width; x++) {
-      const lbl = labels[y * width + x];
-      if (!lbl) continue;
-      let b = bboxMap[lbl];
-      if (!b) { bboxMap[lbl] = b = { minX:x, minY:y, maxX:x, maxY:y }; }
-      if (x < b.minX) b.minX=x; if (y < b.minY) b.minY=y;
-      if (x > b.maxX) b.maxX=x; if (y > b.maxY) b.maxY=y;
-    }
-  }
-
-  // Step 5: Filter
-  const minArea = width * height * minAreaRatio;
-  const maxArea = width * height * 0.92;
-  const boxes = [];
-  for (const lbl in bboxMap) {
-    const b = bboxMap[lbl];
-    const bw = b.maxX - b.minX, bh = b.maxY - b.minY;
-    const area = bw * bh;
-    if (area < minArea || area > maxArea) continue;
-    const aspect = bw / (bh || 1);
-    if (aspect > 12 || aspect < 0.083) continue;
-    boxes.push({
-      x: Math.max(0, b.minX - padding),
-      y: Math.max(0, b.minY - padding),
-      w: Math.min(width,  b.maxX + padding) - Math.max(0, b.minX - padding),
-      h: Math.min(height, b.maxY + padding) - Math.max(0, b.minY - padding),
-    });
-  }
   return mergeOverlappingMT(boxes, width, height);
 }
 
