@@ -91,8 +91,8 @@ function detectPhotosOpenCV(imageData, opts = {}) {
   // 4. Adaptive Canny Edge Detection
   // The bgThreshold slider maps to how tightly we look for edges.
   // Higher slider -> lower threshold -> finds more edges (more sensitive).
-  const upperThresh = Math.max(30, (260 - bgThreshold) * 1.5);
-  const lowerThresh = upperThresh * 0.4;
+  const upperThresh = Math.max(20, (260 - bgThreshold) * 1.5); // increased sensitivity
+  const lowerThresh = Math.max(10, upperThresh * 0.3); // enhanced detection of faint white edges
   
   const edges = new cv.Mat();
   cv.Canny(blurred, edges, lowerThresh, upperThresh, 3, false);
@@ -105,9 +105,9 @@ function detectPhotosOpenCV(imageData, opts = {}) {
   const M = cv.getStructuringElement(cv.MORPH_RECT, new cv.Size(kSizeVal, kSizeVal));
   
   const closed = new cv.Mat();
-  // We use dilate multiple times to heavily bridge gaps, then erode to retain rough shape
-  cv.dilate(edges, closed, M, new cv.Point(-1, -1), 3);
-  cv.erode(closed, closed, M, new cv.Point(-1, -1), 2);
+  // We use dilate to bridge tiny gaps, but keep iterations low (1) to prevent merging uniquely placed photos
+  cv.dilate(edges, closed, M, new cv.Point(-1, -1), 1);
+  cv.erode(closed, closed, M, new cv.Point(-1, -1), 1);
 
   self.postMessage({ type: 'PROGRESS', value: 70, label: 'Extracting contours…' });
 
@@ -176,7 +176,7 @@ function detectPhotosOpenCV(imageData, opts = {}) {
 /* ─── MERGE OVERLAPPING ─────────────────────────────────────────────────── */
 function mergeOverlapping(boxes, width, height) {
   if (boxes.length === 0) return [];
-  const MERGE_MARGIN = 20;
+  const MERGE_MARGIN = 2; // Reduced from 20 to prevent false-merges of close photos
 
   let changed = true;
   while (changed) {
