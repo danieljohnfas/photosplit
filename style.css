@@ -1457,6 +1457,8 @@ kbd {
 .share-btn-facebook:hover { background: #1467d9; }
 .share-btn-whatsapp { background: #25d366; color: #fff; }
 .share-btn-whatsapp:hover { background: #1fb858; }
+.share-btn-pinterest { background: #e60023; color: #fff; }
+.share-btn-pinterest:hover { background: #c8001f; }
 .share-btn-copy {
   background: var(--bg-surface-2);
   border-color: var(--border-strong);

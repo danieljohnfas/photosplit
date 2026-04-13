@@ -1419,6 +1419,23 @@ const ExportManager = {
     hideSpinner();
     if (typeof gtag !== 'undefined') gtag('event', 'images_downloaded', { count: saved, type: 'individual' });
     showToast(`✅ Saved ${saved} photo${saved !== 1 ? 's' : ''}!`, 'success', 4000);
+
+    // Viral nudge — shown once per session after a successful Save All
+    if (!sessionStorage.getItem('share_nudge_shown')) {
+      sessionStorage.setItem('share_nudge_shown', '1');
+      setTimeout(() => {
+        const t = document.createElement('div');
+        t.className = 'toast toast-info';
+        t.style.cssText = 'max-width:320px;cursor:pointer';
+        t.innerHTML = `<span>❤️</span><span>Found this useful? <strong><a href="#share-tool-bar" style="color:inherit">Share PhotoSplit Studio</a></strong> with someone who'd love it!</span>`;
+        t.addEventListener('click', () => {
+          document.getElementById('share-tool-bar')?.scrollIntoView({ behavior: 'smooth' });
+          t.remove();
+        });
+        document.getElementById('toast-container')?.appendChild(t);
+        setTimeout(() => { t.classList.add('removing'); t.addEventListener('animationend', () => t.remove()); }, 8000);
+      }, 1500);
+    }
   },
 };
 
