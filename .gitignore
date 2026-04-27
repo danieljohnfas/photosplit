@@ -1,0 +1,7 @@
+node_modules/
+.gemini/
+scratch/
+.idea/
+.vscode/
+*.log
+.DS_Store

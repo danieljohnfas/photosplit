@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
+  </script>
+  <meta name="google-adsense-account" content="ca-pub-2501499631331261">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2501499631331261" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | PhotoSplit Studio</title>
+  <meta name="description" content="Privacy Policy for PhotoSplit Studio. Learn how our split image tool guarantees 100% privacy by keeping all processing offline in your browser." />
+  <meta name="keywords" content="privacy policy, photosplit studio privacy, data handling, photo splitter privacy, local processing" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="PhotoSplit Studio" />
+  <link rel="canonical" href="https://photosplitstudio.com/privacy.html" />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Privacy Policy | PhotoSplit Studio" />
+  <meta property="og:description" content="100% client-side privacy for photo splitting." />
+  <meta property="og:url"         content="https://photosplitstudio.com/privacy.html" />
+  <meta property="og:image"       content="https://photosplitstudio.com/og-image.png" />
+  <meta property="og:image:alt"   content="PhotoSplit Studio automatic scan splitter" />
+  
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Privacy Policy | PhotoSplit Studio" />
+  <meta name="twitter:description" content="100% client-side privacy for photo splitting." />
+
+  <link rel="icon" href="/logo.png" type="image/png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="secondary.css" />
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="logo" href="/" style="display:flex;align-items:center;gap:12px;"><img src="/logo.png" alt="Logo" style="width:24px;height:24px;border-radius:4px;object-fit:cover;" /> PhotoSplit Studio</a>
+  <div class="nav-links">
+    <a href="/blog/">Blog</a>
+    <a href="/">App</a>
+    <a href="/tips.html">Scanning Tips</a>
+    <a href="/about.html">About</a>
+    <a href="/" class="cta">Open App →</a>
+  </div>
+</nav>
+
+<div class="content-wrap">
+  <div class="page-header">
+    <h1>Privacy Policy</h1>
+    <p class="effective">Effective Date: April 8, 2026 &nbsp;|&nbsp; Last Updated: April 13, 2026</p>
+  </div>
+
+  <div class="highlight-box">
+    <p>🔒 Short version: PhotoSplit Studio processes all your images entirely inside your browser. We never receive, store, or transmit your photos. Your images never leave your device.</p>
+  </div>
+
+  <h2>1. Who We Are</h2>
+  <p>PhotoSplit Studio ("we", "our", or "the service") is a free, browser-based web application available at <strong>photosplitstudio.com</strong>. The service is provided free of charge and is designed to help users automatically split multiple scanned photographs from a single scanned image file.</p>
+
+  <h2>2. Information We Do Not Collect</h2>
+  <p>PhotoSplit Studio does <strong>not</strong> collect, process, transmit, or store any of the following:</p>
+  <ul>
+    <li>Your photograph files or any images you upload or process</li>
+    <li>The content of any images processed through the tool</li>
+    <li>Personal information such as your name, email address, or location (unless voluntarily submitted via our feedback form)</li>
+  </ul>
+  <p>When you select an image file in PhotoSplit Studio, that file is loaded directly into your browser's memory using the standard browser <code>FileReader</code> API. The image data never leaves your device. All detection, cropping, straightening, and color processing operations are performed entirely within your browser's JavaScript engine using the HTML5 Canvas API and Web Workers.</p>
+
+  <h2>3. Image Processing — Technical Details</h2>
+  <p>To be fully transparent about how your images are handled:</p>
+  <ul>
+    <li>Image files are read using the browser's <code>FileReader.readAsDataURL()</code> method, which creates an in-memory representation accessible only to the current browser tab.</li>
+    <li>All pixel-level analysis (edge detection, bounding box calculation) is performed using <code>CanvasRenderingContext2D.getImageData()</code> — a purely local operation with no network access.</li>
+    <li>Image transformation (straightening, color enhancement, format conversion) is performed by writing to an off-screen <code>HTMLCanvasElement</code> in memory.</li>
+    <li>When you click "Save All" or download a split, the browser generates a temporary object URL (<code>URL.createObjectURL</code>) directly from the in-memory canvas data. No server is involved.</li>
+    <li>When you close or refresh the browser tab, all image data held in memory is immediately and permanently released by the browser's garbage collector.</li>
+  </ul>
+
+  <h2>4. Cookies and Analytics</h2>
+  <p>PhotoSplit Studio uses <strong>Google Analytics 4</strong> (via Google Tag Manager) to collect anonymised, aggregated usage statistics — for example, which pages are visited, approximate geographic region, and browser type. We have enabled IP anonymisation (<code>anonymize_ip: true</code>) so your full IP address is never stored by Google. Google Analytics does not receive any of your image data. Its privacy practices are governed by Google's own <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>. You can opt out of Google Analytics tracking by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</p>
+  <p>PhotoSplit Studio does not set any additional first-party cookies beyond those set by Google Analytics and Google AdSense (described below).</p>
+  <p>We also use <strong>Google AdSense</strong> to display advertisements on the site. Google AdSense may set cookies and use similar tracking technologies to serve ads based on your browsing history and interests across other sites. This is standard behaviour for Google's ad network. Google's privacy practices are governed by their own <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+
+  <h2>5. Google AdSense and Third-Party Advertising</h2>
+  <p>We are a participant in the Google AdSense programme. Third-party vendors and ad networks, including Google, may use cookies to serve ads to visitors of our site based on their prior visits to our website and other sites on the internet. Google's use of advertising cookies enables it and its partners to serve ads based on your site visit and/or other sites on the internet.</p>
+  <p>You may opt out of personalised advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings</a>. You may also opt out of third-party vendor cookie use for personalised advertising by visiting <a href="https://www.aboutads.info" target="_blank" rel="noopener">aboutads.info</a>.</p>
+  <p>To opt out of Google Analytics data collection, install the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</p>
+
+  <h2>6. Feedback Form</h2>
+  <p>If you choose to submit feedback via our feedback form, we collect the name, email address, and message text you provide. This information is stored in a Google Sheets spreadsheet accessible only to the site administrators. We use it solely to review feedback and improve the service. We will never sell, share, or use your contact information for marketing purposes.</p>
+
+  <h2>7. Children's Privacy</h2>
+  <p>PhotoSplit Studio is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will promptly delete it.</p>
+
+  <h2>8. Data Security</h2>
+  <p>Because all photo processing is performed locally in your browser and no image data is transmitted to our servers, the risk of unauthorised access to your images through our service is eliminated by design. Any personal information submitted via our feedback form is stored in a Google Sheets spreadsheet protected by Google's security infrastructure.</p>
+
+  <h2>9. Your Rights</h2>
+  <p>If you are located in the European Union or United Kingdom, you have rights under the GDPR and UK GDPR including the right to access, correct, or delete any personal data we hold about you (such as feedback form submissions). To exercise these rights, please contact us at <a href="/cdn-cgi/l/email-protection#41323431312e33350131292e352e32312d283532353425282e6f222e2c"><span class="__cf_email__" data-cfemail="a6d5d3d6d6c9d4d2e6d6cec9d2c9d5d6cacfd2d5d2d3c2cfc988c5c9cb">[email&#160;protected]</span></a>.</p>
+
+  <h2>10. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last Updated" date at the top of this page. We encourage you to review this policy periodically. Continued use of PhotoSplit Studio after any changes constitutes acceptance of the updated policy.</p>
+
+  <h2>11. Contact</h2>
+  <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
+  <p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#aad9dfdadac5d8deeadac2c5dec5d9dac6c3ded9dedfcec3c584c9c5c7"><span class="__cf_email__" data-cfemail="a3d0d6d3d3ccd1d7e3d3cbccd7ccd0d3cfcad7d0d7d6c7cacc8dc0ccce">[email&#160;protected]</span></a></p>
+  <p><strong>Website:</strong> <a href="https://photosplitstudio.com">photosplitstudio.com</a></p>
+
+  <div style="text-align: center; margin: 60px 0 20px;">
+    <a href="/" class="btn" style="background: var(--accent-grad); color: white; padding: 14px 32px; font-size: 1.1rem; border-radius: var(--radius-md); text-decoration: none; box-shadow: var(--shadow-md);">Launch PhotoSplit Studio</a>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer

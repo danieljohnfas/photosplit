@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
+  </script>
+  <meta name="google-adsense-account" content="ca-pub-2501499631331261">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2501499631331261" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About PhotoSplit Studio — Free Online Photo Splitter Tool</title>
+  <meta name="description" content="Learn about PhotoSplit Studio. We help people who scan multiple photos at once to automatically separate and save them as individual files for free." />
+  <meta name="keywords" content="photo split, splitting tool, split scanned photos tool, about photosplit studio, developer info, digital archiving, web photo utility, privacy first image tools, browser based photo editor, client side image processing" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="PhotoSplit Studio" />
+  <link rel="canonical" href="https://photosplitstudio.com/about.html" />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="About PhotoSplit Studio" />
+  <meta property="og:description" content="Privacy-first, browser-based tool for splitting scanned photos." />
+  <meta property="og:url"         content="https://photosplitstudio.com/about.html" />
+  <meta property="og:image"       content="https://photosplitstudio.com/og-image.png" />
+  <meta property="og:image:alt"   content="PhotoSplit Studio automatic scan splitter" />
+  
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="About PhotoSplit Studio" />
+  <meta name="twitter:description" content="Privacy-first, browser-based tool for splitting scanned photos." />
+
+  <link rel="icon" href="/logo.png" type="image/png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="secondary.css" />
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="logo" href="/" style="display:flex;align-items:center;gap:12px;"><img src="/logo.png" alt="Logo" style="width:24px;height:24px;border-radius:4px;object-fit:cover;" /> PhotoSplit Studio</a>
+  <div class="nav-links">
+    <a href="/blog/">Blog</a>
+    <a href="/">App</a>
+    <a href="/tips.html">Scanning Tips</a>
+    <a href="/about.html">About</a>
+    <a href="/" class="cta">Open App →</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>About PhotoSplit Studio</h1>
+  <p>A free, privacy-first browser tool that helps you split multiple scanned photos automatically — no uploads, no installation, no cost.</p>
+</div>
+
+<div class="content-wrap">
+
+  <h2>Our Mission</h2>
+  <p>PhotoSplit Studio was created with one goal: to make digitizing a lifetime of printed photographs as easy and private as possible. Millions of families have shoeboxes full of old prints — memories from birthdays, holidays, and ordinary Tuesday afternoons that deserve to be preserved digitally. The problem has always been the tedious manual cropping step after scanning.</p>
+  <p>Traditional solutions either require expensive desktop software, upload your private family photos to someone else's server, or demand enough technical skill to make the process inaccessible for most people. PhotoSplit Studio eliminates all three barriers. It runs in your browser, it is completely free, and your photos never leave your device.</p>
+
+  <h2>What Makes Us Different</h2>
+  <div class="card-grid">
+    <div class="card">
+      <div class="icon">🔒</div>
+      <h3>100% Private</h3>
+      <p>All processing happens in your browser. No uploads, no servers, no data collection.</p>
+    </div>
+    <div class="card">
+      <div class="icon">⚡</div>
+      <h3>Instant Results</h3>
+      <p>OpenCV.js-powered detection completes in under two seconds for most scans. Save all in one click.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🌍</div>
+      <h3>Works Everywhere</h3>
+      <p>No installation. Works on Windows, Mac, Linux, iOS and Android in any modern browser.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🆓</div>
+      <h3>Completely Free</h3>
+      <p>No subscriptions, no sign-ups, no premium tiers. Free for personal and commercial use.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🎞️</div>
+      <h3>Negative Inversion</h3>
+      <p>Convert scanned film negatives to positive images in one click — no extra software needed.</p>
+    </div>
+    <div class="card">
+      <div class="icon">📱</div>
+      <h3>Social Media Ready</h3>
+      <p>Export directly to Instagram, TikTok, Twitter, Facebook, and WhatsApp with platform presets and custom watermarks.</p>
+    </div>
+  </div>
+
+  <h2>How It Works</h2>
+  <p>PhotoSplit Studio runs a multi-pass computer vision pipeline powered by <strong>OpenCV.js</strong> — the industry-standard open-source computer vision library compiled to WebAssembly and executed entirely inside your browser. When you upload a scanned image, the engine converts it to greyscale, applies Gaussian blur to reduce scanner noise, then runs both <em>Canny edge detection</em> and <em>adaptive thresholding</em> in parallel to robustly locate photo boundaries across a wide range of scan conditions. The two edge maps are combined, closed with morphological operations to bridge micro-gaps, and fed into OpenCV contour extraction to produce precise bounding rectangles for every individual photo detected.</p>
+  <p>All subsequent processing — auto-straightening, color enhancement, negative inversion, EXIF metadata embedding, and format conversion — is performed using the Web Canvas API and Web Workers, keeping every operation fully local to your device. No image data is ever transmitted over the network. The tool is distributed as a compact set of HTML, CSS, and JavaScript files that can even be saved and used offline after the initial page load.</p>
+
+  <h2>Supported Features</h2>
+  <ul>
+    <li>Automatic multi-photo detection powered by OpenCV.js (Canny + adaptive threshold pipeline)</li>
+    <li>Manual crop drawing for custom or tightly-packed regions</li>
+    <li>Auto-straighten for de-skewing rotated photos (±30°)</li>
+    <li>Auto color enhancement for restoring faded and yellowed prints</li>
+    <li>Convert Negative — one-click inversion of scanned film negatives to positive images</li>
+    <li>EXIF metadata year stamping — embeds a custom DateTimeOriginal tag so Apple Photos and Google Photos sort your archive chronologically</li>
+    <li>Social media export presets for Instagram (square &amp; story), TikTok, Twitter/X, Facebook, and WhatsApp — with custom letterbox background and watermark overlay</li>
+    <li>Carousel grid splitter — divides a wide scan into contiguous tiles for Instagram multi-slide posts (3×1, 2×2, 3×3, or custom grid)</li>
+    <li>ZIP batch download — save all splits as a single archive in one click</li>
+    <li>JPEG, PNG, TIFF, BMP, WebP, GIF, and PDF input support</li>
+    <li>JPEG and PNG output with adjustable quality</li>
+    <li>Adjustable background threshold and minimum area detection sensitivity sliders</li>
+    <li>Unlimited undo/redo history for bounding box edits</li>
+    <li>Full keyboard shortcut support for power users</li>
+    <li>Dark mode and responsive mobile layout</li>
+  </ul>
+
+  <h2>Privacy Commitment</h2>
+  <p>We believe your family photographs are among the most personal data you own. PhotoSplit Studio was designed from the ground up to never touch that data. When you open an image file, it is read into your browser's local memory using the standard <code>FileReader</code> API. From that moment, all processing — detection algorithms, image transformations, file exports — happens exclusively inside your browser's JavaScript engine.</p>
+  <p>We have no back-end servers processing your images. We collect no analytics on which photos you scan. When you close or refresh the browser tab, all image data is immediately released from memory. Read our full <a href="/privacy.html">Privacy Policy</a> for complete details.</p>
+
+  <h2>Advertising</h2>
+  <p>PhotoSplit Studio is supported by Google AdSense advertisements. These are standard, non-intrusive display ads served by Google. Advertising revenue is what allows us to keep this tool free for everyone. We do not serve pop-ups, autoplay video ads, or any advertising that interferes with the core tool functionality. Our Privacy Policy explains how Google AdSense may use cookies for ad personalisation and how you can opt out.</p>
+
+  <div id="contact" class="contact-box">
+    <h2>Contact Us</h2>
+    <p>Have a bug report, feature suggestion, or business inquiry? We would love to hear from you. For commercial licensing, API integration enquiries, or partnership opportunities, please reach out directly.</p>
+    <a href="/cdn-cgi/l/email-protection#dba8aeababb4a9af9babb3b4afb4a8abb7b2afa8afaebfb2b4f5b8b4b6" class="email-link">✉ <span class="__cf_email__" data-cfemail="99eaece9e9f6ebedd9e9f1f6edf6eae9f5f0edeaedecfdf0f6b7faf6f4">[email&#160;protected]</span></a>
+  </div>
+
+  <div style="text-align: center; margin: 60px 0 20px;">
+    <a href="/" class="btn" style="background: var(--accent-grad); color: white; padding: 14px 32px; font-size: 1.1rem; border-radius: var(--radius-md); text-decoration: none; box-shadow: var(--shadow-md);">Launch PhotoSplit Studio</a>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="/">App</a>
+    <a href="/blog/">Blog</a>
+    <a href="/tips.html">Scanning Tips</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/about.html#contact">Contact</a>
+  </div>
+  <div>&copy; 2026 PhotoSplit Studio. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
