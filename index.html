@@ -10,7 +10,7 @@
   <meta name="description"
     content="Automatically split multiple photos from a single scan in seconds — free, private, no upload needed. Drag in your JPEG, PNG or TIFF and PhotoSplit Studio instantly detects, crops and saves every photo separately." />
   <meta name="keywords"
-    content="split scanned photos online, photo splitter, image splitter, scan multiple photos, split image into multiple photos, auto crop scanned photos, separate photos from scan, bulk photo cropper, free photo splitter, AutoSplitter alternative, extract photos from scan, batch crop images, cut scanned images, separate multiple pictures from one scan, smart photo auto cropper, photo album digitizer" />
+    content="split scanned photos online, photo splitter, image splitter, scan multiple photos, split image into multiple photos, auto crop scanned photos, separate photos from scan, bulk photo cropper, free photo splitter, AutoSplitter alternative, extract photos from scan, batch crop images, resize image for instagram, resize photo for tiktok, social media image resizer, crop photo online free, image cropper online, convert jpg to png, convert jpeg to webp, bulk image converter, passport photo online free, make passport photo free, id photo maker, export photos as pdf, film negative to positive, scan film negatives free, photo album digitizer" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <meta name="author" content="PhotoSplit Studio" />
   <link rel="canonical" href="https://photosplitstudio.com/" />
@@ -54,16 +54,24 @@
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
       "featureList": [
         "Automatic multi-photo detection with OpenCV.js edge detection",
-        "Bulk photo cropping and splitting",
-        "Auto-straighten skewed photos",
-        "Auto color enhancement for faded prints",
-        "Convert Negative — invert scanned film negatives to positive",
+        "Bulk photo cropping and splitting from a single scan",
+        "Auto-straighten skewed and rotated photos",
+        "Auto color enhancement for faded vintage prints",
+        "Convert scanned film negatives to positive — B&W, C-41 colour, E-6 slide film",
         "EXIF metadata year stamping for chronological photo library sorting",
         "100% private local processing — photos never leave your device",
-        "JPEG, PNG, TIFF, BMP, WebP, GIF, and PDF support",
+        "JPEG, PNG, TIFF, BMP, WebP, GIF, and PDF input support",
+        "Export photos as multi-page PDF file",
         "Instagram, TikTok, Twitter, Facebook, WhatsApp social media export presets",
+        "Social media image resizer — resize photos for Instagram, TikTok, YouTube, Twitter/X, Facebook, LinkedIn",
+        "Free online image cropper — freeform and aspect-ratio crop",
+        "Bulk image converter — JPEG to PNG, PNG to WebP, JPEG to WebP",
+        "Free passport photo maker — US Passport, UK Passport, Schengen visa, Indian visa and 10+ formats",
         "Custom watermark overlay for social exports",
         "ZIP batch download",
+        "PDF batch export",
+        "Clipboard paste — paste screenshot directly with Ctrl+V",
+        "Copy single photo to clipboard",
         "Carousel grid splitter for Instagram multi-slide posts",
         "Unlimited undo/redo history"
       ],
@@ -113,12 +121,37 @@
         {
           "@type": "Question",
           "name": "What image formats are supported?",
-          "acceptedAnswer": { "@type": "Answer", "text": "PhotoSplit Studio supports JPEG, PNG, TIFF, BMP, WebP, and GIF. Export is available as JPEG or lossless PNG." }
+          "acceptedAnswer": { "@type": "Answer", "text": "PhotoSplit Studio supports JPEG, PNG, TIFF, BMP, WebP, GIF and PDF as input. Export is available as JPEG, PNG, or multi-page PDF." }
         },
         {
           "@type": "Question",
           "name": "What is a good AutoSplitter alternative for Mac and Linux?",
           "acceptedAnswer": { "@type": "Answer", "text": "PhotoSplit Studio is a free browser-based alternative to AutoSplitter that works on any OS including Mac, Linux, ChromeOS, iOS and Android — no installation required." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I resize an image for Instagram or TikTok?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Use PhotoSplit Studio's free Image Resizer at photosplitstudio.com/resize.html. Select a platform preset (Instagram 1080×1080, TikTok 1080×1920, YouTube 1280×720, etc.), upload your photo, choose Fit or Fill mode, and download the resized image. No upload to any server — everything runs in your browser." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I make a free passport photo online?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Use PhotoSplit Studio's free Passport Photo Maker at photosplitstudio.com/passport.html. Choose your country (US Passport 51×51mm, UK Passport 35×45mm, Schengen visa, Indian passport, and 10 more), upload your photo, zoom and drag to centre your face, then download at the correct official dimensions. You can also print a 4×6 inch sheet with multiple copies tiled for home printing." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I convert JPEG to PNG or WebP for free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Use PhotoSplit Studio's free Bulk Image Converter at photosplitstudio.com/convert.html. Drop multiple JPEG, PNG, or WebP files at once, select your output format, and download each converted file individually or as a single ZIP archive. All conversion is done locally in your browser." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I export my split photos as a PDF?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. After detecting and splitting your photos, click the blue PDF button in the toolbar. PhotoSplit Studio creates a multi-page PDF with one photo per page at full quality. No server required." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I convert scanned film negatives to positive images?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. PhotoSplit Studio includes a Convert Negative toggle. It supports B&W negatives, C-41 colour negative film, and E-6 colour slide film. The algorithm removes the orange mask from colour negatives and performs a linear-light channel inversion for accurate colours." }
         }
       ]
     }
@@ -751,6 +784,37 @@
         <p style="margin-bottom: 12px; color: var(--text-secondary);">Learn the optimal DPI settings, file formats to
           use, and how to properly space your prints on the scanner glass to guarantee 100% detection accuracy.</p>
         <a href="/tips.html" class="btn btn-secondary">Read the Scanning Guide &rarr;</a>
+      </div>
+
+      <h2>More Free Photo Editing Tools</h2>
+      <p>PhotoSplit Studio is a full suite of free, private, browser-based photo tools — not just a photo splitter. Every tool below runs entirely in your browser. No upload. No account. No limits.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin:24px 0 32px;">
+
+        <a href="/resize.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:20px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:1.8rem;margin-bottom:8px;">🖼️</div>
+          <h3 style="margin:0 0 6px;font-size:1rem;color:var(--text-primary);">Social Media Image Resizer</h3>
+          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);">Resize any photo to exact Instagram (1080×1080), TikTok (1080×1920), YouTube (1280×720), Twitter/X, Facebook, LinkedIn and Pinterest dimensions in seconds. Three fit modes: letterbox, fill, or stretch. Free &amp; private.</p>
+        </a>
+
+        <a href="/crop.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:20px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:1.8rem;margin-bottom:8px;">✂️</div>
+          <h3 style="margin:0 0 6px;font-size:1rem;color:var(--text-primary);">Free Online Image Cropper</h3>
+          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);">Crop any photo to a custom size or common aspect ratio — freeform, 1:1 square, 4:3, 16:9, 9:16, 3:2, and more. Drag corner handles, see a live preview, and download instantly as JPEG, PNG or WebP.</p>
+        </a>
+
+        <a href="/convert.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:20px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:1.8rem;margin-bottom:8px;">🔄</div>
+          <h3 style="margin:0 0 6px;font-size:1rem;color:var(--text-primary);">Bulk Image Format Converter</h3>
+          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);">Convert JPEG to PNG, PNG to WebP, JPEG to WebP — in bulk. Drop multiple files at once, convert all in one click, download individually or as a single ZIP archive. The fastest free JPEG-to-WebP converter online.</p>
+        </a>
+
+        <a href="/passport.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:20px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:1.8rem;margin-bottom:8px;">🪪</div>
+          <h3 style="margin:0 0 6px;font-size:1rem;color:var(--text-primary);">Free Passport &amp; ID Photo Maker</h3>
+          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);">Create compliant passport photos for US (2×2 in), UK (35×45 mm), EU/Schengen visa, Indian passport, Chinese passport, and 10 more formats — free. Includes a print-ready 4×6 inch sheet for home printing.</p>
+        </a>
+
       </div>
 
       <h2>Frequently Asked Questions</h2>
