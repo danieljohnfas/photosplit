@@ -139,6 +139,7 @@
     gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
   </script>
 
+  <meta name="theme-color" content="#010101" />
   <link rel="icon" href="/logo.png" type="image/png" />
   <link rel="preload" href="style.css" as="style" />
   <link rel="preload" href="app.js" as="script" />
@@ -591,7 +592,7 @@
 ════════════════════════════════════════════════════════════════════════════ -->
   <article id="seo-content" class="seo-wrapper">
     <div class="seo-container">
-      <h1>Free Online Photo Scanner &amp; Splitter</h1>
+      <h2 class="seo-main-heading">Free Online Photo Scanner &amp; Splitter</h2>
       <p>Welcome to <strong>PhotoSplit Studio</strong>, your free browser-based solution to extract, crop, and split
         multiple printed photos from a single scan. If you have been digitizing old family albums by placing 3 or 4
         photos on the scanner glass at once, you know how tedious it is to manually crop them later. Our tool automates
@@ -851,6 +852,7 @@
     <div class="footer-inner">
       <div class="footer-links">
         <a href="/blog/">Blog</a>
+        <a href="/terms.html">Terms of Use</a>
         <a href="/privacy.html">Privacy Policy</a>
         <a href="/about.html">About</a>
         <a href="/tips.html">Scanning Tips</a>
@@ -899,7 +901,7 @@
       <div class="text-modal-content">
         <p>By using PhotoSplit Studio, you agree that this tool is provided "as is". We provide no ultimate warranties
           on the availability or precision of the detection engine. <strong>PhotoSplit Studio is free for both personal
-            and commercial use.</strong> You retain all copyrights to the images you process.
+            and commercial use.</strong> You retain all copyrights to the images you process.</p>
       </div>
     </div>
   </div>
@@ -1379,4 +1381,43 @@
       var ext = fmt === 'png' ? 'png' : 'jpg';
       document.getElementById('filename-preview').textContent = base + '01.' + ext;
     }
-    document.getEl
+    document.getElementById('filename-input').addEventListener('input', updateFilenamePreview);
+    document.getElementById('format-select').addEventListener('change', updateFilenamePreview);
+    updateFilenamePreview();
+  </script>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+     GDPR COOKIE CONSENT BANNER
+════════════════════════════════════════════════════════════════════════════ -->
+  <div id="cookie-consent" role="dialog" aria-label="Cookie consent notification" aria-live="polite">
+    <div id="cookie-consent-inner">
+      <div id="cookie-consent-text">
+        <span>🍪</span>
+        <p>We use <strong>Google Analytics</strong> and <strong>Google AdSense</strong> cookies to understand how you use this site and to keep the service free. Your photos <strong>never leave your device</strong>. See our <a href="/privacy.html" style="color:var(--accent)">Privacy Policy</a>.</p>
+      </div>
+      <div id="cookie-consent-actions">
+        <a href="/privacy.html" class="cookie-btn cookie-btn-link">Learn More</a>
+        <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
+        <button id="cookie-accept" class="cookie-btn cookie-btn-accept">✓ Accept All</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var banner = document.getElementById('cookie-consent');
+      if (!localStorage.getItem('pss_cookie_consent')) {
+        banner.classList.add('visible');
+      }
+      document.getElementById('cookie-accept').addEventListener('click', function () {
+        localStorage.setItem('pss_cookie_consent', 'accepted');
+        banner.classList.remove('visible');
+      });
+      document.getElementById('cookie-decline').addEventListener('click', function () {
+        localStorage.setItem('pss_cookie_consent', 'declined');
+        banner.classList.remove('visible');
+      });
+    }());
+  </script>
+
+</body>
+</html>
