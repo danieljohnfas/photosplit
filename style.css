@@ -1131,6 +1131,67 @@ kbd {
    SOCIAL MEDIA SUITE
 ══════════════════════════════════════════════════════════════════════════ */
 
+/* ── Social Export Elements ─────────────────────────────────────────────────── */
+/* Ensure native share button behaves like primary */
+.social-modal-actions .btn-primary { order: 1; }
+.social-modal-actions #social-btn-share { order: 2; }
+
+/* ── Landing Page Navigation ──────────────────────────────────────────────── */
+.landing-nav {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.landing-nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.landing-nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.landing-nav-links a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  transition: color 0.15s;
+}
+
+.landing-nav-links a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 600px) {
+  .landing-nav {
+    justify-content: center;
+    padding: 12px 16px;
+  }
+  .landing-nav-links {
+    gap: 12px;
+    font-size: 0.85rem;
+  }
+}
+
 /* ── Social Export Modal ─────────────────────────────────────────────────── */
 #social-modal-backdrop {
   position: fixed;

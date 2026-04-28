@@ -2155,9 +2155,8 @@ const SocialManager = {
     // Build platform grid
     this._renderPlatformGrid();
 
-    // Show native share button on capable browsers
+    // Removed share button hiding logic so it's always visible for testing
     const shareBtn = $('social-btn-share');
-    if (shareBtn) shareBtn.style.display = navigator.share ? 'inline-flex' : 'none';
 
     // Bind live-update listeners
     $('social-bg-color').addEventListener('input', () => this._refreshPreview());
@@ -2345,6 +2344,10 @@ const SocialManager = {
 
   /* ── Native Web Share API (mobile) ────────────────────────── */
   async nativeShare() {
+    if (!navigator.share) {
+      showToast('Web Share API is not supported on this browser or connection.', 'error');
+      return;
+    }
     const composed = await this._buildCanvas();
     if (!composed) return;
     const blob = await ExportManager.canvasToBlob(composed, 'png', 1);
