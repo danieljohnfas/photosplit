@@ -220,6 +220,13 @@
        SITE HEADER
   ════════════════════════════════════════════════════════════════════════ -->
     <header id="site-header" role="banner">
+      <!-- Sidebar Toggle (Mobile) -->
+      <button id="sidebar-toggle" class="icon-btn" style="display: none;" aria-label="Toggle settings sidebar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18" />
+        </svg>
+      </button>
+
       <img src="/logo.png" alt="Logo" class="logo-icon" aria-hidden="true"
         style="width: 28px; height: 28px; border-radius: 6px; object-fit: cover;" />
       <span class="logo">PhotoSplit Studio</span>
@@ -438,6 +445,7 @@
 
 
       </aside>
+      <div id="sidebar-overlay"></div>
       <!-- END SIDEBAR -->
 
       <!-- ── CANVAS AREA ──────────────────────────────────────────────────── -->
@@ -1372,6 +1380,26 @@
     if (!localStorage.getItem("ps_counted")) {
       localStorage.setItem("ps_counted", "true");
       new Image().src = "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fphotosplitstudio.com&count_bg=%2310B981&title_bg=%231F2937&icon=&icon_color=%23E7E7E7&title=Total+Visits&edge_flat=true";
+    }
+  </script>
+  <!-- Mobile Sidebar Logic -->
+  <script>
+    const sideToggle = document.getElementById('sidebar-toggle');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    
+    if (sideToggle) {
+      sideToggle.onclick = () => sidebar.classList.toggle('open');
+      overlay.onclick = () => sidebar.classList.remove('open');
+      
+      const checkRes = () => {
+        sideToggle.style.display = window.innerWidth <= 1024 ? 'flex' : 'none';
+        if (window.innerWidth > 1024) {
+          sidebar.classList.remove('open');
+        }
+      };
+      window.addEventListener('resize', checkRes);
+      checkRes();
     }
   </script>
 </body>

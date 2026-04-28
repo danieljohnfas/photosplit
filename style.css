@@ -189,8 +189,16 @@ body {
   color: var(--accent);
 }
 
-@media (max-width: 768px) {
-  .main-nav { display: none; }
+@media (max-width: 900px) {
+  .main-nav { gap: 12px; margin-left: 16px; }
+  .main-nav a { font-size: 0.8rem; }
+  .privacy-badge span { display: none; }
+  .privacy-badge { padding: 6px; border-radius: 50%; }
+}
+
+@media (max-width: 480px) {
+  .logo { font-size: 1.1rem; }
+  #site-header { padding: 0 12px; gap: 8px; }
 }
 
 .header-spacer { flex: 1; }
@@ -254,9 +262,21 @@ body {
   flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
-  transition: width var(--dur-normal) var(--ease-smooth);
-  z-index: 10;
+  transition: all var(--dur-normal) var(--ease-smooth);
+  z-index: 200;
 }
+
+#sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+  z-index: 190;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur-normal) var(--ease-smooth);
+}
+
 
 .sidebar-section {
   padding: 16px;
@@ -1100,18 +1120,13 @@ kbd {
 
 @media (max-width: 720px) {
   #main-body { flex-direction: column; }
-  #sidebar {
-    width: 100%;
-    min-width: 0;
-    max-height: 280px;
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
+  /* Old sidebar rule removed to avoid conflict with new collapsible sidebar */
   #ad-sidebar { display: none; }
   #zoom-controls { left: 16px; }
   .privacy-badge span { display: none; }
   #kbd-hint { display: none; }
 }
+
 
 /* ── Utility ──────────────────────────────────────────────────────────────── */
 .hidden  { display: none !important; }
@@ -1817,4 +1832,85 @@ kbd {
   box-shadow: 0 2px 12px rgba(254,44,85,0.35);
 }
 .cookie-btn-accept:hover { box-shadow: 0 4px 20px rgba(254,44,85,0.50); transform: translateY(-1px); }
+
+/* ── RESPONSIVENESS (Global / App) ─────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  /* Sidebar Mobile Logic */
+  #sidebar {
+    position: fixed !important;
+    top: calc(var(--header-h) + var(--ad-top-h)) !important;
+    bottom: 0 !important;
+    left: calc(-1 * var(--sidebar-w)) !important;
+    width: var(--sidebar-w) !important;
+    height: auto !important;
+    max-height: none !important;
+    box-shadow: var(--shadow-lg) !important;
+  }
+  #sidebar.open { left: 0 !important; }
+  #sidebar.open + #sidebar-overlay { opacity: 1; pointer-events: all; }
+
+  /* Ensure the workspace takes full space when sidebar is collapsed */
+  #workspace { width: 100% !important; }
+}
+
+@media (max-width: 768px) {
+  #sidebar { top: var(--header-h) !important; }
+  
+  /* Landing Navigation Stacking */
+  .landing-nav-links {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    margin-top: 12px;
+  }
+  .landing-nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 8px;
+    background: var(--bg-surface-2);
+    border-radius: var(--radius-sm);
+  }
+
+  /* Modals sizing */
+  #social-modal-box, #carousel-modal-box, .text-modal-box {
+    width: 95vw;
+    max-height: 90vh;
+    padding: 20px;
+  }
+  
+  /* Strip thumbnails size */
+  .split-thumb {
+    width: 60px;
+    height: 60px;
+  }
+  
+  /* Workspace toolbar wrapping */
+  .toolbar-group {
+    gap: 8px;
+  }
+  
+  .btn-icon-text span { display: none; }
+  .btn-icon-text { padding: 8px; }
+}
+
+@media (max-width: 480px) {
+  /* Footer links stacking */
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  /* Ad leaderboard height adjustment */
+  #ad-leaderboard {
+    min-height: 60px;
+    font-size: 0.65rem;
+  }
+  
+  /* Modal action buttons wrapping */
+  .social-modal-actions {
+    justify-content: center;
+  }
+}
 
