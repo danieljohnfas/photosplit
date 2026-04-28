@@ -53,27 +53,41 @@
       "softwareVersion": "1.2",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
       "featureList": [
-        "Automatic multi-photo detection with OpenCV.js edge detection",
+        "Automatic multi-photo detection with OpenCV.js computer vision edge detection",
         "Bulk photo cropping and splitting from a single scan",
-        "Auto-straighten skewed and rotated photos",
+        "Auto-straighten skewed and rotated photos up to ±30 degrees",
+        "Manual 90-degree thumbnail rotation CW and CCW",
         "Auto color enhancement for faded vintage prints",
+        "Before and after photo enhancement comparison slider",
         "Convert scanned film negatives to positive — B&W, C-41 colour, E-6 slide film",
         "EXIF metadata year stamping for chronological photo library sorting",
         "100% private local processing — photos never leave your device",
+        "Works offline after first page load",
         "JPEG, PNG, TIFF, BMP, WebP, GIF, and PDF input support",
+        "JPEG export with adjustable quality slider (10–100%)",
+        "PNG lossless export",
         "Export photos as multi-page PDF file",
+        "Manual crop zones — draw custom bounding boxes with Add Crop",
+        "Drag corner handles to resize detected bounding boxes",
+        "Arrow-key pixel-precise nudging of selected bounding box",
+        "Adjustable detection sensitivity — background threshold and minimum area sliders",
+        "Re-detect button to rerun detection with new settings",
         "Instagram, TikTok, Twitter, Facebook, WhatsApp social media export presets",
+        "Social media letterbox padding — fit photos to platform aspect ratios",
+        "Custom watermark text overlay for social exports",
+        "Native mobile share via Web Share API",
         "Social media image resizer — resize photos for Instagram, TikTok, YouTube, Twitter/X, Facebook, LinkedIn",
         "Free online image cropper — freeform and aspect-ratio crop",
         "Bulk image converter — JPEG to PNG, PNG to WebP, JPEG to WebP",
         "Free passport photo maker — US Passport, UK Passport, Schengen visa, Indian visa and 10+ formats",
-        "Custom watermark overlay for social exports",
+        "Passport photo print sheet — 4x6 inch tiled sheet for home printing",
         "ZIP batch download",
         "PDF batch export",
         "Clipboard paste — paste screenshot directly with Ctrl+V",
         "Copy single photo to clipboard",
         "Carousel grid splitter for Instagram multi-slide posts",
-        "Unlimited undo/redo history"
+        "Unlimited undo and redo history",
+        "Full keyboard shortcut panel for power users"
       ],
       "screenshot": "https://photosplitstudio.com/og-image.png"
     },
@@ -761,6 +775,30 @@
           style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
           <h3 style="margin-top: 0; display: flex; align-items: center; gap: 8px;"><span>📄</span> PDF Scan Support</h3>
           <p style="margin-bottom: 0;">Many all-in-one printers and scanner apps export scans as PDFs instead of image files. PhotoSplit Studio accepts PDF input natively — just drag in your PDF and the detection pipeline runs exactly the same as with JPEG or TIFF.</p>
+        </div>
+
+        <div
+          style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
+          <h3 style="margin-top: 0; display: flex; align-items: center; gap: 8px;"><span>📄</span> Export as PDF</h3>
+          <p style="margin-bottom: 0;">After splitting your photos, click the <strong>PDF button</strong> in the toolbar to generate a multi-page PDF document — one photo per page at full resolution. Perfect for archiving, emailing, or sending to a print shop without zipping individual files.</p>
+        </div>
+
+        <div
+          style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
+          <h3 style="margin-top: 0; display: flex; align-items: center; gap: 8px;"><span>📋</span> Clipboard Paste &amp; Copy</h3>
+          <p style="margin-bottom: 0;">Press <strong>Ctrl+V</strong> anywhere on the page to paste a screenshot or copied image directly into the tool — no file picker needed. Each split photo also has a <strong>📋 Copy to Clipboard</strong> button so you can paste it instantly into any app, email, or document.</p>
+        </div>
+
+        <div
+          style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
+          <h3 style="margin-top: 0; display: flex; align-items: center; gap: 8px;"><span>🔀</span> Before &amp; After Comparison</h3>
+          <p style="margin-bottom: 0;">Use the built-in <strong>Before / After slider</strong> to compare the original scan against the enhanced version side-by-side. See exactly how much the color enhancement, straightening, or negative conversion has improved the photo before saving it.</p>
+        </div>
+
+        <div
+          style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
+          <h3 style="margin-top: 0; display: flex; align-items: center; gap: 8px;"><span>⌨️</span> Precision Controls &amp; Shortcuts</h3>
+          <p style="margin-bottom: 0;">Power users love the full <strong>keyboard shortcut panel</strong> (press <kbd>?</kbd>). Use <strong>arrow keys</strong> for pixel-precise nudging of any bounding box, <strong>JPEG quality slider</strong> for fine-tuned compression, and <strong>adjustable sensitivity sliders</strong> for difficult scans on cream or dark scanner beds.</p>
         </div>
 
       </div>
