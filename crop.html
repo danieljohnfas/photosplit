@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="">
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G40QDCGTTZ',{'anonymize_ip':true});</script>
-  <meta name="google-adsense-account" content="ca-pub-2501499631331261">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2501499631331261" crossorigin="anonymous"></script>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <meta name="theme-color" content="#010101"/>
@@ -22,9 +18,14 @@
   <link rel="icon" href="/logo.png" type="image/png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="secondary.css"/>
+
+  <!-- AdSense & Analytics -->
+  <meta name="google-adsense-account" content="ca-pub-2501499631331261">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2501499631331261" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G40QDCGTTZ',{'anonymize_ip':true});</script>
+
   <style>
     .crop-tool { max-width: 980px; margin: 0 auto; padding: 32px 24px 60px; }
     .ratio-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
@@ -54,414 +55,195 @@
     .btn-crop-action:hover { transform: translateY(-1px); box-shadow: 0 5px 20px rgba(254,44,85,0.45); }
     .crop-preview { background: var(--bg-base); border-radius: var(--radius-sm); overflow: hidden; display: flex; align-items: center; justify-content: center; min-height: 80px; }
     #crop-preview-canvas { max-width: 100%; max-height: 160px; display: block; }
-    .section-label { font-size: 0.82rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; }
   </style>
-  <script type="application/ld+json">
-  [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Free Online Image Cropper — PhotoSplit Studio",
-      "url": "https://photosplitstudio.com/crop.html",
-      "applicationCategory": "MultimediaApplication",
-      "operatingSystem": "All",
-      "description": "Free online image cropper. Crop any photo to a custom size or aspect ratio — freeform, 1:1 square, 4:3, 16:9, 9:16, and more. 100% private, no upload.",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "featureList": ["Freeform crop", "9 aspect ratio presets including 1:1, 4:3, 16:9, 9:16, 21:9", "Draggable corner handles", "Live crop preview", "Export as JPEG, PNG or WebP", "Clipboard paste (Ctrl+V)", "100% private — images never uploaded"]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "PhotoSplit Studio", "item": "https://photosplitstudio.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Image Cropper", "item": "https://photosplitstudio.com/crop.html" }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "How do I crop an image to a square online?", "acceptedAnswer": { "@type": "Answer", "text": "Select the 1:1 Square preset above, upload your photo, drag to select the area you want, and click Download. The cropper locks the selection to a perfect square automatically." } },
-        { "@type": "Question", "name": "What aspect ratio should I use for Instagram?", "acceptedAnswer": { "@type": "Answer", "text": "Instagram supports 1:1 (square), 4:5 (portrait), and 1.91:1 (landscape). Square (1:1) is the safest for feed posts. For Stories and Reels use 9:16." } },
-        { "@type": "Question", "name": "Is this image cropper free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, 100% free. No account, no watermark, no file size limit. Everything runs in your browser — your images are never sent to a server." } }
-      ]
-    }
-  ]
-  </script>
 </head>
 <body>
-<nav class="site-nav">
-  <a class="logo" href="/" style="display:flex;align-items:center;gap:10px;">
-    <img src="/logo.png" alt="PhotoSplit Studio" style="width:24px;height:24px;border-radius:4px;"/>
-    PhotoSplit Studio
-  </a>
-  <div class="nav-links">
-    <a href="/app.html">Split Scans</a>
-    <a href="/resize.html">Resize</a>
-    <a href="/convert.html">Convert</a>
-    <a href="/passport.html">Passport</a>
-    <a href="/app.html" class="cta">Open App →</a>
-  </div>
-</nav>
+  <header id="site-header">
+    <button class="icon-btn" id="sidebar-toggle" aria-label="Toggle navigation">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 12h18M3 6h18M3 18h18" />
+      </svg>
+    </button>
+    <a href="/" class="logo">
+      <div class="logo-icon">✨</div>
+      PhotoSplit Studio
+    </a>
+    <div class="header-spacer"></div>
+    <div class="privacy-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      </svg>
+      <span>100% Private &middot; No Uploads</span>
+    </div>
+    <nav class="main-nav">
+      <a href="/app.html">Split Photos</a>
+      <a href="/resize.html">Resize</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tips.html">Tips</a>
+    </nav>
+    <button class="icon-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">🌓</button>
+  </header>
 
-<div class="hero">
-  <h1>Free Online Image Cropper</h1>
-  <p>Crop any photo to a custom size or common aspect ratio. Drag to select the crop area, then download. 100% private — no upload.</p>
-</div>
+  <main>
+    <section class="hero-utility" style="padding: var(--space-lg) 24px; text-align: center; background: var(--bg-sunken); border-bottom: 1px solid var(--border);">
+      <h1 style="font-size: 2.5rem; font-weight: 900; margin-bottom: 12px;">Free Online Image Cropper</h1>
+      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 700px; margin: 0 auto;">Crop any photo to a custom size or aspect ratio instantly. Free & private.</p>
+    </section>
 
-<!-- AdSense — Below Hero -->
-<div style="max-width:980px;margin:0 auto;padding:0 24px 8px;">
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-2501499631331261"
-       data-ad-slot="auto"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
+    <!-- AdSense — Below Hero -->
+    <div style="max-width:980px;margin:var(--space-md) auto;padding:0 24px;">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-2501499631331261"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
 
-<div class="crop-tool">
-  <div class="section-label">Aspect Ratio Presets</div>
-  <div class="ratio-row">
-    <button class="ratio-btn active" data-ratio="free">Freeform</button>
-    <button class="ratio-btn" data-ratio="1:1">1:1 Square</button>
-    <button class="ratio-btn" data-ratio="4:3">4:3</button>
-    <button class="ratio-btn" data-ratio="3:4">3:4 Portrait</button>
-    <button class="ratio-btn" data-ratio="16:9">16:9 Widescreen</button>
-    <button class="ratio-btn" data-ratio="9:16">9:16 Story</button>
-    <button class="ratio-btn" data-ratio="3:2">3:2</button>
-    <button class="ratio-btn" data-ratio="2:3">2:3</button>
-    <button class="ratio-btn" data-ratio="21:9">21:9 Cinematic</button>
-  </div>
-
-  <div class="crop-workspace">
-    <div>
-      <div id="crop-upload-zone" onclick="document.getElementById('crop-file-input').click()">
-        <div style="font-size:2.5rem">✂️</div>
-        <div style="font-weight:700;font-size:1rem;color:var(--text-primary);margin-top:8px">Drop image here or click to upload</div>
-        <p>JPEG, PNG, WebP, BMP supported • or paste with Ctrl+V</p>
-        <input type="file" id="crop-file-input" accept="image/*" style="display:none"/>
+    <div class="crop-tool">
+      <div class="section-label">Aspect Ratio Presets</div>
+      <div class="ratio-row">
+        <button class="ratio-btn active" data-ratio="free">Freeform</button>
+        <button class="ratio-btn" data-ratio="1:1">1:1 Square</button>
+        <button class="ratio-btn" data-ratio="4:3">4:3</button>
+        <button class="ratio-btn" data-ratio="16:9">16:9</button>
+        <button class="ratio-btn" data-ratio="9:16">9:16 Story</button>
+        <button class="ratio-btn" data-ratio="3:2">3:2</button>
       </div>
-      <div id="crop-canvas-wrap">
-        <canvas id="crop-img-canvas"></canvas>
-        <div id="crop-selection">
-          <div class="crop-handle nw" data-dir="nw"></div>
-          <div class="crop-handle ne" data-dir="ne"></div>
-          <div class="crop-handle sw" data-dir="sw"></div>
-          <div class="crop-handle se" data-dir="se"></div>
+
+      <div class="crop-workspace">
+        <div>
+          <div id="crop-upload-zone" onclick="document.getElementById('crop-file-input').click()">
+            <div style="font-size:2.5rem">✂️</div>
+            <div style="font-weight:700;font-size:1rem;color:var(--text-primary);margin-top:8px">Drop image here or click to upload</div>
+            <p>JPEG, PNG, WebP supported • or paste with Ctrl+V</p>
+            <input type="file" id="crop-file-input" accept="image/*" style="display:none"/>
+          </div>
+          <div id="crop-canvas-wrap">
+            <canvas id="crop-img-canvas"></canvas>
+            <div id="crop-selection">
+              <div class="crop-handle nw" data-dir="nw"></div>
+              <div class="crop-handle ne" data-dir="ne"></div>
+              <div class="crop-handle sw" data-dir="sw"></div>
+              <div class="crop-handle se" data-dir="se"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="crop-panel">
+          <div>
+            <div class="section-label" style="margin-bottom:10px">Crop Area</div>
+            <div class="crop-dims-row">
+              <div class="dim-group"><label>X</label><input type="number" id="crop-x" value="0"/></div>
+              <div class="dim-group"><label>Y</label><input type="number" id="crop-y" value="0"/></div>
+            </div>
+            <div class="crop-dims-row" style="margin-top:8px">
+              <div class="dim-group"><label>Width</label><input type="number" id="crop-w" value="0"/></div>
+              <span>×</span>
+              <div class="dim-group"><label>Height</label><input type="number" id="crop-h" value="0"/></div>
+            </div>
+          </div>
+          <div>
+            <label>Preview</label>
+            <div class="crop-preview"><canvas id="crop-preview-canvas"></canvas></div>
+          </div>
+          <button class="btn-crop-action" id="btn-crop-download" disabled>✂️ Download Cropped Image</button>
         </div>
       </div>
     </div>
+  </main>
 
-    <div class="crop-panel">
-      <div>
-        <div class="section-label" style="margin-bottom:10px">Crop Area</div>
-        <div class="crop-dims-row">
-          <div class="dim-group"><label>X</label><input type="number" id="crop-x" value="0" min="0"/></div>
-          <div class="dim-group"><label>Y</label><input type="number" id="crop-y" value="0" min="0"/></div>
-        </div>
-        <div class="crop-dims-row" style="margin-top:8px">
-          <div class="dim-group"><label>Width</label><input type="number" id="crop-w" value="0" min="1"/></div>
-          <span>×</span>
-          <div class="dim-group"><label>Height</label><input type="number" id="crop-h" value="0" min="1"/></div>
-        </div>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="/blog/">Blog</a>
+        <a href="/resize.html">Resize</a>
+        <a href="/crop.html">Crop</a>
+        <a href="/convert.html">Convert</a>
+        <a href="/passport.html">Passport</a>
+        <a href="/tips.html">Scanning Tips</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="#" onclick="openTextModal('feedback-modal', event)">Feedback</a>
       </div>
-
-      <div>
-        <label>Preview</label>
-        <div class="crop-preview"><canvas id="crop-preview-canvas"></canvas></div>
-      </div>
-
-      <div>
-        <label for="crop-format">Format</label>
-        <select id="crop-format" style="width:100%;padding:8px;background:var(--bg-surface-2);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text-primary);font-family:inherit;">
-          <option value="jpeg">JPEG</option>
-          <option value="png">PNG</option>
-          <option value="webp">WebP</option>
-        </select>
-      </div>
-
-      <button class="btn-crop-action" id="btn-crop-download" disabled>✂️ Download Cropped Image</button>
-      <div style="font-size:0.72rem;color:var(--text-muted);text-align:center;">No upload. All processing is local.</div>
+      <div class="footer-copy">&copy; 2026 PhotoSplit Studio. All rights reserved.</div>
     </div>
-  </div>
-</div>
+  </footer>
 
-<article style="max-width:980px;margin:0 auto;padding:0 24px 60px;">
-  <h2>What Is Image Cropping and When Do You Need It?</h2>
-  <p>Cropping is the process of removing unwanted outer areas from a photograph to improve its composition, focus attention on a subject, or resize it to fit a specific layout. Whether you are preparing photos for social media, removing distracting backgrounds, or standardising a collection of images to the same dimensions, a good crop tool is essential.</p>
-
-  <h2>Aspect Ratio Guide for Common Uses</h2>
-  <ul>
-    <li><strong>1:1 Square</strong> — perfect for Instagram feed posts, profile pictures, and product thumbnails.</li>
-    <li><strong>4:3</strong> — the classic photo ratio used by most cameras and scanners. Works well for printed photo albums.</li>
-    <li><strong>3:4 Portrait</strong> — ideal for portrait photography and phone wallpapers.</li>
-    <li><strong>16:9 Widescreen</strong> — standard for YouTube thumbnails, desktop wallpapers, and TV-format video covers.</li>
-    <li><strong>9:16 Story</strong> — full-screen vertical format for Instagram Stories, TikTok, and YouTube Shorts.</li>
-    <li><strong>3:2</strong> — the traditional 35mm film frame ratio used by DSLRs. Great for prints and photography portfolios.</li>
-    <li><strong>21:9 Cinematic</strong> — ultra-wide crop for cinematic banner images and film-style headers.</li>
-    <li><strong>Freeform</strong> — drag any rectangle to crop to an exact custom pixel dimension.</li>
-  </ul>
-
-  <h2>How to Crop a Photo to a Specific Size</h2>
-  <ol>
-    <li>Upload your image by dragging it into the zone above, or paste with <strong>Ctrl+V</strong>.</li>
-    <li>Select an aspect ratio preset, or leave it on Freeform to draw freely.</li>
-    <li>Drag the red corner handles to adjust the crop area precisely.</li>
-    <li>Check the live preview panel to confirm the result.</li>
-    <li>Choose JPEG, PNG or WebP output, then click <strong>Download Cropped Image</strong>.</li>
-  </ol>
-
-  <h2>Why Crop Instead of Resize?</h2>
-  <p>Resizing changes the dimensions of the entire image, which can distort or stretch the content. Cropping removes pixels from the edges without distorting anything inside the crop area. For the best results, crop first to establish the correct composition and aspect ratio, then resize to the target pixel dimensions using the <a href="/resize.html">free Image Resizer</a>.</p>
-
-  <h2>Related Free Tools</h2>
-  <ul>
-    <li><a href="/resize.html">Social Media Image Resizer</a> — resize to Instagram, TikTok, YouTube dimensions</li>
-    <li><a href="/convert.html">Bulk Image Converter</a> — JPEG to PNG, PNG to WebP</li>
-    <li><a href="/passport.html">Passport Photo Maker</a> — crop and size for 12 country formats</li>
-    <li><a href="/">Photo Scan Splitter</a> — automatically split multiple scanned photos</li>
-  </ul>
-</article>
-
-<!-- AdSense — Below Article -->
-<div style="max-width:980px;margin:0 auto;padding:0 24px 32px;">
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-2501499631331261"
-       data-ad-slot="auto"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-
-<footer class="site-footer">
-  <div class="footer-links">
-    <a href="/app.html">Split Scans</a>
-    <a href="/resize.html">Resize</a>
-    <a href="/crop.html">Crop</a>
-    <a href="/convert.html">Convert</a>
-    <a href="/passport.html">Passport Photo</a>
-    <a href="/terms.html">Terms</a>
-    <a href="/privacy.html">Privacy</a>
-  </div>
-  <div>&copy; 2026 PhotoSplit Studio</div>
-</footer>
-
-<script>
-(function () {
-  let srcImg = null, displayScale = 1;
-  let sel = { x: 0, y: 0, w: 0, h: 0 };
-  let ratio = null;
-  let dragging = null;
-
-  const zone = document.getElementById('crop-upload-zone');
-  const fileInput = document.getElementById('crop-file-input');
-  const wrap = document.getElementById('crop-canvas-wrap');
-  const imgCanvas = document.getElementById('crop-img-canvas');
-  const ctx = imgCanvas.getContext('2d');
-  const selEl = document.getElementById('crop-selection');
-  const previewCanvas = document.getElementById('crop-preview-canvas');
-  const pctx = previewCanvas.getContext('2d');
-  const inX = document.getElementById('crop-x');
-  const inY = document.getElementById('crop-y');
-  const inW = document.getElementById('crop-w');
-  const inH = document.getElementById('crop-h');
-  const btnDl = document.getElementById('btn-crop-download');
-
-  zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag-over'); });
-  zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
-  zone.addEventListener('drop', e => { e.preventDefault(); zone.classList.remove('drag-over'); loadFile(e.dataTransfer.files[0]); });
-  fileInput.addEventListener('change', e => loadFile(e.target.files[0]));
-  document.addEventListener('paste', e => {
-    const item = [...(e.clipboardData?.items||[])].find(i=>i.type.startsWith('image/'));
-    if (item) { e.preventDefault(); loadFile(item.getAsFile()); }
-  });
-
-  function loadFile(file) {
-    if (!file || !file.type.startsWith('image/')) return;
-    const url = URL.createObjectURL(file);
-    const img = new Image();
-    img.onload = () => {
-      URL.revokeObjectURL(url);
-      srcImg = img;
-      const maxW = wrap.parentElement.offsetWidth || 600;
-      displayScale = Math.min(1, maxW / img.naturalWidth);
-      imgCanvas.width  = Math.round(img.naturalWidth  * displayScale);
-      imgCanvas.height = Math.round(img.naturalHeight * displayScale);
-      ctx.drawImage(img, 0, 0, imgCanvas.width, imgCanvas.height);
-      wrap.style.display = 'block';
-      zone.style.display = 'none';
-      sel = { x: 0, y: 0, w: imgCanvas.width, h: imgCanvas.height };
-      updateSelEl();
-      updateInputs();
-      updatePreview();
-      btnDl.disabled = false;
-    };
-    img.src = url;
-  }
-
-  // Ratio presets
-  document.querySelectorAll('.ratio-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.ratio-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const r = btn.dataset.ratio;
-      if (r === 'free') { ratio = null; }
-      else { const [rw, rh] = r.split(':').map(Number); ratio = rw / rh; }
-      if (ratio && srcImg) {
-        const maxW = sel.w, maxH = sel.h;
-        if (ratio >= 1) { sel.h = Math.min(maxH, Math.round(sel.w / ratio)); }
-        else { sel.w = Math.min(maxW, Math.round(sel.h * ratio)); }
-        updateSelEl(); updateInputs(); updatePreview();
-      }
-    });
-  });
-
-  function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
-
-  function updateSelEl() {
-    selEl.style.left   = sel.x + 'px';
-    selEl.style.top    = sel.y + 'px';
-    selEl.style.width  = sel.w + 'px';
-    selEl.style.height = sel.h + 'px';
-  }
-
-  function updateInputs() {
-    const s = Math.round(1 / displayScale);
-    inX.value = Math.round(sel.x * s);
-    inY.value = Math.round(sel.y * s);
-    inW.value = Math.round(sel.w * s);
-    inH.value = Math.round(sel.h * s);
-  }
-
-  function updatePreview() {
-    if (!srcImg) return;
-    const iW = srcImg.naturalWidth, iH = srcImg.naturalHeight;
-    const sx = Math.round(sel.x / displayScale), sy = Math.round(sel.y / displayScale);
-    const sw = Math.round(sel.w / displayScale), sh = Math.round(sel.h / displayScale);
-    const maxPH = 160;
-    const pscale = Math.min(1, maxPH / sh, 240 / sw);
-    previewCanvas.width  = Math.max(1, Math.round(sw * pscale));
-    previewCanvas.height = Math.max(1, Math.round(sh * pscale));
-    pctx.drawImage(srcImg, sx, sy, sw, sh, 0, 0, previewCanvas.width, previewCanvas.height);
-  }
-
-  // Drag to move selection
-  selEl.addEventListener('mousedown', e => {
-    if (e.target.classList.contains('crop-handle')) return;
-    const startX = e.clientX - sel.x, startY = e.clientY - sel.y;
-    dragging = { type: 'move', startX, startY };
-    e.preventDefault();
-  });
-
-  // Drag handles
-  selEl.querySelectorAll('.crop-handle').forEach(h => {
-    h.addEventListener('mousedown', e => {
-      dragging = { type: 'resize', dir: h.dataset.dir, origSel: {...sel}, startX: e.clientX, startY: e.clientY };
-      e.preventDefault(); e.stopPropagation();
-    });
-  });
-
-  // Initial selection draw on canvas
-  let drawing = false, drawStart = null;
-  imgCanvas.addEventListener('mousedown', e => {
-    if (!srcImg) return;
-    const rect = imgCanvas.getBoundingClientRect();
-    const x = e.clientX - rect.left, y = e.clientY - rect.top;
-    drawing = true;
-    drawStart = { x, y };
-    sel = { x, y, w: 0, h: 0 };
-    e.preventDefault();
-  });
-
-  document.addEventListener('mousemove', e => {
-    if (!srcImg) return;
-    if (drawing) {
-      const rect = imgCanvas.getBoundingClientRect();
-      let x2 = clamp(e.clientX - rect.left, 0, imgCanvas.width);
-      let y2 = clamp(e.clientY - rect.top, 0, imgCanvas.height);
-      sel.x = Math.min(drawStart.x, x2);
-      sel.y = Math.min(drawStart.y, y2);
-      sel.w = Math.abs(x2 - drawStart.x);
-      sel.h = Math.abs(y2 - drawStart.y);
-      if (ratio) {
-        if (sel.w / sel.h > ratio) sel.h = Math.round(sel.w / ratio);
-        else sel.w = Math.round(sel.h * ratio);
-      }
-      updateSelEl(); updateInputs(); updatePreview();
-    } else if (dragging) {
-      if (dragging.type === 'move') {
-        sel.x = clamp(e.clientX - dragging.startX, 0, imgCanvas.width - sel.w);
-        sel.y = clamp(e.clientY - dragging.startY, 0, imgCanvas.height - sel.h);
-        updateSelEl(); updateInputs(); updatePreview();
-      } else {
-        const dx = e.clientX - dragging.startX, dy = e.clientY - dragging.startY;
-        const o = dragging.origSel;
-        let { x, y, w, h } = o;
-        const dir = dragging.dir;
-        if (dir.includes('e')) w = Math.max(20, o.w + dx);
-        if (dir.includes('s')) h = Math.max(20, o.h + dy);
-        if (dir.includes('w')) { x = o.x + dx; w = Math.max(20, o.w - dx); }
-        if (dir.includes('n')) { y = o.y + dy; h = Math.max(20, o.h - dy); }
-        if (ratio) { h = Math.round(w / ratio); }
-        sel = { x: clamp(x, 0, imgCanvas.width), y: clamp(y, 0, imgCanvas.height), w: clamp(w, 20, imgCanvas.width), h: clamp(h, 20, imgCanvas.height) };
-        updateSelEl(); updateInputs(); updatePreview();
-      }
-    }
-  });
-
-  document.addEventListener('mouseup', () => { drawing = false; dragging = null; });
-
-  btnDl.addEventListener('click', () => {
-    if (!srcImg) return;
-    const sx = Math.round(sel.x / displayScale), sy = Math.round(sel.y / displayScale);
-    const sw = Math.round(sel.w / displayScale), sh = Math.round(sel.h / displayScale);
-    const out = document.createElement('canvas');
-    out.width = sw; out.height = sh;
-    out.getContext('2d').drawImage(srcImg, sx, sy, sw, sh, 0, 0, sw, sh);
-    const fmt = document.getElementById('crop-format').value;
-    const mimeMap = { jpeg: 'image/jpeg', png: 'image/png', webp: 'image/webp' };
-    const extMap  = { jpeg: 'jpg', png: 'png', webp: 'webp' };
-    out.toBlob(blob => {
-      const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
-      a.download = `cropped.${extMap[fmt]}`; a.click(); URL.revokeObjectURL(a.href);
-    }, mimeMap[fmt], 0.92);
-    if (typeof gtag !== 'undefined') gtag('event', 'crop_download');
-  });
-}());
-</script>
-
-    <!-- Hit Tracker (Unique Visitors Only) -->
   <script>
-    if (!localStorage.getItem("ps_counted")) {
-      localStorage.setItem("ps_counted", "true");
-      new Image().src = "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
-    }
-  </script>
+    (function () {
+      let srcImg = null, displayScale = 1, sel = { x: 0, y: 0, w: 0, h: 0 }, ratio = null, dragging = null, drawing = false, drawStart = null;
+      const zone = document.getElementById('crop-upload-zone'), fileInput = document.getElementById('crop-file-input'), wrap = document.getElementById('crop-canvas-wrap'), imgCanvas = document.getElementById('crop-img-canvas'), ctx = imgCanvas.getContext('2d'), selEl = document.getElementById('crop-selection'), previewCanvas = document.getElementById('crop-preview-canvas'), pctx = previewCanvas.getContext('2d'), btnDl = document.getElementById('btn-crop-download');
 
+      function loadFile(file) {
+        if (!file || !file.type.startsWith('image/')) return;
+        const url = URL.createObjectURL(file);
+        const img = new Image();
+        img.onload = () => {
+          srcImg = img;
+          displayScale = Math.min(1, wrap.parentElement.offsetWidth / img.naturalWidth);
+          imgCanvas.width = img.naturalWidth * displayScale; imgCanvas.height = img.naturalHeight * displayScale;
+          ctx.drawImage(img, 0, 0, imgCanvas.width, imgCanvas.height);
+          wrap.style.display = 'block'; zone.style.display = 'none';
+          sel = { x: 0, y: 0, w: imgCanvas.width, h: imgCanvas.height };
+          updateUI(); btnDl.disabled = false;
+        };
+        img.src = url;
+      }
+      fileInput.onchange = e => loadFile(e.target.files[0]);
 
-  <!-- GDPR COOKIE CONSENT BANNER -->
-  <div id="cookie-consent" role="dialog" aria-label="Cookie consent notification" aria-live="polite">
-    <div id="cookie-consent-inner">
-      <div id="cookie-consent-text">
-        <span>🍪</span>
-        <p>We use <strong>Google Analytics</strong> and <strong>Google AdSense</strong> cookies to understand how you use this site. See our <a href="/privacy.html" style="color:var(--accent)">Privacy Policy</a>.</p>
-      </div>
-      <div id="cookie-consent-actions">
-        <button id="cookie-accept" class="cookie-btn cookie-btn-accept">✓ Accept All</button>
-      </div>
-    </div>
-  </div>
-  <script>
-    (function() {
-      var banner = document.getElementById('cookie-consent');
-      if (!localStorage.getItem('pss_cookie_consent')) { banner.classList.add('visible'); }
-      document.getElementById('cookie-accept').addEventListener('click', function() {
-        localStorage.setItem('pss_cookie_consent', 'accepted');
-        banner.classList.remove('visible');
+      document.querySelectorAll('.ratio-btn').forEach(btn => {
+        btn.onclick = () => {
+          document.querySelectorAll('.ratio-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active');
+          ratio = btn.dataset.ratio === 'free' ? null : eval(btn.dataset.ratio.replace(':', '/'));
+          if (ratio && srcImg) {
+            if (ratio >= 1) sel.h = sel.w / ratio; else sel.w = sel.h * ratio;
+            updateUI();
+          }
+        };
       });
-    })();
+
+      function updateUI() {
+        selEl.style.left = sel.x + 'px'; selEl.style.top = sel.y + 'px'; selEl.style.width = sel.w + 'px'; selEl.style.height = sel.h + 'px';
+        const s = 1 / displayScale;
+        document.getElementById('crop-x').value = Math.round(sel.x*s); document.getElementById('crop-y').value = Math.round(sel.y*s);
+        document.getElementById('crop-w').value = Math.round(sel.w*s); document.getElementById('crop-h').value = Math.round(sel.h*s);
+        const pscale = Math.min(1, 160 / (sel.h/displayScale), 240 / (sel.w/displayScale));
+        previewCanvas.width = (sel.w/displayScale)*pscale; previewCanvas.height = (sel.h/displayScale)*pscale;
+        pctx.drawImage(srcImg, sel.x/displayScale, sel.y/displayScale, sel.w/displayScale, sel.h/displayScale, 0, 0, previewCanvas.width, previewCanvas.height);
+      }
+
+      selEl.onmousedown = e => { if (!e.target.classList.contains('crop-handle')) dragging = { type: 'move', sx: e.clientX - sel.x, sy: e.clientY - sel.y }; };
+      document.querySelectorAll('.crop-handle').forEach(h => h.onmousedown = e => { dragging = { type: 'resize', dir: h.dataset.dir, os: {...sel}, sx: e.clientX, sy: e.clientY }; e.stopPropagation(); });
+      imgCanvas.onmousedown = e => { drawing = true; const r = imgCanvas.getBoundingClientRect(); drawStart = { x: e.clientX - r.left, y: e.clientY - r.top }; sel = { ...drawStart, w: 0, h: 0 }; };
+
+      document.onmousemove = e => {
+        if (drawing) {
+          const r = imgCanvas.getBoundingClientRect(); const x2 = Math.max(0, Math.min(imgCanvas.width, e.clientX - r.left)), y2 = Math.max(0, Math.min(imgCanvas.height, e.clientY - r.top));
+          sel.x = Math.min(drawStart.x, x2); sel.y = Math.min(drawStart.y, y2); sel.w = Math.abs(x2 - drawStart.x); sel.h = Math.abs(y2 - drawStart.y);
+          if (ratio) { if (sel.w/sel.h > ratio) sel.h = sel.w/ratio; else sel.w = sel.h*ratio; }
+          updateUI();
+        } else if (dragging) {
+          if (dragging.type === 'move') { sel.x = Math.max(0, Math.min(imgCanvas.width - sel.w, e.clientX - dragging.sx)); sel.y = Math.max(0, Math.min(imgCanvas.height - sel.h, e.clientY - dragging.sy)); }
+          else {
+            const dx = e.clientX - dragging.sx, dy = e.clientY - dragging.sy, o = dragging.os;
+            if (dragging.dir.includes('e')) sel.w = Math.max(20, o.w + dx); if (dragging.dir.includes('s')) sel.h = Math.max(20, o.h + dy);
+            if (dragging.dir.includes('w')) { sel.x = Math.max(0, o.x + dx); sel.w = Math.max(20, o.w - dx); }
+            if (dragging.dir.includes('n')) { sel.y = Math.max(0, o.y + dy); sel.h = Math.max(20, o.h - dy); }
+            if (ratio) sel.h = sel.w/ratio;
+          }
+          updateUI();
+        }
+      };
+      document.onmouseup = () => { drawing = false; dragging = null; };
+
+      btnDl.onclick = () => {
+        const out = document.createElement('canvas'); out.width = sel.w/displayScale; out.height = sel.h/displayScale;
+        out.getContext('2d').drawImage(srcImg, sel.x/displayScale, sel.y/displayScale, out.width, out.height, 0, 0, out.width, out.height);
+        out.toBlob(b => { const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = 'cropped.jpg'; a.click(); }, 'image/jpeg', 0.92);
+      };
+    }());
   </script>
 </body>
 </html>

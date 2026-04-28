@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="">
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G40QDCGTTZ',{'anonymize_ip':true});</script>
-  <meta name="google-adsense-account" content="ca-pub-2501499631331261">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2501499631331261" crossorigin="anonymous"></script>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <meta name="theme-color" content="#010101"/>
@@ -14,7 +10,7 @@
   <meta name="robots" content="index,follow"/>
   <link rel="canonical" href="https://photosplitstudio.com/convert.html"/>
   <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Free Bulk Image Converter — JPEG PNG WebP — PhotoSplit Studio"/>
+  <meta property="og:title" content="Free Bulk Image Converter — PhotoSplit Studio"/>
   <meta property="og:description" content="Convert JPEG, PNG, and WebP images in bulk — free, private, no upload needed."/>
   <meta property="og:url" content="https://photosplitstudio.com/convert.html"/>
   <meta property="og:image" content="https://photosplitstudio.com/og-image.png"/>
@@ -22,28 +18,25 @@
   <link rel="icon" href="/logo.png" type="image/png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="secondary.css"/>
+
+  <!-- AdSense & Analytics -->
+  <meta name="google-adsense-account" content="ca-pub-2501499631331261">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2501499631331261" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G40QDCGTTZ',{'anonymize_ip':true});</script>
+
   <style>
     .convert-tool { max-width: 860px; margin: 0 auto; padding: 32px 24px 60px; }
     .format-selector { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 20px 0 28px; }
     .format-selector select { padding: 10px 14px; background: var(--bg-surface-2); border: 1.5px solid var(--border); border-radius: var(--radius-sm); color: var(--text-primary); font-family: inherit; font-size: 0.9rem; }
     .format-selector label { font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); }
-    .format-selector .quality-wrap { display: flex; align-items: center; gap: 8px; }
-    .format-selector input[type=range] { width: 100px; }
     #convert-drop { border: 2px dashed var(--border-strong); border-radius: var(--radius-lg); padding: 48px 24px; text-align: center; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
     #convert-drop:hover, #convert-drop.drag-over { border-color: var(--accent); background: rgba(254,44,85,0.05); }
     #convert-drop p { color: var(--text-muted); margin: 8px 0 0; font-size: 0.85rem; }
     .file-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.85rem; }
     .file-table th { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--border); color: var(--text-secondary); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
     .file-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--text-primary); vertical-align: middle; }
-    .file-table tr:last-child td { border-bottom: none; }
-    .file-table img.thumb { width: 40px; height: 40px; object-fit: cover; border-radius: 4px; }
-    .status-badge { display: inline-block; padding: 2px 8px; border-radius: 99px; font-size: 0.72rem; font-weight: 700; }
-    .status-badge.pending { background: rgba(156,163,175,0.15); color: var(--text-muted); }
-    .status-badge.done { background: rgba(34,197,94,0.15); color: #22c55e; }
-    .status-badge.error { background: rgba(239,68,68,0.15); color: #ef4444; }
     .btn-dl-single { background: none; border: 1px solid var(--accent); color: var(--accent); padding: 4px 12px; border-radius: 99px; font-size: 0.75rem; font-family: inherit; cursor: pointer; transition: all 0.12s; }
     .btn-dl-single:hover { background: var(--accent); color: #fff; }
     .convert-actions { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
@@ -52,335 +45,148 @@
     .btn-convert-zip { background: linear-gradient(135deg,#f59e0b,#d97706); color: #fff; border: none; border-radius: 99px; padding: 13px 28px; font-size: 0.95rem; font-weight: 700; cursor: pointer; box-shadow: 0 3px 8px rgba(245,158,11,0.3); transition: all 0.15s; }
     .btn-convert-zip:hover { transform: translateY(-1px); }
     .btn-clear { background: var(--bg-surface-2); border: 1px solid var(--border); color: var(--text-secondary); border-radius: 99px; padding: 12px 20px; font-size: 0.85rem; font-family: inherit; cursor: pointer; }
-    .section-label { font-size: 0.82rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; }
-    .empty-table { text-align: center; padding: 40px; color: var(--text-muted); display: none; }
-    #file-table-wrap { display: none; }
+    .status-badge { display: inline-block; padding: 2px 8px; border-radius: 99px; font-size: 0.72rem; font-weight: 700; }
+    .status-badge.pending { background: rgba(156,163,175,0.15); color: var(--text-muted); }
+    .status-badge.done { background: rgba(34,197,94,0.15); color: #22c55e; }
+    .status-badge.error { background: rgba(239,68,68,0.15); color: #ef4444; }
   </style>
-  <script type="application/ld+json">
-  [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Bulk Image Converter — PhotoSplit Studio",
-      "url": "https://photosplitstudio.com/convert.html",
-      "applicationCategory": "MultimediaApplication",
-      "operatingSystem": "All",
-      "description": "Free bulk image converter. Convert JPEG to PNG, PNG to WebP, JPEG to WebP and more — batch convert multiple images at once. 100% private, no upload.",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "featureList": ["Convert JPEG to PNG", "Convert PNG to WebP", "Convert JPEG to WebP", "Batch convert multiple files at once", "Individual per-file download", "ZIP download of all converted files", "Adjustable quality for JPEG and WebP output", "100% private — no server upload"]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "PhotoSplit Studio", "item": "https://photosplitstudio.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Image Converter", "item": "https://photosplitstudio.com/convert.html" }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "How do I convert JPEG to PNG for free?", "acceptedAnswer": { "@type": "Answer", "text": "Drop your JPEG files into the converter above, select PNG as the output format, click Convert All, then download each file. No upload — conversion runs entirely in your browser." } },
-        { "@type": "Question", "name": "What is the difference between JPEG, PNG, and WebP?", "acceptedAnswer": { "@type": "Answer", "text": "JPEG uses lossy compression — smallest file size, best for photos. PNG is lossless — larger files but no quality loss, best for screenshots and graphics. WebP is a modern format that is 25-35% smaller than JPEG at the same quality and supports transparency like PNG." } },
-        { "@type": "Question", "name": "Can I convert multiple images at once?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Drop multiple files at once, click Convert All, then download them individually or as a single ZIP file. There is no limit on the number of files." } }
-      ]
-    }
-  ]
-  </script>
 </head>
 <body>
-<nav class="site-nav">
-  <a class="logo" href="/" style="display:flex;align-items:center;gap:10px;">
-    <img src="/logo.png" alt="PhotoSplit Studio" style="width:24px;height:24px;border-radius:4px;"/>
-    PhotoSplit Studio
-  </a>
-  <div class="nav-links">
-    <a href="/app.html">Split Scans</a>
-    <a href="/resize.html">Resize</a>
-    <a href="/crop.html">Crop</a>
-    <a href="/passport.html">Passport</a>
-    <a href="/app.html" class="cta">Open App →</a>
-  </div>
-</nav>
-
-<div class="hero">
-  <h1>Bulk Image Converter</h1>
-  <p>Convert multiple JPEG, PNG, and WebP images at once. No upload, no account — everything runs locally in your browser.</p>
-</div>
-
-<!-- AdSense — Below Hero -->
-<div style="max-width:860px;margin:0 auto;padding:0 24px 8px;">
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-2501499631331261"
-       data-ad-slot="auto"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-
-<div class="convert-tool">
-  <div class="format-selector">
-    <div>
-      <label for="out-format">Convert to</label><br/>
-      <select id="out-format">
-        <option value="jpeg">JPEG</option>
-        <option value="png">PNG</option>
-        <option value="webp" selected>WebP</option>
-      </select>
+  <header id="site-header">
+    <button class="icon-btn" id="sidebar-toggle" aria-label="Toggle navigation">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 12h18M3 6h18M3 18h18" />
+      </svg>
+    </button>
+    <a href="/" class="logo">
+      <div class="logo-icon">✨</div>
+      PhotoSplit Studio
+    </a>
+    <div class="header-spacer"></div>
+    <div class="privacy-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      </svg>
+      <span>100% Private &middot; No Uploads</span>
     </div>
-    <div class="quality-wrap" id="quality-wrap">
-      <div>
-        <label for="out-quality">Quality: <span id="quality-label">88%</span></label><br/>
-        <input type="range" id="out-quality" min="50" max="100" value="88"/>
+    <nav class="main-nav">
+      <a href="/app.html">Split Photos</a>
+      <a href="/resize.html">Resize</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tips.html">Tips</a>
+    </nav>
+    <button class="icon-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">🌓</button>
+  </header>
+
+  <main>
+    <section class="hero-utility" style="padding: var(--space-lg) 24px; text-align: center; background: var(--bg-sunken); border-bottom: 1px solid var(--border);">
+      <h1 style="font-size: 2.5rem; font-weight: 900; margin-bottom: 12px;">Bulk Image Converter</h1>
+      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 700px; margin: 0 auto;">Convert multiple JPEG, PNG, and WebP images instantly in your browser. Free & private.</p>
+    </section>
+
+    <!-- AdSense — Below Hero -->
+    <div style="max-width:860px;margin:var(--space-md) auto;padding:0 24px;">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-2501499631331261"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <div class="convert-tool">
+      <div class="format-selector">
+        <div>
+          <label for="out-format">Convert to</label><br/>
+          <select id="out-format">
+            <option value="jpeg">JPEG</option>
+            <option value="png">PNG</option>
+            <option value="webp" selected>WebP</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="convert-drop" onclick="document.getElementById('convert-file-input').click()">
+        <div style="font-size:2.5rem">🔄</div>
+        <div style="font-weight:700;font-size:1rem;color:var(--text-primary);margin-top:8px">Drop images here or click to select</div>
+        <p>JPEG, PNG, WebP supported — select multiple files at once</p>
+        <input type="file" id="convert-file-input" accept="image/*" multiple style="display:none"/>
+      </div>
+
+      <div id="file-table-wrap" style="display:none;">
+        <table class="file-table" id="file-table">
+          <thead><tr><th>Preview</th><th>Filename</th><th>Size</th><th>Status</th><th>Action</th></tr></thead>
+          <tbody id="file-table-body"></tbody>
+        </table>
+        <div class="convert-actions">
+          <button class="btn-convert-all" id="btn-convert-all">🔄 Convert All</button>
+          <button class="btn-convert-zip" id="btn-convert-zip">🗜️ ZIP All</button>
+          <button class="btn-clear" id="btn-clear">✕ Clear</button>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 
-  <div id="convert-drop" onclick="document.getElementById('convert-file-input').click()">
-    <div style="font-size:2.5rem">🔄</div>
-    <div style="font-weight:700;font-size:1rem;color:var(--text-primary);margin-top:8px">Drop images here or click to select</div>
-    <p>JPEG, PNG, WebP, BMP, GIF — select multiple files at once</p>
-    <input type="file" id="convert-file-input" accept="image/*" multiple style="display:none"/>
-  </div>
-
-  <div id="file-table-wrap">
-    <table class="file-table" id="file-table">
-      <thead>
-        <tr>
-          <th>Preview</th>
-          <th>Filename</th>
-          <th>Original Size</th>
-          <th>Status</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody id="file-table-body"></tbody>
-    </table>
-
-    <div class="convert-actions">
-      <button class="btn-convert-all" id="btn-convert-all">🔄 Convert All</button>
-      <button class="btn-convert-zip" id="btn-convert-zip">🗜️ Convert &amp; ZIP All</button>
-      <button class="btn-clear" id="btn-clear">✕ Clear</button>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="/blog/">Blog</a>
+        <a href="/resize.html">Resize</a>
+        <a href="/crop.html">Crop</a>
+        <a href="/convert.html">Convert</a>
+        <a href="/passport.html">Passport</a>
+        <a href="/tips.html">Scanning Tips</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="#" onclick="openTextModal('feedback-modal', event)">Feedback</a>
+      </div>
+      <div class="footer-copy">&copy; 2026 PhotoSplit Studio. All rights reserved.</div>
     </div>
-    <div style="font-size:0.75rem;color:var(--text-muted);margin-top:10px;">All conversion happens in your browser. Files are never uploaded.</div>
-  </div>
-</div>
+  </footer>
 
-<article style="max-width:860px;margin:0 auto;padding:0 24px 60px;">
-  <h2>JPEG vs PNG vs WebP — Which Image Format Should You Use?</h2>
-  <p>Choosing the right image format can significantly reduce file sizes, improve website load times, and preserve image quality. Here is a quick guide to the three most common formats:</p>
-
-  <h2>JPEG (Joint Photographic Experts Group)</h2>
-  <p><strong>Best for:</strong> Photographs, scanned images, social media uploads.</p>
-  <p>JPEG uses lossy compression, which means some image data is discarded during encoding to achieve small file sizes. At quality 85–95%, the loss is barely visible. JPEG does not support transparency. It is the most widely supported format across all platforms and devices. Use JPEG when you need the smallest possible file size for a photo.</p>
-
-  <h2>PNG (Portable Network Graphics)</h2>
-  <p><strong>Best for:</strong> Screenshots, logos, graphics with text, images requiring transparency.</p>
-  <p>PNG uses lossless compression — no image data is lost during encoding. This means larger files than JPEG, but pixel-perfect quality. PNG supports full transparency (alpha channel), making it essential for logos and UI graphics. For photographs, PNG files are typically 5–10× larger than an equivalent JPEG.</p>
-
-  <h2>WebP</h2>
-  <p><strong>Best for:</strong> Web images, modern apps, anywhere you need JPEG-like quality with PNG-like flexibility.</p>
-  <p>WebP was developed by Google as a superior replacement for both JPEG and PNG. Lossy WebP is typically 25–35% smaller than JPEG at equivalent quality. Lossless WebP is typically 26% smaller than PNG. WebP also supports transparency. It is now supported by all major browsers (Chrome, Firefox, Safari, Edge). Converting your images to WebP is one of the easiest ways to speed up a website.</p>
-
-  <h2>When to Convert Image Formats</h2>
-  <ul>
-    <li><strong>JPEG → PNG:</strong> When you need to preserve full quality and transparency support for editing or compositing.</li>
-    <li><strong>PNG → WebP:</strong> When you want to reduce file size for web use without any visible quality loss.</li>
-    <li><strong>JPEG → WebP:</strong> When you want the same photo quality at 25–35% smaller file size for faster page loads.</li>
-    <li><strong>PNG → JPEG:</strong> When you need the smallest file size and the image has no transparency.</li>
-  </ul>
-
-  <h2>Related Free Tools</h2>
-  <ul>
-    <li><a href="/resize.html">Social Media Image Resizer</a> — resize for Instagram, TikTok, YouTube</li>
-    <li><a href="/crop.html">Free Image Cropper</a> — freeform and aspect-ratio crop</li>
-    <li><a href="/passport.html">Passport Photo Maker</a> — free, 12 country formats</li>
-    <li><a href="/">Photo Scan Splitter</a> — split scanned photos automatically</li>
-  </ul>
-</article>
-
-<!-- AdSense — Below Article -->
-<div style="max-width:860px;margin:0 auto;padding:0 24px 32px;">
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-2501499631331261"
-       data-ad-slot="auto"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-
-<footer class="site-footer">
-  <div class="footer-links">
-    <a href="/app.html">Split Scans</a>
-    <a href="/resize.html">Resize</a>
-    <a href="/crop.html">Crop</a>
-    <a href="/convert.html">Convert</a>
-    <a href="/passport.html">Passport Photo</a>
-    <a href="/terms.html">Terms</a>
-    <a href="/privacy.html">Privacy</a>
-  </div>
-  <div>&copy; 2026 PhotoSplit Studio</div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
-<script>
-(function () {
-  const files = [];
-  const drop = document.getElementById('convert-drop');
-  const fileInput = document.getElementById('convert-file-input');
-  const tableWrap = document.getElementById('file-table-wrap');
-  const tbody = document.getElementById('file-table-body');
-  const qualitySlider = document.getElementById('out-quality');
-  const qualityLabel = document.getElementById('quality-label');
-  const fmtSel = document.getElementById('out-format');
-  const qualityWrap = document.getElementById('quality-wrap');
-
-  qualitySlider.addEventListener('input', () => { qualityLabel.textContent = qualitySlider.value + '%'; });
-  fmtSel.addEventListener('change', () => { qualityWrap.style.display = fmtSel.value === 'png' ? 'none' : 'flex'; });
-
-  drop.addEventListener('dragover', e => { e.preventDefault(); drop.classList.add('drag-over'); });
-  drop.addEventListener('dragleave', () => drop.classList.remove('drag-over'));
-  drop.addEventListener('drop', e => { e.preventDefault(); drop.classList.remove('drag-over'); addFiles([...e.dataTransfer.files]); });
-  fileInput.addEventListener('change', e => addFiles([...e.target.files]));
-
-  function addFiles(newFiles) {
-    newFiles.filter(f => f.type.startsWith('image/')).forEach(f => {
-      if (files.find(x => x.name === f.name)) return;
-      const entry = { file: f, name: f.name, size: f.size, status: 'pending', blob: null };
-      files.push(entry);
-      addRow(entry, files.length - 1);
-    });
-    if (files.length) tableWrap.style.display = 'block';
-  }
-
-  function fmtSize(bytes) {
-    if (bytes < 1024) return bytes + ' B';
-    if (bytes < 1048576) return (bytes/1024).toFixed(1) + ' KB';
-    return (bytes/1048576).toFixed(1) + ' MB';
-  }
-
-  function addRow(entry, idx) {
-    const tr = document.createElement('tr');
-    tr.id = 'row-' + idx;
-    tr.innerHTML = `
-      <td><canvas class="thumb" id="thumb-${idx}" width="40" height="40"></canvas></td>
-      <td>${entry.name}</td>
-      <td>${fmtSize(entry.size)}</td>
-      <td id="status-${idx}"><span class="status-badge pending">Pending</span></td>
-      <td id="action-${idx}">—</td>`;
-    tbody.appendChild(tr);
-    // Draw thumb
-    const img = new Image();
-    img.onload = () => {
-      const c = document.getElementById('thumb-' + idx);
-      if (!c) return;
-      const cx = c.getContext('2d');
-      const s = Math.max(img.naturalWidth, img.naturalHeight);
-      cx.drawImage(img, (img.naturalWidth-s)/2, (img.naturalHeight-s)/2, s, s, 0, 0, 40, 40);
-      URL.revokeObjectURL(img.src);
-    };
-    img.src = URL.createObjectURL(entry.file);
-  }
-
-  async function convertEntry(entry, idx) {
-    const fmt = fmtSel.value;
-    const quality = parseInt(qualitySlider.value) / 100;
-    const mimeMap = { jpeg: 'image/jpeg', png: 'image/png', webp: 'image/webp' };
-    const extMap  = { jpeg: 'jpg', png: 'png', webp: 'webp' };
-    document.getElementById('status-' + idx).innerHTML = '<span class="status-badge pending">Converting…</span>';
-
-    return new Promise(resolve => {
-      const img = new Image();
-      img.onload = () => {
-        const c = document.createElement('canvas');
-        c.width = img.naturalWidth; c.height = img.naturalHeight;
-        c.getContext('2d').drawImage(img, 0, 0);
-        URL.revokeObjectURL(img.src);
-        c.toBlob(blob => {
-          entry.blob = blob;
-          entry.outName = entry.name.replace(/\.[^.]+$/, '') + '.' + extMap[fmt];
-          entry.status = 'done';
-          document.getElementById('status-' + idx).innerHTML = `<span class="status-badge done">Done — ${fmtSize(blob.size)}</span>`;
-          const dlBtn = document.createElement('button');
-          dlBtn.className = 'btn-dl-single';
-          dlBtn.textContent = '⬇ Download';
-          dlBtn.onclick = () => {
-            const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
-            a.download = entry.outName; a.click(); URL.revokeObjectURL(a.href);
-          };
-          document.getElementById('action-' + idx).innerHTML = '';
-          document.getElementById('action-' + idx).appendChild(dlBtn);
-          resolve(blob);
-        }, mimeMap[fmt], fmt === 'png' ? undefined : quality);
-      };
-      img.onerror = () => {
-        entry.status = 'error';
-        document.getElementById('status-' + idx).innerHTML = '<span class="status-badge error">Error</span>';
-        resolve(null);
-      };
-      img.src = URL.createObjectURL(entry.file);
-    });
-  }
-
-  document.getElementById('btn-convert-all').addEventListener('click', async () => {
-    for (let i = 0; i < files.length; i++) {
-      if (files[i].status !== 'done') await convertEntry(files[i], i);
-    }
-    if (typeof gtag !== 'undefined') gtag('event', 'bulk_convert', { count: files.length, format: fmtSel.value });
-  });
-
-  document.getElementById('btn-convert-zip').addEventListener('click', async () => {
-    const zip = new JSZip();
-    for (let i = 0; i < files.length; i++) {
-      const blob = files[i].blob || await convertEntry(files[i], i);
-      if (blob) zip.file(files[i].outName || files[i].name, blob);
-    }
-    const zipBlob = await zip.generateAsync({ type: 'blob', compression: 'DEFLATE' });
-    const a = document.createElement('a'); a.href = URL.createObjectURL(zipBlob);
-    a.download = 'converted_images.zip'; a.click(); URL.revokeObjectURL(a.href);
-    if (typeof gtag !== 'undefined') gtag('event', 'bulk_convert_zip', { format: fmtSel.value });
-  });
-
-  document.getElementById('btn-clear').addEventListener('click', () => {
-    files.length = 0; tbody.innerHTML = ''; tableWrap.style.display = 'none';
-    fileInput.value = '';
-  });
-}());
-</script>
-
-    <!-- Hit Tracker (Unique Visitors Only) -->
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
   <script>
-    if (!localStorage.getItem("ps_counted")) {
-      localStorage.setItem("ps_counted", "true");
-      new Image().src = "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
-    }
-  </script>
+    (function () {
+      const files = [], drop = document.getElementById('convert-drop'), fileInput = document.getElementById('convert-file-input'), tableWrap = document.getElementById('file-table-wrap'), tbody = document.getElementById('file-table-body'), fmtSel = document.getElementById('out-format');
 
+      function addFiles(newFiles) {
+        newFiles.filter(f => f.type.startsWith('image/')).forEach(f => {
+          if (files.find(x => x.name === f.name)) return;
+          const entry = { file: f, name: f.name, size: f.size, status: 'pending', blob: null };
+          files.push(entry);
+          const tr = document.createElement('tr'); const idx = files.length - 1;
+          tr.innerHTML = `<td><canvas id="thumb-${idx}" width="40" height="40" style="border-radius:4px"></canvas></td><td>${f.name}</td><td>${(f.size/1024).toFixed(1)} KB</td><td id="status-${idx}"><span class="status-badge pending">Pending</span></td><td id="action-${idx}">—</td>`;
+          tbody.appendChild(tr);
+          const img = new Image(); img.onload = () => { const c = document.getElementById('thumb-'+idx), cx = c.getContext('2d'), s = Math.max(img.width, img.height); cx.drawImage(img, (img.width-s)/2, (img.height-s)/2, s, s, 0, 0, 40, 40); URL.revokeObjectURL(img.src); }; img.src = URL.createObjectURL(f);
+        });
+        if (files.length) tableWrap.style.display = 'block';
+      }
+      fileInput.onchange = e => addFiles([...e.target.files]);
 
-  <!-- GDPR COOKIE CONSENT BANNER -->
-  <div id="cookie-consent" role="dialog" aria-label="Cookie consent notification" aria-live="polite">
-    <div id="cookie-consent-inner">
-      <div id="cookie-consent-text">
-        <span>🍪</span>
-        <p>We use <strong>Google Analytics</strong> and <strong>Google AdSense</strong> cookies to understand how you use this site. See our <a href="/privacy.html" style="color:var(--accent)">Privacy Policy</a>.</p>
-      </div>
-      <div id="cookie-consent-actions">
-        <button id="cookie-accept" class="cookie-btn cookie-btn-accept">✓ Accept All</button>
-      </div>
-    </div>
-  </div>
-  <script>
-    (function() {
-      var banner = document.getElementById('cookie-consent');
-      if (!localStorage.getItem('pss_cookie_consent')) { banner.classList.add('visible'); }
-      document.getElementById('cookie-accept').addEventListener('click', function() {
-        localStorage.setItem('pss_cookie_consent', 'accepted');
-        banner.classList.remove('visible');
-      });
-    })();
+      async function convertEntry(entry, idx) {
+        const fmt = fmtSel.value, mimeMap = { jpeg: 'image/jpeg', png: 'image/png', webp: 'image/webp' }, extMap = { jpeg: 'jpg', png: 'png', webp: 'webp' };
+        document.getElementById('status-'+idx).innerHTML = '<span class="status-badge pending">Converting…</span>';
+        return new Promise(res => {
+          const img = new Image(); img.onload = () => {
+            const c = document.createElement('canvas'); c.width = img.width; c.height = img.height; c.getContext('2d').drawImage(img, 0, 0); URL.revokeObjectURL(img.src);
+            c.toBlob(b => {
+              entry.blob = b; entry.outName = entry.name.replace(/\.[^.]+$/, '') + '.' + extMap[fmt]; entry.status = 'done';
+              document.getElementById('status-'+idx).innerHTML = `<span class="status-badge done">Done</span>`;
+              const btn = document.createElement('button'); btn.className = 'btn-dl-single'; btn.textContent = '⬇ Download'; btn.onclick = () => { const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = entry.outName; a.click(); };
+              document.getElementById('action-'+idx).innerHTML = ''; document.getElementById('action-'+idx).appendChild(btn); res(b);
+            }, mimeMap[fmt], 0.92);
+          }; img.src = URL.createObjectURL(entry.file);
+        });
+      }
+
+      document.getElementById('btn-convert-all').onclick = async () => { for (let i=0; i<files.length; i++) if (files[i].status !== 'done') await convertEntry(files[i], i); };
+      document.getElementById('btn-convert-zip').onclick = async () => {
+        const zip = new JSZip(); for (let i=0; i<files.length; i++) { const b = files[i].blob || await convertEntry(files[i], i); if (b) zip.file(files[i].outName, b); }
+        zip.generateAsync({type:'blob'}).then(b => { const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = 'converted.zip'; a.click(); });
+      };
+      document.getElementById('btn-clear').onclick = () => { files.length = 0; tbody.innerHTML = ''; tableWrap.style.display = 'none'; fileInput.value = ''; };
+    }());
   </script>
 </body>
 </html>

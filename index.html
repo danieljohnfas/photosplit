@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -141,31 +141,6 @@
           "@type": "Question",
           "name": "What is a good AutoSplitter alternative for Mac and Linux?",
           "acceptedAnswer": { "@type": "Answer", "text": "PhotoSplit Studio is a free browser-based alternative to AutoSplitter that works on any OS including Mac, Linux, ChromeOS, iOS and Android — no installation required." }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I resize an image for Instagram or TikTok?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Use PhotoSplit Studio's free Image Resizer at photosplitstudio.com/resize.html. Select a platform preset (Instagram 1080×1080, TikTok 1080×1920, YouTube 1280×720, etc.), upload your photo, choose Fit or Fill mode, and download the resized image. No upload to any server — everything runs in your browser." }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I make a free passport photo online?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Use PhotoSplit Studio's free Passport Photo Maker at photosplitstudio.com/passport.html. Choose your country (US Passport 51×51mm, UK Passport 35×45mm, Schengen visa, Indian passport, and 10 more), upload your photo, zoom and drag to centre your face, then download at the correct official dimensions. You can also print a 4×6 inch sheet with multiple copies tiled for home printing." }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I convert JPEG to PNG or WebP for free?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Use PhotoSplit Studio's free Bulk Image Converter at photosplitstudio.com/convert.html. Drop multiple JPEG, PNG, or WebP files at once, select your output format, and download each converted file individually or as a single ZIP archive. All conversion is done locally in your browser." }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I export my split photos as a PDF?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. After detecting and splitting your photos, click the blue PDF button in the toolbar. PhotoSplit Studio creates a multi-page PDF with one photo per page at full quality. No server required." }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I convert scanned film negatives to positive images?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. PhotoSplit Studio includes a Convert Negative toggle. It supports B&W negatives, C-41 colour negative film, and E-6 colour slide film. The algorithm removes the orange mask from colour negatives and performs a linear-light channel inversion for accurate colours." }
         }
       ]
     }
@@ -174,8 +149,7 @@
 
   <!-- ═══ ADSENSE & ANALYTICS ═════════════════════════════════════════════════ -->
   <meta name="google-adsense-account" content="ca-pub-2501499631331261">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2501499631331261"
-    crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2501499631331261" crossorigin="anonymous"></script>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ"></script>
@@ -194,1037 +168,256 @@
 </head>
 
 <body>
-
-  <!-- ═══════════════════════════════════════════════════════════════════════════
-     SITE HEADER NAVIGATION
-  ════════════════════════════════════════════════════════════════════════════ -->
-  <nav class="landing-nav">
-    <a class="logo" href="/">
-      <img src="/logo.png" alt="PhotoSplit Studio" style="width:24px;height:24px;border-radius:4px;"/>
+  <header id="site-header">
+    <button class="icon-btn" id="sidebar-toggle" aria-label="Toggle navigation">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 12h18M3 6h18M3 18h18" />
+      </svg>
+    </button>
+    <a href="/" class="logo">
+      <div class="logo-icon">✨</div>
       PhotoSplit Studio
     </a>
-    <div class="landing-nav-links">
-      <a href="/app.html">🖼️ Split Photos</a>
-      <a href="/resize.html">📐 Resize</a>
-      <a href="/crop.html">✂️ Crop</a>
-      <a href="/convert.html">🔄 Convert</a>
-      <a href="/passport.html">🪪 Passport</a>
+    <div class="header-spacer"></div>
+    <div class="privacy-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      </svg>
+      <span>100% Private &middot; No Uploads</span>
     </div>
-  </nav>
+    <nav class="main-nav">
+      <a href="/app.html">Split Photos</a>
+      <a href="/resize.html">Resize</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tips.html">Tips</a>
+    </nav>
+    <button class="icon-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">🌓</button>
+  </header>
 
-  <!-- ═══════════════════════════════════════════════════════════════════════════
-     LANDING HERO — visible immediately to search crawlers (above app-shell)
-════════════════════════════════════════════════════════════════════════════ -->
-  <section id="landing-hero" aria-label="PhotoSplit Studio introduction">
-    <div id="landing-hero-inner">
-      <div id="landing-hero-text">
-        <h1>Split Scanned Photos Automatically — Free &amp; Private</h1>
-        <p>Place several printed photos on your scanner, scan them all at once, then drag the file into
-          <strong>PhotoSplit Studio</strong>. In under two seconds, the browser automatically detects, crops, and
-          saves every photo as a separate file — <strong>no upload, no account, completely free</strong>.</p>
-        <ul id="landing-hero-bullets">
-          <li>✅ Works on Windows, Mac, Linux, iOS &amp; Android</li>
-          <li>✅ Supports JPEG, PNG, TIFF, BMP, WebP, GIF and PDF</li>
-          <li>✅ Auto color enhancement &amp; negative film conversion</li>
-          <li>✅ Add photo details, text metadata, and audio voice notes</li>
-          <li>✅ Create photo collages and full-screen slideshows</li>
-          <li>✅ Extract text automatically with offline-ready OCR</li>
-          <li>✅ 100% private — your photos never leave your device</li>
-        </ul>
-        <div id="landing-hero-actions">
-          <a href="/app.html" class="btn btn-primary" id="hero-launch-btn" aria-label="Open PhotoSplit Studio app">
-            🖼️ Launch App — Split My Photos
-          </a>
-          <a href="/tips.html" class="btn btn-secondary">📖 Scanning Guide</a>
-          <a href="/blog/" class="btn btn-secondary">📝 Blog &amp; Guides</a>
+  <main>
+    <section class="hero-landing" style="padding: var(--space-xl) 24px; text-align: center; background: #010101; color: white; position: relative; overflow: hidden;">
+      <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, rgba(254,44,85,0.12) 0%, transparent 70%); pointer-events: none;"></div>
+      <div style="max-width: 900px; margin: 0 auto; position: relative; z-index: 10;">
+        <h1 style="font-family: 'Outfit', sans-serif; font-size: clamp(2.2rem, 7vw, 4.2rem); font-weight: 900; line-height: 1.05; margin-bottom: 24px; letter-spacing: -0.04em;">
+          Split Scanned Photos <br/><span style="background: var(--accent-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Automatically &amp; Privately</span>
+        </h1>
+        <p style="font-size: 1.25rem; color: rgba(255,255,255,0.85); margin-bottom: 40px; max-width: 750px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+          The ultimate tool for digitizing your physical photo archives. Auto-detect, crop, and 
+          straighten multiple photos from a single scan in seconds, 100% in your browser.
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="/app.html" class="btn btn-primary" style="padding: 18px 48px; font-size: 1.15rem; border-radius: 99px;">Open PhotoSplit App &rarr;</a>
+          <a href="#how-it-works" class="btn btn-secondary" style="padding: 18px 48px; font-size: 1.15rem; border-radius: 99px; background: rgba(255,255,255,0.1); color: white;">How it Works</a>
         </div>
       </div>
-      <div id="landing-hero-stats" aria-label="Key features summary">
-        <div class="hero-stat">
-          <span class="hero-stat-num">100%</span>
-          <span class="hero-stat-label">Private<br><small>No uploads ever</small></span>
+    </section>
+
+    <article id="seo-content" class="seo-wrapper">
+      <!-- AdSense — Below Hero -->
+      <div style="max-width:900px;margin:var(--space-md) auto;padding:0 24px;">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2501499631331261"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- ═══ FEATURE HUB ════════════════════════════════════════════════════════════ -->
+      <section style="padding:var(--space-lg) 24px; background: var(--bg-base);">
+        <div style="max-width:1100px;margin:0 auto;">
+          <h2 style="text-align:center;font-size:2rem;margin-bottom:8px;font-weight:800;">The Complete Free Photo Toolkit</h2>
+          <p style="text-align:center;color:var(--text-secondary);margin-bottom:48px;font-size:1.1rem;">PhotoSplit Studio is a full suite of free photo tools — all running 100% in your browser.</p>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;">
+            <a href="/app.html" class="feature-card-new">
+              <div class="feature-icon">🖼️</div>
+              <h3>Photo Scan Splitter</h3>
+              <p>Auto-detect and crop multiple photos from one scan using computer vision. Includes auto-straighten, color enhancement, and film negative conversion.</p>
+              <span class="feature-link">Launch App &rarr;</span>
+            </a>
+            <a href="/resize.html" class="feature-card-new">
+              <div class="feature-icon">📐</div>
+              <h3>Social Media Resizer</h3>
+              <p>Resize any photo to exact platform dimensions — Instagram, TikTok, YouTube, Facebook, LinkedIn. Fit, Fill, and Stretch modes included.</p>
+              <span class="feature-link">Open Tool &rarr;</span>
+            </a>
+            <a href="/crop.html" class="feature-card-new">
+              <div class="feature-icon">✂️</div>
+              <h3>Free Image Cropper</h3>
+              <p>Crop photos to custom sizes or aspect ratios with live preview. Supports 1:1, 4:3, 16:9 and freeform cropping for any device.</p>
+              <span class="feature-link">Open Tool &rarr;</span>
+            </a>
+            <a href="/convert.html" class="feature-card-new">
+              <div class="feature-icon">🔄</div>
+              <h3>Bulk Image Converter</h3>
+              <p>Convert JPEG to PNG, PNG to WebP, or JPEG to WebP in bulk. Drop dozens of files at once and convert them all locally in seconds.</p>
+              <span class="feature-link">Open Tool &rarr;</span>
+            </a>
+            <a href="/passport.html" class="feature-card-new">
+              <div class="feature-icon">🪪</div>
+              <h3>Passport Photo Maker</h3>
+              <p>Create compliant passport photos for US, UK, EU, and 10+ other regions. Generates a 4x6 print sheet for easy home printing.</p>
+              <span class="feature-link">Open Tool &rarr;</span>
+            </a>
+          </div>
         </div>
-        <div class="hero-stat">
-          <span class="hero-stat-num">&lt;2s</span>
-          <span class="hero-stat-label">Detection speed<br><small>OpenCV.js powered</small></span>
+      </section>
+
+      <!-- ═══ HOW IT WORKS ════════════════════════════════════════════════════════ -->
+      <section id="how-it-works" style="background:var(--bg-surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:var(--space-lg) 24px;">
+        <div style="max-width:900px;margin:0 auto;text-align:center;">
+          <h2 style="font-size:2rem;margin-bottom:12px;font-weight:800;">Three Steps. 100% Private.</h2>
+          <p style="color:var(--text-secondary);margin-bottom:48px;font-size:1.1rem;">No accounts, no uploads, no installation. Digitizing your history has never been easier.</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:32px;text-align:left;">
+            <div class="step-card">
+              <div class="step-num">01</div>
+              <h3>Scan Your Photos</h3>
+              <p>Place multiple prints on your scanner and scan them as a single JPEG, PNG, or TIFF file at 300 DPI.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-num">02</div>
+              <h3>Drop into App</h3>
+              <p>Drag your scan into the app. Our algorithm instantly detects every photo and draws bounding boxes around them.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-num">03</div>
+              <h3>Save & Archive</h3>
+              <p>Click "Save All" to download every photo separately. Apply auto-enhancements or negative conversion if needed.</p>
+            </div>
+          </div>
         </div>
-        <div class="hero-stat">
-          <span class="hero-stat-num">Free</span>
-          <span class="hero-stat-label">Forever<br><small>No sign-up needed</small></span>
-        </div>
-        <div class="hero-stat">
-          <span class="hero-stat-num">8</span>
-          <span class="hero-stat-label">File formats<br><small>JPEG PNG TIFF PDF…</small></span>
+      </section>
+
+      <div class="seo-container">
+        <h2 class="seo-main-heading">Free Online Photo Scanner &amp; Splitter</h2>
+        <p>Welcome to <strong>PhotoSplit Studio</strong>, your free browser-based solution to extract, crop, and split multiple printed photos from a single scan. No uploads, no server processing, 100% private.</p>
+
+        <h2>Who Is PhotoSplit Studio For?</h2>
+        <p>Built for family archivists, genealogists, and anyone looking to digitize their physical history without the hassle of manual cropping or expensive software.</p>
+        
+        <h2>Frequently Asked Questions</h2>
+        <h3>Do my photos get uploaded to a server?</h3>
+        <p>No. Everything runs locally in your browser. Your photos never leave your device.</p>
+        <h3>What formats are supported?</h3>
+        <p>We support JPEG, PNG, TIFF, BMP, WebP, and even PDF as input.</p>
+
+        <!-- Feedback Wall -->
+        <div id="feedback-wall" style="margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border);">
+          <h2>User Feedback &amp; Reviews</h2>
+          <div id="feedback-list" style="display:grid;gap:16px;margin-top:20px"></div>
         </div>
       </div>
-    </div>
-  </section>
+    </article>
 
-  <article id="seo-content" class="seo-wrapper">
-
-  <!-- AdSense — Below Hero -->
-  <div style="max-width:900px;margin:0 auto;padding:16px 24px 0;">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-2501499631331261"
-         data-ad-slot="auto"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
-
-  <!-- ═══ FEATURE HUB ════════════════════════════════════════════════════════════ -->
-  <section style="padding:60px 24px; background: var(--bg-base);">
-    <div style="max-width:1100px;margin:0 auto;">
-      <h2 style="text-align:center;font-size:1.8rem;margin-bottom:8px;">The Complete Free Photo Toolkit</h2>
-      <p style="text-align:center;color:var(--text-secondary);margin-bottom:40px;">PhotoSplit Studio is a full suite of free photo tools — not just a splitter. Every tool runs 100% in your browser.</p>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;">
-
-        <!-- Main App -->
-        <a href="/app.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:2px solid var(--accent);border-radius:var(--radius-lg);padding:24px;transition:box-shadow 0.15s;" onmouseover="this.style.boxShadow='0 0 0 4px var(--accent-glow)'" onmouseout="this.style.boxShadow='none'">
-          <div style="font-size:2rem;margin-bottom:10px;">🖼️</div>
-          <h3 style="margin:0 0 6px;color:var(--accent);font-size:1.1rem;">Photo Scan Splitter</h3>
-          <p style="margin:0;font-size:0.85rem;color:var(--text-secondary);line-height:1.55;">Auto-detect and crop multiple photos from one scan using OpenCV.js. Includes auto-straighten, color enhance, film negative conversion, undo/redo, ZIP and PDF export.</p>
-          <span style="display:inline-block;margin-top:12px;font-size:0.85rem;font-weight:700;color:var(--accent);">Launch App →</span>
-        </a>
-
-        <!-- Image Resizer -->
-        <a href="/resize.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size:2rem;margin-bottom:10px;">📐</div>
-          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">Social Media Image Resizer</h3>
-          <p style="margin:0;font-size:0.85rem;color:var(--text-secondary);line-height:1.55;">Resize any photo to exact platform dimensions — Instagram, TikTok, YouTube, Facebook, LinkedIn, Pinterest. Three fit modes: Fit, Fill, Stretch.</p>
-          <span style="display:inline-block;margin-top:12px;font-size:0.85rem;font-weight:700;color:var(--accent);">Open Tool →</span>
-        </a>
-
-        <!-- Image Cropper -->
-        <a href="/crop.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size:2rem;margin-bottom:10px;">✂️</div>
-          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">Free Online Image Cropper</h3>
-          <p style="margin:0;font-size:0.85rem;color:var(--text-secondary);line-height:1.55;">Crop any photo to a custom size or aspect ratio — freeform, 1:1 square, 4:3, 16:9, 9:16, 3:2, 21:9. Drag corner handles, see a live preview, download instantly.</p>
-          <span style="display:inline-block;margin-top:12px;font-size:0.85rem;font-weight:700;color:var(--accent);">Open Tool →</span>
-        </a>
-
-        <!-- Format Converter -->
-        <a href="/convert.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size:2rem;margin-bottom:10px;">🔄</div>
-          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">Bulk Image Format Converter</h3>
-          <p style="margin:0;font-size:0.85rem;color:var(--text-secondary);line-height:1.55;">Convert JPEG to PNG, PNG to WebP, JPEG to WebP — in bulk. Drop multiple files at once, convert all in one click, download individually or as a single ZIP archive.</p>
-          <span style="display:inline-block;margin-top:12px;font-size:0.85rem;font-weight:700;color:var(--accent);">Open Tool →</span>
-        </a>
-
-        <!-- Passport Photo -->
-        <a href="/passport.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size:2rem;margin-bottom:10px;">🪪</div>
-          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">Free Passport &amp; ID Photo Maker</h3>
-          <p style="margin:0;font-size:0.85rem;color:var(--text-secondary);line-height:1.55;">Create compliant passport photos for US, UK, EU Schengen, Indian, Chinese passports, and more. Includes a print-ready 4×6 inch sheet for home printing.</p>
-          <span style="display:inline-block;margin-top:12px;font-size:0.85rem;font-weight:700;color:var(--accent);">Open Tool →</span>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ HOW IT WORKS ════════════════════════════════════════════════════════ -->
-  <section style="background:var(--bg-surface);border-bottom:1px solid var(--border);padding:56px 24px;">
-    <div style="max-width:860px;margin:0 auto;text-align:center;">
-      <h2 style="font-size:1.6rem;margin-bottom:8px;">How It Works</h2>
-      <p style="color:var(--text-secondary);margin-bottom:40px;">Three steps. No account. No upload. Completely free.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px;text-align:left;">
-        <div style="background:var(--bg-base);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;">
-          <div style="font-size:2rem;margin-bottom:12px;">1️⃣</div>
-          <h3 style="margin:0 0 8px;font-size:1rem;">Scan your photos</h3>
-          <p style="margin:0;color:var(--text-secondary);font-size:0.88rem;line-height:1.6;">Place multiple printed photos on your flatbed scanner. Scan them all at once as a single JPEG, PNG, TIFF, or PDF file at 300 DPI.</p>
+    <div id="share-tool-bar">
+      <div class="share-tool-inner">
+        <span class="share-tool-label">❤️ Found this useful? Share it:</span>
+        <div class="share-tool-btns">
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fphotosplitstudio.com" target="_blank" class="share-tool-btn share-btn-twitter">𝕏 Twitter</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fphotosplitstudio.com" target="_blank" class="share-tool-btn share-btn-facebook">📘 Facebook</a>
+          <button class="share-tool-btn share-btn-copy" onclick="navigator.clipboard.writeText(window.location.href)">🔗 Copy Link</button>
         </div>
-        <div style="background:var(--bg-base);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;">
-          <div style="font-size:2rem;margin-bottom:12px;">2️⃣</div>
-          <h3 style="margin:0 0 8px;font-size:1rem;">Drop it into the app</h3>
-          <p style="margin:0;color:var(--text-secondary);font-size:0.88rem;line-height:1.6;">Drag your scan into <a href="/app.html" style="color:var(--accent);">the photo splitter app</a>. OpenCV.js instantly detects every photo and draws a bounding box around each one — in under 2 seconds.</p>
-        </div>
-        <div style="background:var(--bg-base);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;">
-          <div style="font-size:2rem;margin-bottom:12px;">3️⃣</div>
-          <h3 style="margin:0 0 8px;font-size:1rem;">Save individual photos</h3>
-          <p style="margin:0;color:var(--text-secondary);font-size:0.88rem;line-height:1.6;">Click <strong>Save All</strong> to download every photo as a separate file, or export as ZIP or multi-page PDF. Apply enhancements, rotate, or crop before saving.</p>
-        </div>
-      </div>
-      <div style="margin-top:36px;">
-        <a href="/app.html" class="btn btn-primary" style="font-size:1.05rem;padding:16px 40px;">🚀 Open the App — It's Free</a>
       </div>
     </div>
-  </section>
-
-  <!-- ═══ FEATURE HUB ════════════════════════════════════════════════════════════ -->
-  <section style="padding:60px 24px;">
-    <div style="max-width:1100px;margin:0 auto;">
-      <h2 style="text-align:center;font-size:1.5rem;margin-bottom:8px;">Everything You Need to Digitize &amp; Edit Photos</h2>
-      <p style="text-align:center;color:var(--text-secondary);margin-bottom:40px;">PhotoSplit Studio is a full free photo toolkit — not just a splitter. Every tool runs 100% in your browser.</p>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;">
-
-        <!-- Main App -->
-        <a href="/app.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:2px solid var(--accent);border-radius:var(--radius-lg);padding:24px;transition:box-shadow 0.15s;" onmouseover="this.style.boxShadow='0 0 0 4px var(--accent-glow)'" onmouseout="this.style.boxShadow='none'">
-          <div style="font-size:2rem;margin-bottom:10px;">🖼️</div>
-          <h3 style="margin:0 0 6px;color:var(--accent);font-size:1rem;">Photo Scan Splitter</h3>
-          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);line-height:1.55;">Auto-detect and crop multiple photos from one scan using OpenCV.js. Supports JPEG, PNG, TIFF, BMP, WebP, GIF and PDF input. Includes auto-straighten, color enhance, film negative conversion, undo/redo, ZIP and PDF export.</p>
-          <span style="display:inline-block;margin-top:12px;font-size:0.78rem;font-weight:700;color:var(--accent);">Launch App →</span>
-        </a>
-
-        <!-- Film Negatives -->
-        <a href="/app.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size:2rem;margin-bottom:10px;">🎞️</div>
-          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">Film Negative Converter</h3>
-          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);line-height:1.55;">Convert scanned film negatives to positive photos in one click. Supports B&amp;W negative, C-41 colour negative film, and E-6 slide film. Automatic orange-mask removal for accurate colours.</p>
-          <span style="display:inline-block;margin-top:12px;font-size:0.78rem;font-weight:700;color:var(--accent);">Use in App →</span>
-        </a>
-
-        <!-- Social Export -->
-        <a href="/app.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size:2rem;margin-bottom:10px;">📱</div>
-          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">Social Media Export</h3>
-          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);line-height:1.55;">Export split photos directly formatted for Instagram, TikTok, Twitter/X, Facebook, and WhatsApp. Apply letterbox padding, add a custom watermark, and share or download in one tap.</p>
-          <span style="display:inline-block;margin-top:12px;font-size:0.78rem;font-weight:700;color:var(--accent);">Use in App →</span>
-        </a>
-
-        <!-- PDF Export -->
-        <a href="/app.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size:2rem;margin-bottom:10px;">📄</div>
-          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">PDF &amp; ZIP Export</h3>
-          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);line-height:1.55;">Export all split photos as a multi-page PDF (one photo per page) or a single ZIP archive. Clipboard paste (Ctrl+V) and per-photo copy-to-clipboard are also supported.</p>
-          <span style="display:inline-block;margin-top:12px;font-size:0.78rem;font-weight:700;color:var(--accent);">Use in App →</span>
-        </a>
-
-        <!-- Carousel Splitter -->
-        <a href="/app.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size:2rem;margin-bottom:10px;">🔲</div>
-          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">Carousel Grid Splitter</h3>
-          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);line-height:1.55;">Slice any wide panoramic image into a perfect grid of tiles for Instagram multi-slide carousel posts. Choose columns and rows, download individual tiles or a ZIP archive.</p>
-          <span style="display:inline-block;margin-top:12px;font-size:0.78rem;font-weight:700;color:var(--accent);">Use in App →</span>
-        </a>
-
-        <!-- Image Resizer -->
-        <a href="/resize.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size:2rem;margin-bottom:10px;">📐</div>
-          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">Social Media Image Resizer</h3>
-          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);line-height:1.55;">Resize any photo to exact platform dimensions — Instagram (1080×1080), TikTok (1080×1920), YouTube (1280×720), Facebook, LinkedIn, Pinterest. Three fit modes: Fit, Fill, Stretch.</p>
-          <span style="display:inline-block;margin-top:12px;font-size:0.78rem;font-weight:700;color:var(--accent);">Open Tool →</span>
-        </a>
-
-        <!-- Image Cropper -->
-        <a href="/crop.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size:2rem;margin-bottom:10px;">✂️</div>
-          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">Free Online Image Cropper</h3>
-          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);line-height:1.55;">Crop any photo to a custom size or aspect ratio — freeform, 1:1 square, 4:3, 16:9, 9:16, 3:2, 21:9. Drag corner handles, see a live preview, download as JPEG, PNG or WebP.</p>
-          <span style="display:inline-block;margin-top:12px;font-size:0.78rem;font-weight:700;color:var(--accent);">Open Tool →</span>
-        </a>
-
-        <!-- Bulk Converter -->
-        <a href="/convert.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size:2rem;margin-bottom:10px;">🔄</div>
-          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">Bulk Image Format Converter</h3>
-          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);line-height:1.55;">Convert JPEG to PNG, PNG to WebP, JPEG to WebP — in bulk. Drop multiple files at once, convert all in one click, download individually or as a ZIP archive.</p>
-          <span style="display:inline-block;margin-top:12px;font-size:0.78rem;font-weight:700;color:var(--accent);">Open Tool →</span>
-        </a>
-
-        <!-- Passport Photo -->
-        <a href="/passport.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size:2rem;margin-bottom:10px;">🪪</div>
-          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">Free Passport &amp; ID Photo Maker</h3>
-          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);line-height:1.55;">Create compliant passport photos for US (2×2 in), UK (35×45 mm), EU Schengen visa, Indian, Chinese, Australian and 6 more formats. Includes a 4×6 print-sheet generator.</p>
-          <span style="display:inline-block;margin-top:12px;font-size:0.78rem;font-weight:700;color:var(--accent);">Open Tool →</span>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-
-    <div class="seo-container">
-      <h2 class="seo-main-heading">Free Online Photo Scanner &amp; Splitter</h2>
-      <p>Welcome to <strong>PhotoSplit Studio</strong>, your free browser-based solution to extract, crop, and split
-        multiple printed photos from a single scan. If you have been digitizing old family albums by placing 3 or 4
-        photos on the scanner glass at once, you know how tedious it is to manually crop them later. Our tool automates
-        that completely &mdash; in seconds, directly in your browser, with zero uploads and complete privacy.</p>
-
-      <h2>How to Split Scanned Photos Automatically</h2>
-      <p>Getting started takes less than a minute. Here is the complete step-by-step process:</p>
-      <ol>
-        <li><strong>Scan multiple photos at once:</strong> Place your printed photos on your flatbed scanner, leaving a
-          small gap between each one so their edges do not touch. Scan at 300 DPI or higher for best results.</li>
-        <li><strong>Upload the scan to PhotoSplit Studio:</strong> Drag and drop your scanned image file (JPEG, PNG,
-          TIFF, BMP, or WebP) into the upload zone. You can also click the zone to browse for files.</li>
-        <li><strong>Run Auto-Detection:</strong> Click the <strong>Detect Photos</strong> button. Our client-side
-          computer vision algorithm scans every pixel of your image to find the boundary between the scanner background
-          and each individual photo. Coloured bounding boxes appear around each detected region instantly.</li>
-        <li><strong>Fine-tune if needed:</strong> Drag the corner handles to adjust any bounding box. Use <strong>Add
-            Crop</strong> to manually draw a box for any photo that was not auto-detected. Use arrow keys to nudge a
-          selected box one pixel at a time.</li>
-        <li><strong>Save your individual photos:</strong> Click <strong>Save All</strong> to download every detected
-          photo as a separate file, or click any thumbnail in the strip at the bottom to save just that one.</li>
-      </ol>
-
-      <h2>100% Private &mdash; Your Photos Never Leave Your Device</h2>
-      <p>Unlike many online photo splitter tools that upload your images to a remote server for processing, PhotoSplit
-        Studio is built with uncompromising privacy as its foundation. <strong>Your photos literally never leave your
-          device.</strong> All processing occurs locally within your browser. You can read the full technical details in
-        our <a href="/privacy.html">Privacy Policy</a> or <a href="/about.html">About Page</a>.</p>
-
-      <h2>Who Is PhotoSplit Studio For?</h2>
-      <p>PhotoSplit Studio was built for anyone who needs to digitize a collection of printed photographs efficiently.
-        You do not need to be tech-savvy &mdash; if you can drag and drop a file, you can use this tool.</p>
-      <ul>
-        <li><strong>Family archivists</strong> preserving decades of printed snapshots from albums and shoeboxes.</li>
-        <li><strong>Genealogists</strong> digitizing old portraits and group photos for ancestry research.</li>
-        <li><strong>Small businesses and photographers</strong> who need to batch-process large collections of physical
-          prints.</li>
-        <li><strong>Teachers and librarians</strong> archiving historical photographic collections for digital
-          preservation.</li>
-        <li><strong>Anyone</strong> who has ever scanned several photos at once and then spent 30 frustrating minutes
-          manually cropping each one in an image editor.</li>
-      </ul>
-
-      <h2>Supported Image Formats</h2>
-      <p>PhotoSplit Studio supports all major image formats produced by flatbed scanners, all-in-one printers, and
-        camera scanning apps:</p>
-      <ul>
-        <li><strong>JPEG / JPG</strong> &mdash; the most common format for scanned photos. Offers small file sizes with
-          adjustable compression quality.</li>
-        <li><strong>PNG</strong> &mdash; lossless format, ideal when you need to preserve fine detail without
-          compression artifacts.</li>
-        <li><strong>TIFF / TIF</strong> &mdash; the professional archival format used by high-resolution flatbed
-          scanners. Even large multi-page TIFFs are fully supported.</li>
-        <li><strong>BMP</strong> &mdash; uncompressed Windows bitmap format, often produced by older scanner drivers.
-        </li>
-        <li><strong>WebP</strong> &mdash; the modern format used by Google Photos and some mobile scanning apps.</li>
-        <li><strong>GIF</strong> &mdash; legacy format support included for older collections.</li>
-      </ul>
-      <p>Your split photos can be exported as JPEG (quality 10&ndash;100%) or lossless PNG &mdash; whichever suits your
-        archiving workflow best.</p>
-
-      <h2>Comprehensive Feature Set</h2>
-      <p>PhotoSplit Studio is packed with powerful, hidden tools designed to make digitizing your photo archives
-        effortless and organized. Here is everything you can do without ever leaving your browser:</p>
-
-      <div
-        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
-
-        <div
-          style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
-          <h3 style="margin-top: 0; display: flex; align-items: center; gap: 8px;"><span>🎛️</span> Adjustable
-            Sensitivity</h3>
-          <p style="margin-bottom: 0;">Got cream-colored scanner beds or ultra-faded vintage borders? Simply tweak the
-            <strong>background threshold</strong> and <strong>minimum area</strong> sliders to flawlessly detect photos
-            that other automated tools completely miss.
-          </p>
-        </div>
-
-        <div
-          style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
-          <h3 style="margin-top: 0; display: flex; align-items: center; gap: 8px;"><span>📐</span> Auto-Straighten &amp;
-            Rotation</h3>
-          <p style="margin-bottom: 0;">Don't obsess over aligning prints perfectly on the glass. Our mathematically
-            driven <strong>Auto-Straighten</strong> engine automatically de-skews crooked photos. For anything placed
-            upside down, hit the manual 90-degree <strong>thumbnail rotation</strong> buttons!</p>
-        </div>
-
-        <div
-          style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
-          <h3 style="margin-top: 0; display: flex; align-items: center; gap: 8px;"><span>✨</span> Instant Color
-            Enhancement</h3>
-          <p style="margin-bottom: 0;">Revive faded, yellowing photographs from the 70s, 80s, and 90s. The <strong>Auto
-              Color Enhance</strong> toggle aggressively balances the image histogram, injecting vivid contrast and
-            restoring original archival life and vibrancy.</p>
-        </div>
-
-        <div
-          style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
-          <h3 style="margin-top: 0; display: flex; align-items: center; gap: 8px;"><span>📅</span> EXIF Metadata Tagging
-          </h3>
-          <p style="margin-bottom: 0;">Sorting old photos is a nightmare when they all say they were captured "today."
-            Input a custom year before exporting to permanently embed proper <strong>EXIF datetime tags</strong>,
-            ensuring correct chronological sorting in Apple Photos or Google Photos.</p>
-        </div>
-
-        <div
-          style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
-          <h3 style="margin-top: 0; display: flex; align-items: center; gap: 8px;"><span>📱</span> Social Media &amp;
-            Watermarks</h3>
-          <p style="margin-bottom: 0;">Share digitized memories immediately to Instagram Arrays, TikTok, or Facebook.
-            Apply custom letterbox padding to fit specific platform constraints, and stamp your digital signature using
-            the built-in <strong>Custom Watermarking</strong> tool.</p>
-        </div>
-
-        <div
-          style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
-          <h3 style="margin-top: 0; display: flex; align-items: center; gap: 8px;"><span>🗜️</span> Batch Export &amp;
-            ZIP Archives</h3>
-          <p style="margin-bottom: 0;">Load up endless sequential scans across multiple files and digitize them in a
-            single batch. Download everything instantly via a clean <strong>ZIP Archive Download</strong>. Never clutter
-            your desktop directory with hundreds of loose image files again!</p>
-        </div>
-
-        <div
-          style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
-          <h3 style="margin-top: 0; display: flex; align-items: center; gap: 8px;"><span>🎞️</span> Convert Film Negatives</h3>
-          <p style="margin-bottom: 0;">Digitizing an old box of colour negatives? The <strong>Convert Negative</strong> toggle inverts your scanned film strip in one click, producing a natural positive photograph — no Photoshop required. Works beautifully on C-41 colour negative film scans.</p>
-        </div>
-
-        <div
-          style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
-          <h3 style="margin-top: 0; display: flex; align-items: center; gap: 8px;"><span>📄</span> PDF Scan Support</h3>
-          <p style="margin-bottom: 0;">Many all-in-one printers and scanner apps export scans as PDFs instead of image files. PhotoSplit Studio accepts PDF input natively — just drag in your PDF and the detection pipeline runs exactly the same as with JPEG or TIFF.</p>
-        </div>
-
-        <div
-          style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
-          <h3 style="margin-top: 0; display: flex; align-items: center; gap: 8px;"><span>📄</span> Export as PDF</h3>
-          <p style="margin-bottom: 0;">After splitting your photos, click the <strong>PDF button</strong> in the toolbar to generate a multi-page PDF document — one photo per page at full resolution. Perfect for archiving, emailing, or sending to a print shop without zipping individual files.</p>
-        </div>
-
-        <div
-          style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
-          <h3 style="margin-top: 0; display: flex; align-items: center; gap: 8px;"><span>📋</span> Clipboard Paste &amp; Copy</h3>
-          <p style="margin-bottom: 0;">Press <strong>Ctrl+V</strong> anywhere on the page to paste a screenshot or copied image directly into the tool — no file picker needed. Each split photo also has a <strong>📋 Copy to Clipboard</strong> button so you can paste it instantly into any app, email, or document.</p>
-        </div>
-
-        <div
-          style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
-          <h3 style="margin-top: 0; display: flex; align-items: center; gap: 8px;"><span>🔀</span> Before &amp; After Comparison</h3>
-          <p style="margin-bottom: 0;">Use the built-in <strong>Before / After slider</strong> to compare the original scan against the enhanced version side-by-side. See exactly how much the color enhancement, straightening, or negative conversion has improved the photo before saving it.</p>
-        </div>
-
-        <div
-          style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
-          <h3 style="margin-top: 0; display: flex; align-items: center; gap: 8px;"><span>📝</span> Deep Metadata &amp; Audio Notes</h3>
-          <p style="margin-bottom: 0;">Preserve the stories behind the photos. Add Date, Location, People, and Caption metadata directly to any scan. You can even record <strong>Voice Notes</strong> using your microphone or extract text from the back of the photo using our <strong>built-in OCR</strong>. All metadata and audio files export automatically alongside your photos.</p>
-        </div>
-
-        <div
-          style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
-          <h3 style="margin-top: 0; display: flex; align-items: center; gap: 8px;"><span>🖼️</span> Collage Maker &amp; Slideshows</h3>
-          <p style="margin-bottom: 0;">Select multiple scanned photos to instantly generate a <strong>Photo Collage</strong> with customizable layouts and borders, or sit back and watch a fullscreen <strong>Slideshow</strong> that automatically plays your recorded voice notes as the photos cycle.</p>
-        </div>
-
-        <div
-          style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);">
-          <h3 style="margin-top: 0; display: flex; align-items: center; gap: 8px;"><span>⌨️</span> Precision Controls &amp; Shortcuts</h3>
-          <p style="margin-bottom: 0;">Power users love the full <strong>keyboard shortcut panel</strong> (press <kbd>?</kbd>). Use <strong>arrow keys</strong> for pixel-precise nudging of any bounding box, <strong>JPEG quality slider</strong> for fine-tuned compression, and <strong>adjustable sensitivity sliders</strong> for difficult scans on cream or dark scanner beds.</p>
-        </div>
-
-      </div>
-
-      <div style="margin-top: 30px;">
-        <h3>Manual Precision Cropping &amp; Carousel Splitting</h3>
-        <p>While the AI detects the vast majority of photos seamlessly, you always retain ultimate precision control.
-          Use the <strong>Add Crop</strong> module to define manual extraction zones on stubborn or tightly-packed
-          physical prints. Scanning a panoramic landscape? Access our experimental <strong>Carousel Splitter</strong>
-          feature to slice wide scans into contiguous tiles, making for the perfect multi-slide Instagram swipe-through
-          without sacrificing a single pixel of native resolution.</p>
-      </div>
-
-      <h2>Tips for Getting the Best Results</h2>
-      <p>The quality of your splits depends heavily on how you scan your original photos. For the cleanest detection, we
-        highly recommend reading our comprehensive scanning guide.</p>
-
-      <div
-        style="background: var(--bg-surface-2); padding: 20px; border-radius: var(--radius-md); border-left: 4px solid var(--accent); margin: 24px 0;">
-        <h3 style="margin-top: 0;">📚 Official Scanning Guide</h3>
-        <p style="margin-bottom: 12px; color: var(--text-secondary);">Learn the optimal DPI settings, file formats to
-          use, and how to properly space your prints on the scanner glass to guarantee 100% detection accuracy.</p>
-        <a href="/tips.html" class="btn btn-secondary">Read the Scanning Guide &rarr;</a>
-      </div>
-    </div>
-    
-    <div style="max-width:860px;margin:0 auto;">
-      <h2>Frequently Asked Questions</h2>
-
-      <h3>Is PhotoSplit Studio really free?</h3>
-      <p>Yes, completely free &mdash; no account required. There are no subscriptions, no premium tiers, and no limits
-        on the number of photos or scans you can process. The service is supported by non-intrusive Google
-        advertisements.</p>
-
-      <h3>Do my photos get uploaded to a server?</h3>
-      <p>No. PhotoSplit Studio is a fully client-side web application. When you open a file, it is loaded into your
-        browser local memory via the <code>FileReader</code> API. All processing happens on your own device. Nothing is
-        transmitted over the network. You can use this tool offline after the page has initially loaded.</p>
-
-      <h3>What is the maximum image size supported?</h3>
-      <p>There is no hard file size limit enforced by PhotoSplit Studio. The practical limit is your device available
-        RAM. Most modern computers handle scans up to 100 MB without issues. For very large TIFF files, Chrome or Edge
-        generally offer the best memory performance.</p>
-
-      <h3>How many photos can be detected in a single scan?</h3>
-      <p>The detection engine can identify as many individual photo regions as are present in the scan image, with no
-        artificial cap. In practice, most flatbed scanners accommodate 4&ndash;6 standard 4&times;6 prints per scan. We
-        have tested successfully with up to 12 small wallet-size prints in a single high-resolution TIFF file.</p>
-
-      <h3>Can it straighten photos rotated at steep angles?</h3>
-      <p>Yes. The auto-straighten algorithm detects the dominant edge angle of each bounding region and de-skews it. It
-        reliably handles rotations of approximately &plusmn;30 degrees. For photos placed nearly upside-down, a final
-        manual rotation in a viewer after downloading may be needed.</p>
-
-      <h3>Does it work on iPhone, iPad, and Android?</h3>
-      <p>Yes. PhotoSplit Studio works on modern iOS and Android browsers including Safari, Chrome, and Firefox Mobile.
-        You can upload photos directly from your camera roll or files app. Processing speed depends on your device CPU,
-        but most scans complete within a few seconds on any modern smartphone.</p>
-
-      <h3>How is PhotoSplit Studio different from AutoSplitter?</h3>
-      <p><strong>AutoSplitter</strong> is a well-known Windows desktop application. PhotoSplit Studio runs entirely in
-        your browser &mdash; no installation needed, works on any OS (Windows, Mac, Linux, ChromeOS, iOS, Android),
-        completely free, and with the same local-only privacy guarantee as a desktop app. It is the ideal cross-platform
-        alternative to AutoSplitter.</p>
-
-      <h3>Can I convert scanned film negatives to positive images?</h3>
-      <p>Yes. PhotoSplit Studio includes a <strong>Convert Negative</strong> toggle in the Enhancements panel. After loading your scanned film negative, enable the toggle before saving — the tool inverts the colour channels to produce a natural positive photograph. This works on C-41 colour negative film as well as black-and-white negatives. For best results, scan negatives against a bright white or neutral grey background.</p>
-
-      <h3>Can I use it for commercial purposes?</h3>
-      <p>Yes. PhotoSplit Studio is free for both personal and commercial use. If you are a professional digitization
-        service or photography studio needing a high-volume or custom solution, please <a
-          href="/about.html#contact">contact us</a>.</p>
-
-      <!-- Feedback Wall Display -->
-      <div id="feedback-wall" style="margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border);">
-        <h2>User Feedback &amp; Reviews</h2>
-        <div
-          style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border); margin-top: 20px;">
-          <p style="margin-top: 0;"><strong>Notice about User Reviews:</strong> To protect user privacy and anonymity,
-            we collect feedback privately via a secure Google Form — responses are not publicly indexed or crawled by
-            search bots. We do not pre-render or fabricate testimonials.</p>
-          <p style="margin-bottom: 0;">Enjoyed using PhotoSplit Studio? <a href="#"
-              onclick="openTextModal('feedback-modal', event)">Share your experience</a> — it really helps!</p>
-        </div>
-        <!-- Live feedback cards rendered here by fetchAndRenderFeedbackWall() -->
-        <div id="feedback-list" style="display:grid;gap:16px;margin-top:20px"></div>
-      </div>
-    </div>
-  </article>
-
-  <!-- ═══════════════════════════════════════════════════════════════════════════
-     SHARE THIS TOOL BAR
-════════════════════════════════════════════════════════════════════════════ -->
-  <!-- AdSense — Above Share Bar -->
-  <div style="max-width:900px;margin:0 auto;padding:0 24px 32px;">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-2501499631331261"
-         data-ad-slot="auto"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
-
-  <div id="share-tool-bar">
-    <div class="share-tool-inner">
-      <span class="share-tool-label">❤️ Found this useful? Share it:</span>
-      <div class="share-tool-btns">
-        <a href="https://twitter.com/intent/tweet?text=I%20just%20used%20PhotoSplit%20Studio%20to%20automatically%20split%20my%20scanned%20photos%20%E2%80%94%20free%20and%20100%25%20private!&amp;url=https%3A%2F%2Fphotosplitstudio.com"
-          target="_blank" rel="noopener noreferrer" class="share-tool-btn share-btn-twitter" id="share-twitter"
-          aria-label="Share on Twitter">
-          𝕏 Twitter
-        </a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fphotosplitstudio.com" target="_blank"
-          rel="noopener noreferrer" class="share-tool-btn share-btn-facebook" id="share-facebook"
-          aria-label="Share on Facebook">
-          📘 Facebook
-        </a>
-        <a href="https://wa.me/?text=Check%20out%20PhotoSplit%20Studio%20%E2%80%94%20free%20online%20photo%20scanner%20splitter%3A%20https%3A%2F%2Fphotosplitstudio.com"
-          target="_blank" rel="noopener noreferrer" class="share-tool-btn share-btn-whatsapp" id="share-whatsapp"
-          aria-label="Share on WhatsApp">
-          💬 WhatsApp
-        </a>
-        <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fphotosplitstudio.com&amp;description=Free%20browser-based%20tool%20to%20automatically%20split%20multiple%20scanned%20photos%20into%20individual%20files%20%E2%80%94%20100%25%20private%2C%20no%20upload%20needed."
-          target="_blank" rel="noopener noreferrer" class="share-tool-btn share-btn-pinterest" id="share-pinterest"
-          aria-label="Share on Pinterest">
-          📌 Pinterest
-        </a>
-        <button class="share-tool-btn share-btn-copy" id="share-copy-url" onclick="SocialManager.copyToolUrl()"
-          aria-label="Copy link to clipboard">
-          🔗 Copy Link
-        </button>
-      </div>
-    </div>
-  </div>
+  </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-links">
         <a href="/blog/">Blog</a>
-        <a href="/resize.html">🖼 Resize</a>
-        <a href="/crop.html">✂️ Crop</a>
-        <a href="/convert.html">🔄 Convert</a>
-        <a href="/passport.html">🪪 Passport</a>
+        <a href="/resize.html">Resize</a>
+        <a href="/crop.html">Crop</a>
+        <a href="/convert.html">Convert</a>
+        <a href="/passport.html">Passport</a>
         <a href="/tips.html">Scanning Tips</a>
-        <a href="/terms.html">Terms of Use</a>
-        <a href="/privacy.html">Privacy Policy</a>
-        <a href="/about.html">About</a>
-        <a href="/about.html#contact">Contact Us</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/privacy.html">Privacy</a>
         <a href="#" onclick="openTextModal('feedback-modal', event)">Feedback</a>
       </div>
-      <div class="footer-copy">&copy; 2026 PhotoSplit Studio. All rights reserved. Built for private archiving.</div>
+      <div class="footer-copy">&copy; 2026 PhotoSplit Studio. All rights reserved.</div>
     </div>
   </footer>
 
-  <!-- ═══════════════════════════════════════════════════════════════════════════
-     LEGAL MODALS
-════════════════════════════════════════════════════════════════════════════ -->
-  <div id="privacy-modal" class="text-modal-backdrop" aria-hidden="true"
-    onclick="if(event.target===this)closeTextModal('privacy-modal')">
-    <div class="text-modal-box">
-      <div class="text-modal-header">
-        <h2>Privacy Policy</h2>
-        <button class="icon-btn" onclick="closeTextModal('privacy-modal')">✕</button>
-      </div>
-      <div class="text-modal-content">
-        <p><strong>Effective Date: April 8, 2026</strong></p>
-        <p>At PhotoSplit Studio, your privacy is our absolute priority. Our tool is designed to be a completely
-          client-side application running exclusively in your browser.</p>
-        <ul>
-          <li><strong>No External File Uploads:</strong> When you process an image, it is loaded locally into your
-            device's browser memory. We do not transmit, upload, or backup your personal photos to any remote servers.
-          </li>
-          <li><strong>Zero Data Retention:</strong> As soon as you refresh or close the tab, all image data is instantly
-            and permanently erased from your computer's active memory.</li>
-        </ul>
-        <p>We partner with Google AdSense to display advertisements which keep our service free. Third-party vendors
-          like Google may use cookies to serve ads based on your prior visits to our website. You can easily opt out of
-          personalized advertising by visiting your Google Ads Settings.</p>
-      </div>
-    </div>
-  </div>
-
-  <div id="terms-modal" class="text-modal-backdrop" aria-hidden="true"
-    onclick="if(event.target===this)closeTextModal('terms-modal')">
-    <div class="text-modal-box">
-      <div class="text-modal-header">
-        <h2>Terms of Use</h2>
-        <button class="icon-btn" onclick="closeTextModal('terms-modal')">✕</button>
-      </div>
-      <div class="text-modal-content">
-        <p>By using PhotoSplit Studio, you agree that this tool is provided "as is". We provide no ultimate warranties
-          on the availability or precision of the detection engine. <strong>PhotoSplit Studio is free for both personal
-            and commercial use.</strong> You retain all copyrights to the images you process.</p>
-      </div>
-    </div>
-  </div>
-
-  <div id="contact-modal" class="text-modal-backdrop" aria-hidden="true"
-    onclick="if(event.target===this)closeTextModal('contact-modal')">
-    <div class="text-modal-box">
-      <div class="text-modal-header">
-        <h2>Contact Us</h2>
-        <button class="icon-btn" onclick="closeTextModal('contact-modal')">✕</button>
-      </div>
-      <div class="text-modal-content">
-        <p>If you encounter bugs, have feature requests, or have business inquiries regarding our free photo cropper
-          platform, please feel free to reach out.</p>
-        <p>Email: <strong><a href="mailto:simpelogin-newsletter.gains011@simplelogin.com">simpelogin-newsletter.gains011@simplelogin.com</a></strong></p>
-      </div>
-    </div>
-  </div>
-
-  <div id="feedback-modal" class="text-modal-backdrop" aria-hidden="true"
-    onclick="if(event.target===this)closeTextModal('feedback-modal')">
+  <!-- Modals & Scripts -->
+  <div id="feedback-modal" class="text-modal-backdrop" onclick="if(event.target===this)closeTextModal('feedback-modal')">
     <div class="text-modal-box">
       <div class="text-modal-header">
         <h2>Provide Feedback</h2>
         <button class="icon-btn" onclick="closeTextModal('feedback-modal')">✕</button>
       </div>
-
-      <!-- Form View -->
       <div id="feedback-form-view" class="text-modal-content">
-        <form id="feedback-form" onsubmit="handleFeedbackSubmit(event)">
-          <div style="margin-bottom: 15px;">
-            <label class="form-label">Name</label>
-            <input type="text" id="fb-name" class="form-control" placeholder="Your Name" required />
-          </div>
-          <div style="margin-bottom: 15px;">
-            <label class="form-label">Email</label>
-            <input type="email" id="fb-email" class="form-control" placeholder="your@email.com" required />
-          </div>
-
-          <div style="margin-bottom: 20px;">
-            <label class="form-label">Feedback</label>
-            <textarea id="fb-desc" class="form-control" rows="4" placeholder="How can we improve?" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Submit
-            Feedback</button>
+        <form onsubmit="handleFeedbackSubmit(event)">
+          <input type="text" id="fb-name" class="form-control" placeholder="Your Name" required style="margin-bottom:12px"/>
+          <input type="email" id="fb-email" class="form-control" placeholder="your@email.com" required style="margin-bottom:12px"/>
+          <textarea id="fb-desc" class="form-control" rows="4" placeholder="Your feedback..." required style="margin-bottom:12px"></textarea>
+          <button type="submit" class="btn btn-primary" style="width:100%">Submit</button>
         </form>
       </div>
-
-      <!-- Success View -->
-      <div id="feedback-success-view" class="text-modal-content" style="display: none;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <div style="font-size: 3rem; margin-bottom: 10px;">✅</div>
-          <h3 style="color: var(--text-primary); margin-bottom: 10px;">Feedback Received!</h3>
-          <p>Thank you for helping us improve PhotoSplit Studio.</p>
-        </div>
-        <div
-          style="background: var(--bg-surface-2); padding: 15px; border-radius: var(--radius-sm); font-size: 0.85rem;">
-          <p><strong>Name:</strong> <span id="fb-res-name"></span></p>
-          <p><strong>Email:</strong> <span id="fb-res-email"></span></p>
-          <p style="margin-top: 10px;"><strong>Description:</strong></p>
-          <p id="fb-res-desc"
-            style="background: var(--bg-base); border: 1px solid var(--border); padding: 10px; border-radius: 4px; margin-top: 5px; white-space: pre-wrap;">
-          </p>
-        </div>
-        <button type="button" class="btn btn-secondary" style="width: 100%; justify-content: center; margin-top: 20px;"
-          onclick="closeTextModal('feedback-modal')">Close</button>
+      <div id="feedback-success-view" class="text-modal-content" style="display:none;text-align:center">
+        <h3>✅ Thank you!</h3>
+        <p>Your feedback has been received.</p>
+        <button class="btn btn-secondary" onclick="closeTextModal('feedback-modal')">Close</button>
       </div>
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════════════════════════════════════════════
-     PREVIEW MODAL
-════════════════════════════════════════════════════════════════════════════ -->
-  <div id="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div id="modal-box">
-      <div id="modal-header">
-        <h2 id="modal-title">Photo Preview</h2>
-        <button class="icon-btn" onclick="closeModal()" title="Close" aria-label="Close preview">✕</button>
-      </div>
-      <div id="modal-img-wrap">
-        <img id="modal-preview-img" src="" alt="Full-size photo preview" />
-      </div>
-      <div id="modal-actions"></div>
-    </div>
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════════════════════════════
-     SOCIAL EXPORT MODAL
-════════════════════════════════════════════════════════════════════════════ -->
-  <div id="social-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="social-modal-title"
-    onclick="if(event.target===this)SocialManager.closeModal()">
-    <div id="social-modal-box">
-      <div class="social-modal-header">
-        <h2 id="social-modal-title">📤 Share to Social Media</h2>
-        <button class="icon-btn" onclick="SocialManager.closeModal()" aria-label="Close">✕</button>
-      </div>
-      <div class="social-modal-body">
-        <!-- Left: Platform selector -->
-        <div class="social-platform-pane">
-          <div class="social-pane-label">Choose Platform</div>
-          <div class="platform-grid" id="platform-grid">
-            <!-- populated by JS -->
-          </div>
-        </div>
-
-        <!-- Right: Preview + controls -->
-        <div class="social-preview-pane">
-          <div class="social-pane-label">Preview</div>
-          <div class="social-preview-canvas-wrap">
-            <canvas id="social-preview-canvas" aria-label="Resized photo preview"></canvas>
-            <span class="social-dim-badge" id="social-dim-badge"></span>
-          </div>
-
-          <div class="social-controls">
-            <!-- Background color -->
-            <div class="social-control-row">
-              <span class="social-control-label">Background</span>
-              <input type="color" id="social-bg-color" value="#ffffff" title="Letterbox background colour"
-                aria-label="Letterbox background colour" />
-              <span style="font-size:0.72rem;color:var(--text-muted)">Padding fill</span>
-            </div>
-            <!-- Watermark text -->
-            <div class="social-control-row">
-              <span class="social-control-label">Watermark</span>
-              <input type="text" class="form-control" id="social-watermark-text"
-                placeholder="@yourhandle or leave blank" maxlength="80" aria-label="Watermark text overlay" />
-            </div>
-            <!-- Watermark position -->
-            <div class="social-control-row">
-              <span class="social-control-label">Position</span>
-              <select class="form-control" id="social-watermark-pos" aria-label="Watermark position">
-                <option value="bottom-center">Bottom centre</option>
-                <option value="bottom-right">Bottom right</option>
-                <option value="bottom-left">Bottom left</option>
-                <option value="top-center">Top centre</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Actions -->
-      <div class="social-modal-actions">
-        <button class="btn btn-secondary" id="social-btn-copy" onclick="SocialManager.copyPreviewToClipboard()"
-          aria-label="Copy image to clipboard">
-          📋 Copy Image
-        </button>
-        <button class="btn btn-primary" id="social-btn-download" onclick="SocialManager.downloadForPlatform()"
-          aria-label="Download for selected platform">
-          ⬇️ Download
-        </button>
-        <button class="btn btn-secondary" id="social-btn-share" onclick="SocialManager.nativeShare()"
-          aria-label="Share via device share sheet" style="display:none">
-          📱 Share
-        </button>
-        <button class="btn btn-secondary" style="margin-left:auto" onclick="SocialManager.closeModal()"
-          aria-label="Close social modal">
-          Close
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════════════════════════════
-     CAROUSEL GRID SPLITTER MODAL
-════════════════════════════════════════════════════════════════════════════ -->
-  <div id="carousel-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="carousel-modal-title"
-    onclick="if(event.target===this)CarouselSplitter.closeModal()">
-    <div id="carousel-modal-box">
-      <div class="carousel-modal-header">
-        <h2 id="carousel-modal-title">🔲 Carousel Grid Splitter</h2>
-        <button class="icon-btn" onclick="CarouselSplitter.closeModal()" aria-label="Close">✕</button>
-      </div>
-
-      <p style="font-size:0.82rem;color:var(--text-secondary);margin-top:-8px">
-        Divide the loaded image into a grid of tiles — perfect for Instagram carousels.
-      </p>
-
-      <div>
-        <div class="social-pane-label">Quick Presets</div>
-        <div class="grid-preset-row" id="grid-preset-row">
-          <button class="grid-preset-btn active" data-cols="3" data-rows="1" id="preset-3x1">3×1 Carousel</button>
-          <button class="grid-preset-btn" data-cols="2" data-rows="2" id="preset-2x2">2×2 Grid</button>
-          <button class="grid-preset-btn" data-cols="3" data-rows="3" id="preset-3x3">3×3 Grid</button>
-          <button class="grid-preset-btn" data-cols="2" data-rows="1" id="preset-2x1">2×1 Diptych</button>
-        </div>
-      </div>
-
-      <div>
-        <div class="social-pane-label">Custom Grid</div>
-        <div style="display:flex;gap:12px;align-items:center">
-          <label style="font-size:0.78rem;color:var(--text-secondary);font-weight:600">
-            Columns
-            <input type="number" id="carousel-cols" class="form-control" value="3" min="1" max="10"
-              style="width:70px;margin:4px 0 0" />
-          </label>
-          <label style="font-size:0.78rem;color:var(--text-secondary);font-weight:600">
-            Rows
-            <input type="number" id="carousel-rows" class="form-control" value="1" min="1" max="10"
-              style="width:70px;margin:4px 0 0" />
-          </label>
-        </div>
-      </div>
-
-      <div class="grid-preview-wrap">
-        <canvas id="grid-preview-canvas" width="240" height="100" aria-label="Grid layout preview"></canvas>
-      </div>
-
-      <div style="display:flex;gap:8px;flex-wrap:wrap">
-        <button class="btn btn-primary" id="carousel-btn-split" onclick="CarouselSplitter.splitAndDownload()"
-          aria-label="Split and download tiles">
-          <span aria-hidden="true">✂️</span> Split &amp; Download All Tiles
-        </button>
-        <button class="btn btn-zip" id="carousel-btn-zip" onclick="CarouselSplitter.splitAndZip()"
-          aria-label="Split and download as ZIP">
-          <span aria-hidden="true">🗜️</span> Download as ZIP
-        </button>
-        <button class="btn btn-secondary" onclick="CarouselSplitter.closeModal()">
-          Cancel
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════════════════════════════
-     SHORTCUTS MODAL
-════════════════════════════════════════════════════════════════════════════ -->
-  <div id="shortcuts-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="shortcuts-title"
-    style="position:fixed;inset:0;background:rgba(0,0,0,.65);backdrop-filter:blur(8px);
-            z-index:300;display:none;align-items:center;justify-content:center;">
-    <div style="background:var(--bg-surface);border:1px solid var(--border-strong);
-              border-radius:var(--radius-xl);padding:28px;max-width:480px;width:90%;
-              box-shadow:var(--shadow-lg);animation:slideIn .22s ease">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
-        <h2 id="shortcuts-title" style="flex:1;font-size:1rem;font-weight:700">⌨️ Keyboard Shortcuts</h2>
-        <button class="icon-btn" aria-label="Close shortcuts"
-          onclick="document.getElementById('shortcuts-modal').style.display='none'">✕</button>
-      </div>
-      <table style="width:100%;border-collapse:collapse;font-size:0.82rem">
-        <tbody>
-          <tr>
-            <td style="padding:6px 0;color:var(--text-secondary)"><kbd>↑ ↓ ← →</kbd></td>
-            <td style="padding:6px 0">Nudge selected box by 1 px</td>
-          </tr>
-          <tr>
-            <td style="padding:6px 0;color:var(--text-secondary)"><kbd>Shift</kbd>+<kbd>↑↓←→</kbd></td>
-            <td style="padding:6px 0">Nudge selected box by 10 px</td>
-          </tr>
-          <tr>
-            <td style="padding:6px 0;color:var(--text-secondary)"><kbd>Delete</kbd> / <kbd>Backspace</kbd></td>
-            <td style="padding:6px 0">Delete selected box</td>
-          </tr>
-          <tr>
-            <td style="padding:6px 0;color:var(--text-secondary)"><kbd>Q</kbd> / <kbd>E</kbd></td>
-            <td style="padding:6px 0">Rotate selected box</td>
-          </tr>
-          <tr>
-            <td style="padding:6px 0;color:var(--text-secondary)"><kbd>Ctrl</kbd>+<kbd>Z</kbd></td>
-            <td style="padding:6px 0">Undo</td>
-          </tr>
-          <tr>
-            <td style="padding:6px 0;color:var(--text-secondary)"><kbd>Ctrl</kbd>+<kbd>Y</kbd> /
-              <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd>
-            </td>
-            <td style="padding:6px 0">Redo</td>
-          </tr>
-          <tr>
-            <td style="padding:6px 0;color:var(--text-secondary)"><kbd>+</kbd> / <kbd>−</kbd></td>
-            <td style="padding:6px 0">Zoom in / out</td>
-          </tr>
-          <tr>
-            <td style="padding:6px 0;color:var(--text-secondary)"><kbd>0</kbd></td>
-            <td style="padding:6px 0">Zoom to fit</td>
-          </tr>
-          <tr>
-            <td style="padding:6px 0;color:var(--text-secondary)"><kbd>Ctrl</kbd>+<kbd>Wheel</kbd></td>
-            <td style="padding:6px 0">Zoom with mouse wheel</td>
-          </tr>
-          <tr>
-            <td style="padding:6px 0;color:var(--text-secondary)"><kbd>Esc</kbd></td>
-            <td style="padding:6px 0">Deselect / exit crop mode</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════════════════════════════
-     GLOBAL SPINNER
-════════════════════════════════════════════════════════════════════════════ -->
-  <div id="global-spinner" role="status" aria-live="assertive" aria-label="Processing">
-    <div class="spinner-ring"></div>
-    <span id="global-spinner-msg">Processing…</span>
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════════════════════════════
-     TOAST CONTAINER
-════════════════════════════════════════════════════════════════════════════ -->
-  <div id="toast-container" role="status" aria-live="polite" aria-label="Notifications"></div>
-
-
-  <!-- ═══════════════════════════════════════════════════════════════════════════
-     GDPR COOKIE CONSENT BANNER
-  ════════════════════════════════════════════════════════════════════════════ -->
-  <div id="cookie-consent" role="dialog" aria-label="Cookie consent notification" aria-live="polite">
+  <div id="cookie-consent" role="dialog">
     <div id="cookie-consent-inner">
-      <div id="cookie-consent-text">
-        <span>🍪</span>
-        <p>We use <strong>Google Analytics</strong> and <strong>Google AdSense</strong> cookies to understand how you use this site and to keep the service free. Your photos <strong>never leave your device</strong>. See our <a href="/privacy.html" style="color:var(--accent)">Privacy Policy</a>.</p>
-      </div>
+      <p>🍪 We use cookies to improve your experience. See our <a href="/privacy.html">Privacy Policy</a>.</p>
       <div id="cookie-consent-actions">
-        <a href="/privacy.html" class="cookie-btn cookie-btn-link">Learn More</a>
-        <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
-        <button id="cookie-accept" class="cookie-btn cookie-btn-accept">✓ Accept All</button>
+        <button id="cookie-decline" class="cookie-btn">Decline</button>
+        <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept All</button>
       </div>
     </div>
   </div>
 
   <script>
     (function() {
-      // Modal Handlers
-      window.openTextModal = function(id, e) {
-        if(e) e.preventDefault();
-        if(id === 'feedback-modal') {
-          document.getElementById('feedback-form').reset();
-          document.getElementById('feedback-form-view').style.display = 'block';
-          document.getElementById('feedback-success-view').style.display = 'none';
-        }
-        document.getElementById(id).classList.add('open');
-      };
-      window.closeTextModal = function(id) {
-        document.getElementById(id).classList.remove('open');
-      };
+      window.openTextModal = function(id, e) { if(e) e.preventDefault(); document.getElementById(id).classList.add('open'); };
+      window.closeTextModal = function(id) { document.getElementById(id).classList.remove('open'); };
 
       // Cookie Consent
       var banner = document.getElementById('cookie-consent');
-      if (!localStorage.getItem('pss_cookie_consent')) {
-        banner.classList.add('visible');
-      }
-      document.getElementById('cookie-accept').addEventListener('click', function() {
-        localStorage.setItem('pss_cookie_consent', 'accepted');
-        banner.classList.remove('visible');
-      });
-      document.getElementById('cookie-decline').addEventListener('click', function() {
-        localStorage.setItem('pss_cookie_consent', 'declined');
-        banner.classList.remove('visible');
-      });
+      if (!localStorage.getItem('pss_cookie_consent')) banner.classList.add('visible');
+      document.getElementById('cookie-accept').onclick = function() { localStorage.setItem('pss_cookie_consent', 'accepted'); banner.classList.remove('visible'); };
+      document.getElementById('cookie-decline').onclick = function() { localStorage.setItem('pss_cookie_consent', 'declined'); banner.classList.remove('visible'); };
 
-      // CSV Parser for Feedback
-      function parseCSV(text) {
-        let p = '', row = [''], ret = [row], i = 0, r = 0, s = !0, l;
-        for (l of text) {
-          if ('"' === l) { if (s && l === p) row[i] += l; s = !s; }
-          else if (',' === l && s) l = row[++i] = '';
-          else if ('\n' === l && s) {
-            if ('\r' === p) row[i] = row[i].slice(0, -1);
-            row = ret[++r] = [l = '']; i = 0;
-          } else row[i] += l;
-          p = l;
-        }
-        return ret;
-      }
-
-      // Feedback Wall Rendering
+      // Feedback Wall
       window.fetchAndRenderFeedbackWall = function() {
         var csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQUEeGMkaanwb_bNhevhYnmdDp18gwZnIvkrOoo3T3PHrhEsjXf77P0DLYOniCL_Xm3pRLduwWrEVp8/pub?gid=0&single=true&output=csv";
-        if (/bot|google|baidu|bing|msn|duckduckbot|teoma|slurp|yandex/i.test(navigator.userAgent)) return;
-
-        fetch(csvUrl, { cache: "no-store" })
-          .then(res => res.text())
-          .then(csv => {
-            var arr = parseCSV(csv); arr.shift();
-            var list = document.getElementById('feedback-list');
-            var valid = arr.filter(r => r.length >= 5 && r[1] && r[4]);
-            if (valid.length > 0) {
-              list.innerHTML = '';
-              valid.reverse().slice(0, 12).forEach(cols => {
-                var div = document.createElement('div');
-                div.className = 'feedback-card';
-                div.innerHTML = `<div style="display:flex;justify-content:space-between;margin-bottom:8px">
-                  <strong style="font-size:0.9rem">${cols[1]}</strong>
-                  <span style="font-size:0.75rem;color:var(--text-muted)">${new Date(cols[0]).toLocaleDateString()}</span>
-                </div>
-                <div style="font-size:0.9rem;color:var(--text-secondary);white-space:pre-wrap">${cols[4]}</div>`;
-                list.appendChild(div);
-              });
-            }
-          }).catch(e => console.warn('Feedback fetch skipped', e));
+        fetch(csvUrl).then(res => res.text()).then(csv => {
+          var lines = csv.split('\n').slice(1).reverse().slice(0, 8);
+          var list = document.getElementById('feedback-list');
+          list.innerHTML = lines.map(line => {
+            var cols = line.split(',');
+            if(cols.length < 5) return '';
+            return `<div class="feedback-card"><strong>${cols[1]}</strong><p>${cols[4]}</p></div>`;
+          }).join('');
+        }).catch(console.warn);
       };
       fetchAndRenderFeedbackWall();
 
-      // Feedback Submission
       window.handleFeedbackSubmit = function(e) {
         e.preventDefault();
-        var fName = document.getElementById('fb-name').value;
-        var fEmail = document.getElementById('fb-email').value;
-        var fDesc = document.getElementById('fb-desc').value;
-
-        document.getElementById('fb-res-name').textContent = fName;
-        document.getElementById('fb-res-email').textContent = fEmail;
-        document.getElementById('fb-res-desc').textContent = fDesc;
-
-        var url = "https://docs.google.com/forms/d/e/1FAIpQLSeJe_jw0IHHXeT4w4hzcZJ2WXREaT8aD4_R4LFBGVZNazsehg/formResponse";
         var params = new URLSearchParams();
-        params.append('entry.1051903221', fName);
-        params.append('entry.371950700', fEmail);
-        params.append('entry.852578852', fDesc);
-
-        fetch(url, { method: "POST", mode: "no-cors", body: params })
-          .then(() => setTimeout(fetchAndRenderFeedbackWall, 3000));
-
+        params.append('entry.1051903221', document.getElementById('fb-name').value);
+        params.append('entry.371950700', document.getElementById('fb-email').value);
+        params.append('entry.852578852', document.getElementById('fb-desc').value);
+        fetch("https://docs.google.com/forms/d/e/1FAIpQLSeJe_jw0IHHXeT4w4hzcZJ2WXREaT8aD4_R4LFBGVZNazsehg/formResponse", { method: "POST", mode: "no-cors", body: params });
         document.getElementById('feedback-form-view').style.display = 'none';
         document.getElementById('feedback-success-view').style.display = 'block';
       };
     })();
   </script>
 
-  <!-- Hit Tracker (Unique Visitors Only) -->
+  <!-- Unique Visitor Hit Tracker -->
   <script>
     if (!localStorage.getItem("ps_counted")) {
       localStorage.setItem("ps_counted", "true");
       new Image().src = "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
     }
   </script>
-
 </body>
 </html>
