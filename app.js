@@ -933,6 +933,11 @@ function getHandlePoints(box) {
 }
 
 function selectBox(id) {
+  if (typeof CollageManager !== 'undefined' && $('collage-modal') && $('collage-modal').getAttribute('aria-hidden') === 'false') {
+    CollageManager.toggleSelection(id);
+    return;
+  }
+  
   state.selectedBoxId = (state.selectedBoxId === id) ? null : id;
   renderOverlay();
   // Highlight corresponding strip thumb
@@ -1203,7 +1208,15 @@ async function renderStrip() {
 
 async function createThumbElement(box, idx) {
   const wrap = document.createElement('div');
-  wrap.className = 'split-thumb' + (box.id === state.selectedBoxId ? ' selected' : '');
+  
+  let thumbClass = 'split-thumb';
+  if (typeof CollageManager !== 'undefined' && $('collage-modal') && $('collage-modal').getAttribute('aria-hidden') === 'false') {
+    if (CollageManager.selectedIds.includes(box.id)) thumbClass += ' selected';
+  } else {
+    if (box.id === state.selectedBoxId) thumbClass += ' selected';
+  }
+  wrap.className = thumbClass;
+  
   wrap.dataset.id = box.id;
   wrap.title = box.label || `Photo ${idx + 1}`;
 
@@ -1220,6 +1233,8 @@ async function createThumbElement(box, idx) {
     <div class="split-thumb-actions">
       <button class="split-action-btn" title="Rotate 90° CW"  data-action="rotatecw">↻</button>
       <button class="split-action-btn" title="Rotate 90° CCW" data-action="rotateccw">↺</button>
+      <button class="split-action-btn" title="Edit Details" data-action="edit">📝</button>
+      <button class="split-action-btn" title="Extract Text (OCR)" data-action="ocr">🔤</button>
       <button class="split-action-btn" title="Preview" data-action="preview">🔍</button>
       <button class="split-action-btn" title="Copy to Clipboard" data-action="copy">📋</button>
       <button class="split-action-btn" title="Share" data-action="share">📤</button>
@@ -1262,6 +1277,8 @@ async function createThumbElement(box, idx) {
   wrap.addEventListener('click', () => { selectBox(box.id); scrollToBox(box.id); });
   ov.querySelector('[data-action="rotatecw"]') .addEventListener('click', e => { e.stopPropagation(); rotateBox(box.id,  90); });
   ov.querySelector('[data-action="rotateccw"]').addEventListener('click', e => { e.stopPropagation(); rotateBox(box.id, -90); });
+  ov.querySelector('[data-action="edit"]')     .addEventListener('click', e => { e.stopPropagation(); openMetadataModal(box.id); });
+  ov.querySelector('[data-action="ocr"]')      .addEventListener('click', e => { e.stopPropagation(); OCRManager.extractText(box.id); });
   ov.querySelector('[data-action="preview"]')  .addEventListener('click', e => { e.stopPropagation(); previewBox(box.id); });
   ov.querySelector('[data-action="copy"]')     .addEventListener('click', e => { e.stopPropagation(); copyBoxToClipboard(box.id); });
   ov.querySelector('[data-action="share"]')    .addEventListener('click', e => { e.stopPropagation(); SocialManager.openModal(box.id); });
@@ -1963,8 +1980,50 @@ const ExportManager = {
     const idx = state.boxes.indexOf(box);
     const canvas = await renderBoxToCanvas(box, { enhance: DOM.autoEnhanceToggle()?.checked });
     const blob = await this.canvasToBlob(canvas, format, quality);
-    this.triggerDownload(blob, this.getFilename(idx, baseName, format));
-    showToast(`Saved: ${this.getFilename(idx, baseName, format)}`, 'success');
+    const fName = this.getFilename(idx, baseName, format);
+    this.triggerDownload(blob, fName);
+    
+    // Export sidecars
+    const baseWithoutExt = fName.substring(0, fName.lastIndexOf('.'));
+    this._exportSidecars(box, baseWithoutExt, false, null);
+    
+    showToast(`Saved: ${fName}`, 'success');
+  },
+
+  _exportSidecars(box, baseWithoutExt, isZip, zipObj) {
+    if (box.audioNote) {
+      if (isZip) {
+        zipObj.file(`${baseWithoutExt}_audio.webm`, box.audioNote);
+      } else {
+        setTimeout(() => this.triggerDownload(box.audioNote, `${baseWithoutExt}_audio.webm`), 200);
+      }
+    }
+    if (box.meta && (box.meta.caption || box.meta.people || box.meta.location || box.meta.notes || box.meta.date)) {
+      let text = ``;
+      if (box.meta.date) text += `Date: ${box.meta.date}\n`;
+      if (box.meta.location) text += `Location: ${box.meta.location}\n`;
+      if (box.meta.people) text += `People: ${box.meta.people}\n`;
+      if (box.meta.caption) text += `\nCaption: ${box.meta.caption}\n`;
+      if (box.meta.notes) text += `\nNotes: ${box.meta.notes}\n`;
+      text = text.trim();
+      
+      if (isZip) {
+        zipObj.file(`${baseWithoutExt}_meta.txt`, text);
+      } else {
+        let textBlob = new Blob([text], { type: 'text/plain' });
+        setTimeout(() => this.triggerDownload(textBlob, `${baseWithoutExt}_meta.txt`), 400);
+      }
+    }
+    
+    if (box.backImage) {
+      fetch(box.backImage).then(res => res.blob()).then(blob => {
+        if (isZip) {
+          zipObj.file(`${baseWithoutExt}_back.jpg`, blob);
+        } else {
+          setTimeout(() => this.triggerDownload(blob, `${baseWithoutExt}_back.jpg`), 600);
+        }
+      });
+    }
   },
 
   async saveAll() {
@@ -1980,11 +2039,16 @@ const ExportManager = {
     for (const [idx, box] of state.boxes.entries()) {
       const canvas = await renderBoxToCanvas(box, { enhance: DOM.autoEnhanceToggle()?.checked });
       const blob = await this.canvasToBlob(canvas, format, quality);
-      this.triggerDownload(blob, this.getFilename(idx, baseName, format));
+      const fName = this.getFilename(idx, baseName, format);
+      this.triggerDownload(blob, fName);
+      
+      const baseWithoutExt = fName.substring(0, fName.lastIndexOf('.'));
+      this._exportSidecars(box, baseWithoutExt, false, null);
+      
       saved++;
       setProgress(Math.round(saved / state.boxes.length * 100), `Saving ${saved} of ${state.boxes.length}…`);
-      // Small delay to allow browser to process each download
-      await new Promise(r => setTimeout(r, 80));
+      // Delay longer to allow sidecar downloads to pass browser limits
+      await new Promise(r => setTimeout(r, 150 + (box.audioNote ? 100 : 0)));
     }
 
     hideSpinner();
@@ -2042,6 +2106,9 @@ const ZipManager = {
       const blob   = await ExportManager.canvasToBlob(canvas, usedFormat, quality);
       const num    = String(idx + 1).padStart(2, '0');
       zip.file(`${usedBaseName}${num}.${ext}`, blob);
+      
+      ExportManager._exportSidecars(box, `${usedBaseName}${num}`, true, zip);
+      
       done++;
       setProgress(Math.round(done / boxes.length * 80), `Compressing ${done} of ${boxes.length}…`);
     }
@@ -2528,6 +2595,220 @@ function initNegativeTools() {
     }
   });
 
+  /* ═══════════════════════════════════════════════════════════════════════════
+   *  PHASE 2: AUDIO NOTE & METADATA MANAGERS
+   * ═══════════════════════════════════════════════════════════════════════════ */
+  window.openMetadataModal = function(boxId) {
+    const box = state.boxes.find(b => b.id === boxId);
+    if (!box) return;
+    
+    // Ensure meta object exists
+    box.meta = box.meta || { date: '', location: '', people: '', caption: '', notes: '' };
+    
+    $('meta-box-id').value = boxId;
+    $('meta-date').value = box.meta.date || '';
+    $('meta-location').value = box.meta.location || '';
+    $('meta-people').value = box.meta.people || '';
+    $('meta-caption').value = box.meta.caption || '';
+    $('meta-notes').value = box.meta.notes || '';
+    
+    AudioNoteManager.loadForBox(box);
+    AttachBackManager.refreshPreview(box);
+    
+    $('metadata-modal').style.display = 'flex';
+    requestAnimationFrame(() => $('metadata-modal').setAttribute('aria-hidden', 'false'));
+  };
+
+  window.closeMetadataModal = function() {
+    AudioNoteManager.stopRecording();
+    $('metadata-modal').setAttribute('aria-hidden', 'true');
+    setTimeout(() => { $('metadata-modal').style.display = 'none'; }, 300);
+  };
+
+  window.saveMetadataModal = function() {
+    const boxId = parseInt($('meta-box-id').value, 10);
+    const box = state.boxes.find(b => b.id === boxId);
+    if (box) {
+      box.meta = box.meta || {};
+      box.meta.date = $('meta-date').value;
+      box.meta.location = $('meta-location').value;
+      box.meta.people = $('meta-people').value;
+      box.meta.caption = $('meta-caption').value;
+      box.meta.notes = $('meta-notes').value;
+      pushUndo();
+      showToast('Photo details saved!', 'success');
+    }
+    closeMetadataModal();
+  };
+
+  const OCRManager = {
+    isLoaded: false,
+    async init() {
+      if (this.isLoaded) return;
+      showSpinner('Loading OCR Engine (Tesseract.js)...');
+      return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js';
+        script.onload = () => { this.isLoaded = true; hideSpinner(); resolve(); };
+        script.onerror = () => { hideSpinner(); showToast('Failed to load OCR.', 'error'); reject(); };
+        document.head.appendChild(script);
+      });
+    },
+    async extractText(boxId) {
+      const box = state.boxes.find(b => b.id === boxId);
+      if (!box) return;
+      await this.init();
+      
+      showSpinner('Extracting text...');
+      try {
+        const canvas = await renderBoxToCanvas(box, { enhance: true });
+        const imgData = canvas.toDataURL('image/jpeg');
+        const { data: { text } } = await Tesseract.recognize(imgData, 'eng');
+        
+        hideSpinner();
+        if (text.trim()) {
+          box.meta = box.meta || {};
+          box.meta.notes = (box.meta.notes ? box.meta.notes + '\n\n' : '') + text.trim();
+          showToast('Text extracted and added to Notes!', 'success');
+          if ($('metadata-modal') && $('metadata-modal').getAttribute('aria-hidden') === 'false') {
+            $('meta-notes').value = box.meta.notes;
+          } else {
+            openMetadataModal(boxId);
+          }
+        } else {
+          showToast('No text detected in this photo.', 'info');
+        }
+      } catch (err) {
+        hideSpinner();
+        showToast('OCR Failed: ' + err.message, 'error');
+      }
+    }
+  };
+
+  const AttachBackManager = {
+    handleUpload(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const boxId = parseInt($('meta-box-id').value, 10);
+      const box = state.boxes.find(b => b.id === boxId);
+      if (!box) return;
+      
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        box.backImage = ev.target.result;
+        this.refreshPreview(box);
+      };
+      reader.readAsDataURL(file);
+      e.target.value = '';
+    },
+    
+    remove() {
+      const boxId = parseInt($('meta-box-id').value, 10);
+      const box = state.boxes.find(b => b.id === boxId);
+      if (box) {
+        box.backImage = null;
+        this.refreshPreview(box);
+      }
+    },
+    
+    refreshPreview(box) {
+      if (box.backImage) {
+        $('attach-back-preview').src = box.backImage;
+        $('attach-back-preview').style.display = 'block';
+        $('btn-remove-back').style.display = 'block';
+      } else {
+        $('attach-back-preview').src = '';
+        $('attach-back-preview').style.display = 'none';
+        $('btn-remove-back').style.display = 'none';
+      }
+    }
+  };
+
+  window.OCRManager = OCRManager;
+  window.AttachBackManager = AttachBackManager;
+
+  const AudioNoteManager = {
+    mediaRecorder: null,
+    audioChunks: [],
+    currentBoxId: null,
+    timerInt: null,
+    startTime: 0,
+    
+    loadForBox(box) {
+      this.currentBoxId = box.id;
+      this.audioChunks = [];
+      $('btn-record-audio').style.display = 'block';
+      $('btn-stop-audio').style.display = 'none';
+      $('audio-status').style.display = 'none';
+      
+      if (box.audioNote) {
+        $('btn-record-audio').textContent = '🔴 Replace Audio';
+        $('audio-playback-container').style.display = 'flex';
+        $('audio-playback').src = URL.createObjectURL(box.audioNote);
+      } else {
+        $('btn-record-audio').textContent = '🔴 Record Audio';
+        $('audio-playback-container').style.display = 'none';
+        $('audio-playback').removeAttribute('src');
+      }
+    },
+    
+    async startRecording() {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        this.mediaRecorder = new MediaRecorder(stream);
+        this.audioChunks = [];
+        
+        this.mediaRecorder.ondataavailable = e => {
+          if (e.data.size > 0) this.audioChunks.push(e.data);
+        };
+        
+        this.mediaRecorder.onstop = () => {
+          const blob = new Blob(this.audioChunks, { type: 'audio/webm' });
+          const box = state.boxes.find(b => b.id === this.currentBoxId);
+          if (box) {
+            box.audioNote = blob;
+            this.loadForBox(box);
+          }
+          stream.getTracks().forEach(track => track.stop());
+          clearInterval(this.timerInt);
+          $('audio-status').style.display = 'none';
+        };
+        
+        this.mediaRecorder.start();
+        $('btn-record-audio').style.display = 'none';
+        $('btn-stop-audio').style.display = 'block';
+        $('audio-playback-container').style.display = 'none';
+        $('audio-status').style.display = 'inline';
+        this.startTime = Date.now();
+        
+        this.timerInt = setInterval(() => {
+          const s = Math.floor((Date.now() - this.startTime) / 1000);
+          $('audio-time').textContent = `${Math.floor(s / 60)}:${(s % 60).toString().padStart(2, '0')}`;
+        }, 1000);
+      } catch (err) {
+        showToast('Microphone access denied or unavailable.', 'error');
+      }
+    },
+    
+    stopRecording() {
+      if (this.mediaRecorder && this.mediaRecorder.state !== 'inactive') {
+        this.mediaRecorder.stop();
+      }
+    },
+    
+    deleteNote() {
+      const box = state.boxes.find(b => b.id === this.currentBoxId);
+      if (box && box.audioNote) {
+        box.audioNote = null;
+        this.loadForBox(box);
+      }
+    }
+  };
+
+  $('btn-record-audio')?.addEventListener('click', () => AudioNoteManager.startRecording());
+  $('btn-stop-audio')?.addEventListener('click', () => AudioNoteManager.stopRecording());
+  $('btn-delete-audio')?.addEventListener('click', () => AudioNoteManager.deleteNote());
+
   DOM.mainCanvas().addEventListener('click', e => {
     if (!state.pickingFilmBase) return;
     
@@ -2588,6 +2869,14 @@ function initButtons() {
   // Carousel Button
   const btnCarousel = $('btn-carousel-split');
   if (btnCarousel) btnCarousel.addEventListener('click', () => CarouselSplitter.openModal());
+
+  // Collage Maker Button
+  const btnCollage = $('btn-collage-maker');
+  if (btnCollage) btnCollage.addEventListener('click', () => CollageManager.openModal());
+
+  // Slideshow Button
+  const btnSlideshow = $('btn-slideshow');
+  if (btnSlideshow) btnSlideshow.addEventListener('click', () => SlideshowManager.start());
 
   // Detect All Button — runs detection on every loaded file sequentially
   const btnDetectAll = $('btn-detect-all');

@@ -540,6 +540,14 @@
               title="Split the image into a grid for carousel posts" aria-label="Carousel grid splitter">
               <span class="btn-icon" aria-hidden="true">🔲</span> Carousel
             </button>
+            <button class="btn btn-secondary" id="btn-collage-maker"
+              title="Combine multiple detected photos into a single collage" aria-label="Collage Maker">
+              <span class="btn-icon" aria-hidden="true">🖼️</span> Collage
+            </button>
+            <button class="btn btn-secondary" id="btn-slideshow"
+              title="View detected photos in a fullscreen slideshow" aria-label="Slideshow Mode">
+              <span class="btn-icon" aria-hidden="true">▶</span> Slideshow
+            </button>
           </div>
         </div>
 
@@ -663,6 +671,136 @@
       <div class="footer-copy">&copy; 2026 PhotoSplit Studio. All rights reserved. Built for private archiving.</div>
     </div>
   </footer>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+     COLLAGE MODAL
+════════════════════════════════════════════════════════════════════════════ -->
+  <div id="collage-modal" class="text-modal-backdrop" aria-hidden="true" style="display:none;z-index:9999;">
+    <div class="text-modal-box" style="max-width:800px; width: 90%;">
+      <div class="text-modal-header">
+        <h2>🖼️ Collage Maker</h2>
+        <button class="icon-btn" onclick="CollageManager.closeModal()">✕</button>
+      </div>
+      <div class="text-modal-content" style="display:flex; flex-wrap:wrap; gap:16px; padding:16px;">
+        <div style="flex:1; min-width:300px; max-width: 400px; display:flex; flex-direction:column; gap:12px;">
+          <label class="form-label" for="collage-layout">Layout</label>
+          <select id="collage-layout" class="form-control">
+            <option value="2x2">2x2 Grid</option>
+            <option value="3x3">3x3 Grid</option>
+            <option value="2x1">2 Columns, 1 Row</option>
+            <option value="1x2">1 Column, 2 Rows</option>
+          </select>
+          
+          <label class="form-label" for="collage-border">Border thickness</label>
+          <input type="range" id="collage-border" min="0" max="100" value="20" class="form-control" />
+          
+          <label class="form-label" for="collage-color">Border color</label>
+          <input type="color" id="collage-color" value="#ffffff" class="form-control" style="height:40px; padding:0;" />
+          
+          <p style="font-size:0.8rem; color:var(--text-muted); margin-top:8px;">
+            Select up to <span id="collage-max-slots">4</span> photos in the strip. The collage updates automatically.
+          </p>
+        </div>
+        <div style="flex:2; min-width:300px; display:flex; align-items:center; justify-content:center; background:var(--bg-sunken); border-radius:8px; overflow:hidden;">
+          <canvas id="collage-preview-canvas" style="max-width:100%; max-height:400px; object-fit:contain;"></canvas>
+        </div>
+      </div>
+      <div class="text-modal-header" style="border-top:1px solid var(--border); border-bottom:none; justify-content:flex-end;">
+        <button class="btn btn-primary" onclick="CollageManager.exportCollage()">Download Collage</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDESHOW OVERLAY
+════════════════════════════════════════════════════════════════════════════ -->
+  <div id="slideshow-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:#000; z-index:10000; flex-direction:column; align-items:center; justify-content:center;">
+    <button class="icon-btn" onclick="SlideshowManager.stop()" style="position:absolute; top:20px; right:20px; color:#fff; font-size:2rem; background:rgba(0,0,0,0.5); border-radius:50%; width:48px; height:48px;">✕</button>
+    <div style="position:absolute; top:20px; left:20px; color:#fff; display:flex; gap:12px; align-items:center;">
+      <label for="slideshow-speed" style="font-size:0.9rem;">Auto-play:</label>
+      <select id="slideshow-speed" class="form-control" style="background:rgba(0,0,0,0.5); color:#fff; border:1px solid #fff;">
+        <option value="0">Manual</option>
+        <option value="3000">3 Seconds</option>
+        <option value="5000" selected>5 Seconds</option>
+        <option value="10000">10 Seconds</option>
+      </select>
+    </div>
+    <div style="position:relative; width:90%; height:80%; display:flex; align-items:center; justify-content:center;">
+      <button class="icon-btn" onclick="SlideshowManager.prev()" style="position:absolute; left:0; color:#fff; font-size:3rem; background:rgba(0,0,0,0.2); border-radius:8px; height:100px; padding:0 20px;">⟨</button>
+      <img id="slideshow-img" style="max-width:100%; max-height:100%; object-fit:contain;" />
+      <button class="icon-btn" onclick="SlideshowManager.next()" style="position:absolute; right:0; color:#fff; font-size:3rem; background:rgba(0,0,0,0.2); border-radius:8px; height:100px; padding:0 20px;">⟩</button>
+    </div>
+    <div id="slideshow-caption" style="color:#fff; font-size:1.2rem; margin-top:20px; text-align:center; max-width:80%; min-height:1.5rem;"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+     METADATA MODAL
+════════════════════════════════════════════════════════════════════════════ -->
+  <div id="metadata-modal" class="text-modal-backdrop" aria-hidden="true" style="display:none">
+    <div class="text-modal-box" style="max-width:500px">
+      <div class="text-modal-header">
+        <h2 id="metadata-modal-title">Photo Details</h2>
+        <button class="icon-btn" onclick="closeMetadataModal()">✕</button>
+      </div>
+      <div class="text-modal-content" style="padding: 16px; display: flex; flex-direction: column; gap: 12px; overflow-y: visible;">
+        <input type="hidden" id="meta-box-id" />
+        
+        <div style="display: flex; gap: 12px;">
+          <div style="flex: 1;">
+            <label class="form-label" for="meta-date">Date</label>
+            <input type="date" id="meta-date" class="form-control" />
+          </div>
+          <div style="flex: 1;">
+            <label class="form-label" for="meta-location">Location</label>
+            <input type="text" id="meta-location" class="form-control" placeholder="e.g. Paris, France" />
+          </div>
+        </div>
+        
+        <div>
+          <label class="form-label" for="meta-people">People in photo</label>
+          <input type="text" id="meta-people" class="form-control" placeholder="Comma separated names" />
+        </div>
+        
+        <div>
+          <label class="form-label" for="meta-caption">Caption</label>
+          <input type="text" id="meta-caption" class="form-control" placeholder="Short description" />
+        </div>
+        
+        <div>
+          <label class="form-label" for="meta-notes">Notes / Story</label>
+          <textarea id="meta-notes" class="form-control" rows="3" placeholder="Additional details or story behind the photo..."></textarea>
+        </div>
+        
+        <div style="border-top: 1px solid var(--border); margin-top: 8px; padding-top: 12px;">
+          <label class="form-label">🎤 Voice Note</label>
+          <div id="audio-record-controls" style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+            <button class="btn btn-secondary" id="btn-record-audio" style="flex: 1;">🔴 Record Audio</button>
+            <button class="btn btn-secondary" id="btn-stop-audio" style="flex: 1; display: none;">⏹ Stop</button>
+            <div id="audio-playback-container" style="display: none; flex: 2; align-items: center; gap: 8px;">
+              <audio id="audio-playback" controls style="height: 32px; width: 100%;"></audio>
+              <button class="icon-btn" id="btn-delete-audio" title="Delete audio">🗑️</button>
+            </div>
+            <span id="audio-status" style="font-size: 0.8rem; color: var(--text-muted); display: none;">Recording... <span id="audio-time">0:00</span></span>
+          </div>
+        </div>
+
+        <div style="border-top: 1px solid var(--border); margin-top: 8px; padding-top: 12px;">
+          <label class="form-label">📸 Attach Back of Photo</label>
+          <div style="display:flex; gap:12px; align-items:center; margin-top: 4px;">
+            <button class="btn btn-secondary" onclick="document.getElementById('attach-back-input').click()">Upload Image</button>
+            <input type="file" id="attach-back-input" accept="image/*" style="display:none;" onchange="AttachBackManager.handleUpload(event)" />
+            <img id="attach-back-preview" style="display:none; height:32px; border-radius:4px; border:1px solid var(--border); object-fit:cover;" />
+            <button class="icon-btn" id="btn-remove-back" style="display:none;" onclick="AttachBackManager.remove()" title="Remove back image">🗑️</button>
+          </div>
+        </div>
+
+      </div>
+      <div class="text-modal-header" style="border-top: 1px solid var(--border); border-bottom: none; justify-content: flex-end; gap: 12px;">
+        <button class="btn btn-secondary" onclick="closeMetadataModal()">Cancel</button>
+        <button class="btn btn-primary" onclick="saveMetadataModal()">Save Details</button>
+      </div>
+    </div>
+  </div>
 
   <!-- ═══════════════════════════════════════════════════════════════════════════
      LEGAL MODALS
