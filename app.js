@@ -2412,14 +2412,6 @@ const CarouselSplitter = {
   _getCols() { return Math.max(1, Math.min(10, parseInt($('carousel-cols').value, 10) || 3)); },
   _getRows() { return Math.max(1, Math.min(10, parseInt($('carousel-rows').value, 10) || 1)); },
 
-    // Label
-    ctx.fillStyle = 'rgba(0,0,0,0.55)';
-    ctx.fillRect(0, 0, W, 18);
-    ctx.fillStyle = '#fff';
-    ctx.font = 'bold 11px Inter, sans-serif';
-    ctx.textBaseline = 'middle';
-    ctx.fillText(`${cols}×${rows} = ${cols * rows} tiles`, 6, 9);
-  },
 
   async _drawGridPreview() {
     const cols  = this._getCols();
