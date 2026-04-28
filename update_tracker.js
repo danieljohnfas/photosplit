@@ -6,17 +6,22 @@ const files = [
   'blog/best-scanner-settings-for-photos.html'
 ];
 
-const oldPixel = '  <!-- Hit Tracker -->\n  <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fphotosplitstudio.com&count_bg=%2310B981&title_bg=%231F2937&icon=&icon_color=%23E7E7E7&title=Total+Visits&edge_flat=true" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;" alt="" aria-hidden="true" />\n';
-
-const newPixel = '  <!-- Hit Tracker (Unique Visitors Only) -->\n  <script>\n    if (!localStorage.getItem("ps_counted")) {\n      localStorage.setItem("ps_counted", "true");\n      new Image().src = "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fphotosplitstudio.com&count_bg=%2310B981&title_bg=%231F2937&icon=&icon_color=%23E7E7E7&title=Total+Visits&edge_flat=true";\n    }\n  </script>\n';
+const oldPixelPart = 'localStorage.getItem("ps_counted")';
+const newPixel = '  <!-- Hit Tracker (Unique Visitors Only) -->\n  <script>\n    if (!localStorage.getItem("ps_counted")) {\n      localStorage.setItem("ps_counted", "true");\n      new Image().src = "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";\n    }\n  </script>\n';
 
 files.forEach(f => {
   try {
     let c = fs.readFileSync(f, 'utf8');
-    if (c.includes(oldPixel)) {
-      c = c.replace(oldPixel, newPixel);
-      fs.writeFileSync(f, c);
-      console.log('Updated ' + f);
+    // Find the existing script block
+    const startIdx = c.indexOf('<!-- Hit Tracker');
+    if (startIdx !== -1) {
+      const endIdx = c.indexOf('</script>', startIdx) + 9;
+      if (endIdx > 9) {
+        const oldContent = c.substring(startIdx, endIdx);
+        c = c.replace(oldContent, newPixel);
+        fs.writeFileSync(f, c);
+        console.log('Updated ' + f);
+      }
     } else {
       console.log('Not found in ' + f);
     }
