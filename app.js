@@ -132,6 +132,11 @@ const DOM = {
   btnPickFilmBase:  () => $('btn-pick-film-base'),
   negativeClaheToggle: () => $('negative-clahe-toggle'),
   convertNegativeToggle: () => $('convert-negative-toggle'),
+  sharpenToggle:    () => $('sharpen-toggle'),
+  sharpenAmountRow: () => $('sharpen-amount-row'),
+  sharpenAmountSlider: () => $('sharpen-amount-slider'),
+  colorizeBwToggle: () => $('colorize-bw-toggle'),
+  colorFilterSelect:() => $('color-filter-select'),
 };
 
 /* ══════════════════════════════════════════════════════════════════════════ *
@@ -1339,7 +1344,138 @@ async function renderBoxToCanvas(box, opts = {}) {
     autoEnhanceCanvas(dst);
   }
 
+  // ── NEW ENHANCEMENTS (Photomyne Feature Parity) ──
+  const doSharpen    = DOM.sharpenToggle()?.checked;
+  const sharpenAmount= parseInt(DOM.sharpenAmountSlider()?.value || 5, 10);
+  const doColorize   = DOM.colorizeBwToggle()?.checked;
+  const colorFilter  = DOM.colorFilterSelect()?.value || 'none';
+
+  if (doSharpen || doColorize || colorFilter !== 'none') {
+    const imgData = dctx.getImageData(0, 0, dst.width, dst.height);
+    if (doSharpen) applySharpen(imgData, sharpenAmount);
+    if (doColorize) applyColorization(imgData);
+    if (colorFilter !== 'none') applyColorFilter(imgData, colorFilter);
+    dctx.putImageData(imgData, 0, 0);
+  }
+
   return dst;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════ *
+ *  PHASE 1 ENHANCEMENTS                                                       *
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+function applySharpen(imgData, amount) {
+  // Amount 1-10 mapped to mix ratio 0.2 - 2.0
+  const mix = amount * 0.2;
+  const data = imgData.data;
+  const w = imgData.width;
+  const h = imgData.height;
+  const blurred = new Uint8ClampedArray(data.length);
+  
+  // Fast 3x3 box blur
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      const idx = (y * w + x) * 4;
+      let r = 0, g = 0, b = 0, count = 0;
+      for (let dy = -1; dy <= 1; dy++) {
+        for (let dx = -1; dx <= 1; dx++) {
+          const nx = x + dx, ny = y + dy;
+          if (nx >= 0 && nx < w && ny >= 0 && ny < h) {
+            const nidx = (ny * w + nx) * 4;
+            r += data[nidx];
+            g += data[nidx+1];
+            b += data[nidx+2];
+            count++;
+          }
+        }
+      }
+      blurred[idx] = r / count;
+      blurred[idx+1] = g / count;
+      blurred[idx+2] = b / count;
+    }
+  }
+  
+  // Unsharp mask: orig + mix * (orig - blur)
+  for (let i = 0; i < data.length; i += 4) {
+    data[i]   = Math.max(0, Math.min(255, data[i]   + mix * (data[i]   - blurred[i])));
+    data[i+1] = Math.max(0, Math.min(255, data[i+1] + mix * (data[i+1] - blurred[i+1])));
+    data[i+2] = Math.max(0, Math.min(255, data[i+2] + mix * (data[i+2] - blurred[i+2])));
+  }
+}
+
+function applyColorFilter(imgData, filterName) {
+  const data = imgData.data;
+  for (let i = 0; i < data.length; i += 4) {
+    let r = data[i], g = data[i+1], b = data[i+2];
+    if (filterName === 'vivid') {
+      const l = 0.299 * r + 0.587 * g + 0.114 * b;
+      r = Math.min(255, l + (r - l) * 1.5);
+      g = Math.min(255, l + (g - l) * 1.5);
+      b = Math.min(255, l + (b - l) * 1.5);
+    } else if (filterName === 'cool') {
+      r = Math.max(0, r - 10);
+      b = Math.min(255, b + 20);
+    } else if (filterName === 'warm') {
+      r = Math.min(255, r + 20);
+      g = Math.min(255, g + 10);
+      b = Math.max(0, b - 15);
+    } else if (filterName === 'sepia') {
+      const tr = 0.393 * r + 0.769 * g + 0.189 * b;
+      const tg = 0.349 * r + 0.686 * g + 0.168 * b;
+      const tb = 0.272 * r + 0.534 * g + 0.131 * b;
+      r = Math.min(255, tr);
+      g = Math.min(255, tg);
+      b = Math.min(255, tb);
+    } else if (filterName === 'matte') {
+      r = r * 0.8 + 30;
+      g = g * 0.8 + 30;
+      b = b * 0.8 + 30;
+    }
+    data[i] = r; data[i+1] = g; data[i+2] = b;
+  }
+}
+
+function applyColorization(imgData) {
+  const data = imgData.data;
+  const w = imgData.width;
+  const h = imgData.height;
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      const i = (y * w + x) * 4;
+      const r = data[i], g = data[i+1], b = data[i+2];
+      const l = 0.299 * r + 0.587 * g + 0.114 * b;
+      const yNorm = y / h;
+      
+      let cr = l, cg = l, cb = l;
+      
+      if (l > 220) {
+        // Bright highlights / sky
+        cr = Math.min(255, l * 1.05);
+        cg = Math.min(255, l * 1.02);
+        cb = Math.min(255, l * 0.95);
+      } else if (yNorm < 0.35 && l > 120) {
+        // Upper region (sky)
+        cr = l * 0.8; cg = l * 0.9; cb = Math.min(255, l * 1.2);
+      } else if (l > 100 && l < 180) {
+        // Midtones (faces, ground)
+        cr = Math.min(255, l * 1.15);
+        cg = Math.min(255, l * 1.05);
+        cb = l * 0.85;
+      } else if (l >= 40 && l <= 100) {
+        // Shadows / vegetation
+        cr = l * 0.9; cg = Math.min(255, l * 1.1); cb = l * 0.9;
+      } else {
+        // Dark shadows (cool)
+        cr = l * 0.9; cg = l * 0.9; cb = Math.min(255, l * 1.1);
+      }
+      
+      // Blend original luma 60% with color 40%
+      data[i]   = Math.min(255, l * 0.6 + cr * 0.4);
+      data[i+1] = Math.min(255, l * 0.6 + cg * 0.4);
+      data[i+2] = Math.min(255, l * 0.6 + cb * 0.4);
+    }
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════ *
@@ -2360,6 +2496,38 @@ function initNegativeTools() {
     }
   });
 
+  // ── PHASE 1 ENHANCEMENTS EVENT LISTENERS ──
+  DOM.sharpenToggle()?.addEventListener('change', (e) => {
+    DOM.sharpenAmountRow().style.display = e.target.checked ? 'block' : 'none';
+    if (state.activeFileIdx >= 0) {
+      renderStrip();
+      if (state.selectedBoxId) previewBox(state.selectedBoxId);
+    }
+  });
+  DOM.sharpenAmountSlider()?.addEventListener('input', () => {
+    if (DOM.sharpenToggle()?.checked) {
+      clearTimeout(window._sharpenTimer);
+      window._sharpenTimer = setTimeout(() => {
+        if (state.activeFileIdx >= 0) {
+          renderStrip();
+          if (state.selectedBoxId) previewBox(state.selectedBoxId);
+        }
+      }, 200);
+    }
+  });
+  DOM.colorizeBwToggle()?.addEventListener('change', () => {
+    if (state.activeFileIdx >= 0) {
+      renderStrip();
+      if (state.selectedBoxId) previewBox(state.selectedBoxId);
+    }
+  });
+  DOM.colorFilterSelect()?.addEventListener('change', () => {
+    if (state.activeFileIdx >= 0) {
+      renderStrip();
+      if (state.selectedBoxId) previewBox(state.selectedBoxId);
+    }
+  });
+
   DOM.mainCanvas().addEventListener('click', e => {
     if (!state.pickingFilmBase) return;
     
@@ -2506,7 +2674,14 @@ function init() {
   console.log('%cPhotoSplit Studio loaded — zero network requests for your images.', 'color:#6366f1;font-weight:bold;font-size:14px');
 }
 
-document.addEventListener('DOMContentLoaded', init);
+// app.js is loaded at the bottom of <body> without defer/async.
+// By the time this script runs, DOMContentLoaded has already fired,
+// so we must call init() directly if the DOM is already ready.
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
 
 /* ══════════════════════════════════════════════════════════════════════════ *
  *  CLIPBOARD PASTE — Ctrl+V to paste an image directly into the app         *

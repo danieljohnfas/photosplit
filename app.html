@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="">
 
 <head>
@@ -332,6 +332,38 @@
               <input type="checkbox" id="auto-enhance-toggle" />
               <span class="toggle-slider"></span>
             </label>
+          </div>
+
+          <div class="toggle-row">
+            <span class="toggle-label">Sharpen photos</span>
+            <label class="toggle" aria-label="Sharpen blurry photos">
+              <input type="checkbox" id="sharpen-toggle" />
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="range-row" id="sharpen-amount-row" style="display:none; margin-bottom: 12px; margin-top: -6px;">
+            <input type="range" id="sharpen-amount-slider" min="1" max="10" value="5" step="1"
+              aria-label="Sharpening amount" />
+          </div>
+
+          <div class="toggle-row">
+            <span class="toggle-label">Colorize B&amp;W photos</span>
+            <label class="toggle" aria-label="Colorize black and white photos">
+              <input type="checkbox" id="colorize-bw-toggle" />
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+
+          <div style="margin-top:8px;">
+            <label class="form-label" for="color-filter-select" style="display:block;margin-bottom:5px">🎨 Color Filter</label>
+            <select class="form-control" id="color-filter-select" aria-label="Color filter">
+              <option value="none">None</option>
+              <option value="vivid">Vivid</option>
+              <option value="cool">Cool</option>
+              <option value="warm">Warm</option>
+              <option value="sepia">Sepia</option>
+              <option value="matte">Matte</option>
+            </select>
           </div>
 
           <div style="margin-top:10px; border-top: 1px solid var(--border); padding-top: 10px;">
