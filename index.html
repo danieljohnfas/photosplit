@@ -188,8 +188,6 @@
 
   <meta name="theme-color" content="#010101" />
   <link rel="icon" href="/logo.png" type="image/png" />
-  <link rel="preload" href="style.css" as="style" />
-  <link rel="preload" href="app.js" as="script" />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -216,9 +214,9 @@
           <li>✅ 100% private — your photos never leave your device</li>
         </ul>
         <div id="landing-hero-actions">
-          <button class="btn btn-primary" onclick="document.getElementById('landing-hero').style.display='none';document.getElementById('file-input').click()" aria-label="Open PhotoSplit Studio app">
+          <a href="/app.html" class="btn btn-primary" id="hero-launch-btn" aria-label="Open PhotoSplit Studio app">
             🖼️ Launch App — Split My Photos
-          </button>
+          </a>
           <a href="/tips.html" class="btn btn-secondary">📖 Scanning Guide</a>
           <a href="/blog/" class="btn btn-secondary">📝 Blog &amp; Guides</a>
         </div>
@@ -244,403 +242,121 @@
     </div>
   </section>
 
-  <div id="app-shell">
-
-    <!-- Google Auto Ads handles placement automatically -->
-
-
-    <!-- ═══════════════════════════════════════════════════════════════════════
-       SITE HEADER
-  ════════════════════════════════════════════════════════════════════════ -->
-    <header id="site-header" role="banner">
-      <img src="/logo.png" alt="Logo" class="logo-icon" aria-hidden="true"
-        style="width: 28px; height: 28px; border-radius: 6px; object-fit: cover;" />
-      <span class="logo">PhotoSplit Studio</span>
-
-      <nav class="main-nav" aria-label="Main Navigation">
-        <a href="/blog/">Blog</a>
-        <a href="/tips.html">Scanning Tips</a>
-        <a href="/about.html">About</a>
-        <a href="/privacy.html">Privacy</a>
-      </nav>
-
-      <div class="header-spacer"></div>
-
-      <!-- Privacy Badge -->
-      <div class="privacy-badge" role="status" aria-label="Privacy guarantee">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-          aria-hidden="true">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-        </svg>
-        <span>Your photos never leave your device</span>
-      </div>
-
-      <!-- Dark Mode Toggle -->
-      <button class="icon-btn" id="dark-toggle" title="Switch to dark mode" aria-label="Toggle dark mode">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          aria-hidden="true">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-        </svg>
-      </button>
-
-      <!-- Help / Keyboard shortcuts button -->
-      <button class="icon-btn" id="btn-shortcuts" title="Keyboard shortcuts" aria-label="Show keyboard shortcuts">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          aria-hidden="true">
-          <rect x="2" y="6" width="20" height="12" rx="2" />
-          <path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M8 14h8" />
-        </svg>
-      </button>
-    </header>
-
-    <!-- ═══════════════════════════════════════════════════════════════════════
-       MAIN BODY (sidebar + canvas area)
-  ════════════════════════════════════════════════════════════════════════ -->
-    <main id="main-body" role="main">
-
-      <!-- ── SIDEBAR ──────────────────────────────────────────────────────── -->
-      <aside id="sidebar" aria-label="Controls">
-
-        <!-- Upload -->
-        <section class="sidebar-section">
-          <div class="section-label">📂 Upload Scans</div>
-
-          <div id="upload-zone" role="button" tabindex="0"
-            aria-label="Upload scan images by clicking or dragging files here"
-            onkeypress="if(event.key==='Enter'||event.key===' ')document.getElementById('file-input').click()">
-            <span class="upload-icon" aria-hidden="true">🖼️</span>
-            <div class="upload-text">
-              <strong>Click</strong> or drag &amp; drop scans here
-            </div>
-            <div class="upload-formats">JPEG · PNG · TIFF · BMP · GIF · WebP</div>
-          </div>
-
-          <input type="file" id="file-input" multiple accept=".jpg,.jpeg,.png,.tif,.tiff,.bmp,.gif,.webp,.pdf,image/*,application/pdf"
-            aria-label="Select scan image files" />
-        </section>
-
-        <!-- File list -->
-        <section class="sidebar-section" id="file-list-section">
-          <div class="section-label">📋 Loaded Scans</div>
-          <div id="file-list" role="list" aria-label="Loaded scan files"></div>
-        </section>
-
-        <!-- Detection settings -->
-        <section class="sidebar-section detect-settings">
-          <div class="section-label">🔍 Detection Settings</div>
-
-          <div class="label-row">
-            <label class="form-label" for="bg-threshold-slider">
-              Background threshold
-            </label>
-            <span class="range-val" id="bg-threshold-val">240</span>
-          </div>
-          <div class="range-row">
-            <input type="range" id="bg-threshold-slider" min="150" max="254" value="240" step="1"
-              aria-label="Background brightness threshold" />
-          </div>
-
-          <div class="label-row">
-            <label class="form-label" for="min-area-slider">
-              Min photo area
-            </label>
-            <span class="range-val" id="min-area-val">0.5%</span>
-          </div>
-          <div class="range-row">
-            <input type="range" id="min-area-slider" min="0.1" max="5" value="0.5" step="0.1"
-              aria-label="Minimum photo area as percentage of scan" />
-          </div>
-        </section>
-
-        <!-- Enhancements -->
-        <section class="sidebar-section">
-          <div class="section-label">✨ Enhancements</div>
-
-          <div class="toggle-row">
-            <span class="toggle-label">Auto-straighten splits</span>
-            <label class="toggle" aria-label="Auto-straighten detected photos">
-              <input type="checkbox" id="auto-straighten-toggle" />
-              <span class="toggle-slider"></span>
-            </label>
-          </div>
-
-          <div class="toggle-row">
-            <span class="toggle-label">Auto color enhance</span>
-            <label class="toggle" aria-label="Auto color enhance faded photos">
-              <input type="checkbox" id="auto-enhance-toggle" />
-              <span class="toggle-slider"></span>
-            </label>
-          </div>
-
-          <div style="margin-top:10px; border-top: 1px solid var(--border); padding-top: 10px;">
-            <label class="form-label" for="film-type-select" style="display:block;margin-bottom:5px">🎞️ Film Negative Mode</label>
-            <select class="form-control" id="film-type-select" aria-label="Film negative conversion type" style="margin-bottom:8px">
-              <option value="none">Off (normal photo)</option>
-              <option value="bw">B&amp;W Negative</option>
-              <option value="color">Color Negative (C-41)</option>
-              <option value="slide">Slide / Positive (E-6)</option>
-            </select>
-            
-            <div id="negative-pro-tools" style="display:none; flex-direction: column; gap: 8px;">
-               <button class="btn btn-secondary btn-sm" id="btn-pick-film-base" title="Click an orange/unexposed area of the film to calibrate colors">
-                 🎯 Pick Film Base
-               </button>
-               <div class="toggle-row">
-                 <span class="toggle-label" style="font-size:0.75rem">Enhance Details (CLAHE)</span>
-                 <label class="toggle" aria-label="Use CLAHE for better detail in negatives">
-                   <input type="checkbox" id="negative-clahe-toggle" checked />
-                   <span class="toggle-slider"></span>
-                 </label>
-               </div>
-            </div>
-            
-            <p style="font-size:0.68rem;color:var(--text-muted);line-height:1.4;margin-top:4px">Color mode removes the orange mask automatically.</p>
-          </div>
-        </section>
-
-
-        <!-- Output settings -->
-        <section class="sidebar-section">
-          <div class="section-label">💾 Output Settings</div>
-
-          <label class="form-label" for="format-select">Format</label>
-          <select class="form-control" id="format-select" aria-label="Output image format">
-            <option value="jpeg">JPEG</option>
-            <option value="png">PNG (lossless)</option>
-          </select>
-
-          <div class="label-row" id="quality-row">
-            <label class="form-label" for="quality-slider">JPEG quality</label>
-            <span class="range-val" id="quality-val">90%</span>
-          </div>
-          <div class="range-row" id="quality-range-row">
-            <input type="range" id="quality-slider" min="10" max="100" value="90" step="1"
-              aria-label="JPEG output quality" />
-          </div>
-
-          <label class="form-label" for="filename-input">Base filename</label>
-          <input type="text" class="form-control" id="filename-input" value="photo_" placeholder="e.g. family_1960_"
-            aria-label="Base filename for exported photos" maxlength="80" />
-          <div style="font-size:0.68rem;color:var(--text-muted);margin-top:-6px;margin-bottom:8px">
-            Files will be named: <em id="filename-preview">photo_01.jpg</em>
-          </div>
-
-          <label class="form-label" for="photo-year-input">Photo year <span
-              style="font-weight:400;color:var(--text-muted)">(optional)</span></label>
-          <input type="number" class="form-control" id="photo-year-input" min="1800" max="2099" placeholder="e.g. 1985"
-            aria-label="Year to embed in exported JPEG metadata" />
-          <div style="font-size:0.68rem;color:var(--text-muted);margin-top:-6px">
-            Stamps the year into JPEG EXIF DateTimeOriginal
-          </div>
-        </section>
-
-
-
-      </aside>
-      <!-- END SIDEBAR -->
-
-      <!-- ── CANVAS AREA ──────────────────────────────────────────────────── -->
-      <section id="canvas-area" aria-label="Photo split editor">
-
-        <!-- Toolbar -->
-        <div id="canvas-toolbar" role="toolbar" aria-label="Editor tools">
-
-          <div class="toolbar-group">
-            <button class="btn btn-secondary" id="btn-rotate-ccw"
-              title="Rotate scan 90° counter-clockwise"
-              aria-label="Rotate scan counter-clockwise"
-              onclick="rotateScan(-90)">
-              <span class="btn-icon" aria-hidden="true">↺</span> Rotate CCW
-            </button>
-            <button class="btn btn-secondary" id="btn-rotate-cw"
-              title="Rotate scan 90° clockwise"
-              aria-label="Rotate scan clockwise"
-              onclick="rotateScan(90)">
-              <span class="btn-icon" aria-hidden="true">↻</span> Rotate CW
-            </button>
-          </div>
-
-          <div class="toolbar-sep" role="separator"></div>
-
-          <div class="toolbar-group">
-            <button class="btn btn-primary" id="btn-detect" title="Re-run photo detection with current settings (Ctrl+D)"
-              aria-label="Re-detect photos">
-              <span class="btn-icon" aria-hidden="true">🔍</span> Re-detect
-            </button>
-            <button class="btn btn-secondary" id="btn-detect-all"
-              title="Run detection on every loaded scan file sequentially" aria-label="Detect all loaded scans">
-              <span class="btn-icon" aria-hidden="true">⚡</span> Detect All
-            </button>
-          </div>
-
-          <div class="toolbar-sep" role="separator"></div>
-
-          <div class="toolbar-group">
-            <button class="btn btn-secondary" id="btn-add-crop" title="Draw a manual crop region on the scan"
-              aria-label="Add manual crop region">
-              <span class="btn-icon" aria-hidden="true">✏️</span> Add Crop
-            </button>
-          </div>
-
-          <div class="toolbar-sep" role="separator"></div>
-
-          <div class="toolbar-group">
-            <button class="btn btn-secondary" id="btn-undo" title="Undo (Ctrl+Z)" aria-label="Undo" disabled>
-              <span aria-hidden="true">↩</span> Undo
-            </button>
-            <button class="btn btn-secondary" id="btn-redo" title="Redo (Ctrl+Y or Ctrl+Shift+Z)" aria-label="Redo"
-              disabled>
-              <span aria-hidden="true">↪</span> Redo
-            </button>
-          </div>
-
-          <div class="toolbar-sep" role="separator"></div>
-
-          <div class="toolbar-group">
-            <button class="btn btn-secondary" id="btn-zoom-out" title="Zoom out (-)" aria-label="Zoom out">
-              <span aria-hidden="true">🔍−</span>
-            </button>
-            <button class="btn btn-secondary" id="btn-zoom-fit" title="Zoom to fit (0)" aria-label="Fit to window">
-              Fit
-            </button>
-            <button class="btn btn-secondary" id="btn-zoom-in" title="Zoom in (+)" aria-label="Zoom in">
-              <span aria-hidden="true">🔍+</span>
-            </button>
-          </div>
-
-          <div class="toolbar-spacer"></div>
-
-          <div class="toolbar-group">
-            <button class="btn btn-success" id="btn-save-all" title="Download all detected splits (Ctrl+S)"
-              aria-label="Save all splits">
-              <span class="btn-icon" aria-hidden="true">⬇️</span> Save All
-            </button>
-            <button class="btn btn-zip" id="btn-save-zip" title="Download all splits as a single ZIP file"
-              aria-label="Download ZIP">
-              <span class="btn-icon" aria-hidden="true">🗜️</span> ZIP
-            </button>
-            <button class="btn btn-pdf" id="btn-save-pdf" title="Download all splits as a single PDF file"
-              aria-label="Download PDF">
-              <span class="btn-icon" aria-hidden="true">📄</span> PDF
-            </button>
-            <div class="dropdown-wrapper">
-              <button class="btn btn-secondary dropdown-trigger" id="btn-global-share-unraveled" title="Share selected photo to Social Media"
-                aria-label="Share Photo">
-                <span class="btn-icon" aria-hidden="true">📤</span> Social Share ▾
-              </button>
-              <div class="dropdown-menu">
-                <button class="dropdown-item" onclick="SocialManager.openModal(null, 'ig-square')">🟣 Instagram</button>
-                <button class="dropdown-item" onclick="SocialManager.openModal(null, 'ig-story')">🎵 TikTok / Story</button>
-                <button class="dropdown-item" onclick="SocialManager.openModal(null, 'twitter')">𝕏 Twitter / X</button>
-                <button class="dropdown-item" onclick="SocialManager.openModal(null, 'facebook')">📘 Facebook</button>
-                <button class="dropdown-item" onclick="SocialManager.openModal(null, 'whatsapp')">💬 WhatsApp</button>
-                <button class="dropdown-item" onclick="SocialManager.openModal(null, 'original')">🗇 Open Full Options...</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="toolbar-sep" role="separator"></div>
-
-          <div class="toolbar-group">
-            <button class="btn btn-secondary" id="btn-carousel-split"
-              title="Split the image into a grid for carousel posts" aria-label="Carousel grid splitter">
-              <span class="btn-icon" aria-hidden="true">🔲</span> Carousel
-            </button>
-          </div>
-        </div>
-
-        <!-- Canvas scroll container -->
-        <div id="canvas-scroll" role="region" aria-label="Scan preview">
-
-          <!-- Empty state (shown when no scan loaded) -->
-          <div id="empty-state" aria-live="polite">
-            <div class="empty-icon" aria-hidden="true">🖼️</div>
-            <h2>No scan loaded</h2>
-            <p>Upload a scanned image on the left to get started. PhotoSplit Studio will automatically detect individual
-              photos.</p>
-            <button class="btn btn-primary" style="margin-top:8px"
-              onclick="document.getElementById('file-input').click()" aria-label="Upload scan images">
-              📂 Upload Scans
-            </button>
-            <noscript>
-              <p style="margin-top:20px;color:#e74c3c;font-weight:600">⚠️ JavaScript is required to run PhotoSplit Studio. Please enable JavaScript in your browser settings.</p>
-              <p>PhotoSplit Studio is a free, privacy-first browser tool that automatically detects, crops, and splits multiple printed photos from a single scanned image — all locally in your browser, with no uploads required. Visit our <a href="/tips.html">Scanning Tips</a> guide or read <a href="/about.html">About PhotoSplit Studio</a> to learn more.</p>
-            </noscript>
-          </div>
-
-          <!-- Canvas wrapper (hidden until scan loaded) -->
-          <div id="canvas-wrapper" style="display:none" aria-label="Scan canvas with bounding boxes">
-
-            <!-- The main display canvas -->
-            <canvas id="main-canvas" aria-label="Scanned image"></canvas>
-
-            <!-- SVG overlay for bounding boxes -->
-            <svg id="overlay-svg" xmlns="http://www.w3.org/2000/svg" role="img"
-              aria-label="Photo detection overlay"></svg>
-
-            <!-- Transparent overlay for manual crop drawing -->
-            <div id="draw-overlay" aria-hidden="true"></div>
-
-            <!-- Visual preview rect while drawing -->
-            <div id="draw-preview-rect" aria-hidden="true"></div>
-
-          </div>
-        </div>
-
-        <!-- Progress bar -->
-        <div id="progress-container" role="status" aria-live="polite" aria-label="Processing progress">
-          <div id="progress-bar-track">
-            <div id="progress-bar-fill"></div>
-          </div>
-          <div id="progress-label">Processing…</div>
-        </div>
-
-        <!-- Splits strip -->
-        <section id="splits-panel" aria-label="Detected photo splits">
-          <div id="splits-header">
-            <h3>Detected Splits</h3>
-            <span id="splits-count" aria-live="polite">0</span>
-            <button class="btn btn-secondary" style="padding:4px 10px;font-size:0.72rem"
-              onclick="ExportManager.saveAll()" aria-label="Download all splits">
-              ⬇ Download All
-            </button>
-          </div>
-          <div id="splits-strip" role="list" aria-label="Photo split thumbnails"></div>
-        </section>
-
-        <!-- Keyboard hint bar -->
-        <div id="kbd-hint" role="note" aria-label="Keyboard shortcuts quick reference">
-          <span><kbd>↑↓←→</kbd> Nudge box</span>
-          <span><kbd>Shift</kbd>+<kbd>↑↓</kbd> Nudge ×10</span>
-          <span><kbd>Del</kbd> Delete selected</span>
-          <span><kbd>Ctrl</kbd>+<kbd>Z</kbd> Undo</span>
-          <span><kbd>Ctrl</kbd>+<kbd>Y</kbd> Redo</span>
-          <span><kbd>+</kbd>/<kbd>−</kbd> Zoom</span>
-          <span><kbd>0</kbd> Fit</span>
-          <span><kbd>Esc</kbd> Deselect</span>
-          <span><kbd>Ctrl</kbd>+<kbd>Wheel</kbd> Zoom</span>
-        </div>
-
-      </section>
-      <!-- END CANVAS AREA -->
-
-    </main>
-
-    <!-- ═══════════════════════════════════════════════════════════════════════
-       ZOOM CONTROLS (floating)
-  ════════════════════════════════════════════════════════════════════════ -->
-    <div id="zoom-controls" role="group" aria-label="Zoom level">
-      <button class="icon-btn" onclick="zoomOut()" title="Zoom out" aria-label="Zoom out">−</button>
-      <span id="zoom-label" aria-live="polite">100%</span>
-      <button class="icon-btn" onclick="zoomIn()" title="Zoom in" aria-label="Zoom in">+</button>
-    </div>
-
-  </div><!-- #app-shell -->
-
-  <!-- ═══════════════════════════════════════════════════════════════════════════
-     SEO CONTENT & FOOTER (Scrollable below main app)
-════════════════════════════════════════════════════════════════════════════ -->
   <article id="seo-content" class="seo-wrapper">
+
+  <!-- ═══ HOW IT WORKS ═══════════════════════════════════════════════════════ -->
+  <section style="background:var(--bg-surface);border-bottom:1px solid var(--border);padding:56px 24px;">
+    <div style="max-width:860px;margin:0 auto;text-align:center;">
+      <h2 style="font-size:1.6rem;margin-bottom:8px;">How It Works</h2>
+      <p style="color:var(--text-secondary);margin-bottom:40px;">Three steps. No account. No upload. Completely free.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px;text-align:left;">
+        <div style="background:var(--bg-base);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;">
+          <div style="font-size:2rem;margin-bottom:12px;">1️⃣</div>
+          <h3 style="margin:0 0 8px;font-size:1rem;">Scan your photos</h3>
+          <p style="margin:0;color:var(--text-secondary);font-size:0.88rem;line-height:1.6;">Place multiple printed photos on your flatbed scanner. Scan them all at once as a single JPEG, PNG, TIFF, or PDF file at 300 DPI.</p>
+        </div>
+        <div style="background:var(--bg-base);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;">
+          <div style="font-size:2rem;margin-bottom:12px;">2️⃣</div>
+          <h3 style="margin:0 0 8px;font-size:1rem;">Drop it into the app</h3>
+          <p style="margin:0;color:var(--text-secondary);font-size:0.88rem;line-height:1.6;">Drag your scan into <a href="/app.html" style="color:var(--accent);">the photo splitter app</a>. OpenCV.js instantly detects every photo and draws a bounding box around each one — in under 2 seconds.</p>
+        </div>
+        <div style="background:var(--bg-base);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;">
+          <div style="font-size:2rem;margin-bottom:12px;">3️⃣</div>
+          <h3 style="margin:0 0 8px;font-size:1rem;">Save individual photos</h3>
+          <p style="margin:0;color:var(--text-secondary);font-size:0.88rem;line-height:1.6;">Click <strong>Save All</strong> to download every photo as a separate file, or export as ZIP or multi-page PDF. Apply enhancements, rotate, or crop before saving.</p>
+        </div>
+      </div>
+      <div style="margin-top:36px;">
+        <a href="/app.html" class="btn btn-primary" style="font-size:1.05rem;padding:16px 40px;">🚀 Open the App — It's Free</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FEATURE HUB ════════════════════════════════════════════════════════════ -->
+  <section style="padding:60px 24px;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <h2 style="text-align:center;font-size:1.5rem;margin-bottom:8px;">Everything You Need to Digitize &amp; Edit Photos</h2>
+      <p style="text-align:center;color:var(--text-secondary);margin-bottom:40px;">PhotoSplit Studio is a full free photo toolkit — not just a splitter. Every tool runs 100% in your browser.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;">
+
+        <!-- Main App -->
+        <a href="/app.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:2px solid var(--accent);border-radius:var(--radius-lg);padding:24px;transition:box-shadow 0.15s;" onmouseover="this.style.boxShadow='0 0 0 4px var(--accent-glow)'" onmouseout="this.style.boxShadow='none'">
+          <div style="font-size:2rem;margin-bottom:10px;">🖼️</div>
+          <h3 style="margin:0 0 6px;color:var(--accent);font-size:1rem;">Photo Scan Splitter</h3>
+          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);line-height:1.55;">Auto-detect and crop multiple photos from one scan using OpenCV.js. Supports JPEG, PNG, TIFF, BMP, WebP, GIF and PDF input. Includes auto-straighten, color enhance, film negative conversion, undo/redo, ZIP and PDF export.</p>
+          <span style="display:inline-block;margin-top:12px;font-size:0.78rem;font-weight:700;color:var(--accent);">Launch App →</span>
+        </a>
+
+        <!-- Film Negatives -->
+        <a href="/app.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:2rem;margin-bottom:10px;">🎞️</div>
+          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">Film Negative Converter</h3>
+          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);line-height:1.55;">Convert scanned film negatives to positive photos in one click. Supports B&amp;W negative, C-41 colour negative film, and E-6 slide film. Automatic orange-mask removal for accurate colours.</p>
+          <span style="display:inline-block;margin-top:12px;font-size:0.78rem;font-weight:700;color:var(--accent);">Use in App →</span>
+        </a>
+
+        <!-- Social Export -->
+        <a href="/app.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:2rem;margin-bottom:10px;">📱</div>
+          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">Social Media Export</h3>
+          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);line-height:1.55;">Export split photos directly formatted for Instagram, TikTok, Twitter/X, Facebook, and WhatsApp. Apply letterbox padding, add a custom watermark, and share or download in one tap.</p>
+          <span style="display:inline-block;margin-top:12px;font-size:0.78rem;font-weight:700;color:var(--accent);">Use in App →</span>
+        </a>
+
+        <!-- PDF Export -->
+        <a href="/app.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:2rem;margin-bottom:10px;">📄</div>
+          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">PDF &amp; ZIP Export</h3>
+          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);line-height:1.55;">Export all split photos as a multi-page PDF (one photo per page) or a single ZIP archive. Clipboard paste (Ctrl+V) and per-photo copy-to-clipboard are also supported.</p>
+          <span style="display:inline-block;margin-top:12px;font-size:0.78rem;font-weight:700;color:var(--accent);">Use in App →</span>
+        </a>
+
+        <!-- Carousel Splitter -->
+        <a href="/app.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:2rem;margin-bottom:10px;">🔲</div>
+          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">Carousel Grid Splitter</h3>
+          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);line-height:1.55;">Slice any wide panoramic image into a perfect grid of tiles for Instagram multi-slide carousel posts. Choose columns and rows, download individual tiles or a ZIP archive.</p>
+          <span style="display:inline-block;margin-top:12px;font-size:0.78rem;font-weight:700;color:var(--accent);">Use in App →</span>
+        </a>
+
+        <!-- Image Resizer -->
+        <a href="/resize.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:2rem;margin-bottom:10px;">📐</div>
+          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">Social Media Image Resizer</h3>
+          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);line-height:1.55;">Resize any photo to exact platform dimensions — Instagram (1080×1080), TikTok (1080×1920), YouTube (1280×720), Facebook, LinkedIn, Pinterest. Three fit modes: Fit, Fill, Stretch.</p>
+          <span style="display:inline-block;margin-top:12px;font-size:0.78rem;font-weight:700;color:var(--accent);">Open Tool →</span>
+        </a>
+
+        <!-- Image Cropper -->
+        <a href="/crop.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:2rem;margin-bottom:10px;">✂️</div>
+          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">Free Online Image Cropper</h3>
+          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);line-height:1.55;">Crop any photo to a custom size or aspect ratio — freeform, 1:1 square, 4:3, 16:9, 9:16, 3:2, 21:9. Drag corner handles, see a live preview, download as JPEG, PNG or WebP.</p>
+          <span style="display:inline-block;margin-top:12px;font-size:0.78rem;font-weight:700;color:var(--accent);">Open Tool →</span>
+        </a>
+
+        <!-- Bulk Converter -->
+        <a href="/convert.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:2rem;margin-bottom:10px;">🔄</div>
+          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">Bulk Image Format Converter</h3>
+          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);line-height:1.55;">Convert JPEG to PNG, PNG to WebP, JPEG to WebP — in bulk. Drop multiple files at once, convert all in one click, download individually or as a ZIP archive.</p>
+          <span style="display:inline-block;margin-top:12px;font-size:0.78rem;font-weight:700;color:var(--accent);">Open Tool →</span>
+        </a>
+
+        <!-- Passport Photo -->
+        <a href="/passport.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:2rem;margin-bottom:10px;">🪪</div>
+          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">Free Passport &amp; ID Photo Maker</h3>
+          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);line-height:1.55;">Create compliant passport photos for US (2×2 in), UK (35×45 mm), EU Schengen visa, Indian, Chinese, Australian and 6 more formats. Includes a 4×6 print-sheet generator.</p>
+          <span style="display:inline-block;margin-top:12px;font-size:0.78rem;font-weight:700;color:var(--accent);">Open Tool →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
     <div class="seo-container">
       <h2 class="seo-main-heading">Free Online Photo Scanner &amp; Splitter</h2>
       <p>Welcome to <strong>PhotoSplit Studio</strong>, your free browser-based solution to extract, crop, and split
@@ -1309,225 +1025,6 @@
      TOAST CONTAINER
 ════════════════════════════════════════════════════════════════════════════ -->
   <div id="toast-container" role="status" aria-live="polite" aria-label="Notifications"></div>
-
-  <!-- ═══════════════════════════════════════════════════════════════════════════
-     SCRIPTS — external deps loaded from CDN
-════════════════════════════════════════════════════════════════════════════ -->
-  <script src="https://cdn.jsdelivr.net/npm/utif@3.1.0/UTIF.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-  <script>pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';</script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="app.js"></script>
-
-  <script>
-    /* ── Inline boot helpers (app.js already loaded above) ─────────────── */
-
-    // Shortcuts modal — single handler on the toggle button
-    (function () {
-      var modal = document.getElementById('shortcuts-modal');
-      modal.style.display = 'none';
-
-      document.getElementById('btn-shortcuts').addEventListener('click', function () {
-        modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
-      });
-
-      // Close on backdrop click
-      modal.addEventListener('click', function (e) {
-        if (e.target === modal) modal.style.display = 'none';
-      });
-
-      // Close with Escape
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') {
-          if (modal.style.display === 'flex') modal.style.display = 'none';
-          closeTextModal('privacy-modal');
-          closeTextModal('terms-modal');
-          closeTextModal('contact-modal');
-        }
-      });
-    }());
-
-    // Handlers for generic text modals
-    window.openTextModal = function (id, e) {
-      if (e) e.preventDefault();
-      if (id === 'feedback-modal') {
-        document.getElementById('feedback-form').reset();
-        document.getElementById('feedback-form-view').style.display = 'block';
-        document.getElementById('feedback-success-view').style.display = 'none';
-      }
-      document.getElementById(id).classList.add('open');
-    };
-    window.closeTextModal = function (id) {
-      document.getElementById(id).classList.remove('open');
-    };
-
-    // State Machine CSV Parser
-    function parseCSV(text) {
-      let p = '', row = [''], ret = [row], i = 0, r = 0, s = !0, l;
-      for (l of text) {
-        if ('"' === l) {
-          if (s && l === p) row[i] += l;
-          s = !s;
-        } else if (',' === l && s) l = row[++i] = '';
-        else if ('\n' === l && s) {
-          if ('\r' === p) row[i] = row[i].slice(0, -1);
-          row = ret[++r] = [l = '']; i = 0;
-        } else row[i] += l;
-        p = l;
-      }
-      return ret;
-    }
-
-    // Handle Feedback Submission & Live Wall Display
-    window.fetchAndRenderFeedbackWall = function () {
-      // Adding single=true to reduce redirect complexity if possible
-      var csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQUEeGMkaanwb_bNhevhYnmdDp18gwZnIvkrOoo3T3PHrhEsjXf77P0DLYOniCL_Xm3pRLduwWrEVp8/pub?gid=0&single=true&output=csv";
-
-      // Prevent Googlebot/crawlers from making network calls to blocked Google Sheets endpoints
-      if (/bot|google|baidu|bing|msn|duckduckbot|teoma|slurp|yandex/i.test(navigator.userAgent)) {
-        console.info("Bot detected: Live feedback fetch skipped (using static HTML)");
-        return;
-      }
-
-      fetch(csvUrl, { cache: "no-store", mode: "cors" })
-        .then(function (res) {
-          if (!res.ok) throw new Error("HTTP Status " + res.status);
-          return res.text();
-        })
-        .then(function (csvText) {
-          var arr = parseCSV(csvText);
-          arr.shift(); // Remove header row
-
-          var list = document.getElementById('feedback-list');
-          var validRows = arr.filter(function (row) { return row.length >= 5 && row[1] && row[4]; });
-
-          if (validRows.length > 0) {
-            // Clear only if we have new live content to show
-            list.innerHTML = '';
-            validRows.reverse().forEach(function (cols) {
-              var cDate = cols[0]; var cName = cols[1];
-              var cDesc = cols[4];
-
-              var div = document.createElement('div');
-              div.style.background = 'var(--bg-surface)';
-              div.style.padding = '20px';
-              div.style.borderRadius = 'var(--radius-md)';
-              div.style.border = '1px solid var(--border)';
-
-              var header = document.createElement('div');
-              header.style.display = 'flex';
-              header.style.justifyContent = 'space-between';
-              header.style.marginBottom = '12px';
-
-              var nameNode = document.createElement('strong');
-              nameNode.textContent = cName;
-              nameNode.style.color = 'var(--text-primary)';
-              nameNode.style.fontSize = '0.95rem';
-
-              var dateNode = document.createElement('span');
-              var d = new Date(cDate);
-              dateNode.textContent = !isNaN(d) ? d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' }) : cDate;
-              dateNode.style.color = 'var(--text-muted)';
-              dateNode.style.fontSize = '0.8rem';
-
-              header.appendChild(nameNode);
-              header.appendChild(dateNode);
-
-              var descNode = document.createElement('div');
-              descNode.textContent = cDesc;
-              descNode.style.color = 'var(--text-secondary)';
-              descNode.style.fontSize = '0.95rem';
-              descNode.style.lineHeight = '1.6';
-              descNode.style.whiteSpace = 'pre-wrap';
-
-              div.appendChild(header);
-              div.appendChild(descNode);
-              list.appendChild(div);
-            });
-          }
-        })
-        .catch(function (err) {
-          // Silently fail for automated tools — static content is already visible
-          (navigator.userAgent.includes('Googlebot') ? console.info : console.warn)('Live feedback fetch skipped (using static):', err.message);
-        });
-    };
-
-    // Call immediately on script load
-    window.fetchAndRenderFeedbackWall();
-
-    window.handleFeedbackSubmit = function (e) {
-      e.preventDefault();
-      var fName = document.getElementById('fb-name').value;
-      var fEmail = document.getElementById('fb-email').value;
-      var fDesc = document.getElementById('fb-desc').value;
-
-      document.getElementById('fb-res-name').textContent = fName;
-      document.getElementById('fb-res-email').textContent = fEmail;
-      document.getElementById('fb-res-desc').textContent = fDesc;
-
-      // POST to Google Forms
-      var url = "https://docs.google.com/forms/d/e/1FAIpQLSeJe_jw0IHHXeT4w4hzcZJ2WXREaT8aD4_R4LFBGVZNazsehg/formResponse";
-      var params = new URLSearchParams();
-      params.append('entry.1051903221', fName);
-      params.append('entry.371950700', fEmail);
-      params.append('entry.852578852', fDesc);
-
-      fetch(url, { method: "POST", mode: "no-cors", body: params })
-        .then(function () {
-          // Re-fetch sheets after a delay so Google can propagate the new row.
-          setTimeout(window.fetchAndRenderFeedbackWall, 3000);
-        })
-        .catch(function (err) { console.error('Form POST error:', err); });
-
-      document.getElementById('feedback-form-view').style.display = 'none';
-      document.getElementById('feedback-success-view').style.display = 'block';
-    };
-
-    // Filename preview live update
-    function updateFilenamePreview() {
-      var base = (document.getElementById('filename-input').value.trim() || 'photo_');
-      var fmt = document.getElementById('format-select').value;
-      var ext = fmt === 'png' ? 'png' : 'jpg';
-      document.getElementById('filename-preview').textContent = base + '01.' + ext;
-    }
-    document.getElementById('filename-input').addEventListener('input', updateFilenamePreview);
-    document.getElementById('format-select').addEventListener('change', updateFilenamePreview);
-    updateFilenamePreview();
-  </script>
-
-  <!-- ═══════════════════════════════════════════════════════════════════════════
-     GDPR COOKIE CONSENT BANNER
-════════════════════════════════════════════════════════════════════════════ -->
-  <div id="cookie-consent" role="dialog" aria-label="Cookie consent notification" aria-live="polite">
-    <div id="cookie-consent-inner">
-      <div id="cookie-consent-text">
-        <span>🍪</span>
-        <p>We use <strong>Google Analytics</strong> and <strong>Google AdSense</strong> cookies to understand how you use this site and to keep the service free. Your photos <strong>never leave your device</strong>. See our <a href="/privacy.html" style="color:var(--accent)">Privacy Policy</a>.</p>
-      </div>
-      <div id="cookie-consent-actions">
-        <a href="/privacy.html" class="cookie-btn cookie-btn-link">Learn More</a>
-        <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
-        <button id="cookie-accept" class="cookie-btn cookie-btn-accept">✓ Accept All</button>
-      </div>
-    </div>
-  </div>
-  <script>
-    (function () {
-      var banner = document.getElementById('cookie-consent');
-      if (!localStorage.getItem('pss_cookie_consent')) {
-        banner.classList.add('visible');
-      }
-      document.getElementById('cookie-accept').addEventListener('click', function () {
-        localStorage.setItem('pss_cookie_consent', 'accepted');
-        banner.classList.remove('visible');
-      });
-      document.getElementById('cookie-decline').addEventListener('click', function () {
-        localStorage.setItem('pss_cookie_consent', 'declined');
-        banner.classList.remove('visible');
-      });
-    }());
-  </script>
 
 </body>
 </html>
