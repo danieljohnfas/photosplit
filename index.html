@@ -196,6 +196,23 @@
 <body>
 
   <!-- ═══════════════════════════════════════════════════════════════════════════
+     SITE HEADER NAVIGATION
+  ════════════════════════════════════════════════════════════════════════════ -->
+  <nav class="site-nav" style="background: var(--bg-surface); border-bottom: 1px solid var(--border); padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100;">
+    <a class="logo" href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text-primary);font-weight:700;font-size:1.1rem;">
+      <img src="/logo.png" alt="PhotoSplit Studio" style="width:24px;height:24px;border-radius:4px;"/>
+      PhotoSplit Studio
+    </a>
+    <div class="nav-links" style="display:flex;gap:20px;align-items:center;font-size:0.9rem;font-weight:600;">
+      <a href="/app.html" style="text-decoration:none;color:var(--text-secondary);">🖼️ Split Photos</a>
+      <a href="/resize.html" style="text-decoration:none;color:var(--text-secondary);">📐 Resize</a>
+      <a href="/crop.html" style="text-decoration:none;color:var(--text-secondary);">✂️ Crop</a>
+      <a href="/convert.html" style="text-decoration:none;color:var(--text-secondary);">🔄 Convert</a>
+      <a href="/passport.html" style="text-decoration:none;color:var(--text-secondary);">🪪 Passport</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
      LANDING HERO — visible immediately to search crawlers (above app-shell)
 ════════════════════════════════════════════════════════════════════════════ -->
   <section id="landing-hero" aria-label="PhotoSplit Studio introduction">
@@ -255,6 +272,58 @@
          data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
+
+  <!-- ═══ FEATURE HUB ════════════════════════════════════════════════════════════ -->
+  <section style="padding:60px 24px; background: var(--bg-base);">
+    <div style="max-width:1100px;margin:0 auto;">
+      <h2 style="text-align:center;font-size:1.8rem;margin-bottom:8px;">The Complete Free Photo Toolkit</h2>
+      <p style="text-align:center;color:var(--text-secondary);margin-bottom:40px;">PhotoSplit Studio is a full suite of free photo tools — not just a splitter. Every tool runs 100% in your browser.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;">
+
+        <!-- Main App -->
+        <a href="/app.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:2px solid var(--accent);border-radius:var(--radius-lg);padding:24px;transition:box-shadow 0.15s;" onmouseover="this.style.boxShadow='0 0 0 4px var(--accent-glow)'" onmouseout="this.style.boxShadow='none'">
+          <div style="font-size:2rem;margin-bottom:10px;">🖼️</div>
+          <h3 style="margin:0 0 6px;color:var(--accent);font-size:1.1rem;">Photo Scan Splitter</h3>
+          <p style="margin:0;font-size:0.85rem;color:var(--text-secondary);line-height:1.55;">Auto-detect and crop multiple photos from one scan using OpenCV.js. Includes auto-straighten, color enhance, film negative conversion, undo/redo, ZIP and PDF export.</p>
+          <span style="display:inline-block;margin-top:12px;font-size:0.85rem;font-weight:700;color:var(--accent);">Launch App →</span>
+        </a>
+
+        <!-- Image Resizer -->
+        <a href="/resize.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:2rem;margin-bottom:10px;">📐</div>
+          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">Social Media Image Resizer</h3>
+          <p style="margin:0;font-size:0.85rem;color:var(--text-secondary);line-height:1.55;">Resize any photo to exact platform dimensions — Instagram, TikTok, YouTube, Facebook, LinkedIn, Pinterest. Three fit modes: Fit, Fill, Stretch.</p>
+          <span style="display:inline-block;margin-top:12px;font-size:0.85rem;font-weight:700;color:var(--accent);">Open Tool →</span>
+        </a>
+
+        <!-- Image Cropper -->
+        <a href="/crop.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:2rem;margin-bottom:10px;">✂️</div>
+          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">Free Online Image Cropper</h3>
+          <p style="margin:0;font-size:0.85rem;color:var(--text-secondary);line-height:1.55;">Crop any photo to a custom size or aspect ratio — freeform, 1:1 square, 4:3, 16:9, 9:16, 3:2, 21:9. Drag corner handles, see a live preview, download instantly.</p>
+          <span style="display:inline-block;margin-top:12px;font-size:0.85rem;font-weight:700;color:var(--accent);">Open Tool →</span>
+        </a>
+
+        <!-- Format Converter -->
+        <a href="/convert.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:2rem;margin-bottom:10px;">🔄</div>
+          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">Bulk Image Format Converter</h3>
+          <p style="margin:0;font-size:0.85rem;color:var(--text-secondary);line-height:1.55;">Convert JPEG to PNG, PNG to WebP, JPEG to WebP — in bulk. Drop multiple files at once, convert all in one click, download individually or as a single ZIP archive.</p>
+          <span style="display:inline-block;margin-top:12px;font-size:0.85rem;font-weight:700;color:var(--accent);">Open Tool →</span>
+        </a>
+
+        <!-- Passport Photo -->
+        <a href="/passport.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:2rem;margin-bottom:10px;">🪪</div>
+          <h3 style="margin:0 0 6px;color:var(--text-primary);font-size:1rem;">Free Passport &amp; ID Photo Maker</h3>
+          <p style="margin:0;font-size:0.85rem;color:var(--text-secondary);line-height:1.55;">Create compliant passport photos for US, UK, EU Schengen, Indian, Chinese passports, and more. Includes a print-ready 4×6 inch sheet for home printing.</p>
+          <span style="display:inline-block;margin-top:12px;font-size:0.85rem;font-weight:700;color:var(--accent);">Open Tool →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
 
   <!-- ═══ HOW IT WORKS ════════════════════════════════════════════════════════ -->
   <section style="background:var(--bg-surface);border-bottom:1px solid var(--border);padding:56px 24px;">
@@ -563,38 +632,9 @@
           use, and how to properly space your prints on the scanner glass to guarantee 100% detection accuracy.</p>
         <a href="/tips.html" class="btn btn-secondary">Read the Scanning Guide &rarr;</a>
       </div>
-
-      <h2>More Free Photo Editing Tools</h2>
-      <p>PhotoSplit Studio is a full suite of free, private, browser-based photo tools — not just a photo splitter. Every tool below runs entirely in your browser. No upload. No account. No limits.</p>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin:24px 0 32px;">
-
-        <a href="/resize.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:20px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size:1.8rem;margin-bottom:8px;">🖼️</div>
-          <h3 style="margin:0 0 6px;font-size:1rem;color:var(--text-primary);">Social Media Image Resizer</h3>
-          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);">Resize any photo to exact Instagram (1080×1080), TikTok (1080×1920), YouTube (1280×720), Twitter/X, Facebook, LinkedIn and Pinterest dimensions in seconds. Three fit modes: letterbox, fill, or stretch. Free &amp; private.</p>
-        </a>
-
-        <a href="/crop.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:20px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size:1.8rem;margin-bottom:8px;">✂️</div>
-          <h3 style="margin:0 0 6px;font-size:1rem;color:var(--text-primary);">Free Online Image Cropper</h3>
-          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);">Crop any photo to a custom size or common aspect ratio — freeform, 1:1 square, 4:3, 16:9, 9:16, 3:2, and more. Drag corner handles, see a live preview, and download instantly as JPEG, PNG or WebP.</p>
-        </a>
-
-        <a href="/convert.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:20px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size:1.8rem;margin-bottom:8px;">🔄</div>
-          <h3 style="margin:0 0 6px;font-size:1rem;color:var(--text-primary);">Bulk Image Format Converter</h3>
-          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);">Convert JPEG to PNG, PNG to WebP, JPEG to WebP — in bulk. Drop multiple files at once, convert all in one click, download individually or as a single ZIP archive. The fastest free JPEG-to-WebP converter online.</p>
-        </a>
-
-        <a href="/passport.html" style="display:block;text-decoration:none;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:20px;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size:1.8rem;margin-bottom:8px;">🪪</div>
-          <h3 style="margin:0 0 6px;font-size:1rem;color:var(--text-primary);">Free Passport &amp; ID Photo Maker</h3>
-          <p style="margin:0;font-size:0.83rem;color:var(--text-secondary);">Create compliant passport photos for US (2×2 in), UK (35×45 mm), EU/Schengen visa, Indian passport, Chinese passport, and 10 more formats — free. Includes a print-ready 4×6 inch sheet for home printing.</p>
-        </a>
-
-      </div>
-
+    </div>
+    
+    <div style="max-width:860px;margin:0 auto;">
       <h2>Frequently Asked Questions</h2>
 
       <h3>Is PhotoSplit Studio really free?</h3>

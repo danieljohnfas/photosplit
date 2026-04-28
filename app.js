@@ -2315,7 +2315,7 @@ const SocialManager = {
 
   /* ── Copy composited image to system clipboard ───────────────── */
   async copyPreviewToClipboard() {
-    const composed = this._buildCanvas();
+    const composed = await this._buildCanvas();
     if (!composed) return;
     try {
       const blob = await ExportManager.canvasToBlob(composed, 'png', 1);
@@ -2330,7 +2330,7 @@ const SocialManager = {
 
   /* ── Download for currently selected platform ───────────────── */
   async downloadForPlatform() {
-    const composed = this._buildCanvas();
+    const composed = await this._buildCanvas();
     if (!composed) return;
     const { format, quality, baseName } = ExportManager.getSettings();
     const box = state.boxes.find(b => b.id === this._activeBoxId);
@@ -2345,7 +2345,7 @@ const SocialManager = {
 
   /* ── Native Web Share API (mobile) ────────────────────────── */
   async nativeShare() {
-    const composed = this._buildCanvas();
+    const composed = await this._buildCanvas();
     if (!composed) return;
     const blob = await ExportManager.canvasToBlob(composed, 'png', 1);
     const file = new File([blob], 'photo.png', { type: 'image/png' });
