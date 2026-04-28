@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G40QDCGTTZ',{'anonymize_ip':true});</script>
+  <meta name="google-adsense-account" content="ca-pub-2501499631331261">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2501499631331261" crossorigin="anonymous"></script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="theme-color" content="#010101"/>
+  <title>Resize Image for Social Media — Free Online Photo Resizer | PhotoSplit Studio</title>
+  <meta name="description" content="Free online image resizer for Instagram, TikTok, YouTube, Twitter/X, Facebook, and LinkedIn. Resize any photo to exact social media dimensions in your browser — no upload, 100% private."/>
+  <meta name="keywords" content="resize image for instagram, resize photo for tiktok, social media image resizer, crop photo for youtube thumbnail, image resizer online free, resize picture free"/>
+  <meta name="robots" content="index,follow"/>
+  <link rel="canonical" href="https://photosplitstudio.com/resize.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Free Social Media Image Resizer — PhotoSplit Studio"/>
+  <meta property="og:description" content="Resize any photo to exact Instagram, TikTok, YouTube, Twitter/X or Facebook dimensions. 100% free, 100% private."/>
+  <meta property="og:url" content="https://photosplitstudio.com/resize.html"/>
+  <meta property="og:image" content="https://photosplitstudio.com/og-image.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <link rel="icon" href="/logo.png" type="image/png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="secondary.css"/>
+  <style>
+    .resize-tool { max-width: 960px; margin: 0 auto; padding: 32px 24px 60px; }
+    .platform-picker { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; margin: 24px 0; }
+    .plat-btn { background: var(--bg-surface); border: 1.5px solid var(--border); border-radius: var(--radius-md); padding: 14px 10px; text-align: center; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .plat-btn:hover, .plat-btn.active { border-color: var(--accent); background: rgba(254,44,85,0.07); }
+    .plat-btn.active { box-shadow: 0 0 0 3px var(--accent-glow); }
+    .plat-btn .plat-icon { font-size: 1.6rem; display: block; margin-bottom: 6px; }
+    .plat-btn .plat-name { font-size: 0.75rem; font-weight: 700; color: var(--text-primary); display: block; }
+    .plat-btn .plat-dims { font-size: 0.65rem; color: var(--text-muted); display: block; margin-top: 2px; }
+    .plat-btn.active .plat-name { color: var(--accent); }
+    .resize-workspace { display: grid; grid-template-columns: 1fr 340px; gap: 24px; margin-top: 24px; }
+    @media(max-width:720px){ .resize-workspace { grid-template-columns: 1fr; } }
+    .upload-drop { border: 2px dashed var(--border-strong); border-radius: var(--radius-lg); padding: 48px 24px; text-align: center; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+    .upload-drop:hover, .upload-drop.drag-over { border-color: var(--accent); background: rgba(254,44,85,0.05); }
+    .upload-drop p { color: var(--text-muted); margin: 8px 0 0; font-size: 0.85rem; }
+    #resize-canvas-wrap { background: var(--bg-base); border-radius: var(--radius-md); overflow: hidden; display:flex; align-items:center; justify-content:center; min-height:200px; position: relative; }
+    #resize-canvas-wrap canvas { max-width: 100%; max-height: 400px; display: block; }
+    .resize-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px; display: flex; flex-direction: column; gap: 16px; }
+    .resize-panel label { font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); display: block; margin-bottom: 4px; }
+    .resize-panel input[type=number] { width: 100%; padding: 8px 10px; background: var(--bg-surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-primary); font-family: inherit; font-size: 0.9rem; }
+    .resize-panel select { width: 100%; padding: 8px 10px; background: var(--bg-surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-primary); font-family: inherit; font-size: 0.9rem; }
+    .resize-dims-row { display: flex; gap: 10px; align-items: center; }
+    .resize-dims-row span { color: var(--text-muted); font-size: 1.1rem; padding-top: 20px; }
+    .dim-group { flex: 1; }
+    .fit-mode-btns { display: flex; gap: 6px; }
+    .fit-mode-btn { flex: 1; padding: 7px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-surface-2); font-family: inherit; font-size: 0.72rem; font-weight: 600; color: var(--text-secondary); cursor: pointer; transition: all 0.12s; }
+    .fit-mode-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(254,44,85,0.08); }
+    .btn-download-resize { background: linear-gradient(135deg,#fe2c55,#ff375f); color: #fff; border: none; border-radius: 99px; padding: 14px; font-size: 1rem; font-weight: 700; cursor: pointer; width: 100%; box-shadow: 0 3px 14px rgba(254,44,85,0.38); transition: all 0.15s; }
+    .btn-download-resize:hover { transform: translateY(-1px); box-shadow: 0 5px 20px rgba(254,44,85,0.48); }
+    .bg-color-row { display: flex; align-items: center; gap: 10px; }
+    .bg-color-row input[type=color] { width: 40px; height: 32px; border: 1px solid var(--border); border-radius: 4px; padding: 2px; background: var(--bg-surface-2); cursor: pointer; }
+    .section-label { font-size: 0.82rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; }
+    #resize-badge { position: absolute; bottom: 6px; right: 6px; background: rgba(0,0,0,0.6); color: #fff; font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; pointer-events: none; }
+  </style>
+</head>
+<body>
+<nav class="site-nav">
+  <a class="logo" href="/" style="display:flex;align-items:center;gap:10px;">
+    <img src="/logo.png" alt="PhotoSplit Studio" style="width:24px;height:24px;border-radius:4px;"/>
+    PhotoSplit Studio
+  </a>
+  <div class="nav-links">
+    <a href="/">Split Scans</a>
+    <a href="/crop.html">Crop</a>
+    <a href="/convert.html">Convert</a>
+    <a href="/passport.html">Passport</a>
+    <a href="/" class="cta">Open App →</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>Social Media Image Resizer</h1>
+  <p>Resize any photo to exact platform dimensions — Instagram, TikTok, YouTube, Twitter/X, Facebook &amp; more. Free &amp; private.</p>
+</div>
+
+<div class="resize-tool">
+
+  <!-- Platform presets -->
+  <div class="section-label">Choose a Platform</div>
+  <div class="platform-picker" id="platform-picker">
+    <button class="plat-btn" data-w="1080" data-h="1080" data-name="Instagram Post">
+      <span class="plat-icon">📸</span><span class="plat-name">Instagram</span><span class="plat-dims">1080×1080</span>
+    </button>
+    <button class="plat-btn" data-w="1080" data-h="1920" data-name="Instagram Story">
+      <span class="plat-icon">🟣</span><span class="plat-name">IG Story</span><span class="plat-dims">1080×1920</span>
+    </button>
+    <button class="plat-btn" data-w="1080" data-h="1920" data-name="TikTok Video">
+      <span class="plat-icon">🎵</span><span class="plat-name">TikTok</span><span class="plat-dims">1080×1920</span>
+    </button>
+    <button class="plat-btn" data-w="1280" data-h="720" data-name="YouTube Thumbnail">
+      <span class="plat-icon">▶️</span><span class="plat-name">YouTube</span><span class="plat-dims">1280×720</span>
+    </button>
+    <button class="plat-btn" data-w="1200" data-h="630" data-name="Facebook Post">
+      <span class="plat-icon">📘</span><span class="plat-name">Facebook</span><span class="plat-dims">1200×630</span>
+    </button>
+    <button class="plat-btn" data-w="1200" data-h="675" data-name="Twitter/X Post">
+      <span class="plat-icon">𝕏</span><span class="plat-name">Twitter/X</span><span class="plat-dims">1200×675</span>
+    </button>
+    <button class="plat-btn" data-w="1200" data-h="627" data-name="LinkedIn Post">
+      <span class="plat-icon">💼</span><span class="plat-name">LinkedIn</span><span class="plat-dims">1200×627</span>
+    </button>
+    <button class="plat-btn" data-w="1000" data-h="1500" data-name="Pinterest Pin">
+      <span class="plat-icon">📌</span><span class="plat-name">Pinterest</span><span class="plat-dims">1000×1500</span>
+    </button>
+    <button class="plat-btn" data-w="800" data-h="800" data-name="WhatsApp Image">
+      <span class="plat-icon">💬</span><span class="plat-name">WhatsApp</span><span class="plat-dims">800×800</span>
+    </button>
+  </div>
+
+  <div class="resize-workspace">
+    <!-- Left: upload + preview -->
+    <div>
+      <div class="upload-drop" id="resize-drop" onclick="document.getElementById('resize-file').click()">
+        <div style="font-size:2.5rem">🖼️</div>
+        <div style="font-weight:700;font-size:1rem;color:var(--text-primary);margin-top:8px">Drop image here or click to upload</div>
+        <p>JPEG, PNG, WebP, BMP supported</p>
+        <input type="file" id="resize-file" accept="image/*" style="display:none"/>
+      </div>
+      <div id="resize-canvas-wrap" style="margin-top:16px;display:none;">
+        <canvas id="resize-canvas"></canvas>
+        <span id="resize-badge"></span>
+      </div>
+    </div>
+
+    <!-- Right: controls -->
+    <div class="resize-panel">
+      <div>
+        <div class="section-label" style="margin-bottom:10px">Output Size</div>
+        <div class="resize-dims-row">
+          <div class="dim-group">
+            <label for="out-w">Width (px)</label>
+            <input type="number" id="out-w" value="1080" min="1" max="8000"/>
+          </div>
+          <span>×</span>
+          <div class="dim-group">
+            <label for="out-h">Height (px)</label>
+            <input type="number" id="out-h" value="1080" min="1" max="8000"/>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <label>Fit Mode</label>
+        <div class="fit-mode-btns">
+          <button class="fit-mode-btn active" data-mode="fit">Fit (letterbox)</button>
+          <button class="fit-mode-btn" data-mode="fill">Fill (crop)</button>
+          <button class="fit-mode-btn" data-mode="stretch">Stretch</button>
+        </div>
+      </div>
+
+      <div>
+        <label>Background Color <span style="font-weight:400;color:var(--text-muted)">(for letterbox)</span></label>
+        <div class="bg-color-row">
+          <input type="color" id="bg-color" value="#ffffff"/>
+          <span style="font-size:0.8rem;color:var(--text-muted)">Used when image doesn't fill canvas</span>
+        </div>
+      </div>
+
+      <div>
+        <label for="resize-format">Format</label>
+        <select id="resize-format">
+          <option value="jpeg">JPEG (smaller file)</option>
+          <option value="png">PNG (lossless)</option>
+          <option value="webp">WebP (best compression)</option>
+        </select>
+      </div>
+
+      <button class="btn-download-resize" id="btn-resize-download" disabled>⬇️ Download Resized Image</button>
+
+      <div style="font-size:0.75rem;color:var(--text-muted);text-align:center;">
+        All processing is done in your browser.<br/>Your image is never uploaded.
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="/">Split Scans</a>
+    <a href="/resize.html">Resize</a>
+    <a href="/crop.html">Crop</a>
+    <a href="/convert.html">Convert</a>
+    <a href="/passport.html">Passport Photo</a>
+    <a href="/terms.html">Terms</a>
+    <a href="/privacy.html">Privacy</a>
+  </div>
+  <div>&copy; 2026 PhotoSplit Studio</div>
+</footer>
+
+<script>
+(function () {
+  let srcImage = null;
+  let fitMode = 'fit';
+  const drop = document.getElementById('resize-drop');
+  const fileInput = document.getElementById('resize-file');
+  const canvasWrap = document.getElementById('resize-canvas-wrap');
+  const canvas = document.getElementById('resize-canvas');
+  const ctx = canvas.getContext('2d');
+  const badge = document.getElementById('resize-badge');
+  const outW = document.getElementById('out-w');
+  const outH = document.getElementById('out-h');
+  const bgColor = document.getElementById('bg-color');
+  const fmtSel = document.getElementById('resize-format');
+  const btnDl = document.getElementById('btn-resize-download');
+
+  // Drag-and-drop
+  drop.addEventListener('dragover', e => { e.preventDefault(); drop.classList.add('drag-over'); });
+  drop.addEventListener('dragleave', () => drop.classList.remove('drag-over'));
+  drop.addEventListener('drop', e => { e.preventDefault(); drop.classList.remove('drag-over'); loadFile(e.dataTransfer.files[0]); });
+  fileInput.addEventListener('change', e => loadFile(e.target.files[0]));
+
+  function loadFile(file) {
+    if (!file || !file.type.startsWith('image/')) return;
+    const url = URL.createObjectURL(file);
+    const img = new Image();
+    img.onload = () => { URL.revokeObjectURL(url); srcImage = img; render(); btnDl.disabled = false; };
+    img.src = url;
+  }
+
+  // Platform presets
+  document.getElementById('platform-picker').querySelectorAll('.plat-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.plat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      outW.value = btn.dataset.w;
+      outH.value = btn.dataset.h;
+      render();
+    });
+  });
+
+  // Fit mode
+  document.querySelectorAll('.fit-mode-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.fit-mode-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      fitMode = btn.dataset.mode;
+      render();
+    });
+  });
+
+  [outW, outH, bgColor, fmtSel].forEach(el => el.addEventListener('input', render));
+
+  function render() {
+    if (!srcImage) return;
+    const W = parseInt(outW.value) || 1080;
+    const H = parseInt(outH.value) || 1080;
+    canvas.width = W;
+    canvas.height = H;
+
+    ctx.fillStyle = bgColor.value;
+    ctx.fillRect(0, 0, W, H);
+
+    const sw = srcImage.naturalWidth, sh = srcImage.naturalHeight;
+    let sx = 0, sy = 0, sW = sw, sH = sh, dx = 0, dy = 0, dW = W, dH = H;
+
+    if (fitMode === 'fit') {
+      const scale = Math.min(W / sw, H / sh);
+      dW = sw * scale; dH = sh * scale;
+      dx = (W - dW) / 2; dy = (H - dH) / 2;
+    } else if (fitMode === 'fill') {
+      const scale = Math.max(W / sw, H / sh);
+      const cw = W / scale, ch = H / scale;
+      sx = (sw - cw) / 2; sy = (sh - ch) / 2; sW = cw; sH = ch;
+    }
+    // stretch: default — uses full canvas
+
+    ctx.drawImage(srcImage, sx, sy, sW, sH, dx, dy, dW, dH);
+
+    badge.textContent = W + '×' + H;
+    canvasWrap.style.display = 'flex';
+  }
+
+  btnDl.addEventListener('click', () => {
+    if (!srcImage) return;
+    render();
+    const fmt = fmtSel.value;
+    const mimeMap = { jpeg: 'image/jpeg', png: 'image/png', webp: 'image/webp' };
+    const extMap  = { jpeg: 'jpg', png: 'png', webp: 'webp' };
+    canvas.toBlob(blob => {
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `resized_${outW.value}x${outH.value}.${extMap[fmt]}`;
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }, mimeMap[fmt], 0.92);
+    if (typeof gtag !== 'undefined') gtag('event', 'resize_download', { format: fmt });
+  });
+
+  // Clipboard paste
+  document.addEventListener('paste', e => {
+    const item = [...(e.clipboardData?.items || [])].find(i => i.type.startsWith('image/'));
+    if (item) { e.preventDefault(); loadFile(item.getAsFile()); }
+  });
+}());
+</script>
+</body>
+</html>

@@ -131,6 +131,7 @@ const DOM = {
   negativeProTools: () => $('negative-pro-tools'),
   btnPickFilmBase:  () => $('btn-pick-film-base'),
   negativeClaheToggle: () => $('negative-clahe-toggle'),
+  convertNegativeToggle: () => $('convert-negative-toggle'),
 };
 
 /* ══════════════════════════════════════════════════════════════════════════ *
@@ -295,10 +296,6 @@ function initFileManager() {
 
 const ALLOWED_TYPES = ['image/jpeg','image/png','image/tiff','image/bmp','image/gif','image/webp','application/pdf'];
 
-function refreshUndoButtons() {
-  DOM.btnUndo().disabled = state.undoStack.length === 0;
-  DOM.btnRedo().disabled = state.redoStack.length === 0;
-}
 
 async function handleFiles(files) {
   const valid = files.filter(f => ALLOWED_TYPES.includes(f.type) ||
@@ -1219,6 +1216,7 @@ async function createThumbElement(box, idx) {
       <button class="split-action-btn" title="Rotate 90° CW"  data-action="rotatecw">↻</button>
       <button class="split-action-btn" title="Rotate 90° CCW" data-action="rotateccw">↺</button>
       <button class="split-action-btn" title="Preview" data-action="preview">🔍</button>
+      <button class="split-action-btn" title="Copy to Clipboard" data-action="copy">📋</button>
       <button class="split-action-btn" title="Share" data-action="share">📤</button>
       <button class="split-action-btn" title="Delete"  data-action="delete">✕</button>
     </div>`;
@@ -1260,6 +1258,7 @@ async function createThumbElement(box, idx) {
   ov.querySelector('[data-action="rotatecw"]') .addEventListener('click', e => { e.stopPropagation(); rotateBox(box.id,  90); });
   ov.querySelector('[data-action="rotateccw"]').addEventListener('click', e => { e.stopPropagation(); rotateBox(box.id, -90); });
   ov.querySelector('[data-action="preview"]')  .addEventListener('click', e => { e.stopPropagation(); previewBox(box.id); });
+  ov.querySelector('[data-action="copy"]')     .addEventListener('click', e => { e.stopPropagation(); copyBoxToClipboard(box.id); });
   ov.querySelector('[data-action="share"]')    .addEventListener('click', e => { e.stopPropagation(); SocialManager.openModal(box.id); });
   ov.querySelector('[data-action="delete"]')   .addEventListener('click', e => { e.stopPropagation(); deleteBox(box.id); });
 
@@ -2402,6 +2401,9 @@ function initButtons() {
   const btnZip = $('btn-save-zip');
   if (btnZip) btnZip.addEventListener('click', () => ZipManager.saveAllAsZip(state.boxes));
 
+  const btnPdf = $('btn-save-pdf');
+  if (btnPdf) btnPdf.addEventListener('click', () => saveAsPdf());
+
   // Global Social Share Button
   const btnGlobalShare = $('btn-global-share');
   if (btnGlobalShare) {
@@ -2481,6 +2483,7 @@ function init() {
   initModal();
   initButtons();
   initNegativeTools();
+  initClipboardPaste();
   spawnWorker();
 
   // Check system dark mode preference
@@ -2504,6 +2507,99 @@ function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
+
+/* ══════════════════════════════════════════════════════════════════════════ *
+ *  CLIPBOARD PASTE — Ctrl+V to paste an image directly into the app         *
+ * ══════════════════════════════════════════════════════════════════════════ */
+function initClipboardPaste() {
+  document.addEventListener('paste', async (e) => {
+    // Don't intercept paste in form fields
+    if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) return;
+    const items = [...(e.clipboardData?.items || [])];
+    const imageItem = items.find(item => item.type.startsWith('image/'));
+    if (!imageItem) return;
+    e.preventDefault();
+    const file = imageItem.getAsFile();
+    if (file) {
+      showToast('📋 Pasting image from clipboard…', 'info', 2000);
+      await handleFiles([file]);
+    }
+  });
+}
+
+/* ══════════════════════════════════════════════════════════════════════════ *
+ *  COPY SINGLE PHOTO TO CLIPBOARD                                           *
+ * ══════════════════════════════════════════════════════════════════════════ */
+async function copyBoxToClipboard(id) {
+  if (!navigator.clipboard || !window.ClipboardItem) {
+    showToast('Clipboard API not supported in this browser.', 'warning'); return;
+  }
+  const box = state.boxes.find(b => b.id === id);
+  if (!box) return;
+  try {
+    const canvas = await renderBoxToCanvas(box, {
+      enhance: DOM.autoEnhanceToggle()?.checked,
+      filmType: DOM.filmTypeSelect()?.value || 'none',
+    });
+    canvas.toBlob(async (blob) => {
+      try {
+        await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
+        showToast('✅ Photo copied to clipboard!', 'success', 2500);
+      } catch (err) {
+        showToast('Could not copy: ' + err.message, 'error');
+      }
+    }, 'image/png');
+  } catch (err) {
+    showToast('Render error: ' + err.message, 'error');
+  }
+}
+window.copyBoxToClipboard = copyBoxToClipboard;
+
+/* ══════════════════════════════════════════════════════════════════════════ *
+ *  PDF EXPORT — jsPDF multi-page, one photo per page                        *
+ * ══════════════════════════════════════════════════════════════════════════ */
+async function saveAsPdf() {
+  if (!window.jspdf) { showToast('PDF library not loaded yet, try again.', 'warning'); return; }
+  if (state.boxes.length === 0) { showToast('No photos to export.', 'warning'); return; }
+
+  showSpinner('Building PDF…');
+  const { jsPDF } = window.jspdf;
+
+  try {
+    let doc = null;
+    const doEnhance = DOM.autoEnhanceToggle()?.checked;
+    const filmType = DOM.filmTypeSelect()?.value || 'none';
+
+    for (let i = 0; i < state.boxes.length; i++) {
+      const box = state.boxes[i];
+      setProgress(Math.round(i / state.boxes.length * 90), `Rendering photo ${i + 1} of ${state.boxes.length}…`);
+
+      const canvas = await renderBoxToCanvas(box, { enhance: doEnhance, filmType });
+      const imgData = canvas.toDataURL('image/jpeg', 0.92);
+
+      const W = canvas.width;
+      const H = canvas.height;
+      const orientation = W >= H ? 'landscape' : 'portrait';
+
+      if (!doc) {
+        doc = new jsPDF({ orientation, unit: 'px', format: [W, H], compress: true });
+      } else {
+        doc.addPage([W, H], orientation);
+      }
+      doc.addImage(imgData, 'JPEG', 0, 0, W, H);
+    }
+
+    setProgress(100, 'Saving…');
+    const ts = new Date().toISOString().slice(0, 10);
+    doc.save(`photosplit_${ts}.pdf`);
+    showToast(`✅ PDF saved — ${state.boxes.length} photo${state.boxes.length !== 1 ? 's' : ''}`, 'success', 3000);
+  } catch (err) {
+    showToast('PDF error: ' + err.message, 'error');
+  } finally {
+    hideSpinner();
+  }
+}
+window.saveAsPdf = saveAsPdf;
 
 /* ══════════════════════════════════════════════════════════════════════════ *
  *  GLOBAL EXPORTS — accessible from HTML onclick attributes                  *

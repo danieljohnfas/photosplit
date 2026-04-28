@@ -1414,6 +1414,13 @@ kbd {
 }
 .btn-zip:hover { opacity: 0.9; transform: translateY(-1px); }
 
+.btn-pdf {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(59,130,246,0.30);
+}
+.btn-pdf:hover { opacity: 0.9; transform: translateY(-1px); }
+
 /* ── Share This Tool Bar ─────────────────────────────────────────────────── */
 #share-tool-bar {
   background: linear-gradient(135deg, rgba(254,44,85,0.05), rgba(37,244,238,0.05));

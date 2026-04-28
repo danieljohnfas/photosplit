@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G40QDCGTTZ',{'anonymize_ip':true});</script>
+  <meta name="google-adsense-account" content="ca-pub-2501499631331261">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2501499631331261" crossorigin="anonymous"></script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="theme-color" content="#010101"/>
+  <title>Free Passport Photo Maker Online — ID Photo Creator | PhotoSplit Studio</title>
+  <meta name="description" content="Create passport photos and ID photos online for free. Supports US passport (2×2in), UK passport (35×45mm), Schengen visa, Indian visa, and 10+ more formats. 100% private — no upload."/>
+  <meta name="keywords" content="passport photo online free, make passport photo, id photo maker, 2x2 passport photo, uk passport photo, biometric photo online, visa photo free"/>
+  <meta name="robots" content="index,follow"/>
+  <link rel="canonical" href="https://photosplitstudio.com/passport.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Free Passport Photo Maker — PhotoSplit Studio"/>
+  <meta property="og:description" content="Make passport and ID photos free online. 10+ country formats. Runs in your browser — private and instant."/>
+  <meta property="og:url" content="https://photosplitstudio.com/passport.html"/>
+  <meta property="og:image" content="https://photosplitstudio.com/og-image.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <link rel="icon" href="/logo.png" type="image/png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="secondary.css"/>
+  <style>
+    .passport-tool { max-width: 960px; margin: 0 auto; padding: 32px 24px 60px; }
+    .country-picker { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 10px; margin: 20px 0 28px; }
+    .country-btn { background: var(--bg-surface); border: 1.5px solid var(--border); border-radius: var(--radius-md); padding: 12px 10px; text-align: left; cursor: pointer; transition: all 0.12s; font-family: inherit; }
+    .country-btn:hover, .country-btn.active { border-color: var(--accent); background: rgba(254,44,85,0.07); }
+    .country-btn.active { box-shadow: 0 0 0 3px var(--accent-glow); }
+    .country-btn .flag { font-size: 1.4rem; display: block; margin-bottom: 4px; }
+    .country-btn .cname { font-size: 0.78rem; font-weight: 700; color: var(--text-primary); display: block; }
+    .country-btn.active .cname { color: var(--accent); }
+    .country-btn .cdims { font-size: 0.65rem; color: var(--text-muted); display: block; margin-top: 1px; }
+    .passport-workspace { display: grid; grid-template-columns: 1fr 300px; gap: 24px; }
+    @media(max-width:700px){ .passport-workspace { grid-template-columns: 1fr; } }
+    #pp-upload-zone { border: 2px dashed var(--border-strong); border-radius: var(--radius-lg); padding: 48px 24px; text-align: center; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+    #pp-upload-zone:hover, #pp-upload-zone.drag-over { border-color: var(--accent); background: rgba(254,44,85,0.05); }
+    #pp-upload-zone p { color: var(--text-muted); margin: 8px 0 0; font-size: 0.85rem; }
+    #pp-canvas-wrap { display: none; background: var(--bg-base); border-radius: var(--radius-md); overflow: hidden; }
+    #pp-canvas { display: block; max-width: 100%; max-height: 420px; }
+    .pp-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px; display: flex; flex-direction: column; gap: 16px; height: fit-content; }
+    .pp-panel label { font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); display: block; margin-bottom: 4px; }
+    .pp-panel select { width: 100%; padding: 8px 10px; background: var(--bg-surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-primary); font-family: inherit; font-size: 0.88rem; }
+    .pp-stat { display: flex; justify-content: space-between; font-size: 0.82rem; }
+    .pp-stat span:first-child { color: var(--text-muted); }
+    .pp-stat span:last-child { color: var(--text-primary); font-weight: 600; }
+    .btn-pp-dl { background: linear-gradient(135deg,#fe2c55,#ff375f); color: #fff; border: none; border-radius: 99px; padding: 14px; font-size: 1rem; font-weight: 700; cursor: pointer; width: 100%; box-shadow: 0 3px 14px rgba(254,44,85,0.35); transition: all 0.15s; }
+    .btn-pp-dl:hover { transform: translateY(-1px); box-shadow: 0 5px 20px rgba(254,44,85,0.45); }
+    .btn-pp-sheet { background: linear-gradient(135deg,#25f4ee,#06b6d4); color: #000; border: none; border-radius: 99px; padding: 13px; font-size: 0.92rem; font-weight: 700; cursor: pointer; width: 100%; box-shadow: 0 3px 12px rgba(37,244,238,0.3); transition: all 0.15s; }
+    .btn-pp-sheet:hover { transform: translateY(-1px); }
+    .section-label { font-size: 0.82rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; }
+    .zoom-row { display: flex; gap: 8px; align-items: center; }
+    .zoom-row input[type=range] { flex: 1; }
+    .bg-select-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .bg-swatch { width: 28px; height: 28px; border-radius: 4px; border: 2px solid transparent; cursor: pointer; transition: border-color 0.12s; }
+    .bg-swatch.active { border-color: var(--accent); }
+  </style>
+</head>
+<body>
+<nav class="site-nav">
+  <a class="logo" href="/" style="display:flex;align-items:center;gap:10px;">
+    <img src="/logo.png" alt="PhotoSplit Studio" style="width:24px;height:24px;border-radius:4px;"/>
+    PhotoSplit Studio
+  </a>
+  <div class="nav-links">
+    <a href="/">Split Scans</a>
+    <a href="/resize.html">Resize</a>
+    <a href="/crop.html">Crop</a>
+    <a href="/convert.html">Convert</a>
+    <a href="/" class="cta">Open App →</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>Free Passport &amp; ID Photo Maker</h1>
+  <p>Create compliant passport and visa photos for 10+ countries instantly — free, private, and entirely in your browser. No upload required.</p>
+</div>
+
+<div class="passport-tool">
+  <div class="section-label">Select Country / Document Type</div>
+  <div class="country-picker" id="country-picker">
+    <button class="country-btn active" data-wmm="51" data-hmm="51" data-dpi="300" data-bg="#ffffff" data-name="US Passport">
+      <span class="flag">🇺🇸</span><span class="cname">US Passport</span><span class="cdims">51×51 mm (2×2 in)</span>
+    </button>
+    <button class="country-btn" data-wmm="35" data-hmm="45" data-dpi="300" data-bg="#ffffff" data-name="UK Passport">
+      <span class="flag">🇬🇧</span><span class="cname">UK Passport</span><span class="cdims">35×45 mm</span>
+    </button>
+    <button class="country-btn" data-wmm="35" data-hmm="45" data-dpi="300" data-bg="#ffffff" data-name="EU / Schengen Visa">
+      <span class="flag">🇪🇺</span><span class="cname">EU / Schengen</span><span class="cdims">35×45 mm</span>
+    </button>
+    <button class="country-btn" data-wmm="35" data-hmm="45" data-dpi="300" data-bg="#ffffff" data-name="German ID">
+      <span class="flag">🇩🇪</span><span class="cname">German ID</span><span class="cdims">35×45 mm</span>
+    </button>
+    <button class="country-btn" data-wmm="35" data-hmm="45" data-dpi="300" data-bg="#ffffff" data-name="French Passport">
+      <span class="flag">🇫🇷</span><span class="cname">French Passport</span><span class="cdims">35×45 mm</span>
+    </button>
+    <button class="country-btn" data-wmm="40" data-hmm="60" data-dpi="300" data-bg="#ffffff" data-name="Indian Passport">
+      <span class="flag">🇮🇳</span><span class="cname">Indian Passport</span><span class="cdims">40×60 mm</span>
+    </button>
+    <button class="country-btn" data-wmm="33" data-hmm="48" data-dpi="300" data-bg="#ffffff" data-name="Chinese Passport">
+      <span class="flag">🇨🇳</span><span class="cname">Chinese Passport</span><span class="cdims">33×48 mm</span>
+    </button>
+    <button class="country-btn" data-wmm="40" data-hmm="60" data-dpi="300" data-bg="#ffffff" data-name="Australian Passport">
+      <span class="flag">🇦🇺</span><span class="cname">Australian</span><span class="cdims">40×60 mm</span>
+    </button>
+    <button class="country-btn" data-wmm="35" data-hmm="45" data-dpi="300" data-bg="#ffffff" data-name="Canadian Passport">
+      <span class="flag">🇨🇦</span><span class="cname">Canadian</span><span class="cdims">35×45 mm</span>
+    </button>
+    <button class="country-btn" data-wmm="35" data-hmm="45" data-dpi="300" data-bg="#c9dff0" data-name="US Visa">
+      <span class="flag">🇺🇸</span><span class="cname">US Visa</span><span class="cdims">35×45 mm (blue bg)</span>
+    </button>
+    <button class="country-btn" data-wmm="35" data-hmm="35" data-dpi="300" data-bg="#ffffff" data-name="Twitter / X Profile">
+      <span class="flag">𝕏</span><span class="cname">Twitter/X Profile</span><span class="cdims">400×400 px</span>
+    </button>
+    <button class="country-btn" data-wmm="50" data-hmm="50" data-dpi="72" data-bg="#ffffff" data-name="LinkedIn Profile">
+      <span class="flag">💼</span><span class="cname">LinkedIn Profile</span><span class="cdims">400×400 px</span>
+    </button>
+  </div>
+
+  <div class="passport-workspace">
+    <div>
+      <div id="pp-upload-zone" onclick="document.getElementById('pp-file-input').click()">
+        <div style="font-size:2.5rem">🪪</div>
+        <div style="font-weight:700;font-size:1rem;color:var(--text-primary);margin-top:8px">Upload your photo</div>
+        <p>JPEG or PNG • or paste with Ctrl+V</p>
+        <input type="file" id="pp-file-input" accept="image/*" style="display:none"/>
+      </div>
+      <div id="pp-canvas-wrap" style="margin-top:16px;">
+        <canvas id="pp-canvas"></canvas>
+      </div>
+    </div>
+
+    <div class="pp-panel">
+      <div>
+        <div class="section-label">Output Specs</div>
+        <div style="margin-top:10px;display:flex;flex-direction:column;gap:8px;">
+          <div class="pp-stat"><span>Document</span><span id="pp-doc-name">US Passport</span></div>
+          <div class="pp-stat"><span>Size</span><span id="pp-size-label">51×51 mm</span></div>
+          <div class="pp-stat"><span>Pixels</span><span id="pp-px-label">600×600 px</span></div>
+        </div>
+      </div>
+
+      <div>
+        <label>Background Color</label>
+        <div class="bg-select-row">
+          <div class="bg-swatch active" data-color="#ffffff" style="background:#ffffff;border-color: var(--accent);" title="White"></div>
+          <div class="bg-swatch" data-color="#c9dff0" style="background:#c9dff0;" title="Light Blue (US Visa)"></div>
+          <div class="bg-swatch" data-color="#e8f0fe" style="background:#e8f0fe;" title="Pale Blue"></div>
+          <div class="bg-swatch" data-color="#f0e8d8" style="background:#f0e8d8;" title="Cream"></div>
+          <div class="bg-swatch" data-color="#d4edda" style="background:#d4edda;" title="Light Green"></div>
+          <input type="color" id="pp-bg-custom" value="#ffffff" title="Custom color" style="width:28px;height:28px;border-radius:4px;border:1px solid var(--border);padding:1px;cursor:pointer;background:var(--bg-surface-2);"/>
+        </div>
+      </div>
+
+      <div>
+        <label>Zoom &amp; Crop</label>
+        <div class="zoom-row">
+          <span>🔍−</span>
+          <input type="range" id="pp-zoom" min="50" max="300" value="100"/>
+          <span>🔍+</span>
+        </div>
+        <div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;">Drag the image to reposition</div>
+      </div>
+
+      <div>
+        <label>Print Sheet (4×6 in)</label>
+        <button class="btn-pp-sheet" id="btn-pp-sheet">🖨️ Create Print Sheet</button>
+        <div style="font-size:0.72rem;color:var(--text-muted);margin-top:6px;">Tiles multiple photos for home printing</div>
+      </div>
+
+      <button class="btn-pp-dl" id="btn-pp-dl" disabled>⬇️ Download Photo</button>
+      <div style="font-size:0.72rem;color:var(--text-muted);text-align:center;">All processing is local. Nothing is uploaded.</div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="/">Split Scans</a>
+    <a href="/resize.html">Resize</a>
+    <a href="/crop.html">Crop</a>
+    <a href="/convert.html">Convert</a>
+    <a href="/passport.html">Passport Photo</a>
+    <a href="/terms.html">Terms</a>
+    <a href="/privacy.html">Privacy</a>
+  </div>
+  <div>&copy; 2026 PhotoSplit Studio</div>
+</footer>
+
+<script>
+(function () {
+  const MM_TO_PX_AT_DPI = (mm, dpi) => Math.round((mm / 25.4) * dpi);
+
+  let config = { wmm: 51, hmm: 51, dpi: 300, bg: '#ffffff', name: 'US Passport' };
+  let srcImg = null;
+  let zoom = 1.0, panX = 0, panY = 0;
+  let dragging = false, dragStart = null;
+
+  const zone = document.getElementById('pp-upload-zone');
+  const fileInput = document.getElementById('pp-file-input');
+  const canvasWrap = document.getElementById('pp-canvas-wrap');
+  const canvas = document.getElementById('pp-canvas');
+  const ctx = canvas.getContext('2d');
+  const btnDl = document.getElementById('btn-pp-dl');
+  const zoomSlider = document.getElementById('pp-zoom');
+  let bgColor = '#ffffff';
+
+  function getOutputPx() {
+    return { w: MM_TO_PX_AT_DPI(config.wmm, config.dpi), h: MM_TO_PX_AT_DPI(config.hmm, config.dpi) };
+  }
+
+  // Country picker
+  document.getElementById('country-picker').querySelectorAll('.country-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.country-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      config = {
+        wmm: parseFloat(btn.dataset.wmm), hmm: parseFloat(btn.dataset.hmm),
+        dpi: parseInt(btn.dataset.dpi), bg: btn.dataset.bg, name: btn.dataset.name
+      };
+      bgColor = config.bg;
+      updateBgSwatches();
+      updateInfo();
+      render();
+    });
+  });
+
+  function updateBgSwatches() {
+    document.querySelectorAll('.bg-swatch').forEach(s => {
+      s.classList.toggle('active', s.dataset.color === bgColor);
+      s.style.borderColor = s.dataset.color === bgColor ? 'var(--accent)' : 'transparent';
+    });
+  }
+
+  document.querySelectorAll('.bg-swatch').forEach(s => {
+    s.addEventListener('click', () => {
+      bgColor = s.dataset.color;
+      document.getElementById('pp-bg-custom').value = bgColor;
+      updateBgSwatches();
+      render();
+    });
+  });
+  document.getElementById('pp-bg-custom').addEventListener('input', e => { bgColor = e.target.value; render(); });
+
+  function updateInfo() {
+    const { w, h } = getOutputPx();
+    document.getElementById('pp-doc-name').textContent = config.name;
+    document.getElementById('pp-size-label').textContent = `${config.wmm}×${config.hmm} mm`;
+    document.getElementById('pp-px-label').textContent  = `${w}×${h} px`;
+  }
+  updateInfo();
+
+  // File loading
+  zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag-over'); });
+  zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
+  zone.addEventListener('drop', e => { e.preventDefault(); zone.classList.remove('drag-over'); loadFile(e.dataTransfer.files[0]); });
+  fileInput.addEventListener('change', e => loadFile(e.target.files[0]));
+  document.addEventListener('paste', e => {
+    const item = [...(e.clipboardData?.items||[])].find(i=>i.type.startsWith('image/'));
+    if (item) { e.preventDefault(); loadFile(item.getAsFile()); }
+  });
+
+  function loadFile(file) {
+    if (!file || !file.type.startsWith('image/')) return;
+    const url = URL.createObjectURL(file);
+    const img = new Image();
+    img.onload = () => {
+      URL.revokeObjectURL(url);
+      srcImg = img;
+      zoom = 1.0; panX = 0; panY = 0; zoomSlider.value = 100;
+      zone.style.display = 'none';
+      canvasWrap.style.display = 'block';
+      render();
+      btnDl.disabled = false;
+    };
+    img.src = url;
+  }
+
+  function render() {
+    if (!srcImg) return;
+    const maxW = canvasWrap.parentElement.offsetWidth || 500;
+    const { w: outW, h: outH } = getOutputPx();
+    const displayScale = Math.min(1, (maxW - 20) / outW);
+    canvas.width  = Math.round(outW * displayScale);
+    canvas.height = Math.round(outH * displayScale);
+
+    ctx.fillStyle = bgColor;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    const iw = srcImg.naturalWidth, ih = srcImg.naturalHeight;
+    const scaleBase = Math.max(canvas.width / iw, canvas.height / ih);
+    const sc = scaleBase * (zoom);
+    const dw = iw * sc, dh = ih * sc;
+    const dx = (canvas.width  - dw) / 2 + panX;
+    const dy = (canvas.height - dh) / 2 + panY;
+    ctx.drawImage(srcImg, dx, dy, dw, dh);
+  }
+
+  zoomSlider.addEventListener('input', () => { zoom = parseInt(zoomSlider.value) / 100; render(); });
+
+  // Drag to pan
+  canvas.addEventListener('mousedown', e => {
+    dragging = true; dragStart = { x: e.clientX - panX, y: e.clientY - panY };
+    canvas.style.cursor = 'grabbing';
+  });
+  document.addEventListener('mousemove', e => {
+    if (!dragging) return;
+    panX = e.clientX - dragStart.x; panY = e.clientY - dragStart.y;
+    render();
+  });
+  document.addEventListener('mouseup', () => { dragging = false; canvas.style.cursor = 'grab'; });
+  canvas.style.cursor = 'grab';
+
+  // Download
+  btnDl.addEventListener('click', () => {
+    if (!srcImg) return;
+    const { w: outW, h: outH } = getOutputPx();
+    const out = document.createElement('canvas');
+    out.width = outW; out.height = outH;
+    const octx = out.getContext('2d');
+    octx.fillStyle = bgColor;
+    octx.fillRect(0, 0, outW, outH);
+    const iw = srcImg.naturalWidth, ih = srcImg.naturalHeight;
+    const sc = Math.max(outW / iw, outH / ih) * zoom;
+    const dx = (outW - iw * sc) / 2 + (panX / canvas.width) * outW;
+    const dy = (outH - ih * sc) / 2 + (panY / canvas.height) * outH;
+    octx.drawImage(srcImg, dx, dy, iw * sc, ih * sc);
+    out.toBlob(blob => {
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+      a.download = `passport_${config.name.replace(/\s+/g,'_')}.jpg`; a.click(); URL.revokeObjectURL(a.href);
+    }, 'image/jpeg', 0.95);
+    if (typeof gtag !== 'undefined') gtag('event', 'passport_download', { format: config.name });
+  });
+
+  // Print sheet — tiles 6 copies on a 4×6 inch canvas at 300dpi
+  document.getElementById('btn-pp-sheet').addEventListener('click', () => {
+    if (!srcImg) { alert('Upload a photo first.'); return; }
+    const { w: outW, h: outH } = getOutputPx();
+    const sheetW = Math.round((4 / 25.4) * 1000 * config.dpi / 1000);  // 4in
+    const sheetH = Math.round((6 / 25.4) * 1000 * config.dpi / 1000);  // 6in
+    const sheet = document.createElement('canvas');
+    sheet.width = MM_TO_PX_AT_DPI(152, config.dpi); // 6×4 in = 152×101mm
+    sheet.height = MM_TO_PX_AT_DPI(101, config.dpi);
+    const sctx = sheet.getContext('2d');
+    sctx.fillStyle = '#ffffff';
+    sctx.fillRect(0, 0, sheet.width, sheet.height);
+
+    // Render a single full-res photo
+    const single = document.createElement('canvas');
+    single.width = outW; single.height = outH;
+    const singleCtx = single.getContext('2d');
+    singleCtx.fillStyle = bgColor;
+    singleCtx.fillRect(0, 0, outW, outH);
+    const iw = srcImg.naturalWidth, ih = srcImg.naturalHeight;
+    const sc = Math.max(outW / iw, outH / ih) * zoom;
+    const dx = (outW - iw * sc) / 2 + (panX / canvas.width) * outW;
+    const dy = (outH - ih * sc) / 2 + (panY / canvas.height) * outH;
+    singleCtx.drawImage(srcImg, dx, dy, iw * sc, ih * sc);
+
+    // Tile
+    const cols = Math.floor(sheet.width / outW);
+    const rows = Math.floor(sheet.height / outH);
+    for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
+      sctx.drawImage(single, c * outW, r * outH, outW, outH);
+    }
+    sheet.toBlob(blob => {
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+      a.download = `passport_sheet_${config.name.replace(/\s+/g,'_')}.jpg`; a.click(); URL.revokeObjectURL(a.href);
+    }, 'image/jpeg', 0.95);
+    if (typeof gtag !== 'undefined') gtag('event', 'passport_sheet_download');
+  });
+}());
+</script>
+</body>
+</html>

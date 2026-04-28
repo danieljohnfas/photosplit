@@ -143,7 +143,6 @@
   <link rel="icon" href="/logo.png" type="image/png" />
   <link rel="preload" href="style.css" as="style" />
   <link rel="preload" href="app.js" as="script" />
-  <link rel="preload" href="https://docs.opencv.org/4.8.0/opencv.js" as="script" fetchpriority="high" />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -472,6 +471,10 @@
             <button class="btn btn-zip" id="btn-save-zip" title="Download all splits as a single ZIP file"
               aria-label="Download ZIP">
               <span class="btn-icon" aria-hidden="true">🗜️</span> ZIP
+            </button>
+            <button class="btn btn-pdf" id="btn-save-pdf" title="Download all splits as a single PDF file"
+              aria-label="Download PDF">
+              <span class="btn-icon" aria-hidden="true">📄</span> PDF
             </button>
             <div class="dropdown-wrapper">
               <button class="btn btn-secondary dropdown-trigger" id="btn-global-share-unraveled" title="Share selected photo to Social Media"
@@ -852,10 +855,14 @@
     <div class="footer-inner">
       <div class="footer-links">
         <a href="/blog/">Blog</a>
+        <a href="/resize.html">🖼 Resize</a>
+        <a href="/crop.html">✂️ Crop</a>
+        <a href="/convert.html">🔄 Convert</a>
+        <a href="/passport.html">🪪 Passport</a>
+        <a href="/tips.html">Scanning Tips</a>
         <a href="/terms.html">Terms of Use</a>
         <a href="/privacy.html">Privacy Policy</a>
         <a href="/about.html">About</a>
-        <a href="/tips.html">Scanning Tips</a>
         <a href="/about.html#contact">Contact Us</a>
         <a href="#" onclick="openTextModal('feedback-modal', event)">Feedback</a>
       </div>
@@ -1208,6 +1215,7 @@
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
   <script>pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="app.js"></script>
 
   <script>
