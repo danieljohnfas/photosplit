@@ -74,7 +74,6 @@
         "Re-detect button to rerun detection with new settings",
         "Instagram, TikTok, Twitter, Facebook, WhatsApp social media export presets",
         "Social media letterbox padding — fit photos to platform aspect ratios",
-        "Custom watermark text overlay for social exports",
         "Native mobile share via Web Share API",
         "Social media image resizer — resize photos for Instagram, TikTok, YouTube, Twitter/X, Facebook, LinkedIn",
         "Free online image cropper — freeform and aspect-ratio crop",
@@ -85,7 +84,6 @@
         "PDF batch export",
         "Clipboard paste — paste screenshot directly with Ctrl+V",
         "Copy single photo to clipboard",
-        "Carousel grid splitter for Instagram multi-slide posts",
         "Unlimited undo and redo history",
         "Full keyboard shortcut panel for power users"
       ],
@@ -147,17 +145,28 @@
   ]
   </script>
 
-  <!-- ═══ ADSENSE & ANALYTICS ═════════════════════════════════════════════════ -->
+  <!-- Scripts loaded dynamically after consent -->
   <meta name="google-adsense-account" content="ca-pub-2501499631331261">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2501499631331261" crossorigin="anonymous"></script>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
+    function loadGoogleScripts() {
+      if (document.getElementById('ga-script')) return;
+      var gaScript = document.createElement('script');
+      gaScript.id = 'ga-script';
+      gaScript.async = true;
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ';
+      document.head.appendChild(gaScript);
+      gtag('js', new Date());
+      gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
+
+      var adScript = document.createElement('script');
+      adScript.id = 'adsense-script';
+      adScript.async = true;
+      adScript.crossOrigin = 'anonymous';
+      adScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2501499631331261';
+      document.head.appendChild(adScript);
+    }
   </script>
 
   <meta name="theme-color" content="#010101" />
@@ -380,9 +389,20 @@
 
       // Cookie Consent
       var banner = document.getElementById('cookie-consent');
-      if (!localStorage.getItem('pss_cookie_consent')) banner.classList.add('visible');
-      document.getElementById('cookie-accept').onclick = function() { localStorage.setItem('pss_cookie_consent', 'accepted'); banner.classList.remove('visible'); };
-      document.getElementById('cookie-decline').onclick = function() { localStorage.setItem('pss_cookie_consent', 'declined'); banner.classList.remove('visible'); };
+      if (!localStorage.getItem('pss_cookie_consent')) {
+        banner.classList.add('visible');
+      } else if (localStorage.getItem('pss_cookie_consent') === 'accepted') {
+        if (typeof loadGoogleScripts === 'function') loadGoogleScripts();
+      }
+      document.getElementById('cookie-accept').onclick = function() { 
+        localStorage.setItem('pss_cookie_consent', 'accepted'); 
+        banner.classList.remove('visible'); 
+        if (typeof loadGoogleScripts === 'function') loadGoogleScripts();
+      };
+      document.getElementById('cookie-decline').onclick = function() { 
+        localStorage.setItem('pss_cookie_consent', 'declined'); 
+        banner.classList.remove('visible'); 
+      };
 
       // Feedback Wall
       window.fetchAndRenderFeedbackWall = function() {

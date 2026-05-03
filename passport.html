@@ -20,11 +20,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="stylesheet" href="style.css"/>
 
-  <!-- AdSense & Analytics -->
+  <!-- Scripts loaded dynamically after consent -->
   <meta name="google-adsense-account" content="ca-pub-2501499631331261">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2501499631331261" crossorigin="anonymous"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G40QDCGTTZ',{'anonymize_ip':true});</script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    function loadGoogleScripts() {
+      if (document.getElementById('ga-script')) return;
+      var gaScript = document.createElement('script');
+      gaScript.id = 'ga-script';
+      gaScript.async = true;
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ';
+      document.head.appendChild(gaScript);
+      gtag('js', new Date());
+      gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
+
+      var adScript = document.createElement('script');
+      adScript.id = 'adsense-script';
+      adScript.async = true;
+      adScript.crossOrigin = 'anonymous';
+      adScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2501499631331261';
+      document.head.appendChild(adScript);
+    }
+  </script>
 
   <style>
     .passport-tool { max-width: 960px; margin: 0 auto; padding: 32px 24px 60px; }
@@ -146,6 +164,19 @@
         </div>
       </div>
     </div>
+
+    <article style="max-width:960px;margin:20px auto 40px;padding:24px;background:var(--bg-surface);border-radius:var(--radius-lg);border:1px solid var(--border);">
+      <h2 style="margin-top:0">Free Passport Photo Maker</h2>
+      <p style="color:var(--text-secondary);line-height:1.6">Creating your own passport or visa photos at home saves time and money. Our free passport photo maker instantly crops your photo to the exact government-mandated dimensions for the US (2x2 inches), UK (35x45 mm), EU Schengen visa, and more. All processing is done locally in your browser, ensuring your sensitive biometric photos are completely private and never uploaded.</p>
+      
+      <h3 style="margin-top:20px">Passport Photo Tips</h3>
+      <ul style="color:var(--text-secondary);line-height:1.6;padding-left:20px">
+        <li><strong>Lighting:</strong> Face a window for natural, even lighting. Avoid harsh shadows on your face or the background.</li>
+        <li><strong>Background:</strong> Stand about 1.5 feet away from a plain white or off-white wall to minimize shadows behind you.</li>
+        <li><strong>Expression:</strong> Maintain a neutral expression with both eyes open and mouth closed.</li>
+        <li><strong>Glasses:</strong> Most countries (including the US and UK) no longer allow glasses in passport photos. Take them off to avoid rejection.</li>
+      </ul>
+    </article>
   </main>
 
   <footer class="site-footer">
@@ -164,6 +195,16 @@
       <div class="footer-copy">&copy; 2026 PhotoSplit Studio. All rights reserved.</div>
     </div>
   </footer>
+
+  <div id="cookie-consent" role="dialog">
+    <div id="cookie-consent-inner">
+      <p>🍪 We use cookies to improve your experience. See our <a href="/privacy.html">Privacy Policy</a>.</p>
+      <div id="cookie-consent-actions">
+        <button id="cookie-decline" class="cookie-btn">Decline</button>
+        <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept All</button>
+      </div>
+    </div>
+  </div>
 
   <script>
     (function () {
@@ -214,6 +255,23 @@
         const sheet = document.createElement('canvas'); sheet.width = (6/25.4)*300*25.4; sheet.width = (6/25.4)*300; // 6x4in
         // ... simplified tiling logic ...
         alert('Print sheet generated. Download functionality would follow here.');
+      };
+
+      // Cookie Consent
+      var banner = document.getElementById('cookie-consent');
+      if (!localStorage.getItem('pss_cookie_consent')) {
+        banner.classList.add('visible');
+      } else if (localStorage.getItem('pss_cookie_consent') === 'accepted') {
+        if (typeof loadGoogleScripts === 'function') loadGoogleScripts();
+      }
+      document.getElementById('cookie-accept').onclick = function() { 
+        localStorage.setItem('pss_cookie_consent', 'accepted'); 
+        banner.classList.remove('visible'); 
+        if (typeof loadGoogleScripts === 'function') loadGoogleScripts();
+      };
+      document.getElementById('cookie-decline').onclick = function() { 
+        localStorage.setItem('pss_cookie_consent', 'declined'); 
+        banner.classList.remove('visible'); 
       };
     }());
   </script>

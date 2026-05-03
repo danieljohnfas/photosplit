@@ -23,11 +23,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="stylesheet" href="style.css"/>
 
-  <!-- AdSense & Analytics -->
+  <!-- Scripts loaded dynamically after consent -->
   <meta name="google-adsense-account" content="ca-pub-2501499631331261">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2501499631331261" crossorigin="anonymous"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G40QDCGTTZ',{'anonymize_ip':true});</script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    function loadGoogleScripts() {
+      if (document.getElementById('ga-script')) return;
+      var gaScript = document.createElement('script');
+      gaScript.id = 'ga-script';
+      gaScript.async = true;
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ';
+      document.head.appendChild(gaScript);
+      gtag('js', new Date());
+      gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
+
+      var adScript = document.createElement('script');
+      adScript.id = 'adsense-script';
+      adScript.async = true;
+      adScript.crossOrigin = 'anonymous';
+      adScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2501499631331261';
+      document.head.appendChild(adScript);
+    }
+  </script>
 
   <style>
     .resize-tool { max-width: 960px; margin: 0 auto; padding: 32px 24px 60px; }
@@ -198,6 +216,16 @@
     </div>
   </footer>
 
+  <div id="cookie-consent" role="dialog">
+    <div id="cookie-consent-inner">
+      <p>🍪 We use cookies to improve your experience. See our <a href="/privacy.html">Privacy Policy</a>.</p>
+      <div id="cookie-consent-actions">
+        <button id="cookie-decline" class="cookie-btn">Decline</button>
+        <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept All</button>
+      </div>
+    </div>
+  </div>
+
   <script>
     (function () {
       let srcImage = null;
@@ -268,6 +296,23 @@
           a.click();
         }, 'image/jpeg', 0.92);
       });
+
+      // Cookie Consent
+      var banner = document.getElementById('cookie-consent');
+      if (!localStorage.getItem('pss_cookie_consent')) {
+        banner.classList.add('visible');
+      } else if (localStorage.getItem('pss_cookie_consent') === 'accepted') {
+        if (typeof loadGoogleScripts === 'function') loadGoogleScripts();
+      }
+      document.getElementById('cookie-accept').onclick = function() { 
+        localStorage.setItem('pss_cookie_consent', 'accepted'); 
+        banner.classList.remove('visible'); 
+        if (typeof loadGoogleScripts === 'function') loadGoogleScripts();
+      };
+      document.getElementById('cookie-decline').onclick = function() { 
+        localStorage.setItem('pss_cookie_consent', 'declined'); 
+        banner.classList.remove('visible'); 
+      };
     }());
   </script>
 </body>

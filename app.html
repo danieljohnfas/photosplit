@@ -86,13 +86,6 @@
         "Clipboard paste — paste screenshot directly with Ctrl+V",
         "Copy single photo to clipboard",
         "Carousel grid splitter for Instagram multi-slide posts",
-        "Photo collage maker — combine multiple photos into a grid",
-        "Slideshow mode — auto-play detected photos fullscreen",
-        "Add photo metadata (Date, Location, People, Captions, Notes)",
-        "Record audio voice notes for photos",
-        "Extract text from photos with OCR (Tesseract.js)",
-        "Attach back-of-photo scans to preserve handwritten notes",
-        "Export sidecar metadata (.txt) and audio (.webm) files alongside images",
         "Unlimited undo and redo history",
         "Full keyboard shortcut panel for power users"
       ],
@@ -101,17 +94,20 @@
   ]
   </script>
 
-  <!-- ═══ ADSENSE & ANALYTICS ════════════════════════════════════════════════ -->
-  <meta name="google-adsense-account" content="ca-pub-2501499631331261">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2501499631331261" crossorigin="anonymous"></script>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ"></script>
+  <!-- Google tag (gtag.js) - Loaded dynamically after consent -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
+    function loadGoogleAnalytics() {
+      if (document.getElementById('ga-script')) return;
+      var script = document.createElement('script');
+      script.id = 'ga-script';
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ';
+      document.head.appendChild(script);
+      gtag('js', new Date());
+      gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
+    }
   </script>
 
   <meta name="theme-color" content="#010101" />
@@ -369,6 +365,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="app.js"></script>
 
+  <div id="cookie-consent" role="dialog">
+    <div id="cookie-consent-inner">
+      <p>🍪 We use cookies to improve your experience. See our <a href="/privacy.html">Privacy Policy</a>.</p>
+      <div id="cookie-consent-actions">
+        <button id="cookie-decline" class="cookie-btn">Decline</button>
+        <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept All</button>
+      </div>
+    </div>
+  </div>
+
   <script>
     (function() {
       // Sidebar Toggle
@@ -387,6 +393,23 @@
       document.getElementById('btn-shortcuts').onclick = () => {
         const m = document.getElementById('shortcuts-modal');
         m.style.display = m.style.display === 'flex' ? 'none' : 'flex';
+      };
+
+      // Cookie Consent
+      var banner = document.getElementById('cookie-consent');
+      if (!localStorage.getItem('pss_cookie_consent')) {
+        banner.classList.add('visible');
+      } else if (localStorage.getItem('pss_cookie_consent') === 'accepted') {
+        if (typeof loadGoogleAnalytics === 'function') loadGoogleAnalytics();
+      }
+      document.getElementById('cookie-accept').onclick = function() { 
+        localStorage.setItem('pss_cookie_consent', 'accepted'); 
+        banner.classList.remove('visible'); 
+        if (typeof loadGoogleAnalytics === 'function') loadGoogleAnalytics();
+      };
+      document.getElementById('cookie-decline').onclick = function() { 
+        localStorage.setItem('pss_cookie_consent', 'declined'); 
+        banner.classList.remove('visible'); 
       };
 
       window.handleFeedbackSubmit = (e) => {
