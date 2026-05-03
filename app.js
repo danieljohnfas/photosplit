@@ -13,6 +13,74 @@
 
 'use strict';
 
+/* ═══ PREMIUM ENGINE (Audio & Haptics) ══════════════════════════════════ */
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+let soundsMuted = localStorage.getItem('pss_sounds_muted') === 'true';
+
+function playSound(type) {
+  if (soundsMuted || audioCtx.state === 'suspended') return;
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+  osc.connect(gain); gain.connect(audioCtx.destination);
+  
+  if (type === 'tick') {
+    osc.type = 'sine'; osc.frequency.setValueAtTime(880, audioCtx.currentTime);
+    gain.gain.setValueAtTime(0.1, audioCtx.currentTime); gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.05);
+    osc.start(); osc.stop(audioCtx.currentTime + 0.05);
+  } else if (type === 'snap') {
+    osc.type = 'triangle'; osc.frequency.setValueAtTime(440, audioCtx.currentTime);
+    gain.gain.setValueAtTime(0.2, audioCtx.currentTime); gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+    osc.start(); osc.stop(audioCtx.currentTime + 0.1);
+  } else if (type === 'slide') {
+    osc.type = 'sine'; osc.frequency.setValueAtTime(220, audioCtx.currentTime);
+    osc.frequency.exponentialRampToValueAtTime(440, audioCtx.currentTime + 0.2);
+    gain.gain.setValueAtTime(0.1, audioCtx.currentTime); gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.2);
+    osc.start(); osc.stop(audioCtx.currentTime + 0.2);
+  }
+}
+
+function triggerHaptic(type = 'light') {
+  if (!navigator.vibrate) return;
+  if (type === 'light') navigator.vibrate(10);
+  else if (type === 'medium') navigator.vibrate([15, 30, 15]);
+  else if (type === 'heavy') navigator.vibrate(50);
+}
+
+
+/* ═══ PREMIUM ENGINE (Audio & Haptics) ══════════════════════════════════ */
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+let soundsMuted = localStorage.getItem('pss_sounds_muted') === 'true';
+
+function playSound(type) {
+  if (soundsMuted || audioCtx.state === 'suspended') return;
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+  osc.connect(gain); gain.connect(audioCtx.destination);
+  
+  if (type === 'tick') {
+    osc.type = 'sine'; osc.frequency.setValueAtTime(880, audioCtx.currentTime);
+    gain.gain.setValueAtTime(0.1, audioCtx.currentTime); gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.05);
+    osc.start(); osc.stop(audioCtx.currentTime + 0.05);
+  } else if (type === 'snap') {
+    osc.type = 'triangle'; osc.frequency.setValueAtTime(440, audioCtx.currentTime);
+    gain.gain.setValueAtTime(0.2, audioCtx.currentTime); gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+    osc.start(); osc.stop(audioCtx.currentTime + 0.1);
+  } else if (type === 'slide') {
+    osc.type = 'sine'; osc.frequency.setValueAtTime(220, audioCtx.currentTime);
+    osc.frequency.exponentialRampToValueAtTime(440, audioCtx.currentTime + 0.2);
+    gain.gain.setValueAtTime(0.1, audioCtx.currentTime); gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.2);
+    osc.start(); osc.stop(audioCtx.currentTime + 0.2);
+  }
+}
+
+function triggerHaptic(type = 'light') {
+  if (!navigator.vibrate) return;
+  if (type === 'light') navigator.vibrate(10);
+  else if (type === 'medium') navigator.vibrate([15, 30, 15]);
+  else if (type === 'heavy') navigator.vibrate(50);
+}
+
+
 /* ══════════════════════════════════════════════════════════════════════════ *
  *  CONSTANTS & CONFIG                                                        *
  * ══════════════════════════════════════════════════════════════════════════ */
@@ -73,6 +141,8 @@ const state = {
   autoEnhance: false,
   filmBaseColor: null, // { r, g, b }
   pickingFilmBase: false,
+  lastRotationPrompted: false,
+  showGuides: true,
 };
 
 /* ══════════════════════════════════════════════════════════════════════════ *
@@ -177,8 +247,6 @@ function undo() {
   renderOverlay();
   renderStrip();
   saveSession();
-  if (typeof playSound === 'function') playSound('tick');
-  if (typeof triggerHaptic === 'function') triggerHaptic([5]);
 }
 
 function redo() {
@@ -190,8 +258,6 @@ function redo() {
   renderOverlay();
   renderStrip();
   saveSession();
-  if (typeof playSound === 'function') playSound('tick');
-  if (typeof triggerHaptic === 'function') triggerHaptic([5]);
 }
 
 function saveSession() {
@@ -216,109 +282,7 @@ function restoreSession(currentFile) {
 function refreshUndoButtons() {
   DOM.btnUndo().disabled = state.undoStack.length === 0;
   DOM.btnRedo().disabled = state.redoStack.length === 0;
-  
-  const scrubber = $('undo-scrubber');
-  if (scrubber) {
-    const totalStates = state.undoStack.length + state.redoStack.length;
-    if (totalStates > 0) {
-      scrubber.style.display = 'inline-block';
-      scrubber.max = totalStates;
-      scrubber.value = state.undoStack.length;
-    } else {
-      scrubber.style.display = 'none';
-    }
-  }
 }
-
-// Global Haptic & Audio System
-function triggerHaptic(pattern) {
-  if (navigator.vibrate) {
-    try { navigator.vibrate(pattern); } catch(e){}
-  }
-}
-window.triggerHaptic = triggerHaptic;
-
-let audioCtx = null;
-let soundEnabled = true;
-
-function initAudio() {
-  if (!audioCtx) {
-    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-  }
-}
-
-function playSound(type) {
-  if (!soundEnabled) return;
-  initAudio();
-  if (audioCtx.state === 'suspended') audioCtx.resume();
-  
-  const osc = audioCtx.createOscillator();
-  const gain = audioCtx.createGain();
-  osc.connect(gain);
-  gain.connect(audioCtx.destination);
-  
-  const now = audioCtx.currentTime;
-  
-  if (type === 'tick') {
-    osc.type = 'triangle';
-    osc.frequency.setValueAtTime(800, now);
-    osc.frequency.exponentialRampToValueAtTime(400, now + 0.05);
-    gain.gain.setValueAtTime(0.1, now);
-    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.05);
-    osc.start(now);
-    osc.stop(now + 0.05);
-  } else if (type === 'snap') {
-    osc.type = 'square';
-    osc.frequency.setValueAtTime(150, now);
-    osc.frequency.exponentialRampToValueAtTime(50, now + 0.1);
-    
-    const bufferSize = audioCtx.sampleRate * 0.1; 
-    const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
-    const data = buffer.getChannelData(0);
-    for (let i = 0; i < bufferSize; i++) data[i] = Math.random() * 2 - 1;
-    const noise = audioCtx.createBufferSource();
-    noise.buffer = buffer;
-    
-    const noiseFilter = audioCtx.createBiquadFilter();
-    noiseFilter.type = 'highpass';
-    noiseFilter.frequency.value = 1000;
-    
-    const noiseGain = audioCtx.createGain();
-    noiseGain.gain.setValueAtTime(0.2, now);
-    noiseGain.gain.exponentialRampToValueAtTime(0.01, now + 0.1);
-    
-    noise.connect(noiseFilter);
-    noiseFilter.connect(noiseGain);
-    noiseGain.connect(audioCtx.destination);
-    
-    noise.start(now);
-    osc.start(now);
-    osc.stop(now + 0.1);
-  } else if (type === 'slide') {
-    const bufferSize = audioCtx.sampleRate * 0.3; 
-    const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
-    const data = buffer.getChannelData(0);
-    for (let i = 0; i < bufferSize; i++) data[i] = (Math.random() * 2 - 1) * 0.5;
-    const noise = audioCtx.createBufferSource();
-    noise.buffer = buffer;
-    
-    const noiseFilter = audioCtx.createBiquadFilter();
-    noiseFilter.type = 'bandpass';
-    noiseFilter.frequency.value = 400;
-    
-    const noiseGain = audioCtx.createGain();
-    noiseGain.gain.setValueAtTime(0, now);
-    noiseGain.gain.linearRampToValueAtTime(0.15, now + 0.1);
-    noiseGain.gain.linearRampToValueAtTime(0, now + 0.3);
-    
-    noise.connect(noiseFilter);
-    noiseFilter.connect(noiseGain);
-    noiseGain.connect(audioCtx.destination);
-    
-    noise.start(now);
-  }
-}
-window.playSound = playSound;
 
 /* Show / hide the UI panel states */
 function showCanvas() {
@@ -431,12 +395,14 @@ async function handleFiles(files) {
           const pageName = pages.length > 1 ? `${file.name} - Page ${i+1}` : file.name;
           if (!state.files.find(f => f.name === pageName)) {
             state.files.push({ file, img: pages[i], name: pageName });
+            playSound('slide'); triggerHaptic('light');
             addFileChip(state.files.length - 1);
           }
         }
       } else {
         const img = await loadImageFile(file);
         state.files.push({ file, img, name: file.name });
+        playSound('slide'); triggerHaptic('medium');
         addFileChip(state.files.length - 1);
       }
     } catch (err) {
@@ -448,9 +414,6 @@ async function handleFiles(files) {
   if (state.activeFileIdx < 0 && state.files.length > 0) {
     activateFile(0);
   }
-  if (typeof playSound === 'function') playSound('slide');
-  if (typeof triggerHaptic === 'function') triggerHaptic([20]);
-}
 }
 
 async function loadPdfPages(file) {
@@ -824,7 +787,6 @@ async function runDetection() {
     setProgress(0, 'Starting…');
     state.worker.postMessage({ type: 'DETECT_PHOTOS', imageData: detectImageData, options: opts },
       [detectImageData.data.buffer]);
-    if (typeof playSound === 'function') playSound('tick');
   } else {
     showToast('Web worker not initialized. Cannot run detection.', 'error');
   }
@@ -855,8 +817,6 @@ function applyDetectedBoxes(boxes) {
   renderOverlay();
   renderStrip();
   DOM.splitsPanel().classList.add('visible');
-  if (typeof playSound === 'function') playSound('snap');
-  if (typeof triggerHaptic === 'function') triggerHaptic([15, 50, 15]);
   if (typeof gtag !== 'undefined') gtag('event', 'photos_detected', { count: state.boxes.length });
   showToast(`Detected ${state.boxes.length} photo${state.boxes.length !== 1 ? 's' : ''}.`, 'success');
 }
@@ -1186,8 +1146,6 @@ function nudgeSelected(dx, dy) {
   box.y = clamp(box.y + dy, 0, canvas.height - box.h);
   renderOverlay();
   updateStripThumb(box.id);
-  if (typeof playSound === 'function') playSound('tick');
-  if (typeof triggerHaptic === 'function') triggerHaptic([5]);
 }
 
 function deleteBox(id) {
@@ -1197,8 +1155,6 @@ function deleteBox(id) {
   renderOverlay();
   renderStrip();
   if (state.boxes.length === 0) DOM.splitsPanel().classList.remove('visible');
-  if (typeof playSound === 'function') playSound('tick');
-  if (typeof triggerHaptic === 'function') triggerHaptic([10]);
 }
 
 /* ── Add manual crop box ────────────────────────────────────────────────── */
@@ -1289,8 +1245,6 @@ function finishCropDraw(endX, endY) {
     renderStrip();
     DOM.splitsPanel().classList.add('visible');
     showToast('Crop region added.', 'success', 2000);
-    if (typeof playSound === 'function') playSound('tick');
-    if (typeof triggerHaptic === 'function') triggerHaptic([10]);
   }
 
   DOM.drawPreviewRect().style.display = 'none';
@@ -1304,28 +1258,9 @@ function rotateBox(id, degrees) {
   if (!box) return;
   pushUndo();
   box.rotation = ((box.rotation || 0) + degrees + 360) % 360;
-  
-  if (state.boxes.length > 1) {
-    showToast(`Rotated. <button onclick="applyLastRotation(${degrees})" style="margin-left:10px;padding:4px 8px;background:var(--accent);border:none;border-radius:4px;color:#fff;cursor:pointer;">Apply to all</button>`, 'info', 5000);
-  }
-
   renderOverlay();
   updateStripThumb(id);
-  if (typeof triggerHaptic === 'function') triggerHaptic([15]);
-  if (typeof playSound === 'function') playSound('tick');
 }
-
-window.applyLastRotation = function(degrees) {
-  pushUndo();
-  state.boxes.forEach(b => {
-    b.rotation = ((b.rotation || 0) + degrees + 360) % 360;
-  });
-  renderOverlay();
-  renderStrip();
-  showToast(`Applied ${degrees}° rotation to all photos.`, 'success');
-  if (typeof triggerHaptic === 'function') triggerHaptic([20, 50, 20]);
-  if (typeof playSound === 'function') playSound('snap');
-};
 
 /* ══════════════════════════════════════════════════════════════════════════ *
  *  STRIPS — Thumbnail panel                                                  *
@@ -1946,9 +1881,14 @@ async function previewBox(id) {
   const previewCanvas = await renderBoxToCanvas(box);
   const dataUrl = previewCanvas.toDataURL('image/png');
 
+  // Before image (unprocessed crop from original)
+  const beforeCanvas = await renderBoxToCanvas(box, { enhance: false, filmType: 'none', skipTransform: true });
+  const beforeUrl = beforeCanvas.toDataURL('image/jpeg', 0.5);
+
   const idx = state.boxes.indexOf(box);
   DOM.modalTitle().textContent = box.label || `Photo ${idx + 1}`;
   DOM.modalPreviewImg().src = dataUrl;
+  $('modal-preview-img-before').src = beforeUrl;
 
   const actionsEl = DOM.modalActions();
   actionsEl.innerHTML = `
@@ -1966,21 +1906,10 @@ async function previewBox(id) {
   $('modal-share-one') .addEventListener('click', () => { closeModal(); SocialManager.openModal(id); });
   $('modal-close')     .addEventListener('click', closeModal);
 
-  // Before/After Curtain Reveal
+  // Before/After toggle — show if Enhance is on OR a film negative mode is selected
   const baBtn = $('modal-ba-toggle');
-  const doSharpen = DOM.sharpenToggle()?.checked;
-  const doColorize = DOM.colorizeBwToggle()?.checked;
   const filmMode = DOM.filmTypeSelect()?.value || 'none';
-  const hasEffect = DOM.autoEnhanceToggle()?.checked || filmMode !== 'none' || doSharpen || doColorize;
-  
-  const origImg = $('modal-preview-img-original');
-  const handle = $('modal-preview-curtain-handle');
-  const container = $('modal-preview-container');
-  
-  // Reset
-  origImg.style.display = 'none';
-  handle.style.display = 'none';
-  
+  const hasEffect = DOM.autoEnhanceToggle()?.checked || filmMode !== 'none';
   if (hasEffect) {
     baBtn.style.display = '';
     let baActive = false;
@@ -1988,56 +1917,23 @@ async function previewBox(id) {
       baActive = !baActive;
       const box = state.boxes.find(b => b.id === id);
       if (!box) return;
-      
+      // Processed = with all current settings; Original = raw crop, no processing
+      const processed = await renderBoxToCanvas(box);
+      const original  = await renderBoxToCanvas(box, { enhance: false, filmType: 'none' });
+      const img = $('modal-preview-img');
       if (baActive) {
-        // Show Curtain
-        const original  = await renderBoxToCanvas(box, { enhance: false, filmType: 'none' });
-        origImg.src = original.toDataURL();
-        origImg.style.display = 'block';
-        handle.style.display = 'block';
-        handle.style.left = '50%';
-        origImg.style.clipPath = `polygon(0 0, 50% 0, 50% 100%, 0 100%)`;
-        baBtn.textContent = '🔄 Hide Before/After';
-        baBtn.classList.add('btn-primary');
-        baBtn.classList.remove('btn-secondary');
+        img.src = original.toDataURL();
+        img.setAttribute('data-ba', 'original');
+        baBtn.textContent = '← See Processed';
+        baBtn.title = 'Showing raw scan — click for processed version';
       } else {
-        // Hide Curtain
-        origImg.style.display = 'none';
-        handle.style.display = 'none';
+        img.src = processed.toDataURL();
+        img.setAttribute('data-ba', 'processed');
         baBtn.textContent = '🔄 Before/After';
-        baBtn.classList.add('btn-secondary');
-        baBtn.classList.remove('btn-primary');
+        baBtn.title = 'Showing processed — click for raw scan';
       }
-      if (typeof triggerHaptic === 'function') triggerHaptic([10]);
     });
-    
-    // Drag Logic for Curtain
-    let isDragging = false;
-    handle.onmousedown = () => { isDragging = true; };
-    handle.ontouchstart = () => { isDragging = true; };
-    window.addEventListener('mouseup', () => { isDragging = false; });
-    window.addEventListener('touchend', () => { isDragging = false; });
-    
-    container.onmousemove = (e) => {
-      if (!isDragging || !baActive) return;
-      const rect = container.getBoundingClientRect();
-      let x = e.clientX - rect.left;
-      x = Math.max(0, Math.min(x, rect.width));
-      const pct = (x / rect.width) * 100;
-      handle.style.left = `${pct}%`;
-      origImg.style.clipPath = `polygon(0 0, ${pct}% 0, ${pct}% 100%, 0 100%)`;
-    };
-    container.ontouchmove = (e) => {
-      if (!isDragging || !baActive) return;
-      const rect = container.getBoundingClientRect();
-      let x = e.touches[0].clientX - rect.left;
-      x = Math.max(0, Math.min(x, rect.width));
-      const pct = (x / rect.width) * 100;
-      handle.style.left = `${pct}%`;
-      origImg.style.clipPath = `polygon(0 0, ${pct}% 0, ${pct}% 100%, 0 100%)`;
-    };
   }
-
 
   DOM.modalBackdrop().classList.add('open');
 }
@@ -2169,8 +2065,6 @@ const ExportManager = {
     this._exportSidecars(box, baseWithoutExt, false, null);
     
     showToast(`Saved: ${fName}`, 'success');
-    if (typeof playSound === 'function') playSound('snap');
-    if (typeof triggerHaptic === 'function') triggerHaptic([20]);
   },
 
   _exportSidecars(box, baseWithoutExt, isZip, zipObj) {
@@ -2217,7 +2111,6 @@ const ExportManager = {
     const { format, quality, baseName } = this.getSettings();
     showSpinner(`Saving ${state.boxes.length} photos…`);
     setProgress(0, 'Preparing…');
-    if (typeof playSound === 'function') playSound('snap');
 
     let saved = 0;
     for (const [idx, box] of state.boxes.entries()) {
@@ -2238,8 +2131,6 @@ const ExportManager = {
     hideSpinner();
     if (typeof gtag !== 'undefined') gtag('event', 'images_downloaded', { count: saved, type: 'individual' });
     showToast(`✅ Saved ${saved} photo${saved !== 1 ? 's' : ''}!`, 'success', 4000);
-    if (typeof playSound === 'function') playSound('snap');
-    if (typeof triggerHaptic === 'function') triggerHaptic([30, 100, 30]);
 
     // Viral nudge — shown once per session after a successful Save All
     if (!sessionStorage.getItem('share_nudge_shown')) {
@@ -2565,6 +2456,59 @@ const SocialManager = {
  *  CAROUSEL SPLITTER                                                         *
  *    Divides the active scan image into an N×M grid of tiles                 *
  * ═══════════════════════════════════════════════════════════════════════════ */
+
+// ═══ INITIALIZATION ══════════════════════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', () => {
+  UIController.initTheme();
+  FileManager.init();
+  BoundingBoxEditor.init();
+  UIController.initShortcuts();
+  
+  // Sound toggle init
+  const soundBtn = $('sound-toggle');
+  if (soundBtn) {
+    soundBtn.textContent = soundsMuted ? '🔇' : '🔊';
+    soundBtn.onclick = () => {
+      soundsMuted = !soundsMuted;
+      localStorage.setItem('pss_sounds_muted', soundsMuted);
+      soundBtn.textContent = soundsMuted ? '🔇' : '🔊';
+      if (!soundsMuted && audioCtx.state === 'suspended') audioCtx.resume();
+    };
+  }
+
+  // Undo Scrubber init
+  const scrubber = $('undo-scrubber');
+  if (scrubber) {
+    scrubber.oninput = (e) => {
+      const targetVal = parseInt(e.target.value);
+      const currentVal = state.undoStack.length;
+      if (targetVal < currentVal) {
+        for (let i = 0; i < currentVal - targetVal; i++) BoundingBoxEditor.undo();
+      } else if (targetVal > currentVal) {
+        for (let i = 0; i < targetVal - currentVal; i++) BoundingBoxEditor.redo();
+      }
+    };
+  }
+
+  // Curtain Reveal init
+  const curtain = $('curtain-handle');
+  if (curtain) {
+    const updateCurtain = (x) => {
+      const rect = $('curtain-container').getBoundingClientRect();
+      const percent = Math.max(0, Math.min(100, ((x - rect.left) / rect.width) * 100));
+      curtain.style.left = `${percent}%`;
+      $('curtain-after').style.clipPath = `inset(0 0 0 ${percent}%)`;
+    };
+    curtain.onmousedown = () => {
+      const move = (e) => updateCurtain(e.clientX);
+      const stop = () => { window.removeEventListener('mousemove', move); window.removeEventListener('mouseup', stop); };
+      window.addEventListener('mousemove', move);
+      window.addEventListener('mouseup', stop);
+    };
+    // Touch support
+    curtain.ontouchmove = (e) => updateCurtain(e.touches[0].clientX);
+  }
+});
 
 const CarouselSplitter = {
   openModal() {
@@ -3151,39 +3095,6 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', init);
 } else {
   init();
-}
-
-function bindNewFeatures() {
-  const st = document.getElementById('sound-toggle');
-  if (st) {
-    st.addEventListener('click', () => {
-      soundEnabled = !soundEnabled;
-      st.textContent = soundEnabled ? '🔊' : '🔇';
-    });
-  }
-
-  const scrubber = document.getElementById('undo-scrubber');
-  if (scrubber) {
-    scrubber.addEventListener('input', e => {
-      const targetIdx = parseInt(e.target.value, 10);
-      const currentIdx = state.undoStack.length;
-      
-      if (targetIdx < currentIdx) {
-        const diff = currentIdx - targetIdx;
-        for (let i=0; i<diff; i++) undo();
-      } else if (targetIdx > currentIdx) {
-        const diff = targetIdx - currentIdx;
-        for (let i=0; i<diff; i++) redo();
-      }
-      if (typeof triggerHaptic === 'function') triggerHaptic([5]);
-    });
-  }
-}
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', bindNewFeatures);
-} else {
-  bindNewFeatures();
 }
 
 /* ══════════════════════════════════════════════════════════════════════════ *
