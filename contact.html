@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Scripts loaded dynamically after consent -->
+  <meta name="google-adsense-account" content="ca-pub-2501499631331261">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    function loadGoogleScripts() {
+      if (document.getElementById('ga-script')) return;
+      var gaScript = document.createElement('script');
+      gaScript.id = 'ga-script';
+      gaScript.async = true;
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ';
+      document.head.appendChild(gaScript);
+      gtag('js', new Date());
+      gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
+
+      var adScript = document.createElement('script');
+      adScript.id = 'adsense-script';
+      adScript.async = true;
+      adScript.crossOrigin = 'anonymous';
+      adScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2501499631331261';
+      document.head.appendChild(adScript);
+    }
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | PhotoSplit Studio</title>
+  <meta name="description" content="Have questions or feedback about PhotoSplit Studio? Get in touch with our team for support or business inquiries." />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" href="/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/secondary.css" />
+  <style>
+    .contact-container { max-width: 800px; margin: 40px auto; padding: 0 24px; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+    .contact-info-card { background: var(--bg-sunken); padding: 32px; border-radius: 16px; border: 1px solid var(--border); }
+    .contact-form { display: flex; flex-direction: column; gap: 20px; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; }
+    .form-group label { font-weight: 600; font-size: 0.9rem; }
+    .form-group input, .form-group textarea { padding: 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text); font-family: inherit; }
+    .submit-btn { background: var(--accent-grad); color: white; border: none; padding: 14px; border-radius: 8px; font-weight: 700; cursor: pointer; transition: opacity 0.2s; }
+    .submit-btn:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="logo" href="/" style="display:flex;align-items:center;gap:12px;"><img src="/logo.png" alt="Logo" style="width:24px;height:24px;border-radius:4px;object-fit:cover;" /> PhotoSplit Studio</a>
+  <div class="nav-links">
+    <a href="/blog/">Blog</a>
+    <a href="/app">App</a>
+    <a href="/tips">Scanning Tips</a>
+    <a href="/about">About</a><a href="/contact">Contact</a>
+    <a href="/app" class="cta">Open App →</a>
+  </div>
+</nav>
+
+<div class="hero" style="background:linear-gradient(135deg,#1a1d23 0%,#6366f1 100%);">
+  <h1>Contact Us</h1>
+  <p>Have a question or need support? We're here to help you preserve your history.</p>
+</div>
+
+<div class="contact-container">
+  <div class="contact-grid">
+    <div class="contact-info-card">
+      <h2>Get in Touch</h2>
+      <p style="color:var(--text-secondary); margin-bottom:32px;">Whether you have a technical question, a feature request, or just want to share your scanning success story, we'd love to hear from you.</p>
+      
+      <div style="margin-bottom:24px;">
+        <h3 style="font-size:1rem; margin-bottom:8px;">📧 Email Support</h3>
+        <p style="font-weight:500;">support@photosplitstudio.com</p>
+      </div>
+
+      <div>
+        <h3 style="font-size:1rem; margin-bottom:8px;">📍 Location</h3>
+        <p style="color:var(--text-secondary);">Distributed Team | Privacy-First Operations</p>
+      </div>
+    </div>
+
+    <form class="contact-form" action="https://formspree.io/f/xyzkjwqz" method="POST">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="John Doe" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Message →</button>
+      <p style="font-size:0.75rem; color:var(--text-muted); text-align:center;">We typically respond within 24-48 hours.</p>
+    </form>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="/app">App</a>
+    <a href="/blog/">Blog</a>
+    <a href="/tips">Scanning Tips</a>
+    <a href="/contact">Contact</a>
+    <a href="/terms">Terms of Use</a>
+    <a href="/privacy">Privacy Policy</a>
+    <a href="/about">About</a><a href="/contact">Contact</a>
+  </div>
+  <div>&copy; 2026 PhotoSplit Studio. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
