@@ -67,7 +67,7 @@
       <a href="/app">Split Photos</a>
       <a href="/resize">Resize</a>
       <a href="/blog/">Blog</a>
-      <a href="/tips">Tips</a><a href="/about">About</a><a href="/contact">Contact</a>
+      <a href="/tips">Tips</a>
       <a href="/about" class="active">About</a>
       <a href="/contact">Contact</a>
     </nav>
@@ -91,33 +91,41 @@
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <div class="content-wrap" style="max-width:900px;margin:0 auto;padding:32px 24px 80px;">
-      <h2>Our Story</h2>
-      <p>PhotoSplit Studio was born out of a common frustration: having thousands of physical family photos trapped in albums and shoeboxes. When we tried to digitize them, we found that scanning was easy, but splitting those scans into individual files was a nightmare of manual cropping and expensive, outdated software.</p>
-      <p>We built this tool to provide a fast, modern, and completely free alternative for anyone who wants to preserve their family history without the technical hurdle.</p>
-
-      <h2>The Technology</h2>
-      <p>PhotoSplit Studio leverages cutting-edge web technologies to deliver professional-grade performance directly in your browser:</p>
-      <ul>
-        <li><strong>OpenCV.js:</strong> We use an industry-standard computer vision library to perform real-time edge detection and contour analysis on your scans.</li>
-        <li><strong>HTML5 Canvas:</strong> High-performance rendering ensures that even high-resolution 600 DPI scans are processed smoothly.</li>
-        <li><strong>Client-Side Privacy:</strong> By using your device's local CPU/GPU, we ensure your photos never leave your computer. This makes the tool faster (no upload time) and 100% private.</li>
-      </ul>
-
-      <h2>Our Mission</h2>
-      <p>Our mission is to help 1 million families digitize their archives by 2030. We believe that physical photos are at risk of fire, flood, and natural degradation. By making the digitization process as simple as "Drag, Drop, and Save," we hope to ensure these memories are safe for future generations.</p>
-
-      <div id="statistics" style="margin:40px 0;padding:32px;background:var(--bg-sunken);border-radius:var(--radius-lg);border:1px solid var(--border);text-align:center">
-        <h3 style="margin-top:0">Transparent Growth</h3>
-        <p>Since our launch in early 2026, we've helped thousands of users split their archives. You can view our public visitor statistics below:</p>
-        <a href="https://hitscounter.dev/history?url=https%3A%2F%2Fphotosplitstudio.com" target="_blank" rel="noopener"><img src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Total%20Archivists&color=%23002d72&style=flat-square&tz=UTC" alt="Visits"/></a>
+    <div class="content-wrap" style="max-width:1000px;margin:0 auto;padding:60px 24px 80px;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 80px;">
+        <div>
+          <h2 style="font-size: 2rem; margin-bottom: 20px;">The Privacy-First Mission</h2>
+          <p style="margin-bottom: 16px; line-height: 1.7;">Most online photo tools require you to upload your precious family memories to their servers. We think that's a security risk you shouldn't have to take.</p>
+          <p style="line-height: 1.7;">By utilizing <strong>WebAssembly</strong> and <strong>OpenCV.js</strong>, we brought professional-grade computer vision directly into your browser. Your photos never leave your RAM, and they certainly never touch our servers.</p>
+        </div>
+        <img src="/assets/images/tech-stack.png" alt="Technology Visualization" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
       </div>
 
-      <div id="contact" style="margin-top:60px; padding:32px; border:1px solid var(--border); border-radius:var(--radius-lg);">
-        <h3 style="margin-top:0">Get in Touch</h3>
-        <p>Whether you have a feature suggestion, a bug report, or just want to share your digitization success story, we'd love to hear from you.</p>
-        <p><strong>Email:</strong> <a href="mailto:simpelogin-newsletter.gains011@simplelogin.com">simpelogin-newsletter.gains011@simplelogin.com</a></p>
-        <p><em>We typically respond to all inquiries within 48 hours.</em></p>
+      <div style="background: var(--accent-grad); color: white; padding: 48px; border-radius: 24px; margin-bottom: 80px;">
+        <h2 style="margin-top: 0; color: white;">Why We Built This</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8;">"Every day, thousands of physical photos are lost to time, fire, or fading. Scanning is the first step, but splitting those scans into individual files is usually a tedious chore. We built PhotoSplit Studio to remove that friction, so more people can successfully preserve their family history for the next generation."</p>
+        <p style="font-weight: 700; margin-bottom: 0;">— The PhotoSplit Team</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-bottom: 80px;">
+        <div style="padding: 32px; border: 1px solid var(--border); border-radius: 16px; background: var(--bg-surface);">
+          <h3 style="margin-top: 0;">🚀 Performance</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">Optimized for multi-core processors. Split 10+ photos from a single scan in less than 2 seconds.</p>
+        </div>
+        <div style="padding: 32px; border: 1px solid var(--border); border-radius: 16px; background: var(--bg-surface);">
+          <h3 style="margin-top: 0;">🛡️ Security</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">Zero tracking. Zero uploads. Zero storage. Your privacy is baked into the architecture.</p>
+        </div>
+        <div style="padding: 32px; border: 1px solid var(--border); border-radius: 16px; background: var(--bg-surface);">
+          <h3 style="margin-top: 0;">💎 Quality</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">Lossless PNG support and high-fidelity JPEG compression options to maintain archival quality.</p>
+        </div>
+      </div>
+
+      <div id="statistics" style="margin:40px 0;padding:32px;background:var(--bg-sunken);border-radius:var(--radius-lg);border:1px solid var(--border);text-align:center">
+        <h3 style="margin-top:0">Community Impact</h3>
+        <p>Since our launch, we've helped thousands of users split their archives. You can view our live global visitor statistics below:</p>
+        <a href="https://hitscounter.dev/history?url=https%3A%2F%2Fphotosplitstudio.com" target="_blank" rel="noopener"><img src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Total%20Archivists&color=%23002d72&style=flat-square&tz=UTC" alt="Visits"/></a>
       </div>
     </div>
   </main>
