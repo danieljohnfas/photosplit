@@ -234,3 +234,16 @@ tr:hover td { background: var(--bg-surface-2); }
   .card-grid { grid-template-columns: 1fr; }
 }
 
+
+/* -- Affiliate & CTA Classes -- */
+.nav-logo-flex { display: flex; align-items: center; gap: 12px; }
+.nav-logo-img { width: 32px; height: 32px; }
+.hero-gradient-red { background: linear-gradient(135deg, #1a1d23 0%, #fe2c55 100%); }
+.ad-top-wrapper { max-width: 860px; margin: 32px auto 0; padding: 0 24px; }
+.ad-mid-wrapper { margin: 30px 0; }
+.cta-promo-box { margin: 40px 0; background: var(--bg-surface-2); padding: 30px; border-radius: 16px; border: 1px solid var(--accent); text-align: center; }
+.cta-promo-title { margin-top: 0; color: var(--text-primary); }
+.cta-promo-list { text-align: left; max-width: 500px; margin: 20px auto; }
+.cta-promo-btn { display: inline-block; margin-top: 10px; }
+.related-guides-wrapper { margin-top: 40px; }
+
