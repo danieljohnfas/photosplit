@@ -62,7 +62,7 @@
 <body>
 
 <nav class="site-nav">
-  <a class="logo" href="/" style="display:flex;align-items:center;gap:12px;"><img src="/logo-animated.svg" alt="PhotoSplit Logo" style="width:32px;height:32px;" /> PhotoSplit Studio</a>
+  <a class="logo blog-logo-link" href="/"><img src="/logo-animated.svg" alt="PhotoSplit Logo" class="nav-icon" /> PhotoSplit Studio</a>
   <div class="nav-links">
     <a href="/blog/" class="active">Blog</a>
     <a href="/app">App</a>
@@ -74,17 +74,17 @@
   </div>
 </nav>
 
-<div class="hero" style="background:linear-gradient(135deg,#1a1d23 0%,#2b6cb0 100%);">
+<div class="hero hero-blue">
   <h1>Restoring Faded Photos</h1>
   <p>Old photos don't have to stay faded. Learn how to bring back the colors of the past using modern digital tools.</p>
 </div>
 
-<div class="content-wrap" style="padding-top:0;">
+<div class="content-wrap pt-0">
   <img src="/blog/images/restoring-faded-photos-hero.png" alt="Restoring Faded Photos" class="hero-image" />
 </div>
 
 <!-- AdSense &mdash; Below Hero -->
-<div style="max-width:860px;margin:0 auto;padding:0 24px 8px;">
+<div class="ad-wrap">
   <div id="ezoic-pub-ad-placeholder-112"></div>
 </div>
 
@@ -104,7 +104,7 @@
 
   <div class="comparison-grid">
     <div class="comp-box comp-physical">
-      <h3 style="color: #c05621; margin-top:0">Physical Preservation</h3>
+      <h3 class="comp-physical-h3">Physical Preservation</h3>
       <p>Stopping further damage to the original print.</p>
       <ul>
         <li><strong>Darkness:</strong> Keep photos in archival-safe boxes away from UV light.</li>
@@ -113,7 +113,7 @@
       </ul>
     </div>
     <div class="comp-box comp-digital">
-      <h3 style="color: #2b6cb0; margin-top:0">Digital Restoration</h3>
+      <h3 class="comp-digital-h3">Digital Restoration</h3>
       <p>Bringing back the original appearance on screen.</p>
       <ul>
         <li><strong>Scan First:</strong> Get a high-resolution scan at 600 DPI.</li>
@@ -127,13 +127,13 @@
   <p>When you split your photos in <a href="/app">PhotoSplit Studio</a>, you�ll notice a toggle for <strong>Auto Color Enhance</strong>. This tool uses a histogram equalization algorithm to find the "true" white and black points in your photo. It can often strip away years of yellowing in a single click, revealing the vibrant greens and blues that have been hidden for decades.</p>
 
   <h2>Step 2: Correcting the "Magenta Shift"</h2>
-  <div style="margin: 40px 0; text-align: center;">
-    <img src="/assets/images/restoration-comparison.png" alt="Photo Restoration Before and After" style="width: 100%; max-width: 800px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
-    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 12px; font-style: italic;">A dramatic example of how modern digital restoration can bring a faded sepia print back to life.</p>
+  <div class="blog-figure">
+    <img src="/assets/images/restoration-comparison.png" alt="Photo Restoration Before and After" class="blog-figure-img">
+    <p class="blog-figure-caption">A dramatic example of how modern digital restoration can bring a faded sepia print back to life.</p>
   </div>
   <p>Many color prints from the mid-20th century were made with dyes that fade at different rates. The yellow and cyan dyes often fade first, leaving only the magenta. If our auto-enhancer doesn't fully fix it, you can use a free tool like <strong>GIMP</strong> or <strong>Google Photos</strong> to manually slide the "Tint" or "Warmth" controls toward green to neutralize the pink cast.</p>
   
-  <div class="product-card" style="margin: 10px 0;">
+  <div class="product-card">
     <img src="https://m.media-amazon.com/images/I/71R2H2eS0kL._AC_SL1500_.jpg" alt="Datacolor SpyderX Pro" />
     <div class="product-info">
       <h3 class="product-title">Datacolor SpyderX Pro</h3>
@@ -148,22 +148,22 @@
   <h2>Step 4: Colorizing Black and White</h2>
   <p>While some purists prefer to keep B&W photos as they are, colorizing can make an ancestor feel much more "real" and relatable. If you decide to colorize, always keep a copy of the original B&W scan as your archival master. Colorization is an artistic choice, but the original scan is the historical record.</p>
 
-  <div class="tip-card" style="margin-top:40px; background: #ebf8ff; border-color: #90cdf4;">
+  <div class="tip-card tip-card-blue">
     <h3>?? Expert Scanning Tip</h3>
     <p>Always scan old faded photos in <strong>24-bit color mode</strong>, even if they are black and white. This captures more information about the paper's texture and the subtle aging of the silver halide crystals, providing much more data for restoration software to work with.</p>
   </div>
 
   <h2>Conclusion</h2>
-  <div style="margin: 60px 0; background: #010101; padding: 40px; border-radius: 20px; color: white;">
-    <h3 style="color: white; margin-top: 0; font-family: 'Outfit', sans-serif;">Video: Professional Restoration Techniques</h3>
-    <p style="color: rgba(255,255,255,0.7); margin-bottom: 24px;">Watch this masterclass on restoring extremely damaged photographs using modern AI and manual techniques.</p>
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;">
-      <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" src="https://www.youtube.com/embed/n-t05-MvJ3Y?origin=https://photosplitstudio.com" title="Photo Restoration Tutorial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <div class="video-dark">
+    <h3 class="video-dark-title">Video: Professional Restoration Techniques</h3>
+    <p class="video-dark-body">Watch this masterclass on restoring extremely damaged photographs using modern AI and manual techniques.</p>
+    <div class="video-responsive">
+      <iframe class="video-iframe" src="https://www.youtube.com/embed/n-t05-MvJ3Y?origin=https://photosplitstudio.com" title="Photo Restoration Tutorial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
   <p>Restoration is a mix of science and art. By combining careful physical storage with modern digital splitting and enhancement tools, you can ensure that your family's visual history doesn't fade into obscurity.</p>
 
-  <div style="margin-top:40px;">
+  <div class="related-section">
     <h2>Next Steps</h2>
     <div class="related-grid">
       <a class="related-card" href="/blog/best-scanner-settings-for-photos">
@@ -176,11 +176,11 @@
       </a>
     </div>
   </div>
-  <div class="author-bio" style="display:flex; gap:20px; align-items:center; margin-top:60px; padding:32px; background:var(--bg-sunken); border-radius:16px; border:1px solid var(--border);">
-    <img src="/logo-animated.svg" alt="PhotoSplit Team" style="width:64px; height:64px; border-radius:50%; object-fit:cover; border:2px solid var(--accent);">
+  <div class="author-bio">
+    <img src="/logo-animated.svg" alt="PhotoSplit Team" class="author-bio-img">
     <div>
-      <h3 style="margin:0 0 4px 0; font-size:1.1rem;">Written by the PhotoSplit Team</h3>
-      <p style="margin:0; font-size:0.9rem; color:var(--text-secondary); line-height:1.5;">We are a team of photo preservation enthusiasts and developers dedicated to making high-quality digitization accessible to everyone. Our mission is to ensure family histories are preserved for generations to come.</p>
+      <h3 class="author-bio-name">Written by the PhotoSplit Team</h3>
+      <p class="author-bio-desc">We are a team of photo preservation enthusiasts and developers dedicated to making high-quality digitization accessible to everyone. Our mission is to ensure family histories are preserved for generations to come.</p>
     </div>
   </div>
 </div>
