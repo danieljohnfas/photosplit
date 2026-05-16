@@ -707,7 +707,7 @@ function sampleColorAt(cx, cy) {
 function spawnWorker() {
   if (state.worker) return;
   try {
-    state.worker = new Worker('worker.js?v=' + Date.now());
+    state.worker = new Worker('/js/worker.js?v=' + Date.now());
     state.worker.onmessage = handleWorkerMessage;
     state.worker.onerror = e => {
       console.error('Worker error:', e);
