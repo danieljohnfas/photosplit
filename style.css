@@ -2114,3 +2114,11 @@ kbd {
  . w - f u l l   {   w i d t h :   1 0 0 % ;   }  
  . f e e d b a c k - s u c c e s s - v i e w   {   d i s p l a y :   n o n e ;   t e x t - a l i g n :   c e n t e r ;   }  
  
+/* -- Affiliate Product Cards -- */
+.product-card { display: flex; flex-wrap: wrap; gap: 20px; border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin: 30px 0; background: var(--bg-surface-2); align-items: center; }
+.product-card img { width: 120px; height: 120px; object-fit: contain; border-radius: 8px; background: white; padding: 10px; }
+.product-info { flex: 1; min-width: 200px; }
+.product-title { margin: 0 0 10px 0; font-size: 1.2rem; color: var(--accent); }
+.buy-btn { display: inline-block; padding: 10px 20px; background: #f90; color: #111; font-weight: bold; border-radius: 8px; text-decoration: none; margin-top: 10px; }
+.buy-btn:hover { background: #e80; }
+
