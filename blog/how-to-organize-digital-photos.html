@@ -61,12 +61,14 @@
     .check-list{list-style:none;padding:0;margin:24px 0}
     .check-list li{display:flex;gap:12px;margin-bottom:12px;font-size:0.95rem;color:var(--text-secondary)}
     .check-list li::before{content:"?";flex-shrink:0}
+    .schedule-red { border-color: #ff4757; }
+    .red-h3 { color: #ff4757; }
   </style>
 </head>
 <body>
 
 <nav class="site-nav">
-  <a class="logo" href="/" style="display:flex;align-items:center;gap:12px;"><img src="/logo-animated.svg" alt="PhotoSplit Logo" style="width:32px;height:32px;" /> PhotoSplit Studio</a>
+  <a class="logo blog-logo-link" href="/"><img src="/logo-animated.svg" alt="PhotoSplit Logo" class="nav-icon" /> PhotoSplit Studio</a>
   <div class="nav-links">
     <a href="/blog/" class="active">Blog</a>
     <a href="/app">App</a>
@@ -78,17 +80,17 @@
   </div>
 </nav>
 
-<div class="hero" style="background:linear-gradient(135deg,#1a1d23 0%,#6366f1 100%);">
+<div class="hero hero-violet">
   <h1>How to Organize Digital Photos: A Guide for Beginners</h1>
   <p>Stop drowning in a sea of files. Learn the professional way to structure your digital photo library for life.</p>
 </div>
 
-<div class="content-wrap" style="padding-top:0;">
+<div class="content-wrap pt-0">
   <img src="/blog/images/organize-digital-photos-hero.png" alt="Organized Digital Photo Library" class="hero-image" />
 </div>
 
 <!-- AdSense &mdash; Below Hero -->
-<div style="max-width:860px;margin:0 auto;padding:0 24px 8px;">
+<div class="ad-wrap">
   <div id="ezoic-pub-ad-placeholder-108"></div>
 </div>
 
@@ -149,9 +151,9 @@
 
   <h2>5. Implement the 3-2-1 Backup Strategy</h2>
   <p>If your photos only exist on your laptop, they don't really exist. Hardware fails. Laptops get stolen. Cloud services change terms.</p>
-  <div class="schedule-grid" style="border-color: #ff4757;">
+  <div class="schedule-grid schedule-red">
     <div class="schedule-day">
-      <h3 style="color: #ff4757;">The 3-2-1 Rule:</h3>
+      <h3 class="red-h3">The 3-2-1 Rule:</h3>
       <p><strong>3 Copies:</strong> Have three total copies of your photos.</p>
       <p><strong>2 Media Types:</strong> Store them on two different types of hardware (e.g., Internal Drive and External USB Drive).</p>
       <p><strong>1 Off-site:</strong> Keep one copy in a different physical location (e.g., Cloud storage or a drive at a relative's house).</p>
@@ -161,7 +163,7 @@
   <h2>Conclusion</h2>
   <p>Organizing your photos is a marathon, not a sprint. Start with your most precious memories first. Once you have a system in place, every new batch of scans becomes part of a growing, beautiful library rather than another digital chore.</p>
 
-  <div style="margin-top:40px;">
+  <div class="related-section">
     <h2>Next Steps</h2>
     <div class="related-grid">
       <a class="related-card" href="/blog/how-to-digitize-photo-album">
@@ -175,23 +177,61 @@
     </div>
   </div>
 
-  <div style="text-align:center;margin:60px 0 20px;">
-    <a href="/app" class="btn" style="background:var(--accent-grad);color:white;padding:14px 32px;font-size:1.1rem;border-radius:var(--radius-md);text-decoration:none;font-weight:700;">??? Open PhotoSplit App &mdash; Free</a>
+  <div class="cta-center">
+    <a href="/app" class="btn cta-btn-primary">??? Open PhotoSplit App &mdash; Free</a>
   </div>
 
-  <div class="author-bio" style="display:flex; gap:20px; align-items:center; margin-top:60px; padding:32px; background:var(--bg-sunken); border-radius:16px; border:1px solid var(--border);">
-    <img src="/logo-animated.svg" alt="PhotoSplit Team" style="width:64px; height:64px; border-radius:50%; object-fit:cover; border:2px solid var(--accent);">
+  <div class="author-bio">
+    <img src="/logo-animated.svg" alt="PhotoSplit Team" class="author-bio-img">
     <div>
-      <h3 style="margin:0 0 4px 0; font-size:1.1rem;">Written by the PhotoSplit Team</h3>
-      <p style="margin:0; font-size:0.9rem; color:var(--text-secondary); line-height:1.5;">We are a team of photo preservation enthusiasts and developers dedicated to making high-quality digitization accessible to everyone. Our mission is to ensure family histories are preserved for generations to come.</p>
+      <h3 class="author-bio-name">Written by the PhotoSplit Team</h3>
+      <p class="author-bio-desc">We are a team of photo preservation enthusiasts and developers dedicated to making high-quality digitization accessible to everyone. Our mission is to ensure family histories are preserved for generations to come.</p>
     </div>
   </div>
 </div>
 
 <!-- AdSense &mdash; Above Footer -->
-<div style="max-width:860px;margin:0 auto;padding:0 24px 32px;">
+<div class="ad-wrap-bottom">
   <div id="ezoic-pub-ad-placeholder-109"></div>
 </div>
+
+
+<section class="gear-section">
+  <div class="gear-section-inner">
+    <h2 class="gear-section-title">Complete Your Digitization Kit</h2>
+    <p class="gear-section-sub">A fast scanner + reliable backup storage is all you need to build a permanent family archive.</p>
+    <div class="gear-cards-grid">
+      
+  <div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/71eKyMo7XWL._AC_SL1500_.jpg" alt="Epson FastFoto FF-680W Auto-Feed Scanner" />
+    <div class="product-info">
+      <h3 class="product-title">Epson FastFoto FF-680W</h3>
+      <p>The fastest home photo scanner on the market. Auto-feeds and scans one 4×6 print per second at 600 DPI. Perfect for digitizing thousands of loose prints quickly.</p>
+      <a href="https://www.amazon.com/dp/B07GRFCXR5?tag=photoid03-20" target="_blank" rel="sponsored noopener" class="buy-btn">View on Amazon</a>
+    </div>
+  </div>
+      
+  <div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/71P8HHm5H8L._AC_SL1500_.jpg" alt="WD 4TB My Passport Portable Drive" />
+    <div class="product-info">
+      <h3 class="product-title">WD 4TB My Passport Portable Drive</h3>
+      <p>The 3-2-1 rule requires at least one external backup copy. This slim 4TB drive holds over 400,000 high-resolution scans — enough for any family archive.</p>
+      <a href="https://www.amazon.com/dp/B07CRG7BBH?tag=photoid03-20" target="_blank" rel="sponsored noopener" class="buy-btn">View on Amazon</a>
+    </div>
+  </div>
+      
+  <div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/71OHGT7NtpL._AC_SL1500_.jpg" alt="Brother P-Touch Label Maker" />
+    <div class="product-info">
+      <h3 class="product-title">Brother P-Touch Label Maker</h3>
+      <p>After digitizing, label your physical archive boxes clearly. A good label maker ensures your physical and digital collections stay in sync for decades.</p>
+      <a href="https://www.amazon.com/dp/B001018M5OA?tag=photoid03-20" target="_blank" rel="sponsored noopener" class="buy-btn">View on Amazon</a>
+    </div>
+  </div>
+    </div>
+    <p class="affiliate-disclosure">As an Amazon Associate, PhotoSplit Studio earns from qualifying purchases.</p>
+  </div>
+</section>
 
 <footer class="site-footer">
     <div class="footer-links">

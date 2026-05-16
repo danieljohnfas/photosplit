@@ -66,12 +66,15 @@
     .blog-hero { background: linear-gradient(135deg, #1a1d23 0%, #4f46e5 100%); color: #fff; padding: 72px 24px 56px; text-align: center; }
     .blog-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 16px; }
     .blog-hero p { font-size: 1.1rem; opacity: .9; max-width: 600px; margin: 0 auto; }
+    .blog-cta-box { background: linear-gradient(135deg, rgba(99,102,241,.08) 0%, rgba(99,102,241,.03) 100%); border: 1px solid rgba(99,102,241,.2); border-radius: 14px; padding: 36px; text-align: center; margin-top: 60px; }
+    .blog-cta-h2 { margin-top: 0; border: none; padding: 0; font-size: 1.4rem; }
+    .blog-cta-btn { background: var(--accent-grad, linear-gradient(135deg,#6366f1,#4f46e5)); color: white; padding: 14px 32px; font-size: 1.05rem; border-radius: 10px; text-decoration: none; display: inline-block; font-weight: 700; }
   </style>
 </head>
 <body>
 
 <nav class="site-nav">
-  <a class="logo" href="/" style="display:flex;align-items:center;gap:12px;"><img src="/logo-animated.svg" alt="PhotoSplit Logo" style="width:32px;height:32px;" /> PhotoSplit Studio</a>
+  <a class="logo blog-logo-link" href="/"><img src="/logo-animated.svg" alt="PhotoSplit Logo" class="nav-icon" /> PhotoSplit Studio</a>
   <div class="nav-links">
     <a href="/blog/" class="active">Blog</a>
     <a href="/app">App</a>
@@ -89,7 +92,7 @@
 </div>
 
 <!-- AdSense &mdash; Below Hero -->
-<div style="max-width:900px;margin:0 auto;padding:0 24px 8px;">
+<div class="ad-wrap">
   <div id="ezoic-pub-ad-placeholder-110"></div>
 </div>
 
@@ -214,9 +217,47 @@
 </div>
 
 <!-- AdSense &mdash; Above Footer -->
-<div style="max-width:900px;margin:0 auto;padding:0 24px 32px;">
+<div class="ad-wrap-bottom">
   <div id="ezoic-pub-ad-placeholder-111"></div>
 </div>
+
+
+<section class="gear-section">
+  <div class="gear-section-inner">
+    <h2 class="gear-section-title">Start Scanning Today — Recommended Hardware</h2>
+    <p class="gear-section-sub">All of our guides are designed around these scanners. Pick the one that fits your budget and archive size.</p>
+    <div class="gear-cards-grid">
+      
+  <div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/61kYgDk3VKL._AC_SL1500_.jpg" alt="Epson Perfection V600 Scanner" />
+    <div class="product-info">
+      <h3 class="product-title">Epson Perfection V600</h3>
+      <p>The gold standard for home photo archiving. Massive flatbed, outstanding color accuracy, and built-in film negative scanning at up to 6400 DPI.</p>
+      <a href="https://www.amazon.com/dp/B002OEBMRU?tag=photoid03-20" target="_blank" rel="sponsored noopener" class="buy-btn">View on Amazon</a>
+    </div>
+  </div>
+      
+  <div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/71B5c7xH-JL._AC_SL1500_.jpg" alt="Canon CanoScan LiDE 400" />
+    <div class="product-info">
+      <h3 class="product-title">Canon CanoScan LiDE 400</h3>
+      <p>Slim, USB-C powered, and very fast. Up to 4800 DPI and scans a 4×6 photo in just 8 seconds. An excellent value for most digitization projects.</p>
+      <a href="https://www.amazon.com/dp/B07G5X1N1H?tag=photoid03-20" target="_blank" rel="sponsored noopener" class="buy-btn">View on Amazon</a>
+    </div>
+  </div>
+      
+  <div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/71wRjG0FpQL._AC_SL1500_.jpg" alt="Canon CanoScan LiDE 300" />
+    <div class="product-info">
+      <h3 class="product-title">Canon CanoScan LiDE 300</h3>
+      <p>The most affordable CanoScan in the range. Scans at up to 2400 DPI over USB-C — ideal for occasional use and tight budgets.</p>
+      <a href="https://www.amazon.com/dp/B07FJSL9T7?tag=photoid03-20" target="_blank" rel="sponsored noopener" class="buy-btn">View on Amazon</a>
+    </div>
+  </div>
+    </div>
+    <p class="affiliate-disclosure">As an Amazon Associate, PhotoSplit Studio earns from qualifying purchases.</p>
+  </div>
+</section>
 
 <footer class="site-footer">
     <div class="footer-links">
