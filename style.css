@@ -2132,3 +2132,15 @@ kbd {
 .gear-cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
 .gear-cards-grid .product-card { margin: 0; }
 .affiliate-disclosure { text-align: center; font-size: 0.72rem; color: var(--text-muted, #555); margin-top: 24px; }
+
+/* -- Tool Page Utilities -- */
+.hero-indigo { background: linear-gradient(135deg, #1a1d23 0%, #4f46e5 100%); }
+.hero-red    { background: linear-gradient(135deg, #1a1d23 0%, #fe2c55 100%); }
+.hero-amber  { background: linear-gradient(135deg, #1a1d23 0%, #f59e0b 100%); }
+.mt-0  { margin-top: 0; }
+.mt-20 { margin-top: 20px; }
+.lh-6  { line-height: 1.6; }
+.pl-20 { padding-left: 20px; }
+.convert-article { max-width: 860px; margin: 20px auto 40px; padding: 24px; background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px solid var(--border); }
+.drop-icon { font-size: 2.5rem; }
+.drop-text { font-weight: 700; font-size: 1rem; color: var(--text-primary); margin-top: 8px; }

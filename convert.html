@@ -80,7 +80,7 @@
       </svg>
     </button>
     <a href="/" class="logo">
-      <img src="/logo-animated.svg" alt="PhotoSplit Logo" style="width:32px;height:32px;">
+      <img src="/logo-animated.svg" alt="PhotoSplit Logo" class="nav-icon">
       PhotoSplit Studio
     </a>
     <div class="header-spacer"></div>
@@ -102,13 +102,13 @@
   </header>
 
   <main>
-    <section class="hero-utility" style="padding: var(--space-lg) 24px; text-align: center; background: var(--bg-sunken); border-bottom: 1px solid var(--border);">
-      <h1 style="font-size: 2.5rem; font-weight: 900; margin-bottom: 12px;">Bulk Image Converter</h1>
-      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 700px; margin: 0 auto;">Convert multiple JPEG, PNG, and WebP images instantly in your browser. Free & private.</p>
+    <section class="hero-utility">
+      <h1 >Bulk Image Converter</h1>
+      <p >Convert multiple JPEG, PNG, and WebP images instantly in your browser. Free & private.</p>
     </section>
 
     <!-- AdSense &mdash; Below Hero -->
-    <div style="max-width:860px;margin:var(--space-md) auto;padding:0 24px;">
+    <div class="ad-wrap-md">
       <div id="ezoic-pub-ad-placeholder-114"></div>
     </div>
 
@@ -125,8 +125,8 @@
       </div>
 
       <div id="convert-drop" onclick="document.getElementById('convert-file-input').click()">
-        <div style="font-size:2.5rem">??</div>
-        <div style="font-weight:700;font-size:1rem;color:var(--text-primary);margin-top:8px">Drop images here or click to select</div>
+        <div class="drop-icon">??</div>
+        <div class="drop-text">Drop images here or click to select</div>
         <p>JPEG, PNG, WebP supported &mdash; select multiple files at once</p>
         <input type="file" id="convert-file-input" accept="image/*" multiple style="display:none"/>
       </div>
@@ -144,12 +144,12 @@
       </div>
     </div>
 
-    <article style="max-width:860px;margin:20px auto 40px;padding:24px;background:var(--bg-surface);border-radius:var(--radius-lg);border:1px solid var(--border);">
-      <h2 style="margin-top:0">Why Use a Bulk Image Converter?</h2>
-      <p style="color:var(--text-secondary);line-height:1.6">Converting images individually is time-consuming. PhotoSplit Studio's free Bulk Image Converter allows you to drop dozens of JPEG, PNG, or WebP images and convert them all at once. Everything happens locally in your browser, meaning your files are never uploaded to a server, ensuring 100% privacy and blazing fast speeds. Whether you are optimizing images for a website by converting PNG to WebP, or standardizing client photos to JPEG, our tool handles it securely.</p>
+    <article class="convert-article">
+      <h2 class="mt-0">Why Use a Bulk Image Converter?</h2>
+      <p class="text-secondary lh-6">Converting images individually is time-consuming. PhotoSplit Studio's free Bulk Image Converter allows you to drop dozens of JPEG, PNG, or WebP images and convert them all at once. Everything happens locally in your browser, meaning your files are never uploaded to a server, ensuring 100% privacy and blazing fast speeds. Whether you are optimizing images for a website by converting PNG to WebP, or standardizing client photos to JPEG, our tool handles it securely.</p>
       
-      <h3 style="margin-top:20px">Supported Formats</h3>
-      <ul style="color:var(--text-secondary);line-height:1.6;padding-left:20px">
+      <h3 class="mt-20">Supported Formats</h3>
+      <ul class="text-secondary lh-6 pl-20">
         <li><strong>JPEG:</strong> Best for photographs. Offers great compression with minimal quality loss.</li>
         <li><strong>PNG:</strong> Best for graphics with transparency or crisp edges. Lossless but larger file size.</li>
         <li><strong>WebP:</strong> The modern web standard. Offers superior compression compared to JPEG and supports transparency like PNG.</li>
