@@ -1,11 +1,21 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="">
 <head>
+  <!-- Ezoic Privacy & Integration Scripts -->
+  <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+  <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+  <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+  <script>
+      window.ezstandalone = window.ezstandalone || {};
+      ezstandalone.cmd = ezstandalone.cmd || [];
+  </script>
+  <script src="//ezoicanalytics.com/analytics.js"></script>
+  <!-- End Ezoic Scripts -->
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <meta name="theme-color" content="#010101"/>
   <title>Free Passport Photo Maker Online &mdash; ID Photo Creator | PhotoSplit Studio</title>
-  <meta name="description" content="Create passport photos and ID photos online for free. Supports US passport (2×2in), UK passport (35×45mm), Schengen visa, Indian visa, and 10+ more formats. 100% private &mdash; no upload."/>
+  <meta name="description" content="Create passport photos and ID photos online for free. Supports US passport (2�2in), UK passport (35�45mm), Schengen visa, Indian visa, and 10+ more formats. 100% private &mdash; no upload."/>
   <meta name="keywords" content="passport photo online free, make passport photo, id photo maker, 2x2 passport photo, uk passport photo, biometric photo online, visa photo free"/>
   <meta name="robots" content="index,follow"/>
   <link rel="canonical" href="https://photosplitstudio.com/passport"/>
@@ -21,7 +31,6 @@
   <link rel="stylesheet" href="style.css"/>
 
   <!-- Scripts loaded dynamically after consent -->
-  <meta name="google-adsense-account" content="ca-pub-2501499631331261">
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -104,7 +113,7 @@
       <a href="/about">About</a>
       <a href="/contact">Contact</a>
     </nav>
-    <button class="icon-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">🌓</button>
+    <button class="icon-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">??</button>
   </header>
 
   <main>
@@ -128,25 +137,25 @@
       <div class="section-label">Select Country / Document Type</div>
       <div class="country-picker" id="country-picker">
         <button class="country-btn active" data-wmm="51" data-hmm="51" data-dpi="300" data-bg="#ffffff" data-name="US Passport">
-          <span class="flag">🇺🇸</span><span class="cname">US Passport</span><span class="cdims">2×2 in</span>
+          <span class="flag">????</span><span class="cname">US Passport</span><span class="cdims">2�2 in</span>
         </button>
         <button class="country-btn" data-wmm="35" data-hmm="45" data-dpi="300" data-bg="#ffffff" data-name="UK Passport">
-          <span class="flag">🇬🇧</span><span class="cname">UK Passport</span><span class="cdims">35×45 mm</span>
+          <span class="flag">????</span><span class="cname">UK Passport</span><span class="cdims">35�45 mm</span>
         </button>
         <button class="country-btn" data-wmm="35" data-hmm="45" data-dpi="300" data-bg="#ffffff" data-name="EU Visa">
-          <span class="flag">🇪🇺</span><span class="cname">EU Visa</span><span class="cdims">35×45 mm</span>
+          <span class="flag">????</span><span class="cname">EU Visa</span><span class="cdims">35�45 mm</span>
         </button>
         <button class="country-btn" data-wmm="40" data-hmm="60" data-dpi="300" data-bg="#ffffff" data-name="Indian Passport">
-          <span class="flag">🇮🇳</span><span class="cname">Indian Passport</span><span class="cdims">40×60 mm</span>
+          <span class="flag">????</span><span class="cname">Indian Passport</span><span class="cdims">40�60 mm</span>
         </button>
       </div>
 
       <div class="passport-workspace">
         <div>
           <div id="pp-upload-zone" onclick="document.getElementById('pp-file-input').click()">
-            <div style="font-size:2.5rem">🪪</div>
+            <div style="font-size:2.5rem">??</div>
             <div style="font-weight:700;font-size:1rem;color:var(--text-primary);margin-top:8px">Upload your photo</div>
-            <p>JPEG or PNG • or paste with Ctrl+V</p>
+            <p>JPEG or PNG � or paste with Ctrl+V</p>
             <input type="file" id="pp-file-input" accept="image/*" style="display:none"/>
           </div>
           <div id="pp-canvas-wrap" style="margin-top:16px;"><canvas id="pp-canvas"></canvas></div>
@@ -155,14 +164,14 @@
         <div class="pp-panel">
           <div>
             <div class="pp-stat"><span>Document</span><span id="pp-doc-name">US Passport</span></div>
-            <div class="pp-stat"><span>Size</span><span id="pp-size-label">51×51 mm</span></div>
+            <div class="pp-stat"><span>Size</span><span id="pp-size-label">51�51 mm</span></div>
           </div>
           <div>
             <label>Zoom & Reposition</label>
-            <div class="zoom-row"><span>−</span><input type="range" id="pp-zoom" min="50" max="300" value="100"/><span>+</span></div>
+            <div class="zoom-row"><span>-</span><input type="range" id="pp-zoom" min="50" max="300" value="100"/><span>+</span></div>
           </div>
-          <button class="btn-pp-sheet" id="btn-pp-sheet">🖨️ Create Print Sheet</button>
-          <button class="btn-pp-dl" id="btn-pp-dl" disabled>⬇️ Download Photo</button>
+          <button class="btn-pp-sheet" id="btn-pp-sheet">??? Create Print Sheet</button>
+          <button class="btn-pp-dl" id="btn-pp-dl" disabled>?? Download Photo</button>
         </div>
       </div>
     </div>
@@ -200,7 +209,7 @@
 
   <div id="cookie-consent" role="dialog">
     <div id="cookie-consent-inner">
-      <p>🍪 We use cookies to improve your experience. See our <a href="/privacy">Privacy Policy</a>.</p>
+      <p>?? We use cookies to improve your experience. See our <a href="/privacy">Privacy Policy</a>.</p>
       <div id="cookie-consent-actions">
         <button id="cookie-decline" class="cookie-btn">Decline</button>
         <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept All</button>
@@ -217,7 +226,7 @@
         btn.onclick = () => {
           document.querySelectorAll('.country-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active');
           config = { wmm: parseFloat(btn.dataset.wmm), hmm: parseFloat(btn.dataset.hmm), dpi: 300, name: btn.dataset.name };
-          document.getElementById('pp-doc-name').textContent = config.name; document.getElementById('pp-size-label').textContent = config.wmm+'×'+config.hmm+' mm';
+          document.getElementById('pp-doc-name').textContent = config.name; document.getElementById('pp-size-label').textContent = config.wmm+'�'+config.hmm+' mm';
           render();
         };
       });

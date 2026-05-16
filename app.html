@@ -2,6 +2,16 @@
 <html lang="en" data-theme="">
 
 <head>
+  <!-- Ezoic Privacy & Integration Scripts -->
+  <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+  <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+  <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+  <script>
+      window.ezstandalone = window.ezstandalone || {};
+      ezstandalone.cmd = ezstandalone.cmd || [];
+  </script>
+  <script src="//ezoicanalytics.com/analytics.js"></script>
+  <!-- End Ezoic Scripts -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -38,7 +48,7 @@
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "PhotoSplit Studio", "item": "https://photosplitstudio.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Photo Splitter App", "item": "https://photosplitstudio.com/app.html" }
+        { "@type": "ListItem", "position": 2, "name": "Photo Splitter App", "item": "https://photosplitstudio.com/app" }
       ]
     },
     {
@@ -109,9 +119,7 @@
       gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
     }
   </script>
-
-  <meta name="google-adsense-account" content="ca-pub-2501499631331261">
-  <meta name="theme-color" content="#010101" />
+  <!-- meta theme-color removed due to lack of support -->
   <link rel="icon" href="/logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="style-premium.css" />
@@ -128,7 +136,7 @@
       </svg>
     </button>
     <a href="/" class="logo">
-      <img src="/logo-animated.svg" alt="PhotoSplit Logo" style="width:32px;height:32px;">
+      <img src="/logo-animated.svg" alt="PhotoSplit Logo" class="logo-img">
       PhotoSplit Studio
     </a>
     <div class="header-spacer"></div>
@@ -139,7 +147,7 @@
       <span>100% Private &middot; No Uploads</span>
     </div>
         <nav class="main-nav">
-      <button class="btn btn-secondary btn-sm" id="btn-voice-toggle" onclick="PremiumEngine.toggleVoice()" style="margin-right: 12px; display: flex; align-items: center; gap: 6px; font-weight: 700;">
+      <button class="btn btn-secondary btn-sm btn-voice-toggle" id="btn-voice-toggle" onclick="PremiumEngine.toggleVoice()">
         🎙️ Voice Control
       </button>
       <a href="/app" class="active">Split Photos</a>
@@ -174,7 +182,7 @@
             <div class="upload-text"><strong>Click</strong> or drag &amp; drop scans here</div>
             <div class="upload-formats">JPEG · PNG · TIFF · BMP · GIF · WebP · PDF</div>
           </div>
-          <input type="file" id="file-input" multiple accept=".jpg,.jpeg,.png,.tif,.tiff,.bmp,.gif,.webp,.pdf,image/*,application/pdf" style="display:none" />
+          <input type="file" id="file-input" multiple accept=".jpg,.jpeg,.png,.tif,.tiff,.bmp,.gif,.webp,.pdf,image/*,application/pdf" class="hidden-file-input" title="Upload scanned photos" aria-label="Upload scanned photos" />
         </section>
 
         <section class="sidebar-section" id="file-list-section">
@@ -204,19 +212,19 @@
           <div class="section-label">✨ Enhancements</div>
           <div class="toggle-row">
             <span class="toggle-label">Auto-straighten splits</span>
-            <label class="toggle"><input type="checkbox" id="auto-straighten-toggle" /><span class="toggle-slider"></span></label>
+            <label class="toggle"><input type="checkbox" id="auto-straighten-toggle" title="Toggle auto-straighten" aria-label="Toggle auto-straighten" /><span class="toggle-slider"></span></label>
           </div>
           <div class="toggle-row">
             <span class="toggle-label">Auto color enhance</span>
-            <label class="toggle"><input type="checkbox" id="auto-enhance-toggle" /><span class="toggle-slider"></span></label>
+            <label class="toggle"><input type="checkbox" id="auto-enhance-toggle" title="Toggle auto color enhance" aria-label="Toggle auto color enhance" /><span class="toggle-slider"></span></label>
           </div>
           <div class="toggle-row">
              <span class="toggle-label">Sharpen photos</span>
-             <label class="toggle"><input type="checkbox" id="sharpen-toggle" /><span class="toggle-slider"></span></label>
+             <label class="toggle"><input type="checkbox" id="sharpen-toggle" title="Toggle sharpen" aria-label="Toggle sharpen" /><span class="toggle-slider"></span></label>
           </div>
-          <div style="margin-top:10px; border-top: 1px solid var(--border); padding-top: 10px;">
-            <label class="form-label" style="display:block;margin-bottom:5px">🎞️ Film Negative Mode</label>
-            <select class="form-control" id="film-type-select">
+          <div class="film-mode-container">
+            <label class="form-label film-mode-label">🎞️ Film Negative Mode</label>
+            <select class="form-control" id="film-type-select" title="Select film type" aria-label="Select film type">
               <option value="none">Off (normal photo)</option>
               <option value="bw">B&amp;W Negative</option>
               <option value="color">Color Negative (C-41)</option>
@@ -228,7 +236,7 @@
         <section class="sidebar-section">
           <div class="section-label">💾 Output Settings</div>
           <label class="form-label">Format</label>
-          <select class="form-control" id="format-select">
+          <select class="form-control" id="format-select" title="Select export format" aria-label="Select export format">
             <option value="jpeg">JPEG</option>
             <option value="png">PNG (lossless)</option>
           </select>
@@ -237,10 +245,10 @@
             <span class="range-val" id="quality-val">90%</span>
           </div>
           <div class="range-row">
-            <input type="range" id="quality-slider" min="10" max="100" value="90" step="1" />
+            <input type="range" id="quality-slider" min="10" max="100" value="90" step="1" title="Adjust JPEG quality" aria-label="Adjust JPEG quality" />
           </div>
           <label class="form-label">Base filename</label>
-          <input type="text" class="form-control" id="filename-input" value="photo_" />
+          <input type="text" class="form-control" id="filename-input" value="photo_" title="Base filename" aria-label="Base filename" />
         </section>
       </aside>
 
@@ -265,7 +273,7 @@
           <div class="toolbar-sep"></div>
           <div class="toolbar-group">
             <button class="btn btn-secondary" id="btn-undo" title="Undo (Ctrl+Z)" disabled>Undo</button>
-            <input type="range" id="undo-scrubber" min="0" max="0" value="0" title="Visual Undo Timeline" style="width:80px;cursor:pointer;accent-color:var(--accent)">
+            <input type="range" id="undo-scrubber" min="0" max="0" value="0" title="Visual Undo Timeline" class="undo-scrubber">
             <button class="btn btn-secondary" id="btn-redo" title="Redo (Ctrl+Y)" disabled>Redo</button>
           </div>
           <div class="toolbar-spacer"></div>
@@ -283,7 +291,7 @@
             <p>Upload a scanned image on the left to get started.</p>
             <button class="btn btn-primary" onclick="document.getElementById('file-input').click()">📂 Upload Scans</button>
           </div>
-          <div id="canvas-wrapper" style="display:none">
+          <div id="canvas-wrapper" class="canvas-wrapper-hidden">
             <canvas id="main-canvas"></canvas>
             <svg id="overlay-svg" class="scissor-cursor"></svg>
             <div id="draw-overlay"></div>
@@ -334,26 +342,26 @@
   <!-- Modals -->
   <div id="modal-backdrop" class="modal-backdrop" onclick="if(event.target===this)closeModal()">
     <div id="modal-box" class="modal-content-card">
-      <div class="modal-header" style="display:flex;justify-content:space-between;align-items:center;padding:16px;border-bottom:1px solid var(--border)">
-        <h2 id="modal-title" style="margin:0;font-size:1.2rem">Photo Preview</h2>
+      <div class="modal-header modal-header-flex">
+        <h2 id="modal-title" class="modal-title-text">Photo Preview</h2>
         <button class="icon-btn" onclick="closeModal()">✕</button>
       </div>
-      <div class="modal-body" style="padding:16px;background:var(--bg-surface-2)">
-        <div id="curtain-container" style="position:relative;width:100%;aspect-ratio:1;background:#000;border-radius:8px;overflow:hidden;box-shadow:var(--shadow-md)">
+      <div class="modal-body modal-body-padded">
+        <div id="curtain-container" class="curtain-container">
           <!-- Before (Grey/Dim) -->
-          <img id="modal-preview-img-before" style="width:100%;height:100%;object-fit:contain;opacity:0.4;filter:grayscale(1);">
+          <img id="modal-preview-img-before" class="preview-img-before" alt="Before enhancement preview">
           <!-- After (Full Color/Straightened) -->
-          <div id="curtain-after" style="position:absolute;top:0;left:0;width:100%;height:100%;clip-path:inset(0 0 0 50%);transition:none;">
-            <img id="modal-preview-img" style="width:100%;height:100%;object-fit:contain;">
+          <div id="curtain-after" class="curtain-after">
+            <img id="modal-preview-img" class="preview-img-after" alt="After enhancement preview">
           </div>
           <!-- Handle -->
-          <div id="curtain-handle" style="position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--accent);cursor:ew-resize;z-index:10;box-shadow:0 0 8px rgba(0,0,0,0.5)">
-            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:32px;height:32px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;box-shadow:var(--shadow-lg);border:2px solid white">↔</div>
+          <div id="curtain-handle" class="curtain-handle">
+            <div class="curtain-handle-knob">↔</div>
           </div>
         </div>
-        <p style="text-align:center;font-size:0.75rem;color:var(--text-secondary);margin-top:8px">Drag the slider to compare Before &amp; After</p>
+        <p class="modal-drag-help">Drag the slider to compare Before &amp; After</p>
       </div>
-      <div id="modal-actions" class="modal-actions" style="padding:16px;display:flex;gap:12px;justify-content:center;border-top:1px solid var(--border)"></div>
+      <div id="modal-actions" class="modal-actions modal-actions-centered"></div>
     </div>
   </div>
 
@@ -384,13 +392,13 @@
       </div>
       <div id="feedback-form-view" class="text-modal-content">
         <form onsubmit="handleFeedbackSubmit(event)">
-          <input type="text" id="fb-name" class="form-control" placeholder="Your Name" required style="margin-bottom:12px"/>
-          <input type="email" id="fb-email" class="form-control" placeholder="your@email.com" required style="margin-bottom:12px"/>
-          <textarea id="fb-desc" class="form-control" rows="4" placeholder="Your feedback..." required style="margin-bottom:12px"></textarea>
-          <button type="submit" class="btn btn-primary" style="width:100%">Submit</button>
+          <input type="text" id="fb-name" class="form-control mb-12" placeholder="Your Name" required />
+          <input type="email" id="fb-email" class="form-control mb-12" placeholder="your@email.com" required />
+          <textarea id="fb-desc" class="form-control mb-12" rows="4" placeholder="Your feedback..." required></textarea>
+          <button type="submit" class="btn btn-primary w-full">Submit</button>
         </form>
       </div>
-      <div id="feedback-success-view" class="text-modal-content" style="display:none;text-align:center">
+      <div id="feedback-success-view" class="text-modal-content feedback-success-view">
         <h3>✅ Thank you!</h3>
         <button class="btn btn-secondary" onclick="closeTextModal('feedback-modal')">Close</button>
       </div>
