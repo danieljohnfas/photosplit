@@ -286,3 +286,7 @@ tr:hover td { background: var(--bg-surface-2); }
 .tip-card-blue { margin-top: 40px; background: #ebf8ff; border-color: #90cdf4; }
 .fcard-h3 { margin-top: 0; }
 .fcard-ul { line-height: 1.8; }
+
+.ad-wrap-bottom { max-width: 860px; margin: 0 auto; padding: 0 24px 32px; }
+.hero-teal { background: linear-gradient(135deg, #1a1d23 0%, #319795 100%); }
+.feature-card-new { margin: 24px 0; padding: 24px; background: var(--bg-sunken); border-radius: var(--radius-lg); border: 1px solid var(--border); }
