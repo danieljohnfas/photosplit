@@ -2122,3 +2122,13 @@ kbd {
 .buy-btn { display: inline-block; padding: 10px 20px; background: #f90; color: #111; font-weight: bold; border-radius: 8px; text-decoration: none; margin-top: 10px; }
 .buy-btn:hover { background: #e80; }
 
+
+
+/* -- Affiliate Gear Section (site-wide) -- */
+.gear-section { background: var(--bg-sunken, #1a1d23); border-top: 1px solid var(--border); padding: 56px 24px 48px; }
+.gear-section-inner { max-width: 960px; margin: 0 auto; }
+.gear-section-title { text-align: center; font-size: 1.7rem; font-weight: 800; color: var(--text-primary, #fff); margin: 0 0 8px; }
+.gear-section-sub { text-align: center; color: var(--text-secondary, #94a3b8); font-size: 0.95rem; max-width: 600px; margin: 0 auto 32px; }
+.gear-cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.gear-cards-grid .product-card { margin: 0; }
+.affiliate-disclosure { text-align: center; font-size: 0.72rem; color: var(--text-muted, #555); margin-top: 24px; }
