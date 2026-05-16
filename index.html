@@ -169,13 +169,7 @@
       gtag('js', new Date());
       gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
 
-      var adScript = document.createElement('script');
-      adScript.id = 'adsense-script';
-      adScript.async = true;
-      adScript.crossOrigin = 'anonymous';
-      adScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2501499631331261';
-      document.head.appendChild(adScript);
-    }
+          }
   </script>
 
   <meta name="theme-color" content="#010101" />
@@ -238,13 +232,7 @@
     <article id="seo-content" class="seo-wrapper">
       <!-- AdSense &mdash; Below Hero -->
       <div style="max-width:900px;margin:var(--space-md) auto;padding:0 24px;">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-2501499631331261"
-             data-ad-slot="6556461216"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <div id="ezoic-pub-ad-placeholder-116"></div>
       </div>
 
       <!-- ═══ FEATURE HUB ════════════════════════════════════════════════════════════ -->
@@ -503,6 +491,13 @@
       localStorage.setItem("ps_counted", "true");
       new Image().src = "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
     }
+  </script>
+
+  <!-- Ezoic Ad Placement Init -->
+  <script>
+    ezstandalone.cmd.push(function() {
+      ezstandalone.showAds(116);
+    });
   </script>
 </body>
 </html>
