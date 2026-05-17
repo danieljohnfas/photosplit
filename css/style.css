@@ -137,8 +137,7 @@ body {
 #site-header {
   height: var(--header-h);
   background: var(--bg-glass);
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%); backdrop-filter: blur(24px) saturate(180%);
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
@@ -180,8 +179,7 @@ body {
 #site-header {
   height: var(--header-h);
   background: var(--bg-glass);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
   padding: 0 24px;
   display: flex;
@@ -292,7 +290,7 @@ body {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.5);
-  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
   z-index: 190;
   opacity: 0;
   pointer-events: none;
@@ -793,7 +791,7 @@ input[type="range"] {
   font-size: 0.65rem;
   color: #fff;
   transition: background var(--dur-fast);
-  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
 }
 .split-action-btn:hover { background: rgba(255,255,255,0.40); }
 
@@ -826,7 +824,7 @@ input[type="range"] {
   fill: rgba(99,102,241,0.06);
   stroke: var(--accent);
   stroke-width: 2;
-  rx: 3;
+  /* rx: 3; */
   cursor: move;
   transition: fill var(--dur-fast);
   vector-effect: non-scaling-stroke;
@@ -868,7 +866,7 @@ input[type="range"] {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.72);
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
   z-index: 200;
   display: flex;
   align-items: center;
@@ -944,7 +942,7 @@ input[type="range"] {
   display: flex;
   align-items: center;
   gap: 8px;
-  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
   max-width: 320px;
 }
 
@@ -988,7 +986,7 @@ kbd {
   align-items: center;
   gap: 6px;
   background: var(--bg-glass);
-  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
   border: 1px solid var(--border-strong);
   border-radius: 99px;
   padding: 5px 10px;
@@ -1064,7 +1062,7 @@ kbd {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.50);
-  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
   z-index: 999;
   display: none;
   align-items: center;
@@ -1120,7 +1118,7 @@ kbd {
 
 /* ── Generic Text Modals ──────────────────────────────────────────────────── */
 .text-modal-backdrop {
-  position: fixed; inset: 0; background: rgba(0,0,0,0.72); backdrop-filter: blur(8px);
+  position: fixed; inset: 0; background: rgba(0,0,0,0.72); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
   z-index: 400; display: none; align-items: center; justify-content: center;
 }
 .text-modal-backdrop.open { display: flex; animation: slideIn 0.2s; }
@@ -1320,8 +1318,7 @@ kbd {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.75);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
   z-index: 300;
   display: flex;
   align-items: center;
@@ -1471,7 +1468,7 @@ kbd {
   padding: 2px 6px;
   border-radius: 4px;
   font-variant-numeric: tabular-nums;
-  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
 }
 
 /* Controls inside preview pane */
@@ -1525,8 +1522,7 @@ kbd {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.72);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
   z-index: 300;
   display: flex;
   align-items: center;
@@ -1816,7 +1812,7 @@ kbd {
   background: rgba(255,255,255,0.07);
   color: #fff;
   border: 1px solid rgba(255,255,255,0.18);
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
 }
 #landing-hero-actions .btn-secondary:hover {
   background: rgba(255,255,255,0.13);
@@ -1835,7 +1831,7 @@ kbd {
   border-radius: var(--radius-lg);
   padding: 22px 16px;
   text-align: center;
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
   position: relative;
   overflow: hidden;
   transition: border-color 0.25s, transform 0.25s;
@@ -2182,3 +2178,6 @@ kbd {
 .convert-article { max-width: 860px; margin: 20px auto 40px; padding: 24px; background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px solid var(--border); }
 .drop-icon { font-size: 2.5rem; }
 .drop-text { font-weight: 700; font-size: 1rem; color: var(--text-primary); margin-top: 8px; }
+
+/* -- Ad Utility Classes -- */
+.ad-app-wrapper { max-width: 960px; margin: 32px auto 0; padding: 0 24px; }

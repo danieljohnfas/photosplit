@@ -7,8 +7,7 @@
 /* NAV */
 .site-nav {
   background: var(--bg-glass);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
   padding: 0 24px;
   display: flex;
@@ -288,6 +287,7 @@ tr:hover td { background: var(--bg-surface-2); }
 .fcard-ul { line-height: 1.8; }
 
 .ad-wrap-bottom { max-width: 860px; margin: 0 auto; padding: 0 24px 32px; }
+.ad-contact-wrapper { max-width: 860px; margin: 24px auto 0; padding: 0 24px; }
 .hero-teal { background: linear-gradient(135deg, #1a1d23 0%, #319795 100%); }
 .feature-card-new { margin: 24px 0; padding: 24px; background: var(--bg-sunken); border-radius: var(--radius-lg); border: 1px solid var(--border); }
 
