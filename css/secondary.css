@@ -290,3 +290,103 @@ tr:hover td { background: var(--bg-surface-2); }
 .ad-wrap-bottom { max-width: 860px; margin: 0 auto; padding: 0 24px 32px; }
 .hero-teal { background: linear-gradient(135deg, #1a1d23 0%, #319795 100%); }
 .feature-card-new { margin: 24px 0; padding: 24px; background: var(--bg-sunken); border-radius: var(--radius-lg); border: 1px solid var(--border); }
+
+/* ─── Amazon Affiliate Product Cards (site-wide) ─────────────────────────── */
+.product-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 30px 0;
+  background: var(--bg-surface, #fff);
+  align-items: center;
+  transition: box-shadow 0.2s ease;
+}
+.product-card:hover {
+  box-shadow: 0 4px 20px rgba(254,44,85,0.12);
+}
+.product-card img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+  padding: 10px;
+  flex-shrink: 0;
+  border: 1px solid #eee;
+}
+.product-info {
+  flex: 1;
+  min-width: 200px;
+}
+.product-info p {
+  margin: 0 0 4px;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+.product-title {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.buy-btn {
+  display: inline-block;
+  margin-top: 12px;
+  background: #ff9900;
+  color: #000;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.buy-btn:hover {
+  background: #e68a00;
+  color: #000;
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+.affiliate-disclosure {
+  font-size: 0.73rem;
+  color: var(--text-muted, #999);
+  font-style: italic;
+  margin-top: 12px;
+  text-align: center;
+}
+/* Gear section wrapper used on app/tool pages */
+.gear-section {
+  background: var(--bg-surface-2, #1a1d23);
+  border-top: 1px solid var(--border);
+  padding: 56px 24px 48px;
+}
+.gear-section-inner { max-width: 960px; margin: 0 auto; }
+.gear-section-title {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 8px;
+}
+.gear-section-sub {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+.gear-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.gear-cards-grid .product-card { margin: 0; }
+
+@media (max-width: 600px) {
+  .product-card { flex-direction: column; align-items: flex-start; }
+  .product-card img { width: 100%; height: 180px; }
+}

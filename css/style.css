@@ -2090,37 +2090,75 @@ kbd {
 @media (max-width: 600px) {
   .site-status-bar { flex-direction: column; gap: 12px; text-align: center; }
 }
- 
- / *    % %  E x t r a c t e d   I n l i n e   S t y l e s   f r o m   a p p . h t m l    % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %  * /  
- . l o g o - i m g   {   w i d t h :   3 2 p x ;   h e i g h t :   3 2 p x ;   }  
- . b t n - v o i c e - t o g g l e   {   m a r g i n - r i g h t :   1 2 p x ;   d i s p l a y :   f l e x ;   a l i g n - i t e m s :   c e n t e r ;   g a p :   6 p x ;   f o n t - w e i g h t :   7 0 0 ;   }  
- . h i d d e n - f i l e - i n p u t   {   d i s p l a y :   n o n e ;   }  
- . f i l m - m o d e - c o n t a i n e r   {   m a r g i n - t o p :   1 0 p x ;   b o r d e r - t o p :   1 p x   s o l i d   v a r ( - - b o r d e r ) ;   p a d d i n g - t o p :   1 0 p x ;   }  
- . f i l m - m o d e - l a b e l   {   d i s p l a y :   b l o c k ;   m a r g i n - b o t t o m :   5 p x ;   }  
- . u n d o - s c r u b b e r   {   w i d t h :   8 0 p x ;   c u r s o r :   p o i n t e r ;   a c c e n t - c o l o r :   v a r ( - - a c c e n t ) ;   }  
- . c a n v a s - w r a p p e r - h i d d e n   {   d i s p l a y :   n o n e ;   }  
- . m o d a l - h e a d e r - f l e x   {   d i s p l a y :   f l e x ;   j u s t i f y - c o n t e n t :   s p a c e - b e t w e e n ;   a l i g n - i t e m s :   c e n t e r ;   p a d d i n g :   1 6 p x ;   b o r d e r - b o t t o m :   1 p x   s o l i d   v a r ( - - b o r d e r ) ;   }  
- . m o d a l - t i t l e - t e x t   {   m a r g i n :   0 ;   f o n t - s i z e :   1 . 2 r e m ;   }  
- . m o d a l - b o d y - p a d d e d   {   p a d d i n g :   1 6 p x ;   b a c k g r o u n d :   v a r ( - - b g - s u r f a c e - 2 ) ;   }  
- . c u r t a i n - c o n t a i n e r   {   p o s i t i o n :   r e l a t i v e ;   w i d t h :   1 0 0 % ;   a s p e c t - r a t i o :   1 ;   b a c k g r o u n d :   # 0 0 0 ;   b o r d e r - r a d i u s :   8 p x ;   o v e r f l o w :   h i d d e n ;   b o x - s h a d o w :   v a r ( - - s h a d o w - m d ) ;   }  
- . p r e v i e w - i m g - b e f o r e   {   w i d t h :   1 0 0 % ;   h e i g h t :   1 0 0 % ;   o b j e c t - f i t :   c o n t a i n ;   o p a c i t y :   0 . 4 ;   f i l t e r :   g r a y s c a l e ( 1 ) ;   }  
- . c u r t a i n - a f t e r   {   p o s i t i o n :   a b s o l u t e ;   t o p :   0 ;   l e f t :   0 ;   w i d t h :   1 0 0 % ;   h e i g h t :   1 0 0 % ;   c l i p - p a t h :   i n s e t ( 0   0   0   5 0 % ) ;   t r a n s i t i o n :   n o n e ;   }  
- . p r e v i e w - i m g - a f t e r   {   w i d t h :   1 0 0 % ;   h e i g h t :   1 0 0 % ;   o b j e c t - f i t :   c o n t a i n ;   }  
- . c u r t a i n - h a n d l e   {   p o s i t i o n :   a b s o l u t e ;   t o p :   0 ;   b o t t o m :   0 ;   l e f t :   5 0 % ;   w i d t h :   2 p x ;   b a c k g r o u n d :   v a r ( - - a c c e n t ) ;   c u r s o r :   e w - r e s i z e ;   z - i n d e x :   1 0 ;   b o x - s h a d o w :   0   0   8 p x   r g b a ( 0 , 0 , 0 , 0 . 5 ) ;   }  
- . c u r t a i n - h a n d l e - k n o b   {   p o s i t i o n :   a b s o l u t e ;   t o p :   5 0 % ;   l e f t :   5 0 % ;   t r a n s f o r m :   t r a n s l a t e ( - 5 0 % ,   - 5 0 % ) ;   w i d t h :   3 2 p x ;   h e i g h t :   3 2 p x ;   b a c k g r o u n d :   v a r ( - - a c c e n t ) ;   b o r d e r - r a d i u s :   5 0 % ;   d i s p l a y :   f l e x ;   a l i g n - i t e m s :   c e n t e r ;   j u s t i f y - c o n t e n t :   c e n t e r ;   c o l o r :   w h i t e ;   b o x - s h a d o w :   v a r ( - - s h a d o w - l g ) ;   b o r d e r :   2 p x   s o l i d   w h i t e ;   }  
- . m o d a l - d r a g - h e l p   {   t e x t - a l i g n :   c e n t e r ;   f o n t - s i z e :   0 . 7 5 r e m ;   c o l o r :   v a r ( - - t e x t - s e c o n d a r y ) ;   m a r g i n - t o p :   8 p x ;   }  
- . m o d a l - a c t i o n s - c e n t e r e d   {   p a d d i n g :   1 6 p x ;   d i s p l a y :   f l e x ;   g a p :   1 2 p x ;   j u s t i f y - c o n t e n t :   c e n t e r ;   b o r d e r - t o p :   1 p x   s o l i d   v a r ( - - b o r d e r ) ;   }  
- . m b - 1 2   {   m a r g i n - b o t t o m :   1 2 p x ;   }  
- . w - f u l l   {   w i d t h :   1 0 0 % ;   }  
- . f e e d b a c k - s u c c e s s - v i e w   {   d i s p l a y :   n o n e ;   t e x t - a l i g n :   c e n t e r ;   }  
- 
-/* -- Affiliate Product Cards -- */
-.product-card { display: flex; flex-wrap: wrap; gap: 20px; border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin: 30px 0; background: var(--bg-surface-2); align-items: center; }
-.product-card img { width: 120px; height: 120px; object-fit: contain; border-radius: 8px; background: white; padding: 10px; }
+
+/* %% Extracted Inline Styles from app.html %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+.logo-img { width: 32px; height: 32px; }
+.btn-voice-toggle { margin-right: 12px; display: flex; align-items: center; gap: 6px; font-weight: 700; }
+.hidden-file-input { display: none; }
+.film-mode-container { margin-top: 10px; border-top: 1px solid var(--border); padding-top: 10px; }
+.film-mode-label { display: block; margin-bottom: 5px; }
+.undo-scrubber { width: 80px; cursor: pointer; accent-color: var(--accent); }
+.canvas-wrapper-hidden { display: none; }
+.modal-header-flex { display: flex; justify-content: space-between; align-items: center; padding: 16px; border-bottom: 1px solid var(--border); }
+.modal-title-text { margin: 0; font-size: 1.2rem; }
+.modal-body-padded { padding: 16px; background: var(--bg-surface-2); }
+.curtain-container { position: relative; width: 100%; aspect-ratio: 1; background: #000; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-md); }
+.preview-img-before { width: 100%; height: 100%; object-fit: contain; opacity: 0.4; filter: grayscale(1); }
+.curtain-after { position: absolute; top: 0; left: 0; width: 100%; height: 100%; clip-path: inset(0 0 0 50%); transition: none; }
+.preview-img-after { width: 100%; height: 100%; object-fit: contain; }
+.curtain-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: var(--accent); cursor: ew-resize; z-index: 10; box-shadow: 0 0 8px rgba(0,0,0,0.5); }
+.curtain-handle-knob { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 32px; height: 32px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; box-shadow: var(--shadow-lg); border: 2px solid white; }
+.modal-drag-help { text-align: center; font-size: 0.75rem; color: var(--text-secondary); margin-top: 8px; }
+.modal-actions-centered { padding: 16px; display: flex; gap: 12px; justify-content: center; border-top: 1px solid var(--border); }
+.mb-12 { margin-bottom: 12px; }
+.w-full { width: 100%; }
+.feedback-success-view { display: none; text-align: center; }
+
+/* ─── Amazon Affiliate Product Cards (site-wide) ─────────────────────────── */
+.product-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 30px 0;
+  background: var(--bg-surface-2);
+  align-items: center;
+  transition: box-shadow 0.2s ease;
+}
+.product-card:hover { box-shadow: 0 4px 20px rgba(254,44,85,0.12); }
+.product-card img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: white;
+  padding: 10px;
+  flex-shrink: 0;
+  border: 1px solid #eee;
+}
 .product-info { flex: 1; min-width: 200px; }
-.product-title { margin: 0 0 10px 0; font-size: 1.2rem; color: var(--accent); }
-.buy-btn { display: inline-block; padding: 10px 20px; background: #f90; color: #111; font-weight: bold; border-radius: 8px; text-decoration: none; margin-top: 10px; }
-.buy-btn:hover { background: #e80; }
+.product-info p { margin: 0 0 4px; color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; }
+.product-title { margin: 0 0 10px 0; font-size: 1.1rem; font-weight: 700; color: var(--text-primary); }
+.buy-btn {
+  display: inline-block;
+  margin-top: 12px;
+  background: #ff9900;
+  color: #000;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.buy-btn:hover { background: #e68a00; color: #000; transform: translateY(-1px); text-decoration: none; }
+.affiliate-disclosure { font-size: 0.73rem; color: var(--text-muted); font-style: italic; margin-top: 12px; text-align: center; }
+@media (max-width: 600px) {
+  .product-card { flex-direction: column; align-items: flex-start; }
+  .product-card img { width: 100%; height: 180px; }
+}
 
 
 
