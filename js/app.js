@@ -47,39 +47,6 @@ function triggerHaptic(type = 'light') {
 }
 
 
-/* ═══ PREMIUM ENGINE (Audio & Haptics) ══════════════════════════════════ */
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-let soundsMuted = localStorage.getItem('pss_sounds_muted') === 'true';
-
-function playSound(type) {
-  if (soundsMuted || audioCtx.state === 'suspended') return;
-  const osc = audioCtx.createOscillator();
-  const gain = audioCtx.createGain();
-  osc.connect(gain); gain.connect(audioCtx.destination);
-  
-  if (type === 'tick') {
-    osc.type = 'sine'; osc.frequency.setValueAtTime(880, audioCtx.currentTime);
-    gain.gain.setValueAtTime(0.1, audioCtx.currentTime); gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.05);
-    osc.start(); osc.stop(audioCtx.currentTime + 0.05);
-  } else if (type === 'snap') {
-    osc.type = 'triangle'; osc.frequency.setValueAtTime(440, audioCtx.currentTime);
-    gain.gain.setValueAtTime(0.2, audioCtx.currentTime); gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
-    osc.start(); osc.stop(audioCtx.currentTime + 0.1);
-  } else if (type === 'slide') {
-    osc.type = 'sine'; osc.frequency.setValueAtTime(220, audioCtx.currentTime);
-    osc.frequency.exponentialRampToValueAtTime(440, audioCtx.currentTime + 0.2);
-    gain.gain.setValueAtTime(0.1, audioCtx.currentTime); gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.2);
-    osc.start(); osc.stop(audioCtx.currentTime + 0.2);
-  }
-}
-
-function triggerHaptic(type = 'light') {
-  if (!navigator.vibrate) return;
-  if (type === 'light') navigator.vibrate(10);
-  else if (type === 'medium') navigator.vibrate([15, 30, 15]);
-  else if (type === 'heavy') navigator.vibrate(50);
-}
-
 
 /* ══════════════════════════════════════════════════════════════════════════ *
  *  CONSTANTS & CONFIG                                                        *
