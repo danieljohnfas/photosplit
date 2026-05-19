@@ -1,37 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="">
+
+<html data-theme="" lang="en">
 <head>
-  <!-- Ezoic Privacy & Integration Scripts -->
-  <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
-  <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
-  <script async src="https://www.ezojs.com/ezoic/sa.min.js"></script>
-  <script>
+<!-- Ezoic Privacy & Integration Scripts -->
+<script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+<script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+<script async="" src="https://www.ezojs.com/ezoic/sa.min.js"></script>
+<script>
       window.ezstandalone = window.ezstandalone || {};
       ezstandalone.cmd = ezstandalone.cmd || [];
   </script>
-  <script src="https://ezoicanalytics.com/analytics.js"></script>
-  <!-- End Ezoic Scripts -->
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <meta name="theme-color" content="#010101"/>
-  <title>Free Online Image Cropper &mdash; Crop Photos to Any Size | PhotoSplit Studio</title>
-  <meta name="description" content="Free online image cropper. Crop photos to any size or aspect ratio &mdash; freeform, square, 4:3, 16:9, and more. Works in your browser, no upload needed, 100% private."/>
-  <meta name="keywords" content="image cropper online free, crop photo online, crop image to square, crop picture free, online photo crop tool, aspect ratio crop"/>
-  <meta name="robots" content="index,follow"/>
-  <link rel="canonical" href="https://photosplitstudio.com/crop"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Free Online Image Cropper &mdash; PhotoSplit Studio"/>
-  <meta property="og:description" content="Crop any photo to any size or aspect ratio for free. Runs entirely in your browser."/>
-  <meta property="og:url" content="https://photosplitstudio.com/crop"/>
-  <meta property="og:image" content="https://photosplitstudio.com/assets/images/og-image.png"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-  <link rel="icon" href="/assets/images/logo.png" type="image/png"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link rel="stylesheet" href="/css/style.css"/>
-
-  <!-- Scripts loaded dynamically after consent -->
-  <script>
+<script src="https://ezoicanalytics.com/analytics.js"></script>
+<!-- End Ezoic Scripts -->
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<meta content="#010101" name="theme-color"/>
+<title>Free Online Image Cropper — Crop Photos to Any Size | PhotoSplit Studio</title>
+<meta content="Free online image cropper. Crop photos to any size or aspect ratio — freeform, square, 4:3, 16:9, and more. Works in your browser, no upload needed, 100% private." name="description"/>
+<meta content="image cropper online free, crop photo online, crop image to square, crop picture free, online photo crop tool, aspect ratio crop" name="keywords"/>
+<meta content="index,follow" name="robots"/>
+<link href="https://photosplitstudio.com/crop" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="Free Online Image Cropper — PhotoSplit Studio" property="og:title"/>
+<meta content="Crop any photo to any size or aspect ratio for free. Runs entirely in your browser." property="og:description"/>
+<meta content="https://photosplitstudio.com/crop" property="og:url"/>
+<meta content="https://photosplitstudio.com/assets/images/og-image.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="/assets/images/logo.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="/css/style.css" rel="stylesheet"/>
+<!-- Scripts loaded dynamically after consent -->
+<script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     function loadGoogleScripts() {
@@ -46,8 +46,7 @@
 
           }
   </script>
-
-  <style>
+<style>
     .crop-tool { max-width: 980px; margin: 0 auto; padding: 32px 24px 60px; }
     .ratio-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
     .ratio-btn { padding: 7px 14px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-secondary); font-family: inherit; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: all 0.12s; }
@@ -79,168 +78,174 @@
   </style>
 </head>
 <body>
-  <header id="site-header">
-    <button class="icon-btn" id="sidebar-toggle" aria-label="Toggle navigation">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M3 12h18M3 6h18M3 18h18" />
-      </svg>
-    </button>
-    <a href="/" class="logo">
-      <img src="/assets/images/logo-animated.svg" alt="PhotoSplit Logo" class="nav-icon">
+<header id="site-header">
+<button aria-label="Toggle navigation" class="icon-btn" id="sidebar-toggle">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20">
+<path d="M3 12h18M3 6h18M3 18h18"></path>
+</svg>
+</button>
+<a class="logo" href="/">
+<img alt="PhotoSplit Logo" class="nav-icon" src="/assets/images/logo-animated.svg"/>
       PhotoSplit Studio
     </a>
-    <div class="header-spacer"></div>
-    <div class="privacy-badge">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      </svg>
-      <span>100% Private &middot; No Uploads</span>
-    </div>
-        <nav class="main-nav">
-      <a href="/app">Split Photos</a>
-      <a href="/resize">Resize</a>
-      <a href="/blog/">Blog</a>
-      <a href="/tips">Tips</a>
-      <a href="/about">About</a>
-      <a href="/contact">Contact</a>
-    </nav>
-    <button class="icon-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">??</button>
-  </header>
-
-  <main>
-    <section class="hero-utility">
-      <h1 >Free Online Image Cropper</h1>
-      <p >Crop any photo to a custom size or aspect ratio instantly. Free & private.</p>
-    </section>
-
-    <!-- AdSense &mdash; Below Hero -->
-    <div style="max-width:980px;margin:var(--space-md) auto;padding:0 24px;">
-      <div id="ezoic-pub-ad-placeholder-115"></div>
-    </div>
-
-    <div class="crop-tool">
-      <div class="section-label">Aspect Ratio Presets</div>
-      <div class="ratio-row">
-        <button class="ratio-btn active" data-ratio="free">Freeform</button>
-        <button class="ratio-btn" data-ratio="1:1">1:1 Square</button>
-        <button class="ratio-btn" data-ratio="4:3">4:3</button>
-        <button class="ratio-btn" data-ratio="16:9">16:9</button>
-        <button class="ratio-btn" data-ratio="9:16">9:16 Story</button>
-        <button class="ratio-btn" data-ratio="3:2">3:2</button>
-      </div>
-
-      <div class="crop-workspace">
-        <div>
-          <div id="crop-upload-zone" onclick="document.getElementById('crop-file-input').click()">
-            <div style="font-size:2.5rem">??</div>
-            <div style="font-weight:700;font-size:1rem;color:var(--text-primary);margin-top:8px">Drop image here or click to upload</div>
-            <p>JPEG, PNG, WebP supported � or paste with Ctrl+V</p>
-            <input type="file" id="crop-file-input" accept="image/*" style="display:none"/>
-          </div>
-          <div id="crop-canvas-wrap">
-            <canvas id="crop-img-canvas"></canvas>
-            <div id="crop-selection">
-              <div class="crop-handle nw" data-dir="nw"></div>
-              <div class="crop-handle ne" data-dir="ne"></div>
-              <div class="crop-handle sw" data-dir="sw"></div>
-              <div class="crop-handle se" data-dir="se"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="crop-panel">
-          <div>
-            <div class="section-label" style="margin-bottom:10px">Crop Area</div>
-            <div class="crop-dims-row">
-              <div class="dim-group"><label>X</label><input type="number" id="crop-x" value="0"/></div>
-              <div class="dim-group"><label>Y</label><input type="number" id="crop-y" value="0"/></div>
-            </div>
-            <div class="crop-dims-row" style="margin-top:8px">
-              <div class="dim-group"><label>Width</label><input type="number" id="crop-w" value="0"/></div>
-              <span>�</span>
-              <div class="dim-group"><label>Height</label><input type="number" id="crop-h" value="0"/></div>
-            </div>
-          </div>
-          <div>
-            <label>Preview</label>
-            <div class="crop-preview"><canvas id="crop-preview-canvas"></canvas></div>
-          </div>
-          <button class="btn-crop-action" id="btn-crop-download" disabled>?? Download Cropped Image</button>
-        </div>
-      </div>
-    </div>
-
-    <article style="max-width:980px;margin:20px auto 40px;padding:24px;background:var(--bg-surface);border-radius:var(--radius-lg);border:1px solid var(--border);">
-      <h2 style="margin-top:0">Free Online Image Cropper</h2>
-      <p style="color:var(--text-secondary);line-height:1.6">Cropping an image is the easiest way to improve composition or fit a photo into a specific frame. PhotoSplit Studio's free online image cropper lets you quickly trim unwanted edges, focus on your subject, and change the aspect ratio of any photo without installing software. Since all processing happens in your browser, your photos remain 100% private and are never uploaded to our servers.</p>
-      
-      <h3 style="margin-top:20px">Common Aspect Ratios</h3>
-      <ul style="color:var(--text-secondary);line-height:1.6;padding-left:20px">
-        <li><strong>1:1 Square:</strong> The classic format for Instagram posts and profile pictures.</li>
-        <li><strong>16:9:</strong> The standard widescreen ratio for YouTube thumbnails, presentations, and desktop wallpapers.</li>
-        <li><strong>4:3:</strong> The default aspect ratio for most smartphone cameras and digital point-and-shoots.</li>
-        <li><strong>9:16:</strong> Vertical format used for Instagram Stories, TikTok, and YouTube Shorts.</li>
-      </ul>
-    </article>
-  </main>
-
-  
-<section class="gear-section">
-  <div class="gear-section-inner">
-    <h2 class="gear-section-title">Recommended Scanning Hardware</h2>
-    <p class="gear-section-sub">For best cropping results, start with a clean, high-resolution scan from one of these recommended flatbed scanners.</p>
-    <div class="gear-cards-grid">
-      
-  <div class="product-card">
-    <img src="https://m.media-amazon.com/images/I/61kYgDk3VKL._AC_SL1500_.jpg" alt="Epson Perfection V600 Scanner" />
-    <div class="product-info">
-      <h3 class="product-title">Epson Perfection V600</h3>
-      <p>The gold standard for home photo archiving. Massive flatbed area, outstanding color accuracy, and built-in film negative scanning.</p>
-      <a href="https://www.amazon.com/dp/B002OEBMRU?tag=photoid03-20" target="_blank" rel="sponsored noopener" class="buy-btn">View on Amazon</a>
-    </div>
-  </div>
-      
-  <div class="product-card">
-    <img src="https://m.media-amazon.com/images/I/71B5c7xH-JL._AC_SL1500_.jpg" alt="Canon CanoScan LiDE 400" />
-    <div class="product-info">
-      <h3 class="product-title">Canon CanoScan LiDE 400</h3>
-      <p>A sleek, affordable flatbed powered by a single USB-C cable. Incredibly fast at scanning prints and documents at up to 4800 DPI.</p>
-      <a href="https://www.amazon.com/dp/B07G5X1N1H?tag=photoid03-20" target="_blank" rel="sponsored noopener" class="buy-btn">View on Amazon</a>
-    </div>
-  </div>
-    </div>
-    <p class="affiliate-disclosure">As an Amazon Associate, PhotoSplit Studio earns from qualifying purchases.</p>
-  </div>
+<div class="header-spacer"></div>
+<div class="privacy-badge">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14">
+<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+</svg>
+<span>100% Private · No Uploads</span>
+</div>
+<nav class="main-nav">
+<a href="/app">Split Photos</a>
+<a href="/resize">Resize</a>
+<a href="/blog/">Blog</a>
+<a href="/tips">Tips</a>
+<a href="/about">About</a>
+<a href="/contact">Contact</a>
+</nav>
+<button class="icon-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">??</button>
+</header>
+<main>
+<section class="hero-utility">
+<h1>Free Online Image Cropper</h1>
+<p>Crop any photo to a custom size or aspect ratio instantly. Free &amp; private.</p>
 </section>
-
+<!-- AdSense &mdash; Below Hero -->
+<div style="max-width:980px;margin:var(--space-md) auto;padding:0 24px;">
+<div id="ezoic-pub-ad-placeholder-115"></div>
+</div>
+<div class="crop-tool">
+<div class="section-label">Aspect Ratio Presets</div>
+<div class="ratio-row">
+<button class="ratio-btn active" data-ratio="free">Freeform</button>
+<button class="ratio-btn" data-ratio="1:1">1:1 Square</button>
+<button class="ratio-btn" data-ratio="4:3">4:3</button>
+<button class="ratio-btn" data-ratio="16:9">16:9</button>
+<button class="ratio-btn" data-ratio="9:16">9:16 Story</button>
+<button class="ratio-btn" data-ratio="3:2">3:2</button>
+</div>
+<div class="crop-workspace">
+<div>
+<div id="crop-upload-zone" onclick="document.getElementById('crop-file-input').click()">
+<div style="font-size:2.5rem">??</div>
+<div style="font-weight:700;font-size:1rem;color:var(--text-primary);margin-top:8px">Drop image here or click to upload</div>
+<p>JPEG, PNG, WebP supported � or paste with Ctrl+V</p>
+<input accept="image/*" id="crop-file-input" style="display:none" type="file"/>
+</div>
+<div id="crop-canvas-wrap">
+<canvas id="crop-img-canvas"></canvas>
+<div id="crop-selection">
+<div class="crop-handle nw" data-dir="nw"></div>
+<div class="crop-handle ne" data-dir="ne"></div>
+<div class="crop-handle sw" data-dir="sw"></div>
+<div class="crop-handle se" data-dir="se"></div>
+</div>
+</div>
+</div>
+<div class="crop-panel">
+<div>
+<div class="section-label" style="margin-bottom:10px">Crop Area</div>
+<div class="crop-dims-row">
+<div class="dim-group"><label>X</label><input id="crop-x" type="number" value="0"/></div>
+<div class="dim-group"><label>Y</label><input id="crop-y" type="number" value="0"/></div>
+</div>
+<div class="crop-dims-row" style="margin-top:8px">
+<div class="dim-group"><label>Width</label><input id="crop-w" type="number" value="0"/></div>
+<span>�</span>
+<div class="dim-group"><label>Height</label><input id="crop-h" type="number" value="0"/></div>
+</div>
+</div>
+<div>
+<label>Preview</label>
+<div class="crop-preview"><canvas id="crop-preview-canvas"></canvas></div>
+</div>
+<button class="btn-crop-action" disabled="" id="btn-crop-download">?? Download Cropped Image</button>
+</div>
+</div>
+</div>
+<article style="max-width:980px;margin:20px auto 40px;padding:24px;background:var(--bg-surface);border-radius:var(--radius-lg);border:1px solid var(--border);">
+<h2 style="margin-top:0">Free Online Image Cropper</h2>
+<p style="color:var(--text-secondary);line-height:1.6">Cropping an image is the easiest way to improve composition or fit a photo into a specific frame. PhotoSplit Studio's free online image cropper lets you quickly trim unwanted edges, focus on your subject, and change the aspect ratio of any photo without installing software. Since all processing happens in your browser, your photos remain 100% private and are never uploaded to our servers.</p>
+<h3 style="margin-top:20px">Common Aspect Ratios</h3>
+<ul style="color:var(--text-secondary);line-height:1.6;padding-left:20px">
+<li><strong>1:1 Square:</strong> The classic format for Instagram posts and profile pictures.</li>
+<li><strong>16:9:</strong> The standard widescreen ratio for YouTube thumbnails, presentations, and desktop wallpapers.</li>
+<li><strong>4:3:</strong> The default aspect ratio for most smartphone cameras and digital point-and-shoots.</li>
+<li><strong>9:16:</strong> Vertical format used for Instagram Stories, TikTok, and YouTube Shorts.</li>
+</ul>
+</article>
+</main>
+<section class="gear-section">
+<div class="gear-section-inner">
+<h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
+<p class="gear-section-sub">Pair PhotoSplit Studio with the best hardware for fast, high-quality archiving and secure backups.</p>
+<div class="gear-cards-grid">
+<div class="product-card">
+<span class="product-badge">Best Overall</span>
+<img alt="Epson Perfection V600 Scanner" src="https://m.media-amazon.com/images/I/61kYgDk3VKL._AC_SL1500_.jpg"/>
+<div class="product-info">
+<h3 class="product-title">Epson Perfection V600</h3>
+<p>The gold standard for home archiving. Features a massive flatbed area, stunning color depth, and built-in scanning for film negatives and slides.</p>
+<a class="buy-btn" href="https://www.amazon.com/dp/B002OEBMRU?tag=photoid03-20" rel="sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<span class="product-badge">Budget Pick</span>
+<img alt="Canon CanoScan LiDE 400" src="https://m.media-amazon.com/images/I/71B5c7xH-JL._AC_SL1500_.jpg"/>
+<div class="product-info">
+<h3 class="product-title">Canon CanoScan LiDE 400</h3>
+<p>An incredibly thin, USB-powered flatbed scanner. Perfect for fast, high-resolution document and photo scanning without cluttering your desk.</p>
+<a class="buy-btn" href="https://www.amazon.com/dp/B07G5X1N1H?tag=photoid03-20" rel="sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<span class="product-badge">Best Backup HDD</span>
+<img alt="WD 4TB My Passport Portable External Hard Drive" src="https://m.media-amazon.com/images/I/71P8HHm5H8L._AC_SL1500_.jpg"/>
+<div class="product-info">
+<h3 class="product-title">WD 4TB My Passport</h3>
+<p>The ultimate local backup solution. This slim, high-capacity drive holds over 400,000 high-resolution scans so your archive is always safe offline.</p>
+<a class="buy-btn" href="https://www.amazon.com/dp/B07VTW2LPX?tag=photoid03-20" rel="sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+<div class="product-card">
+<span class="product-badge">Fastest SSD</span>
+<img alt="Samsung T7 Portable SSD 2TB" src="https://m.media-amazon.com/images/I/61JsNjh5nTL._AC_SL1500_.jpg"/>
+<div class="product-info">
+<h3 class="product-title">Samsung T7 SSD 2TB</h3>
+<p>Super-fast transfer speeds of up to 1,050 MB/s. Shock-resistant and pocket-sized, making it the perfect off-site backup for quick syncing.</p>
+<a class="buy-btn" href="https://www.amazon.com/dp/B0874XWW23?tag=photoid03-20" rel="sponsored noopener" target="_blank">View on Amazon</a>
+</div>
+</div>
+</div>
+<p class="affiliate-disclosure">As an Amazon Associate, PhotoSplit Studio earns from qualifying purchases.</p>
+</div>
+</section>
 <footer class="site-footer">
-    <div class="footer-inner">
-            <div class="footer-links">
-        <a href="/app">App</a>
-        <a href="/blog/">Blog</a>
-        <a href="/tips">Scanning Tips</a>
-        <a href="/contact">Contact</a>
-        <a href="/terms">Terms</a>
-        <a href="/privacy">Privacy</a>
-        <a href="/about">About</a>
-        <a href="#" onclick="openTextModal('feedback-modal', event)">Feedback</a>
-      </div>
-      <div class="footer-copy">&copy; 2026 PhotoSplit Studio. All rights reserved.</div>
-    </div>
-  <div class="site-status-bar"><div class="status-item"><span class="status-label">Is it dark outside?</span><span id="dark-status-answer" class="status-value">...</span></div><div class="status-item"><span class="status-label">Global Visitors:</span><img src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visitors&color=%23fe2c55&style=flat-square" alt="Visitor Count" class="visitor-badge"></div></div><script>(function(){ var h=new Date().getHours(); var ans=(h>=18||h<6)?"YES":"NO"; var el=document.getElementById("dark-status-answer"); if(el) el.textContent=ans; })();</script>
-  </footer>
-
-  <div id="cookie-consent" role="dialog">
-    <div id="cookie-consent-inner">
-      <p>?? We use cookies to improve your experience. See our <a href="/privacy">Privacy Policy</a>.</p>
-      <div id="cookie-consent-actions">
-        <button id="cookie-decline" class="cookie-btn">Decline</button>
-        <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept All</button>
-      </div>
-    </div>
-  </div>
-
-  <script>
+<div class="footer-inner">
+<div class="footer-links">
+<a href="/app">App</a>
+<a href="/blog/">Blog</a>
+<a href="/tips">Scanning Tips</a>
+<a href="/contact">Contact</a>
+<a href="/terms">Terms</a>
+<a href="/privacy-policy">Privacy</a>
+<a href="/about">About</a>
+<a href="#" onclick="openTextModal('feedback-modal', event)">Feedback</a>
+</div>
+<div class="footer-copy">© 2026 PhotoSplit Studio. All rights reserved.</div>
+</div>
+<div class="site-status-bar"><div class="status-item"><span class="status-label">Is it dark outside?</span><span class="status-value" id="dark-status-answer">...</span></div><div class="status-item"><span class="status-label">Global Visitors:</span><img alt="Visitor Count" class="visitor-badge" src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"/></div></div><script>(function(){ var h=new Date().getHours(); var ans=(h>=18||h<6)?"YES":"NO"; var el=document.getElementById("dark-status-answer"); if(el) el.textContent=ans; })();</script>
+</footer>
+<div id="cookie-consent" role="dialog">
+<div id="cookie-consent-inner">
+<p>?? We use cookies to improve your experience. See our <a href="/privacy-policy">Privacy Policy</a>.</p>
+<div id="cookie-consent-actions">
+<button class="cookie-btn" id="cookie-decline">Decline</button>
+<button class="cookie-btn cookie-btn-accept" id="cookie-accept">Accept All</button>
+</div>
+</div>
+</div>
+<script>
     (function () {
       let srcImg = null, displayScale = 1, sel = { x: 0, y: 0, w: 0, h: 0 }, ratio = null, dragging = null, drawing = false, drawStart = null;
       const zone = document.getElementById('crop-upload-zone'), fileInput = document.getElementById('crop-file-input'), wrap = document.getElementById('crop-canvas-wrap'), imgCanvas = document.getElementById('crop-img-canvas'), ctx = imgCanvas.getContext('2d'), selEl = document.getElementById('crop-selection'), previewCanvas = document.getElementById('crop-preview-canvas'), pctx = previewCanvas.getContext('2d'), btnDl = document.getElementById('btn-crop-download');
@@ -331,14 +336,11 @@
       };
     }());
   </script>
-
-  <!-- Ezoic Ad Placement Init -->
-  <script>
+<!-- Ezoic Ad Placement Init -->
+<script>
     ezstandalone.cmd.push(function() {
       ezstandalone.showAds(115);
     });
   </script>
 </body>
 </html>
-
-

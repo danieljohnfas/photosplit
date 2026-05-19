@@ -1,0 +1,12 @@
+# Exclude development files, git configurations, and other non-production assets from being uploaded to Cloudflare Pages/Workers Assets
+.git
+.gitattributes
+.gitignore
+.wrangler
+README.md
+amazon_audit_report.md
+fix_lint.ps1
+wrangler.jsonc
+.idea/
+.vscode/
+scratch/
