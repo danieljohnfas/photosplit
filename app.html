@@ -115,6 +115,7 @@
 <!-- meta theme-color removed due to lack of support -->
 <link href="/assets/images/logo.png" rel="icon" type="image/png"/>
 <link href="/css/style.css" rel="stylesheet"/>
+<script src="/js/gear.js" defer></script>
 <link href="/css/style-premium.css" rel="stylesheet"/>
 <script defer="" src="/js/premium.js"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -150,7 +151,7 @@
 <a href="/contact">Contact</a>
 </nav>
 <button aria-label="Toggle sounds" class="icon-btn" id="sound-toggle" title="Mute sounds">🔊</button>
-<button class="icon-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">🌓</button>
+<button class="icon-btn" id="theme-toggle" title="Toggle Dark/Light Mode">🌓</button>
 <button aria-label="Show keyboard shortcuts" class="icon-btn" id="btn-shortcuts" title="Keyboard shortcuts">
 <svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
 <rect height="12" rx="2" width="20" x="2" y="6"></rect>
@@ -218,6 +219,18 @@
 <option value="color">Color Negative (C-41)</option>
 <option value="slide">Slide / Positive (E-6)</option>
 </select>
+<div id="negative-pro-tools" style="display:none; flex-direction: column; gap: 8px; margin-top: 8px;">
+  <button class="btn btn-secondary btn-sm" id="btn-pick-film-base" title="Click an orange/unexposed area of the film to calibrate colors">
+    🎯 Pick Film Base
+  </button>
+  <div class="toggle-row">
+    <span class="toggle-label" style="font-size:0.75rem">Enhance Details (CLAHE)</span>
+    <label class="toggle" aria-label="Use CLAHE for better detail in negatives">
+      <input type="checkbox" id="negative-clahe-toggle" checked />
+      <span class="toggle-slider"></span>
+    </label>
+  </div>
+</div>
 </div>
 </section>
 <section class="sidebar-section">
@@ -297,9 +310,10 @@
 </section>
 </main>
 <div id="zoom-controls">
-<button class="icon-btn" onclick="zoomOut()">−</button>
+<button class="icon-btn" id="btn-zoom-out">−</button>
 <span id="zoom-label">100%</span>
-<button class="icon-btn" onclick="zoomIn()">+</button>
+<button class="icon-btn" id="btn-zoom-in">+</button>
+<button class="icon-btn" id="btn-zoom-fit" title="Fit to Screen" style="font-size: 0.75rem; padding: 2px 6px; margin-left: 4px;">Fit</button>
 </div>
 </div>
 <!-- Ezoic Ad — App Page -->
@@ -310,44 +324,7 @@
 <div class="gear-section-inner">
 <h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
 <p class="gear-section-sub">Pair PhotoSplit Studio with the best hardware for fast, high-quality archiving and secure backups.</p>
-<div class="gear-cards-grid">
-<div class="product-card">
-<span class="product-badge">Best Overall</span>
-<img alt="Epson Perfection V600 Scanner" src="/assets/images/epson-v600.png"/>
-<div class="product-info">
-<h3 class="product-title">Epson Perfection V600</h3>
-<p>The gold standard for home archiving. Features a massive flatbed area, stunning color depth, and built-in scanning for film negatives and slides.</p>
-<a class="buy-btn" href="https://www.amazon.com/dp/B002OEBMRU?tag=photoid03-20" rel="sponsored noopener" target="_blank">View on Amazon</a>
-</div>
-</div>
-<div class="product-card">
-<span class="product-badge">Budget Pick</span>
-<img alt="Canon CanoScan LiDE 400" src="/assets/images/canon-lide400.png"/>
-<div class="product-info">
-<h3 class="product-title">Canon CanoScan LiDE 400</h3>
-<p>An incredibly thin, USB-powered flatbed scanner. Perfect for fast, high-resolution document and photo scanning without cluttering your desk.</p>
-<a class="buy-btn" href="https://www.amazon.com/dp/B07G5X1N1H?tag=photoid03-20" rel="sponsored noopener" target="_blank">View on Amazon</a>
-</div>
-</div>
-<div class="product-card">
-<span class="product-badge">Best Backup HDD</span>
-<img alt="WD 4TB My Passport Portable External Hard Drive" src="/assets/images/wd-my-passport.png"/>
-<div class="product-info">
-<h3 class="product-title">WD 4TB My Passport</h3>
-<p>The ultimate local backup solution. This slim, high-capacity drive holds over 400,000 high-resolution scans so your archive is always safe offline.</p>
-<a class="buy-btn" href="https://www.amazon.com/dp/B07VTW2LPX?tag=photoid03-20" rel="sponsored noopener" target="_blank">View on Amazon</a>
-</div>
-</div>
-<div class="product-card">
-<span class="product-badge">Fastest SSD</span>
-<img alt="Samsung T7 Portable SSD 2TB" src="/assets/images/samsung-t7.png"/>
-<div class="product-info">
-<h3 class="product-title">Samsung T7 SSD 2TB</h3>
-<p>Super-fast transfer speeds of up to 1,050 MB/s. Shock-resistant and pocket-sized, making it the perfect off-site backup for quick syncing.</p>
-<a class="buy-btn" href="https://www.amazon.com/dp/B0874XWW23?tag=photoid03-20" rel="sponsored noopener" target="_blank">View on Amazon</a>
-</div>
-</div>
-</div>
+<div class="gear-cards-grid"></div>
 <p class="affiliate-disclosure">As an Amazon Associate, PhotoSplit Studio earns from qualifying purchases.</p>
 </div>
 </section>
@@ -359,7 +336,7 @@
 <a href="/tips">Scanning Tips</a>
 <a href="/contact">Contact</a>
 <a href="/terms">Terms</a>
-<a href="/privacy">Privacy</a>
+<a href="/privacy-policy">Privacy</a>
 <a href="/about">About</a>
 <a href="#" onclick="openTextModal('feedback-modal', event)">Feedback</a>
 </div>
@@ -438,7 +415,7 @@
 <script src="/js/app.js"></script>
 <div id="cookie-consent" role="dialog">
 <div id="cookie-consent-inner">
-<p>🍪 We use cookies to improve your experience. See our <a href="/privacy">Privacy Policy</a>.</p>
+<p>🍪 We use cookies to improve your experience. See our <a href="/privacy-policy">Privacy Policy</a>.</p>
 <div id="cookie-consent-actions">
 <button class="cookie-btn" id="cookie-decline">Decline</button>
 <button class="cookie-btn cookie-btn-accept" id="cookie-accept">Accept All</button>
@@ -506,5 +483,11 @@
       new Image().src = "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
     }
   </script>
+<div id="toast-container"></div>
+<div id="global-spinner">
+  <div class="spinner-ring"></div>
+  <div id="global-spinner-msg">Processing…</div>
+</div>
 </body>
 </html>
+

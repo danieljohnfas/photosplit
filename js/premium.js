@@ -47,11 +47,11 @@ const PremiumEngine = {
     if (this.isListening) {
       this.recognition.stop();
       this.isListening = false;
-      UIController.showToast('Voice control OFF', 'info', 1500);
+      if (typeof showToast === 'function') showToast('Voice control OFF', 'info', 1500);
     } else {
       this.recognition.start();
       this.isListening = true;
-      UIController.showToast('Listening for commands...', 'success', 2000);
+      if (typeof showToast === 'function') showToast('🎙️ Listening for commands…', 'success', 2000);
     }
     this.updateVoiceUI();
   },
@@ -68,7 +68,7 @@ const PremiumEngine = {
     if (cmd.includes('scan') || cmd.includes('split') || cmd.includes('detect')) {
       if (typeof runDetection === 'function') runDetection();
     } else if (cmd.includes('save') || cmd.includes('download') || cmd.includes('export')) {
-      if (typeof saveAll === 'function') saveAll();
+      if (typeof ExportManager !== 'undefined') ExportManager.saveAll();
     } else if (cmd.includes('zoom in')) {
       if (typeof zoomIn === 'function') zoomIn();
     } else if (cmd.includes('zoom out')) {

@@ -14,28 +14,37 @@
 'use strict';
 
 /* ═══ PREMIUM ENGINE (Audio & Haptics) ══════════════════════════════════ */
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+let audioCtx = null;
+function _getAudioCtx() {
+  if (!audioCtx) {
+    try {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    } catch (e) { /* browser blocks audio — silently skip */ }
+  }
+  return audioCtx;
+}
 let soundsMuted = localStorage.getItem('pss_sounds_muted') === 'true';
 
 function playSound(type) {
-  if (soundsMuted || audioCtx.state === 'suspended') return;
-  const osc = audioCtx.createOscillator();
-  const gain = audioCtx.createGain();
-  osc.connect(gain); gain.connect(audioCtx.destination);
+  const ctx = _getAudioCtx();
+  if (!ctx || soundsMuted || ctx.state === 'suspended') return;
+  const osc = ctx.createOscillator();
+  const gain = ctx.createGain();
+  osc.connect(gain); gain.connect(ctx.destination);
   
   if (type === 'tick') {
-    osc.type = 'sine'; osc.frequency.setValueAtTime(880, audioCtx.currentTime);
-    gain.gain.setValueAtTime(0.1, audioCtx.currentTime); gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.05);
-    osc.start(); osc.stop(audioCtx.currentTime + 0.05);
+    osc.type = 'sine'; osc.frequency.setValueAtTime(880, ctx.currentTime);
+    gain.gain.setValueAtTime(0.1, ctx.currentTime); gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.05);
+    osc.start(); osc.stop(ctx.currentTime + 0.05);
   } else if (type === 'snap') {
-    osc.type = 'triangle'; osc.frequency.setValueAtTime(440, audioCtx.currentTime);
-    gain.gain.setValueAtTime(0.2, audioCtx.currentTime); gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
-    osc.start(); osc.stop(audioCtx.currentTime + 0.1);
+    osc.type = 'triangle'; osc.frequency.setValueAtTime(440, ctx.currentTime);
+    gain.gain.setValueAtTime(0.2, ctx.currentTime); gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.1);
+    osc.start(); osc.stop(ctx.currentTime + 0.1);
   } else if (type === 'slide') {
-    osc.type = 'sine'; osc.frequency.setValueAtTime(220, audioCtx.currentTime);
-    osc.frequency.exponentialRampToValueAtTime(440, audioCtx.currentTime + 0.2);
-    gain.gain.setValueAtTime(0.1, audioCtx.currentTime); gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.2);
-    osc.start(); osc.stop(audioCtx.currentTime + 0.2);
+    osc.type = 'sine'; osc.frequency.setValueAtTime(220, ctx.currentTime);
+    osc.frequency.exponentialRampToValueAtTime(440, ctx.currentTime + 0.2);
+    gain.gain.setValueAtTime(0.1, ctx.currentTime); gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.2);
+    osc.start(); osc.stop(ctx.currentTime + 0.2);
   }
 }
 
@@ -141,7 +150,7 @@ const DOM = {
   modalPreviewImg:  () => $('modal-preview-img'),
   modalActions:     () => $('modal-actions'),
   toastContainer:   () => $('toast-container'),
-  darkToggle:       () => $('dark-toggle'),
+  darkToggle:       () => $('theme-toggle'),
   zoomControls:     () => $('zoom-controls'),
   zoomLabel:        () => $('zoom-label'),
   globalSpinner:    () => $('global-spinner'),
@@ -168,7 +177,7 @@ const DOM = {
   negativeProTools: () => $('negative-pro-tools'),
   btnPickFilmBase:  () => $('btn-pick-film-base'),
   negativeClaheToggle: () => $('negative-clahe-toggle'),
-  convertNegativeToggle: () => $('convert-negative-toggle'),
+  // NOTE: film negative mode is driven by filmTypeSelect (not a separate toggle)
   sharpenToggle:    () => $('sharpen-toggle'),
   sharpenAmountRow: () => $('sharpen-amount-row'),
   sharpenAmountSlider: () => $('sharpen-amount-slider'),
@@ -724,9 +733,11 @@ async function runDetection() {
   const ctx = canvas.getContext('2d', { willReadFrequently: true });
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
-  // Negatives have a dark background — invert a copy so the bright-background
-  // OpenCV pipeline can still detect photo boundaries correctly.
-  const isNegative = DOM.convertNegativeToggle()?.checked;
+  // Film negative mode uses film-type-select. When a film type is active,
+  // the scan background is dark — invert so the bright-background OpenCV
+  // detection pipeline can still find photo boundaries correctly.
+  const filmVal = DOM.filmTypeSelect()?.value;
+  const isNegative = filmVal && filmVal !== 'none';
   let detectImageData = imageData;
   if (isNegative) {
     const invertedData = new Uint8ClampedArray(imageData.data);
@@ -1306,9 +1317,9 @@ async function createThumbElement(box, idx) {
     const fromIdx = parseInt(e.dataTransfer.getData('text/plain'), 10);
     const toIdx = idx;
     if (fromIdx !== toIdx && !isNaN(fromIdx)) {
+      pushUndo(); // save state BEFORE modifying
       const moved = state.boxes.splice(fromIdx, 1)[0];
       state.boxes.splice(toIdx, 0, moved);
-      pushUndo();
       renderStrip();
     }
   });
@@ -1326,14 +1337,16 @@ async function createThumbElement(box, idx) {
   return wrap;
 }
 
-function updateStripThumb(id) {
+async function updateStripThumb(id) {
   const box = state.boxes.find(b => b.id === id);
   if (!box) return;
   const idx = state.boxes.indexOf(box);
   const existing = DOM.splitsStrip().querySelector(`[data-id="${id}"]`);
   if (!existing) return;
-  const fresh = createThumbElement(box, idx);
-  DOM.splitsStrip().replaceChild(fresh, existing);
+  const fresh = await createThumbElement(box, idx); // await the Promise
+  if (DOM.splitsStrip().contains(existing)) {
+    DOM.splitsStrip().replaceChild(fresh, existing);
+  }
 }
 
 function scrollToBox(id) {
