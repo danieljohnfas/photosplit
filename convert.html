@@ -98,7 +98,7 @@
 <a href="/about">About</a>
 <a href="/contact">Contact</a>
 </nav>
-<button class="icon-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">??</button>
+<button class="icon-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">🌓</button>
 </header>
 <main>
 <section class="hero-utility">
@@ -203,7 +203,7 @@
 
       async function convertEntry(entry, idx) {
         const fmt = fmtSel.value, mimeMap = { jpeg: 'image/jpeg', png: 'image/png', webp: 'image/webp' }, extMap = { jpeg: 'jpg', png: 'png', webp: 'webp' };
-        document.getElementById('status-'+idx).innerHTML = '<span class="status-badge pending">Converting�</span>';
+        document.getElementById('status-'+idx).innerHTML = '<span class="status-badge pending">Converting×</span>';
         return new Promise(res => {
           const img = new Image(); img.onload = () => {
             const c = document.createElement('canvas'); c.width = img.width; c.height = img.height; c.getContext('2d').drawImage(img, 0, 0); URL.revokeObjectURL(img.src);

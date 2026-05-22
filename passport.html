@@ -16,7 +16,7 @@
 <meta content="width=device-width,initial-scale=1.0" name="viewport"/>
 <meta content="#010101" name="theme-color"/>
 <title>Free Passport Photo Maker Online — ID Photo Creator | PhotoSplit Studio</title>
-<meta content="Create passport photos and ID photos online for free. Supports US passport (2�2in), UK passport (35�45mm), Schengen visa, Indian visa, and 10+ more formats. 100% private — no upload." name="description"/>
+<meta content="Create passport photos and ID photos online for free. Supports US passport (2×2in), UK passport (35×45mm), Schengen visa, Indian visa, and 10+ more formats. 100% private — no upload." name="description"/>
 <meta content="passport photo online free, make passport photo, id photo maker, 2x2 passport photo, uk passport photo, biometric photo online, visa photo free" name="keywords"/>
 <meta content="index,follow" name="robots"/>
 <link href="https://photosplitstudio.com/passport" rel="canonical"/>
@@ -107,7 +107,7 @@
 <a href="/about">About</a>
 <a href="/contact">Contact</a>
 </nav>
-<button class="icon-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">??</button>
+<button class="icon-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">🌓</button>
 </header>
 <main>
 <section class="hero-utility">
@@ -122,16 +122,16 @@
 <div class="section-label">Select Country / Document Type</div>
 <div class="country-picker" id="country-picker">
 <button class="country-btn active" data-bg="#ffffff" data-dpi="300" data-hmm="51" data-name="US Passport" data-wmm="51">
-<span class="flag">????</span><span class="cname">US Passport</span><span class="cdims">2�2 in</span>
+<span class="flag">????</span><span class="cname">US Passport</span><span class="cdims">2×2 in</span>
 </button>
 <button class="country-btn" data-bg="#ffffff" data-dpi="300" data-hmm="45" data-name="UK Passport" data-wmm="35">
-<span class="flag">????</span><span class="cname">UK Passport</span><span class="cdims">35�45 mm</span>
+<span class="flag">????</span><span class="cname">UK Passport</span><span class="cdims">35×45 mm</span>
 </button>
 <button class="country-btn" data-bg="#ffffff" data-dpi="300" data-hmm="45" data-name="EU Visa" data-wmm="35">
-<span class="flag">????</span><span class="cname">EU Visa</span><span class="cdims">35�45 mm</span>
+<span class="flag">????</span><span class="cname">EU Visa</span><span class="cdims">35×45 mm</span>
 </button>
 <button class="country-btn" data-bg="#ffffff" data-dpi="300" data-hmm="60" data-name="Indian Passport" data-wmm="40">
-<span class="flag">????</span><span class="cname">Indian Passport</span><span class="cdims">40�60 mm</span>
+<span class="flag">????</span><span class="cname">Indian Passport</span><span class="cdims">40×60 mm</span>
 </button>
 </div>
 <div class="passport-workspace">
@@ -139,7 +139,7 @@
 <div id="pp-upload-zone" onclick="document.getElementById('pp-file-input').click()">
 <div style="font-size:2.5rem">??</div>
 <div style="font-weight:700;font-size:1rem;color:var(--text-primary);margin-top:8px">Upload your photo</div>
-<p>JPEG or PNG � or paste with Ctrl+V</p>
+<p>JPEG or PNG × or paste with Ctrl+V</p>
 <input accept="image/*" id="pp-file-input" style="display:none" type="file"/>
 </div>
 <div id="pp-canvas-wrap" style="margin-top:16px;"><canvas id="pp-canvas"></canvas></div>
@@ -147,7 +147,7 @@
 <div class="pp-panel">
 <div>
 <div class="pp-stat"><span>Document</span><span id="pp-doc-name">US Passport</span></div>
-<div class="pp-stat"><span>Size</span><span id="pp-size-label">51�51 mm</span></div>
+<div class="pp-stat"><span>Size</span><span id="pp-size-label">51×51 mm</span></div>
 </div>
 <div>
 <label>Zoom &amp; Reposition</label>
@@ -212,7 +212,7 @@
         btn.onclick = () => {
           document.querySelectorAll('.country-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active');
           config = { wmm: parseFloat(btn.dataset.wmm), hmm: parseFloat(btn.dataset.hmm), dpi: 300, name: btn.dataset.name };
-          document.getElementById('pp-doc-name').textContent = config.name; document.getElementById('pp-size-label').textContent = config.wmm+'�'+config.hmm+' mm';
+          document.getElementById('pp-doc-name').textContent = config.name; document.getElementById('pp-size-label').textContent = config.wmm+'×'+config.hmm+' mm';
           render();
         };
       });
