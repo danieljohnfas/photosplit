@@ -281,7 +281,6 @@ const GEAR_CATALOG = [
     desc: 'RFID-blocking passport organizer fits your passport, cards, and boarding passes. Matches perfectly with a fresh passport photo print.',
     asin: 'B01LPQEPEC',
     img: '/assets/images/cat_passport.png',
-    categories: ['passport'wallet.png',
     categories: ['passport'],
   },
   {
