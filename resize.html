@@ -106,7 +106,7 @@
 <a href="/about">About</a>
 <a href="/contact">Contact</a>
 </nav>
-<button class="icon-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">??</button>
+<button class="icon-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">🌓</button>
 </header>
 <main>
 <section class="hero-utility">
@@ -121,31 +121,31 @@
 <div class="section-label">Choose a Platform</div>
 <div class="platform-picker" id="platform-picker">
 <button class="plat-btn" data-h="1080" data-name="Instagram Post" data-w="1080">
-<span class="plat-icon">??</span><span class="plat-name">Instagram</span><span class="plat-dims">1080�1080</span>
+<span class="plat-icon">📸</span><span class="plat-name">Instagram</span><span class="plat-dims">1080×1080</span>
 </button>
 <button class="plat-btn" data-h="1920" data-name="Instagram Story" data-w="1080">
-<span class="plat-icon">??</span><span class="plat-name">IG Story</span><span class="plat-dims">1080�1920</span>
+<span class="plat-icon">📱</span><span class="plat-name">IG Story</span><span class="plat-dims">1080×1920</span>
 </button>
 <button class="plat-btn" data-h="1920" data-name="TikTok Video" data-w="1080">
-<span class="plat-icon">??</span><span class="plat-name">TikTok</span><span class="plat-dims">1080�1920</span>
+<span class="plat-icon">🎵</span><span class="plat-name">TikTok</span><span class="plat-dims">1080×1920</span>
 </button>
 <button class="plat-btn" data-h="720" data-name="YouTube Thumbnail" data-w="1280">
-<span class="plat-icon">??</span><span class="plat-name">YouTube</span><span class="plat-dims">1280�720</span>
+<span class="plat-icon">▶️</span><span class="plat-name">YouTube</span><span class="plat-dims">1280×720</span>
 </button>
 <button class="plat-btn" data-h="630" data-name="Facebook Post" data-w="1200">
-<span class="plat-icon">??</span><span class="plat-name">Facebook</span><span class="plat-dims">1200�630</span>
+<span class="plat-icon">📘</span><span class="plat-name">Facebook</span><span class="plat-dims">1200×630</span>
 </button>
 <button class="plat-btn" data-h="675" data-name="Twitter/X Post" data-w="1200">
-<span class="plat-icon">??</span><span class="plat-name">Twitter/X</span><span class="plat-dims">1200�675</span>
+<span class="plat-icon">🐦</span><span class="plat-name">Twitter/X</span><span class="plat-dims">1200×675</span>
 </button>
 <button class="plat-btn" data-h="627" data-name="LinkedIn Post" data-w="1200">
-<span class="plat-icon">??</span><span class="plat-name">LinkedIn</span><span class="plat-dims">1200�627</span>
+<span class="plat-icon">💼</span><span class="plat-name">LinkedIn</span><span class="plat-dims">1200×627</span>
 </button>
 </div>
 <div class="resize-workspace">
 <div>
 <div class="upload-drop" id="resize-drop" onclick="document.getElementById('resize-file').click()">
-<div style="font-size:2.5rem">???</div>
+<div style="font-size:2.5rem">📥</div>
 <div style="font-weight:700;font-size:1rem;color:var(--text-primary);margin-top:8px">Drop image here or click to upload</div>
 <p>JPEG, PNG, WebP, BMP supported</p>
 <input accept="image/*" id="resize-file" style="display:none" type="file"/>
@@ -163,7 +163,7 @@
 <label for="out-w">Width (px)</label>
 <input id="out-w" max="8000" min="1" type="number" value="1080"/>
 </div>
-<span>�</span>
+<span>×</span>
 <div class="dim-group">
 <label for="out-h">Height (px)</label>
 <input id="out-h" max="8000" min="1" type="number" value="1080"/>
@@ -182,10 +182,9 @@
 </div>
 </div>
 </div>
-<div style="max-width: 960px; margin: 40px auto; text-align: center;">
-<img alt="How to resize for social media" src="/assets/images/resize-tutorial.png" style="width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"/>
-</div>
-<article style="max-width:960px;margin:60px auto;padding:0 24px 80px;">
+<article style="max-width:1080px;margin:60px auto;padding:0 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+<div style="text-align: center;"><img alt="How to resize for social media" src="/assets/images/resize-tutorial.png" style="width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"/></div>
+<div>
 <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 24px;">Why Image Dimensions Matter for Social Media</h2>
 <p style="line-height: 1.8; margin-bottom: 20px;">Every social media platform uses its own proprietary compression algorithm. If you upload a photo that doesn't match their required aspect ratio, the platform will crop it automatically—often cutting off heads or important text. Our tool ensures your photos are pixel-perfect before you hit upload.</p>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin: 40px 0;">
@@ -200,6 +199,7 @@
 <div style="padding: 24px; background: var(--bg-sunken); border-radius: 12px; border: 1px solid var(--border);">
 <h3 style="margin-top: 0;">▶️ YouTube Thumbnails</h3>
 <p style="font-size: 0.9rem; color: var(--text-secondary);">Stick to <strong>1280x720</strong>. Keep your file size under 2MB to ensure compatibility with YouTube's upload limits.</p>
+</div>
 </div>
 </div>
 </article>
