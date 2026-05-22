@@ -163,6 +163,12 @@ body {
 }
 .logo:hover { filter: brightness(1.1); }
 
+.nav-icon, .logo-img, .nav-logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
 .logo-icon {
   width: 32px;
   height: 32px;
