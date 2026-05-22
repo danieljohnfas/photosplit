@@ -43,7 +43,7 @@ const GEAR_CATALOG = [
     title: 'Epson Perfection V39 Flatbed Scanner',
     desc: 'Compact 4800×4800 DPI flatbed ideal for scanning prints and documents. One-touch scanning and LED-lit sensor for accurate colors.',
     asin: 'B01LXVTXKI',
-    img: '/assets/images/epson-v39.png',
+    img: '/assets/images/cat_scanner.png',
     categories: ['scanner'],
   },
   {
@@ -52,7 +52,7 @@ const GEAR_CATALOG = [
     title: 'Fujitsu ScanSnap iX1600',
     desc: 'Scan 40 pages per minute with WiFi and ADF. The ultimate sheet-fed scanner for bulk document and photo digitisation.',
     asin: 'B08PH5Q51P',
-    img: '/assets/images/fujitsu-scansnap.png',
+    img: '/assets/images/cat_scanner.png',
     categories: ['scanner'],
   },
   {
@@ -70,7 +70,7 @@ const GEAR_CATALOG = [
     title: 'Kodak SCANZA Film Scanner',
     desc: 'Convert 35mm, 126, 110 and Super 8 film to JPEG with no computer needed. Built-in SD card slot and 3.5" LCD preview screen.',
     asin: 'B075T63KRS',
-    img: '/assets/images/kodak-scanza.png',
+    img: '/assets/images/cat_scanner.png',
     categories: ['scanner', 'film'],
   },
 
@@ -99,7 +99,7 @@ const GEAR_CATALOG = [
     title: 'Seagate Expansion 8TB Desktop Drive',
     desc: '8TB of desktop storage perfect for a complete family photo archive. Plug-and-play with USB 3.0 for fast transfers.',
     asin: 'B00TKFEEAS',
-    img: '/assets/images/seagate-expansion.png',
+    img: '/assets/images/cat_storage.png',
     categories: ['storage'],
   },
   {
@@ -108,7 +108,7 @@ const GEAR_CATALOG = [
     title: 'SanDisk 2TB Extreme Portable SSD',
     desc: 'IP55 water/dust resistance and 1,050 MB/s read speeds. Drop protection up to 2m — perfect for photographers on the move.',
     asin: 'B08HN38TTG',
-    img: '/assets/images/sandisk-extreme-ssd.png',
+    img: '/assets/images/cat_storage.png',
     categories: ['storage'],
   },
   {
@@ -117,7 +117,7 @@ const GEAR_CATALOG = [
     title: 'Samsung Pro Plus 256GB SD Card',
     desc: '180 MB/s read speed for 4K capture. UHS-I U3 V30 rated — reliable for cameras, scanners, and direct card-to-drive transfers.',
     asin: 'B09CBLJ7JV',
-    img: '/assets/images/samsung-sdxc.png',
+    img: '/assets/images/cat_storage.png',
     categories: ['storage'],
   },
   {
@@ -126,7 +126,7 @@ const GEAR_CATALOG = [
     title: 'Anker 10-Port USB 3.0 Hub',
     desc: 'Connect your scanner, drives, card readers and more simultaneously. Individual power switches for each port and a 60W power adapter.',
     asin: 'B00VDVCQ84',
-    img: '/assets/images/anker-usb-hub.png',
+    img: '/assets/images/cat_storage.png',
     categories: ['storage'],
   },
 
@@ -137,7 +137,7 @@ const GEAR_CATALOG = [
     title: 'Canon SELPHY CP1500 Photo Printer',
     desc: 'Dye-sublimation prints at 300×300 DPI with a WiFi connection. Perfect for passport photos and 4×6 prints — with a 108-sheet paper pack.',
     asin: 'B09G4MLKBY',
-    img: '/assets/images/canon-selphy.png',
+    img: '/assets/images/cat_printing.png',
     categories: ['printing', 'passport'],
   },
   {
@@ -146,7 +146,7 @@ const GEAR_CATALOG = [
     title: 'Epson EcoTank ET-2803 All-In-One',
     desc: 'Supertank inkjet with 2 years of ink included. Print 4×6 borderless photos at home for pennies each — no cartridge costs.',
     asin: 'B09RNY7YWB',
-    img: '/assets/images/epson-ecotank.png',
+    img: '/assets/images/cat_printing.png',
     categories: ['printing'],
   },
   {
@@ -155,7 +155,7 @@ const GEAR_CATALOG = [
     title: 'Canon PIXMA MG3620 Wireless Printer',
     desc: 'Wireless all-in-one inkjet with borderless photo printing. AirPrint and Google Cloud Print support for easy mobile printing.',
     asin: 'B01GKQDO64',
-    img: '/assets/images/canon-mg3620.png',
+    img: '/assets/images/cat_printing.png',
     categories: ['printing'],
   },
   {
@@ -164,7 +164,7 @@ const GEAR_CATALOG = [
     title: 'HP Sprocket Portable Photo Printer',
     desc: 'Bluetooth pocket printer that uses Zink zero-ink paper. Great for instant 2×3" prints from your phone — no ink cartridges.',
     asin: 'B07BNQHCPG',
-    img: '/assets/images/hp-sprocket.png',
+    img: '/assets/images/cat_printing.png',
     categories: ['printing'],
   },
 
@@ -175,7 +175,7 @@ const GEAR_CATALOG = [
     title: 'Kodak Photo Album — Acid-Free 4×6',
     desc: 'Holds 360 photos in acid-free, lignin-free sleeves. PVC-free pages that won\'t yellow or damage your prints over decades.',
     asin: 'B001018M5OA',
-    img: '/assets/images/kodak-album.png',
+    img: '/assets/images/cat_preservation.png',
     categories: ['preservation', 'display'],
   },
   {
@@ -184,7 +184,7 @@ const GEAR_CATALOG = [
     title: 'Print File Archival Polypropylene Sleeves (100-Pack)',
     desc: 'Crystal-clear, anti-static polypropylene sleeves. Used by professional archivists and museums to protect prints for 100+ years.',
     asin: 'B001018M5OA',
-    img: '/assets/images/archival-sleeves.png',
+    img: '/assets/images/cat_preservation.png',
     categories: ['preservation'],
   },
   {
@@ -193,7 +193,7 @@ const GEAR_CATALOG = [
     title: 'Iris USA Photo Storage Box (6-Pack)',
     desc: 'Stackable, airtight photo boxes with index card dividers. Fits 1,600 4×6 prints — perfect for sorting by year or event.',
     asin: 'B003BWCLME',
-    img: '/assets/images/photo-boxes.png',
+    img: '/assets/images/cat_preservation.png',
     categories: ['preservation'],
   },
   {
@@ -202,7 +202,7 @@ const GEAR_CATALOG = [
     title: 'Govee Humidity & Temperature Monitor',
     desc: 'Protect your archive room from humidity spikes. Real-time alerts and 2-year data logging via the Govee app.',
     asin: 'B08L4RZCFW',
-    img: '/assets/images/govee-humidity.png',
+    img: '/assets/images/cat_preservation.png',
     categories: ['preservation'],
   },
 
@@ -222,7 +222,7 @@ const GEAR_CATALOG = [
     title: 'MagicFiber Microfiber Cleaning Cloths (6-Pack)',
     desc: 'Ultra-fine 400 GSM cloths for streak-free scanner platen cleaning. Safe on glass, lenses, and LCD screens.',
     asin: 'B0050R67U0',
-    img: '/assets/images/magicfiber-cloth.png',
+    img: '/assets/images/cat_cleaning.png',
     categories: ['cleaning'],
   },
   {
@@ -231,7 +231,7 @@ const GEAR_CATALOG = [
     title: 'Falcon Dust-Off Compressed Air (4-Pack)',
     desc: 'HFC-free compressed air to blast dust from film negatives, scanner beds, and optical components. 10 oz cans with flexible straw.',
     asin: 'B00DZYAYES',
-    img: '/assets/images/falcon-dustoff.png',
+    img: '/assets/images/cat_cleaning.png',
     categories: ['cleaning'],
   },
   {
@@ -240,7 +240,7 @@ const GEAR_CATALOG = [
     title: 'Photographic Solutions Sensor Swabs',
     desc: 'Pre-moistened sensor swabs for professional cleaning of scanner CCDs and optical elements. Lint-free and anti-static.',
     asin: 'B002YALOX8',
-    img: '/assets/images/sensor-swabs.png',
+    img: '/assets/images/cat_cleaning.png',
     categories: ['cleaning'],
   },
 
@@ -251,7 +251,7 @@ const GEAR_CATALOG = [
     title: 'Aura Carver Digital Photo Frame',
     desc: '10.1" HD display with WiFi and free unlimited cloud storage. Share photos directly from your digitized archive — the best digital frame available.',
     asin: 'B08HWXCJHV',
-    img: '/assets/images/aura-frame.png',
+    img: '/assets/images/cat_display.png',
     categories: ['display'],
   },
   {
@@ -260,7 +260,7 @@ const GEAR_CATALOG = [
     title: 'Nixplay 10.1" Smart Digital Frame',
     desc: 'Motion sensor, 1280×800 IPS display, and an app for sharing photos from anywhere. Pairs perfectly with PhotoSplit Studio exports.',
     asin: 'B01L01UE2W',
-    img: '/assets/images/nixplay-frame.png',
+    img: '/assets/images/cat_display.png',
     categories: ['display'],
   },
   {
@@ -269,7 +269,7 @@ const GEAR_CATALOG = [
     title: 'Rustic Farmhouse Shadow Box Frame Set',
     desc: 'Set of 3 shadow box frames for creating photo collage displays with mementos. Makes a beautiful gift from digitized family archives.',
     asin: 'B076CGLK14',
-    img: '/assets/images/shadow-box.png',
+    img: '/assets/images/cat_display.png',
     categories: ['display'],
   },
 
@@ -280,7 +280,8 @@ const GEAR_CATALOG = [
     title: 'Zero Grid Travel Passport Wallet',
     desc: 'RFID-blocking passport organizer fits your passport, cards, and boarding passes. Matches perfectly with a fresh passport photo print.',
     asin: 'B01LPQEPEC',
-    img: '/assets/images/passport-wallet.png',
+    img: '/assets/images/cat_passport.png',
+    categories: ['passport'wallet.png',
     categories: ['passport'],
   },
   {
@@ -289,7 +290,7 @@ const GEAR_CATALOG = [
     title: 'HP Everyday Photo Paper 4×6 (100 Sheets)',
     desc: 'Instant-dry glossy 200g photo paper for vivid, professional-quality prints. Works with all inkjet printers including Canon SELPHY.',
     asin: 'B00004TT48',
-    img: '/assets/images/hp-photo-paper.png',
+    img: '/assets/images/cat_passport.png',
     categories: ['passport', 'printing'],
   },
   {
@@ -298,7 +299,7 @@ const GEAR_CATALOG = [
     title: 'Card Sleeve RFID Blocking Wallet (12-Pack)',
     desc: 'Ultra-thin RFID blocking card sleeves to protect ID cards and passport cards. Works with any wallet.',
     asin: 'B07W8RZ5TF',
-    img: '/assets/images/rfid-sleeves.png',
+    img: '/assets/images/cat_passport.png',
     categories: ['passport'],
   },
 
@@ -309,7 +310,7 @@ const GEAR_CATALOG = [
     title: 'Neewer Overhead Camera Stand',
     desc: 'Adjustable overhead copy stand for flat-lay photo scanning with your phone. Copy old photos without a flatbed scanner.',
     asin: 'B07YKPMQC7',
-    img: '/assets/images/neewer-stand.png',
+    img: '/assets/images/cat_camera.png',
     categories: ['camera', 'scanner'],
   },
   {
@@ -318,7 +319,7 @@ const GEAR_CATALOG = [
     title: 'Elgato Key Light Air LED Panel',
     desc: 'Dimmable 1400 lm LED panel for shadow-free scanning. App-controlled color temperature (2900–7000K) for perfect photo capture lighting.',
     asin: 'B08TG9XNRQ',
-    img: '/assets/images/elgato-keylight.png',
+    img: '/assets/images/cat_camera.png',
     categories: ['camera'],
   },
 ];
@@ -453,7 +454,7 @@ function buildProductCard(prod) {
       <h3 class="product-title">${prod.title}</h3>
       <p>${prod.desc}</p>
       <a class="buy-btn"
-         href="https://www.amazon.com/dp/${prod.asin}?tag=photoid03-20"
+         href="https://www.amazon.com/s?k=${encodeURIComponent(prod.title)}&tag=photoid03-20"
          target="_blank"
          rel="sponsored noopener">View on Amazon →</a>
     </div>
