@@ -1,337 +1,976 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
-<head>
-<!-- Scripts loaded dynamically after consent -->
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    function loadGoogleScripts() {
-      if (document.getElementById('ga-script')) return;
-      var gaScript = document.createElement('script');
-      gaScript.id = 'ga-script';
-      gaScript.async = true;
-      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ';
-      document.head.appendChild(gaScript);
-      gtag('js', new Date());
-      gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
-
-          }
-  </script>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Best Scanner Settings for Old Photos: DPI, Format &amp; Color Mode Explained | PhotoSplit Studio</title>
-<meta content="Confused by DPI, bit depth, and file format options? This practical guide explains exactly which scanner settings to use for the best quality when digitizing old printed photos." name="description"/>
-<meta content="best scanner settings for photos, what DPI for scanning photos, 300 DPI vs 600 DPI photos, scan old photos settings, best resolution for scanning photos, JPEG vs TIFF scanning, photo scanning color mode, flatbed scanner settings, digitize old photos quality, scanning bit depth photos" name="keywords"/>
-<meta content="index, follow" name="robots"/>
-<meta content="PhotoSplit Studio" name="author"/>
-<link href="https://photosplitstudio.com/blog/best-scanner-settings-for-photos" rel="canonical"/>
-<meta content="article" property="og:type"/>
-<meta content="2026-04-27T00:00:00Z" property="article:published_time"/>
-<meta content="Best Scanner Settings for Old Photos: DPI, Format &amp; Color Mode Explained" property="og:title"/>
-<meta content="Practical guide: exactly which DPI, file format, and color mode settings to use when scanning old printed photos for archival quality." property="og:description"/>
-<meta content="https://photosplitstudio.com/blog/best-scanner-settings-for-photos" property="og:url"/>
-<meta content="https://photosplitstudio.com/assets/images/og-image.png" property="og:image"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="Best Scanner Settings for Old Photos: DPI, Format &amp; Color Mode Explained" name="twitter:title"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Best Scanner Settings for Old Photos: DPI, Format and Color Mode Explained","datePublished":"2026-04-27","dateModified":"2026-04-27","author":{"@type":"Organization","name":"PhotoSplit Studio"},"publisher":{"@type":"Organization","name":"PhotoSplit Studio","url":"https://photosplitstudio.com"},"mainEntityOfPage":"https://photosplitstudio.com/blog/best-scanner-settings-for-photos"}</script>
-<link href="/assets/images/logo.png" rel="icon" type="image/png"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="/css/style.css" rel="stylesheet"/>
-<script defer="" src="/js/gear.js"></script>
-<link href="/css/secondary.css" rel="stylesheet"/>
-<style>
-    .article-meta{display:flex;gap:20px;flex-wrap:wrap;font-size:.82rem;color:var(--text-muted,#718096);margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--border-color,#e2e8f0)}
-    .article-tag{background:rgba(99,102,241,.1);color:var(--accent,#6366f1);font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 10px;border-radius:20px}
-    .settings-card{background:linear-gradient(135deg,rgba(99,102,241,.07),rgba(99,102,241,.02));border:1px solid rgba(99,102,241,.2);border-radius:14px;padding:24px 28px;margin:24px 0}
-    .settings-card h3{margin-top:0;color:var(--accent,#6366f1);font-size:1rem}
-    .settings-row{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--border-color,#e2e8f0);gap:12px;flex-wrap:wrap}
-    .settings-row:last-child{border-bottom:none}
-    .settings-label{font-weight:600;font-size:.88rem;color:var(--text-color,#1a1d23);min-width:160px}
-    .settings-value{font-size:.88rem;color:var(--text-muted,#4a5568);text-align:right}
-    .settings-value strong{color:var(--accent,#6366f1)}
-    .compare-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:20px 0}
-    .compare-card{background:var(--bg-panel,#fff);border:1px solid var(--border-color,#e2e8f0);border-radius:12px;padding:20px;text-align:center}
-    .compare-card .dpi-num{font-size:2rem;font-weight:800;color:var(--accent,#6366f1);display:block;margin-bottom:4px}
-    .compare-card h3{font-size:.9rem;margin:0 0 8px;color:var(--text-color,#1a1d23)}
-    .compare-card p{font-size:.8rem;color:var(--text-muted,#718096);margin:0}
-    .verdict{background:var(--accent,#6366f1);color:#fff;border-radius:8px;padding:4px 10px;font-size:.72rem;font-weight:700;display:inline-block;margin-top:10px}
-    .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:16px}
-    .related-card{background:var(--bg-panel,#fff);border:1px solid var(--border-color,#e2e8f0);border-radius:12px;padding:18px;text-decoration:none;color:inherit;transition:box-shadow .2s}
-    .related-card:hover{box-shadow:0 6px 20px rgba(99,102,241,.12);text-decoration:none}
-    .related-card h3{font-size:.92rem;font-weight:600;color:var(--text-color,#1a1d23);margin:0 0 6px}
-    .related-card p{font-size:.8rem;color:var(--text-muted,#718096);margin:0}
-  </style>
-<link href="/css/style-premium.css" rel="stylesheet"/></head>
-<body>
-<nav class="site-nav">
-<a class="logo blog-logo-link" href="/"><img alt="PhotoSplit Logo" class="nav-icon" src="/assets/images/logo-animated.svg"/> PhotoSplit Studio</a>
-<div class="nav-links">
-<a class="active" href="/blog/">Blog</a>
-<a href="/app">App</a>
-<a href="/resize">Resize</a>
-<a href="/tips">Tips</a>
-<a href="/about">About</a>
-<a href="/contact">Contact</a>
-<a class="cta" href="/app">Open App →</a>
-</div>
-</nav>
-<div class="hero tips-hero">
-<h1>Best Scanner Settings for Old Photos: DPI, Format &amp; Color Mode Explained</h1>
-<p>Confused by DPI, bit depth, and TIFF vs JPEG? This plain-English reference tells you exactly what to choose and why.</p>
-</div>
-<!-- AdSense &mdash; Below Hero -->
-<div class="ad-wrap">
-<div class="ad-item"><script>
-  atOptions = {
-    'key' : '033703f2c2dfe7a5fa4501cd3ba1417e',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/033703f2c2dfe7a5fa4501cd3ba1417e/invoke.js"></script></div>
-<div class="ad-item"><script>
-  atOptions = {
-    'key' : 'eefa27f757f4d0772d979fca1074f12a',
-    'format' : 'iframe',
-    'height' : 60,
-    'width' : 468,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script></div>
-</div>
-<div class="page-with-sidebar"><div class="page-main-content"><div class="content-wrap">
-<nav aria-label="Breadcrumb" class="breadcrumb">
-<a href="/app">App</a><span>×</span><a href="/blog/">Blog</a><span>×</span>Best Scanner Settings
-  </nav>
-<div class="article-meta">
-<span class="article-tag">Tutorial</span>
-<span>✨ </span>
-<span>? 9 min read</span>
-<span>✨ </span>
-</div>
-<p>You have dug out the old flatbed scanner, gathered a stack of faded family prints, and opened the scanner software — only to be confronted with a bewildering grid of settings: 300 DPI, 600 DPI, 1200 DPI, 24-bit colour, 48-bit colour, TIFF, JPEG, BMP, unsharp mask, dust removal, auto-exposure. Which ones actually matter? Which ones do you simply leave alone? This guide strips away the jargon and gives you a definitive, practical answer for every setting.</p>
-<div class="product-card">
-<img alt="Epson Perfection V600 Scanner" src="/assets/images/epson-v600.png"/>
-<div class="product-info">
-<h3 class="product-title">Epson Perfection V600</h3>
-<p>The gold standard for at-home photo archiving. It has a massive flatbed area, incredible color accuracy, and even scans negatives.</p>
-<a class="buy-btn" href="https://www.amazon.com/dp/B002OEBMRU?tag=photoid03-20" rel="sponsored noopener" target="_blank">View on Amazon</a>
-</div>
-</div>
-<div class="product-card">
-<img alt="Canon CanoScan LiDE 400" src="/assets/images/canon-lide400.png"/>
-<div class="product-info">
-<h3 class="product-title">Canon CanoScan LiDE 400</h3>
-<p>An excellent, affordable alternative. It's incredibly thin, powered by a single USB-C cable, and extremely fast at scanning documents and photos.</p>
-<a class="buy-btn" href="https://www.amazon.com/dp/B07G5X1N1H?tag=photoid03-20" rel="sponsored noopener" target="_blank">View on Amazon</a>
-</div>
-</div>
-<div class="settings-card">
-<h3>? Quick Reference — Recommended Settings for Most Users</h3>
-<div class="settings-row"><span class="settings-label">Resolution</span><span class="settings-value"><strong>300 DPI</strong> for standard prints; 600 DPI for prints under 3×3 inches</span></div>
-<div class="settings-row"><span class="settings-label">Colour Mode</span><span class="settings-value"><strong>24-bit RGB Colour</strong> — always, even for B&amp;W prints</span></div>
-<div class="settings-row"><span class="settings-label">File Format</span><span class="settings-value"><strong>JPEG 90×95%</strong> for everyday use; <strong>TIFF</strong> for archival masters</span></div>
-<div class="settings-row"><span class="settings-label">Auto-Exposure</span><span class="settings-value"><strong>OFF</strong></span></div>
-<div class="settings-row"><span class="settings-label">Auto-Crop</span><span class="settings-value"><strong>OFF</strong> (PhotoSplit Studio handles cropping)</span></div>
-<div class="settings-row"><span class="settings-label">Dust/Scratch Removal</span><span class="settings-value"><strong>OFF</strong> for colour prints</span></div>
-<div class="settings-row"><span class="settings-label">Unsharp Mask</span><span class="settings-value"><strong>OFF</strong> — apply in post if needed</span></div>
-</div>
-<h2>Understanding DPI — What It Actually Means</h2>
-<p>DPI stands for <em>dots per inch</em> — in scanning, it means how many pixels the scanner captures for every inch of the original print. A 4×6 inch print scanned at 300 DPI produces an image 1200×1800 pixels. The same print at 600 DPI produces 2400×3600 pixels — four times as many pixels and roughly four times the file size.</p>
-<p>More pixels sounds better, but there is a point of diminishing returns. Most consumer flatbed scanners have an optical resolution of 600×1200 DPI. Beyond their optical limit, the scanner uses interpolation (mathematical guessing) to generate additional pixels — which adds file size without adding real image detail. The key insight: <strong>matching DPI to your intended use, not maxing it out, gives you the best result.</strong></p>
-<h3>Choosing the Right DPI for Your Prints</h3>
-<div class="compare-grid">
-<div class="compare-card">
-<span class="dpi-num">150</span>
-<h3>Screen / Web Sharing</h3>
-<p>Fine for photos you will only ever view on screens or share via messaging apps. Files are very small (100×400 KB each).</p>
-<span class="verdict">Not recommended for archive</span>
-</div>
-<div class="compare-card">
-<span class="dpi-num">300</span>
-<h3>Standard Archive Quality</h3>
-<p>The sweet spot for most photo scanning. Produces sharp, detailed files that print beautifully up to 4×6 at original size. 1×3 MB per scan.</p>
-<span class="verdict">? Best for most users</span>
-</div>
-<div class="compare-card">
-<span class="dpi-num">600</span>
-<h3>High-Res Archival</h3>
-<p>Use for small prints (wallet size, passport photos) or when you need to enlarge prints beyond their original dimensions. 4×10 MB per scan.</p>
-<span class="verdict">Use for small prints</span>
-</div>
-<div class="compare-card">
-<span class="dpi-num">1200+</span>
-<h3>Film / Professional</h3>
-<p>Only meaningful for scanning film negatives, slides, or very small miniature prints. Produces enormous files (20×80 MB) with no benefit for standard prints.</p>
-<span class="verdict">Avoid for prints</span>
-</div>
-</div>
-<div class="callout">
-<p>✨ <strong>Rule of thumb:</strong> Scan standard 4×6 or 5×7 prints at 300 DPI. Move to 600 DPI only when the original print is smaller than 3×3 inches (wallet photos, passport photos, strip photos). Never exceed 600 DPI for standard consumer prints — you are just generating scanner noise, not additional detail.</p>
-</div>
-<h2>Colour Mode — Always Choose 24-bit RGB</h2>
-<p>Your scanner software will offer several colour modes. Here is what each one means:</p>
-<table>
-<thead><tr><th>Mode</th><th>Bits per Pixel</th><th>Colours Captured</th><th>Use For</th></tr></thead>
-<tbody>
-<tr><td><strong>24-bit Colour (RGB)</strong></td><td>8 bits per channel</td><td>16.7 million</td><td>All standard photo scanning ?</td></tr>
-<tr><td>48-bit Colour (RGB)</td><td>16 bits per channel</td><td>281 trillion</td><td>Professional film scanning only</td></tr>
-<tr><td>Greyscale (8-bit)</td><td>8 bits total</td><td>256 shades of grey</td><td>Line art, text documents</td></tr>
-<tr><td>Black &amp; White (1-bit)</td><td>1 bit total</td><td>2 (black or white)</td><td>Pure text documents only</td></tr>
-</tbody>
-</table>
-<p>The most important rule here: <strong>always scan in 24-bit Colour (RGB), even for black-and-white photographs.</strong> Here is why: vintage black-and-white prints are rarely truly neutral — they often have a warm sepia tone, a cool silver-blue cast, or subtle colouration from the paper. Scanning in greyscale permanently discards all that tonal information. Scanning in 24-bit colour preserves it. The file size difference is minimal (a 24-bit grey scan is only slightly larger than an 8-bit greyscale scan) and the preservation quality is meaningfully better.</p>
-<p>Skip 48-bit colour for standard photo scanning. While the extra bit depth is valuable for film scanning and professional retouching workflows, it doubles file sizes and most photo viewers cannot display the full tonal range anyway. 24-bit is the universal standard for photo archives.</p>
-<h2>File Format — JPEG vs TIFF vs PNG</h2>
-<p>This is the question that generates the most debate among digitization enthusiasts. Here is an honest, practical breakdown:</p>
-<h3>JPEG</h3>
-<p>JPEG uses lossy compression — it discards some image data to achieve small file sizes. At quality settings of 85% or above, the difference from the original is virtually invisible to the human eye. A 300 DPI scan of a 4×6 print saved as JPEG 90% will be about 1×3 MB. JPEG is the best choice for photo archives where you want a balance of quality, compatibility, and storage efficiency. Every device, app, cloud service, and photo viewer on earth understands JPEG.</p>
-<h3>TIFF</h3>
-<p>TIFF uses lossless compression (or no compression at all) — every pixel is preserved exactly. A 300 DPI scan of a 4×6 print saved as TIFF will be 15×25 MB — roughly 10×15× larger than the JPEG equivalent. TIFF is the professional standard for archival master files. If storage space is not a concern and you want the absolute pixel-perfect preservation of each scan, use TIFF. If you are scanning hundreds of photos and will be storing them on cloud services with storage limits, JPEG at 90%+ is the pragmatic choice.</p>
-<h3>PNG</h3>
-<p>PNG is a lossless format like TIFF but is generally not used for photo scanning — PNG files are typically larger than JPEG but smaller than TIFF, and they lack the rich metadata support that TIFF provides for professional workflows. PNG is excellent for screenshots, graphics, and web images. For scanned photographs, choose JPEG or TIFF instead.</p>
-<div class="tip-card">
-<h3>✨ </h3>
-<p>If storage permits, save both formats. Use <strong>TIFF as your archival master</strong> — put these on an external drive. Use <strong>JPEG 90% as your working copy</strong> — upload these to Google Photos, share with family, and use for everyday viewing. If you ever need to reprocess a photo (crop it differently, do heavier colour correction), you have the lossless TIFF to work from. For most home archivists who are storage-constrained, JPEG at 90% is perfectly sufficient and will look indistinguishable from the TIFF in everyday use.</p>
-</div>
-<h2>Settings to Always Turn Off</h2>
-<h3>Auto-Exposure / Auto-Brightness</h3>
-<p>Auto-exposure seems helpful — it automatically adjusts the brightness so your scan looks good. The problem is that it adjusts <em>per scan</em>, meaning a batch with one dark photo and one light photo may have inconsistent brightness from one scan to the next. More critically, auto-exposure can clip (permanently overexpose) highlights in bright prints or crush shadows in dark ones. Turn it off and apply any brightness corrections later in a photo editor where you have full control.</p>
-<h3>Auto-Crop</h3>
-<p>Auto-crop attempts to automatically detect and crop individual photos from a batch scan. Scanner software auto-crop is notoriously unreliable — it frequently misses photos, merges adjacent ones, or crops them incorrectly. Turn it off entirely and use <a href="/app">PhotoSplit Studio</a> instead. PhotoSplit's OpenCV.js detection engine is vastly more accurate than any scanner driver's auto-crop and works across all scanner brands with a single consistent interface.</p>
-<h3>Dust and Scratch Removal (Digital ICE)</h3>
-<p>Technologies like Epson's Digital ICE and Canon's FARE use infrared scanning to detect and digitally fill scratches and dust. These work well for <em>film scanning</em> (negatives and slides) but should be turned off for <em>reflective print scanning</em>. On prints, dust removal tends to soften fine details, blur texture in the photo paper, and can incorrectly identify image content as scratches. Clean the scanner glass with a microfiber cloth instead — that eliminates 95% of dust-related issues without any image quality compromise.</p>
-<h3>Unsharp Mask / Sharpening</h3>
-<p>In-scanner sharpening applies a sharpening filter to the scan during capture. This is destructive — it permanently bakes a sharpening artifact into the file. Turn it off and apply sharpening non-destructively in your photo editor or when resizing for a specific output (print, web, etc.) after the fact.</p>
-<h2>Special Case: Scanning Film Negatives</h2>
-<p>If you have 35mm or medium format film negatives to digitize, the settings above change significantly. Negatives require a scanner with a <em>transparency adapter</em> (a backlit scanning bed) since the image is captured from light transmitted <em>through</em> the film rather than reflected off a print surface. For film scanning you should use 1200×2400 DPI (the entire frame is only 35mm wide), 48-bit colour is beneficial, and Digital ICE or FARE can be enabled. PhotoSplit Studio's <strong>Convert Negative</strong> feature then handles inverting your scanned negative frames to produce natural positive photographs — including automatic orange mask removal for colour C-41 negative film.</p>
-<h2>Quick Checklist Before You Start Scanning</h2>
-<ul>
-<li>? Resolution set to 300 DPI (or 600 DPI for wallet-size prints)</li>
-<li>? Colour mode set to 24-bit RGB Colour</li>
-<li>? File format set to JPEG 90% (or TIFF for masters)</li>
-<li>? Auto-exposure turned OFF</li>
-<li>? Auto-crop turned OFF</li>
-<li>? Dust/scratch removal turned OFF</li>
-<li>? Unsharp mask / sharpening turned OFF</li>
-<li>? Scanner glass cleaned with a microfiber cloth</li>
-<li>? <a href="/app">PhotoSplit Studio</a> open in browser tab and ready</li>
-</ul>
-<div class="callout">
-<p>✨ <strong>Ready to split your scans?</strong> Once you have your batch scan files, drag them into <a href="/app">PhotoSplit Studio</a> to automatically detect, crop, and save every individual photo in seconds — free, private, and right in your browser.</p>
-</div>
-<div class="related-section">
-<h2>Related Guides</h2>
-<div class="related-grid">
-<a class="related-card" href="/blog/how-to-digitize-photo-album">
-<h3>✨ </h3>
-<p>Complete project plan: sort, scan, split, enhance, and back up hundreds of prints.</p>
-</a>
-<a class="related-card" href="/tips">
-<h3>✨ </h3>
-<p>Equipment, batch workflow, troubleshooting detection problems, and archive organisation.</p>
-</a>
-</div>
-</div>
-<div class="cta-center">
-<a class="btn cta-btn-primary" href="/app">??? Launch PhotoSplit Studio — Free</a>
-</div>
-</div></div>
-<aside class="page-sidebar">
-<div class="ad-sidebar-sticky">
-<span class="ad-sidebar-label">Advertisement</span>
-<div id="ad-sidebar" style="margin:0; min-height:250px; background:var(--bg-surface-2); border:1px dashed var(--border-strong); border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center;">
-<div class="ad-item">
-<script>
+  <head>
+    <!-- Scripts loaded dynamically after consent -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      function loadGoogleScripts() {
+        if (document.getElementById("ga-script")) return;
+        var gaScript = document.createElement("script");
+        gaScript.id = "ga-script";
+        gaScript.async = true;
+        gaScript.src =
+          "https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ";
+        document.head.appendChild(gaScript);
+        gtag("js", new Date());
+        gtag("config", "G-G40QDCGTTZ", { anonymize_ip: true });
+      }
+    </script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+      Best Scanner Settings for Old Photos: DPI, Format &amp; Color Mode
+      Explained | PhotoSplit Studio
+    </title>
+    <meta
+      content="Confused by DPI, bit depth, and file format options? This practical guide explains exactly which scanner settings to use for the best quality when digitizing old printed photos."
+      name="description"
+    />
+    <meta
+      content="best scanner settings for photos, what DPI for scanning photos, 300 DPI vs 600 DPI photos, scan old photos settings, best resolution for scanning photos, JPEG vs TIFF scanning, photo scanning color mode, flatbed scanner settings, digitize old photos quality, scanning bit depth photos"
+      name="keywords"
+    />
+    <meta content="index, follow" name="robots" />
+    <meta content="PhotoSplit Studio" name="author" />
+    <link
+      href="https://photosplitstudio.com/blog/best-scanner-settings-for-photos"
+      rel="canonical"
+    />
+    <meta content="article" property="og:type" />
+    <meta content="2026-04-27T00:00:00Z" property="article:published_time" />
+    <meta
+      content="Best Scanner Settings for Old Photos: DPI, Format &amp; Color Mode Explained"
+      property="og:title"
+    />
+    <meta
+      content="Practical guide: exactly which DPI, file format, and color mode settings to use when scanning old printed photos for archival quality."
+      property="og:description"
+    />
+    <meta
+      content="https://photosplitstudio.com/blog/best-scanner-settings-for-photos"
+      property="og:url"
+    />
+    <meta
+      content="https://photosplitstudio.com/assets/images/og-image.png"
+      property="og:image"
+    />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta
+      content="Best Scanner Settings for Old Photos: DPI, Format &amp; Color Mode Explained"
+      name="twitter:title"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Best Scanner Settings for Old Photos: DPI, Format and Color Mode Explained",
+        "datePublished": "2026-04-27",
+        "dateModified": "2026-04-27",
+        "author": { "@type": "Organization", "name": "PhotoSplit Studio" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "PhotoSplit Studio",
+          "url": "https://photosplitstudio.com"
+        },
+        "mainEntityOfPage": "https://photosplitstudio.com/blog/best-scanner-settings-for-photos"
+      }
+    </script>
+    <link href="/assets/images/logo.png" rel="icon" type="image/png" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="/css/style.css" rel="stylesheet" />
+    <script defer="" src="/js/gear.js"></script>
+    <link href="/css/secondary.css" rel="stylesheet" />
+    <style>
+      .article-meta {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        font-size: 0.82rem;
+        color: var(--text-muted, #718096);
+        margin-bottom: 32px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--border-color, #e2e8f0);
+      }
+      .article-tag {
+        background: rgba(99, 102, 241, 0.1);
+        color: var(--accent, #6366f1);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 3px 10px;
+        border-radius: 20px;
+      }
+      .settings-card {
+        background: linear-gradient(
+          135deg,
+          rgba(99, 102, 241, 0.07),
+          rgba(99, 102, 241, 0.02)
+        );
+        border: 1px solid rgba(99, 102, 241, 0.2);
+        border-radius: 14px;
+        padding: 24px 28px;
+        margin: 24px 0;
+      }
+      .settings-card h3 {
+        margin-top: 0;
+        color: var(--accent, #6366f1);
+        font-size: 1rem;
+      }
+      .settings-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 8px 0;
+        border-bottom: 1px solid var(--border-color, #e2e8f0);
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .settings-row:last-child {
+        border-bottom: none;
+      }
+      .settings-label {
+        font-weight: 600;
+        font-size: 0.88rem;
+        color: var(--text-color, #1a1d23);
+        min-width: 160px;
+      }
+      .settings-value {
+        font-size: 0.88rem;
+        color: var(--text-muted, #4a5568);
+        text-align: right;
+      }
+      .settings-value strong {
+        color: var(--accent, #6366f1);
+      }
+      .compare-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+        margin: 20px 0;
+      }
+      .compare-card {
+        background: var(--bg-panel, #fff);
+        border: 1px solid var(--border-color, #e2e8f0);
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+      }
+      .compare-card .dpi-num {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--accent, #6366f1);
+        display: block;
+        margin-bottom: 4px;
+      }
+      .compare-card h3 {
+        font-size: 0.9rem;
+        margin: 0 0 8px;
+        color: var(--text-color, #1a1d23);
+      }
+      .compare-card p {
+        font-size: 0.8rem;
+        color: var(--text-muted, #718096);
+        margin: 0;
+      }
+      .verdict {
+        background: var(--accent, #6366f1);
+        color: #fff;
+        border-radius: 8px;
+        padding: 4px 10px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        display: inline-block;
+        margin-top: 10px;
+      }
+      .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+        margin-top: 16px;
+      }
+      .related-card {
+        background: var(--bg-panel, #fff);
+        border: 1px solid var(--border-color, #e2e8f0);
+        border-radius: 12px;
+        padding: 18px;
+        text-decoration: none;
+        color: inherit;
+        transition: box-shadow 0.2s;
+      }
+      .related-card:hover {
+        box-shadow: 0 6px 20px rgba(99, 102, 241, 0.12);
+        text-decoration: none;
+      }
+      .related-card h3 {
+        font-size: 0.92rem;
+        font-weight: 600;
+        color: var(--text-color, #1a1d23);
+        margin: 0 0 6px;
+      }
+      .related-card p {
+        font-size: 0.8rem;
+        color: var(--text-muted, #718096);
+        margin: 0;
+      }
+    </style>
+    <link href="/css/style-premium.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="site-nav">
+      <a class="logo blog-logo-link" href="/"
+        ><img
+          alt="PhotoSplit Logo"
+          class="nav-icon"
+          src="/assets/images/logo-animated.svg"
+        />
+        PhotoSplit Studio</a
+      >
+      <div class="nav-links">
+        <a class="active" href="/blog/">Blog</a>
+        <a href="/app">App</a>
+        <a href="/resize">Resize</a>
+        <a href="/tips">Tips</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a class="cta" href="/app">Open App →</a>
+      </div>
+    </nav>
+    <div class="hero tips-hero">
+      <h1>
+        Best Scanner Settings for Old Photos: DPI, Format &amp; Color Mode
+        Explained
+      </h1>
+      <p>
+        Confused by DPI, bit depth, and TIFF vs JPEG? This plain-English
+        reference tells you exactly what to choose and why.
+      </p>
+    </div>
+    <!-- AdSense &mdash; Below Hero -->
+    <div class="ad-wrap">
+      <div class="ad-item">
+        <script>
           atOptions = {
-            'key' : 'eefa27f757f4d0772d979fca1074f12a',
-            'format' : 'iframe',
-            'height' : 250,
-            'width' : 300,
-            'params' : {}
+            key: "033703f2c2dfe7a5fa4501cd3ba1417e",
+            format: "iframe",
+            height: 90,
+            width: 728,
+            params: {},
           };
         </script>
-<script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
-</div>
-</div>
-</div>
-</aside>
-</div>
-<!-- AdSense &mdash; Above Footer -->
-<div class="ad-wrap-bottom">
-<script async="async" data-cfasync="false" src="https://pl29548528.effectivecpmnetwork.com/a25495e0c3bb3c8d42df39bb0b421e4a/invoke.js"></script>
-<div id="container-a25495e0c3bb3c8d42df39bb0b421e4a"></div>
-<div class="author-bio">
-<img alt="PhotoSplit Team" class="author-bio-img" src="/assets/images/logo-animated.svg"/>
-<div>
-<h3 class="author-bio-name">Written by the PhotoSplit Team</h3>
-<p class="author-bio-desc">We are a team of photo preservation enthusiasts and developers dedicated to making high-quality digitization accessible to everyone. Our mission is to ensure family histories are preserved for generations to come.</p>
-</div>
-</div>
-</div>
-<section class="gear-section">
-<div class="gear-section-inner">
-<h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
-<p class="gear-section-sub">Pair PhotoSplit Studio with the best hardware for fast, high-quality archiving and secure backups.</p>
-<div class="gear-cards-grid"></div>
-<p class="affiliate-disclosure">As an Amazon Associate, PhotoSplit Studio earns from qualifying purchases.</p>
-</div>
-</section>
-<footer class="site-footer">
-<div class="footer-links">
-<a href="/app">App</a>
-<a href="/blog/">Blog</a>
-<a href="/tips">Scanning Tips</a>
-<a href="/contact">Contact</a>
-<a href="/terms">Terms of Use</a>
-<a href="/privacy-policy">Privacy Policy</a>
-<a href="/about">About</a>
-</div>
-<div>© 2026 PhotoSplit Studio. All rights reserved.</div>
-<div class="site-status-bar"><div class="status-item"><span class="status-label">Is it dark outside?</span><span class="status-value" id="dark-status-answer">...</span></div><div class="status-item"><span class="status-label">Global Visitors:</span><img alt="Visitor Count" class="visitor-badge" src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"/></div></div><script>(function(){ var h=new Date().getHours(); var ans=(h>=18||h<6)?"YES":"NO"; var el=document.getElementById("dark-status-answer"); if(el) el.textContent=ans; })();</script>
-</footer>
-<!-- Hit Tracker (Unique Visitors Only) -->
-<script>
-    if (!localStorage.getItem("ps_counted")) {
-      localStorage.setItem("ps_counted", "true");
-      new Image().src = "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
-    }
-  </script>
-<div id="cookie-consent" role="dialog">
-<div id="cookie-consent-inner">
-<p>🍪 We use cookies to improve your experience. See our <a href="/privacy-policy">Privacy Policy</a>.</p>
-<div id="cookie-consent-actions">
-<button class="cookie-btn" id="cookie-decline">Decline</button>
-<button class="cookie-btn cookie-btn-accept" id="cookie-accept">Accept All</button>
-</div>
-</div>
-</div>
-<script>
-    (function() {
-      var banner = document.getElementById('cookie-consent');
-      if (!localStorage.getItem('pss_cookie_consent')) {
-        banner.classList.add('visible');
-      } else if (localStorage.getItem('pss_cookie_consent') === 'accepted') {
-        if (typeof loadGoogleScripts === 'function') loadGoogleScripts();
+        <script src="https://www.highperformanceformat.com/033703f2c2dfe7a5fa4501cd3ba1417e/invoke.js"></script>
+      </div>
+      <div class="ad-item">
+        <script>
+          atOptions = {
+            key: "eefa27f757f4d0772d979fca1074f12a",
+            format: "iframe",
+            height: 60,
+            width: 468,
+            params: {},
+          };
+        </script>
+        <script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
+      </div>
+    </div>
+    <div class="page-with-sidebar">
+      <div class="page-main-content">
+        <div class="content-wrap">
+          <nav aria-label="Breadcrumb" class="breadcrumb">
+            <a href="/app">App</a><span>×</span><a href="/blog/">Blog</a
+            ><span>×</span>Best Scanner Settings
+          </nav>
+          <div class="article-meta">
+            <span class="article-tag">Tutorial</span>
+            <span>✨ </span>
+            <span>? 9 min read</span>
+            <span>✨ </span>
+          </div>
+          <p>
+            You have dug out the old flatbed scanner, gathered a stack of faded
+            family prints, and opened the scanner software — only to be
+            confronted with a bewildering grid of settings: 300 DPI, 600 DPI,
+            1200 DPI, 24-bit colour, 48-bit colour, TIFF, JPEG, BMP, unsharp
+            mask, dust removal, auto-exposure. Which ones actually matter? Which
+            ones do you simply leave alone? This guide strips away the jargon
+            and gives you a definitive, practical answer for every setting.
+          </p>
+          <div class="product-card">
+            <img
+              alt="Epson Perfection V600 Scanner"
+              src="/assets/images/epson-v600.png"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Epson Perfection V600</h3>
+              <p>
+                The gold standard for at-home photo archiving. It has a massive
+                flatbed area, incredible color accuracy, and even scans
+                negatives.
+              </p>
+              <a
+                class="buy-btn"
+                href="https://www.amazon.com/dp/B002OEBMRU?tag=photoid03-20"
+                rel="sponsored noopener"
+                target="_blank"
+                >View on Amazon</a
+              >
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              alt="Canon CanoScan LiDE 400"
+              src="/assets/images/canon-lide400.png"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Canon CanoScan LiDE 400</h3>
+              <p>
+                An excellent, affordable alternative. It's incredibly thin,
+                powered by a single USB-C cable, and extremely fast at scanning
+                documents and photos.
+              </p>
+              <a
+                class="buy-btn"
+                href="https://www.amazon.com/dp/B07G5X1N1H?tag=photoid03-20"
+                rel="sponsored noopener"
+                target="_blank"
+                >View on Amazon</a
+              >
+            </div>
+          </div>
+          <div class="settings-card">
+            <h3>? Quick Reference — Recommended Settings for Most Users</h3>
+            <div class="settings-row">
+              <span class="settings-label">Resolution</span
+              ><span class="settings-value"
+                ><strong>300 DPI</strong> for standard prints; 600 DPI for
+                prints under 3×3 inches</span
+              >
+            </div>
+            <div class="settings-row">
+              <span class="settings-label">Colour Mode</span
+              ><span class="settings-value"
+                ><strong>24-bit RGB Colour</strong> — always, even for B&amp;W
+                prints</span
+              >
+            </div>
+            <div class="settings-row">
+              <span class="settings-label">File Format</span
+              ><span class="settings-value"
+                ><strong>JPEG 90×95%</strong> for everyday use;
+                <strong>TIFF</strong> for archival masters</span
+              >
+            </div>
+            <div class="settings-row">
+              <span class="settings-label">Auto-Exposure</span
+              ><span class="settings-value"><strong>OFF</strong></span>
+            </div>
+            <div class="settings-row">
+              <span class="settings-label">Auto-Crop</span
+              ><span class="settings-value"
+                ><strong>OFF</strong> (PhotoSplit Studio handles cropping)</span
+              >
+            </div>
+            <div class="settings-row">
+              <span class="settings-label">Dust/Scratch Removal</span
+              ><span class="settings-value"
+                ><strong>OFF</strong> for colour prints</span
+              >
+            </div>
+            <div class="settings-row">
+              <span class="settings-label">Unsharp Mask</span
+              ><span class="settings-value"
+                ><strong>OFF</strong> — apply in post if needed</span
+              >
+            </div>
+          </div>
+          <h2>Understanding DPI — What It Actually Means</h2>
+          <p>
+            DPI stands for <em>dots per inch</em> — in scanning, it means how
+            many pixels the scanner captures for every inch of the original
+            print. A 4×6 inch print scanned at 300 DPI produces an image
+            1200×1800 pixels. The same print at 600 DPI produces 2400×3600
+            pixels — four times as many pixels and roughly four times the file
+            size.
+          </p>
+          <p>
+            More pixels sounds better, but there is a point of diminishing
+            returns. Most consumer flatbed scanners have an optical resolution
+            of 600×1200 DPI. Beyond their optical limit, the scanner uses
+            interpolation (mathematical guessing) to generate additional pixels
+            — which adds file size without adding real image detail. The key
+            insight:
+            <strong
+              >matching DPI to your intended use, not maxing it out, gives you
+              the best result.</strong
+            >
+          </p>
+          <h3>Choosing the Right DPI for Your Prints</h3>
+          <div class="compare-grid">
+            <div class="compare-card">
+              <span class="dpi-num">150</span>
+              <h3>Screen / Web Sharing</h3>
+              <p>
+                Fine for photos you will only ever view on screens or share via
+                messaging apps. Files are very small (100×400 KB each).
+              </p>
+              <span class="verdict">Not recommended for archive</span>
+            </div>
+            <div class="compare-card">
+              <span class="dpi-num">300</span>
+              <h3>Standard Archive Quality</h3>
+              <p>
+                The sweet spot for most photo scanning. Produces sharp, detailed
+                files that print beautifully up to 4×6 at original size. 1×3 MB
+                per scan.
+              </p>
+              <span class="verdict">? Best for most users</span>
+            </div>
+            <div class="compare-card">
+              <span class="dpi-num">600</span>
+              <h3>High-Res Archival</h3>
+              <p>
+                Use for small prints (wallet size, passport photos) or when you
+                need to enlarge prints beyond their original dimensions. 4×10 MB
+                per scan.
+              </p>
+              <span class="verdict">Use for small prints</span>
+            </div>
+            <div class="compare-card">
+              <span class="dpi-num">1200+</span>
+              <h3>Film / Professional</h3>
+              <p>
+                Only meaningful for scanning film negatives, slides, or very
+                small miniature prints. Produces enormous files (20×80 MB) with
+                no benefit for standard prints.
+              </p>
+              <span class="verdict">Avoid for prints</span>
+            </div>
+          </div>
+          <div class="callout">
+            <p>
+              ✨ <strong>Rule of thumb:</strong> Scan standard 4×6 or 5×7 prints
+              at 300 DPI. Move to 600 DPI only when the original print is
+              smaller than 3×3 inches (wallet photos, passport photos, strip
+              photos). Never exceed 600 DPI for standard consumer prints — you
+              are just generating scanner noise, not additional detail.
+            </p>
+          </div>
+          <h2>Colour Mode — Always Choose 24-bit RGB</h2>
+          <p>
+            Your scanner software will offer several colour modes. Here is what
+            each one means:
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Mode</th>
+                <th>Bits per Pixel</th>
+                <th>Colours Captured</th>
+                <th>Use For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>24-bit Colour (RGB)</strong></td>
+                <td>8 bits per channel</td>
+                <td>16.7 million</td>
+                <td>All standard photo scanning ?</td>
+              </tr>
+              <tr>
+                <td>48-bit Colour (RGB)</td>
+                <td>16 bits per channel</td>
+                <td>281 trillion</td>
+                <td>Professional film scanning only</td>
+              </tr>
+              <tr>
+                <td>Greyscale (8-bit)</td>
+                <td>8 bits total</td>
+                <td>256 shades of grey</td>
+                <td>Line art, text documents</td>
+              </tr>
+              <tr>
+                <td>Black &amp; White (1-bit)</td>
+                <td>1 bit total</td>
+                <td>2 (black or white)</td>
+                <td>Pure text documents only</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            The most important rule here:
+            <strong
+              >always scan in 24-bit Colour (RGB), even for black-and-white
+              photographs.</strong
+            >
+            Here is why: vintage black-and-white prints are rarely truly neutral
+            — they often have a warm sepia tone, a cool silver-blue cast, or
+            subtle colouration from the paper. Scanning in greyscale permanently
+            discards all that tonal information. Scanning in 24-bit colour
+            preserves it. The file size difference is minimal (a 24-bit grey
+            scan is only slightly larger than an 8-bit greyscale scan) and the
+            preservation quality is meaningfully better.
+          </p>
+          <p>
+            Skip 48-bit colour for standard photo scanning. While the extra bit
+            depth is valuable for film scanning and professional retouching
+            workflows, it doubles file sizes and most photo viewers cannot
+            display the full tonal range anyway. 24-bit is the universal
+            standard for photo archives.
+          </p>
+          <h2>File Format — JPEG vs TIFF vs PNG</h2>
+          <p>
+            This is the question that generates the most debate among
+            digitization enthusiasts. Here is an honest, practical breakdown:
+          </p>
+          <h3>JPEG</h3>
+          <p>
+            JPEG uses lossy compression — it discards some image data to achieve
+            small file sizes. At quality settings of 85% or above, the
+            difference from the original is virtually invisible to the human
+            eye. A 300 DPI scan of a 4×6 print saved as JPEG 90% will be about
+            1×3 MB. JPEG is the best choice for photo archives where you want a
+            balance of quality, compatibility, and storage efficiency. Every
+            device, app, cloud service, and photo viewer on earth understands
+            JPEG.
+          </p>
+          <h3>TIFF</h3>
+          <p>
+            TIFF uses lossless compression (or no compression at all) — every
+            pixel is preserved exactly. A 300 DPI scan of a 4×6 print saved as
+            TIFF will be 15×25 MB — roughly 10×15× larger than the JPEG
+            equivalent. TIFF is the professional standard for archival master
+            files. If storage space is not a concern and you want the absolute
+            pixel-perfect preservation of each scan, use TIFF. If you are
+            scanning hundreds of photos and will be storing them on cloud
+            services with storage limits, JPEG at 90%+ is the pragmatic choice.
+          </p>
+          <h3>PNG</h3>
+          <p>
+            PNG is a lossless format like TIFF but is generally not used for
+            photo scanning — PNG files are typically larger than JPEG but
+            smaller than TIFF, and they lack the rich metadata support that TIFF
+            provides for professional workflows. PNG is excellent for
+            screenshots, graphics, and web images. For scanned photographs,
+            choose JPEG or TIFF instead.
+          </p>
+          <div class="tip-card">
+            <h3>✨</h3>
+            <p>
+              If storage permits, save both formats. Use
+              <strong>TIFF as your archival master</strong> — put these on an
+              external drive. Use
+              <strong>JPEG 90% as your working copy</strong> — upload these to
+              Google Photos, share with family, and use for everyday viewing. If
+              you ever need to reprocess a photo (crop it differently, do
+              heavier colour correction), you have the lossless TIFF to work
+              from. For most home archivists who are storage-constrained, JPEG
+              at 90% is perfectly sufficient and will look indistinguishable
+              from the TIFF in everyday use.
+            </p>
+          </div>
+          <h2>Settings to Always Turn Off</h2>
+          <h3>Auto-Exposure / Auto-Brightness</h3>
+          <p>
+            Auto-exposure seems helpful — it automatically adjusts the
+            brightness so your scan looks good. The problem is that it adjusts
+            <em>per scan</em>, meaning a batch with one dark photo and one light
+            photo may have inconsistent brightness from one scan to the next.
+            More critically, auto-exposure can clip (permanently overexpose)
+            highlights in bright prints or crush shadows in dark ones. Turn it
+            off and apply any brightness corrections later in a photo editor
+            where you have full control.
+          </p>
+          <h3>Auto-Crop</h3>
+          <p>
+            Auto-crop attempts to automatically detect and crop individual
+            photos from a batch scan. Scanner software auto-crop is notoriously
+            unreliable — it frequently misses photos, merges adjacent ones, or
+            crops them incorrectly. Turn it off entirely and use
+            <a href="/app">PhotoSplit Studio</a> instead. PhotoSplit's OpenCV.js
+            detection engine is vastly more accurate than any scanner driver's
+            auto-crop and works across all scanner brands with a single
+            consistent interface.
+          </p>
+          <h3>Dust and Scratch Removal (Digital ICE)</h3>
+          <p>
+            Technologies like Epson's Digital ICE and Canon's FARE use infrared
+            scanning to detect and digitally fill scratches and dust. These work
+            well for <em>film scanning</em> (negatives and slides) but should be
+            turned off for <em>reflective print scanning</em>. On prints, dust
+            removal tends to soften fine details, blur texture in the photo
+            paper, and can incorrectly identify image content as scratches.
+            Clean the scanner glass with a microfiber cloth instead — that
+            eliminates 95% of dust-related issues without any image quality
+            compromise.
+          </p>
+          <h3>Unsharp Mask / Sharpening</h3>
+          <p>
+            In-scanner sharpening applies a sharpening filter to the scan during
+            capture. This is destructive — it permanently bakes a sharpening
+            artifact into the file. Turn it off and apply sharpening
+            non-destructively in your photo editor or when resizing for a
+            specific output (print, web, etc.) after the fact.
+          </p>
+          <h2>Special Case: Scanning Film Negatives</h2>
+          <p>
+            If you have 35mm or medium format film negatives to digitize, the
+            settings above change significantly. Negatives require a scanner
+            with a <em>transparency adapter</em> (a backlit scanning bed) since
+            the image is captured from light transmitted <em>through</em> the
+            film rather than reflected off a print surface. For film scanning
+            you should use 1200×2400 DPI (the entire frame is only 35mm wide),
+            48-bit colour is beneficial, and Digital ICE or FARE can be enabled.
+            PhotoSplit Studio's <strong>Convert Negative</strong> feature then
+            handles inverting your scanned negative frames to produce natural
+            positive photographs — including automatic orange mask removal for
+            colour C-41 negative film.
+          </p>
+          <h2>Quick Checklist Before You Start Scanning</h2>
+          <ul>
+            <li>
+              ? Resolution set to 300 DPI (or 600 DPI for wallet-size prints)
+            </li>
+            <li>? Colour mode set to 24-bit RGB Colour</li>
+            <li>? File format set to JPEG 90% (or TIFF for masters)</li>
+            <li>? Auto-exposure turned OFF</li>
+            <li>? Auto-crop turned OFF</li>
+            <li>? Dust/scratch removal turned OFF</li>
+            <li>? Unsharp mask / sharpening turned OFF</li>
+            <li>? Scanner glass cleaned with a microfiber cloth</li>
+            <li>
+              ? <a href="/app">PhotoSplit Studio</a> open in browser tab and
+              ready
+            </li>
+          </ul>
+          <div class="callout">
+            <p>
+              ✨ <strong>Ready to split your scans?</strong> Once you have your
+              batch scan files, drag them into
+              <a href="/app">PhotoSplit Studio</a> to automatically detect,
+              crop, and save every individual photo in seconds — free, private,
+              and right in your browser.
+            </p>
+          </div>
+          <div class="related-section">
+            <h2>Related Guides</h2>
+            <div class="related-grid">
+              <a class="related-card" href="/blog/how-to-digitize-photo-album">
+                <h3>✨</h3>
+                <p>
+                  Complete project plan: sort, scan, split, enhance, and back up
+                  hundreds of prints.
+                </p>
+              </a>
+              <a class="related-card" href="/tips">
+                <h3>✨</h3>
+                <p>
+                  Equipment, batch workflow, troubleshooting detection problems,
+                  and archive organisation.
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="cta-center">
+            <a class="btn cta-btn-primary" href="/app"
+              >??? Launch PhotoSplit Studio — Free</a
+            >
+          </div>
+        </div>
+      </div>
+      <aside class="page-sidebar">
+        <div class="ad-sidebar-sticky">
+          <span class="ad-sidebar-label">Advertisement</span>
+          <div
+            id="ad-sidebar"
+            style="
+              margin: 0;
+              min-height: 250px;
+              background: var(--bg-surface-2);
+              border: 1px dashed var(--border-strong);
+              border-radius: var(--radius-md);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <div class="ad-item">
+              <script>
+                atOptions = {
+                  key: "eefa27f757f4d0772d979fca1074f12a",
+                  format: "iframe",
+                  height: 250,
+                  width: 300,
+                  params: {},
+                };
+              </script>
+              <script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <!-- AdSense &mdash; Above Footer -->
+    <div class="ad-wrap-bottom">
+      <script
+        async="async"
+        data-cfasync="false"
+        src="https://pl29548528.effectivecpmnetwork.com/a25495e0c3bb3c8d42df39bb0b421e4a/invoke.js"
+      ></script>
+      <div id="container-a25495e0c3bb3c8d42df39bb0b421e4a"></div>
+      <div class="author-bio">
+        <img
+          alt="PhotoSplit Team"
+          class="author-bio-img"
+          src="/assets/images/logo-animated.svg"
+        />
+        <div>
+          <h3 class="author-bio-name">Written by the PhotoSplit Team</h3>
+          <p class="author-bio-desc">
+            We are a team of photo preservation enthusiasts and developers
+            dedicated to making high-quality digitization accessible to
+            everyone. Our mission is to ensure family histories are preserved
+            for generations to come.
+          </p>
+        </div>
+      </div>
+    </div>
+    <section class="gear-section">
+      <div class="gear-section-inner">
+        <h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
+        <p class="gear-section-sub">
+          Pair PhotoSplit Studio with the best hardware for fast, high-quality
+          archiving and secure backups.
+        </p>
+        <div class="gear-cards-grid"></div>
+        <p class="affiliate-disclosure">
+          As an Amazon Associate, PhotoSplit Studio earns from qualifying
+          purchases.
+        </p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="/app">App</a>
+          <a href="/blog/">Blog</a>
+          <a href="/tips">Scanning Tips</a>
+          <a href="/contact">Contact</a>
+          <a href="/terms">Terms</a>
+          <a href="/privacy-policy">Privacy</a>
+          <a href="/about">About</a>
+          <a
+            href="#"
+            onclick="
+              if (typeof openTextModal === 'function')
+                openTextModal('feedback-modal', event);
+            "
+            >Feedback</a
+          >
+        </div>
+        <div class="footer-copy">
+          © 2026 PhotoSplit Studio. All rights reserved.
+        </div>
+      </div>
+      <div class="site-status-bar">
+        <div class="status-item">
+          <span class="status-label">Is it dark outside?</span
+          ><span class="status-value" id="dark-status-answer">...</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Global Visitors:</span
+          ><img
+            alt="Visitor Count"
+            class="visitor-badge"
+            src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"
+          />
+        </div>
+      </div>
+      <script>
+        (function () {
+          var h = new Date().getHours();
+          var ans = h >= 18 || h < 6 ? "YES" : "NO";
+          var el = document.getElementById("dark-status-answer");
+          if (el) el.textContent = ans;
+        })();
+      </script>
+    </footer>
+
+    <!-- Hit Tracker (Unique Visitors Only) -->
+    <script>
+      if (!localStorage.getItem("ps_counted")) {
+        localStorage.setItem("ps_counted", "true");
+        new Image().src =
+          "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
       }
-      document.getElementById('cookie-accept').onclick = function() { 
-        localStorage.setItem('pss_cookie_consent', 'accepted'); 
-        banner.classList.remove('visible'); 
-        if (typeof loadGoogleScripts === 'function') loadGoogleScripts();
-      };
-      if(document.getElementById('cookie-decline')) {
-        document.getElementById('cookie-decline').onclick = function() { 
-          localStorage.setItem('pss_cookie_consent', 'declined'); 
-          banner.classList.remove('visible'); 
+    </script>
+    <!-- MODALS START -->
+    <div
+      class="text-modal-backdrop"
+      id="feedback-modal"
+      onclick="
+        if (event.target === this && typeof closeTextModal === 'function')
+          closeTextModal('feedback-modal');
+      "
+    >
+      <div class="text-modal-box">
+        <div class="text-modal-header">
+          <h2>Provide Feedback</h2>
+          <button
+            class="icon-btn"
+            onclick="
+              if (typeof closeTextModal === 'function')
+                closeTextModal('feedback-modal');
+            "
+          >
+            ✕
+          </button>
+        </div>
+        <div class="text-modal-content" id="feedback-form-view">
+          <form
+            onsubmit="
+              if (typeof handleFeedbackSubmit === 'function')
+                handleFeedbackSubmit(event);
+            "
+          >
+            <input
+              class="form-control mb-12"
+              id="fb-name"
+              placeholder="Your Name"
+              required=""
+              type="text"
+              style="margin-bottom: 12px"
+            />
+            <input
+              class="form-control mb-12"
+              id="fb-email"
+              placeholder="your@email.com"
+              required=""
+              type="email"
+              style="margin-bottom: 12px"
+            />
+            <textarea
+              class="form-control mb-12"
+              id="fb-desc"
+              placeholder="Your feedback..."
+              required=""
+              rows="4"
+              style="margin-bottom: 12px"
+            ></textarea>
+            <button class="btn btn-primary" style="width: 100%" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+        <div
+          class="text-modal-content"
+          id="feedback-success-view"
+          style="display: none; text-align: center"
+        >
+          <h3>✅ Thank you!</h3>
+          <p>Your feedback has been received.</p>
+          <button
+            class="btn btn-secondary"
+            onclick="
+              if (typeof closeTextModal === 'function')
+                closeTextModal('feedback-modal');
+            "
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="cookie-consent" role="dialog">
+      <div id="cookie-consent-inner">
+        <p>
+          🍪 We use cookies to improve your experience. See our
+          <a href="/privacy-policy">Privacy Policy</a>.
+        </p>
+        <div id="cookie-consent-actions">
+          <button class="cookie-btn" id="cookie-decline">Decline</button>
+          <button class="cookie-btn cookie-btn-accept" id="cookie-accept">
+            Accept All
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        if (!localStorage.getItem("ps_counted")) {
+          localStorage.setItem("ps_counted", "true");
+          var img = new Image();
+          img.src =
+            "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
+        }
+
+        window.handleFeedbackSubmit = function (e) {
+          e.preventDefault();
+          var params = new URLSearchParams();
+          params.append(
+            "entry.1051903221",
+            document.getElementById("fb-name").value,
+          );
+          params.append(
+            "entry.371950700",
+            document.getElementById("fb-email").value,
+          );
+          params.append(
+            "entry.852578852",
+            document.getElementById("fb-desc").value,
+          );
+          fetch(
+            "https://docs.google.com/forms/d/e/1FAIpQLSeJe_jw0IHHXeT4w4hzcZJ2WXREaT8aD4_R4LFBGVZNazsehg/formResponse",
+            { method: "POST", mode: "no-cors", body: params },
+          );
+          document.getElementById("feedback-form-view").style.display = "none";
+          document.getElementById("feedback-success-view").style.display =
+            "block";
         };
-      }
-    })();
-  </script>
-</body>
+
+        // Cookie Consent
+        var banner = document.getElementById("cookie-consent");
+        if (banner) {
+          if (!localStorage.getItem("pss_cookie_consent")) {
+            banner.classList.add("visible");
+          } else if (
+            localStorage.getItem("pss_cookie_consent") === "accepted"
+          ) {
+            if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+            if (typeof loadGoogleAnalytics === "function")
+              loadGoogleAnalytics();
+          }
+          var acceptBtn = document.getElementById("cookie-accept");
+          if (acceptBtn) {
+            acceptBtn.onclick = function () {
+              localStorage.setItem("pss_cookie_consent", "accepted");
+              banner.classList.remove("visible");
+              if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+              if (typeof loadGoogleAnalytics === "function")
+                loadGoogleAnalytics();
+            };
+          }
+          var declineBtn = document.getElementById("cookie-decline");
+          if (declineBtn) {
+            declineBtn.onclick = function () {
+              localStorage.setItem("pss_cookie_consent", "declined");
+              banner.classList.remove("visible");
+            };
+          }
+        }
+      })();
+    </script>
+    <!-- MODALS END -->
+  </body>
 </html>

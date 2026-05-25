@@ -1,303 +1,810 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html data-theme="" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
-<meta content="#010101" name="theme-color"/>
-<title>Bulk Image Converter — JPEG to PNG to WebP Free Online | PhotoSplit Studio</title>
-<meta content="Free bulk image converter online. Convert JPEG to PNG, PNG to WebP, JPEG to WebP and more — batch convert multiple photos at once. No upload, runs in your browser, 100% private." name="description"/>
-<meta content="convert jpg to png online free, convert png to webp, bulk image converter, image format converter free, jpeg to webp, batch image convert" name="keywords"/>
-<meta content="index,follow" name="robots"/>
-<link href="https://photosplitstudio.com/convert" rel="canonical"/>
-<meta content="website" property="og:type"/>
-<meta content="Free Bulk Image Converter — PhotoSplit Studio" property="og:title"/>
-<meta content="Convert JPEG, PNG, and WebP images in bulk — free, private, no upload needed." property="og:description"/>
-<meta content="https://photosplitstudio.com/convert" property="og:url"/>
-<meta content="https://photosplitstudio.com/assets/images/og-image.png" property="og:image"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<link href="/assets/images/logo.png" rel="icon" type="image/png"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="/css/style.css" rel="stylesheet"/>
-<script defer="" src="/js/gear.js"></script>
-<!-- Scripts loaded dynamically after consent -->
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    function loadGoogleScripts() {
-      if (document.getElementById('ga-script')) return;
-      var gaScript = document.createElement('script');
-      gaScript.id = 'ga-script';
-      gaScript.async = true;
-      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ';
-      document.head.appendChild(gaScript);
-      gtag('js', new Date());
-      gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+    <meta content="#010101" name="theme-color" />
+    <title>
+      Bulk Image Converter — JPEG to PNG to WebP Free Online | PhotoSplit Studio
+    </title>
+    <meta
+      content="Free bulk image converter online. Convert JPEG to PNG, PNG to WebP, JPEG to WebP and more — batch convert multiple photos at once. No upload, runs in your browser, 100% private."
+      name="description"
+    />
+    <meta
+      content="convert jpg to png online free, convert png to webp, bulk image converter, image format converter free, jpeg to webp, batch image convert"
+      name="keywords"
+    />
+    <meta content="index,follow" name="robots" />
+    <link href="https://photosplitstudio.com/convert" rel="canonical" />
+    <meta content="website" property="og:type" />
+    <meta
+      content="Free Bulk Image Converter — PhotoSplit Studio"
+      property="og:title"
+    />
+    <meta
+      content="Convert JPEG, PNG, and WebP images in bulk — free, private, no upload needed."
+      property="og:description"
+    />
+    <meta content="https://photosplitstudio.com/convert" property="og:url" />
+    <meta
+      content="https://photosplitstudio.com/assets/images/og-image.png"
+      property="og:image"
+    />
+    <meta content="summary_large_image" name="twitter:card" />
+    <link href="/assets/images/logo.png" rel="icon" type="image/png" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <script defer="" src="/js/gear.js"></script>
+    <!-- Scripts loaded dynamically after consent -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      function loadGoogleScripts() {
+        if (document.getElementById("ga-script")) return;
+        var gaScript = document.createElement("script");
+        gaScript.id = "ga-script";
+        gaScript.async = true;
+        gaScript.src =
+          "https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ";
+        document.head.appendChild(gaScript);
+        gtag("js", new Date());
+        gtag("config", "G-G40QDCGTTZ", { anonymize_ip: true });
+      }
+    </script>
+    <style>
+      .convert-tool {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 32px 24px 60px;
+      }
+      .format-selector {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 20px 0 28px;
+      }
+      .format-selector select {
+        padding: 10px 14px;
+        background: var(--bg-surface-2);
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius-sm);
+        color: var(--text-primary);
+        font-family: inherit;
+        font-size: 0.9rem;
+      }
+      .format-selector label {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+      }
+      #convert-drop {
+        border: 2px dashed var(--border-strong);
+        border-radius: var(--radius-lg);
+        padding: 48px 24px;
+        text-align: center;
+        cursor: pointer;
+        transition:
+          border-color 0.2s,
+          background 0.2s;
+      }
+      #convert-drop:hover,
+      #convert-drop.drag-over {
+        border-color: var(--accent);
+        background: rgba(254, 44, 85, 0.05);
+      }
+      #convert-drop p {
+        color: var(--text-muted);
+        margin: 8px 0 0;
+        font-size: 0.85rem;
+      }
+      .file-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        font-size: 0.85rem;
+      }
+      .file-table th {
+        text-align: left;
+        padding: 8px 12px;
+        border-bottom: 1px solid var(--border);
+        color: var(--text-secondary);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .file-table td {
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--border);
+        color: var(--text-primary);
+        vertical-align: middle;
+      }
+      .btn-dl-single {
+        background: none;
+        border: 1px solid var(--accent);
+        color: var(--accent);
+        padding: 4px 12px;
+        border-radius: 99px;
+        font-size: 0.75rem;
+        font-family: inherit;
+        cursor: pointer;
+        transition: all 0.12s;
+      }
+      .btn-dl-single:hover {
+        background: var(--accent);
+        color: #fff;
+      }
+      .convert-actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+      }
+      .btn-convert-all {
+        background: linear-gradient(135deg, #fe2c55, #ff375f);
+        color: #fff;
+        border: none;
+        border-radius: 99px;
+        padding: 13px 28px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 3px 14px rgba(254, 44, 85, 0.35);
+        transition: all 0.15s;
+      }
+      .btn-convert-all:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 20px rgba(254, 44, 85, 0.45);
+      }
+      .btn-convert-zip {
+        background: linear-gradient(135deg, #f59e0b, #d97706);
+        color: #fff;
+        border: none;
+        border-radius: 99px;
+        padding: 13px 28px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 3px 8px rgba(245, 158, 11, 0.3);
+        transition: all 0.15s;
+      }
+      .btn-convert-zip:hover {
+        transform: translateY(-1px);
+      }
+      .btn-clear {
+        background: var(--bg-surface-2);
+        border: 1px solid var(--border);
+        color: var(--text-secondary);
+        border-radius: 99px;
+        padding: 12px 20px;
+        font-size: 0.85rem;
+        font-family: inherit;
+        cursor: pointer;
+      }
+      .status-badge {
+        display: inline-block;
+        padding: 2px 8px;
+        border-radius: 99px;
+        font-size: 0.72rem;
+        font-weight: 700;
+      }
+      .status-badge.pending {
+        background: rgba(156, 163, 175, 0.15);
+        color: var(--text-muted);
+      }
+      .status-badge.done {
+        background: rgba(34, 197, 94, 0.15);
+        color: #22c55e;
+      }
+      .status-badge.error {
+        background: rgba(239, 68, 68, 0.15);
+        color: #ef4444;
+      }
+    </style>
+    <link href="/css/style-premium.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header id="site-header">
+      <button
+        aria-label="Toggle navigation"
+        class="icon-btn"
+        id="sidebar-toggle"
+      >
+        <svg
+          fill="none"
+          height="20"
+          stroke="currentColor"
+          stroke-width="2"
+          viewbox="0 0 24 24"
+          width="20"
+        >
+          <path d="M3 12h18M3 6h18M3 18h18"></path>
+        </svg>
+      </button>
+      <a class="logo" href="/">
+        <img
+          alt="PhotoSplit Logo"
+          class="logo-img"
+          src="/assets/images/logo-animated.svg"
+          style="width: 32px; height: 32px"
+        />
+        PhotoSplit Studio
+      </a>
+      <div class="header-spacer"></div>
+      <div class="privacy-badge">
+        <svg
+          fill="none"
+          height="14"
+          stroke="currentColor"
+          stroke-width="2.5"
+          viewbox="0 0 24 24"
+          width="14"
+        >
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+        <span>100% Private · No Uploads</span>
+      </div>
+      <nav class="main-nav">
+        <a href="/app" class="">Split Photos</a>
+        <a href="/resize" class="">Resize</a>
+        <a href="/blog/" class="">Blog</a>
+        <a href="/tips" class="">Tips</a>
+        <a href="/about" class="">About</a>
+        <a href="/contact" class="">Contact</a>
+      </nav>
 
+      <button
+        class="icon-btn"
+        id="theme-toggle"
+        onclick="if (typeof toggleTheme === 'function') toggleTheme();"
+        title="Toggle Dark/Light Mode"
+      >
+        🌓
+      </button>
+    </header>
+
+    <main>
+      <section class="hero-utility">
+        <h1>Bulk Image Converter</h1>
+        <p>
+          Convert multiple JPEG, PNG, and WebP images instantly in your browser.
+          Free &amp; private.
+        </p>
+      </section>
+      <!-- AdSense &mdash; Below Hero -->
+      <div class="page-with-sidebar">
+        <div class="page-main-content">
+          <div class="ad-wrap-md">
+            <div class="ad-item">
+              <script>
+                atOptions = {
+                  key: "033703f2c2dfe7a5fa4501cd3ba1417e",
+                  format: "iframe",
+                  height: 90,
+                  width: 728,
+                  params: {},
+                };
+              </script>
+              <script src="https://www.highperformanceformat.com/033703f2c2dfe7a5fa4501cd3ba1417e/invoke.js"></script>
+            </div>
+            <div class="ad-item">
+              <script>
+                atOptions = {
+                  key: "eefa27f757f4d0772d979fca1074f12a",
+                  format: "iframe",
+                  height: 60,
+                  width: 468,
+                  params: {},
+                };
+              </script>
+              <script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
+            </div>
+          </div>
+          <div class="convert-tool">
+            <div class="format-selector">
+              <div>
+                <label for="out-format">Convert to</label><br />
+                <select id="out-format">
+                  <option value="jpeg">JPEG</option>
+                  <option value="png">PNG</option>
+                  <option selected="" value="webp">WebP</option>
+                </select>
+              </div>
+            </div>
+            <div
+              id="convert-drop"
+              onclick="document.getElementById('convert-file-input').click()"
+            >
+              <div class="drop-icon">??</div>
+              <div class="drop-text">Drop images here or click to select</div>
+              <p>JPEG, PNG, WebP supported — select multiple files at once</p>
+              <input
+                accept="image/*"
+                id="convert-file-input"
+                multiple=""
+                style="display: none"
+                type="file"
+              />
+            </div>
+            <div id="file-table-wrap" style="display: none">
+              <table class="file-table" id="file-table">
+                <thead>
+                  <tr>
+                    <th>Preview</th>
+                    <th>Filename</th>
+                    <th>Size</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="file-table-body"></tbody>
+              </table>
+              <div class="convert-actions">
+                <button class="btn-convert-all" id="btn-convert-all">✨</button>
+                <button class="btn-convert-zip" id="btn-convert-zip">
+                  ??? ZIP All
+                </button>
+                <button class="btn-clear" id="btn-clear">? Clear</button>
+              </div>
+            </div>
+          </div>
+          <article
+            class="seo-wrapper"
+            style="
+              max-width: 860px;
+              margin: 40px auto;
+              padding: 24px;
+              background: var(--bg-surface);
+              border-radius: var(--radius-lg);
+              border: 1px solid var(--border);
+            "
+          >
+            <h2 class="mt-0">Why Use a Bulk Image Converter?</h2>
+            <p class="text-secondary lh-6">
+              Converting images individually is time-consuming. PhotoSplit
+              Studio's free Bulk Image Converter allows you to drop dozens of
+              JPEG, PNG, or WebP images and convert them all at once. Everything
+              happens locally in your browser, meaning your files are never
+              uploaded to a server, ensuring 100% privacy and blazing fast
+              speeds. Whether you are optimizing images for a website by
+              converting PNG to WebP, or standardizing client photos to JPEG,
+              our tool handles it securely.
+            </p>
+            <h3 style="margin-top: 32px; margin-bottom: 16px">
+              Understanding Image Formats
+            </h3>
+            <p class="text-secondary lh-6">
+              Choosing the right image format is crucial for balancing visual
+              quality and file size. Here is a breakdown of the three most
+              popular web formats:
+            </p>
+            <ul class="text-secondary lh-6 pl-20" style="margin-bottom: 32px">
+              <li>
+                <strong>JPEG (Joint Photographic Experts Group):</strong> Best
+                for photographs and images with millions of colors. JPEG uses
+                "lossy" compression, meaning it discards some data to achieve
+                very small file sizes. It does not support transparency.
+              </li>
+              <li>
+                <strong>PNG (Portable Network Graphics):</strong> Best for
+                graphics, logos, and images requiring transparency (like a logo
+                with a clear background). PNG uses "lossless" compression,
+                meaning it retains all data and quality, but results in much
+                larger file sizes than JPEG.
+              </li>
+              <li>
+                <strong>WebP:</strong> Developed by Google, WebP is the modern
+                web standard. It offers superior lossless and lossy compression
+                compared to PNG and JPEG, often resulting in files that are
+                25-34% smaller while maintaining the same visual quality.
+                Crucially, WebP also supports transparency. Converting JPEG or
+                PNG to WebP is a major SEO and performance boost for websites.
+              </li>
+            </ul>
+            <h3 style="margin-top: 32px; margin-bottom: 16px">
+              How Local Conversion Works
+            </h3>
+            <p class="text-secondary lh-6">
+              Traditional online converters upload your image to a remote
+              server, process it there, and force you to download the result.
+              This consumes bandwidth and compromises privacy. Our tool
+              leverages the power of HTML5 and modern JavaScript to decode and
+              encode your images directly inside your device's memory. This is
+              why it works instantly, even if you disconnect from the internet
+              after loading the page.
+            </p>
+            <div
+              class="related-section"
+              style="
+                margin-top: 40px;
+                border-top: 1px solid var(--border);
+                padding-top: 32px;
+              "
+            >
+              <h2 style="font-size: 1.5rem; margin-top: 0; margin-bottom: 24px">
+                Related Guides &amp; Tutorials
+              </h2>
+              <div
+                class="related-grid"
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                  gap: 16px;
+                "
+              >
+                <a
+                  class="related-card"
+                  href="/blog/understanding-dpi-and-resolution"
+                  style="
+                    background: var(--bg-surface);
+                    border: 1px solid var(--border);
+                    border-radius: 12px;
+                    padding: 18px;
+                    text-decoration: none;
+                    color: inherit;
+                    display: block;
+                    transition:
+                      transform 0.2s,
+                      box-shadow 0.2s;
+                  "
+                >
+                  <h3
+                    style="
+                      font-size: 0.95rem;
+                      font-weight: 600;
+                      margin: 0 0 8px;
+                    "
+                  >
+                    Understanding DPI and Resolution
+                  </h3>
+                  <p
+                    style="
+                      font-size: 0.85rem;
+                      color: var(--text-secondary);
+                      margin: 0;
+                      line-height: 1.5;
+                    "
+                  >
+                    Learn how to choose the perfect scanner settings for your
+                    archival project.
+                  </p>
+                </a>
+                <a
+                  class="related-card"
+                  href="/blog/restore-water-damaged-photos"
+                  style="
+                    background: var(--bg-surface);
+                    border: 1px solid var(--border);
+                    border-radius: 12px;
+                    padding: 18px;
+                    text-decoration: none;
+                    color: inherit;
+                    display: block;
+                    transition:
+                      transform 0.2s,
+                      box-shadow 0.2s;
+                  "
+                >
+                  <h3
+                    style="
+                      font-size: 0.95rem;
+                      font-weight: 600;
+                      margin: 0 0 8px;
+                    "
+                  >
+                    Restoring Water-Damaged Photos
+                  </h3>
+                  <p
+                    style="
+                      font-size: 0.85rem;
+                      color: var(--text-secondary);
+                      margin: 0;
+                      line-height: 1.5;
+                    "
+                  >
+                    Safe physical separation and digital restoration techniques
+                    for wet photographs.
+                  </p>
+                </a>
+                <a
+                  class="related-card"
+                  href="/blog/choosing-the-right-scanner"
+                  style="
+                    background: var(--bg-surface);
+                    border: 1px solid var(--border);
+                    border-radius: 12px;
+                    padding: 18px;
+                    text-decoration: none;
+                    color: inherit;
+                    display: block;
+                    transition:
+                      transform 0.2s,
+                      box-shadow 0.2s;
+                  "
+                >
+                  <h3
+                    style="
+                      font-size: 0.95rem;
+                      font-weight: 600;
+                      margin: 0 0 8px;
+                    "
+                  >
+                    Choosing the Right Photo Scanner
+                  </h3>
+                  <p
+                    style="
+                      font-size: 0.85rem;
+                      color: var(--text-secondary);
+                      margin: 0;
+                      line-height: 1.5;
+                    "
+                  >
+                    Flatbed vs Auto-feed vs Smartphone apps: an in-depth buying
+                    guide.
+                  </p>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <aside class="page-sidebar">
+          <div class="ad-sidebar-sticky">
+            <span class="ad-sidebar-label">Advertisement</span>
+            <div
+              id="ad-sidebar"
+              style="
+                margin: 0;
+                min-height: 250px;
+                background: var(--bg-surface-2);
+                border: 1px dashed var(--border-strong);
+                border-radius: var(--radius-md);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <div class="ad-item">
+                <script>
+                  atOptions = {
+                    key: "eefa27f757f4d0772d979fca1074f12a",
+                    format: "iframe",
+                    height: 250,
+                    width: 300,
+                    params: {},
+                  };
+                </script>
+                <script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <section class="gear-section">
+      <div class="gear-section-inner">
+        <h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
+        <p class="gear-section-sub">
+          Pair PhotoSplit Studio with the best hardware for fast, high-quality
+          archiving and secure backups.
+        </p>
+        <div class="gear-cards-grid"></div>
+        <p class="affiliate-disclosure">
+          As an Amazon Associate, PhotoSplit Studio earns from qualifying
+          purchases.
+        </p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="/app">App</a>
+          <a href="/blog/">Blog</a>
+          <a href="/tips">Scanning Tips</a>
+          <a href="/contact">Contact</a>
+          <a href="/terms">Terms</a>
+          <a href="/privacy-policy">Privacy</a>
+          <a href="/about">About</a>
+          <a
+            href="#"
+            onclick="
+              if (typeof openTextModal === 'function')
+                openTextModal('feedback-modal', event);
+            "
+            >Feedback</a
+          >
+        </div>
+        <div class="footer-copy">
+          © 2026 PhotoSplit Studio. All rights reserved.
+        </div>
+      </div>
+      <div class="site-status-bar">
+        <div class="status-item">
+          <span class="status-label">Is it dark outside?</span
+          ><span class="status-value" id="dark-status-answer">...</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Global Visitors:</span
+          ><img
+            alt="Visitor Count"
+            class="visitor-badge"
+            src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"
+          />
+        </div>
+      </div>
+      <script>
+        (function () {
+          var h = new Date().getHours();
+          var ans = h >= 18 || h < 6 ? "YES" : "NO";
+          var el = document.getElementById("dark-status-answer");
+          if (el) el.textContent = ans;
+        })();
+      </script>
+    </footer>
+
+    <!-- MODALS START -->
+    <div
+      class="text-modal-backdrop"
+      id="feedback-modal"
+      onclick="
+        if (event.target === this && typeof closeTextModal === 'function')
+          closeTextModal('feedback-modal');
+      "
+    >
+      <div class="text-modal-box">
+        <div class="text-modal-header">
+          <h2>Provide Feedback</h2>
+          <button
+            class="icon-btn"
+            onclick="
+              if (typeof closeTextModal === 'function')
+                closeTextModal('feedback-modal');
+            "
+          >
+            ✕
+          </button>
+        </div>
+        <div class="text-modal-content" id="feedback-form-view">
+          <form
+            onsubmit="
+              if (typeof handleFeedbackSubmit === 'function')
+                handleFeedbackSubmit(event);
+            "
+          >
+            <input
+              class="form-control mb-12"
+              id="fb-name"
+              placeholder="Your Name"
+              required=""
+              type="text"
+              style="margin-bottom: 12px"
+            />
+            <input
+              class="form-control mb-12"
+              id="fb-email"
+              placeholder="your@email.com"
+              required=""
+              type="email"
+              style="margin-bottom: 12px"
+            />
+            <textarea
+              class="form-control mb-12"
+              id="fb-desc"
+              placeholder="Your feedback..."
+              required=""
+              rows="4"
+              style="margin-bottom: 12px"
+            ></textarea>
+            <button class="btn btn-primary" style="width: 100%" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+        <div
+          class="text-modal-content"
+          id="feedback-success-view"
+          style="display: none; text-align: center"
+        >
+          <h3>✅ Thank you!</h3>
+          <p>Your feedback has been received.</p>
+          <button
+            class="btn btn-secondary"
+            onclick="
+              if (typeof closeTextModal === 'function')
+                closeTextModal('feedback-modal');
+            "
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="cookie-consent" role="dialog">
+      <div id="cookie-consent-inner">
+        <p>
+          🍪 We use cookies to improve your experience. See our
+          <a href="/privacy-policy">Privacy Policy</a>.
+        </p>
+        <div id="cookie-consent-actions">
+          <button class="cookie-btn" id="cookie-decline">Decline</button>
+          <button class="cookie-btn cookie-btn-accept" id="cookie-accept">
+            Accept All
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        if (!localStorage.getItem("ps_counted")) {
+          localStorage.setItem("ps_counted", "true");
+          var img = new Image();
+          img.src =
+            "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
+        }
+
+        window.handleFeedbackSubmit = function (e) {
+          e.preventDefault();
+          var params = new URLSearchParams();
+          params.append(
+            "entry.1051903221",
+            document.getElementById("fb-name").value,
+          );
+          params.append(
+            "entry.371950700",
+            document.getElementById("fb-email").value,
+          );
+          params.append(
+            "entry.852578852",
+            document.getElementById("fb-desc").value,
+          );
+          fetch(
+            "https://docs.google.com/forms/d/e/1FAIpQLSeJe_jw0IHHXeT4w4hzcZJ2WXREaT8aD4_R4LFBGVZNazsehg/formResponse",
+            { method: "POST", mode: "no-cors", body: params },
+          );
+          document.getElementById("feedback-form-view").style.display = "none";
+          document.getElementById("feedback-success-view").style.display =
+            "block";
+        };
+
+        // Cookie Consent
+        var banner = document.getElementById("cookie-consent");
+        if (banner) {
+          if (!localStorage.getItem("pss_cookie_consent")) {
+            banner.classList.add("visible");
+          } else if (
+            localStorage.getItem("pss_cookie_consent") === "accepted"
+          ) {
+            if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+            if (typeof loadGoogleAnalytics === "function")
+              loadGoogleAnalytics();
           }
-  </script>
-<style>
-    .convert-tool { max-width: 860px; margin: 0 auto; padding: 32px 24px 60px; }
-    .format-selector { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 20px 0 28px; }
-    .format-selector select { padding: 10px 14px; background: var(--bg-surface-2); border: 1.5px solid var(--border); border-radius: var(--radius-sm); color: var(--text-primary); font-family: inherit; font-size: 0.9rem; }
-    .format-selector label { font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); }
-    #convert-drop { border: 2px dashed var(--border-strong); border-radius: var(--radius-lg); padding: 48px 24px; text-align: center; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
-    #convert-drop:hover, #convert-drop.drag-over { border-color: var(--accent); background: rgba(254,44,85,0.05); }
-    #convert-drop p { color: var(--text-muted); margin: 8px 0 0; font-size: 0.85rem; }
-    .file-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.85rem; }
-    .file-table th { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--border); color: var(--text-secondary); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
-    .file-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--text-primary); vertical-align: middle; }
-    .btn-dl-single { background: none; border: 1px solid var(--accent); color: var(--accent); padding: 4px 12px; border-radius: 99px; font-size: 0.75rem; font-family: inherit; cursor: pointer; transition: all 0.12s; }
-    .btn-dl-single:hover { background: var(--accent); color: #fff; }
-    .convert-actions { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
-    .btn-convert-all { background: linear-gradient(135deg,#fe2c55,#ff375f); color: #fff; border: none; border-radius: 99px; padding: 13px 28px; font-size: 0.95rem; font-weight: 700; cursor: pointer; box-shadow: 0 3px 14px rgba(254,44,85,0.35); transition: all 0.15s; }
-    .btn-convert-all:hover { transform: translateY(-1px); box-shadow: 0 5px 20px rgba(254,44,85,0.45); }
-    .btn-convert-zip { background: linear-gradient(135deg,#f59e0b,#d97706); color: #fff; border: none; border-radius: 99px; padding: 13px 28px; font-size: 0.95rem; font-weight: 700; cursor: pointer; box-shadow: 0 3px 8px rgba(245,158,11,0.3); transition: all 0.15s; }
-    .btn-convert-zip:hover { transform: translateY(-1px); }
-    .btn-clear { background: var(--bg-surface-2); border: 1px solid var(--border); color: var(--text-secondary); border-radius: 99px; padding: 12px 20px; font-size: 0.85rem; font-family: inherit; cursor: pointer; }
-    .status-badge { display: inline-block; padding: 2px 8px; border-radius: 99px; font-size: 0.72rem; font-weight: 700; }
-    .status-badge.pending { background: rgba(156,163,175,0.15); color: var(--text-muted); }
-    .status-badge.done { background: rgba(34,197,94,0.15); color: #22c55e; }
-    .status-badge.error { background: rgba(239,68,68,0.15); color: #ef4444; }
-  </style>
-<link href="/css/style-premium.css" rel="stylesheet"/></head>
-<body>
-<header id="site-header">
-<button aria-label="Toggle navigation" class="icon-btn" id="sidebar-toggle">
-<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20">
-<path d="M3 12h18M3 6h18M3 18h18"></path>
-</svg>
-</button>
-<a class="logo" href="/">
-<img alt="PhotoSplit Logo" class="logo-img" src="/assets/images/logo-animated.svg" style="width:32px;height:32px;"/>
-      PhotoSplit Studio
-    </a>
-<div class="header-spacer"></div>
-<div class="privacy-badge">
-<svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14">
-<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-</svg>
-<span>100% Private · No Uploads</span>
-</div>
-<nav class="main-nav">
-
-<a href="/app" class="">Split Photos</a>
-<a href="/resize" class="">Resize</a>
-<a href="/blog/" class="">Blog</a>
-<a href="/tips" class="">Tips</a>
-<a href="/about" class="">About</a>
-<a href="/contact" class="">Contact</a>
-</nav>
-
-<button class="icon-btn" id="theme-toggle" onclick="if(typeof toggleTheme === 'function') toggleTheme()" title="Toggle Dark/Light Mode">🌓</button>
-
-</header>
-
-<main>
-<section class="hero-utility">
-<h1>Bulk Image Converter</h1>
-<p>Convert multiple JPEG, PNG, and WebP images instantly in your browser. Free &amp; private.</p>
-</section>
-<!-- AdSense &mdash; Below Hero -->
-<div class="page-with-sidebar"><div class="page-main-content"><div class="ad-wrap-md">
-<div class="ad-item"><script>
-  atOptions = {
-    'key' : '033703f2c2dfe7a5fa4501cd3ba1417e',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/033703f2c2dfe7a5fa4501cd3ba1417e/invoke.js"></script></div>
-<div class="ad-item"><script>
-  atOptions = {
-    'key' : 'eefa27f757f4d0772d979fca1074f12a',
-    'format' : 'iframe',
-    'height' : 60,
-    'width' : 468,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script></div>
-</div><div class="convert-tool">
-<div class="format-selector">
-<div>
-<label for="out-format">Convert to</label><br/>
-<select id="out-format">
-<option value="jpeg">JPEG</option>
-<option value="png">PNG</option>
-<option selected="" value="webp">WebP</option>
-</select>
-</div>
-</div>
-<div id="convert-drop" onclick="document.getElementById('convert-file-input').click()">
-<div class="drop-icon">??</div>
-<div class="drop-text">Drop images here or click to select</div>
-<p>JPEG, PNG, WebP supported — select multiple files at once</p>
-<input accept="image/*" id="convert-file-input" multiple="" style="display:none" type="file"/>
-</div>
-<div id="file-table-wrap" style="display:none;">
-<table class="file-table" id="file-table">
-<thead><tr><th>Preview</th><th>Filename</th><th>Size</th><th>Status</th><th>Action</th></tr></thead>
-<tbody id="file-table-body"></tbody>
-</table>
-<div class="convert-actions">
-<button class="btn-convert-all" id="btn-convert-all">✨ </button>
-<button class="btn-convert-zip" id="btn-convert-zip">??? ZIP All</button>
-<button class="btn-clear" id="btn-clear">? Clear</button>
-</div>
-</div>
-</div><article class="seo-wrapper" style="max-width:860px;margin:40px auto;padding:24px;background:var(--bg-surface);border-radius:var(--radius-lg);border:1px solid var(--border);">
-<h2 class="mt-0">Why Use a Bulk Image Converter?</h2>
-<p class="text-secondary lh-6">Converting images individually is time-consuming. PhotoSplit Studio's free Bulk Image Converter allows you to drop dozens of JPEG, PNG, or WebP images and convert them all at once. Everything happens locally in your browser, meaning your files are never uploaded to a server, ensuring 100% privacy and blazing fast speeds. Whether you are optimizing images for a website by converting PNG to WebP, or standardizing client photos to JPEG, our tool handles it securely.</p>
-<h3 style="margin-top:32px; margin-bottom:16px;">Understanding Image Formats</h3>
-<p class="text-secondary lh-6">Choosing the right image format is crucial for balancing visual quality and file size. Here is a breakdown of the three most popular web formats:</p>
-<ul class="text-secondary lh-6 pl-20" style="margin-bottom: 32px;">
-<li><strong>JPEG (Joint Photographic Experts Group):</strong> Best for photographs and images with millions of colors. JPEG uses "lossy" compression, meaning it discards some data to achieve very small file sizes. It does not support transparency.</li>
-<li><strong>PNG (Portable Network Graphics):</strong> Best for graphics, logos, and images requiring transparency (like a logo with a clear background). PNG uses "lossless" compression, meaning it retains all data and quality, but results in much larger file sizes than JPEG.</li>
-<li><strong>WebP:</strong> Developed by Google, WebP is the modern web standard. It offers superior lossless and lossy compression compared to PNG and JPEG, often resulting in files that are 25-34% smaller while maintaining the same visual quality. Crucially, WebP also supports transparency. Converting JPEG or PNG to WebP is a major SEO and performance boost for websites.</li>
-</ul>
-<h3 style="margin-top:32px; margin-bottom:16px;">How Local Conversion Works</h3>
-<p class="text-secondary lh-6">Traditional online converters upload your image to a remote server, process it there, and force you to download the result. This consumes bandwidth and compromises privacy. Our tool leverages the power of HTML5 and modern JavaScript to decode and encode your images directly inside your device's memory. This is why it works instantly, even if you disconnect from the internet after loading the page.</p>
-<div class="related-section" style="margin-top: 40px; border-top: 1px solid var(--border); padding-top: 32px;">
-<h2 style="font-size: 1.5rem; margin-top: 0; margin-bottom: 24px;">Related Guides &amp; Tutorials</h2>
-<div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
-<a class="related-card" href="/blog/understanding-dpi-and-resolution" style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; text-decoration: none; color: inherit; display: block; transition: transform 0.2s, box-shadow 0.2s;">
-<h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 8px;">Understanding DPI and Resolution</h3>
-<p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Learn how to choose the perfect scanner settings for your archival project.</p>
-</a>
-<a class="related-card" href="/blog/restore-water-damaged-photos" style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; text-decoration: none; color: inherit; display: block; transition: transform 0.2s, box-shadow 0.2s;">
-<h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 8px;">Restoring Water-Damaged Photos</h3>
-<p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Safe physical separation and digital restoration techniques for wet photographs.</p>
-</a>
-<a class="related-card" href="/blog/choosing-the-right-scanner" style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; text-decoration: none; color: inherit; display: block; transition: transform 0.2s, box-shadow 0.2s;">
-<h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 8px;">Choosing the Right Photo Scanner</h3>
-<p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Flatbed vs Auto-feed vs Smartphone apps: an in-depth buying guide.</p>
-</a>
-</div>
-</div>
-</article></div>
-<aside class="page-sidebar">
-<div class="ad-sidebar-sticky">
-<span class="ad-sidebar-label">Advertisement</span>
-<div id="ad-sidebar" style="margin:0; min-height:250px; background:var(--bg-surface-2); border:1px dashed var(--border-strong); border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center;">
-<div class="ad-item">
-<script>
-          atOptions = {
-            'key' : 'eefa27f757f4d0772d979fca1074f12a',
-            'format' : 'iframe',
-            'height' : 250,
-            'width' : 300,
-            'params' : {}
-          };
-        </script>
-<script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
-</div>
-</div>
-</div>
-</aside>
-</div>
-</main>
-<section class="gear-section">
-<div class="gear-section-inner">
-<h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
-<p class="gear-section-sub">Pair PhotoSplit Studio with the best hardware for fast, high-quality archiving and secure backups.</p>
-<div class="gear-cards-grid"></div>
-<p class="affiliate-disclosure">As an Amazon Associate, PhotoSplit Studio earns from qualifying purchases.</p>
-</div>
-</section>
-
-<footer class="site-footer">
-<div class="footer-inner">
-<div class="footer-links">
-<a href="/app">App</a>
-<a href="/blog/">Blog</a>
-<a href="/tips">Scanning Tips</a>
-<a href="/contact">Contact</a>
-<a href="/terms">Terms</a>
-<a href="/privacy-policy">Privacy</a>
-<a href="/about">About</a>
-<a href="#" onclick="if(typeof openTextModal === 'function') openTextModal('feedback-modal', event)">Feedback</a>
-</div>
-<div class="footer-copy">© 2026 PhotoSplit Studio. All rights reserved.</div>
-</div>
-<div class="site-status-bar">
-  <div class="status-item"><span class="status-label">Is it dark outside?</span><span class="status-value" id="dark-status-answer">...</span></div>
-  <div class="status-item"><span class="status-label">Global Visitors:</span><img alt="Visitor Count" class="visitor-badge" src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"/></div>
-</div>
-<script>(function(){ var h=new Date().getHours(); var ans=(h>=18||h<6)?"YES":"NO"; var el=document.getElementById("dark-status-answer"); if(el) el.textContent=ans; })();</script>
-</footer>
-
-<div id="cookie-consent" role="dialog">
-<div id="cookie-consent-inner">
-<p>🍪 We use cookies to improve your experience. See our <a href="/privacy-policy">Privacy Policy</a>.</p>
-<div id="cookie-consent-actions">
-<button class="cookie-btn" id="cookie-decline">Decline</button>
-<button class="cookie-btn cookie-btn-accept" id="cookie-accept">Accept All</button>
-</div>
-</div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
-<script>
-    (function () {
-      const files = [], drop = document.getElementById('convert-drop'), fileInput = document.getElementById('convert-file-input'), tableWrap = document.getElementById('file-table-wrap'), tbody = document.getElementById('file-table-body'), fmtSel = document.getElementById('out-format');
-
-      function addFiles(newFiles) {
-        newFiles.filter(f => f.type.startsWith('image/')).forEach(f => {
-          if (files.find(x => x.name === f.name)) return;
-          const entry = { file: f, name: f.name, size: f.size, status: 'pending', blob: null };
-          files.push(entry);
-          const tr = document.createElement('tr'); const idx = files.length - 1;
-          tr.innerHTML = `<td><canvas id="thumb-${idx}" width="40" height="40" style="border-radius:4px"></canvas></td><td>${f.name}</td><td>${(f.size/1024).toFixed(1)} KB</td><td id="status-${idx}"><span class="status-badge pending">Pending</span></td><td id="action-${idx}">&mdash;</td>`;
-          tbody.appendChild(tr);
-          const img = new Image(); img.onload = () => { const c = document.getElementById('thumb-'+idx), cx = c.getContext('2d'), s = Math.max(img.width, img.height); cx.drawImage(img, (img.width-s)/2, (img.height-s)/2, s, s, 0, 0, 40, 40); URL.revokeObjectURL(img.src); }; img.src = URL.createObjectURL(f);
-        });
-        if (files.length) tableWrap.style.display = 'block';
-      }
-      fileInput.onchange = e => addFiles([...e.target.files]);
-
-      async function convertEntry(entry, idx) {
-        const fmt = fmtSel.value, mimeMap = { jpeg: 'image/jpeg', png: 'image/png', webp: 'image/webp' }, extMap = { jpeg: 'jpg', png: 'png', webp: 'webp' };
-        document.getElementById('status-'+idx).innerHTML = '<span class="status-badge pending">Converting×</span>';
-        return new Promise(res => {
-          const img = new Image(); img.onload = () => {
-            const c = document.createElement('canvas'); c.width = img.width; c.height = img.height; c.getContext('2d').drawImage(img, 0, 0); URL.revokeObjectURL(img.src);
-            c.toBlob(b => {
-              entry.blob = b; entry.outName = entry.name.replace(/\.[^.]+$/, '') + '.' + extMap[fmt]; entry.status = 'done';
-              document.getElementById('status-'+idx).innerHTML = `<span class="status-badge done">Done</span>`;
-              const btn = document.createElement('button'); btn.className = 'btn-dl-single'; btn.textContent = '? Download'; btn.onclick = () => { const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = entry.outName; a.click(); };
-              document.getElementById('action-'+idx).innerHTML = ''; document.getElementById('action-'+idx).appendChild(btn); res(b);
-            }, mimeMap[fmt], 0.92);
-          }; img.src = URL.createObjectURL(entry.file);
-        });
-      }
-
-      document.getElementById('btn-convert-all').onclick = async () => { for (let i=0; i<files.length; i++) if (files[i].status !== 'done') await convertEntry(files[i], i); };
-      document.getElementById('btn-convert-zip').onclick = async () => {
-        const zip = new JSZip(); for (let i=0; i<files.length; i++) { const b = files[i].blob || await convertEntry(files[i], i); if (b) zip.file(files[i].outName, b); }
-        zip.generateAsync({type:'blob'}).then(b => { const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = 'converted.zip'; a.click(); });
-      };
-      document.getElementById('btn-clear').onclick = () => { files.length = 0; tbody.innerHTML = ''; tableWrap.style.display = 'none'; fileInput.value = ''; };
-      
-      // Cookie Consent
-      var banner = document.getElementById('cookie-consent');
-      if (!localStorage.getItem('pss_cookie_consent')) {
-        banner.classList.add('visible');
-      } else if (localStorage.getItem('pss_cookie_consent') === 'accepted') {
-        if (typeof loadGoogleScripts === 'function') loadGoogleScripts();
-      }
-      document.getElementById('cookie-accept').onclick = function() { 
-        localStorage.setItem('pss_cookie_consent', 'accepted'); 
-        banner.classList.remove('visible'); 
-        if (typeof loadGoogleScripts === 'function') loadGoogleScripts();
-      };
-      document.getElementById('cookie-decline').onclick = function() { 
-        localStorage.setItem('pss_cookie_consent', 'declined'); 
-        banner.classList.remove('visible'); 
-      };
-    }());
-  </script>
-</body>
+          var acceptBtn = document.getElementById("cookie-accept");
+          if (acceptBtn) {
+            acceptBtn.onclick = function () {
+              localStorage.setItem("pss_cookie_consent", "accepted");
+              banner.classList.remove("visible");
+              if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+              if (typeof loadGoogleAnalytics === "function")
+                loadGoogleAnalytics();
+            };
+          }
+          var declineBtn = document.getElementById("cookie-decline");
+          if (declineBtn) {
+            declineBtn.onclick = function () {
+              localStorage.setItem("pss_cookie_consent", "declined");
+              banner.classList.remove("visible");
+            };
+          }
+        }
+      })();
+    </script>
+    <!-- MODALS END -->
+  </body>
 </html>

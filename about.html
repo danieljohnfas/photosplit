@@ -1,252 +1,667 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html data-theme="" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/> <title>About PhotoSplit Studio — Free Online Photo Splitter Tool</title>
-<meta content="Learn about PhotoSplit Studio. We help people who scan multiple photos at once to automatically separate and save them as individual files for free." name="description"/>
-<meta content="photo split, splitting tool, split scanned photos tool, about photosplit studio, developer info, digital archiving, web photo utility, privacy first image tools" name="keywords"/>
-<meta content="index, follow" name="robots"/>
-<meta content="PhotoSplit Studio" name="author"/>
-<link href="https://photosplitstudio.com/about" rel="canonical"/>
-<meta content="website" property="og:type"/>
-<meta content="About PhotoSplit Studio" property="og:title"/>
-<meta content="Privacy-first, browser-based tool for splitting scanned photos." property="og:description"/>
-<meta content="https://photosplitstudio.com/about" property="og:url"/>
-<meta content="https://photosplitstudio.com/assets/images/og-image.png" property="og:image"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<link href="/assets/images/logo.png" rel="icon" type="image/png"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="/css/style.css" rel="stylesheet"/>
-<script defer="" src="/js/gear.js"></script>
-<style>
-    /* About page – extracted from inline styles */
-    .about-ad-wrap    { max-width: 1250px; margin: var(--space-md) auto; padding: 0 24px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; align-items: center; }
-    .about-wrap       { max-width: 1000px; margin: 0 auto; padding: 60px 24px 80px; }
-    .about-mission    { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 80px; }
-    @media (max-width: 768px) { .about-mission { grid-template-columns: 1fr; } }
-    .about-mission-h2 { font-size: 2rem; margin-bottom: 20px; }
-    .about-body-p     { margin-bottom: 16px; line-height: 1.7; }
-    .about-body-p-end { line-height: 1.7; }
-    .about-tech-img   { width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-    .about-quote      { background: var(--accent-grad); color: white; padding: 48px; border-radius: 24px; margin-bottom: 80px; }
-    .about-quote h2   { margin-top: 0; color: white; }
-    .about-quote-body { font-size: 1.1rem; line-height: 1.8; }
-    .about-quote-attr { font-weight: 700; margin-bottom: 0; }
-    .about-features   { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-bottom: 80px; }
-    .about-feat-card  { padding: 32px; border: 1px solid var(--border); border-radius: 16px; background: var(--bg-surface); }
-    .about-feat-card h3 { margin-top: 0; }
-    .about-feat-card p  { color: var(--text-secondary); font-size: 0.95rem; }
-    .about-stats      { margin: 40px 0; padding: 32px; background: var(--bg-sunken); border-radius: var(--radius-lg); border: 1px solid var(--border); text-align: center; }
-    .about-stats h3   { margin-top: 0; }
-  </style>
-<!-- Scripts loaded dynamically after consent -->
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    function loadGoogleScripts() {
-      if (document.getElementById('ga-script')) return;
-      var gaScript = document.createElement('script');
-      gaScript.id = 'ga-script';
-      gaScript.async = true;
-      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ';
-      document.head.appendChild(gaScript);
-      gtag('js', new Date());
-      gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About PhotoSplit Studio — Free Online Photo Splitter Tool</title>
+    <meta
+      content="Learn about PhotoSplit Studio. We help people who scan multiple photos at once to automatically separate and save them as individual files for free."
+      name="description"
+    />
+    <meta
+      content="photo split, splitting tool, split scanned photos tool, about photosplit studio, developer info, digital archiving, web photo utility, privacy first image tools"
+      name="keywords"
+    />
+    <meta content="index, follow" name="robots" />
+    <meta content="PhotoSplit Studio" name="author" />
+    <link href="https://photosplitstudio.com/about" rel="canonical" />
+    <meta content="website" property="og:type" />
+    <meta content="About PhotoSplit Studio" property="og:title" />
+    <meta
+      content="Privacy-first, browser-based tool for splitting scanned photos."
+      property="og:description"
+    />
+    <meta content="https://photosplitstudio.com/about" property="og:url" />
+    <meta
+      content="https://photosplitstudio.com/assets/images/og-image.png"
+      property="og:image"
+    />
+    <meta content="summary_large_image" name="twitter:card" />
+    <link href="/assets/images/logo.png" rel="icon" type="image/png" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <script defer="" src="/js/gear.js"></script>
+    <style>
+      /* About page – extracted from inline styles */
+      .about-ad-wrap {
+        max-width: 1250px;
+        margin: var(--space-md) auto;
+        padding: 0 24px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+      }
+      .about-wrap {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 60px 24px 80px;
+      }
+      .about-mission {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+        margin-bottom: 80px;
+      }
+      @media (max-width: 768px) {
+        .about-mission {
+          grid-template-columns: 1fr;
+        }
+      }
+      .about-mission-h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+      .about-body-p {
+        margin-bottom: 16px;
+        line-height: 1.7;
+      }
+      .about-body-p-end {
+        line-height: 1.7;
+      }
+      .about-tech-img {
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+      .about-quote {
+        background: var(--accent-grad);
+        color: white;
+        padding: 48px;
+        border-radius: 24px;
+        margin-bottom: 80px;
+      }
+      .about-quote h2 {
+        margin-top: 0;
+        color: white;
+      }
+      .about-quote-body {
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+      .about-quote-attr {
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+      .about-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 32px;
+        margin-bottom: 80px;
+      }
+      .about-feat-card {
+        padding: 32px;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: var(--bg-surface);
+      }
+      .about-feat-card h3 {
+        margin-top: 0;
+      }
+      .about-feat-card p {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+      }
+      .about-stats {
+        margin: 40px 0;
+        padding: 32px;
+        background: var(--bg-sunken);
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--border);
+        text-align: center;
+      }
+      .about-stats h3 {
+        margin-top: 0;
+      }
+    </style>
+    <!-- Scripts loaded dynamically after consent -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      function loadGoogleScripts() {
+        if (document.getElementById("ga-script")) return;
+        var gaScript = document.createElement("script");
+        gaScript.id = "ga-script";
+        gaScript.async = true;
+        gaScript.src =
+          "https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ";
+        document.head.appendChild(gaScript);
+        gtag("js", new Date());
+        gtag("config", "G-G40QDCGTTZ", { anonymize_ip: true });
+      }
+    </script>
+    <link href="/css/style-premium.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header id="site-header">
+      <button
+        aria-label="Toggle navigation"
+        class="icon-btn"
+        id="sidebar-toggle"
+      >
+        <svg
+          fill="none"
+          height="20"
+          stroke="currentColor"
+          stroke-width="2"
+          viewbox="0 0 24 24"
+          width="20"
+        >
+          <path d="M3 12h18M3 6h18M3 18h18"></path>
+        </svg>
+      </button>
+      <a class="logo" href="/">
+        <img
+          alt="PhotoSplit Logo"
+          class="logo-img"
+          src="/assets/images/logo-animated.svg"
+          style="width: 32px; height: 32px"
+        />
+        PhotoSplit Studio
+      </a>
+      <div class="header-spacer"></div>
+      <div class="privacy-badge">
+        <svg
+          fill="none"
+          height="14"
+          stroke="currentColor"
+          stroke-width="2.5"
+          viewbox="0 0 24 24"
+          width="14"
+        >
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+        <span>100% Private · No Uploads</span>
+      </div>
+      <nav class="main-nav">
+        <a href="/app" class="">Split Photos</a>
+        <a href="/resize" class="">Resize</a>
+        <a href="/blog/" class="">Blog</a>
+        <a href="/tips" class="">Tips</a>
+        <a href="/about" class="active">About</a>
+        <a href="/contact" class="">Contact</a>
+      </nav>
 
+      <button
+        class="icon-btn"
+        id="theme-toggle"
+        onclick="if (typeof toggleTheme === 'function') toggleTheme();"
+        title="Toggle Dark/Light Mode"
+      >
+        🌓
+      </button>
+    </header>
+
+    <main>
+      <section class="hero-utility">
+        <h1>About PhotoSplit Studio</h1>
+        <p>
+          A free, privacy-first browser tool for digitizing your family memories
+          instantly.
+        </p>
+      </section>
+      <!-- Ezoic Ad — Below Hero -->
+      <div class="page-with-sidebar">
+        <div class="page-main-content">
+          <div class="about-ad-wrap">
+            <div class="ad-item">
+              <script>
+                atOptions = {
+                  key: "033703f2c2dfe7a5fa4501cd3ba1417e",
+                  format: "iframe",
+                  height: 90,
+                  width: 728,
+                  params: {},
+                };
+              </script>
+              <script src="https://www.highperformanceformat.com/033703f2c2dfe7a5fa4501cd3ba1417e/invoke.js"></script>
+            </div>
+            <div class="ad-item">
+              <script>
+                atOptions = {
+                  key: "eefa27f757f4d0772d979fca1074f12a",
+                  format: "iframe",
+                  height: 60,
+                  width: 468,
+                  params: {},
+                };
+              </script>
+              <script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
+            </div>
+          </div>
+          <div class="about-wrap">
+            <div class="about-mission">
+              <div>
+                <h2 class="about-mission-h2">The Privacy-First Mission</h2>
+                <p class="about-body-p">
+                  Most online photo tools require you to upload your precious
+                  family memories to their servers. We think that's a security
+                  risk you shouldn't have to take.
+                </p>
+                <p class="about-body-p-end">
+                  By utilizing <strong>WebAssembly</strong> and
+                  <strong>OpenCV.js</strong>, we brought professional-grade
+                  computer vision directly into your browser. Your photos never
+                  leave your RAM, and they certainly never touch our servers.
+                </p>
+              </div>
+              <img
+                alt="Technology Visualization"
+                class="about-tech-img"
+                src="/assets/images/tech-stack.png"
+              />
+            </div>
+            <div class="about-quote">
+              <h2>Why We Built PhotoSplit Studio</h2>
+              <p class="about-quote-body">
+                "Every day, thousands of physical photos are lost to time, fire,
+                or fading. Scanning is the first step, but splitting those scans
+                into individual files is usually a tedious chore that requires
+                expensive software like Photoshop. We built PhotoSplit Studio to
+                democratize archiving. We wanted to remove that friction so
+                anyone, regardless of technical skill, can successfully preserve
+                their family history for the next generation."
+              </p>
+              <p class="about-quote-attr">— The PhotoSplit Development Team</p>
+            </div>
+            <div
+              style="
+                max-width: 900px;
+                margin: 0 auto 80px;
+                padding: 40px;
+                background: var(--bg-surface);
+                border: 1px solid var(--border);
+                border-radius: 20px;
+              "
+            >
+              <h2 style="margin-top: 0; font-size: 2rem">Meet the Team</h2>
+              <p
+                style="
+                  color: var(--text-secondary);
+                  line-height: 1.8;
+                  margin-bottom: 24px;
+                "
+              >
+                PhotoSplit Studio is maintained by a dedicated group of software
+                engineers, digital archivists, and photography enthusiasts. We
+                noticed a massive gap in the market: existing photo splitting
+                tools either required desktop installations, cost money, or
+                aggressively tracked user data. We set out to build a suite of
+                tools that we would actually want to use ourselves—fast, free,
+                and obsessively focused on privacy.
+              </p>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                  gap: 32px;
+                  margin-top: 32px;
+                "
+              >
+                <div>
+                  <h3
+                    style="
+                      margin-top: 0;
+                      display: flex;
+                      align-items: center;
+                      gap: 10px;
+                    "
+                  >
+                    📸 Digital Archiving Experts
+                  </h3>
+                  <p
+                    style="
+                      color: var(--text-secondary);
+                      font-size: 0.95rem;
+                      line-height: 1.6;
+                    "
+                  >
+                    Our team consults with professional archivists to ensure our
+                    algorithms meet strict preservation standards. Whether it's
+                    choosing the right JPEG compression ratios or handling
+                    massive 600 DPI lossless PNGs, our tools are built to
+                    respect the integrity of your original scans.
+                  </p>
+                </div>
+                <div>
+                  <h3
+                    style="
+                      margin-top: 0;
+                      display: flex;
+                      align-items: center;
+                      gap: 10px;
+                    "
+                  >
+                    🔒 Privacy Advocates
+                  </h3>
+                  <p
+                    style="
+                      color: var(--text-secondary);
+                      font-size: 0.95rem;
+                      line-height: 1.6;
+                    "
+                  >
+                    We believe your family photos belong to you. That's why we
+                    architected PhotoSplit Studio as a client-side application.
+                    We do not maintain user databases, we do not require account
+                    creation, and we physically cannot view the photos you
+                    process through our app.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="about-features">
+              <div class="about-feat-card">
+                <h3>⚡ Browser Performance</h3>
+                <p>
+                  Optimized for modern multi-core processors using WebAssembly.
+                  Split 10+ photos from a single scan in less than 2 seconds
+                  without ever leaving your browser tab.
+                </p>
+              </div>
+              <div class="about-feat-card">
+                <h3>🔒 Absolute Security</h3>
+                <p>
+                  Zero tracking. Zero uploads. Zero storage. Your privacy is
+                  baked directly into our architecture. Unplug your router while
+                  using the app—it still works.
+                </p>
+              </div>
+              <div class="about-feat-card">
+                <h3>🎨 Archival Quality</h3>
+                <p>
+                  We support lossless PNG exports and provide high-fidelity JPEG
+                  compression options to guarantee you maintain archival quality
+                  for future generations.
+                </p>
+              </div>
+            </div>
+            <div class="about-stats" id="statistics">
+              <h3>Community Impact</h3>
+              <p>
+                Since our launch, we've helped thousands of users split their
+                archives. You can view our live global visitor statistics below:
+              </p>
+              <a
+                href="https://hitscounter.dev/history?url=https%3A%2F%2Fphotosplitstudio.com"
+                rel="noopener"
+                target="_blank"
+                ><img
+                  alt="Visits"
+                  src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Total%20Archivists&amp;color=%23002d72&amp;style=flat-square&amp;tz=UTC"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <aside class="page-sidebar">
+          <div class="ad-sidebar-sticky">
+            <span class="ad-sidebar-label">Advertisement</span>
+            <div
+              id="ad-sidebar"
+              style="
+                margin: 0;
+                min-height: 250px;
+                background: var(--bg-surface-2);
+                border: 1px dashed var(--border-strong);
+                border-radius: var(--radius-md);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <div class="ad-item">
+                <script>
+                  atOptions = {
+                    key: "eefa27f757f4d0772d979fca1074f12a",
+                    format: "iframe",
+                    height: 250,
+                    width: 300,
+                    params: {},
+                  };
+                </script>
+                <script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <section class="gear-section">
+      <div class="gear-section-inner">
+        <h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
+        <p class="gear-section-sub">
+          Pair PhotoSplit Studio with the best hardware for fast, high-quality
+          archiving and secure backups.
+        </p>
+        <div class="gear-cards-grid"></div>
+        <p class="affiliate-disclosure">
+          As an Amazon Associate, PhotoSplit Studio earns from qualifying
+          purchases.
+        </p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="/app">App</a>
+          <a href="/blog/">Blog</a>
+          <a href="/tips">Scanning Tips</a>
+          <a href="/contact">Contact</a>
+          <a href="/terms">Terms</a>
+          <a href="/privacy-policy">Privacy</a>
+          <a href="/about">About</a>
+          <a
+            href="#"
+            onclick="
+              if (typeof openTextModal === 'function')
+                openTextModal('feedback-modal', event);
+            "
+            >Feedback</a
+          >
+        </div>
+        <div class="footer-copy">
+          © 2026 PhotoSplit Studio. All rights reserved.
+        </div>
+      </div>
+      <div class="site-status-bar">
+        <div class="status-item">
+          <span class="status-label">Is it dark outside?</span
+          ><span class="status-value" id="dark-status-answer">...</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Global Visitors:</span
+          ><img
+            alt="Visitor Count"
+            class="visitor-badge"
+            src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"
+          />
+        </div>
+      </div>
+      <script>
+        (function () {
+          var h = new Date().getHours();
+          var ans = h >= 18 || h < 6 ? "YES" : "NO";
+          var el = document.getElementById("dark-status-answer");
+          if (el) el.textContent = ans;
+        })();
+      </script>
+    </footer>
+
+    <!-- MODALS START -->
+    <div
+      class="text-modal-backdrop"
+      id="feedback-modal"
+      onclick="
+        if (event.target === this && typeof closeTextModal === 'function')
+          closeTextModal('feedback-modal');
+      "
+    >
+      <div class="text-modal-box">
+        <div class="text-modal-header">
+          <h2>Provide Feedback</h2>
+          <button
+            class="icon-btn"
+            onclick="
+              if (typeof closeTextModal === 'function')
+                closeTextModal('feedback-modal');
+            "
+          >
+            ✕
+          </button>
+        </div>
+        <div class="text-modal-content" id="feedback-form-view">
+          <form
+            onsubmit="
+              if (typeof handleFeedbackSubmit === 'function')
+                handleFeedbackSubmit(event);
+            "
+          >
+            <input
+              class="form-control mb-12"
+              id="fb-name"
+              placeholder="Your Name"
+              required=""
+              type="text"
+              style="margin-bottom: 12px"
+            />
+            <input
+              class="form-control mb-12"
+              id="fb-email"
+              placeholder="your@email.com"
+              required=""
+              type="email"
+              style="margin-bottom: 12px"
+            />
+            <textarea
+              class="form-control mb-12"
+              id="fb-desc"
+              placeholder="Your feedback..."
+              required=""
+              rows="4"
+              style="margin-bottom: 12px"
+            ></textarea>
+            <button class="btn btn-primary" style="width: 100%" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+        <div
+          class="text-modal-content"
+          id="feedback-success-view"
+          style="display: none; text-align: center"
+        >
+          <h3>✅ Thank you!</h3>
+          <p>Your feedback has been received.</p>
+          <button
+            class="btn btn-secondary"
+            onclick="
+              if (typeof closeTextModal === 'function')
+                closeTextModal('feedback-modal');
+            "
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="cookie-consent" role="dialog">
+      <div id="cookie-consent-inner">
+        <p>
+          🍪 We use cookies to improve your experience. See our
+          <a href="/privacy-policy">Privacy Policy</a>.
+        </p>
+        <div id="cookie-consent-actions">
+          <button class="cookie-btn" id="cookie-decline">Decline</button>
+          <button class="cookie-btn cookie-btn-accept" id="cookie-accept">
+            Accept All
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        if (!localStorage.getItem("ps_counted")) {
+          localStorage.setItem("ps_counted", "true");
+          var img = new Image();
+          img.src =
+            "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
+        }
+
+        window.handleFeedbackSubmit = function (e) {
+          e.preventDefault();
+          var params = new URLSearchParams();
+          params.append(
+            "entry.1051903221",
+            document.getElementById("fb-name").value,
+          );
+          params.append(
+            "entry.371950700",
+            document.getElementById("fb-email").value,
+          );
+          params.append(
+            "entry.852578852",
+            document.getElementById("fb-desc").value,
+          );
+          fetch(
+            "https://docs.google.com/forms/d/e/1FAIpQLSeJe_jw0IHHXeT4w4hzcZJ2WXREaT8aD4_R4LFBGVZNazsehg/formResponse",
+            { method: "POST", mode: "no-cors", body: params },
+          );
+          document.getElementById("feedback-form-view").style.display = "none";
+          document.getElementById("feedback-success-view").style.display =
+            "block";
+        };
+
+        // Cookie Consent
+        var banner = document.getElementById("cookie-consent");
+        if (banner) {
+          if (!localStorage.getItem("pss_cookie_consent")) {
+            banner.classList.add("visible");
+          } else if (
+            localStorage.getItem("pss_cookie_consent") === "accepted"
+          ) {
+            if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+            if (typeof loadGoogleAnalytics === "function")
+              loadGoogleAnalytics();
           }
-  </script>
-<link href="/css/style-premium.css" rel="stylesheet"/></head>
-<body>
-<header id="site-header">
-<button aria-label="Toggle navigation" class="icon-btn" id="sidebar-toggle">
-<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20">
-<path d="M3 12h18M3 6h18M3 18h18"></path>
-</svg>
-</button>
-<a class="logo" href="/">
-<img alt="PhotoSplit Logo" class="logo-img" src="/assets/images/logo-animated.svg" style="width:32px;height:32px;"/>
-      PhotoSplit Studio
-    </a>
-<div class="header-spacer"></div>
-<div class="privacy-badge">
-<svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14">
-<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-</svg>
-<span>100% Private · No Uploads</span>
-</div>
-<nav class="main-nav">
-
-<a href="/app" class="">Split Photos</a>
-<a href="/resize" class="">Resize</a>
-<a href="/blog/" class="">Blog</a>
-<a href="/tips" class="">Tips</a>
-<a href="/about" class="active">About</a>
-<a href="/contact" class="">Contact</a>
-</nav>
-
-<button class="icon-btn" id="theme-toggle" onclick="if(typeof toggleTheme === 'function') toggleTheme()" title="Toggle Dark/Light Mode">🌓</button>
-
-</header>
-
-<main>
-<section class="hero-utility">
-<h1>About PhotoSplit Studio</h1>
-<p>A free, privacy-first browser tool for digitizing your family memories instantly.</p>
-</section>
-<!-- Ezoic Ad — Below Hero -->
-<div class="page-with-sidebar"><div class="page-main-content"><div class="about-ad-wrap">
-<div class="ad-item"><script>
-  atOptions = {
-    'key' : '033703f2c2dfe7a5fa4501cd3ba1417e',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/033703f2c2dfe7a5fa4501cd3ba1417e/invoke.js"></script></div>
-<div class="ad-item"><script>
-  atOptions = {
-    'key' : 'eefa27f757f4d0772d979fca1074f12a',
-    'format' : 'iframe',
-    'height' : 60,
-    'width' : 468,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script></div>
-</div><div class="about-wrap">
-<div class="about-mission">
-<div>
-<h2 class="about-mission-h2">The Privacy-First Mission</h2>
-<p class="about-body-p">Most online photo tools require you to upload your precious family memories to their servers. We think that's a security risk you shouldn't have to take.</p>
-<p class="about-body-p-end">By utilizing <strong>WebAssembly</strong> and <strong>OpenCV.js</strong>, we brought professional-grade computer vision directly into your browser. Your photos never leave your RAM, and they certainly never touch our servers.</p>
-</div>
-<img alt="Technology Visualization" class="about-tech-img" src="/assets/images/tech-stack.png"/>
-</div>
-<div class="about-quote">
-<h2>Why We Built PhotoSplit Studio</h2>
-<p class="about-quote-body">"Every day, thousands of physical photos are lost to time, fire, or fading. Scanning is the first step, but splitting those scans into individual files is usually a tedious chore that requires expensive software like Photoshop. We built PhotoSplit Studio to democratize archiving. We wanted to remove that friction so anyone, regardless of technical skill, can successfully preserve their family history for the next generation."</p>
-<p class="about-quote-attr">— The PhotoSplit Development Team</p>
-</div>
-<div style="max-width: 900px; margin: 0 auto 80px; padding: 40px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: 20px;">
-<h2 style="margin-top: 0; font-size: 2rem;">Meet the Team</h2>
-<p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 24px;">PhotoSplit Studio is maintained by a dedicated group of software engineers, digital archivists, and photography enthusiasts. We noticed a massive gap in the market: existing photo splitting tools either required desktop installations, cost money, or aggressively tracked user data. We set out to build a suite of tools that we would actually want to use ourselves—fast, free, and obsessively focused on privacy.</p>
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 32px;">
-<div>
-<h3 style="margin-top: 0; display: flex; align-items: center; gap: 10px;">📸 Digital Archiving Experts</h3>
-<p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">Our team consults with professional archivists to ensure our algorithms meet strict preservation standards. Whether it's choosing the right JPEG compression ratios or handling massive 600 DPI lossless PNGs, our tools are built to respect the integrity of your original scans.</p>
-</div>
-<div>
-<h3 style="margin-top: 0; display: flex; align-items: center; gap: 10px;">🔒 Privacy Advocates</h3>
-<p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">We believe your family photos belong to you. That's why we architected PhotoSplit Studio as a client-side application. We do not maintain user databases, we do not require account creation, and we physically cannot view the photos you process through our app.</p>
-</div>
-</div>
-</div>
-<div class="about-features">
-<div class="about-feat-card">
-<h3>⚡ Browser Performance</h3>
-<p>Optimized for modern multi-core processors using WebAssembly. Split 10+ photos from a single scan in less than 2 seconds without ever leaving your browser tab.</p>
-</div>
-<div class="about-feat-card">
-<h3>🔒 Absolute Security</h3>
-<p>Zero tracking. Zero uploads. Zero storage. Your privacy is baked directly into our architecture. Unplug your router while using the app—it still works.</p>
-</div>
-<div class="about-feat-card">
-<h3>🎨 Archival Quality</h3>
-<p>We support lossless PNG exports and provide high-fidelity JPEG compression options to guarantee you maintain archival quality for future generations.</p>
-</div>
-</div>
-<div class="about-stats" id="statistics">
-<h3>Community Impact</h3>
-<p>Since our launch, we've helped thousands of users split their archives. You can view our live global visitor statistics below:</p>
-<a href="https://hitscounter.dev/history?url=https%3A%2F%2Fphotosplitstudio.com" rel="noopener" target="_blank"><img alt="Visits" src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Total%20Archivists&amp;color=%23002d72&amp;style=flat-square&amp;tz=UTC"/></a>
-</div>
-</div></div>
-<aside class="page-sidebar">
-<div class="ad-sidebar-sticky">
-<span class="ad-sidebar-label">Advertisement</span>
-<div id="ad-sidebar" style="margin:0; min-height:250px; background:var(--bg-surface-2); border:1px dashed var(--border-strong); border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center;">
-<div class="ad-item">
-<script>
-          atOptions = {
-            'key' : 'eefa27f757f4d0772d979fca1074f12a',
-            'format' : 'iframe',
-            'height' : 250,
-            'width' : 300,
-            'params' : {}
-          };
-        </script>
-<script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
-</div>
-</div>
-</div>
-</aside>
-</div>
-</main>
-<section class="gear-section">
-<div class="gear-section-inner">
-<h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
-<p class="gear-section-sub">Pair PhotoSplit Studio with the best hardware for fast, high-quality archiving and secure backups.</p>
-<div class="gear-cards-grid"></div>
-<p class="affiliate-disclosure">As an Amazon Associate, PhotoSplit Studio earns from qualifying purchases.</p>
-</div>
-</section>
-
-<footer class="site-footer">
-<div class="footer-inner">
-<div class="footer-links">
-<a href="/app">App</a>
-<a href="/blog/">Blog</a>
-<a href="/tips">Scanning Tips</a>
-<a href="/contact">Contact</a>
-<a href="/terms">Terms</a>
-<a href="/privacy-policy">Privacy</a>
-<a href="/about">About</a>
-<a href="#" onclick="if(typeof openTextModal === 'function') openTextModal('feedback-modal', event)">Feedback</a>
-</div>
-<div class="footer-copy">© 2026 PhotoSplit Studio. All rights reserved.</div>
-</div>
-<div class="site-status-bar">
-  <div class="status-item"><span class="status-label">Is it dark outside?</span><span class="status-value" id="dark-status-answer">...</span></div>
-  <div class="status-item"><span class="status-label">Global Visitors:</span><img alt="Visitor Count" class="visitor-badge" src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"/></div>
-</div>
-<script>(function(){ var h=new Date().getHours(); var ans=(h>=18||h<6)?"YES":"NO"; var el=document.getElementById("dark-status-answer"); if(el) el.textContent=ans; })();</script>
-</footer>
-
-<div id="cookie-consent" role="dialog">
-<div id="cookie-consent-inner">
-<p>🍪 We use cookies to improve your experience. See our <a href="/privacy-policy">Privacy Policy</a>.</p>
-<div id="cookie-consent-actions">
-<button class="cookie-btn" id="cookie-decline">Decline</button>
-<button class="cookie-btn cookie-btn-accept" id="cookie-accept">Accept All</button>
-</div>
-</div>
-</div>
-<script>
-    if (!localStorage.getItem("ps_counted")) {
-      localStorage.setItem("ps_counted", "true");
-      new Image().src = "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
-    }
-
-    // Cookie Consent
-    var banner = document.getElementById('cookie-consent');
-    if (!localStorage.getItem('pss_cookie_consent')) {
-      banner.classList.add('visible');
-    } else if (localStorage.getItem('pss_cookie_consent') === 'accepted') {
-      if (typeof loadGoogleScripts === 'function') loadGoogleScripts();
-    }
-    document.getElementById('cookie-accept').onclick = function() { 
-      localStorage.setItem('pss_cookie_consent', 'accepted'); 
-      banner.classList.remove('visible'); 
-      if (typeof loadGoogleScripts === 'function') loadGoogleScripts();
-    };
-    document.getElementById('cookie-decline').onclick = function() { 
-      localStorage.setItem('pss_cookie_consent', 'declined'); 
-      banner.classList.remove('visible'); 
-    };
-  </script>
-</body>
+          var acceptBtn = document.getElementById("cookie-accept");
+          if (acceptBtn) {
+            acceptBtn.onclick = function () {
+              localStorage.setItem("pss_cookie_consent", "accepted");
+              banner.classList.remove("visible");
+              if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+              if (typeof loadGoogleAnalytics === "function")
+                loadGoogleAnalytics();
+            };
+          }
+          var declineBtn = document.getElementById("cookie-decline");
+          if (declineBtn) {
+            declineBtn.onclick = function () {
+              localStorage.setItem("pss_cookie_consent", "declined");
+              banner.classList.remove("visible");
+            };
+          }
+        }
+      })();
+    </script>
+    <!-- MODALS END -->
+  </body>
 </html>

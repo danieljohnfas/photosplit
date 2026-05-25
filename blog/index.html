@@ -1,339 +1,735 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
-<head>
-<!-- Scripts loaded dynamically after consent -->
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    function loadGoogleScripts() {
-      if (document.getElementById('ga-script')) return;
-      var gaScript = document.createElement('script');
-      gaScript.id = 'ga-script';
-      gaScript.async = true;
-      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ';
-      document.head.appendChild(gaScript);
-      gtag('js', new Date());
-      gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
-
-          }
-  </script>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Photo Scanning &amp; Digitization Blog — PhotoSplit Studio</title>
-<meta content="Practical guides, tutorials, and tips for digitizing, scanning, and archiving your printed photo collection. Learn the best techniques for splitting scanned photos, choosing scanner settings, and preserving family memories." name="description"/>
-<meta content="photo scanning blog, digitize photos guide, scanning tips, photo archiving, split scanned photos tutorial, scanner settings for photos, digitize old photos" name="keywords"/>
-<meta content="index, follow" name="robots"/>
-<meta content="PhotoSplit Studio" name="author"/>
-<link href="https://photosplitstudio.com/blog/" rel="canonical"/>
-<meta content="website" property="og:type"/>
-<meta content="Photo Scanning &amp; Digitization Blog — PhotoSplit Studio" property="og:title"/>
-<meta content="Practical guides and tutorials for digitizing, scanning, and archiving your printed photo collection." property="og:description"/>
-<meta content="https://photosplitstudio.com/blog/" property="og:url"/>
-<meta content="https://photosplitstudio.com/assets/images/og-image.png" property="og:image"/>
-<meta content="PhotoSplit Studio Blog — Photo Scanning Guides" property="og:image:alt"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="Photo Scanning &amp; Digitization Blog — PhotoSplit Studio" name="twitter:title"/>
-<meta content="Practical guides and tutorials for digitizing and archiving your printed photo collection." name="twitter:description"/>
-<link href="/assets/images/logo.png" rel="icon" type="image/png"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="/css/style.css" rel="stylesheet"/>
-<script defer="" src="/js/gear.js"></script>
-<link href="/css/secondary.css" rel="stylesheet"/>
-<style>
-    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; margin-top: 40px; }
-    .blog-card { background: var(--bg-panel, #fff); border: 1px solid var(--border-color, #e2e8f0); border-radius: 14px; padding: 28px; box-shadow: 0 2px 8px rgba(0,0,0,.06); transition: transform .2s, box-shadow .2s; text-decoration: none; display: block; color: inherit; }
-    .blog-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(99,102,241,.15); text-decoration: none; }
-    .blog-card-tag { display: inline-block; background: rgba(99,102,241,.1); color: var(--accent,#6366f1); font-size: 0.72rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 14px; }
-    .blog-card h2 { font-size: 1.15rem; font-weight: 700; color: var(--text-color,#1a1d23); margin: 0 0 10px; line-height: 1.4; }
-    .blog-card p { font-size: 0.9rem; color: var(--text-muted,#4a5568); margin: 0 0 18px; line-height: 1.6; }
-    .blog-card-meta { font-size: 0.78rem; color: var(--text-muted,#718096); display: flex; gap: 16px; flex-wrap: wrap; }
-    .blog-card-cta { display: inline-block; margin-top: 16px; font-size: 0.85rem; font-weight: 600; color: var(--accent,#6366f1); }
-    .blog-hero { background: linear-gradient(135deg, #1a1d23 0%, #4f46e5 100%); color: #fff; padding: 72px 24px 56px; text-align: center; }
-    .blog-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 16px; }
-    .blog-hero p { font-size: 1.1rem; opacity: .9; max-width: 600px; margin: 0 auto; }
-    .blog-cta-box { background: linear-gradient(135deg, rgba(99,102,241,.08) 0%, rgba(99,102,241,.03) 100%); border: 1px solid rgba(99,102,241,.2); border-radius: 14px; padding: 36px; text-align: center; margin-top: 60px; }
-    .blog-cta-h2 { margin-top: 0; border: none; padding: 0; font-size: 1.4rem; }
-    .blog-cta-btn { background: var(--accent-grad, linear-gradient(135deg,#6366f1,#4f46e5)); color: white; padding: 14px 32px; font-size: 1.05rem; border-radius: 10px; text-decoration: none; display: inline-block; font-weight: 700; }
-  </style>
-<link href="/css/style-premium.css" rel="stylesheet"/></head>
-<body>
-<nav class="site-nav">
-<a class="logo blog-logo-link" href="/"><img alt="PhotoSplit Logo" class="nav-icon" src="/assets/images/logo-animated.svg"/> PhotoSplit Studio</a>
-<div class="nav-links">
-<a class="active" href="/blog/">Blog</a>
-<a href="/app">App</a>
-<a href="/resize">Resize</a>
-<a href="/tips">Tips</a>
-<a href="/about">About</a>
-<a href="/contact">Contact</a>
-<a class="cta" href="/app">Open App →</a>
-</div>
-</nav>
-<div class="blog-hero">
-<h1>✨ </h1>
-<p>Practical guides, tutorials, and expert tips for preserving your printed photo collection in the digital age.</p>
-</div>
-<!-- AdSense &mdash; Below Hero -->
-<div class="ad-wrap">
-<div class="ad-item"><script>
-  atOptions = {
-    'key' : '033703f2c2dfe7a5fa4501cd3ba1417e',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/033703f2c2dfe7a5fa4501cd3ba1417e/invoke.js"></script></div>
-<div class="ad-item"><script>
-  atOptions = {
-    'key' : 'eefa27f757f4d0772d979fca1074f12a',
-    'format' : 'iframe',
-    'height' : 60,
-    'width' : 468,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script></div>
-</div>
-<div class="page-with-sidebar"><div class="page-main-content"><div class="content-wrap">
-<nav aria-label="Breadcrumb" class="breadcrumb">
-<a href="/app">App</a><span>×</span>Blog
-  </nav>
-<p>Whether you're digitizing a single shoebox of holiday snapshots or archiving decades of family portraits, our guides walk you through every step — from choosing the right scanner settings to automatically splitting batch scans with PhotoSplit Studio.</p>
-<div class="blog-grid">
-<a class="blog-card" href="/blog/understanding-dpi-and-resolution">
-<span class="blog-card-tag">Technical</span>
-<h2>Understanding DPI and Resolution: A Complete Guide</h2>
-<p>Demystifying Dots Per Inch to help you scan your photos at the perfect quality without wasting hard drive space.</p>
-<div class="blog-card-meta">
-<span>📅 May 2026</span>
-<span>⏱ 8 min read</span>
-</div>
-<span class="blog-card-cta">Read the guide →</span>
-</a>
-<a class="blog-card" href="/blog/restore-water-damaged-photos">
-<span class="blog-card-tag">Restoration</span>
-<h2>How to Rescue and Restore Water-Damaged Photographs</h2>
-<p>Learn the safe, professional methods for separating stuck photos and digitally restoring flood damage.</p>
-<div class="blog-card-meta">
-<span>📅 May 2026</span>
-<span>⏱ 10 min read</span>
-</div>
-<span class="blog-card-cta">Read the guide →</span>
-</a>
-<a class="blog-card" href="/blog/history-of-photographic-film">
-<span class="blog-card-tag">History</span>
-<h2>The History of Photographic Film and Formats</h2>
-<p>From dangerous chemicals on glass plates to the iconic 35mm canister, explore the physical history of photography.</p>
-<div class="blog-card-meta">
-<span>📅 May 2026</span>
-<span>⏱ 12 min read</span>
-</div>
-<span class="blog-card-cta">Read the guide →</span>
-</a>
-<a class="blog-card" href="/blog/long-term-storage-physical-photos">
-<span class="blog-card-tag">Preservation</span>
-<h2>Best Practices for Long-Term Storage of Physical Photos</h2>
-<p>A complete guide to protecting your physical photographs from heat, humidity, light, and acidic damage.</p>
-<div class="blog-card-meta">
-<span>📅 May 2026</span>
-<span>⏱ 8 min read</span>
-</div>
-<span class="blog-card-cta">Read the guide →</span>
-</a>
-<a class="blog-card" href="/blog/choosing-the-right-scanner">
-<span class="blog-card-tag">Hardware Guide</span>
-<h2>Choosing the Right Scanner for Digitizing Old Photos</h2>
-<p>Flatbed vs Auto-feed vs Smartphone apps. An in-depth buying guide to help you choose the best photo scanner.</p>
-<div class="blog-card-meta">
-<span>📅 May 2026</span>
-<span>⏱ 9 min read</span>
-</div>
-<span class="blog-card-cta">Read the guide →</span>
-</a>
-<a class="blog-card" href="/blog/how-to-scan-hundreds-of-photos-fast">
-<span class="blog-card-tag">Guide</span>
-<h2>How to Scan Hundreds of Photos Fast</h2>
-<p>Stop scanning photos one-by-one. Learn the batch-scanning method to digitize massive photo collections in record time.</p>
-<div class="blog-card-meta">
-<span>📅 May 2026</span>
-<span>⏱ 8 min read</span>
-</div>
-<span class="blog-card-cta">Read the guide →</span>
-</a>
-<a class="blog-card" href="/blog/how-to-organize-digital-photos">
-<span class="blog-card-tag">Guide</span>
-<h2>How to Organize Digital Photos: A Guide for Beginners</h2>
-<p>Master the art of digital photo organization. Learn how to create logical folder structures, use metadata, and implement a foolproof backup strategy.</p>
-<div class="blog-card-meta">
-<span>✨ </span>
-<span>? 10 min read</span>
-</div>
-<span class="blog-card-cta">Read the guide ?</span>
-</a>
-<a class="blog-card" href="/blog/common-scanning-mistakes">
-<span class="blog-card-tag">Tutorial</span>
-<h2>5 Common Photo Scanning Mistakes (and How to Avoid Them)</h2>
-<p>Don't waste hours on bad scans. Learn the top mistakes that ruin digital archives, from incorrect DPI to dirty scanner glass.</p>
-<div class="blog-card-meta">
-<span>✨ </span>
-<span>? 8 min read</span>
-</div>
-<span class="blog-card-cta">Read the guide ?</span>
-</a>
-<a class="blog-card" href="/blog/best-cloud-storage-for-photos">
-<span class="blog-card-tag">Review</span>
-<h2>Best Cloud Storage for Digitized Family Photos in 2026</h2>
-<p>Protect your family legacy. Compare the best cloud storage services for digitized photos, including Google Photos, Amazon Photos, and iCloud.</p>
-<div class="blog-card-meta">
-<span>✨ </span>
-<span>? 12 min read</span>
-</div>
-<span class="blog-card-cta">Read the guide ?</span>
-</a>
-<a class="blog-card" href="/blog/restoring-faded-photos">
-<span class="blog-card-tag">Guide</span>
-<h2>Restoring Faded Photos: Physical vs Digital Techniques</h2>
-<p>Bring your old memories back to life. Learn the best techniques for restoring faded photos, from digital color enhancement to physical preservation.</p>
-<div class="blog-card-meta">
-<span>✨ </span>
-<span>? 9 min read</span>
-</div>
-<span class="blog-card-cta">Read the guide ?</span>
-</a>
-<a class="blog-card" href="/blog/why-digitize-negatives">
-<span class="blog-card-tag">Archiving</span>
-<h2>Why You Should Digitize Your Film Negatives Now</h2>
-<p>Your film negatives hold more detail than your prints. Learn why digitizing your film is the best way to preserve your history before it's too late.</p>
-<div class="blog-card-meta">
-<span>✨ </span>
-<span>? 11 min read</span>
-</div>
-<span class="blog-card-cta">Read the guide ?</span>
-</a>
-<a class="blog-card" href="/blog/how-to-digitize-photo-album">
-<span class="blog-card-tag">Guide</span>
-<h2>How to Digitize an Entire Photo Album in One Weekend</h2>
-<p>A complete, step-by-step weekend project plan for scanning, splitting, enhancing, and backing up hundreds of printed photos.</p>
-<div class="blog-card-meta">
-<span>✨ </span>
-<span>? 12 min read</span>
-</div>
-<span class="blog-card-cta">Read the guide ?</span>
-</a>
-<a class="blog-card" href="/blog/best-scanner-settings-for-photos">
-<span class="blog-card-tag">Tutorial</span>
-<h2>Best Scanner Settings for Old Photos: DPI, Format &amp; Color Explained</h2>
-<p>Confused by DPI and bit depth? This practical reference breaks down exactly which scanner settings to use for archival-quality results.</p>
-<div class="blog-card-meta">
-<span>✨ </span>
-<span>? 9 min read</span>
-</div>
-<span class="blog-card-cta">Read the guide ?</span>
-</a>
-<a class="blog-card" href="/tips">
-<span class="blog-card-tag">Tips</span>
-<h2>Complete Scanning Tips &amp; Techniques Reference</h2>
-<p>The official PhotoSplit Studio scanning guide — covering equipment selection, scanner setup, batch workflow, troubleshooting common detection problems, and archive organization.</p>
-<div class="blog-card-meta">
-<span>✨ </span>
-<span>? 15 min read</span>
-</div>
-<span class="blog-card-cta">Read the guide ?</span>
-</a>
-</div>
-<div class="blog-cta-box">
-<h2 class="blog-cta-h2">Ready to split your scans?</h2>
-<p>PhotoSplit Studio is free, works in any browser, and never uploads your photos.</p>
-<a class="btn blog-cta-btn" href="/app">🚀 Launch PhotoSplit Studio — Free</a>
-</div>
-</div></div>
-<aside class="page-sidebar">
-<div class="ad-sidebar-sticky">
-<span class="ad-sidebar-label">Advertisement</span>
-<div id="ad-sidebar" style="margin:0; min-height:250px; background:var(--bg-surface-2); border:1px dashed var(--border-strong); border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center;">
-<div class="ad-item">
-<script>
+  <head>
+    <!-- Scripts loaded dynamically after consent -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      function loadGoogleScripts() {
+        if (document.getElementById("ga-script")) return;
+        var gaScript = document.createElement("script");
+        gaScript.id = "ga-script";
+        gaScript.async = true;
+        gaScript.src =
+          "https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ";
+        document.head.appendChild(gaScript);
+        gtag("js", new Date());
+        gtag("config", "G-G40QDCGTTZ", { anonymize_ip: true });
+      }
+    </script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Photo Scanning &amp; Digitization Blog — PhotoSplit Studio</title>
+    <meta
+      content="Practical guides, tutorials, and tips for digitizing, scanning, and archiving your printed photo collection. Learn the best techniques for splitting scanned photos, choosing scanner settings, and preserving family memories."
+      name="description"
+    />
+    <meta
+      content="photo scanning blog, digitize photos guide, scanning tips, photo archiving, split scanned photos tutorial, scanner settings for photos, digitize old photos"
+      name="keywords"
+    />
+    <meta content="index, follow" name="robots" />
+    <meta content="PhotoSplit Studio" name="author" />
+    <link href="https://photosplitstudio.com/blog/" rel="canonical" />
+    <meta content="website" property="og:type" />
+    <meta
+      content="Photo Scanning &amp; Digitization Blog — PhotoSplit Studio"
+      property="og:title"
+    />
+    <meta
+      content="Practical guides and tutorials for digitizing, scanning, and archiving your printed photo collection."
+      property="og:description"
+    />
+    <meta content="https://photosplitstudio.com/blog/" property="og:url" />
+    <meta
+      content="https://photosplitstudio.com/assets/images/og-image.png"
+      property="og:image"
+    />
+    <meta
+      content="PhotoSplit Studio Blog — Photo Scanning Guides"
+      property="og:image:alt"
+    />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta
+      content="Photo Scanning &amp; Digitization Blog — PhotoSplit Studio"
+      name="twitter:title"
+    />
+    <meta
+      content="Practical guides and tutorials for digitizing and archiving your printed photo collection."
+      name="twitter:description"
+    />
+    <link href="/assets/images/logo.png" rel="icon" type="image/png" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="/css/style.css" rel="stylesheet" />
+    <script defer="" src="/js/gear.js"></script>
+    <link href="/css/secondary.css" rel="stylesheet" />
+    <style>
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 28px;
+        margin-top: 40px;
+      }
+      .blog-card {
+        background: var(--bg-panel, #fff);
+        border: 1px solid var(--border-color, #e2e8f0);
+        border-radius: 14px;
+        padding: 28px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        text-decoration: none;
+        display: block;
+        color: inherit;
+      }
+      .blog-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(99, 102, 241, 0.15);
+        text-decoration: none;
+      }
+      .blog-card-tag {
+        display: inline-block;
+        background: rgba(99, 102, 241, 0.1);
+        color: var(--accent, #6366f1);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 3px 10px;
+        border-radius: 20px;
+        margin-bottom: 14px;
+      }
+      .blog-card h2 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--text-color, #1a1d23);
+        margin: 0 0 10px;
+        line-height: 1.4;
+      }
+      .blog-card p {
+        font-size: 0.9rem;
+        color: var(--text-muted, #4a5568);
+        margin: 0 0 18px;
+        line-height: 1.6;
+      }
+      .blog-card-meta {
+        font-size: 0.78rem;
+        color: var(--text-muted, #718096);
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .blog-card-cta {
+        display: inline-block;
+        margin-top: 16px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--accent, #6366f1);
+      }
+      .blog-hero {
+        background: linear-gradient(135deg, #1a1d23 0%, #4f46e5 100%);
+        color: #fff;
+        padding: 72px 24px 56px;
+        text-align: center;
+      }
+      .blog-hero h1 {
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+        font-weight: 800;
+        margin-bottom: 16px;
+      }
+      .blog-hero p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .blog-cta-box {
+        background: linear-gradient(
+          135deg,
+          rgba(99, 102, 241, 0.08) 0%,
+          rgba(99, 102, 241, 0.03) 100%
+        );
+        border: 1px solid rgba(99, 102, 241, 0.2);
+        border-radius: 14px;
+        padding: 36px;
+        text-align: center;
+        margin-top: 60px;
+      }
+      .blog-cta-h2 {
+        margin-top: 0;
+        border: none;
+        padding: 0;
+        font-size: 1.4rem;
+      }
+      .blog-cta-btn {
+        background: var(
+          --accent-grad,
+          linear-gradient(135deg, #6366f1, #4f46e5)
+        );
+        color: white;
+        padding: 14px 32px;
+        font-size: 1.05rem;
+        border-radius: 10px;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: 700;
+      }
+    </style>
+    <link href="/css/style-premium.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="site-nav">
+      <a class="logo blog-logo-link" href="/"
+        ><img
+          alt="PhotoSplit Logo"
+          class="nav-icon"
+          src="/assets/images/logo-animated.svg"
+        />
+        PhotoSplit Studio</a
+      >
+      <div class="nav-links">
+        <a class="active" href="/blog/">Blog</a>
+        <a href="/app">App</a>
+        <a href="/resize">Resize</a>
+        <a href="/tips">Tips</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a class="cta" href="/app">Open App →</a>
+      </div>
+    </nav>
+    <div class="blog-hero">
+      <h1>✨</h1>
+      <p>
+        Practical guides, tutorials, and expert tips for preserving your printed
+        photo collection in the digital age.
+      </p>
+    </div>
+    <!-- AdSense &mdash; Below Hero -->
+    <div class="ad-wrap">
+      <div class="ad-item">
+        <script>
           atOptions = {
-            'key' : 'eefa27f757f4d0772d979fca1074f12a',
-            'format' : 'iframe',
-            'height' : 250,
-            'width' : 300,
-            'params' : {}
+            key: "033703f2c2dfe7a5fa4501cd3ba1417e",
+            format: "iframe",
+            height: 90,
+            width: 728,
+            params: {},
           };
         </script>
-<script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
-</div>
-</div>
-</div>
-</aside>
-</div>
-<!-- AdSense &mdash; Above Footer -->
-<div class="ad-wrap-bottom">
-<script async="async" data-cfasync="false" src="https://pl29548528.effectivecpmnetwork.com/a25495e0c3bb3c8d42df39bb0b421e4a/invoke.js"></script>
-<div id="container-a25495e0c3bb3c8d42df39bb0b421e4a"></div>
-</div>
-<section class="gear-section">
-<div class="gear-section-inner">
-<h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
-<p class="gear-section-sub">Pair PhotoSplit Studio with the best hardware for fast, high-quality archiving and secure backups.</p>
-<div class="gear-cards-grid"></div>
-<p class="affiliate-disclosure">As an Amazon Associate, PhotoSplit Studio earns from qualifying purchases.</p>
-</div>
-</section>
-<footer class="site-footer">
-<div class="footer-links">
-<a href="/app">App</a>
-<a href="/blog/">Blog</a>
-<a href="/tips">Scanning Tips</a>
-<a href="/contact">Contact</a>
-<a href="/terms">Terms of Use</a>
-<a href="/privacy-policy">Privacy Policy</a>
-<a href="/about">About</a>
-</div>
-<div>© 2026 PhotoSplit Studio. All rights reserved.</div>
-<div class="site-status-bar"><div class="status-item"><span class="status-label">Is it dark outside?</span><span class="status-value" id="dark-status-answer">...</span></div><div class="status-item"><span class="status-label">Global Visitors:</span><img alt="Visitor Count" class="visitor-badge" src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"/></div></div><script>(function(){ var h=new Date().getHours(); var ans=(h>=18||h<6)?"YES":"NO"; var el=document.getElementById("dark-status-answer"); if(el) el.textContent=ans; })();</script>
-</footer>
-<!-- Hit Tracker (Unique Visitors Only) -->
-<script>
-    if (!localStorage.getItem("ps_counted")) {
-      localStorage.setItem("ps_counted", "true");
-      new Image().src = "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
-    }
-  </script>
-<div id="cookie-consent" role="dialog">
-<div id="cookie-consent-inner">
-<p>🍪 We use cookies to improve your experience. See our <a href="/privacy-policy">Privacy Policy</a>.</p>
-<div id="cookie-consent-actions">
-<button class="cookie-btn" id="cookie-decline">Decline</button>
-<button class="cookie-btn cookie-btn-accept" id="cookie-accept">Accept All</button>
-</div>
-</div>
-</div>
-<script>
-    (function() {
-      var banner = document.getElementById('cookie-consent');
-      if (!localStorage.getItem('pss_cookie_consent')) {
-        banner.classList.add('visible');
-      } else if (localStorage.getItem('pss_cookie_consent') === 'accepted') {
-        if (typeof loadGoogleScripts === 'function') loadGoogleScripts();
+        <script src="https://www.highperformanceformat.com/033703f2c2dfe7a5fa4501cd3ba1417e/invoke.js"></script>
+      </div>
+      <div class="ad-item">
+        <script>
+          atOptions = {
+            key: "eefa27f757f4d0772d979fca1074f12a",
+            format: "iframe",
+            height: 60,
+            width: 468,
+            params: {},
+          };
+        </script>
+        <script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
+      </div>
+    </div>
+    <div class="page-with-sidebar">
+      <div class="page-main-content">
+        <div class="content-wrap">
+          <nav aria-label="Breadcrumb" class="breadcrumb">
+            <a href="/app">App</a><span>×</span>Blog
+          </nav>
+          <p>
+            Whether you're digitizing a single shoebox of holiday snapshots or
+            archiving decades of family portraits, our guides walk you through
+            every step — from choosing the right scanner settings to
+            automatically splitting batch scans with PhotoSplit Studio.
+          </p>
+          <div class="blog-grid">
+            <a class="blog-card" href="/blog/understanding-dpi-and-resolution">
+              <span class="blog-card-tag">Technical</span>
+              <h2>Understanding DPI and Resolution: A Complete Guide</h2>
+              <p>
+                Demystifying Dots Per Inch to help you scan your photos at the
+                perfect quality without wasting hard drive space.
+              </p>
+              <div class="blog-card-meta">
+                <span>📅 May 2026</span>
+                <span>⏱ 8 min read</span>
+              </div>
+              <span class="blog-card-cta">Read the guide →</span>
+            </a>
+            <a class="blog-card" href="/blog/restore-water-damaged-photos">
+              <span class="blog-card-tag">Restoration</span>
+              <h2>How to Rescue and Restore Water-Damaged Photographs</h2>
+              <p>
+                Learn the safe, professional methods for separating stuck photos
+                and digitally restoring flood damage.
+              </p>
+              <div class="blog-card-meta">
+                <span>📅 May 2026</span>
+                <span>⏱ 10 min read</span>
+              </div>
+              <span class="blog-card-cta">Read the guide →</span>
+            </a>
+            <a class="blog-card" href="/blog/history-of-photographic-film">
+              <span class="blog-card-tag">History</span>
+              <h2>The History of Photographic Film and Formats</h2>
+              <p>
+                From dangerous chemicals on glass plates to the iconic 35mm
+                canister, explore the physical history of photography.
+              </p>
+              <div class="blog-card-meta">
+                <span>📅 May 2026</span>
+                <span>⏱ 12 min read</span>
+              </div>
+              <span class="blog-card-cta">Read the guide →</span>
+            </a>
+            <a class="blog-card" href="/blog/long-term-storage-physical-photos">
+              <span class="blog-card-tag">Preservation</span>
+              <h2>Best Practices for Long-Term Storage of Physical Photos</h2>
+              <p>
+                A complete guide to protecting your physical photographs from
+                heat, humidity, light, and acidic damage.
+              </p>
+              <div class="blog-card-meta">
+                <span>📅 May 2026</span>
+                <span>⏱ 8 min read</span>
+              </div>
+              <span class="blog-card-cta">Read the guide →</span>
+            </a>
+            <a class="blog-card" href="/blog/choosing-the-right-scanner">
+              <span class="blog-card-tag">Hardware Guide</span>
+              <h2>Choosing the Right Scanner for Digitizing Old Photos</h2>
+              <p>
+                Flatbed vs Auto-feed vs Smartphone apps. An in-depth buying
+                guide to help you choose the best photo scanner.
+              </p>
+              <div class="blog-card-meta">
+                <span>📅 May 2026</span>
+                <span>⏱ 9 min read</span>
+              </div>
+              <span class="blog-card-cta">Read the guide →</span>
+            </a>
+            <a
+              class="blog-card"
+              href="/blog/how-to-scan-hundreds-of-photos-fast"
+            >
+              <span class="blog-card-tag">Guide</span>
+              <h2>How to Scan Hundreds of Photos Fast</h2>
+              <p>
+                Stop scanning photos one-by-one. Learn the batch-scanning method
+                to digitize massive photo collections in record time.
+              </p>
+              <div class="blog-card-meta">
+                <span>📅 May 2026</span>
+                <span>⏱ 8 min read</span>
+              </div>
+              <span class="blog-card-cta">Read the guide →</span>
+            </a>
+            <a class="blog-card" href="/blog/how-to-organize-digital-photos">
+              <span class="blog-card-tag">Guide</span>
+              <h2>How to Organize Digital Photos: A Guide for Beginners</h2>
+              <p>
+                Master the art of digital photo organization. Learn how to
+                create logical folder structures, use metadata, and implement a
+                foolproof backup strategy.
+              </p>
+              <div class="blog-card-meta">
+                <span>✨ </span>
+                <span>? 10 min read</span>
+              </div>
+              <span class="blog-card-cta">Read the guide ?</span>
+            </a>
+            <a class="blog-card" href="/blog/common-scanning-mistakes">
+              <span class="blog-card-tag">Tutorial</span>
+              <h2>5 Common Photo Scanning Mistakes (and How to Avoid Them)</h2>
+              <p>
+                Don't waste hours on bad scans. Learn the top mistakes that ruin
+                digital archives, from incorrect DPI to dirty scanner glass.
+              </p>
+              <div class="blog-card-meta">
+                <span>✨ </span>
+                <span>? 8 min read</span>
+              </div>
+              <span class="blog-card-cta">Read the guide ?</span>
+            </a>
+            <a class="blog-card" href="/blog/best-cloud-storage-for-photos">
+              <span class="blog-card-tag">Review</span>
+              <h2>Best Cloud Storage for Digitized Family Photos in 2026</h2>
+              <p>
+                Protect your family legacy. Compare the best cloud storage
+                services for digitized photos, including Google Photos, Amazon
+                Photos, and iCloud.
+              </p>
+              <div class="blog-card-meta">
+                <span>✨ </span>
+                <span>? 12 min read</span>
+              </div>
+              <span class="blog-card-cta">Read the guide ?</span>
+            </a>
+            <a class="blog-card" href="/blog/restoring-faded-photos">
+              <span class="blog-card-tag">Guide</span>
+              <h2>Restoring Faded Photos: Physical vs Digital Techniques</h2>
+              <p>
+                Bring your old memories back to life. Learn the best techniques
+                for restoring faded photos, from digital color enhancement to
+                physical preservation.
+              </p>
+              <div class="blog-card-meta">
+                <span>✨ </span>
+                <span>? 9 min read</span>
+              </div>
+              <span class="blog-card-cta">Read the guide ?</span>
+            </a>
+            <a class="blog-card" href="/blog/why-digitize-negatives">
+              <span class="blog-card-tag">Archiving</span>
+              <h2>Why You Should Digitize Your Film Negatives Now</h2>
+              <p>
+                Your film negatives hold more detail than your prints. Learn why
+                digitizing your film is the best way to preserve your history
+                before it's too late.
+              </p>
+              <div class="blog-card-meta">
+                <span>✨ </span>
+                <span>? 11 min read</span>
+              </div>
+              <span class="blog-card-cta">Read the guide ?</span>
+            </a>
+            <a class="blog-card" href="/blog/how-to-digitize-photo-album">
+              <span class="blog-card-tag">Guide</span>
+              <h2>How to Digitize an Entire Photo Album in One Weekend</h2>
+              <p>
+                A complete, step-by-step weekend project plan for scanning,
+                splitting, enhancing, and backing up hundreds of printed photos.
+              </p>
+              <div class="blog-card-meta">
+                <span>✨ </span>
+                <span>? 12 min read</span>
+              </div>
+              <span class="blog-card-cta">Read the guide ?</span>
+            </a>
+            <a class="blog-card" href="/blog/best-scanner-settings-for-photos">
+              <span class="blog-card-tag">Tutorial</span>
+              <h2>
+                Best Scanner Settings for Old Photos: DPI, Format &amp; Color
+                Explained
+              </h2>
+              <p>
+                Confused by DPI and bit depth? This practical reference breaks
+                down exactly which scanner settings to use for archival-quality
+                results.
+              </p>
+              <div class="blog-card-meta">
+                <span>✨ </span>
+                <span>? 9 min read</span>
+              </div>
+              <span class="blog-card-cta">Read the guide ?</span>
+            </a>
+            <a class="blog-card" href="/tips">
+              <span class="blog-card-tag">Tips</span>
+              <h2>Complete Scanning Tips &amp; Techniques Reference</h2>
+              <p>
+                The official PhotoSplit Studio scanning guide — covering
+                equipment selection, scanner setup, batch workflow,
+                troubleshooting common detection problems, and archive
+                organization.
+              </p>
+              <div class="blog-card-meta">
+                <span>✨ </span>
+                <span>? 15 min read</span>
+              </div>
+              <span class="blog-card-cta">Read the guide ?</span>
+            </a>
+          </div>
+          <div class="blog-cta-box">
+            <h2 class="blog-cta-h2">Ready to split your scans?</h2>
+            <p>
+              PhotoSplit Studio is free, works in any browser, and never uploads
+              your photos.
+            </p>
+            <a class="btn blog-cta-btn" href="/app"
+              >🚀 Launch PhotoSplit Studio — Free</a
+            >
+          </div>
+        </div>
+      </div>
+      <aside class="page-sidebar">
+        <div class="ad-sidebar-sticky">
+          <span class="ad-sidebar-label">Advertisement</span>
+          <div
+            id="ad-sidebar"
+            style="
+              margin: 0;
+              min-height: 250px;
+              background: var(--bg-surface-2);
+              border: 1px dashed var(--border-strong);
+              border-radius: var(--radius-md);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <div class="ad-item">
+              <script>
+                atOptions = {
+                  key: "eefa27f757f4d0772d979fca1074f12a",
+                  format: "iframe",
+                  height: 250,
+                  width: 300,
+                  params: {},
+                };
+              </script>
+              <script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <!-- AdSense &mdash; Above Footer -->
+    <div class="ad-wrap-bottom">
+      <script
+        async="async"
+        data-cfasync="false"
+        src="https://pl29548528.effectivecpmnetwork.com/a25495e0c3bb3c8d42df39bb0b421e4a/invoke.js"
+      ></script>
+      <div id="container-a25495e0c3bb3c8d42df39bb0b421e4a"></div>
+    </div>
+    <section class="gear-section">
+      <div class="gear-section-inner">
+        <h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
+        <p class="gear-section-sub">
+          Pair PhotoSplit Studio with the best hardware for fast, high-quality
+          archiving and secure backups.
+        </p>
+        <div class="gear-cards-grid"></div>
+        <p class="affiliate-disclosure">
+          As an Amazon Associate, PhotoSplit Studio earns from qualifying
+          purchases.
+        </p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="/app">App</a>
+          <a href="/blog/">Blog</a>
+          <a href="/tips">Scanning Tips</a>
+          <a href="/contact">Contact</a>
+          <a href="/terms">Terms</a>
+          <a href="/privacy-policy">Privacy</a>
+          <a href="/about">About</a>
+          <a
+            href="#"
+            onclick="
+              if (typeof openTextModal === 'function')
+                openTextModal('feedback-modal', event);
+            "
+            >Feedback</a
+          >
+        </div>
+        <div class="footer-copy">
+          © 2026 PhotoSplit Studio. All rights reserved.
+        </div>
+      </div>
+      <div class="site-status-bar">
+        <div class="status-item">
+          <span class="status-label">Is it dark outside?</span
+          ><span class="status-value" id="dark-status-answer">...</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Global Visitors:</span
+          ><img
+            alt="Visitor Count"
+            class="visitor-badge"
+            src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"
+          />
+        </div>
+      </div>
+      <script>
+        (function () {
+          var h = new Date().getHours();
+          var ans = h >= 18 || h < 6 ? "YES" : "NO";
+          var el = document.getElementById("dark-status-answer");
+          if (el) el.textContent = ans;
+        })();
+      </script>
+    </footer>
+
+    <!-- Hit Tracker (Unique Visitors Only) -->
+    <script>
+      if (!localStorage.getItem("ps_counted")) {
+        localStorage.setItem("ps_counted", "true");
+        new Image().src =
+          "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
       }
-      document.getElementById('cookie-accept').onclick = function() { 
-        localStorage.setItem('pss_cookie_consent', 'accepted'); 
-        banner.classList.remove('visible'); 
-        if (typeof loadGoogleScripts === 'function') loadGoogleScripts();
-      };
-      if(document.getElementById('cookie-decline')) {
-        document.getElementById('cookie-decline').onclick = function() { 
-          localStorage.setItem('pss_cookie_consent', 'declined'); 
-          banner.classList.remove('visible'); 
+    </script>
+    <!-- MODALS START -->
+    <div
+      class="text-modal-backdrop"
+      id="feedback-modal"
+      onclick="
+        if (event.target === this && typeof closeTextModal === 'function')
+          closeTextModal('feedback-modal');
+      "
+    >
+      <div class="text-modal-box">
+        <div class="text-modal-header">
+          <h2>Provide Feedback</h2>
+          <button
+            class="icon-btn"
+            onclick="
+              if (typeof closeTextModal === 'function')
+                closeTextModal('feedback-modal');
+            "
+          >
+            ✕
+          </button>
+        </div>
+        <div class="text-modal-content" id="feedback-form-view">
+          <form
+            onsubmit="
+              if (typeof handleFeedbackSubmit === 'function')
+                handleFeedbackSubmit(event);
+            "
+          >
+            <input
+              class="form-control mb-12"
+              id="fb-name"
+              placeholder="Your Name"
+              required=""
+              type="text"
+              style="margin-bottom: 12px"
+            />
+            <input
+              class="form-control mb-12"
+              id="fb-email"
+              placeholder="your@email.com"
+              required=""
+              type="email"
+              style="margin-bottom: 12px"
+            />
+            <textarea
+              class="form-control mb-12"
+              id="fb-desc"
+              placeholder="Your feedback..."
+              required=""
+              rows="4"
+              style="margin-bottom: 12px"
+            ></textarea>
+            <button class="btn btn-primary" style="width: 100%" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+        <div
+          class="text-modal-content"
+          id="feedback-success-view"
+          style="display: none; text-align: center"
+        >
+          <h3>✅ Thank you!</h3>
+          <p>Your feedback has been received.</p>
+          <button
+            class="btn btn-secondary"
+            onclick="
+              if (typeof closeTextModal === 'function')
+                closeTextModal('feedback-modal');
+            "
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="cookie-consent" role="dialog">
+      <div id="cookie-consent-inner">
+        <p>
+          🍪 We use cookies to improve your experience. See our
+          <a href="/privacy-policy">Privacy Policy</a>.
+        </p>
+        <div id="cookie-consent-actions">
+          <button class="cookie-btn" id="cookie-decline">Decline</button>
+          <button class="cookie-btn cookie-btn-accept" id="cookie-accept">
+            Accept All
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        if (!localStorage.getItem("ps_counted")) {
+          localStorage.setItem("ps_counted", "true");
+          var img = new Image();
+          img.src =
+            "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
+        }
+
+        window.handleFeedbackSubmit = function (e) {
+          e.preventDefault();
+          var params = new URLSearchParams();
+          params.append(
+            "entry.1051903221",
+            document.getElementById("fb-name").value,
+          );
+          params.append(
+            "entry.371950700",
+            document.getElementById("fb-email").value,
+          );
+          params.append(
+            "entry.852578852",
+            document.getElementById("fb-desc").value,
+          );
+          fetch(
+            "https://docs.google.com/forms/d/e/1FAIpQLSeJe_jw0IHHXeT4w4hzcZJ2WXREaT8aD4_R4LFBGVZNazsehg/formResponse",
+            { method: "POST", mode: "no-cors", body: params },
+          );
+          document.getElementById("feedback-form-view").style.display = "none";
+          document.getElementById("feedback-success-view").style.display =
+            "block";
         };
-      }
-    })();
-  </script>
-</body>
+
+        // Cookie Consent
+        var banner = document.getElementById("cookie-consent");
+        if (banner) {
+          if (!localStorage.getItem("pss_cookie_consent")) {
+            banner.classList.add("visible");
+          } else if (
+            localStorage.getItem("pss_cookie_consent") === "accepted"
+          ) {
+            if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+            if (typeof loadGoogleAnalytics === "function")
+              loadGoogleAnalytics();
+          }
+          var acceptBtn = document.getElementById("cookie-accept");
+          if (acceptBtn) {
+            acceptBtn.onclick = function () {
+              localStorage.setItem("pss_cookie_consent", "accepted");
+              banner.classList.remove("visible");
+              if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+              if (typeof loadGoogleAnalytics === "function")
+                loadGoogleAnalytics();
+            };
+          }
+          var declineBtn = document.getElementById("cookie-decline");
+          if (declineBtn) {
+            declineBtn.onclick = function () {
+              localStorage.setItem("pss_cookie_consent", "declined");
+              banner.classList.remove("visible");
+            };
+          }
+        }
+      })();
+    </script>
+    <!-- MODALS END -->
+  </body>
 </html>

@@ -1,220 +1,619 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
-<head>
-<!-- Scripts loaded dynamically after consent -->
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    function loadGoogleScripts() {
-      if (document.getElementById('ga-script')) return;
-      var gaScript = document.createElement('script');
-      gaScript.id = 'ga-script';
-      gaScript.async = true;
-      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ';
-      document.head.appendChild(gaScript);
-      gtag('js', new Date());
-      gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
-
-          }
-  </script>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>5 Common Photo Scanning Mistakes (and How to Avoid Them) | PhotoSplit Studio Blog</title>
-<meta content="Don't waste hours on bad scans. Learn the top 5 photo scanning mistakes that ruin digital archives, from incorrect DPI to dirty scanner glass, and how to fix them." name="description"/>
-<meta content="photo scanning mistakes, scanner troubleshooting, scanning DPI guide, clean scanner glass, photo digitization errors, fix bad scans, scanner settings for photos, archive quality scanning" name="keywords"/>
-<meta content="index, follow" name="robots"/>
-<meta content="PhotoSplit Studio" name="author"/>
-<link href="https://photosplitstudio.com/blog/common-scanning-mistakes" rel="canonical"/>
-<meta content="article" property="og:type"/>
-<meta content="2026-05-04T00:00:00Z" property="article:published_time"/>
-<meta content="5 Common Photo Scanning Mistakes (and How to Avoid Them)" property="og:title"/>
-<meta content="Avoid the pitfalls of DIY photo digitization. We break down the most common mistakes people make when scanning old photos and how to get professional results at home." property="og:description"/>
-<meta content="https://photosplitstudio.com/blog/common-scanning-mistakes" property="og:url"/>
-<meta content="https://photosplitstudio.com/blog/images/scanning-mistakes-hero.png" property="og:image"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"5 Common Photo Scanning Mistakes (and How to Avoid Them)","datePublished":"2026-05-04","dateModified":"2026-05-04","author":{"@type":"Organization","name":"PhotoSplit Studio"},"publisher":{"@type":"Organization","name":"PhotoSplit Studio","url":"https://photosplitstudio.com"},"mainEntityOfPage":"https://photosplitstudio.com/blog/common-scanning-mistakes"}</script>
-<link href="/assets/images/logo.png" rel="icon" type="image/png"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="/css/style.css" rel="stylesheet"/>
-<script defer="" src="/js/gear.js"></script>
-<link href="/css/secondary.css" rel="stylesheet"/>
-<style>
-    .article-meta{display:flex;gap:20px;flex-wrap:wrap;font-size:.82rem;color:var(--text-muted,#718096);margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--border-color,#e2e8f0)}
-    .article-tag{background:rgba(99,102,241,.1);color:var(--accent,#6366f1);font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 10px;border-radius:20px}
-    .mistake-box { background: #fff5f5; border-left: 4px solid #ff4757; padding: 24px; border-radius: 8px; margin: 24px 0; }
-    .mistake-box h3 { color: #d63031; margin-top: 0; font-size: 1.1rem; }
-    .fix-box { background: #f0fff4; border-left: 4px solid #48bb78; padding: 24px; border-radius: 8px; margin: 24px 0; }
-    .fix-box h3 { color: #2f855a; margin-top: 0; font-size: 1.1rem; }
-  </style>
-<link href="/css/style-premium.css" rel="stylesheet"/></head>
-<body>
-<nav class="site-nav">
-<a class="logo blog-logo-link" href="/"><img alt="PhotoSplit Logo" class="nav-icon" src="/assets/images/logo-animated.svg"/> PhotoSplit Studio</a>
-<div class="nav-links">
-<a class="active" href="/blog/">Blog</a>
-<a href="/app">App</a>
-<a href="/resize">Resize</a>
-<a href="/tips">Tips</a>
-<a href="/about">About</a>
-<a href="/contact">Contact</a>
-<a class="cta" href="/app">Open App →</a>
-</div>
-</nav>
-<div class="hero hero-red">
-<h1>5 Common Photo Scanning Mistakes</h1>
-<p>Don't let these simple errors ruin your family archive. Learn how to scan like a pro.</p>
-</div>
-<div class="page-with-sidebar"><div class="page-main-content"><div class="content-wrap pt-0">
-<img alt="Common Photo Scanning Mistakes" class="hero-image" src="/blog/images/scanning-mistakes-hero.png"/>
-</div></div>
-<aside class="page-sidebar">
-<div class="ad-sidebar-sticky">
-<span class="ad-sidebar-label">Advertisement</span>
-<div id="ad-sidebar" style="margin:0; min-height:250px; background:var(--bg-surface-2); border:1px dashed var(--border-strong); border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center;">
-<div class="ad-item">
-<script>
+  <head>
+    <!-- Scripts loaded dynamically after consent -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      function loadGoogleScripts() {
+        if (document.getElementById("ga-script")) return;
+        var gaScript = document.createElement("script");
+        gaScript.id = "ga-script";
+        gaScript.async = true;
+        gaScript.src =
+          "https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ";
+        document.head.appendChild(gaScript);
+        gtag("js", new Date());
+        gtag("config", "G-G40QDCGTTZ", { anonymize_ip: true });
+      }
+    </script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+      5 Common Photo Scanning Mistakes (and How to Avoid Them) | PhotoSplit
+      Studio Blog
+    </title>
+    <meta
+      content="Don't waste hours on bad scans. Learn the top 5 photo scanning mistakes that ruin digital archives, from incorrect DPI to dirty scanner glass, and how to fix them."
+      name="description"
+    />
+    <meta
+      content="photo scanning mistakes, scanner troubleshooting, scanning DPI guide, clean scanner glass, photo digitization errors, fix bad scans, scanner settings for photos, archive quality scanning"
+      name="keywords"
+    />
+    <meta content="index, follow" name="robots" />
+    <meta content="PhotoSplit Studio" name="author" />
+    <link
+      href="https://photosplitstudio.com/blog/common-scanning-mistakes"
+      rel="canonical"
+    />
+    <meta content="article" property="og:type" />
+    <meta content="2026-05-04T00:00:00Z" property="article:published_time" />
+    <meta
+      content="5 Common Photo Scanning Mistakes (and How to Avoid Them)"
+      property="og:title"
+    />
+    <meta
+      content="Avoid the pitfalls of DIY photo digitization. We break down the most common mistakes people make when scanning old photos and how to get professional results at home."
+      property="og:description"
+    />
+    <meta
+      content="https://photosplitstudio.com/blog/common-scanning-mistakes"
+      property="og:url"
+    />
+    <meta
+      content="https://photosplitstudio.com/blog/images/scanning-mistakes-hero.png"
+      property="og:image"
+    />
+    <meta content="summary_large_image" name="twitter:card" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "5 Common Photo Scanning Mistakes (and How to Avoid Them)",
+        "datePublished": "2026-05-04",
+        "dateModified": "2026-05-04",
+        "author": { "@type": "Organization", "name": "PhotoSplit Studio" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "PhotoSplit Studio",
+          "url": "https://photosplitstudio.com"
+        },
+        "mainEntityOfPage": "https://photosplitstudio.com/blog/common-scanning-mistakes"
+      }
+    </script>
+    <link href="/assets/images/logo.png" rel="icon" type="image/png" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="/css/style.css" rel="stylesheet" />
+    <script defer="" src="/js/gear.js"></script>
+    <link href="/css/secondary.css" rel="stylesheet" />
+    <style>
+      .article-meta {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        font-size: 0.82rem;
+        color: var(--text-muted, #718096);
+        margin-bottom: 32px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--border-color, #e2e8f0);
+      }
+      .article-tag {
+        background: rgba(99, 102, 241, 0.1);
+        color: var(--accent, #6366f1);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 3px 10px;
+        border-radius: 20px;
+      }
+      .mistake-box {
+        background: #fff5f5;
+        border-left: 4px solid #ff4757;
+        padding: 24px;
+        border-radius: 8px;
+        margin: 24px 0;
+      }
+      .mistake-box h3 {
+        color: #d63031;
+        margin-top: 0;
+        font-size: 1.1rem;
+      }
+      .fix-box {
+        background: #f0fff4;
+        border-left: 4px solid #48bb78;
+        padding: 24px;
+        border-radius: 8px;
+        margin: 24px 0;
+      }
+      .fix-box h3 {
+        color: #2f855a;
+        margin-top: 0;
+        font-size: 1.1rem;
+      }
+    </style>
+    <link href="/css/style-premium.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="site-nav">
+      <a class="logo blog-logo-link" href="/"
+        ><img
+          alt="PhotoSplit Logo"
+          class="nav-icon"
+          src="/assets/images/logo-animated.svg"
+        />
+        PhotoSplit Studio</a
+      >
+      <div class="nav-links">
+        <a class="active" href="/blog/">Blog</a>
+        <a href="/app">App</a>
+        <a href="/resize">Resize</a>
+        <a href="/tips">Tips</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a class="cta" href="/app">Open App →</a>
+      </div>
+    </nav>
+    <div class="hero hero-red">
+      <h1>5 Common Photo Scanning Mistakes</h1>
+      <p>
+        Don't let these simple errors ruin your family archive. Learn how to
+        scan like a pro.
+      </p>
+    </div>
+    <div class="page-with-sidebar">
+      <div class="page-main-content">
+        <div class="content-wrap pt-0">
+          <img
+            alt="Common Photo Scanning Mistakes"
+            class="hero-image"
+            src="/blog/images/scanning-mistakes-hero.png"
+          />
+        </div>
+      </div>
+      <aside class="page-sidebar">
+        <div class="ad-sidebar-sticky">
+          <span class="ad-sidebar-label">Advertisement</span>
+          <div
+            id="ad-sidebar"
+            style="
+              margin: 0;
+              min-height: 250px;
+              background: var(--bg-surface-2);
+              border: 1px dashed var(--border-strong);
+              border-radius: var(--radius-md);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <div class="ad-item">
+              <script>
+                atOptions = {
+                  key: "eefa27f757f4d0772d979fca1074f12a",
+                  format: "iframe",
+                  height: 250,
+                  width: 300,
+                  params: {},
+                };
+              </script>
+              <script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <!-- AdSense &mdash; Below Hero -->
+    <div class="ad-wrap">
+      <div class="ad-item">
+        <script>
           atOptions = {
-            'key' : 'eefa27f757f4d0772d979fca1074f12a',
-            'format' : 'iframe',
-            'height' : 250,
-            'width' : 300,
-            'params' : {}
+            key: "033703f2c2dfe7a5fa4501cd3ba1417e",
+            format: "iframe",
+            height: 90,
+            width: 728,
+            params: {},
           };
         </script>
-<script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
-</div>
-</div>
-</div>
-</aside>
-</div>
-<!-- AdSense &mdash; Below Hero -->
-<div class="ad-wrap">
-<div class="ad-item"><script>
-  atOptions = {
-    'key' : '033703f2c2dfe7a5fa4501cd3ba1417e',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/033703f2c2dfe7a5fa4501cd3ba1417e/invoke.js"></script></div>
-<div class="ad-item"><script>
-  atOptions = {
-    'key' : 'eefa27f757f4d0772d979fca1074f12a',
-    'format' : 'iframe',
-    'height' : 60,
-    'width' : 468,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script></div>
-</div>
-<div class="content-wrap">
-<nav aria-label="Breadcrumb" class="breadcrumb">
-<a href="/app">App</a><span>×</span><a href="/blog/">Blog</a><span>×</span>Scanning Mistakes
-  </nav>
-<div class="article-meta">
-<span class="article-tag">Tutorial</span>
-<span>✨ </span>
-<span>? 8 min read</span>
-<span>✨ </span>
-</div>
-<p>Digitizing old photos is a labor of love, but it's also a lot of work. There is nothing more heartbreaking than spending a full weekend scanning hundreds of photos, only to realize later that the quality is poor, the colors are off, or the images are covered in digital "dust."</p>
-<p>To help you avoid a "re-scan" nightmare, we×ve compiled the five most common photo scanning mistakes we see at <a href="/">PhotoSplit Studio</a> and how you can fix them before you hit the start button.</p>
-<div class="mistake-box">
-<h3>Mistake #1: Scanning at Too Low a Resolution (DPI)</h3>
-<p>Many people scan at 72 DPI or 150 DPI to save disk space or time. While these look fine on a small phone screen today, they will look pixelated and blurry on future high-resolution displays or if you ever want to print them.</p>
-</div>
-<div class="fix-box">
-<h3>The Fix: Use 300 DPI or 600 DPI</h3>
-<p>300 DPI is the standard for 1:1 reproduction. 600 DPI is the "gold standard" for archiving because it allows you to enlarge the photo later without losing detail. Never go below 300 DPI for family memories.</p>
-</div>
-<div class="mistake-box">
-<h3>Mistake #2: Neglecting the Scanner Glass</h3>
-<p>A single fingerprint or a stray hair on the scanner bed will show up on every single photo in that batch. If you are scanning at high resolution, even microscopic dust becomes a visible distraction.</p>
-</div>
-<div class="fix-box">
-<h3>The Fix: The Microfiber Ritual</h3>
-<p>Clean your scanner glass with a microfiber cloth before you start every session. For stubborn smudges, use a tiny amount of high-quality glass cleaner applied to the <em>cloth</em>, never directly to the scanner.</p>
-<div class="product-card">
-<img alt="Giottos Rocket Air Blower" src="/assets/images/giottos-blower.png"/>
-<div class="product-info">
-<h3 class="product-title">Giottos Rocket Air Blower</h3>
-<p>The safest way to remove dust from vintage photos and scanner glass without scratching the delicate emulsion.</p>
-<a class="buy-btn" href="https://www.amazon.com/dp/B00017LSPI?tag=photoid03-20" rel="sponsored noopener" target="_blank">View on Amazon</a>
-</div>
-</div>
-</div>
-<div class="mistake-box">
-<h3>Mistake #3: Overcrowding the Scanner Bed</h3>
-<p>It's tempting to cram as many photos as possible onto the glass to save time. However, if photos are touching or overlapping, auto-detection algorithms (like the one in <a href="/app">PhotoSplit Studio</a>) won't be able to find the edges correctly.</p>
-</div>
-<div class="fix-box">
-<h3>The Fix: The 5mm Rule</h3>
-<p>Leave at least 5mm (about 1/4 inch) of space between every photo. This "white space" is critical for the computer vision engine to distinguish where one photo ends and the next begins.</p>
-</div>
-<div class="mistake-box">
-<h3>Mistake #4: Using "Auto-Correction" Settings</h3>
-<p>Many scanner drivers have "Auto-Color," "Dust Removal," or "Sharpen" toggles enabled by default. Often, these built-in tools are aggressive and destroy fine detail or create artificial-looking colors.</p>
-</div>
-<div class="fix-box">
-<h3>The Fix: Scan "Raw" and Correct Later</h3>
-<p>Turn off all internal scanner corrections. It is much better to capture a "pure" scan and then use tools like PhotoSplit Studio's <strong>Auto Color Enhance</strong> or professional software like Photoshop later. You can always edit a good scan, but you can't "un-edit" a bad one.</p>
-</div>
-<div class="mistake-box">
-<h3>Mistake #5: Forgetting to Backup</h3>
-<p>Digital files are fragile. A single hard drive failure can wipe out a lifetime of memories in a millisecond.</p>
-</div>
-<div class="fix-box">
-<h3>The Fix: The 3-2-1 Strategy</h3>
-<p>Keep 3 copies of your archive: one on your computer, one on an external drive, and one in the cloud (Google Photos, Amazon, etc.).</p>
-</div>
-<h2>Conclusion</h2>
-<p>Taking the time to set up your scanner correctly might add a few seconds to each batch, but it will save you days of frustration in the long run. Follow these steps, and your digital archive will be a high-quality legacy for your family.</p>
-<div class="related-section">
-<h2>Related Resources</h2>
-<div class="related-grid">
-<a class="related-card" href="/tips">
-<h3>✨ </h3>
-<p>A deep dive into equipment and professional workflow.</p>
-</a>
-<a class="related-card" href="/blog/best-scanner-settings-for-photos">
-<h3>✨ </h3>
-<p>Confused by technical specs? We break it down simply.</p>
-</a>
-</div>
-</div>
-<div class="author-bio">
-<img alt="PhotoSplit Team" class="author-bio-img" src="/assets/images/logo-animated.svg"/>
-<div>
-<h3 class="author-bio-name">Written by the PhotoSplit Team</h3>
-<p class="author-bio-desc">We are a team of photo preservation enthusiasts and developers dedicated to making high-quality digitization accessible to everyone. Our mission is to ensure family histories are preserved for generations to come.</p>
-</div>
-</div>
-</div>
-<section class="gear-section">
-<div class="gear-section-inner">
-<h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
-<p class="gear-section-sub">Pair PhotoSplit Studio with the best hardware for fast, high-quality archiving and secure backups.</p>
-<div class="gear-cards-grid"></div>
-<p class="affiliate-disclosure">As an Amazon Associate, PhotoSplit Studio earns from qualifying purchases.</p>
-</div>
-</section>
-<footer class="site-footer">
-<div class="footer-links">
-<a href="/app">App</a>
-<a href="/blog/">Blog</a>
-<a href="/tips">Scanning Tips</a>
-<a href="/contact">Contact</a>
-<a href="/terms">Terms of Use</a>
-<a href="/privacy-policy">Privacy Policy</a>
-<a href="/about">About</a>
-</div>
-<div>© 2026 PhotoSplit Studio. All rights reserved.</div>
-</footer>
-</body>
+        <script src="https://www.highperformanceformat.com/033703f2c2dfe7a5fa4501cd3ba1417e/invoke.js"></script>
+      </div>
+      <div class="ad-item">
+        <script>
+          atOptions = {
+            key: "eefa27f757f4d0772d979fca1074f12a",
+            format: "iframe",
+            height: 60,
+            width: 468,
+            params: {},
+          };
+        </script>
+        <script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
+      </div>
+    </div>
+    <div class="content-wrap">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="/app">App</a><span>×</span><a href="/blog/">Blog</a
+        ><span>×</span>Scanning Mistakes
+      </nav>
+      <div class="article-meta">
+        <span class="article-tag">Tutorial</span>
+        <span>✨ </span>
+        <span>? 8 min read</span>
+        <span>✨ </span>
+      </div>
+      <p>
+        Digitizing old photos is a labor of love, but it's also a lot of work.
+        There is nothing more heartbreaking than spending a full weekend
+        scanning hundreds of photos, only to realize later that the quality is
+        poor, the colors are off, or the images are covered in digital "dust."
+      </p>
+      <p>
+        To help you avoid a "re-scan" nightmare, we×ve compiled the five most
+        common photo scanning mistakes we see at
+        <a href="/">PhotoSplit Studio</a> and how you can fix them before you
+        hit the start button.
+      </p>
+      <div class="mistake-box">
+        <h3>Mistake #1: Scanning at Too Low a Resolution (DPI)</h3>
+        <p>
+          Many people scan at 72 DPI or 150 DPI to save disk space or time.
+          While these look fine on a small phone screen today, they will look
+          pixelated and blurry on future high-resolution displays or if you ever
+          want to print them.
+        </p>
+      </div>
+      <div class="fix-box">
+        <h3>The Fix: Use 300 DPI or 600 DPI</h3>
+        <p>
+          300 DPI is the standard for 1:1 reproduction. 600 DPI is the "gold
+          standard" for archiving because it allows you to enlarge the photo
+          later without losing detail. Never go below 300 DPI for family
+          memories.
+        </p>
+      </div>
+      <div class="mistake-box">
+        <h3>Mistake #2: Neglecting the Scanner Glass</h3>
+        <p>
+          A single fingerprint or a stray hair on the scanner bed will show up
+          on every single photo in that batch. If you are scanning at high
+          resolution, even microscopic dust becomes a visible distraction.
+        </p>
+      </div>
+      <div class="fix-box">
+        <h3>The Fix: The Microfiber Ritual</h3>
+        <p>
+          Clean your scanner glass with a microfiber cloth before you start
+          every session. For stubborn smudges, use a tiny amount of high-quality
+          glass cleaner applied to the <em>cloth</em>, never directly to the
+          scanner.
+        </p>
+        <div class="product-card">
+          <img
+            alt="Giottos Rocket Air Blower"
+            src="/assets/images/giottos-blower.png"
+          />
+          <div class="product-info">
+            <h3 class="product-title">Giottos Rocket Air Blower</h3>
+            <p>
+              The safest way to remove dust from vintage photos and scanner
+              glass without scratching the delicate emulsion.
+            </p>
+            <a
+              class="buy-btn"
+              href="https://www.amazon.com/dp/B00017LSPI?tag=photoid03-20"
+              rel="sponsored noopener"
+              target="_blank"
+              >View on Amazon</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="mistake-box">
+        <h3>Mistake #3: Overcrowding the Scanner Bed</h3>
+        <p>
+          It's tempting to cram as many photos as possible onto the glass to
+          save time. However, if photos are touching or overlapping,
+          auto-detection algorithms (like the one in
+          <a href="/app">PhotoSplit Studio</a>) won't be able to find the edges
+          correctly.
+        </p>
+      </div>
+      <div class="fix-box">
+        <h3>The Fix: The 5mm Rule</h3>
+        <p>
+          Leave at least 5mm (about 1/4 inch) of space between every photo. This
+          "white space" is critical for the computer vision engine to
+          distinguish where one photo ends and the next begins.
+        </p>
+      </div>
+      <div class="mistake-box">
+        <h3>Mistake #4: Using "Auto-Correction" Settings</h3>
+        <p>
+          Many scanner drivers have "Auto-Color," "Dust Removal," or "Sharpen"
+          toggles enabled by default. Often, these built-in tools are aggressive
+          and destroy fine detail or create artificial-looking colors.
+        </p>
+      </div>
+      <div class="fix-box">
+        <h3>The Fix: Scan "Raw" and Correct Later</h3>
+        <p>
+          Turn off all internal scanner corrections. It is much better to
+          capture a "pure" scan and then use tools like PhotoSplit Studio's
+          <strong>Auto Color Enhance</strong> or professional software like
+          Photoshop later. You can always edit a good scan, but you can't
+          "un-edit" a bad one.
+        </p>
+      </div>
+      <div class="mistake-box">
+        <h3>Mistake #5: Forgetting to Backup</h3>
+        <p>
+          Digital files are fragile. A single hard drive failure can wipe out a
+          lifetime of memories in a millisecond.
+        </p>
+      </div>
+      <div class="fix-box">
+        <h3>The Fix: The 3-2-1 Strategy</h3>
+        <p>
+          Keep 3 copies of your archive: one on your computer, one on an
+          external drive, and one in the cloud (Google Photos, Amazon, etc.).
+        </p>
+      </div>
+      <h2>Conclusion</h2>
+      <p>
+        Taking the time to set up your scanner correctly might add a few seconds
+        to each batch, but it will save you days of frustration in the long run.
+        Follow these steps, and your digital archive will be a high-quality
+        legacy for your family.
+      </p>
+      <div class="related-section">
+        <h2>Related Resources</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/tips">
+            <h3>✨</h3>
+            <p>A deep dive into equipment and professional workflow.</p>
+          </a>
+          <a class="related-card" href="/blog/best-scanner-settings-for-photos">
+            <h3>✨</h3>
+            <p>Confused by technical specs? We break it down simply.</p>
+          </a>
+        </div>
+      </div>
+      <div class="author-bio">
+        <img
+          alt="PhotoSplit Team"
+          class="author-bio-img"
+          src="/assets/images/logo-animated.svg"
+        />
+        <div>
+          <h3 class="author-bio-name">Written by the PhotoSplit Team</h3>
+          <p class="author-bio-desc">
+            We are a team of photo preservation enthusiasts and developers
+            dedicated to making high-quality digitization accessible to
+            everyone. Our mission is to ensure family histories are preserved
+            for generations to come.
+          </p>
+        </div>
+      </div>
+    </div>
+    <section class="gear-section">
+      <div class="gear-section-inner">
+        <h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
+        <p class="gear-section-sub">
+          Pair PhotoSplit Studio with the best hardware for fast, high-quality
+          archiving and secure backups.
+        </p>
+        <div class="gear-cards-grid"></div>
+        <p class="affiliate-disclosure">
+          As an Amazon Associate, PhotoSplit Studio earns from qualifying
+          purchases.
+        </p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="/app">App</a>
+          <a href="/blog/">Blog</a>
+          <a href="/tips">Scanning Tips</a>
+          <a href="/contact">Contact</a>
+          <a href="/terms">Terms</a>
+          <a href="/privacy-policy">Privacy</a>
+          <a href="/about">About</a>
+          <a
+            href="#"
+            onclick="
+              if (typeof openTextModal === 'function')
+                openTextModal('feedback-modal', event);
+            "
+            >Feedback</a
+          >
+        </div>
+        <div class="footer-copy">
+          © 2026 PhotoSplit Studio. All rights reserved.
+        </div>
+      </div>
+      <div class="site-status-bar">
+        <div class="status-item">
+          <span class="status-label">Is it dark outside?</span
+          ><span class="status-value" id="dark-status-answer">...</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Global Visitors:</span
+          ><img
+            alt="Visitor Count"
+            class="visitor-badge"
+            src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"
+          />
+        </div>
+      </div>
+      <script>
+        (function () {
+          var h = new Date().getHours();
+          var ans = h >= 18 || h < 6 ? "YES" : "NO";
+          var el = document.getElementById("dark-status-answer");
+          if (el) el.textContent = ans;
+        })();
+      </script>
+    </footer>
+
+    <!-- MODALS START -->
+    <div
+      class="text-modal-backdrop"
+      id="feedback-modal"
+      onclick="
+        if (event.target === this && typeof closeTextModal === 'function')
+          closeTextModal('feedback-modal');
+      "
+    >
+      <div class="text-modal-box">
+        <div class="text-modal-header">
+          <h2>Provide Feedback</h2>
+          <button
+            class="icon-btn"
+            onclick="
+              if (typeof closeTextModal === 'function')
+                closeTextModal('feedback-modal');
+            "
+          >
+            ✕
+          </button>
+        </div>
+        <div class="text-modal-content" id="feedback-form-view">
+          <form
+            onsubmit="
+              if (typeof handleFeedbackSubmit === 'function')
+                handleFeedbackSubmit(event);
+            "
+          >
+            <input
+              class="form-control mb-12"
+              id="fb-name"
+              placeholder="Your Name"
+              required=""
+              type="text"
+              style="margin-bottom: 12px"
+            />
+            <input
+              class="form-control mb-12"
+              id="fb-email"
+              placeholder="your@email.com"
+              required=""
+              type="email"
+              style="margin-bottom: 12px"
+            />
+            <textarea
+              class="form-control mb-12"
+              id="fb-desc"
+              placeholder="Your feedback..."
+              required=""
+              rows="4"
+              style="margin-bottom: 12px"
+            ></textarea>
+            <button class="btn btn-primary" style="width: 100%" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+        <div
+          class="text-modal-content"
+          id="feedback-success-view"
+          style="display: none; text-align: center"
+        >
+          <h3>✅ Thank you!</h3>
+          <p>Your feedback has been received.</p>
+          <button
+            class="btn btn-secondary"
+            onclick="
+              if (typeof closeTextModal === 'function')
+                closeTextModal('feedback-modal');
+            "
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="cookie-consent" role="dialog">
+      <div id="cookie-consent-inner">
+        <p>
+          🍪 We use cookies to improve your experience. See our
+          <a href="/privacy-policy">Privacy Policy</a>.
+        </p>
+        <div id="cookie-consent-actions">
+          <button class="cookie-btn" id="cookie-decline">Decline</button>
+          <button class="cookie-btn cookie-btn-accept" id="cookie-accept">
+            Accept All
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        if (!localStorage.getItem("ps_counted")) {
+          localStorage.setItem("ps_counted", "true");
+          var img = new Image();
+          img.src =
+            "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
+        }
+
+        window.handleFeedbackSubmit = function (e) {
+          e.preventDefault();
+          var params = new URLSearchParams();
+          params.append(
+            "entry.1051903221",
+            document.getElementById("fb-name").value,
+          );
+          params.append(
+            "entry.371950700",
+            document.getElementById("fb-email").value,
+          );
+          params.append(
+            "entry.852578852",
+            document.getElementById("fb-desc").value,
+          );
+          fetch(
+            "https://docs.google.com/forms/d/e/1FAIpQLSeJe_jw0IHHXeT4w4hzcZJ2WXREaT8aD4_R4LFBGVZNazsehg/formResponse",
+            { method: "POST", mode: "no-cors", body: params },
+          );
+          document.getElementById("feedback-form-view").style.display = "none";
+          document.getElementById("feedback-success-view").style.display =
+            "block";
+        };
+
+        // Cookie Consent
+        var banner = document.getElementById("cookie-consent");
+        if (banner) {
+          if (!localStorage.getItem("pss_cookie_consent")) {
+            banner.classList.add("visible");
+          } else if (
+            localStorage.getItem("pss_cookie_consent") === "accepted"
+          ) {
+            if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+            if (typeof loadGoogleAnalytics === "function")
+              loadGoogleAnalytics();
+          }
+          var acceptBtn = document.getElementById("cookie-accept");
+          if (acceptBtn) {
+            acceptBtn.onclick = function () {
+              localStorage.setItem("pss_cookie_consent", "accepted");
+              banner.classList.remove("visible");
+              if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+              if (typeof loadGoogleAnalytics === "function")
+                loadGoogleAnalytics();
+            };
+          }
+          var declineBtn = document.getElementById("cookie-decline");
+          if (declineBtn) {
+            declineBtn.onclick = function () {
+              localStorage.setItem("pss_cookie_consent", "declined");
+              banner.classList.remove("visible");
+            };
+          }
+        }
+      })();
+    </script>
+    <!-- MODALS END -->
+  </body>
 </html>

@@ -1,213 +1,641 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
-<head>
-<!-- Scripts loaded dynamically after consent -->
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    function loadGoogleScripts() {
-      if (document.getElementById('ga-script')) return;
-      var gaScript = document.createElement('script');
-      gaScript.id = 'ga-script';
-      gaScript.async = true;
-      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ';
-      document.head.appendChild(gaScript);
-      gtag('js', new Date());
-      gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
-    }
-  </script>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>How to Scan Hundreds of Photos Fast (Bulk Scanning) | PhotoSplit Studio Blog</title>
-<meta content="Discover the secret 'Batch Scan &amp; Auto-Split' method to digitize thousands of photos in record time without sacrificing image quality." name="description"/>
-<meta content="how to scan hundreds of photos fast, bulk scan photos, mass scanning photos, digitize photo album, flatbed photo scanning, AutoSplitter alternative, PhotoSplit Studio" name="keywords"/>
-<meta content="index, follow" name="robots"/>
-<meta content="PhotoSplit Studio" name="author"/>
-<link href="https://photosplitstudio.com/blog/how-to-scan-hundreds-of-photos-fast" rel="canonical"/>
-<meta content="article" property="og:type"/>
-<meta content="2026-05-16T00:00:00Z" property="article:published_time"/>
-<meta content="How to Scan Hundreds of Photos Fast" property="og:title"/>
-<meta content="Stop scanning photos one-by-one. Learn the batch-scanning workflow to digitize thousands of photos quickly and professionally." property="og:description"/>
-<meta content="https://photosplitstudio.com/blog/how-to-scan-hundreds-of-photos-fast" property="og:url"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Scan Hundreds of Photos Fast","datePublished":"2026-05-16","dateModified":"2026-05-16","author":{"@type":"Organization","name":"PhotoSplit Studio"},"publisher":{"@type":"Organization","name":"PhotoSplit Studio","url":"https://photosplitstudio.com"},"mainEntityOfPage":"https://photosplitstudio.com/blog/how-to-scan-hundreds-of-photos-fast"}</script>
-<link href="/assets/images/logo.png" rel="icon" type="image/png"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="/css/style.css" rel="stylesheet"/>
-<script defer="" src="/js/gear.js"></script>
-<link href="/css/secondary.css" rel="stylesheet"/>
-<style>
-    .article-meta{display:flex;gap:20px;flex-wrap:wrap;font-size:.82rem;color:var(--text-muted,#718096);margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--border-color,#e2e8f0)}
-    .article-tag{background:rgba(99,102,241,.1);color:var(--accent,#6366f1);font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 10px;border-radius:20px}
-    .product-card { display: flex; flex-wrap: wrap; gap: 20px; border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin: 30px 0; background: var(--bg-surface-2); align-items: center; }
-    .product-card img { width: 120px; height: 120px; object-fit: contain; border-radius: 8px; background: white; padding: 10px; }
-    .product-info { flex: 1; min-width: 200px; }
-    .product-title { margin: 0 0 10px 0; font-size: 1.2rem; color: var(--accent); }
-    .buy-btn { display: inline-block; padding: 10px 20px; background: #f90; color: #111; font-weight: bold; border-radius: 8px; text-decoration: none; margin-top: 10px; }
-    .buy-btn:hover { background: #e80; }
-  </style>
-<link href="/css/style-premium.css" rel="stylesheet"/></head>
-<body>
-<nav class="site-nav">
-<a class="logo nav-logo-flex" href="/"><img alt="PhotoSplit Logo" class="nav-logo-img" src="/assets/images/logo-animated.svg"/> PhotoSplit Studio</a>
-<div class="nav-links">
-<a class="active" href="/blog/">Blog</a>
-<a href="/app">App</a>
-<a href="/resize">Resize</a>
-<a href="/tips">Tips</a>
-<a href="/about">About</a>
-<a href="/contact">Contact</a>
-<a class="cta" href="/app">Open App →</a>
-</div>
-</nav>
-<div class="hero hero-gradient-red">
-<h1>How to Scan Hundreds of Photos Fast</h1>
-<p>Stop scanning photos one-by-one. Learn the batch-scanning method to digitize massive photo collections in record time.</p>
-</div>
-<!-- Ezoic Top Placeholder -->
-<div class="ad-top-wrapper">
-<script>
-  atOptions = {
-    'key' : '1616e9416e1938ab8fa16f0ac161a303',
-    'format' : 'iframe',
-    'height' : 250,
-    'width' : 300,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/1616e9416e1938ab8fa16f0ac161a303/invoke.js"></script>
-</div>
-<div class="page-with-sidebar"><div class="page-main-content"><div class="content-wrap">
-<nav aria-label="Breadcrumb" class="breadcrumb">
-<a href="/app">App</a><span>›</span><a href="/blog/">Blog</a><span>›</span>Bulk Scanning
-  </nav>
-<div class="article-meta">
-<span class="article-tag">Tutorials</span>
-<span>16 May 2026</span>
-<span>⏱ 8 min read</span>
-<span>📝 Editorial Team</span>
-</div>
-<p>If you've been tasked with digitizing the family archive, you probably have a daunting mountain of shoeboxes filled with prints. The thought of placing each photo perfectly on the scanner glass, previewing, cropping, and saving it individually is enough to make anyone quit before they even start.</p>
-<p>Fortunately, there is a better way. By utilizing the <strong>"Batch Scan &amp; Auto-Split"</strong> method, you can increase your scanning speed by over 400% while actually improving the final image quality. Here is the step-by-step guide on how to mass scan photos fast.</p>
-<h2>1. Equip the Right Hardware</h2>
-<p>Using a phone camera or a "feed scanner" (which pulls photos through rollers) is a recipe for disaster. Phone cameras cause glare and distortion, while feed scanners easily scratch vintage photos and get jammed by stiff or sticky paper.</p>
-<p>You need a high-quality <strong>Flatbed Scanner</strong>. A flatbed scanner allows you to place multiple photos on the large glass bed at once, completely undisturbed.</p>
-<div class="product-card">
-<img alt="Epson Perfection V600 Scanner" src="/assets/images/epson-v600.png"/>
-<div class="product-info">
-<h3 class="product-title">Epson Perfection V600</h3>
-<p>The gold standard for at-home photo archiving. It has an massive flatbed area, incredible color accuracy, and even scans negatives.</p>
-<a class="buy-btn" href="https://www.amazon.com/dp/B002OEBMRU?tag=photoid03-20" rel="sponsored noopener" target="_blank">View on Amazon</a>
-</div>
-</div>
-<div class="product-card">
-<img alt="Canon CanoScan LiDE 400" src="/assets/images/canon-lide400.png"/>
-<div class="product-info">
-<h3 class="product-title">Canon CanoScan LiDE 400</h3>
-<p>An excellent, affordable alternative. It's incredibly thin, powered by a single USB-C cable, and extremely fast at scanning documents and photos.</p>
-<a class="buy-btn" href="https://www.amazon.com/dp/B07G5X1N1H?tag=photoid03-20" rel="sponsored noopener" target="_blank">View on Amazon</a>
-</div>
-</div>
-<h2>2. Clean Your Scanner and Photos</h2>
-<p>When you are mass scanning, a single piece of dust on the scanner glass will ruin every single photo you scan that day. Before you start your session, you absolutely must clean the glass and the photos.</p>
-<ul>
-<li>Use a <strong>microfiber cleaning cloth</strong> (<a href="https://www.amazon.com/dp/B0050R67U0?tag=photoid03-20" rel="sponsored noopener" target="_blank">like MagicFiber</a>) to wipe down the scanner glass. Never use Windex or harsh chemicals.</li>
-<li>Use a <strong>camera air blower</strong> (<a href="https://www.amazon.com/dp/B00017LSPI?tag=photoid03-20" rel="sponsored noopener" target="_blank">like the Giottos Rocket Air</a>) to gently blow dust off the photos before placing them down. Do not wipe old photos with cloths, as you can scratch the emulsion.</li>
-</ul>
-<h2>3. The Batch Scanning Workflow</h2>
-<p>Here is where you gain all your speed. Instead of scanning photos one by one, follow this loop:</p>
-<ol>
-<li>Place <strong>3 to 5 photos</strong> on the scanner glass at the same time. Don't worry about aligning them perfectly straight; just make sure there is about a half-inch of empty space between them so the background shows through.</li>
-<li>Close the lid and hit "Scan".</li>
-<li>Save the massive resulting image file (which contains all 4 photos) to a folder on your computer. Call it `batch_001.jpg`.</li>
-<li>While the scanner is running the next batch, you can sort the next pile of photos.</li>
-</ol>
-<p>By bypassing the scanner software's tedious "preview and crop" tools, you can just churn through physical photos as fast as your scanner arm can move.</p>
-<!-- Ezoic Middle Placeholder -->
-<div class="ad-mid-wrapper">
-<script>
-  atOptions = {
-    'key' : '1616e9416e1938ab8fa16f0ac161a303',
-    'format' : 'iframe',
-    'height' : 250,
-    'width' : 300,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/1616e9416e1938ab8fa16f0ac161a303/invoke.js"></script>
-</div>
-<h2>4. The Secret Weapon: Auto-Splitting</h2>
-<p>Now you have a folder full of large `batch_xxx.jpg` files, each containing multiple crooked photos. Do you have to crop them manually in Photoshop? <strong>Absolutely not.</strong></p>
-<div class="cta-promo-box">
-<h3 class="cta-promo-title">Enter PhotoSplit Studio</h3>
-<p>We built <a href="/app">PhotoSplit Studio</a> specifically to solve this problem. It is a completely free, private, browser-based tool that uses edge-detection AI to automatically slice up your batch scans.</p>
-<ul class="cta-promo-list">
-<li>✅ Automatically detects borders</li>
-<li>✅ Automatically straightens crooked photos</li>
-<li>✅ 100% private (files never leave your computer)</li>
-<li>✅ Free to use, forever</li>
-</ul>
-<a class="btn btn-primary cta-promo-btn" href="/app">Launch PhotoSplit Studio Now</a>
-</div>
-<p>Simply drag and drop your entire folder of batch scans into PhotoSplit Studio. Within seconds, it will detect every individual photo, straighten it, crop the background, and allow you to download them all as individual JPEGs.</p>
-<h2>Conclusion</h2>
-<p>Digitizing an archive of thousands of photos shouldn't take a lifetime. By investing in a solid flatbed scanner, preparing your workspace, scanning in massive batches, and using an automated photo splitter like PhotoSplit Studio, you can blaze through decades of memories in a single weekend.</p>
-<div class="related-guides-wrapper">
-<h2>Related Guides</h2>
-<div class="related-grid">
-<a class="related-card" href="/blog/why-digitize-negatives">
-<h3>Film Negatives</h3>
-<p>Why you should scan negatives instead of prints.</p>
-</a>
-<a class="related-card" href="/tips">
-<h3>Scanning Best Practices</h3>
-<p>Master the technical settings for archival results.</p>
-</a>
-</div>
-</div>
-</div></div>
-<aside class="page-sidebar">
-<div class="ad-sidebar-sticky">
-<span class="ad-sidebar-label">Advertisement</span>
-<div id="ad-sidebar" style="margin:0; min-height:250px; background:var(--bg-surface-2); border:1px dashed var(--border-strong); border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center;">
-<div class="ad-item">
-<script>
-          atOptions = {
-            'key' : 'eefa27f757f4d0772d979fca1074f12a',
-            'format' : 'iframe',
-            'height' : 250,
-            'width' : 300,
-            'params' : {}
-          };
-        </script>
-<script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
-</div>
-</div>
-</div>
-</aside>
-</div>
-<section class="gear-section">
-<div class="gear-section-inner">
-<h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
-<p class="gear-section-sub">Pair PhotoSplit Studio with the best hardware for fast, high-quality archiving and secure backups.</p>
-<div class="gear-cards-grid"></div>
-<p class="affiliate-disclosure">As an Amazon Associate, PhotoSplit Studio earns from qualifying purchases.</p>
-</div>
-</section>
-<footer class="site-footer">
-<div class="footer-links">
-<a href="/app">App</a>
-<a href="/blog/">Blog</a>
-<a href="/tips">Scanning Tips</a>
-<a href="/contact">Contact</a>
-<a href="/terms">Terms of Use</a>
-<a href="/privacy-policy">Privacy Policy</a>
-<a href="/about">About</a>
-</div>
-<div>© 2026 PhotoSplit Studio. All rights reserved.</div>
-</footer>
-</body>
+  <head>
+    <!-- Scripts loaded dynamically after consent -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      function loadGoogleScripts() {
+        if (document.getElementById("ga-script")) return;
+        var gaScript = document.createElement("script");
+        gaScript.id = "ga-script";
+        gaScript.async = true;
+        gaScript.src =
+          "https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ";
+        document.head.appendChild(gaScript);
+        gtag("js", new Date());
+        gtag("config", "G-G40QDCGTTZ", { anonymize_ip: true });
+      }
+    </script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+      How to Scan Hundreds of Photos Fast (Bulk Scanning) | PhotoSplit Studio
+      Blog
+    </title>
+    <meta
+      content="Discover the secret 'Batch Scan &amp; Auto-Split' method to digitize thousands of photos in record time without sacrificing image quality."
+      name="description"
+    />
+    <meta
+      content="how to scan hundreds of photos fast, bulk scan photos, mass scanning photos, digitize photo album, flatbed photo scanning, AutoSplitter alternative, PhotoSplit Studio"
+      name="keywords"
+    />
+    <meta content="index, follow" name="robots" />
+    <meta content="PhotoSplit Studio" name="author" />
+    <link
+      href="https://photosplitstudio.com/blog/how-to-scan-hundreds-of-photos-fast"
+      rel="canonical"
+    />
+    <meta content="article" property="og:type" />
+    <meta content="2026-05-16T00:00:00Z" property="article:published_time" />
+    <meta content="How to Scan Hundreds of Photos Fast" property="og:title" />
+    <meta
+      content="Stop scanning photos one-by-one. Learn the batch-scanning workflow to digitize thousands of photos quickly and professionally."
+      property="og:description"
+    />
+    <meta
+      content="https://photosplitstudio.com/blog/how-to-scan-hundreds-of-photos-fast"
+      property="og:url"
+    />
+    <meta content="summary_large_image" name="twitter:card" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How to Scan Hundreds of Photos Fast",
+        "datePublished": "2026-05-16",
+        "dateModified": "2026-05-16",
+        "author": { "@type": "Organization", "name": "PhotoSplit Studio" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "PhotoSplit Studio",
+          "url": "https://photosplitstudio.com"
+        },
+        "mainEntityOfPage": "https://photosplitstudio.com/blog/how-to-scan-hundreds-of-photos-fast"
+      }
+    </script>
+    <link href="/assets/images/logo.png" rel="icon" type="image/png" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="/css/style.css" rel="stylesheet" />
+    <script defer="" src="/js/gear.js"></script>
+    <link href="/css/secondary.css" rel="stylesheet" />
+    <style>
+      .article-meta {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        font-size: 0.82rem;
+        color: var(--text-muted, #718096);
+        margin-bottom: 32px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--border-color, #e2e8f0);
+      }
+      .article-tag {
+        background: rgba(99, 102, 241, 0.1);
+        color: var(--accent, #6366f1);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 3px 10px;
+        border-radius: 20px;
+      }
+      .product-card {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 20px;
+        margin: 30px 0;
+        background: var(--bg-surface-2);
+        align-items: center;
+      }
+      .product-card img {
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+        border-radius: 8px;
+        background: white;
+        padding: 10px;
+      }
+      .product-info {
+        flex: 1;
+        min-width: 200px;
+      }
+      .product-title {
+        margin: 0 0 10px 0;
+        font-size: 1.2rem;
+        color: var(--accent);
+      }
+      .buy-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #f90;
+        color: #111;
+        font-weight: bold;
+        border-radius: 8px;
+        text-decoration: none;
+        margin-top: 10px;
+      }
+      .buy-btn:hover {
+        background: #e80;
+      }
+    </style>
+    <link href="/css/style-premium.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="site-nav">
+      <a class="logo nav-logo-flex" href="/"
+        ><img
+          alt="PhotoSplit Logo"
+          class="nav-logo-img"
+          src="/assets/images/logo-animated.svg"
+        />
+        PhotoSplit Studio</a
+      >
+      <div class="nav-links">
+        <a class="active" href="/blog/">Blog</a>
+        <a href="/app">App</a>
+        <a href="/resize">Resize</a>
+        <a href="/tips">Tips</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a class="cta" href="/app">Open App →</a>
+      </div>
+    </nav>
+    <div class="hero hero-gradient-red">
+      <h1>How to Scan Hundreds of Photos Fast</h1>
+      <p>
+        Stop scanning photos one-by-one. Learn the batch-scanning method to
+        digitize massive photo collections in record time.
+      </p>
+    </div>
+    <!-- Ezoic Top Placeholder -->
+    <div class="ad-top-wrapper">
+      <script>
+        atOptions = {
+          key: "1616e9416e1938ab8fa16f0ac161a303",
+          format: "iframe",
+          height: 250,
+          width: 300,
+          params: {},
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/1616e9416e1938ab8fa16f0ac161a303/invoke.js"></script>
+    </div>
+    <div class="page-with-sidebar">
+      <div class="page-main-content">
+        <div class="content-wrap">
+          <nav aria-label="Breadcrumb" class="breadcrumb">
+            <a href="/app">App</a><span>›</span><a href="/blog/">Blog</a
+            ><span>›</span>Bulk Scanning
+          </nav>
+          <div class="article-meta">
+            <span class="article-tag">Tutorials</span>
+            <span>16 May 2026</span>
+            <span>⏱ 8 min read</span>
+            <span>📝 Editorial Team</span>
+          </div>
+          <p>
+            If you've been tasked with digitizing the family archive, you
+            probably have a daunting mountain of shoeboxes filled with prints.
+            The thought of placing each photo perfectly on the scanner glass,
+            previewing, cropping, and saving it individually is enough to make
+            anyone quit before they even start.
+          </p>
+          <p>
+            Fortunately, there is a better way. By utilizing the
+            <strong>"Batch Scan &amp; Auto-Split"</strong> method, you can
+            increase your scanning speed by over 400% while actually improving
+            the final image quality. Here is the step-by-step guide on how to
+            mass scan photos fast.
+          </p>
+          <h2>1. Equip the Right Hardware</h2>
+          <p>
+            Using a phone camera or a "feed scanner" (which pulls photos through
+            rollers) is a recipe for disaster. Phone cameras cause glare and
+            distortion, while feed scanners easily scratch vintage photos and
+            get jammed by stiff or sticky paper.
+          </p>
+          <p>
+            You need a high-quality <strong>Flatbed Scanner</strong>. A flatbed
+            scanner allows you to place multiple photos on the large glass bed
+            at once, completely undisturbed.
+          </p>
+          <div class="product-card">
+            <img
+              alt="Epson Perfection V600 Scanner"
+              src="/assets/images/epson-v600.png"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Epson Perfection V600</h3>
+              <p>
+                The gold standard for at-home photo archiving. It has an massive
+                flatbed area, incredible color accuracy, and even scans
+                negatives.
+              </p>
+              <a
+                class="buy-btn"
+                href="https://www.amazon.com/dp/B002OEBMRU?tag=photoid03-20"
+                rel="sponsored noopener"
+                target="_blank"
+                >View on Amazon</a
+              >
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              alt="Canon CanoScan LiDE 400"
+              src="/assets/images/canon-lide400.png"
+            />
+            <div class="product-info">
+              <h3 class="product-title">Canon CanoScan LiDE 400</h3>
+              <p>
+                An excellent, affordable alternative. It's incredibly thin,
+                powered by a single USB-C cable, and extremely fast at scanning
+                documents and photos.
+              </p>
+              <a
+                class="buy-btn"
+                href="https://www.amazon.com/dp/B07G5X1N1H?tag=photoid03-20"
+                rel="sponsored noopener"
+                target="_blank"
+                >View on Amazon</a
+              >
+            </div>
+          </div>
+          <h2>2. Clean Your Scanner and Photos</h2>
+          <p>
+            When you are mass scanning, a single piece of dust on the scanner
+            glass will ruin every single photo you scan that day. Before you
+            start your session, you absolutely must clean the glass and the
+            photos.
+          </p>
+          <ul>
+            <li>
+              Use a <strong>microfiber cleaning cloth</strong> (<a
+                href="https://www.amazon.com/dp/B0050R67U0?tag=photoid03-20"
+                rel="sponsored noopener"
+                target="_blank"
+                >like MagicFiber</a
+              >) to wipe down the scanner glass. Never use Windex or harsh
+              chemicals.
+            </li>
+            <li>
+              Use a <strong>camera air blower</strong> (<a
+                href="https://www.amazon.com/dp/B00017LSPI?tag=photoid03-20"
+                rel="sponsored noopener"
+                target="_blank"
+                >like the Giottos Rocket Air</a
+              >) to gently blow dust off the photos before placing them down. Do
+              not wipe old photos with cloths, as you can scratch the emulsion.
+            </li>
+          </ul>
+          <h2>3. The Batch Scanning Workflow</h2>
+          <p>
+            Here is where you gain all your speed. Instead of scanning photos
+            one by one, follow this loop:
+          </p>
+          <ol>
+            <li>
+              Place <strong>3 to 5 photos</strong> on the scanner glass at the
+              same time. Don't worry about aligning them perfectly straight;
+              just make sure there is about a half-inch of empty space between
+              them so the background shows through.
+            </li>
+            <li>Close the lid and hit "Scan".</li>
+            <li>
+              Save the massive resulting image file (which contains all 4
+              photos) to a folder on your computer. Call it `batch_001.jpg`.
+            </li>
+            <li>
+              While the scanner is running the next batch, you can sort the next
+              pile of photos.
+            </li>
+          </ol>
+          <p>
+            By bypassing the scanner software's tedious "preview and crop"
+            tools, you can just churn through physical photos as fast as your
+            scanner arm can move.
+          </p>
+          <!-- Ezoic Middle Placeholder -->
+          <div class="ad-mid-wrapper">
+            <script>
+              atOptions = {
+                key: "1616e9416e1938ab8fa16f0ac161a303",
+                format: "iframe",
+                height: 250,
+                width: 300,
+                params: {},
+              };
+            </script>
+            <script src="https://www.highperformanceformat.com/1616e9416e1938ab8fa16f0ac161a303/invoke.js"></script>
+          </div>
+          <h2>4. The Secret Weapon: Auto-Splitting</h2>
+          <p>
+            Now you have a folder full of large `batch_xxx.jpg` files, each
+            containing multiple crooked photos. Do you have to crop them
+            manually in Photoshop? <strong>Absolutely not.</strong>
+          </p>
+          <div class="cta-promo-box">
+            <h3 class="cta-promo-title">Enter PhotoSplit Studio</h3>
+            <p>
+              We built <a href="/app">PhotoSplit Studio</a> specifically to
+              solve this problem. It is a completely free, private,
+              browser-based tool that uses edge-detection AI to automatically
+              slice up your batch scans.
+            </p>
+            <ul class="cta-promo-list">
+              <li>✅ Automatically detects borders</li>
+              <li>✅ Automatically straightens crooked photos</li>
+              <li>✅ 100% private (files never leave your computer)</li>
+              <li>✅ Free to use, forever</li>
+            </ul>
+            <a class="btn btn-primary cta-promo-btn" href="/app"
+              >Launch PhotoSplit Studio Now</a
+            >
+          </div>
+          <p>
+            Simply drag and drop your entire folder of batch scans into
+            PhotoSplit Studio. Within seconds, it will detect every individual
+            photo, straighten it, crop the background, and allow you to download
+            them all as individual JPEGs.
+          </p>
+          <h2>Conclusion</h2>
+          <p>
+            Digitizing an archive of thousands of photos shouldn't take a
+            lifetime. By investing in a solid flatbed scanner, preparing your
+            workspace, scanning in massive batches, and using an automated photo
+            splitter like PhotoSplit Studio, you can blaze through decades of
+            memories in a single weekend.
+          </p>
+          <div class="related-guides-wrapper">
+            <h2>Related Guides</h2>
+            <div class="related-grid">
+              <a class="related-card" href="/blog/why-digitize-negatives">
+                <h3>Film Negatives</h3>
+                <p>Why you should scan negatives instead of prints.</p>
+              </a>
+              <a class="related-card" href="/tips">
+                <h3>Scanning Best Practices</h3>
+                <p>Master the technical settings for archival results.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <aside class="page-sidebar">
+        <div class="ad-sidebar-sticky">
+          <span class="ad-sidebar-label">Advertisement</span>
+          <div
+            id="ad-sidebar"
+            style="
+              margin: 0;
+              min-height: 250px;
+              background: var(--bg-surface-2);
+              border: 1px dashed var(--border-strong);
+              border-radius: var(--radius-md);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <div class="ad-item">
+              <script>
+                atOptions = {
+                  key: "eefa27f757f4d0772d979fca1074f12a",
+                  format: "iframe",
+                  height: 250,
+                  width: 300,
+                  params: {},
+                };
+              </script>
+              <script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <section class="gear-section">
+      <div class="gear-section-inner">
+        <h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
+        <p class="gear-section-sub">
+          Pair PhotoSplit Studio with the best hardware for fast, high-quality
+          archiving and secure backups.
+        </p>
+        <div class="gear-cards-grid"></div>
+        <p class="affiliate-disclosure">
+          As an Amazon Associate, PhotoSplit Studio earns from qualifying
+          purchases.
+        </p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="/app">App</a>
+          <a href="/blog/">Blog</a>
+          <a href="/tips">Scanning Tips</a>
+          <a href="/contact">Contact</a>
+          <a href="/terms">Terms</a>
+          <a href="/privacy-policy">Privacy</a>
+          <a href="/about">About</a>
+          <a
+            href="#"
+            onclick="
+              if (typeof openTextModal === 'function')
+                openTextModal('feedback-modal', event);
+            "
+            >Feedback</a
+          >
+        </div>
+        <div class="footer-copy">
+          © 2026 PhotoSplit Studio. All rights reserved.
+        </div>
+      </div>
+      <div class="site-status-bar">
+        <div class="status-item">
+          <span class="status-label">Is it dark outside?</span
+          ><span class="status-value" id="dark-status-answer">...</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Global Visitors:</span
+          ><img
+            alt="Visitor Count"
+            class="visitor-badge"
+            src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"
+          />
+        </div>
+      </div>
+      <script>
+        (function () {
+          var h = new Date().getHours();
+          var ans = h >= 18 || h < 6 ? "YES" : "NO";
+          var el = document.getElementById("dark-status-answer");
+          if (el) el.textContent = ans;
+        })();
+      </script>
+    </footer>
+
+    <!-- MODALS START -->
+    <div
+      class="text-modal-backdrop"
+      id="feedback-modal"
+      onclick="
+        if (event.target === this && typeof closeTextModal === 'function')
+          closeTextModal('feedback-modal');
+      "
+    >
+      <div class="text-modal-box">
+        <div class="text-modal-header">
+          <h2>Provide Feedback</h2>
+          <button
+            class="icon-btn"
+            onclick="
+              if (typeof closeTextModal === 'function')
+                closeTextModal('feedback-modal');
+            "
+          >
+            ✕
+          </button>
+        </div>
+        <div class="text-modal-content" id="feedback-form-view">
+          <form
+            onsubmit="
+              if (typeof handleFeedbackSubmit === 'function')
+                handleFeedbackSubmit(event);
+            "
+          >
+            <input
+              class="form-control mb-12"
+              id="fb-name"
+              placeholder="Your Name"
+              required=""
+              type="text"
+              style="margin-bottom: 12px"
+            />
+            <input
+              class="form-control mb-12"
+              id="fb-email"
+              placeholder="your@email.com"
+              required=""
+              type="email"
+              style="margin-bottom: 12px"
+            />
+            <textarea
+              class="form-control mb-12"
+              id="fb-desc"
+              placeholder="Your feedback..."
+              required=""
+              rows="4"
+              style="margin-bottom: 12px"
+            ></textarea>
+            <button class="btn btn-primary" style="width: 100%" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+        <div
+          class="text-modal-content"
+          id="feedback-success-view"
+          style="display: none; text-align: center"
+        >
+          <h3>✅ Thank you!</h3>
+          <p>Your feedback has been received.</p>
+          <button
+            class="btn btn-secondary"
+            onclick="
+              if (typeof closeTextModal === 'function')
+                closeTextModal('feedback-modal');
+            "
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="cookie-consent" role="dialog">
+      <div id="cookie-consent-inner">
+        <p>
+          🍪 We use cookies to improve your experience. See our
+          <a href="/privacy-policy">Privacy Policy</a>.
+        </p>
+        <div id="cookie-consent-actions">
+          <button class="cookie-btn" id="cookie-decline">Decline</button>
+          <button class="cookie-btn cookie-btn-accept" id="cookie-accept">
+            Accept All
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        if (!localStorage.getItem("ps_counted")) {
+          localStorage.setItem("ps_counted", "true");
+          var img = new Image();
+          img.src =
+            "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
+        }
+
+        window.handleFeedbackSubmit = function (e) {
+          e.preventDefault();
+          var params = new URLSearchParams();
+          params.append(
+            "entry.1051903221",
+            document.getElementById("fb-name").value,
+          );
+          params.append(
+            "entry.371950700",
+            document.getElementById("fb-email").value,
+          );
+          params.append(
+            "entry.852578852",
+            document.getElementById("fb-desc").value,
+          );
+          fetch(
+            "https://docs.google.com/forms/d/e/1FAIpQLSeJe_jw0IHHXeT4w4hzcZJ2WXREaT8aD4_R4LFBGVZNazsehg/formResponse",
+            { method: "POST", mode: "no-cors", body: params },
+          );
+          document.getElementById("feedback-form-view").style.display = "none";
+          document.getElementById("feedback-success-view").style.display =
+            "block";
+        };
+
+        // Cookie Consent
+        var banner = document.getElementById("cookie-consent");
+        if (banner) {
+          if (!localStorage.getItem("pss_cookie_consent")) {
+            banner.classList.add("visible");
+          } else if (
+            localStorage.getItem("pss_cookie_consent") === "accepted"
+          ) {
+            if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+            if (typeof loadGoogleAnalytics === "function")
+              loadGoogleAnalytics();
+          }
+          var acceptBtn = document.getElementById("cookie-accept");
+          if (acceptBtn) {
+            acceptBtn.onclick = function () {
+              localStorage.setItem("pss_cookie_consent", "accepted");
+              banner.classList.remove("visible");
+              if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+              if (typeof loadGoogleAnalytics === "function")
+                loadGoogleAnalytics();
+            };
+          }
+          var declineBtn = document.getElementById("cookie-decline");
+          if (declineBtn) {
+            declineBtn.onclick = function () {
+              localStorage.setItem("pss_cookie_consent", "declined");
+              banner.classList.remove("visible");
+            };
+          }
+        }
+      })();
+    </script>
+    <!-- MODALS END -->
+  </body>
 </html>

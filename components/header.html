@@ -1,30 +1,56 @@
 <header id="site-header">
-<button aria-label="Toggle navigation" class="icon-btn" id="sidebar-toggle">
-<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20">
-<path d="M3 12h18M3 6h18M3 18h18"></path>
-</svg>
-</button>
-<a class="logo" href="/">
-<img alt="PhotoSplit Logo" class="logo-img" src="/assets/images/logo-animated.svg" style="width:32px;height:32px;"/>
-      PhotoSplit Studio
-    </a>
-<div class="header-spacer"></div>
-<div class="privacy-badge">
-<svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14">
-<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-</svg>
-<span>100% Private · No Uploads</span>
-</div>
-<nav class="main-nav">
-<!-- INJECT_APP_VOICE_TOGGLE -->
-<a href="/app" class="<!-- NAV_ACTIVE_APP -->">Split Photos</a>
-<a href="/resize" class="<!-- NAV_ACTIVE_RESIZE -->">Resize</a>
-<a href="/blog/" class="<!-- NAV_ACTIVE_BLOG -->">Blog</a>
-<a href="/tips" class="<!-- NAV_ACTIVE_TIPS -->">Tips</a>
-<a href="/about" class="<!-- NAV_ACTIVE_ABOUT -->">About</a>
-<a href="/contact" class="<!-- NAV_ACTIVE_CONTACT -->">Contact</a>
-</nav>
-<!-- INJECT_APP_TOOLS -->
-<button class="icon-btn" id="theme-toggle" onclick="if(typeof toggleTheme === 'function') toggleTheme()" title="Toggle Dark/Light Mode">🌓</button>
-<!-- INJECT_APP_SHORTCUTS -->
+  <button aria-label="Toggle navigation" class="icon-btn" id="sidebar-toggle">
+    <svg
+      fill="none"
+      height="20"
+      stroke="currentColor"
+      stroke-width="2"
+      viewbox="0 0 24 24"
+      width="20"
+    >
+      <path d="M3 12h18M3 6h18M3 18h18"></path>
+    </svg>
+  </button>
+  <a class="logo" href="/">
+    <img
+      alt="PhotoSplit Logo"
+      class="logo-img"
+      src="/assets/images/logo-animated.svg"
+      style="width: 32px; height: 32px"
+    />
+    PhotoSplit Studio
+  </a>
+  <div class="header-spacer"></div>
+  <div class="privacy-badge">
+    <svg
+      fill="none"
+      height="14"
+      stroke="currentColor"
+      stroke-width="2.5"
+      viewbox="0 0 24 24"
+      width="14"
+    >
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+    </svg>
+    <span>100% Private · No Uploads</span>
+  </div>
+  <nav class="main-nav">
+    <!-- INJECT_APP_VOICE_TOGGLE -->
+    <a href="/app" class="<!-- NAV_ACTIVE_APP -->">Split Photos</a>
+    <a href="/resize" class="<!-- NAV_ACTIVE_RESIZE -->">Resize</a>
+    <a href="/blog/" class="<!-- NAV_ACTIVE_BLOG -->">Blog</a>
+    <a href="/tips" class="<!-- NAV_ACTIVE_TIPS -->">Tips</a>
+    <a href="/about" class="<!-- NAV_ACTIVE_ABOUT -->">About</a>
+    <a href="/contact" class="<!-- NAV_ACTIVE_CONTACT -->">Contact</a>
+  </nav>
+  <!-- INJECT_APP_TOOLS -->
+  <button
+    class="icon-btn"
+    id="theme-toggle"
+    onclick="if (typeof toggleTheme === 'function') toggleTheme();"
+    title="Toggle Dark/Light Mode"
+  >
+    🌓
+  </button>
+  <!-- INJECT_APP_SHORTCUTS -->
 </header>

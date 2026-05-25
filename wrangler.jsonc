@@ -3,9 +3,9 @@
   "account_id": "9213ae688946caea617ba6fd5e4fbc5c",
   "compatibility_date": "2026-05-04",
   "observability": {
-    "enabled": true
+    "enabled": true,
   },
   "assets": {
-    "directory": "."
-  }
+    "directory": ".",
+  },
 }

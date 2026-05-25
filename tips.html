@@ -1,233 +1,549 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html data-theme="" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/> <title>How to Scan and Split Multiple Photos — Complete Guide | PhotoSplit Studio</title>
-<meta content="Complete guide to separating multiple photos from a single scan. Learn how to scan photos for best quality, DPI settings, and how to split image groups automatically." name="description"/>
-<meta content="how to split image, split scan, separate photos from scan, get multiple images or photos from a file, scan photos, digitize old photos, photo scanning tips, best resolution for scanning photos, easiest way to scan old photos, flatbed scanner best practices, 600 dpi vs 300 dpi photo scanning, fast photo digitization methods" name="keywords"/>
-<meta content="index, follow" name="robots"/>
-<meta content="PhotoSplit Studio" name="author"/>
-<link href="https://photosplitstudio.com/tips" rel="canonical"/>
-<meta content="article" property="og:type"/>
-<meta content="How to Scan and Split Multiple Photos — Complete Guide" property="og:title"/>
-<meta content="Complete guide on how to digitize and split batches of scanned photos with maximum efficiency." property="og:description"/>
-<meta content="https://photosplitstudio.com/tips" property="og:url"/>
-<meta content="https://photosplitstudio.com/assets/images/og-image.png" property="og:image"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<link href="/assets/images/logo.png" rel="icon" type="image/png"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="/css/style.css" rel="stylesheet"/>
-<script defer="" src="/js/gear.js"></script>
-<!-- Scripts loaded dynamically after consent -->
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    function loadGoogleScripts() {
-      if (document.getElementById('ga-script')) return;
-      var gaScript = document.createElement('script');
-      gaScript.id = 'ga-script';
-      gaScript.async = true;
-      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ';
-      document.head.appendChild(gaScript);
-      gtag('js', new Date());
-      gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+      How to Scan and Split Multiple Photos — Complete Guide | PhotoSplit Studio
+    </title>
+    <meta
+      content="Complete guide to separating multiple photos from a single scan. Learn how to scan photos for best quality, DPI settings, and how to split image groups automatically."
+      name="description"
+    />
+    <meta
+      content="how to split image, split scan, separate photos from scan, get multiple images or photos from a file, scan photos, digitize old photos, photo scanning tips, best resolution for scanning photos, easiest way to scan old photos, flatbed scanner best practices, 600 dpi vs 300 dpi photo scanning, fast photo digitization methods"
+      name="keywords"
+    />
+    <meta content="index, follow" name="robots" />
+    <meta content="PhotoSplit Studio" name="author" />
+    <link href="https://photosplitstudio.com/tips" rel="canonical" />
+    <meta content="article" property="og:type" />
+    <meta
+      content="How to Scan and Split Multiple Photos — Complete Guide"
+      property="og:title"
+    />
+    <meta
+      content="Complete guide on how to digitize and split batches of scanned photos with maximum efficiency."
+      property="og:description"
+    />
+    <meta content="https://photosplitstudio.com/tips" property="og:url" />
+    <meta
+      content="https://photosplitstudio.com/assets/images/og-image.png"
+      property="og:image"
+    />
+    <meta content="summary_large_image" name="twitter:card" />
+    <link href="/assets/images/logo.png" rel="icon" type="image/png" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <script defer="" src="/js/gear.js"></script>
+    <!-- Scripts loaded dynamically after consent -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      function loadGoogleScripts() {
+        if (document.getElementById("ga-script")) return;
+        var gaScript = document.createElement("script");
+        gaScript.id = "ga-script";
+        gaScript.async = true;
+        gaScript.src =
+          "https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ";
+        document.head.appendChild(gaScript);
+        gtag("js", new Date());
+        gtag("config", "G-G40QDCGTTZ", { anonymize_ip: true });
+      }
+    </script>
+    <link href="/css/style-premium.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header id="site-header">
+      <button
+        aria-label="Toggle navigation"
+        class="icon-btn"
+        id="sidebar-toggle"
+      >
+        <svg
+          fill="none"
+          height="20"
+          stroke="currentColor"
+          stroke-width="2"
+          viewbox="0 0 24 24"
+          width="20"
+        >
+          <path d="M3 12h18M3 6h18M3 18h18"></path>
+        </svg>
+      </button>
+      <a class="logo" href="/">
+        <img
+          alt="PhotoSplit Logo"
+          class="logo-img"
+          src="/assets/images/logo-animated.svg"
+          style="width: 32px; height: 32px"
+        />
+        PhotoSplit Studio
+      </a>
+      <div class="header-spacer"></div>
+      <div class="privacy-badge">
+        <svg
+          fill="none"
+          height="14"
+          stroke="currentColor"
+          stroke-width="2.5"
+          viewbox="0 0 24 24"
+          width="14"
+        >
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+        <span>100% Private · No Uploads</span>
+      </div>
+      <nav class="main-nav">
+        <a href="/app" class="">Split Photos</a>
+        <a href="/resize" class="">Resize</a>
+        <a href="/blog/" class="">Blog</a>
+        <a href="/tips" class="active">Tips</a>
+        <a href="/about" class="">About</a>
+        <a href="/contact" class="">Contact</a>
+      </nav>
 
+      <button
+        class="icon-btn"
+        id="theme-toggle"
+        onclick="if (typeof toggleTheme === 'function') toggleTheme();"
+        title="Toggle Dark/Light Mode"
+      >
+        🌓
+      </button>
+    </header>
+
+    <main>
+      <section class="hero-utility">
+        <h1>Digitizing Scanning Tips</h1>
+        <p>
+          A practical guide to scanning, splitting, and archiving printed photos
+          quickly.
+        </p>
+      </section>
+      <!-- AdSense &mdash; Below Hero -->
+      <div class="ad-wrap-md">
+        <div class="ad-item">
+          <script>
+            atOptions = {
+              key: "033703f2c2dfe7a5fa4501cd3ba1417e",
+              format: "iframe",
+              height: 90,
+              width: 728,
+              params: {},
+            };
+          </script>
+          <script src="https://www.highperformanceformat.com/033703f2c2dfe7a5fa4501cd3ba1417e/invoke.js"></script>
+        </div>
+        <div class="ad-item">
+          <script>
+            atOptions = {
+              key: "eefa27f757f4d0772d979fca1074f12a",
+              format: "iframe",
+              height: 60,
+              width: 468,
+              params: {},
+            };
+          </script>
+          <script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
+        </div>
+      </div>
+      <div class="page-with-sidebar">
+        <div class="page-main-content">
+          <div class="content-wrap blog-content-wrap">
+            <h2>1. Preparation: Clean and Sort</h2>
+            <p>
+              Before you even open your scanner, preparation is key to a
+              high-quality digital archive. Dust and fingerprints are the
+              enemies of a clean scan.
+            </p>
+            <ul>
+              <li>
+                <strong>Handle with Care:</strong> Always hold photos by the
+                edges. Wear cotton gloves if you're handling delicate or
+                valuable originals.
+              </li>
+              <li>
+                <strong>Clean the Glass:</strong> Use a microfiber cloth (<a
+                  href="https://www.amazon.com/dp/B0050R67U0?tag=photoid03-20"
+                  rel="sponsored noopener"
+                  target="_blank"
+                  >like MagicFiber</a
+                >) and a small amount of glass cleaner (spray the cloth, not the
+                scanner). Use a
+                <a
+                  href="https://www.amazon.com/dp/B00017LSPI?tag=photoid03-20"
+                  rel="sponsored noopener"
+                  target="_blank"
+                  >rocket blower</a
+                >
+                to remove dust before placing photos on the glass.
+              </li>
+              <li>
+                <strong>Sort by Size:</strong> Grouping photos of similar sizes
+                together makes it easier to pack the scanner bed efficiently and
+                results in more consistent auto-detection.
+              </li>
+            </ul>
+            <h2>2. Understanding Scanner Settings</h2>
+            <p>
+              Choosing the right settings can be the difference between a
+              "snapshot" and an "archival master."
+            </p>
+            <div class="feature-card-new">
+              <h3 class="fcard-h3">✨</h3>
+              <ul class="fcard-ul">
+                <li>
+                  <strong>Resolution (DPI):</strong>
+                  <ul>
+                    <li>
+                      <strong>300 DPI:</strong> Best for standard 4x6 prints if
+                      you only plan to view them on screens.
+                    </li>
+                    <li>
+                      <strong>600 DPI:</strong> Our recommended "Sweet Spot."
+                      High enough to allow for 2x enlargement or high-quality
+                      printing.
+                    </li>
+                    <li>
+                      <strong>1200 DPI+:</strong> Only necessary for very small
+                      photos (like wallet-sized) or film negatives.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Color Mode:</strong> Always use
+                  <strong>24-bit Color (RGB)</strong>, even for black and white
+                  photos. Scanning B&amp;W photos in color mode captures more
+                  tonal detail and allows for better digital restoration later.
+                </li>
+                <li>
+                  <strong>File Format:</strong>
+                  <ul>
+                    <li>
+                      <strong>TIFF:</strong> Use this for your "Master" files.
+                      It is lossless but results in large file sizes.
+                    </li>
+                    <li>
+                      <strong>JPEG:</strong> Best for sharing and social media.
+                      Set quality to "High" or 90%+.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <h2>3. Efficient Batch Scanning</h2>
+            <p>
+              To get the most out of PhotoSplit Studio's auto-detection, follow
+              these layout tips:
+            </p>
+            <ul>
+              <li>
+                <strong>Mind the Gap:</strong> Leave at least
+                <strong>1/4 inch (5-10mm)</strong> of space between each photo
+                and between the photos and the edge of the scanner bed. This
+                white space is what the algorithm uses to identify individual
+                edges.
+              </li>
+              <li>
+                <strong>Straighten as You Go:</strong> While PhotoSplit Studio
+                can auto-straighten photos, placing them as straight as possible
+                on the glass reduces pixel distortion during the digital
+                rotation process.
+              </li>
+              <li>
+                <strong>Don't Overcrowd:</strong> Most flatbed scanners
+                (A4/Letter size) can comfortably fit four 4x6 prints or two 5x7
+                prints at a time.
+              </li>
+            </ul>
+            <h2>4. Post-Processing and Archiving</h2>
+            <p>
+              Once you've split your photos using our app, consider these final
+              steps:
+            </p>
+            <ul>
+              <li>
+                <strong>Naming Convention:</strong> Use a descriptive format
+                like <code>YYYY-MM-Event-Description-001.jpg</code>.
+              </li>
+              <li>
+                <strong>The 3-2-1 Rule:</strong> Keep <strong>3</strong> copies
+                of your data, on <strong>2</strong> different media types (e.g.,
+                hard drive and cloud), with <strong>1</strong> copy kept
+                off-site (cloud).
+              </li>
+              <li>
+                <strong>Metadata:</strong> Use PhotoSplit Studio's EXIF tagging
+                feature to embed the year and location into the photo file
+                itself.
+              </li>
+            </ul>
+            <div class="tips-cta-box">
+              <h3 class="fcard-h3">Ready to start digitizing?</h3>
+              <p>Our tool is free, private, and works on any device.</p>
+              <a class="tips-cta-btn" href="/app">Open PhotoSplit App →</a>
+            </div>
+          </div>
+        </div>
+        <aside class="page-sidebar">
+          <div class="ad-sidebar-sticky">
+            <span class="ad-sidebar-label">Advertisement</span>
+            <div
+              id="ad-sidebar"
+              style="
+                margin: 0;
+                min-height: 250px;
+                background: var(--bg-surface-2);
+                border: 1px dashed var(--border-strong);
+                border-radius: var(--radius-md);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <div class="ad-item">
+                <script>
+                  atOptions = {
+                    key: "eefa27f757f4d0772d979fca1074f12a",
+                    format: "iframe",
+                    height: 250,
+                    width: 300,
+                    params: {},
+                  };
+                </script>
+                <script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <section class="gear-section">
+      <div class="gear-section-inner">
+        <h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
+        <p class="gear-section-sub">
+          Pair PhotoSplit Studio with the best hardware for fast, high-quality
+          archiving and secure backups.
+        </p>
+        <div class="gear-cards-grid"></div>
+        <p class="affiliate-disclosure">
+          As an Amazon Associate, PhotoSplit Studio earns from qualifying
+          purchases.
+        </p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="/app">App</a>
+          <a href="/blog/">Blog</a>
+          <a href="/tips">Scanning Tips</a>
+          <a href="/contact">Contact</a>
+          <a href="/terms">Terms</a>
+          <a href="/privacy-policy">Privacy</a>
+          <a href="/about">About</a>
+          <a
+            href="#"
+            onclick="
+              if (typeof openTextModal === 'function')
+                openTextModal('feedback-modal', event);
+            "
+            >Feedback</a
+          >
+        </div>
+        <div class="footer-copy">
+          © 2026 PhotoSplit Studio. All rights reserved.
+        </div>
+      </div>
+      <div class="site-status-bar">
+        <div class="status-item">
+          <span class="status-label">Is it dark outside?</span
+          ><span class="status-value" id="dark-status-answer">...</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Global Visitors:</span
+          ><img
+            alt="Visitor Count"
+            class="visitor-badge"
+            src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"
+          />
+        </div>
+      </div>
+      <script>
+        (function () {
+          var h = new Date().getHours();
+          var ans = h >= 18 || h < 6 ? "YES" : "NO";
+          var el = document.getElementById("dark-status-answer");
+          if (el) el.textContent = ans;
+        })();
+      </script>
+    </footer>
+
+    <!-- MODALS START -->
+    <div
+      class="text-modal-backdrop"
+      id="feedback-modal"
+      onclick="
+        if (event.target === this && typeof closeTextModal === 'function')
+          closeTextModal('feedback-modal');
+      "
+    >
+      <div class="text-modal-box">
+        <div class="text-modal-header">
+          <h2>Provide Feedback</h2>
+          <button
+            class="icon-btn"
+            onclick="
+              if (typeof closeTextModal === 'function')
+                closeTextModal('feedback-modal');
+            "
+          >
+            ✕
+          </button>
+        </div>
+        <div class="text-modal-content" id="feedback-form-view">
+          <form
+            onsubmit="
+              if (typeof handleFeedbackSubmit === 'function')
+                handleFeedbackSubmit(event);
+            "
+          >
+            <input
+              class="form-control mb-12"
+              id="fb-name"
+              placeholder="Your Name"
+              required=""
+              type="text"
+              style="margin-bottom: 12px"
+            />
+            <input
+              class="form-control mb-12"
+              id="fb-email"
+              placeholder="your@email.com"
+              required=""
+              type="email"
+              style="margin-bottom: 12px"
+            />
+            <textarea
+              class="form-control mb-12"
+              id="fb-desc"
+              placeholder="Your feedback..."
+              required=""
+              rows="4"
+              style="margin-bottom: 12px"
+            ></textarea>
+            <button class="btn btn-primary" style="width: 100%" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+        <div
+          class="text-modal-content"
+          id="feedback-success-view"
+          style="display: none; text-align: center"
+        >
+          <h3>✅ Thank you!</h3>
+          <p>Your feedback has been received.</p>
+          <button
+            class="btn btn-secondary"
+            onclick="
+              if (typeof closeTextModal === 'function')
+                closeTextModal('feedback-modal');
+            "
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="cookie-consent" role="dialog">
+      <div id="cookie-consent-inner">
+        <p>
+          🍪 We use cookies to improve your experience. See our
+          <a href="/privacy-policy">Privacy Policy</a>.
+        </p>
+        <div id="cookie-consent-actions">
+          <button class="cookie-btn" id="cookie-decline">Decline</button>
+          <button class="cookie-btn cookie-btn-accept" id="cookie-accept">
+            Accept All
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        if (!localStorage.getItem("ps_counted")) {
+          localStorage.setItem("ps_counted", "true");
+          var img = new Image();
+          img.src =
+            "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
+        }
+
+        window.handleFeedbackSubmit = function (e) {
+          e.preventDefault();
+          var params = new URLSearchParams();
+          params.append(
+            "entry.1051903221",
+            document.getElementById("fb-name").value,
+          );
+          params.append(
+            "entry.371950700",
+            document.getElementById("fb-email").value,
+          );
+          params.append(
+            "entry.852578852",
+            document.getElementById("fb-desc").value,
+          );
+          fetch(
+            "https://docs.google.com/forms/d/e/1FAIpQLSeJe_jw0IHHXeT4w4hzcZJ2WXREaT8aD4_R4LFBGVZNazsehg/formResponse",
+            { method: "POST", mode: "no-cors", body: params },
+          );
+          document.getElementById("feedback-form-view").style.display = "none";
+          document.getElementById("feedback-success-view").style.display =
+            "block";
+        };
+
+        // Cookie Consent
+        var banner = document.getElementById("cookie-consent");
+        if (banner) {
+          if (!localStorage.getItem("pss_cookie_consent")) {
+            banner.classList.add("visible");
+          } else if (
+            localStorage.getItem("pss_cookie_consent") === "accepted"
+          ) {
+            if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+            if (typeof loadGoogleAnalytics === "function")
+              loadGoogleAnalytics();
           }
-  </script>
-<link href="/css/style-premium.css" rel="stylesheet"/></head>
-<body>
-<header id="site-header">
-<button aria-label="Toggle navigation" class="icon-btn" id="sidebar-toggle">
-<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20">
-<path d="M3 12h18M3 6h18M3 18h18"></path>
-</svg>
-</button>
-<a class="logo" href="/">
-<img alt="PhotoSplit Logo" class="logo-img" src="/assets/images/logo-animated.svg" style="width:32px;height:32px;"/>
-      PhotoSplit Studio
-    </a>
-<div class="header-spacer"></div>
-<div class="privacy-badge">
-<svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14">
-<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-</svg>
-<span>100% Private · No Uploads</span>
-</div>
-<nav class="main-nav">
-
-<a href="/app" class="">Split Photos</a>
-<a href="/resize" class="">Resize</a>
-<a href="/blog/" class="">Blog</a>
-<a href="/tips" class="active">Tips</a>
-<a href="/about" class="">About</a>
-<a href="/contact" class="">Contact</a>
-</nav>
-
-<button class="icon-btn" id="theme-toggle" onclick="if(typeof toggleTheme === 'function') toggleTheme()" title="Toggle Dark/Light Mode">🌓</button>
-
-</header>
-
-<main>
-<section class="hero-utility">
-<h1>Digitizing Scanning Tips</h1>
-<p>A practical guide to scanning, splitting, and archiving printed photos quickly.</p>
-</section>
-<!-- AdSense &mdash; Below Hero -->
-<div class="ad-wrap-md">
-<div class="ad-item"><script>
-  atOptions = {
-    'key' : '033703f2c2dfe7a5fa4501cd3ba1417e',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/033703f2c2dfe7a5fa4501cd3ba1417e/invoke.js"></script></div>
-<div class="ad-item"><script>
-  atOptions = {
-    'key' : 'eefa27f757f4d0772d979fca1074f12a',
-    'format' : 'iframe',
-    'height' : 60,
-    'width' : 468,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script></div>
-</div>
-<div class="page-with-sidebar"><div class="page-main-content"><div class="content-wrap blog-content-wrap">
-<h2>1. Preparation: Clean and Sort</h2>
-<p>Before you even open your scanner, preparation is key to a high-quality digital archive. Dust and fingerprints are the enemies of a clean scan.</p>
-<ul>
-<li><strong>Handle with Care:</strong> Always hold photos by the edges. Wear cotton gloves if you're handling delicate or valuable originals.</li>
-<li><strong>Clean the Glass:</strong> Use a microfiber cloth (<a href="https://www.amazon.com/dp/B0050R67U0?tag=photoid03-20" rel="sponsored noopener" target="_blank">like MagicFiber</a>) and a small amount of glass cleaner (spray the cloth, not the scanner). Use a <a href="https://www.amazon.com/dp/B00017LSPI?tag=photoid03-20" rel="sponsored noopener" target="_blank">rocket blower</a> to remove dust before placing photos on the glass.</li>
-<li><strong>Sort by Size:</strong> Grouping photos of similar sizes together makes it easier to pack the scanner bed efficiently and results in more consistent auto-detection.</li>
-</ul>
-<h2>2. Understanding Scanner Settings</h2>
-<p>Choosing the right settings can be the difference between a "snapshot" and an "archival master."</p>
-<div class="feature-card-new">
-<h3 class="fcard-h3">✨ </h3>
-<ul class="fcard-ul">
-<li><strong>Resolution (DPI):</strong>
-<ul>
-<li><strong>300 DPI:</strong> Best for standard 4x6 prints if you only plan to view them on screens.</li>
-<li><strong>600 DPI:</strong> Our recommended "Sweet Spot." High enough to allow for 2x enlargement or high-quality printing.</li>
-<li><strong>1200 DPI+:</strong> Only necessary for very small photos (like wallet-sized) or film negatives.</li>
-</ul>
-</li>
-<li><strong>Color Mode:</strong> Always use <strong>24-bit Color (RGB)</strong>, even for black and white photos. Scanning B&amp;W photos in color mode captures more tonal detail and allows for better digital restoration later.</li>
-<li><strong>File Format:</strong>
-<ul>
-<li><strong>TIFF:</strong> Use this for your "Master" files. It is lossless but results in large file sizes.</li>
-<li><strong>JPEG:</strong> Best for sharing and social media. Set quality to "High" or 90%+.</li>
-</ul>
-</li>
-</ul>
-</div>
-<h2>3. Efficient Batch Scanning</h2>
-<p>To get the most out of PhotoSplit Studio's auto-detection, follow these layout tips:</p>
-<ul>
-<li><strong>Mind the Gap:</strong> Leave at least <strong>1/4 inch (5-10mm)</strong> of space between each photo and between the photos and the edge of the scanner bed. This white space is what the algorithm uses to identify individual edges.</li>
-<li><strong>Straighten as You Go:</strong> While PhotoSplit Studio can auto-straighten photos, placing them as straight as possible on the glass reduces pixel distortion during the digital rotation process.</li>
-<li><strong>Don't Overcrowd:</strong> Most flatbed scanners (A4/Letter size) can comfortably fit four 4x6 prints or two 5x7 prints at a time.</li>
-</ul>
-<h2>4. Post-Processing and Archiving</h2>
-<p>Once you've split your photos using our app, consider these final steps:</p>
-<ul>
-<li><strong>Naming Convention:</strong> Use a descriptive format like <code>YYYY-MM-Event-Description-001.jpg</code>.</li>
-<li><strong>The 3-2-1 Rule:</strong> Keep <strong>3</strong> copies of your data, on <strong>2</strong> different media types (e.g., hard drive and cloud), with <strong>1</strong> copy kept off-site (cloud).</li>
-<li><strong>Metadata:</strong> Use PhotoSplit Studio's EXIF tagging feature to embed the year and location into the photo file itself.</li>
-</ul>
-<div class="tips-cta-box">
-<h3 class="fcard-h3">Ready to start digitizing?</h3>
-<p>Our tool is free, private, and works on any device.</p>
-<a class="tips-cta-btn" href="/app">Open PhotoSplit App →</a>
-</div>
-</div></div>
-<aside class="page-sidebar">
-<div class="ad-sidebar-sticky">
-<span class="ad-sidebar-label">Advertisement</span>
-<div id="ad-sidebar" style="margin:0; min-height:250px; background:var(--bg-surface-2); border:1px dashed var(--border-strong); border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center;">
-<div class="ad-item">
-<script>
-          atOptions = {
-            'key' : 'eefa27f757f4d0772d979fca1074f12a',
-            'format' : 'iframe',
-            'height' : 250,
-            'width' : 300,
-            'params' : {}
-          };
-        </script>
-<script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
-</div>
-</div>
-</div>
-</aside>
-</div>
-</main>
-<section class="gear-section">
-<div class="gear-section-inner">
-<h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
-<p class="gear-section-sub">Pair PhotoSplit Studio with the best hardware for fast, high-quality archiving and secure backups.</p>
-<div class="gear-cards-grid"></div>
-<p class="affiliate-disclosure">As an Amazon Associate, PhotoSplit Studio earns from qualifying purchases.</p>
-</div>
-</section>
-
-<footer class="site-footer">
-<div class="footer-inner">
-<div class="footer-links">
-<a href="/app">App</a>
-<a href="/blog/">Blog</a>
-<a href="/tips">Scanning Tips</a>
-<a href="/contact">Contact</a>
-<a href="/terms">Terms</a>
-<a href="/privacy-policy">Privacy</a>
-<a href="/about">About</a>
-<a href="#" onclick="if(typeof openTextModal === 'function') openTextModal('feedback-modal', event)">Feedback</a>
-</div>
-<div class="footer-copy">© 2026 PhotoSplit Studio. All rights reserved.</div>
-</div>
-<div class="site-status-bar">
-  <div class="status-item"><span class="status-label">Is it dark outside?</span><span class="status-value" id="dark-status-answer">...</span></div>
-  <div class="status-item"><span class="status-label">Global Visitors:</span><img alt="Visitor Count" class="visitor-badge" src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"/></div>
-</div>
-<script>(function(){ var h=new Date().getHours(); var ans=(h>=18||h<6)?"YES":"NO"; var el=document.getElementById("dark-status-answer"); if(el) el.textContent=ans; })();</script>
-</footer>
-
-<div id="cookie-consent" role="dialog">
-<div id="cookie-consent-inner">
-<p>🍪 We use cookies to improve your experience. See our <a href="/privacy-policy">Privacy Policy</a>.</p>
-<div id="cookie-consent-actions">
-<button class="cookie-btn" id="cookie-decline">Decline</button>
-<button class="cookie-btn cookie-btn-accept" id="cookie-accept">Accept All</button>
-</div>
-</div>
-</div>
-<script>
-    if (!localStorage.getItem("ps_counted")) {
-      localStorage.setItem("ps_counted", "true");
-      new Image().src = "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
-    }
-
-    // Cookie Consent
-    var banner = document.getElementById('cookie-consent');
-    if (!localStorage.getItem('pss_cookie_consent')) {
-      banner.classList.add('visible');
-    } else if (localStorage.getItem('pss_cookie_consent') === 'accepted') {
-      if (typeof loadGoogleScripts === 'function') loadGoogleScripts();
-    }
-    document.getElementById('cookie-accept').onclick = function() { 
-      localStorage.setItem('pss_cookie_consent', 'accepted'); 
-      banner.classList.remove('visible'); 
-      if (typeof loadGoogleScripts === 'function') loadGoogleScripts();
-    };
-    document.getElementById('cookie-decline').onclick = function() { 
-      localStorage.setItem('pss_cookie_consent', 'declined'); 
-      banner.classList.remove('visible'); 
-    };
-  </script>
-</body>
+          var acceptBtn = document.getElementById("cookie-accept");
+          if (acceptBtn) {
+            acceptBtn.onclick = function () {
+              localStorage.setItem("pss_cookie_consent", "accepted");
+              banner.classList.remove("visible");
+              if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+              if (typeof loadGoogleAnalytics === "function")
+                loadGoogleAnalytics();
+            };
+          }
+          var declineBtn = document.getElementById("cookie-decline");
+          if (declineBtn) {
+            declineBtn.onclick = function () {
+              localStorage.setItem("pss_cookie_consent", "declined");
+              banner.classList.remove("visible");
+            };
+          }
+        }
+      })();
+    </script>
+    <!-- MODALS END -->
+  </body>
 </html>

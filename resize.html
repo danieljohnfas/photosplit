@@ -1,427 +1,1109 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html data-theme="" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
-<meta content="#010101" name="theme-color"/>
-<title>Resize Image for Social Media — Free Online Photo Resizer | PhotoSplit Studio</title>
-<meta content="Free online image resizer for Instagram, TikTok, YouTube, Twitter/X, Facebook, and LinkedIn. Resize any photo to exact social media dimensions in your browser — no upload, 100% private." name="description"/>
-<meta content="resize image for instagram, resize photo for tiktok, social media image resizer, crop photo for youtube thumbnail, image resizer online free, resize picture free" name="keywords"/>
-<meta content="index,follow" name="robots"/>
-<link href="https://photosplitstudio.com/resize" rel="canonical"/>
-<!-- Open Graph -->
-<meta content="website" property="og:type"/>
-<meta content="Free Social Media Image Resizer — PhotoSplit Studio" property="og:title"/>
-<meta content="Resize any photo to exact Instagram, TikTok, YouTube, Twitter/X or Facebook dimensions. 100% free, 100% private." property="og:description"/>
-<meta content="https://photosplitstudio.com/resize" property="og:url"/>
-<meta content="https://photosplitstudio.com/assets/images/og-image.png" property="og:image"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<!-- ═══ STRUCTURED DATA ═════════════════════════════════════════════════ -->
-<script type="application/ld+json">
-  [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "PhotoSplit Studio Image Resizer",
-      "url": "https://photosplitstudio.com/resize",
-      "applicationCategory": "MultimediaApplication",
-      "operatingSystem": "All",
-      "description": "Free browser-based tool to resize images for social media platforms like Instagram, TikTok, and YouTube. Processing is local and 100% private.",
-      "browserRequirements": "Requires a modern web browser with JavaScript and Canvas support.",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "featureList": [
-        "Resize photos for Instagram, TikTok, YouTube, Twitter/X, Facebook, and LinkedIn",
-        "Multiple fit modes: Letterbox (Fit), Crop (Fill), and Stretch",
-        "100% private local processing \u2014 photos never leave your device",
-        "Support for JPEG, PNG, BMP, and WebP"
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+    <meta content="#010101" name="theme-color" />
+    <title>
+      Resize Image for Social Media — Free Online Photo Resizer | PhotoSplit
+      Studio
+    </title>
+    <meta
+      content="Free online image resizer for Instagram, TikTok, YouTube, Twitter/X, Facebook, and LinkedIn. Resize any photo to exact social media dimensions in your browser — no upload, 100% private."
+      name="description"
+    />
+    <meta
+      content="resize image for instagram, resize photo for tiktok, social media image resizer, crop photo for youtube thumbnail, image resizer online free, resize picture free"
+      name="keywords"
+    />
+    <meta content="index,follow" name="robots" />
+    <link href="https://photosplitstudio.com/resize" rel="canonical" />
+    <!-- Open Graph -->
+    <meta content="website" property="og:type" />
+    <meta
+      content="Free Social Media Image Resizer — PhotoSplit Studio"
+      property="og:title"
+    />
+    <meta
+      content="Resize any photo to exact Instagram, TikTok, YouTube, Twitter/X or Facebook dimensions. 100% free, 100% private."
+      property="og:description"
+    />
+    <meta content="https://photosplitstudio.com/resize" property="og:url" />
+    <meta
+      content="https://photosplitstudio.com/assets/images/og-image.png"
+      property="og:image"
+    />
+    <meta content="summary_large_image" name="twitter:card" />
+    <!-- ═══ STRUCTURED DATA ═════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "PhotoSplit Studio Image Resizer",
+          "url": "https://photosplitstudio.com/resize",
+          "applicationCategory": "MultimediaApplication",
+          "operatingSystem": "All",
+          "description": "Free browser-based tool to resize images for social media platforms like Instagram, TikTok, and YouTube. Processing is local and 100% private.",
+          "browserRequirements": "Requires a modern web browser with JavaScript and Canvas support.",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "featureList": [
+            "Resize photos for Instagram, TikTok, YouTube, Twitter/X, Facebook, and LinkedIn",
+            "Multiple fit modes: Letterbox (Fit), Crop (Fill), and Stretch",
+            "100% private local processing \u2014 photos never leave your device",
+            "Support for JPEG, PNG, BMP, and WebP"
+          ]
+        }
       ]
-    }
-  ]
-</script>
-<link href="/assets/images/logo.png" rel="icon" type="image/png"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="/css/style.css" rel="stylesheet"/>
-<script defer="" src="/js/gear.js"></script>
-<!-- Scripts loaded dynamically after consent -->
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    function loadGoogleScripts() {
-      if (document.getElementById('ga-script')) return;
-      var gaScript = document.createElement('script');
-      gaScript.id = 'ga-script';
-      gaScript.async = true;
-      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ';
-      document.head.appendChild(gaScript);
-      gtag('js', new Date());
-      gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
+    </script>
+    <link href="/assets/images/logo.png" rel="icon" type="image/png" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <script defer="" src="/js/gear.js"></script>
+    <!-- Scripts loaded dynamically after consent -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      function loadGoogleScripts() {
+        if (document.getElementById("ga-script")) return;
+        var gaScript = document.createElement("script");
+        gaScript.id = "ga-script";
+        gaScript.async = true;
+        gaScript.src =
+          "https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ";
+        document.head.appendChild(gaScript);
+        gtag("js", new Date());
+        gtag("config", "G-G40QDCGTTZ", { anonymize_ip: true });
+      }
+    </script>
+    <style>
+      .resize-tool {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 32px 24px 60px;
+      }
+      .platform-picker {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 10px;
+        margin: 24px 0;
+      }
+      .plat-btn {
+        background: var(--bg-surface);
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 14px 10px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.15s;
+        font-family: inherit;
+      }
+      .plat-btn:hover,
+      .plat-btn.active {
+        border-color: var(--accent);
+        background: rgba(254, 44, 85, 0.07);
+      }
+      .plat-btn.active {
+        box-shadow: 0 0 0 3px var(--accent-glow);
+      }
+      .plat-btn .plat-icon {
+        font-size: 1.6rem;
+        display: block;
+        margin-bottom: 6px;
+      }
+      .plat-btn .plat-name {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        display: block;
+      }
+      .plat-btn .plat-dims {
+        font-size: 0.65rem;
+        color: var(--text-muted);
+        display: block;
+        margin-top: 2px;
+      }
+      .plat-btn.active .plat-name {
+        color: var(--accent);
+      }
+      .resize-workspace {
+        display: grid;
+        grid-template-columns: 1fr 340px;
+        gap: 24px;
+        margin-top: 24px;
+      }
+      @media (max-width: 720px) {
+        .resize-workspace {
+          grid-template-columns: 1fr;
+        }
+      }
+      .upload-drop {
+        border: 2px dashed var(--border-strong);
+        border-radius: var(--radius-lg);
+        padding: 48px 24px;
+        text-align: center;
+        cursor: pointer;
+        transition:
+          border-color 0.2s,
+          background 0.2s;
+      }
+      .upload-drop:hover,
+      .upload-drop.drag-over {
+        border-color: var(--accent);
+        background: rgba(254, 44, 85, 0.05);
+      }
+      .upload-drop p {
+        color: var(--text-muted);
+        margin: 8px 0 0;
+        font-size: 0.85rem;
+      }
+      #resize-canvas-wrap {
+        background: var(--bg-base);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 200px;
+        position: relative;
+      }
+      #resize-canvas-wrap canvas {
+        max-width: 100%;
+        max-height: 400px;
+        display: block;
+      }
+      .resize-panel {
+        background: var(--bg-surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .resize-panel label {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        display: block;
+        margin-bottom: 4px;
+      }
+      .resize-panel input[type="number"] {
+        width: 100%;
+        padding: 8px 10px;
+        background: var(--bg-surface-2);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        color: var(--text-primary);
+        font-family: inherit;
+        font-size: 0.9rem;
+      }
+      .resize-panel select {
+        width: 100%;
+        padding: 8px 10px;
+        background: var(--bg-surface-2);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        color: var(--text-primary);
+        font-family: inherit;
+        font-size: 0.9rem;
+      }
+      .resize-dims-row {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .resize-dims-row span {
+        color: var(--text-muted);
+        font-size: 1.1rem;
+        padding-top: 20px;
+      }
+      .dim-group {
+        flex: 1;
+      }
+      .fit-mode-btns {
+        display: flex;
+        gap: 6px;
+      }
+      .fit-mode-btn {
+        flex: 1;
+        padding: 7px;
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius-sm);
+        background: var(--bg-surface-2);
+        font-family: inherit;
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        cursor: pointer;
+        transition: all 0.12s;
+      }
+      .fit-mode-btn.active {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: rgba(254, 44, 85, 0.08);
+      }
+      .btn-download-resize {
+        background: linear-gradient(135deg, #fe2c55, #ff375f);
+        color: #fff;
+        border: none;
+        border-radius: 99px;
+        padding: 14px;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        width: 100%;
+        box-shadow: 0 3px 14px rgba(254, 44, 85, 0.38);
+        transition: all 0.15s;
+      }
+      .btn-download-resize:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 20px rgba(254, 44, 85, 0.48);
+      }
+      #resize-badge {
+        position: absolute;
+        bottom: 6px;
+        right: 6px;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        font-size: 0.65rem;
+        font-weight: 700;
+        padding: 2px 8px;
+        border-radius: 4px;
+        pointer-events: none;
+      }
+    </style>
+    <link href="/css/style-premium.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header id="site-header">
+      <button
+        aria-label="Toggle navigation"
+        class="icon-btn"
+        id="sidebar-toggle"
+      >
+        <svg
+          fill="none"
+          height="20"
+          stroke="currentColor"
+          stroke-width="2"
+          viewbox="0 0 24 24"
+          width="20"
+        >
+          <path d="M3 12h18M3 6h18M3 18h18"></path>
+        </svg>
+      </button>
+      <a class="logo" href="/">
+        <img
+          alt="PhotoSplit Logo"
+          class="logo-img"
+          src="/assets/images/logo-animated.svg"
+          style="width: 32px; height: 32px"
+        />
+        PhotoSplit Studio
+      </a>
+      <div class="header-spacer"></div>
+      <div class="privacy-badge">
+        <svg
+          fill="none"
+          height="14"
+          stroke="currentColor"
+          stroke-width="2.5"
+          viewbox="0 0 24 24"
+          width="14"
+        >
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+        <span>100% Private · No Uploads</span>
+      </div>
+      <nav class="main-nav">
+        <a href="/app" class="">Split Photos</a>
+        <a href="/resize" class="active">Resize</a>
+        <a href="/blog/" class="">Blog</a>
+        <a href="/tips" class="">Tips</a>
+        <a href="/about" class="">About</a>
+        <a href="/contact" class="">Contact</a>
+      </nav>
 
+      <button
+        class="icon-btn"
+        id="theme-toggle"
+        onclick="if (typeof toggleTheme === 'function') toggleTheme();"
+        title="Toggle Dark/Light Mode"
+      >
+        🌓
+      </button>
+    </header>
+
+    <main>
+      <section class="hero-utility">
+        <h1>Social Media Image Resizer</h1>
+        <p>
+          Resize any photo to exact platform dimensions — Instagram, TikTok,
+          YouTube &amp; more.
+        </p>
+      </section>
+      <!-- AdSense &mdash; Below Hero -->
+      <div class="page-with-sidebar">
+        <div class="page-main-content">
+          <div
+            style="
+              max-width: 1250px;
+              margin: var(--space-md) auto;
+              padding: 0 24px;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              gap: 20px;
+              align-items: center;
+            "
+          >
+            <div class="ad-item">
+              <script>
+                atOptions = {
+                  key: "033703f2c2dfe7a5fa4501cd3ba1417e",
+                  format: "iframe",
+                  height: 90,
+                  width: 728,
+                  params: {},
+                };
+              </script>
+              <script src="https://www.highperformanceformat.com/033703f2c2dfe7a5fa4501cd3ba1417e/invoke.js"></script>
+            </div>
+            <div class="ad-item">
+              <script>
+                atOptions = {
+                  key: "eefa27f757f4d0772d979fca1074f12a",
+                  format: "iframe",
+                  height: 60,
+                  width: 468,
+                  params: {},
+                };
+              </script>
+              <script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
+            </div>
+          </div>
+          <div class="resize-tool">
+            <div class="section-label">Choose a Platform</div>
+            <div class="platform-picker" id="platform-picker">
+              <button
+                class="plat-btn"
+                data-h="1080"
+                data-name="Instagram Post"
+                data-w="1080"
+              >
+                <span class="plat-icon">📸</span
+                ><span class="plat-name">Instagram</span
+                ><span class="plat-dims">1080×1080</span>
+              </button>
+              <button
+                class="plat-btn"
+                data-h="1920"
+                data-name="Instagram Story"
+                data-w="1080"
+              >
+                <span class="plat-icon">📱</span
+                ><span class="plat-name">IG Story</span
+                ><span class="plat-dims">1080×1920</span>
+              </button>
+              <button
+                class="plat-btn"
+                data-h="1920"
+                data-name="TikTok Video"
+                data-w="1080"
+              >
+                <span class="plat-icon">🎵</span
+                ><span class="plat-name">TikTok</span
+                ><span class="plat-dims">1080×1920</span>
+              </button>
+              <button
+                class="plat-btn"
+                data-h="720"
+                data-name="YouTube Thumbnail"
+                data-w="1280"
+              >
+                <span class="plat-icon">▶️</span
+                ><span class="plat-name">YouTube</span
+                ><span class="plat-dims">1280×720</span>
+              </button>
+              <button
+                class="plat-btn"
+                data-h="630"
+                data-name="Facebook Post"
+                data-w="1200"
+              >
+                <span class="plat-icon">📘</span
+                ><span class="plat-name">Facebook</span
+                ><span class="plat-dims">1200×630</span>
+              </button>
+              <button
+                class="plat-btn"
+                data-h="675"
+                data-name="Twitter/X Post"
+                data-w="1200"
+              >
+                <span class="plat-icon">🐦</span
+                ><span class="plat-name">Twitter/X</span
+                ><span class="plat-dims">1200×675</span>
+              </button>
+              <button
+                class="plat-btn"
+                data-h="627"
+                data-name="LinkedIn Post"
+                data-w="1200"
+              >
+                <span class="plat-icon">💼</span
+                ><span class="plat-name">LinkedIn</span
+                ><span class="plat-dims">1200×627</span>
+              </button>
+            </div>
+            <div class="resize-workspace">
+              <div>
+                <div
+                  class="upload-drop"
+                  id="resize-drop"
+                  onclick="document.getElementById('resize-file').click()"
+                >
+                  <div style="font-size: 2.5rem">📥</div>
+                  <div
+                    style="
+                      font-weight: 700;
+                      font-size: 1rem;
+                      color: var(--text-primary);
+                      margin-top: 8px;
+                    "
+                  >
+                    Drop image here or click to upload
+                  </div>
+                  <p>JPEG, PNG, WebP, BMP supported</p>
+                  <input
+                    accept="image/*"
+                    id="resize-file"
+                    style="display: none"
+                    type="file"
+                  />
+                </div>
+                <div
+                  id="resize-canvas-wrap"
+                  style="margin-top: 16px; display: none"
+                >
+                  <canvas id="resize-canvas"></canvas>
+                  <span id="resize-badge"></span>
+                </div>
+              </div>
+              <div class="resize-panel">
+                <div>
+                  <div class="section-label" style="margin-bottom: 10px">
+                    Output Size
+                  </div>
+                  <div class="resize-dims-row">
+                    <div class="dim-group">
+                      <label for="out-w">Width (px)</label>
+                      <input
+                        id="out-w"
+                        max="8000"
+                        min="1"
+                        type="number"
+                        value="1080"
+                      />
+                    </div>
+                    <span>×</span>
+                    <div class="dim-group">
+                      <label for="out-h">Height (px)</label>
+                      <input
+                        id="out-h"
+                        max="8000"
+                        min="1"
+                        type="number"
+                        value="1080"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <label>Fit Mode</label>
+                  <div class="fit-mode-btns">
+                    <button class="fit-mode-btn active" data-mode="fit">
+                      Fit (letterbox)
+                    </button>
+                    <button class="fit-mode-btn" data-mode="fill">
+                      Fill (crop)
+                    </button>
+                    <button class="fit-mode-btn" data-mode="stretch">
+                      Stretch
+                    </button>
+                  </div>
+                </div>
+                <button
+                  class="btn-download-resize"
+                  disabled=""
+                  id="btn-resize-download"
+                >
+                  💾 Download Resized Image
+                </button>
+              </div>
+            </div>
+          </div>
+          <article
+            class="seo-wrapper"
+            style="
+              max-width: 1080px;
+              margin: 60px auto;
+              padding: 0 24px 80px;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 40px;
+              align-items: start;
+            "
+          >
+            <div style="text-align: center">
+              <img
+                alt="How to resize for social media"
+                src="/assets/images/resize-tutorial.png"
+                style="
+                  width: 100%;
+                  border-radius: 20px;
+                  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                "
+              />
+            </div>
+            <div>
+              <h2
+                style="
+                  font-size: 2rem;
+                  font-weight: 800;
+                  margin-top: 0;
+                  margin-bottom: 24px;
+                "
+              >
+                Why Image Dimensions Matter for Social Media
+              </h2>
+              <p
+                style="
+                  line-height: 1.8;
+                  margin-bottom: 20px;
+                  color: var(--text-secondary);
+                "
+              >
+                Every social media platform uses its own proprietary compression
+                algorithm. If you upload a photo that doesn't match their
+                required aspect ratio, the platform will crop it
+                automatically—often cutting off heads or important text.
+                Additionally, oversized images will be heavily compressed by the
+                platform, resulting in blurry, pixelated artifacts. Our tool
+                ensures your photos are pixel-perfect before you hit upload.
+              </p>
+              <p
+                style="
+                  line-height: 1.8;
+                  margin-bottom: 20px;
+                  color: var(--text-secondary);
+                "
+              >
+                Our local browser-based resizing uses high-quality interpolation
+                to preserve sharpness, ensuring your photos look crisp and
+                professional on every screen.
+              </p>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: 1fr;
+                  gap: 24px;
+                  margin: 32px 0;
+                "
+              >
+                <div
+                  style="
+                    padding: 24px;
+                    background: var(--bg-sunken);
+                    border-radius: 12px;
+                    border: 1px solid var(--border);
+                  "
+                >
+                  <h3 style="margin-top: 0; font-size: 1.2rem">
+                    📸 Instagram Post &amp; Story Guide
+                  </h3>
+                  <p
+                    style="
+                      font-size: 0.95rem;
+                      color: var(--text-secondary);
+                      line-height: 1.6;
+                    "
+                  >
+                    Use <strong>1080x1080</strong> for standard square posts.
+                    However, professional marketers recommend
+                    <strong>1080x1350</strong> (portrait) because it takes up
+                    maximum screen real estate in the feed, forcing users to
+                    pause scrolling. For Stories, always use
+                    <strong>1080x1920</strong>.
+                  </p>
+                </div>
+                <div
+                  style="
+                    padding: 24px;
+                    background: var(--bg-sunken);
+                    border-radius: 12px;
+                    border: 1px solid var(--border);
+                  "
+                >
+                  <h3 style="margin-top: 0; font-size: 1.2rem">
+                    🎵 TikTok &amp; YouTube Shorts
+                  </h3>
+                  <p
+                    style="
+                      font-size: 0.95rem;
+                      color: var(--text-secondary);
+                      line-height: 1.6;
+                    "
+                  >
+                    Vertical video platforms require a 9:16 aspect ratio,
+                    exactly <strong>1080x1920</strong> pixels. Be careful to
+                    respect the platform's "safe zones"—do not put important
+                    text at the very bottom or right edges, as the UI (like
+                    buttons and captions) will cover it.
+                  </p>
+                </div>
+                <div
+                  style="
+                    padding: 24px;
+                    background: var(--bg-sunken);
+                    border-radius: 12px;
+                    border: 1px solid var(--border);
+                  "
+                >
+                  <h3 style="margin-top: 0; font-size: 1.2rem">
+                    ▶️ YouTube Thumbnails
+                  </h3>
+                  <p
+                    style="
+                      font-size: 0.95rem;
+                      color: var(--text-secondary);
+                      line-height: 1.6;
+                    "
+                  >
+                    YouTube requires thumbnails to be exactly
+                    <strong>1280x720</strong> pixels (16:9 ratio). More
+                    importantly, the file size must be strictly under 2MB. Use
+                    our "Fit" mode to prevent stretching, and export as JPEG.
+                  </p>
+                </div>
+                <div
+                  style="
+                    padding: 24px;
+                    background: var(--bg-sunken);
+                    border-radius: 12px;
+                    border: 1px solid var(--border);
+                  "
+                >
+                  <h3 style="margin-top: 0; font-size: 1.2rem">
+                    💼 LinkedIn &amp; Twitter/X
+                  </h3>
+                  <p
+                    style="
+                      font-size: 0.95rem;
+                      color: var(--text-secondary);
+                      line-height: 1.6;
+                    "
+                  >
+                    For shared link previews and standard image posts, use
+                    <strong>1200x627</strong> for LinkedIn and
+                    <strong>1200x675</strong> for Twitter. This ensures your
+                    image fills the desktop feed without cropping.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="related-section"
+              style="
+                margin-top: 40px;
+                border-top: 1px solid var(--border);
+                padding-top: 32px;
+              "
+            >
+              <h2 style="font-size: 1.5rem; margin-top: 0; margin-bottom: 24px">
+                Related Guides &amp; Tutorials
+              </h2>
+              <div
+                class="related-grid"
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                  gap: 16px;
+                "
+              >
+                <a
+                  class="related-card"
+                  href="/blog/understanding-dpi-and-resolution"
+                  style="
+                    background: var(--bg-surface);
+                    border: 1px solid var(--border);
+                    border-radius: 12px;
+                    padding: 18px;
+                    text-decoration: none;
+                    color: inherit;
+                    display: block;
+                    transition:
+                      transform 0.2s,
+                      box-shadow 0.2s;
+                  "
+                >
+                  <h3
+                    style="
+                      font-size: 0.95rem;
+                      font-weight: 600;
+                      margin: 0 0 8px;
+                    "
+                  >
+                    Understanding DPI and Resolution
+                  </h3>
+                  <p
+                    style="
+                      font-size: 0.85rem;
+                      color: var(--text-secondary);
+                      margin: 0;
+                      line-height: 1.5;
+                    "
+                  >
+                    Learn how to choose the perfect scanner settings for your
+                    archival project.
+                  </p>
+                </a>
+                <a
+                  class="related-card"
+                  href="/blog/restore-water-damaged-photos"
+                  style="
+                    background: var(--bg-surface);
+                    border: 1px solid var(--border);
+                    border-radius: 12px;
+                    padding: 18px;
+                    text-decoration: none;
+                    color: inherit;
+                    display: block;
+                    transition:
+                      transform 0.2s,
+                      box-shadow 0.2s;
+                  "
+                >
+                  <h3
+                    style="
+                      font-size: 0.95rem;
+                      font-weight: 600;
+                      margin: 0 0 8px;
+                    "
+                  >
+                    Restoring Water-Damaged Photos
+                  </h3>
+                  <p
+                    style="
+                      font-size: 0.85rem;
+                      color: var(--text-secondary);
+                      margin: 0;
+                      line-height: 1.5;
+                    "
+                  >
+                    Safe physical separation and digital restoration techniques
+                    for wet photographs.
+                  </p>
+                </a>
+                <a
+                  class="related-card"
+                  href="/blog/choosing-the-right-scanner"
+                  style="
+                    background: var(--bg-surface);
+                    border: 1px solid var(--border);
+                    border-radius: 12px;
+                    padding: 18px;
+                    text-decoration: none;
+                    color: inherit;
+                    display: block;
+                    transition:
+                      transform 0.2s,
+                      box-shadow 0.2s;
+                  "
+                >
+                  <h3
+                    style="
+                      font-size: 0.95rem;
+                      font-weight: 600;
+                      margin: 0 0 8px;
+                    "
+                  >
+                    Choosing the Right Photo Scanner
+                  </h3>
+                  <p
+                    style="
+                      font-size: 0.85rem;
+                      color: var(--text-secondary);
+                      margin: 0;
+                      line-height: 1.5;
+                    "
+                  >
+                    Flatbed vs Auto-feed vs Smartphone apps: an in-depth buying
+                    guide.
+                  </p>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <aside class="page-sidebar">
+          <div class="ad-sidebar-sticky">
+            <span class="ad-sidebar-label">Advertisement</span>
+            <div
+              id="ad-sidebar"
+              style="
+                margin: 0;
+                min-height: 250px;
+                background: var(--bg-surface-2);
+                border: 1px dashed var(--border-strong);
+                border-radius: var(--radius-md);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <div class="ad-item">
+                <script>
+                  atOptions = {
+                    key: "eefa27f757f4d0772d979fca1074f12a",
+                    format: "iframe",
+                    height: 250,
+                    width: 300,
+                    params: {},
+                  };
+                </script>
+                <script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <section class="gear-section">
+      <div class="gear-section-inner">
+        <h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
+        <p class="gear-section-sub">
+          Pair PhotoSplit Studio with the best hardware for fast, high-quality
+          archiving and secure backups.
+        </p>
+        <div class="gear-cards-grid"></div>
+        <p class="affiliate-disclosure">
+          As an Amazon Associate, PhotoSplit Studio earns from qualifying
+          purchases.
+        </p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="/app">App</a>
+          <a href="/blog/">Blog</a>
+          <a href="/tips">Scanning Tips</a>
+          <a href="/contact">Contact</a>
+          <a href="/terms">Terms</a>
+          <a href="/privacy-policy">Privacy</a>
+          <a href="/about">About</a>
+          <a
+            href="#"
+            onclick="
+              if (typeof openTextModal === 'function')
+                openTextModal('feedback-modal', event);
+            "
+            >Feedback</a
+          >
+        </div>
+        <div class="footer-copy">
+          © 2026 PhotoSplit Studio. All rights reserved.
+        </div>
+      </div>
+      <div class="site-status-bar">
+        <div class="status-item">
+          <span class="status-label">Is it dark outside?</span
+          ><span class="status-value" id="dark-status-answer">...</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Global Visitors:</span
+          ><img
+            alt="Visitor Count"
+            class="visitor-badge"
+            src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"
+          />
+        </div>
+      </div>
+      <script>
+        (function () {
+          var h = new Date().getHours();
+          var ans = h >= 18 || h < 6 ? "YES" : "NO";
+          var el = document.getElementById("dark-status-answer");
+          if (el) el.textContent = ans;
+        })();
+      </script>
+    </footer>
+
+    <!-- MODALS START -->
+    <div
+      class="text-modal-backdrop"
+      id="feedback-modal"
+      onclick="
+        if (event.target === this && typeof closeTextModal === 'function')
+          closeTextModal('feedback-modal');
+      "
+    >
+      <div class="text-modal-box">
+        <div class="text-modal-header">
+          <h2>Provide Feedback</h2>
+          <button
+            class="icon-btn"
+            onclick="
+              if (typeof closeTextModal === 'function')
+                closeTextModal('feedback-modal');
+            "
+          >
+            ✕
+          </button>
+        </div>
+        <div class="text-modal-content" id="feedback-form-view">
+          <form
+            onsubmit="
+              if (typeof handleFeedbackSubmit === 'function')
+                handleFeedbackSubmit(event);
+            "
+          >
+            <input
+              class="form-control mb-12"
+              id="fb-name"
+              placeholder="Your Name"
+              required=""
+              type="text"
+              style="margin-bottom: 12px"
+            />
+            <input
+              class="form-control mb-12"
+              id="fb-email"
+              placeholder="your@email.com"
+              required=""
+              type="email"
+              style="margin-bottom: 12px"
+            />
+            <textarea
+              class="form-control mb-12"
+              id="fb-desc"
+              placeholder="Your feedback..."
+              required=""
+              rows="4"
+              style="margin-bottom: 12px"
+            ></textarea>
+            <button class="btn btn-primary" style="width: 100%" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+        <div
+          class="text-modal-content"
+          id="feedback-success-view"
+          style="display: none; text-align: center"
+        >
+          <h3>✅ Thank you!</h3>
+          <p>Your feedback has been received.</p>
+          <button
+            class="btn btn-secondary"
+            onclick="
+              if (typeof closeTextModal === 'function')
+                closeTextModal('feedback-modal');
+            "
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="cookie-consent" role="dialog">
+      <div id="cookie-consent-inner">
+        <p>
+          🍪 We use cookies to improve your experience. See our
+          <a href="/privacy-policy">Privacy Policy</a>.
+        </p>
+        <div id="cookie-consent-actions">
+          <button class="cookie-btn" id="cookie-decline">Decline</button>
+          <button class="cookie-btn cookie-btn-accept" id="cookie-accept">
+            Accept All
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        if (!localStorage.getItem("ps_counted")) {
+          localStorage.setItem("ps_counted", "true");
+          var img = new Image();
+          img.src =
+            "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
+        }
+
+        window.handleFeedbackSubmit = function (e) {
+          e.preventDefault();
+          var params = new URLSearchParams();
+          params.append(
+            "entry.1051903221",
+            document.getElementById("fb-name").value,
+          );
+          params.append(
+            "entry.371950700",
+            document.getElementById("fb-email").value,
+          );
+          params.append(
+            "entry.852578852",
+            document.getElementById("fb-desc").value,
+          );
+          fetch(
+            "https://docs.google.com/forms/d/e/1FAIpQLSeJe_jw0IHHXeT4w4hzcZJ2WXREaT8aD4_R4LFBGVZNazsehg/formResponse",
+            { method: "POST", mode: "no-cors", body: params },
+          );
+          document.getElementById("feedback-form-view").style.display = "none";
+          document.getElementById("feedback-success-view").style.display =
+            "block";
+        };
+
+        // Cookie Consent
+        var banner = document.getElementById("cookie-consent");
+        if (banner) {
+          if (!localStorage.getItem("pss_cookie_consent")) {
+            banner.classList.add("visible");
+          } else if (
+            localStorage.getItem("pss_cookie_consent") === "accepted"
+          ) {
+            if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+            if (typeof loadGoogleAnalytics === "function")
+              loadGoogleAnalytics();
           }
-  </script>
-<style>
-    .resize-tool { max-width: 960px; margin: 0 auto; padding: 32px 24px 60px; }
-    .platform-picker { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; margin: 24px 0; }
-    .plat-btn { background: var(--bg-surface); border: 1.5px solid var(--border); border-radius: var(--radius-md); padding: 14px 10px; text-align: center; cursor: pointer; transition: all 0.15s; font-family: inherit; }
-    .plat-btn:hover, .plat-btn.active { border-color: var(--accent); background: rgba(254,44,85,0.07); }
-    .plat-btn.active { box-shadow: 0 0 0 3px var(--accent-glow); }
-    .plat-btn .plat-icon { font-size: 1.6rem; display: block; margin-bottom: 6px; }
-    .plat-btn .plat-name { font-size: 0.75rem; font-weight: 700; color: var(--text-primary); display: block; }
-    .plat-btn .plat-dims { font-size: 0.65rem; color: var(--text-muted); display: block; margin-top: 2px; }
-    .plat-btn.active .plat-name { color: var(--accent); }
-    .resize-workspace { display: grid; grid-template-columns: 1fr 340px; gap: 24px; margin-top: 24px; }
-    @media(max-width:720px){ .resize-workspace { grid-template-columns: 1fr; } }
-    .upload-drop { border: 2px dashed var(--border-strong); border-radius: var(--radius-lg); padding: 48px 24px; text-align: center; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
-    .upload-drop:hover, .upload-drop.drag-over { border-color: var(--accent); background: rgba(254,44,85,0.05); }
-    .upload-drop p { color: var(--text-muted); margin: 8px 0 0; font-size: 0.85rem; }
-    #resize-canvas-wrap { background: var(--bg-base); border-radius: var(--radius-md); overflow: hidden; display:flex; align-items:center; justify-content:center; min-height:200px; position: relative; }
-    #resize-canvas-wrap canvas { max-width: 100%; max-height: 400px; display: block; }
-    .resize-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px; display: flex; flex-direction: column; gap: 16px; }
-    .resize-panel label { font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); display: block; margin-bottom: 4px; }
-    .resize-panel input[type=number] { width: 100%; padding: 8px 10px; background: var(--bg-surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-primary); font-family: inherit; font-size: 0.9rem; }
-    .resize-panel select { width: 100%; padding: 8px 10px; background: var(--bg-surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-primary); font-family: inherit; font-size: 0.9rem; }
-    .resize-dims-row { display: flex; gap: 10px; align-items: center; }
-    .resize-dims-row span { color: var(--text-muted); font-size: 1.1rem; padding-top: 20px; }
-    .dim-group { flex: 1; }
-    .fit-mode-btns { display: flex; gap: 6px; }
-    .fit-mode-btn { flex: 1; padding: 7px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-surface-2); font-family: inherit; font-size: 0.72rem; font-weight: 600; color: var(--text-secondary); cursor: pointer; transition: all 0.12s; }
-    .fit-mode-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(254,44,85,0.08); }
-    .btn-download-resize { background: linear-gradient(135deg,#fe2c55,#ff375f); color: #fff; border: none; border-radius: 99px; padding: 14px; font-size: 1rem; font-weight: 700; cursor: pointer; width: 100%; box-shadow: 0 3px 14px rgba(254,44,85,0.38); transition: all 0.15s; }
-    .btn-download-resize:hover { transform: translateY(-1px); box-shadow: 0 5px 20px rgba(254,44,85,0.48); }
-    #resize-badge { position: absolute; bottom: 6px; right: 6px; background: rgba(0,0,0,0.6); color: #fff; font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; pointer-events: none; }
-  </style>
-<link href="/css/style-premium.css" rel="stylesheet"/></head>
-<body>
-<header id="site-header">
-<button aria-label="Toggle navigation" class="icon-btn" id="sidebar-toggle">
-<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20">
-<path d="M3 12h18M3 6h18M3 18h18"></path>
-</svg>
-</button>
-<a class="logo" href="/">
-<img alt="PhotoSplit Logo" class="logo-img" src="/assets/images/logo-animated.svg" style="width:32px;height:32px;"/>
-      PhotoSplit Studio
-    </a>
-<div class="header-spacer"></div>
-<div class="privacy-badge">
-<svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14">
-<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-</svg>
-<span>100% Private · No Uploads</span>
-</div>
-<nav class="main-nav">
-
-<a href="/app" class="">Split Photos</a>
-<a href="/resize" class="active">Resize</a>
-<a href="/blog/" class="">Blog</a>
-<a href="/tips" class="">Tips</a>
-<a href="/about" class="">About</a>
-<a href="/contact" class="">Contact</a>
-</nav>
-
-<button class="icon-btn" id="theme-toggle" onclick="if(typeof toggleTheme === 'function') toggleTheme()" title="Toggle Dark/Light Mode">🌓</button>
-
-</header>
-
-<main>
-<section class="hero-utility">
-<h1>Social Media Image Resizer</h1>
-<p>Resize any photo to exact platform dimensions — Instagram, TikTok, YouTube &amp; more.</p>
-</section>
-<!-- AdSense &mdash; Below Hero -->
-<div class="page-with-sidebar"><div class="page-main-content"><div style="max-width: 1250px; margin: var(--space-md) auto; padding: 0 24px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; align-items: center;">
-<div class="ad-item"><script>
-  atOptions = {
-    'key' : '033703f2c2dfe7a5fa4501cd3ba1417e',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/033703f2c2dfe7a5fa4501cd3ba1417e/invoke.js"></script></div>
-<div class="ad-item"><script>
-  atOptions = {
-    'key' : 'eefa27f757f4d0772d979fca1074f12a',
-    'format' : 'iframe',
-    'height' : 60,
-    'width' : 468,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script></div>
-</div><div class="resize-tool">
-<div class="section-label">Choose a Platform</div>
-<div class="platform-picker" id="platform-picker">
-<button class="plat-btn" data-h="1080" data-name="Instagram Post" data-w="1080">
-<span class="plat-icon">📸</span><span class="plat-name">Instagram</span><span class="plat-dims">1080×1080</span>
-</button>
-<button class="plat-btn" data-h="1920" data-name="Instagram Story" data-w="1080">
-<span class="plat-icon">📱</span><span class="plat-name">IG Story</span><span class="plat-dims">1080×1920</span>
-</button>
-<button class="plat-btn" data-h="1920" data-name="TikTok Video" data-w="1080">
-<span class="plat-icon">🎵</span><span class="plat-name">TikTok</span><span class="plat-dims">1080×1920</span>
-</button>
-<button class="plat-btn" data-h="720" data-name="YouTube Thumbnail" data-w="1280">
-<span class="plat-icon">▶️</span><span class="plat-name">YouTube</span><span class="plat-dims">1280×720</span>
-</button>
-<button class="plat-btn" data-h="630" data-name="Facebook Post" data-w="1200">
-<span class="plat-icon">📘</span><span class="plat-name">Facebook</span><span class="plat-dims">1200×630</span>
-</button>
-<button class="plat-btn" data-h="675" data-name="Twitter/X Post" data-w="1200">
-<span class="plat-icon">🐦</span><span class="plat-name">Twitter/X</span><span class="plat-dims">1200×675</span>
-</button>
-<button class="plat-btn" data-h="627" data-name="LinkedIn Post" data-w="1200">
-<span class="plat-icon">💼</span><span class="plat-name">LinkedIn</span><span class="plat-dims">1200×627</span>
-</button>
-</div>
-<div class="resize-workspace">
-<div>
-<div class="upload-drop" id="resize-drop" onclick="document.getElementById('resize-file').click()">
-<div style="font-size:2.5rem">📥</div>
-<div style="font-weight:700;font-size:1rem;color:var(--text-primary);margin-top:8px">Drop image here or click to upload</div>
-<p>JPEG, PNG, WebP, BMP supported</p>
-<input accept="image/*" id="resize-file" style="display:none" type="file"/>
-</div>
-<div id="resize-canvas-wrap" style="margin-top:16px;display:none;">
-<canvas id="resize-canvas"></canvas>
-<span id="resize-badge"></span>
-</div>
-</div>
-<div class="resize-panel">
-<div>
-<div class="section-label" style="margin-bottom:10px">Output Size</div>
-<div class="resize-dims-row">
-<div class="dim-group">
-<label for="out-w">Width (px)</label>
-<input id="out-w" max="8000" min="1" type="number" value="1080"/>
-</div>
-<span>×</span>
-<div class="dim-group">
-<label for="out-h">Height (px)</label>
-<input id="out-h" max="8000" min="1" type="number" value="1080"/>
-</div>
-</div>
-</div>
-<div>
-<label>Fit Mode</label>
-<div class="fit-mode-btns">
-<button class="fit-mode-btn active" data-mode="fit">Fit (letterbox)</button>
-<button class="fit-mode-btn" data-mode="fill">Fill (crop)</button>
-<button class="fit-mode-btn" data-mode="stretch">Stretch</button>
-</div>
-</div>
-<button class="btn-download-resize" disabled="" id="btn-resize-download">💾 Download Resized Image</button>
-</div>
-</div>
-</div><article class="seo-wrapper" style="max-width:1080px;margin:60px auto;padding:0 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
-<div style="text-align: center;"><img alt="How to resize for social media" src="/assets/images/resize-tutorial.png" style="width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"/></div>
-<div>
-<h2 style="font-size: 2rem; font-weight: 800; margin-top: 0; margin-bottom: 24px;">Why Image Dimensions Matter for Social Media</h2>
-<p style="line-height: 1.8; margin-bottom: 20px; color: var(--text-secondary);">Every social media platform uses its own proprietary compression algorithm. If you upload a photo that doesn't match their required aspect ratio, the platform will crop it automatically—often cutting off heads or important text. Additionally, oversized images will be heavily compressed by the platform, resulting in blurry, pixelated artifacts. Our tool ensures your photos are pixel-perfect before you hit upload.</p>
-<p style="line-height: 1.8; margin-bottom: 20px; color: var(--text-secondary);">Our local browser-based resizing uses high-quality interpolation to preserve sharpness, ensuring your photos look crisp and professional on every screen.</p>
-<div style="display: grid; grid-template-columns: 1fr; gap: 24px; margin: 32px 0;">
-<div style="padding: 24px; background: var(--bg-sunken); border-radius: 12px; border: 1px solid var(--border);">
-<h3 style="margin-top: 0; font-size: 1.2rem;">📸 Instagram Post &amp; Story Guide</h3>
-<p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">Use <strong>1080x1080</strong> for standard square posts. However, professional marketers recommend <strong>1080x1350</strong> (portrait) because it takes up maximum screen real estate in the feed, forcing users to pause scrolling. For Stories, always use <strong>1080x1920</strong>.</p>
-</div>
-<div style="padding: 24px; background: var(--bg-sunken); border-radius: 12px; border: 1px solid var(--border);">
-<h3 style="margin-top: 0; font-size: 1.2rem;">🎵 TikTok &amp; YouTube Shorts</h3>
-<p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">Vertical video platforms require a 9:16 aspect ratio, exactly <strong>1080x1920</strong> pixels. Be careful to respect the platform's "safe zones"—do not put important text at the very bottom or right edges, as the UI (like buttons and captions) will cover it.</p>
-</div>
-<div style="padding: 24px; background: var(--bg-sunken); border-radius: 12px; border: 1px solid var(--border);">
-<h3 style="margin-top: 0; font-size: 1.2rem;">▶️ YouTube Thumbnails</h3>
-<p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">YouTube requires thumbnails to be exactly <strong>1280x720</strong> pixels (16:9 ratio). More importantly, the file size must be strictly under 2MB. Use our "Fit" mode to prevent stretching, and export as JPEG.</p>
-</div>
-<div style="padding: 24px; background: var(--bg-sunken); border-radius: 12px; border: 1px solid var(--border);">
-<h3 style="margin-top: 0; font-size: 1.2rem;">💼 LinkedIn &amp; Twitter/X</h3>
-<p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">For shared link previews and standard image posts, use <strong>1200x627</strong> for LinkedIn and <strong>1200x675</strong> for Twitter. This ensures your image fills the desktop feed without cropping.</p>
-</div>
-</div>
-</div>
-<div class="related-section" style="margin-top: 40px; border-top: 1px solid var(--border); padding-top: 32px;">
-<h2 style="font-size: 1.5rem; margin-top: 0; margin-bottom: 24px;">Related Guides &amp; Tutorials</h2>
-<div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
-<a class="related-card" href="/blog/understanding-dpi-and-resolution" style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; text-decoration: none; color: inherit; display: block; transition: transform 0.2s, box-shadow 0.2s;">
-<h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 8px;">Understanding DPI and Resolution</h3>
-<p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Learn how to choose the perfect scanner settings for your archival project.</p>
-</a>
-<a class="related-card" href="/blog/restore-water-damaged-photos" style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; text-decoration: none; color: inherit; display: block; transition: transform 0.2s, box-shadow 0.2s;">
-<h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 8px;">Restoring Water-Damaged Photos</h3>
-<p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Safe physical separation and digital restoration techniques for wet photographs.</p>
-</a>
-<a class="related-card" href="/blog/choosing-the-right-scanner" style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; text-decoration: none; color: inherit; display: block; transition: transform 0.2s, box-shadow 0.2s;">
-<h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 8px;">Choosing the Right Photo Scanner</h3>
-<p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Flatbed vs Auto-feed vs Smartphone apps: an in-depth buying guide.</p>
-</a>
-</div>
-</div>
-</article></div>
-<aside class="page-sidebar">
-<div class="ad-sidebar-sticky">
-<span class="ad-sidebar-label">Advertisement</span>
-<div id="ad-sidebar" style="margin:0; min-height:250px; background:var(--bg-surface-2); border:1px dashed var(--border-strong); border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center;">
-<div class="ad-item">
-<script>
-          atOptions = {
-            'key' : 'eefa27f757f4d0772d979fca1074f12a',
-            'format' : 'iframe',
-            'height' : 250,
-            'width' : 300,
-            'params' : {}
-          };
-        </script>
-<script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
-</div>
-</div>
-</div>
-</aside>
-</div>
-</main>
-<section class="gear-section">
-<div class="gear-section-inner">
-<h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
-<p class="gear-section-sub">Pair PhotoSplit Studio with the best hardware for fast, high-quality archiving and secure backups.</p>
-<div class="gear-cards-grid"></div>
-<p class="affiliate-disclosure">As an Amazon Associate, PhotoSplit Studio earns from qualifying purchases.</p>
-</div>
-</section>
-
-<footer class="site-footer">
-<div class="footer-inner">
-<div class="footer-links">
-<a href="/app">App</a>
-<a href="/blog/">Blog</a>
-<a href="/tips">Scanning Tips</a>
-<a href="/contact">Contact</a>
-<a href="/terms">Terms</a>
-<a href="/privacy-policy">Privacy</a>
-<a href="/about">About</a>
-<a href="#" onclick="if(typeof openTextModal === 'function') openTextModal('feedback-modal', event)">Feedback</a>
-</div>
-<div class="footer-copy">© 2026 PhotoSplit Studio. All rights reserved.</div>
-</div>
-<div class="site-status-bar">
-  <div class="status-item"><span class="status-label">Is it dark outside?</span><span class="status-value" id="dark-status-answer">...</span></div>
-  <div class="status-item"><span class="status-label">Global Visitors:</span><img alt="Visitor Count" class="visitor-badge" src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"/></div>
-</div>
-<script>(function(){ var h=new Date().getHours(); var ans=(h>=18||h<6)?"YES":"NO"; var el=document.getElementById("dark-status-answer"); if(el) el.textContent=ans; })();</script>
-</footer>
-
-<div id="cookie-consent" role="dialog">
-<div id="cookie-consent-inner">
-<p>🍪 We use cookies to improve your experience. See our <a href="/privacy-policy">Privacy Policy</a>.</p>
-<div id="cookie-consent-actions">
-<button class="cookie-btn" id="cookie-decline">Decline</button>
-<button class="cookie-btn cookie-btn-accept" id="cookie-accept">Accept All</button>
-</div>
-</div>
-</div>
-<script>
-    (function () {
-      let srcImage = null;
-      let fitMode = 'fit';
-      const drop = document.getElementById('resize-drop');
-      const fileInput = document.getElementById('resize-file');
-      const canvasWrap = document.getElementById('resize-canvas-wrap');
-      const canvas = document.getElementById('resize-canvas');
-      const ctx = canvas.getContext('2d');
-      const outW = document.getElementById('out-w');
-      const outH = document.getElementById('out-h');
-      const btnDl = document.getElementById('btn-resize-download');
-
-      function loadFile(file) {
-        if (!file || !file.type.startsWith('image/')) return;
-        const url = URL.createObjectURL(file);
-        const img = new Image();
-        img.onload = () => { URL.revokeObjectURL(url); srcImage = img; render(); btnDl.disabled = false; };
-        img.src = url;
-      }
-      fileInput.addEventListener('change', e => loadFile(e.target.files[0]));
-
-      drop.addEventListener('dragover', (e) => {
-        e.preventDefault();
-        drop.classList.add('drag-over');
-      });
-      drop.addEventListener('dragleave', (e) => {
-        e.preventDefault();
-        drop.classList.remove('drag-over');
-      });
-      drop.addEventListener('drop', (e) => {
-        e.preventDefault();
-        drop.classList.remove('drag-over');
-        if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
-          loadFile(e.dataTransfer.files[0]);
+          var acceptBtn = document.getElementById("cookie-accept");
+          if (acceptBtn) {
+            acceptBtn.onclick = function () {
+              localStorage.setItem("pss_cookie_consent", "accepted");
+              banner.classList.remove("visible");
+              if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+              if (typeof loadGoogleAnalytics === "function")
+                loadGoogleAnalytics();
+            };
+          }
+          var declineBtn = document.getElementById("cookie-decline");
+          if (declineBtn) {
+            declineBtn.onclick = function () {
+              localStorage.setItem("pss_cookie_consent", "declined");
+              banner.classList.remove("visible");
+            };
+          }
         }
-      });
-
-      document.getElementById('platform-picker').querySelectorAll('.plat-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          document.querySelectorAll('.plat-btn').forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          outW.value = btn.dataset.w;
-          outH.value = btn.dataset.h;
-          render();
-        });
-      });
-
-      document.querySelectorAll('.fit-mode-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          document.querySelectorAll('.fit-mode-btn').forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          fitMode = btn.dataset.mode;
-          render();
-        });
-      });
-
-      function render() {
-        if (!srcImage) return;
-        const W = parseInt(outW.value) || 1080;
-        const H = parseInt(outH.value) || 1080;
-        canvas.width = W; canvas.height = H;
-        ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, W, H);
-        const sw = srcImage.naturalWidth, sh = srcImage.naturalHeight;
-        let sx = 0, sy = 0, sW = sw, sH = sh, dx = 0, dy = 0, dW = W, dH = H;
-        if (fitMode === 'fit') {
-          const scale = Math.min(W / sw, H / sh);
-          dW = sw * scale; dH = sh * scale;
-          dx = (W - dW) / 2; dy = (H - dH) / 2;
-        } else if (fitMode === 'fill') {
-          const scale = Math.max(W / sw, H / sh);
-          const cw = W / scale, ch = H / scale;
-          sx = (sw - cw) / 2; sy = (sh - ch) / 2; sW = cw; sH = ch;
-        }
-        ctx.drawImage(srcImage, sx, sy, sW, sH, dx, dy, dW, dH);
-        canvasWrap.style.display = 'flex';
-      }
-
-      btnDl.addEventListener('click', () => {
-        canvas.toBlob(blob => {
-          const a = document.createElement('a');
-          a.href = URL.createObjectURL(blob);
-          a.download = `resized_${outW.value}x${outH.value}.jpg`;
-          a.click();
-        }, 'image/jpeg', 0.92);
-      });
-
-      // Cookie Consent
-      var banner = document.getElementById('cookie-consent');
-      if (!localStorage.getItem('pss_cookie_consent')) {
-        banner.classList.add('visible');
-      } else if (localStorage.getItem('pss_cookie_consent') === 'accepted') {
-        if (typeof loadGoogleScripts === 'function') loadGoogleScripts();
-      }
-      document.getElementById('cookie-accept').onclick = function() { 
-        localStorage.setItem('pss_cookie_consent', 'accepted'); 
-        banner.classList.remove('visible'); 
-        if (typeof loadGoogleScripts === 'function') loadGoogleScripts();
-      };
-      document.getElementById('cookie-decline').onclick = function() { 
-        localStorage.setItem('pss_cookie_consent', 'declined'); 
-        banner.classList.remove('visible'); 
-      };
-    }());
-  </script>
-</body>
+      })();
+    </script>
+    <!-- MODALS END -->
+  </body>
 </html>

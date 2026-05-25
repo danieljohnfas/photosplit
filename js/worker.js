@@ -3,30 +3,38 @@
  * Handles robust computer vision for photo detection.
  */
 
-'use strict';
+"use strict";
 
 // We load opencv.js dynamically to avoid blocking the main thread UX.
 let cvReady = false;
 let cvInitCallbacks = [];
 
 // When the worker starts, fetch OpenCV
-self.postMessage({ type: 'PROGRESS', value: 0, label: 'Downloading vision engine (once)…' });
+self.postMessage({
+  type: "PROGRESS",
+  value: 0,
+  label: "Downloading vision engine (once)…",
+});
 
 // We define Module before importing so opencv.js knows how to signal readiness
 self.Module = {
-  onRuntimeInitialized: function() {
+  onRuntimeInitialized: function () {
     cvReady = true;
-    self.postMessage({ type: 'PROGRESS', value: 0, label: 'Vision engine ready.' });
+    self.postMessage({
+      type: "PROGRESS",
+      value: 0,
+      label: "Vision engine ready.",
+    });
     // Process any queued image tasks
     while (cvInitCallbacks.length > 0) {
       const cb = cvInitCallbacks.shift();
       cb();
     }
-  }
+  },
 };
 
 // Import OpenCV WASM asynchronously
-importScripts('https://docs.opencv.org/4.8.0/opencv.js');
+importScripts("https://docs.opencv.org/4.8.0/opencv.js");
 
 self.onmessage = function (e) {
   const { type, imageData, options } = e.data;
@@ -42,28 +50,36 @@ self.onmessage = function (e) {
 function handleRequest(type, imageData, options) {
   try {
     switch (type) {
-      case 'DETECT_PHOTOS':
+      case "DETECT_PHOTOS":
         const boxes = detectPhotosOpenCV(imageData, options);
-        self.postMessage({ type: 'DETECT_DONE', boxes });
+        self.postMessage({ type: "DETECT_DONE", boxes });
         break;
 
-      case 'STRAIGHTEN_ANALYZE':
+      case "STRAIGHTEN_ANALYZE":
         const angle = detectAngleOpenCV(imageData, options);
-        self.postMessage({ type: 'STRAIGHTEN_DONE', angle });
+        self.postMessage({ type: "STRAIGHTEN_DONE", angle });
         break;
 
-      case 'PROCESS_NEGATIVE':
+      case "PROCESS_NEGATIVE":
         const processed = processNegativeOpenCV(imageData, options);
-        self.postMessage({ type: 'PROCESS_DONE', imageData: processed }, [processed.data.buffer]);
+        self.postMessage({ type: "PROCESS_DONE", imageData: processed }, [
+          processed.data.buffer,
+        ]);
         break;
 
       default:
-        self.postMessage({ type: 'ERROR', message: 'Unknown worker task: ' + type });
+        self.postMessage({
+          type: "ERROR",
+          message: "Unknown worker task: " + type,
+        });
     }
   } catch (err) {
     // If OpenCV throws, it often throws a numerical error code. We capture the stack or message.
     console.error("OpenCV Error:", err);
-    self.postMessage({ type: 'ERROR', message: err.message || 'OpenCV processing failed.' });
+    self.postMessage({
+      type: "ERROR",
+      message: err.message || "OpenCV processing failed.",
+    });
   }
 }
 
@@ -72,7 +88,7 @@ function handleRequest(type, imageData, options) {
 function processNegativeOpenCV(imageData, opts = {}) {
   const { width, height } = imageData;
   const {
-    filmType = 'color',
+    filmType = "color",
     filmBase = null, // { r, g, b } in 0-255
     useClahe = true,
   } = opts;
@@ -96,7 +112,7 @@ function processNegativeOpenCV(imageData, opts = {}) {
   let g = channels.get(1);
   let b = channels.get(2);
 
-  if (filmType === 'color' || filmType === 'bw') {
+  if (filmType === "color" || filmType === "bw") {
     let baseR, baseG, baseB;
 
     if (filmBase) {
@@ -116,15 +132,15 @@ function processNegativeOpenCV(imageData, opts = {}) {
 
     // Process each channel: Div by base (remove mask) then Invert (1.0 - pixel)
     let ones = new cv.Mat(r.rows, r.cols, r.type(), new cv.Scalar(1.0));
-    
+
     // R channel
     cv.divide(r, new cv.Mat(r.rows, r.cols, r.type(), new cv.Scalar(baseR)), r);
     cv.subtract(ones, r, r);
-    
+
     // G channel
     cv.divide(g, new cv.Mat(g.rows, g.cols, g.type(), new cv.Scalar(baseG)), g);
     cv.subtract(ones, g, g);
-    
+
     // B channel
     cv.divide(b, new cv.Mat(b.rows, b.cols, b.type(), new cv.Scalar(baseB)), b);
     cv.subtract(ones, b, b);
@@ -151,10 +167,10 @@ function processNegativeOpenCV(imageData, opts = {}) {
     cv.cvtColor(result, lab, cv.COLOR_RGB2Lab);
     let labChannels = new cv.MatVector();
     cv.split(lab, labChannels);
-    
+
     let clahe = new cv.CLAHE(2.0, new cv.Size(8, 8));
     clahe.apply(labChannels.get(0), labChannels.get(0));
-    
+
     cv.merge(labChannels, lab);
     cv.cvtColor(lab, result, cv.COLOR_Lab2RGB);
 
@@ -167,36 +183,54 @@ function processNegativeOpenCV(imageData, opts = {}) {
   let final = new cv.Mat();
   cv.cvtColor(result, final, cv.COLOR_RGB2RGBA);
 
-  let outputImageData = new ImageData(new Uint8ClampedArray(final.data), width, height);
+  let outputImageData = new ImageData(
+    new Uint8ClampedArray(final.data),
+    width,
+    height,
+  );
 
   // Cleanup
-  src.delete(); rgb.delete(); floatMat.delete(); result.delete(); final.delete();
-  r.delete(); g.delete(); b.delete(); channels.delete();
+  src.delete();
+  rgb.delete();
+  floatMat.delete();
+  result.delete();
+  final.delete();
+  r.delete();
+  g.delete();
+  b.delete();
+  channels.delete();
 
   return outputImageData;
 }
-
 
 /* ─── OPENCV DETECTION PIPELINE ─────────────────────────────────────────── */
 
 function detectPhotosOpenCV(imageData, opts = {}) {
   const { width, height, data } = imageData;
   const {
-    bgThreshold = 240,    // Sensitivity map slider (1 - 255)
+    bgThreshold = 240, // Sensitivity map slider (1 - 255)
     minAreaRatio = 0.005, // Minimum area ratio slider
     padding = 10,
   } = opts;
 
-  self.postMessage({ type: 'PROGRESS', value: 10, label: 'Reading image data…' });
+  self.postMessage({
+    type: "PROGRESS",
+    value: 10,
+    label: "Reading image data…",
+  });
 
   // 1. Create a cv.Mat from the raw ImageData
   const src = cv.matFromImageData(imageData);
   const gray = new cv.Mat();
-  
+
   // 2. Convert to Grayscale
   cv.cvtColor(src, gray, cv.COLOR_RGBA2GRAY, 0);
 
-  self.postMessage({ type: 'PROGRESS', value: 30, label: 'Applying edge filters…' });
+  self.postMessage({
+    type: "PROGRESS",
+    value: 30,
+    label: "Applying edge filters…",
+  });
 
   // 3. Gaussian Blur to reduce scanner noise before edge detection
   const blurred = new cv.Mat();
@@ -212,38 +246,64 @@ function detectPhotosOpenCV(imageData, opts = {}) {
 
   // Pass B: Adaptive Threshold (captures faint white-bordered photos by looking for regional density)
   const thresh = new cv.Mat();
-  cv.adaptiveThreshold(gray, thresh, 255, cv.ADAPTIVE_THRESH_GAUSSIAN_C, cv.THRESH_BINARY_INV, 71, 6);
+  cv.adaptiveThreshold(
+    gray,
+    thresh,
+    255,
+    cv.ADAPTIVE_THRESH_GAUSSIAN_C,
+    cv.THRESH_BINARY_INV,
+    71,
+    6,
+  );
 
   // Combine both passes
   const edges = new cv.Mat();
   cv.bitwise_or(canny, thresh, edges);
 
-  self.postMessage({ type: 'PROGRESS', value: 50, label: 'Closing photo boundaries…' });
+  self.postMessage({
+    type: "PROGRESS",
+    value: 50,
+    label: "Closing photo boundaries…",
+  });
 
   // 5. Morphological Closing (Dilate then Erode)
-  // Hard-lock the kernel size to 5x5. Scaling it dynamically previously caused 
+  // Hard-lock the kernel size to 5x5. Scaling it dynamically previously caused
   // massive overlaps (up to 40px radius) merging distinctly separated photos.
   const M = cv.getStructuringElement(cv.MORPH_RECT, new cv.Size(5, 5));
-  
+
   const closed = new cv.Mat();
   // One single light pass to bridge micro-gaps, ensuring NO proximity merging
   cv.dilate(edges, closed, M, new cv.Point(-1, -1), 1);
   cv.erode(closed, closed, M, new cv.Point(-1, -1), 1);
 
-  self.postMessage({ type: 'PROGRESS', value: 70, label: 'Extracting contours…' });
+  self.postMessage({
+    type: "PROGRESS",
+    value: 70,
+    label: "Extracting contours…",
+  });
 
   // 6. Find Contours
   const contours = new cv.MatVector();
   const hierarchy = new cv.Mat();
   // RETR_EXTERNAL gets only the outer bounding shapes (perfect for distinct photos)
-  cv.findContours(closed, contours, hierarchy, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE);
+  cv.findContours(
+    closed,
+    contours,
+    hierarchy,
+    cv.RETR_EXTERNAL,
+    cv.CHAIN_APPROX_SIMPLE,
+  );
 
-  self.postMessage({ type: 'PROGRESS', value: 90, label: 'Calculating bounding boxes…' });
+  self.postMessage({
+    type: "PROGRESS",
+    value: 90,
+    label: "Calculating bounding boxes…",
+  });
 
   // 7. Process contours into bounding rects
   const minArea = width * height * minAreaRatio;
   const maxArea = width * height * 0.95; // Exclude the entire scanner glass itself
-  
+
   let resultBoxes = [];
 
   for (let i = 0; i < contours.size(); ++i) {
@@ -255,7 +315,6 @@ function detectPhotosOpenCV(imageData, opts = {}) {
       // Basic aspect ratio filter to ignore extreme strips (like scanner alignment bars)
       const aspect = rect.width / (rect.height || 1);
       if (aspect > 0.08 && aspect < 12) {
-        
         // Also capture the rotated rect for auto-straighten metadata
         const rotatedRect = cv.minAreaRect(cnt);
         let angle = rotatedRect.angle;
@@ -268,9 +327,9 @@ function detectPhotosOpenCV(imageData, opts = {}) {
         resultBoxes.push({
           x: Math.max(0, rect.x - padding),
           y: Math.max(0, rect.y - padding),
-          w: Math.min(width,  rect.width + padding * 2),
+          w: Math.min(width, rect.width + padding * 2),
           h: Math.min(height, rect.height + padding * 2),
-          suggestedAngle: -angle // Invert for CSS/Canvas rotation
+          suggestedAngle: -angle, // Invert for CSS/Canvas rotation
         });
       }
     }
@@ -279,7 +338,11 @@ function detectPhotosOpenCV(imageData, opts = {}) {
   // Merge overlapping boxes in JS (sometimes two adjacent contours belong to the same photo)
   resultBoxes = mergeOverlapping(resultBoxes, width, height);
 
-  self.postMessage({ type: 'PROGRESS', value: 100, label: 'Detection complete.' });
+  self.postMessage({
+    type: "PROGRESS",
+    value: 100,
+    label: "Detection complete.",
+  });
 
   // 8. FREE MEMORY! Absolutely critical in OpenCV.js
   src.delete();
@@ -317,14 +380,15 @@ function mergeOverlapping(boxes, width, height) {
           // Keep the suggested angle of the larger box
           const aArea = a.w * a.h;
           const bArea = b.w * b.h;
-          const dominantAngle = aArea > bArea ? a.suggestedAngle : b.suggestedAngle;
+          const dominantAngle =
+            aArea > bArea ? a.suggestedAngle : b.suggestedAngle;
 
           a = {
             x: Math.min(a.x, b.x),
             y: Math.min(a.y, b.y),
             w: Math.max(a.x + a.w, b.x + b.w) - Math.min(a.x, b.x),
             h: Math.max(a.y + a.h, b.y + b.h) - Math.min(a.y, b.y),
-            suggestedAngle: dominantAngle
+            suggestedAngle: dominantAngle,
           };
           used[j] = true;
           changed = true;
@@ -334,9 +398,9 @@ function mergeOverlapping(boxes, width, height) {
     }
     boxes = merged;
   }
-  
+
   // Final bounds clamp
-  return boxes.map(b => {
+  return boxes.map((b) => {
     const clampedX = Math.max(0, b.x);
     const clampedY = Math.max(0, b.y);
     return {
@@ -344,7 +408,7 @@ function mergeOverlapping(boxes, width, height) {
       y: clampedY,
       w: Math.min(width - clampedX, b.w),
       h: Math.min(height - clampedY, b.h),
-      suggestedAngle: b.suggestedAngle
+      suggestedAngle: b.suggestedAngle,
     };
   });
 }
@@ -369,7 +433,13 @@ function detectAngleOpenCV(imageData, opts = {}) {
 
   const contours = new cv.MatVector();
   const hierarchy = new cv.Mat();
-  cv.findContours(edges, contours, hierarchy, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE);
+  cv.findContours(
+    edges,
+    contours,
+    hierarchy,
+    cv.RETR_EXTERNAL,
+    cv.CHAIN_APPROX_SIMPLE,
+  );
 
   let bestAngle = 0;
   let maxArea = 0;
@@ -382,14 +452,18 @@ function detectAngleOpenCV(imageData, opts = {}) {
       const rotatedRect = cv.minAreaRect(cnt);
       let angle = rotatedRect.angle;
       if (rotatedRect.size.width < rotatedRect.size.height) {
-         angle += 90;
+        angle += 90;
       }
       bestAngle = -angle;
     }
   }
 
   // Free memory
-  src.delete(); gray.delete(); edges.delete(); contours.delete(); hierarchy.delete();
+  src.delete();
+  gray.delete();
+  edges.delete();
+  contours.delete();
+  hierarchy.delete();
 
   // Clamp wild angles
   if (Math.abs(bestAngle) > 40) return 0;

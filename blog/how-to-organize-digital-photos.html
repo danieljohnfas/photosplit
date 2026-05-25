@@ -1,233 +1,664 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
-<head>
-<!-- Scripts loaded dynamically after consent -->
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    function loadGoogleScripts() {
-      if (document.getElementById('ga-script')) return;
-      var gaScript = document.createElement('script');
-      gaScript.id = 'ga-script';
-      gaScript.async = true;
-      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ';
-      document.head.appendChild(gaScript);
-      gtag('js', new Date());
-      gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
-
-          }
-  </script>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>How to Organize Digital Photos: A Guide for Beginners | PhotoSplit Studio Blog</title>
-<meta content="Master the art of digital photo organization. Learn how to create logical folder structures, use metadata, and implement a foolproof backup strategy for your digitized family memories." name="description"/>
-<meta content="organize digital photos, digital photo management, photo folder structure, digital archiving tips, photo metadata, EXIF data organization, backup family photos, digital photo library guide" name="keywords"/>
-<meta content="index, follow" name="robots"/>
-<meta content="PhotoSplit Studio" name="author"/>
-<link href="https://photosplitstudio.com/blog/how-to-organize-digital-photos" rel="canonical"/>
-<meta content="article" property="og:type"/>
-<meta content="2026-05-04T00:00:00Z" property="article:published_time"/>
-<meta content="How to Organize Digital Photos: A Guide for Beginners" property="og:title"/>
-<meta content="Step-by-step guide to organizing your digital photo library. From folder names to cloud backups, learn how to keep your memories safe and searchable." property="og:description"/>
-<meta content="https://photosplitstudio.com/blog/how-to-organize-digital-photos" property="og:url"/>
-<meta content="https://photosplitstudio.com/blog/images/organize-digital-photos-hero.png" property="og:image"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="How to Organize Digital Photos: A Guide for Beginners" name="twitter:title"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Organize Digital Photos: A Guide for Beginners","datePublished":"2026-05-04","dateModified":"2026-05-04","author":{"@type":"Organization","name":"PhotoSplit Studio"},"publisher":{"@type":"Organization","name":"PhotoSplit Studio","url":"https://photosplitstudio.com"},"mainEntityOfPage":"https://photosplitstudio.com/blog/how-to-organize-digital-photos"}</script>
-<link href="/assets/images/logo.png" rel="icon" type="image/png"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="/css/style.css" rel="stylesheet"/>
-<script defer="" src="/js/gear.js"></script>
-<link href="/css/secondary.css" rel="stylesheet"/>
-<style>
-    .article-meta{display:flex;gap:20px;flex-wrap:wrap;font-size:.82rem;color:var(--text-muted,#718096);margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--border-color,#e2e8f0)}
-    .article-tag{background:rgba(99,102,241,.1);color:var(--accent,#6366f1);font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 10px;border-radius:20px}
-    .hero-image { width: 100%; height: auto; border-radius: 14px; margin-bottom: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
-    .structure-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin:24px 0}
-    .structure-card{background:var(--bg-sunken);border:1px solid var(--border);border-radius:12px;padding:24px}
-    .structure-card h3{margin-top:0;color:var(--accent);font-size:1.1rem}
-    .structure-card code{display:block;background:rgba(0,0,0,0.05);padding:8px;border-radius:4px;margin-top:10px;font-size:0.85rem}
-    .check-list{list-style:none;padding:0;margin:24px 0}
-    .check-list li{display:flex;gap:12px;margin-bottom:12px;font-size:0.95rem;color:var(--text-secondary)}
-    .check-list li::before{content:"?";flex-shrink:0}
-    .schedule-red { border-color: #ff4757; }
-    .red-h3 { color: #ff4757; }
-  </style>
-<link href="/css/style-premium.css" rel="stylesheet"/></head>
-<body>
-<nav class="site-nav">
-<a class="logo blog-logo-link" href="/"><img alt="PhotoSplit Logo" class="nav-icon" src="/assets/images/logo-animated.svg"/> PhotoSplit Studio</a>
-<div class="nav-links">
-<a class="active" href="/blog/">Blog</a>
-<a href="/app">App</a>
-<a href="/resize">Resize</a>
-<a href="/tips">Tips</a>
-<a href="/about">About</a>
-<a href="/contact">Contact</a>
-<a class="cta" href="/app">Open App →</a>
-</div>
-</nav>
-<div class="hero hero-violet">
-<h1>How to Organize Digital Photos: A Guide for Beginners</h1>
-<p>Stop drowning in a sea of files. Learn the professional way to structure your digital photo library for life.</p>
-</div>
-<div class="page-with-sidebar"><div class="page-main-content"><div class="content-wrap pt-0">
-<img alt="Organized Digital Photo Library" class="hero-image" src="/blog/images/organize-digital-photos-hero.png"/>
-</div></div>
-<aside class="page-sidebar">
-<div class="ad-sidebar-sticky">
-<span class="ad-sidebar-label">Advertisement</span>
-<div id="ad-sidebar" style="margin:0; min-height:250px; background:var(--bg-surface-2); border:1px dashed var(--border-strong); border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center;">
-<div class="ad-item">
-<script>
+  <head>
+    <!-- Scripts loaded dynamically after consent -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      function loadGoogleScripts() {
+        if (document.getElementById("ga-script")) return;
+        var gaScript = document.createElement("script");
+        gaScript.id = "ga-script";
+        gaScript.async = true;
+        gaScript.src =
+          "https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ";
+        document.head.appendChild(gaScript);
+        gtag("js", new Date());
+        gtag("config", "G-G40QDCGTTZ", { anonymize_ip: true });
+      }
+    </script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+      How to Organize Digital Photos: A Guide for Beginners | PhotoSplit Studio
+      Blog
+    </title>
+    <meta
+      content="Master the art of digital photo organization. Learn how to create logical folder structures, use metadata, and implement a foolproof backup strategy for your digitized family memories."
+      name="description"
+    />
+    <meta
+      content="organize digital photos, digital photo management, photo folder structure, digital archiving tips, photo metadata, EXIF data organization, backup family photos, digital photo library guide"
+      name="keywords"
+    />
+    <meta content="index, follow" name="robots" />
+    <meta content="PhotoSplit Studio" name="author" />
+    <link
+      href="https://photosplitstudio.com/blog/how-to-organize-digital-photos"
+      rel="canonical"
+    />
+    <meta content="article" property="og:type" />
+    <meta content="2026-05-04T00:00:00Z" property="article:published_time" />
+    <meta
+      content="How to Organize Digital Photos: A Guide for Beginners"
+      property="og:title"
+    />
+    <meta
+      content="Step-by-step guide to organizing your digital photo library. From folder names to cloud backups, learn how to keep your memories safe and searchable."
+      property="og:description"
+    />
+    <meta
+      content="https://photosplitstudio.com/blog/how-to-organize-digital-photos"
+      property="og:url"
+    />
+    <meta
+      content="https://photosplitstudio.com/blog/images/organize-digital-photos-hero.png"
+      property="og:image"
+    />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta
+      content="How to Organize Digital Photos: A Guide for Beginners"
+      name="twitter:title"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How to Organize Digital Photos: A Guide for Beginners",
+        "datePublished": "2026-05-04",
+        "dateModified": "2026-05-04",
+        "author": { "@type": "Organization", "name": "PhotoSplit Studio" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "PhotoSplit Studio",
+          "url": "https://photosplitstudio.com"
+        },
+        "mainEntityOfPage": "https://photosplitstudio.com/blog/how-to-organize-digital-photos"
+      }
+    </script>
+    <link href="/assets/images/logo.png" rel="icon" type="image/png" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="/css/style.css" rel="stylesheet" />
+    <script defer="" src="/js/gear.js"></script>
+    <link href="/css/secondary.css" rel="stylesheet" />
+    <style>
+      .article-meta {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        font-size: 0.82rem;
+        color: var(--text-muted, #718096);
+        margin-bottom: 32px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--border-color, #e2e8f0);
+      }
+      .article-tag {
+        background: rgba(99, 102, 241, 0.1);
+        color: var(--accent, #6366f1);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 3px 10px;
+        border-radius: 20px;
+      }
+      .hero-image {
+        width: 100%;
+        height: auto;
+        border-radius: 14px;
+        margin-bottom: 32px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+      .structure-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin: 24px 0;
+      }
+      .structure-card {
+        background: var(--bg-sunken);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+      }
+      .structure-card h3 {
+        margin-top: 0;
+        color: var(--accent);
+        font-size: 1.1rem;
+      }
+      .structure-card code {
+        display: block;
+        background: rgba(0, 0, 0, 0.05);
+        padding: 8px;
+        border-radius: 4px;
+        margin-top: 10px;
+        font-size: 0.85rem;
+      }
+      .check-list {
+        list-style: none;
+        padding: 0;
+        margin: 24px 0;
+      }
+      .check-list li {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+      }
+      .check-list li::before {
+        content: "?";
+        flex-shrink: 0;
+      }
+      .schedule-red {
+        border-color: #ff4757;
+      }
+      .red-h3 {
+        color: #ff4757;
+      }
+    </style>
+    <link href="/css/style-premium.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="site-nav">
+      <a class="logo blog-logo-link" href="/"
+        ><img
+          alt="PhotoSplit Logo"
+          class="nav-icon"
+          src="/assets/images/logo-animated.svg"
+        />
+        PhotoSplit Studio</a
+      >
+      <div class="nav-links">
+        <a class="active" href="/blog/">Blog</a>
+        <a href="/app">App</a>
+        <a href="/resize">Resize</a>
+        <a href="/tips">Tips</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a class="cta" href="/app">Open App →</a>
+      </div>
+    </nav>
+    <div class="hero hero-violet">
+      <h1>How to Organize Digital Photos: A Guide for Beginners</h1>
+      <p>
+        Stop drowning in a sea of files. Learn the professional way to structure
+        your digital photo library for life.
+      </p>
+    </div>
+    <div class="page-with-sidebar">
+      <div class="page-main-content">
+        <div class="content-wrap pt-0">
+          <img
+            alt="Organized Digital Photo Library"
+            class="hero-image"
+            src="/blog/images/organize-digital-photos-hero.png"
+          />
+        </div>
+      </div>
+      <aside class="page-sidebar">
+        <div class="ad-sidebar-sticky">
+          <span class="ad-sidebar-label">Advertisement</span>
+          <div
+            id="ad-sidebar"
+            style="
+              margin: 0;
+              min-height: 250px;
+              background: var(--bg-surface-2);
+              border: 1px dashed var(--border-strong);
+              border-radius: var(--radius-md);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <div class="ad-item">
+              <script>
+                atOptions = {
+                  key: "eefa27f757f4d0772d979fca1074f12a",
+                  format: "iframe",
+                  height: 250,
+                  width: 300,
+                  params: {},
+                };
+              </script>
+              <script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <!-- AdSense &mdash; Below Hero -->
+    <div class="ad-wrap">
+      <div class="ad-item">
+        <script>
           atOptions = {
-            'key' : 'eefa27f757f4d0772d979fca1074f12a',
-            'format' : 'iframe',
-            'height' : 250,
-            'width' : 300,
-            'params' : {}
+            key: "033703f2c2dfe7a5fa4501cd3ba1417e",
+            format: "iframe",
+            height: 90,
+            width: 728,
+            params: {},
           };
         </script>
-<script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
-</div>
-</div>
-</div>
-</aside>
-</div>
-<!-- AdSense &mdash; Below Hero -->
-<div class="ad-wrap">
-<div class="ad-item"><script>
-  atOptions = {
-    'key' : '033703f2c2dfe7a5fa4501cd3ba1417e',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/033703f2c2dfe7a5fa4501cd3ba1417e/invoke.js"></script></div>
-<div class="ad-item"><script>
-  atOptions = {
-    'key' : 'eefa27f757f4d0772d979fca1074f12a',
-    'format' : 'iframe',
-    'height' : 60,
-    'width' : 468,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script></div>
-</div>
-<div class="content-wrap">
-<nav aria-label="Breadcrumb" class="breadcrumb">
-<a href="/app">App</a><span>×</span><a href="/blog/">Blog</a><span>×</span>Organize Digital Photos
-  </nav>
-<div class="article-meta">
-<span class="article-tag">Guide</span>
-<span>✨ </span>
-<span>? 10 min read</span>
-<span>✨ </span>
-</div>
-<p>You×ve finally done it. You×ve scanned that massive box of old prints, split them into individual files using <a href="/app">PhotoSplit Studio</a>, and now you have 2,500 JPEGs sitting in a folder called "New Scans." What now?</p>
-<p>Without a logical organization system, digital photos are almost as inaccessible as physical ones hidden in a loft. This guide will show you how to move from a chaotic pile of files to a structured, searchable, and safe digital archive that your family can enjoy for decades.</p>
-<h2>1. Choose a Logical Folder Structure</h2>
-<p>The most important rule of photo organization is <strong>chronology first</strong>. People remember events by time. A folder structure based on years is the most future-proof method.</p>
-<div class="structure-grid">
-<div class="structure-card">
-<h3>The "Year-Month" Method</h3>
-<p>Best for active photographers and large archives. Keeps everything in strict order.</p>
-<code>/Photos/2026/2026-05-Birthday-Party/</code>
-</div>
-<div class="structure-card">
-<h3>The "Event-Based" Method</h3>
-<p>Best for smaller archives or family history projects where dates are approximate.</p>
-<code>/Archive/Smith-Family/1980s-Summer-Holidays/</code>
-</div>
-</div>
-<h2>2. Master the Art of Naming Files</h2>
-<p>Filenames like <code>IMG_4829.jpg</code> tell you nothing. When you export from PhotoSplit Studio, use the "Base Filename" feature to give your photos context.</p>
-<p><strong>Pro Tip:</strong> Always start with the date in <code>YYYY-MM-DD</code> format. This ensures that even if files are moved between different operating systems (Windows, Mac, Linux), they will always sort alphabetically in the correct order.</p>
-<ul class="check-list">
-<li><strong>Good:</strong> <code>1994-06-15-John-Graduation-001.jpg</code></li>
-<li><strong>Bad:</strong> <code>Graduation.jpg</code></li>
-<li><strong>Bad:</strong> <code>Scan_01.jpg</code></li>
-</ul>
-<h2>3. The Power of Metadata (EXIF)</h2>
-<p>Folder names are great, but metadata is "baked into" the file. When you use PhotoSplit Studio's <strong>Photo Year</strong> field, it embeds the year into the EXIF data of the JPEG. This is crucial because:</p>
-<ul>
-<li><strong>Smart Search:</strong> Applications like Google Photos and Apple Photos use this date to place your 1975 scan in the "1975" section of your timeline, rather than today's date.</li>
-<li><strong>Portability:</strong> If you move your photos to a new computer or service, the date travels with the file.</li>
-</ul>
-<h2>4. The "One-In, One-Out" Cleaning Rule</h2>
-<p>Digital storage is cheap, but your time is valuable. Don't archive everything. When you are splitting your scans, be ruthless:</p>
-<ul>
-<li>Delete duplicates.</li>
-<li>Delete blurry or out-of-focus shots (unless they are the only record of an event).</li>
-<li>Delete "accidental" scans of the scanner lid or empty space.</li>
-</ul>
-<p>A smaller, high-quality collection is far more valuable than a massive, cluttered one.</p>
-<h2>5. Implement the 3-2-1 Backup Strategy</h2>
-<p>If your photos only exist on your laptop, they don't really exist. Hardware fails. Laptops get stolen. Cloud services change terms.</p>
-<div class="schedule-grid schedule-red">
-<div class="schedule-day">
-<h3 class="red-h3">The 3-2-1 Rule:</h3>
-<p><strong>3 Copies:</strong> Have three total copies of your photos.</p>
-<p><strong>2 Media Types:</strong> Store them on two different types of hardware (e.g., Internal Drive and External USB Drive).</p>
-<p><strong>1 Off-site:</strong> Keep one copy in a different physical location (e.g., Cloud storage or a drive at a relative's house).</p>
-</div>
-</div>
-<h2>Conclusion</h2>
-<p>Organizing your photos is a marathon, not a sprint. Start with your most precious memories first. Once you have a system in place, every new batch of scans becomes part of a growing, beautiful library rather than another digital chore.</p>
-<div class="related-section">
-<h2>Next Steps</h2>
-<div class="related-grid">
-<a class="related-card" href="/blog/how-to-digitize-photo-album">
-<h3>✨ </h3>
-<p>The complete step-by-step project plan for scanning your history.</p>
-</a>
-<a class="related-card" href="/tips">
-<h3>✨ </h3>
-<p>Ensure your digital files are "Archival Grade" from the start.</p>
-</a>
-</div>
-</div>
-<div class="cta-center">
-<a class="btn cta-btn-primary" href="/app">??? Open PhotoSplit App — Free</a>
-</div>
-<div class="author-bio">
-<img alt="PhotoSplit Team" class="author-bio-img" src="/assets/images/logo-animated.svg"/>
-<div>
-<h3 class="author-bio-name">Written by the PhotoSplit Team</h3>
-<p class="author-bio-desc">We are a team of photo preservation enthusiasts and developers dedicated to making high-quality digitization accessible to everyone. Our mission is to ensure family histories are preserved for generations to come.</p>
-</div>
-</div>
-</div>
-<!-- AdSense &mdash; Above Footer -->
-<div class="ad-wrap-bottom">
-<script async="async" data-cfasync="false" src="https://pl29548528.effectivecpmnetwork.com/a25495e0c3bb3c8d42df39bb0b421e4a/invoke.js"></script>
-<div id="container-a25495e0c3bb3c8d42df39bb0b421e4a"></div>
-</div>
-<section class="gear-section">
-<div class="gear-section-inner">
-<h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
-<p class="gear-section-sub">Pair PhotoSplit Studio with the best hardware for fast, high-quality archiving and secure backups.</p>
-<div class="gear-cards-grid"></div>
-<p class="affiliate-disclosure">As an Amazon Associate, PhotoSplit Studio earns from qualifying purchases.</p>
-</div>
-</section>
-<footer class="site-footer">
-<div class="footer-links">
-<a href="/app">App</a>
-<a href="/blog/">Blog</a>
-<a href="/tips">Scanning Tips</a>
-<a href="/contact">Contact</a>
-<a href="/terms">Terms of Use</a>
-<a href="/privacy-policy">Privacy Policy</a>
-<a href="/about">About</a>
-</div>
-<div>© 2026 PhotoSplit Studio. All rights reserved.</div>
-</footer>
-</body>
+        <script src="https://www.highperformanceformat.com/033703f2c2dfe7a5fa4501cd3ba1417e/invoke.js"></script>
+      </div>
+      <div class="ad-item">
+        <script>
+          atOptions = {
+            key: "eefa27f757f4d0772d979fca1074f12a",
+            format: "iframe",
+            height: 60,
+            width: 468,
+            params: {},
+          };
+        </script>
+        <script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
+      </div>
+    </div>
+    <div class="content-wrap">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="/app">App</a><span>×</span><a href="/blog/">Blog</a
+        ><span>×</span>Organize Digital Photos
+      </nav>
+      <div class="article-meta">
+        <span class="article-tag">Guide</span>
+        <span>✨ </span>
+        <span>? 10 min read</span>
+        <span>✨ </span>
+      </div>
+      <p>
+        You×ve finally done it. You×ve scanned that massive box of old prints,
+        split them into individual files using
+        <a href="/app">PhotoSplit Studio</a>, and now you have 2,500 JPEGs
+        sitting in a folder called "New Scans." What now?
+      </p>
+      <p>
+        Without a logical organization system, digital photos are almost as
+        inaccessible as physical ones hidden in a loft. This guide will show you
+        how to move from a chaotic pile of files to a structured, searchable,
+        and safe digital archive that your family can enjoy for decades.
+      </p>
+      <h2>1. Choose a Logical Folder Structure</h2>
+      <p>
+        The most important rule of photo organization is
+        <strong>chronology first</strong>. People remember events by time. A
+        folder structure based on years is the most future-proof method.
+      </p>
+      <div class="structure-grid">
+        <div class="structure-card">
+          <h3>The "Year-Month" Method</h3>
+          <p>
+            Best for active photographers and large archives. Keeps everything
+            in strict order.
+          </p>
+          <code>/Photos/2026/2026-05-Birthday-Party/</code>
+        </div>
+        <div class="structure-card">
+          <h3>The "Event-Based" Method</h3>
+          <p>
+            Best for smaller archives or family history projects where dates are
+            approximate.
+          </p>
+          <code>/Archive/Smith-Family/1980s-Summer-Holidays/</code>
+        </div>
+      </div>
+      <h2>2. Master the Art of Naming Files</h2>
+      <p>
+        Filenames like <code>IMG_4829.jpg</code> tell you nothing. When you
+        export from PhotoSplit Studio, use the "Base Filename" feature to give
+        your photos context.
+      </p>
+      <p>
+        <strong>Pro Tip:</strong> Always start with the date in
+        <code>YYYY-MM-DD</code> format. This ensures that even if files are
+        moved between different operating systems (Windows, Mac, Linux), they
+        will always sort alphabetically in the correct order.
+      </p>
+      <ul class="check-list">
+        <li>
+          <strong>Good:</strong> <code>1994-06-15-John-Graduation-001.jpg</code>
+        </li>
+        <li><strong>Bad:</strong> <code>Graduation.jpg</code></li>
+        <li><strong>Bad:</strong> <code>Scan_01.jpg</code></li>
+      </ul>
+      <h2>3. The Power of Metadata (EXIF)</h2>
+      <p>
+        Folder names are great, but metadata is "baked into" the file. When you
+        use PhotoSplit Studio's <strong>Photo Year</strong> field, it embeds the
+        year into the EXIF data of the JPEG. This is crucial because:
+      </p>
+      <ul>
+        <li>
+          <strong>Smart Search:</strong> Applications like Google Photos and
+          Apple Photos use this date to place your 1975 scan in the "1975"
+          section of your timeline, rather than today's date.
+        </li>
+        <li>
+          <strong>Portability:</strong> If you move your photos to a new
+          computer or service, the date travels with the file.
+        </li>
+      </ul>
+      <h2>4. The "One-In, One-Out" Cleaning Rule</h2>
+      <p>
+        Digital storage is cheap, but your time is valuable. Don't archive
+        everything. When you are splitting your scans, be ruthless:
+      </p>
+      <ul>
+        <li>Delete duplicates.</li>
+        <li>
+          Delete blurry or out-of-focus shots (unless they are the only record
+          of an event).
+        </li>
+        <li>Delete "accidental" scans of the scanner lid or empty space.</li>
+      </ul>
+      <p>
+        A smaller, high-quality collection is far more valuable than a massive,
+        cluttered one.
+      </p>
+      <h2>5. Implement the 3-2-1 Backup Strategy</h2>
+      <p>
+        If your photos only exist on your laptop, they don't really exist.
+        Hardware fails. Laptops get stolen. Cloud services change terms.
+      </p>
+      <div class="schedule-grid schedule-red">
+        <div class="schedule-day">
+          <h3 class="red-h3">The 3-2-1 Rule:</h3>
+          <p>
+            <strong>3 Copies:</strong> Have three total copies of your photos.
+          </p>
+          <p>
+            <strong>2 Media Types:</strong> Store them on two different types of
+            hardware (e.g., Internal Drive and External USB Drive).
+          </p>
+          <p>
+            <strong>1 Off-site:</strong> Keep one copy in a different physical
+            location (e.g., Cloud storage or a drive at a relative's house).
+          </p>
+        </div>
+      </div>
+      <h2>Conclusion</h2>
+      <p>
+        Organizing your photos is a marathon, not a sprint. Start with your most
+        precious memories first. Once you have a system in place, every new
+        batch of scans becomes part of a growing, beautiful library rather than
+        another digital chore.
+      </p>
+      <div class="related-section">
+        <h2>Next Steps</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/blog/how-to-digitize-photo-album">
+            <h3>✨</h3>
+            <p>
+              The complete step-by-step project plan for scanning your history.
+            </p>
+          </a>
+          <a class="related-card" href="/tips">
+            <h3>✨</h3>
+            <p>
+              Ensure your digital files are "Archival Grade" from the start.
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="cta-center">
+        <a class="btn cta-btn-primary" href="/app"
+          >??? Open PhotoSplit App — Free</a
+        >
+      </div>
+      <div class="author-bio">
+        <img
+          alt="PhotoSplit Team"
+          class="author-bio-img"
+          src="/assets/images/logo-animated.svg"
+        />
+        <div>
+          <h3 class="author-bio-name">Written by the PhotoSplit Team</h3>
+          <p class="author-bio-desc">
+            We are a team of photo preservation enthusiasts and developers
+            dedicated to making high-quality digitization accessible to
+            everyone. Our mission is to ensure family histories are preserved
+            for generations to come.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- AdSense &mdash; Above Footer -->
+    <div class="ad-wrap-bottom">
+      <script
+        async="async"
+        data-cfasync="false"
+        src="https://pl29548528.effectivecpmnetwork.com/a25495e0c3bb3c8d42df39bb0b421e4a/invoke.js"
+      ></script>
+      <div id="container-a25495e0c3bb3c8d42df39bb0b421e4a"></div>
+    </div>
+    <section class="gear-section">
+      <div class="gear-section-inner">
+        <h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
+        <p class="gear-section-sub">
+          Pair PhotoSplit Studio with the best hardware for fast, high-quality
+          archiving and secure backups.
+        </p>
+        <div class="gear-cards-grid"></div>
+        <p class="affiliate-disclosure">
+          As an Amazon Associate, PhotoSplit Studio earns from qualifying
+          purchases.
+        </p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="/app">App</a>
+          <a href="/blog/">Blog</a>
+          <a href="/tips">Scanning Tips</a>
+          <a href="/contact">Contact</a>
+          <a href="/terms">Terms</a>
+          <a href="/privacy-policy">Privacy</a>
+          <a href="/about">About</a>
+          <a
+            href="#"
+            onclick="
+              if (typeof openTextModal === 'function')
+                openTextModal('feedback-modal', event);
+            "
+            >Feedback</a
+          >
+        </div>
+        <div class="footer-copy">
+          © 2026 PhotoSplit Studio. All rights reserved.
+        </div>
+      </div>
+      <div class="site-status-bar">
+        <div class="status-item">
+          <span class="status-label">Is it dark outside?</span
+          ><span class="status-value" id="dark-status-answer">...</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Global Visitors:</span
+          ><img
+            alt="Visitor Count"
+            class="visitor-badge"
+            src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"
+          />
+        </div>
+      </div>
+      <script>
+        (function () {
+          var h = new Date().getHours();
+          var ans = h >= 18 || h < 6 ? "YES" : "NO";
+          var el = document.getElementById("dark-status-answer");
+          if (el) el.textContent = ans;
+        })();
+      </script>
+    </footer>
+
+    <!-- MODALS START -->
+    <div
+      class="text-modal-backdrop"
+      id="feedback-modal"
+      onclick="
+        if (event.target === this && typeof closeTextModal === 'function')
+          closeTextModal('feedback-modal');
+      "
+    >
+      <div class="text-modal-box">
+        <div class="text-modal-header">
+          <h2>Provide Feedback</h2>
+          <button
+            class="icon-btn"
+            onclick="
+              if (typeof closeTextModal === 'function')
+                closeTextModal('feedback-modal');
+            "
+          >
+            ✕
+          </button>
+        </div>
+        <div class="text-modal-content" id="feedback-form-view">
+          <form
+            onsubmit="
+              if (typeof handleFeedbackSubmit === 'function')
+                handleFeedbackSubmit(event);
+            "
+          >
+            <input
+              class="form-control mb-12"
+              id="fb-name"
+              placeholder="Your Name"
+              required=""
+              type="text"
+              style="margin-bottom: 12px"
+            />
+            <input
+              class="form-control mb-12"
+              id="fb-email"
+              placeholder="your@email.com"
+              required=""
+              type="email"
+              style="margin-bottom: 12px"
+            />
+            <textarea
+              class="form-control mb-12"
+              id="fb-desc"
+              placeholder="Your feedback..."
+              required=""
+              rows="4"
+              style="margin-bottom: 12px"
+            ></textarea>
+            <button class="btn btn-primary" style="width: 100%" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+        <div
+          class="text-modal-content"
+          id="feedback-success-view"
+          style="display: none; text-align: center"
+        >
+          <h3>✅ Thank you!</h3>
+          <p>Your feedback has been received.</p>
+          <button
+            class="btn btn-secondary"
+            onclick="
+              if (typeof closeTextModal === 'function')
+                closeTextModal('feedback-modal');
+            "
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="cookie-consent" role="dialog">
+      <div id="cookie-consent-inner">
+        <p>
+          🍪 We use cookies to improve your experience. See our
+          <a href="/privacy-policy">Privacy Policy</a>.
+        </p>
+        <div id="cookie-consent-actions">
+          <button class="cookie-btn" id="cookie-decline">Decline</button>
+          <button class="cookie-btn cookie-btn-accept" id="cookie-accept">
+            Accept All
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        if (!localStorage.getItem("ps_counted")) {
+          localStorage.setItem("ps_counted", "true");
+          var img = new Image();
+          img.src =
+            "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
+        }
+
+        window.handleFeedbackSubmit = function (e) {
+          e.preventDefault();
+          var params = new URLSearchParams();
+          params.append(
+            "entry.1051903221",
+            document.getElementById("fb-name").value,
+          );
+          params.append(
+            "entry.371950700",
+            document.getElementById("fb-email").value,
+          );
+          params.append(
+            "entry.852578852",
+            document.getElementById("fb-desc").value,
+          );
+          fetch(
+            "https://docs.google.com/forms/d/e/1FAIpQLSeJe_jw0IHHXeT4w4hzcZJ2WXREaT8aD4_R4LFBGVZNazsehg/formResponse",
+            { method: "POST", mode: "no-cors", body: params },
+          );
+          document.getElementById("feedback-form-view").style.display = "none";
+          document.getElementById("feedback-success-view").style.display =
+            "block";
+        };
+
+        // Cookie Consent
+        var banner = document.getElementById("cookie-consent");
+        if (banner) {
+          if (!localStorage.getItem("pss_cookie_consent")) {
+            banner.classList.add("visible");
+          } else if (
+            localStorage.getItem("pss_cookie_consent") === "accepted"
+          ) {
+            if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+            if (typeof loadGoogleAnalytics === "function")
+              loadGoogleAnalytics();
+          }
+          var acceptBtn = document.getElementById("cookie-accept");
+          if (acceptBtn) {
+            acceptBtn.onclick = function () {
+              localStorage.setItem("pss_cookie_consent", "accepted");
+              banner.classList.remove("visible");
+              if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+              if (typeof loadGoogleAnalytics === "function")
+                loadGoogleAnalytics();
+            };
+          }
+          var declineBtn = document.getElementById("cookie-decline");
+          if (declineBtn) {
+            declineBtn.onclick = function () {
+              localStorage.setItem("pss_cookie_consent", "declined");
+              banner.classList.remove("visible");
+            };
+          }
+        }
+      })();
+    </script>
+    <!-- MODALS END -->
+  </body>
 </html>

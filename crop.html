@@ -1,363 +1,909 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html data-theme="" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
-<meta content="#010101" name="theme-color"/>
-<title>Free Online Image Cropper — Crop Photos to Any Size | PhotoSplit Studio</title>
-<meta content="Free online image cropper. Crop photos to any size or aspect ratio — freeform, square, 4:3, 16:9, and more. Works in your browser, no upload needed, 100% private." name="description"/>
-<meta content="image cropper online free, crop photo online, crop image to square, crop picture free, online photo crop tool, aspect ratio crop" name="keywords"/>
-<meta content="index,follow" name="robots"/>
-<link href="https://photosplitstudio.com/crop" rel="canonical"/>
-<meta content="website" property="og:type"/>
-<meta content="Free Online Image Cropper — PhotoSplit Studio" property="og:title"/>
-<meta content="Crop any photo to any size or aspect ratio for free. Runs entirely in your browser." property="og:description"/>
-<meta content="https://photosplitstudio.com/crop" property="og:url"/>
-<meta content="https://photosplitstudio.com/assets/images/og-image.png" property="og:image"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<link href="/assets/images/logo.png" rel="icon" type="image/png"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="/css/style.css" rel="stylesheet"/>
-<script defer="" src="/js/gear.js"></script>
-<!-- Scripts loaded dynamically after consent -->
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    function loadGoogleScripts() {
-      if (document.getElementById('ga-script')) return;
-      var gaScript = document.createElement('script');
-      gaScript.id = 'ga-script';
-      gaScript.async = true;
-      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ';
-      document.head.appendChild(gaScript);
-      gtag('js', new Date());
-      gtag('config', 'G-G40QDCGTTZ', { 'anonymize_ip': true });
-
-          }
-  </script>
-<style>
-    .crop-tool { max-width: 980px; margin: 0 auto; padding: 32px 24px 60px; }
-    .ratio-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
-    .ratio-btn { padding: 7px 14px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-secondary); font-family: inherit; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: all 0.12s; }
-    .ratio-btn:hover { border-color: var(--accent); color: var(--accent); }
-    .ratio-btn.active { border-color: var(--accent); background: rgba(254,44,85,0.09); color: var(--accent); }
-    .crop-workspace { display: grid; grid-template-columns: 1fr 280px; gap: 24px; }
-    @media(max-width:720px){ .crop-workspace { grid-template-columns: 1fr; } }
-    #crop-upload-zone { border: 2px dashed var(--border-strong); border-radius: var(--radius-lg); padding: 48px 24px; text-align: center; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
-    #crop-upload-zone:hover, #crop-upload-zone.drag-over { border-color: var(--accent); background: rgba(254,44,85,0.05); }
-    #crop-upload-zone p { color: var(--text-muted); margin: 8px 0 0; font-size: 0.85rem; }
-    #crop-canvas-wrap { position: relative; background: #111; border-radius: var(--radius-md); overflow: hidden; user-select: none; display: none; }
-    #crop-img-canvas { display: block; max-width: 100%; }
-    #crop-selection { position: absolute; border: 2px solid #fe2c55; box-shadow: 0 0 0 9999px rgba(0,0,0,0.45); cursor: move; }
-    .crop-handle { position: absolute; width: 10px; height: 10px; background: #fe2c55; border: 2px solid #fff; border-radius: 2px; }
-    .crop-handle.nw { top: -5px; left: -5px; cursor: nw-resize; }
-    .crop-handle.ne { top: -5px; right: -5px; cursor: ne-resize; }
-    .crop-handle.sw { bottom: -5px; left: -5px; cursor: sw-resize; }
-    .crop-handle.se { bottom: -5px; right: -5px; cursor: se-resize; }
-    .crop-panel { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px; display: flex; flex-direction: column; gap: 16px; height: fit-content; }
-    .crop-panel label { font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); display: block; margin-bottom: 4px; }
-    .crop-dims-row { display: flex; gap: 8px; align-items: center; }
-    .crop-dims-row span { color: var(--text-muted); padding-top: 18px; }
-    .dim-group { flex: 1; }
-    .dim-group input { width: 100%; padding: 7px 8px; background: var(--bg-surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-primary); font-family: inherit; font-size: 0.88rem; }
-    .btn-crop-action { background: linear-gradient(135deg,#fe2c55,#ff375f); color: #fff; border: none; border-radius: 99px; padding: 13px; font-size: 0.95rem; font-weight: 700; cursor: pointer; width: 100%; box-shadow: 0 3px 14px rgba(254,44,85,0.35); transition: all 0.15s; }
-    .btn-crop-action:hover { transform: translateY(-1px); box-shadow: 0 5px 20px rgba(254,44,85,0.45); }
-    .crop-preview { background: var(--bg-base); border-radius: var(--radius-sm); overflow: hidden; display: flex; align-items: center; justify-content: center; min-height: 80px; }
-    #crop-preview-canvas { max-width: 100%; max-height: 160px; display: block; }
-  </style>
-<link href="/css/style-premium.css" rel="stylesheet"/></head>
-<body>
-<header id="site-header">
-<button aria-label="Toggle navigation" class="icon-btn" id="sidebar-toggle">
-<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20">
-<path d="M3 12h18M3 6h18M3 18h18"></path>
-</svg>
-</button>
-<a class="logo" href="/">
-<img alt="PhotoSplit Logo" class="logo-img" src="/assets/images/logo-animated.svg" style="width:32px;height:32px;"/>
-      PhotoSplit Studio
-    </a>
-<div class="header-spacer"></div>
-<div class="privacy-badge">
-<svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14">
-<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-</svg>
-<span>100% Private · No Uploads</span>
-</div>
-<nav class="main-nav">
-
-<a href="/app" class="">Split Photos</a>
-<a href="/resize" class="">Resize</a>
-<a href="/blog/" class="">Blog</a>
-<a href="/tips" class="">Tips</a>
-<a href="/about" class="">About</a>
-<a href="/contact" class="">Contact</a>
-</nav>
-
-<button class="icon-btn" id="theme-toggle" onclick="if(typeof toggleTheme === 'function') toggleTheme()" title="Toggle Dark/Light Mode">🌓</button>
-
-</header>
-
-<main>
-<section class="hero-utility">
-<h1>Free Online Image Cropper</h1>
-<p>Crop any photo to a custom size or aspect ratio instantly. Free &amp; private.</p>
-</section>
-<!-- AdSense &mdash; Below Hero -->
-<div class="page-with-sidebar"><div class="page-main-content"><div style="max-width: 1250px; margin: var(--space-md) auto; padding: 0 24px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; align-items: center;">
-<div class="ad-item"><script>
-  atOptions = {
-    'key' : '033703f2c2dfe7a5fa4501cd3ba1417e',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/033703f2c2dfe7a5fa4501cd3ba1417e/invoke.js"></script></div>
-<div class="ad-item"><script>
-  atOptions = {
-    'key' : 'eefa27f757f4d0772d979fca1074f12a',
-    'format' : 'iframe',
-    'height' : 60,
-    'width' : 468,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script></div>
-</div><div class="crop-tool">
-<div class="section-label">Aspect Ratio Presets</div>
-<div class="ratio-row">
-<button class="ratio-btn active" data-ratio="free">Freeform</button>
-<button class="ratio-btn" data-ratio="1:1">1:1 Square</button>
-<button class="ratio-btn" data-ratio="4:3">4:3</button>
-<button class="ratio-btn" data-ratio="16:9">16:9</button>
-<button class="ratio-btn" data-ratio="9:16">9:16 Story</button>
-<button class="ratio-btn" data-ratio="3:2">3:2</button>
-</div>
-<div class="crop-workspace">
-<div>
-<div id="crop-upload-zone" onclick="document.getElementById('crop-file-input').click()">
-<div style="font-size:2.5rem">??</div>
-<div style="font-weight:700;font-size:1rem;color:var(--text-primary);margin-top:8px">Drop image here or click to upload</div>
-<p>JPEG, PNG, WebP supported × or paste with Ctrl+V</p>
-<input accept="image/*" id="crop-file-input" style="display:none" type="file"/>
-</div>
-<div id="crop-canvas-wrap">
-<canvas id="crop-img-canvas"></canvas>
-<div id="crop-selection">
-<div class="crop-handle nw" data-dir="nw"></div>
-<div class="crop-handle ne" data-dir="ne"></div>
-<div class="crop-handle sw" data-dir="sw"></div>
-<div class="crop-handle se" data-dir="se"></div>
-</div>
-</div>
-</div>
-<div class="crop-panel">
-<div>
-<div class="section-label" style="margin-bottom:10px">Crop Area</div>
-<div class="crop-dims-row">
-<div class="dim-group"><label>X</label><input id="crop-x" type="number" value="0"/></div>
-<div class="dim-group"><label>Y</label><input id="crop-y" type="number" value="0"/></div>
-</div>
-<div class="crop-dims-row" style="margin-top:8px">
-<div class="dim-group"><label>Width</label><input id="crop-w" type="number" value="0"/></div>
-<span>×</span>
-<div class="dim-group"><label>Height</label><input id="crop-h" type="number" value="0"/></div>
-</div>
-</div>
-<div>
-<label>Preview</label>
-<div class="crop-preview"><canvas id="crop-preview-canvas"></canvas></div>
-</div>
-<button class="btn-crop-action" disabled="" id="btn-crop-download">💾 Download Cropped Image</button>
-</div>
-</div>
-</div><article class="seo-wrapper" style="max-width:980px;margin:20px auto 40px;padding:24px;background:var(--bg-surface);border-radius:var(--radius-lg);border:1px solid var(--border);">
-<h2 style="margin-top:0">Free Online Image Cropper</h2>
-<p style="color:var(--text-secondary);line-height:1.6">Cropping an image is the easiest way to improve composition or fit a photo into a specific frame. PhotoSplit Studio's free online image cropper lets you quickly trim unwanted edges, focus on your subject, and change the aspect ratio of any photo without installing software. Since all processing happens in your browser, your photos remain 100% private and are never uploaded to our servers.</p>
-<h3 style="margin-top:32px; margin-bottom:16px;">The Rule of Thirds and Composition</h3>
-<p style="color:var(--text-secondary);line-height:1.6">When cropping a photo, it's helpful to keep the <strong>Rule of Thirds</strong> in mind. Imagine your image divided into nine equal segments by two vertical and two horizontal lines. Positioning the most important elements of your photo along these lines, or at their intersections, creates more tension, energy, and interest than simply centering the subject.</p>
-<h3 style="margin-top:32px; margin-bottom:16px;">Common Aspect Ratios Explained</h3>
-<ul style="color:var(--text-secondary);line-height:1.6;padding-left:20px; margin-bottom: 32px;">
-<li><strong>1:1 Square:</strong> The classic format for Instagram posts and profile pictures. It focuses the viewer's eye directly on the center of the image.</li>
-<li><strong>16:9 Widescreen:</strong> The standard aspect ratio for YouTube video thumbnails, TV screens, presentations, and desktop wallpapers. It is excellent for landscapes.</li>
-<li><strong>4:3 Standard:</strong> The default aspect ratio for most smartphone cameras and digital point-and-shoot cameras. It's a versatile ratio that works well for both portraits and landscapes.</li>
-<li><strong>9:16 Vertical:</strong> The standard format for mobile-first content, including Instagram Stories, Reels, TikTok, and YouTube Shorts.</li>
-<li><strong>3:2 Classic 35mm:</strong> The standard aspect ratio of 35mm film and modern DSLR cameras. It provides a slightly wider frame than 4:3, which is often preferred by professional photographers.</li>
-</ul>
-<h3 style="margin-top:32px; margin-bottom:16px;">Why Use a Browser-Based Cropper?</h3>
-<p style="color:var(--text-secondary);line-height:1.6">Most online croppers force you to upload your image to a remote server. This can be slow, wastes data, and poses a privacy risk if the photo is sensitive. PhotoSplit Studio uses HTML5 Canvas to crop your images entirely on your device. It's faster, uses less bandwidth, and guarantees your privacy.</p>
-<div class="related-section" style="margin-top: 40px; border-top: 1px solid var(--border); padding-top: 32px;">
-<h2 style="font-size: 1.5rem; margin-top: 0; margin-bottom: 24px;">Related Guides &amp; Tutorials</h2>
-<div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
-<a class="related-card" href="/blog/understanding-dpi-and-resolution" style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; text-decoration: none; color: inherit; display: block; transition: transform 0.2s, box-shadow 0.2s;">
-<h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 8px;">Understanding DPI and Resolution</h3>
-<p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Learn how to choose the perfect scanner settings for your archival project.</p>
-</a>
-<a class="related-card" href="/blog/restore-water-damaged-photos" style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; text-decoration: none; color: inherit; display: block; transition: transform 0.2s, box-shadow 0.2s;">
-<h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 8px;">Restoring Water-Damaged Photos</h3>
-<p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Safe physical separation and digital restoration techniques for wet photographs.</p>
-</a>
-<a class="related-card" href="/blog/choosing-the-right-scanner" style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; text-decoration: none; color: inherit; display: block; transition: transform 0.2s, box-shadow 0.2s;">
-<h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 8px;">Choosing the Right Photo Scanner</h3>
-<p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Flatbed vs Auto-feed vs Smartphone apps: an in-depth buying guide.</p>
-</a>
-</div>
-</div>
-</article></div>
-<aside class="page-sidebar">
-<div class="ad-sidebar-sticky">
-<span class="ad-sidebar-label">Advertisement</span>
-<div id="ad-sidebar" style="margin:0; min-height:250px; background:var(--bg-surface-2); border:1px dashed var(--border-strong); border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center;">
-<div class="ad-item">
-<script>
-          atOptions = {
-            'key' : 'eefa27f757f4d0772d979fca1074f12a',
-            'format' : 'iframe',
-            'height' : 250,
-            'width' : 300,
-            'params' : {}
-          };
-        </script>
-<script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
-</div>
-</div>
-</div>
-</aside>
-</div>
-</main>
-<section class="gear-section">
-<div class="gear-section-inner">
-<h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
-<p class="gear-section-sub">Pair PhotoSplit Studio with the best hardware for fast, high-quality archiving and secure backups.</p>
-<div class="gear-cards-grid"></div>
-<p class="affiliate-disclosure">As an Amazon Associate, PhotoSplit Studio earns from qualifying purchases.</p>
-</div>
-</section>
-
-<footer class="site-footer">
-<div class="footer-inner">
-<div class="footer-links">
-<a href="/app">App</a>
-<a href="/blog/">Blog</a>
-<a href="/tips">Scanning Tips</a>
-<a href="/contact">Contact</a>
-<a href="/terms">Terms</a>
-<a href="/privacy-policy">Privacy</a>
-<a href="/about">About</a>
-<a href="#" onclick="if(typeof openTextModal === 'function') openTextModal('feedback-modal', event)">Feedback</a>
-</div>
-<div class="footer-copy">© 2026 PhotoSplit Studio. All rights reserved.</div>
-</div>
-<div class="site-status-bar">
-  <div class="status-item"><span class="status-label">Is it dark outside?</span><span class="status-value" id="dark-status-answer">...</span></div>
-  <div class="status-item"><span class="status-label">Global Visitors:</span><img alt="Visitor Count" class="visitor-badge" src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"/></div>
-</div>
-<script>(function(){ var h=new Date().getHours(); var ans=(h>=18||h<6)?"YES":"NO"; var el=document.getElementById("dark-status-answer"); if(el) el.textContent=ans; })();</script>
-</footer>
-
-<div id="cookie-consent" role="dialog">
-<div id="cookie-consent-inner">
-<p>🍪 We use cookies to improve your experience. See our <a href="/privacy-policy">Privacy Policy</a>.</p>
-<div id="cookie-consent-actions">
-<button class="cookie-btn" id="cookie-decline">Decline</button>
-<button class="cookie-btn cookie-btn-accept" id="cookie-accept">Accept All</button>
-</div>
-</div>
-</div>
-<script>
-    (function () {
-      let srcImg = null, displayScale = 1, sel = { x: 0, y: 0, w: 0, h: 0 }, ratio = null, dragging = null, drawing = false, drawStart = null;
-      const zone = document.getElementById('crop-upload-zone'), fileInput = document.getElementById('crop-file-input'), wrap = document.getElementById('crop-canvas-wrap'), imgCanvas = document.getElementById('crop-img-canvas'), ctx = imgCanvas.getContext('2d'), selEl = document.getElementById('crop-selection'), previewCanvas = document.getElementById('crop-preview-canvas'), pctx = previewCanvas.getContext('2d'), btnDl = document.getElementById('btn-crop-download');
-
-      function loadFile(file) {
-        if (!file || !file.type.startsWith('image/')) return;
-        const url = URL.createObjectURL(file);
-        const img = new Image();
-        img.onload = () => {
-          srcImg = img;
-          displayScale = Math.min(1, wrap.parentElement.offsetWidth / img.naturalWidth);
-          imgCanvas.width = img.naturalWidth * displayScale; imgCanvas.height = img.naturalHeight * displayScale;
-          ctx.drawImage(img, 0, 0, imgCanvas.width, imgCanvas.height);
-          wrap.style.display = 'block'; zone.style.display = 'none';
-          sel = { x: 0, y: 0, w: imgCanvas.width, h: imgCanvas.height };
-          updateUI(); btnDl.disabled = false;
-        };
-        img.src = url;
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+    <meta content="#010101" name="theme-color" />
+    <title>
+      Free Online Image Cropper — Crop Photos to Any Size | PhotoSplit Studio
+    </title>
+    <meta
+      content="Free online image cropper. Crop photos to any size or aspect ratio — freeform, square, 4:3, 16:9, and more. Works in your browser, no upload needed, 100% private."
+      name="description"
+    />
+    <meta
+      content="image cropper online free, crop photo online, crop image to square, crop picture free, online photo crop tool, aspect ratio crop"
+      name="keywords"
+    />
+    <meta content="index,follow" name="robots" />
+    <link href="https://photosplitstudio.com/crop" rel="canonical" />
+    <meta content="website" property="og:type" />
+    <meta
+      content="Free Online Image Cropper — PhotoSplit Studio"
+      property="og:title"
+    />
+    <meta
+      content="Crop any photo to any size or aspect ratio for free. Runs entirely in your browser."
+      property="og:description"
+    />
+    <meta content="https://photosplitstudio.com/crop" property="og:url" />
+    <meta
+      content="https://photosplitstudio.com/assets/images/og-image.png"
+      property="og:image"
+    />
+    <meta content="summary_large_image" name="twitter:card" />
+    <link href="/assets/images/logo.png" rel="icon" type="image/png" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <script defer="" src="/js/gear.js"></script>
+    <!-- Scripts loaded dynamically after consent -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
       }
-      fileInput.onchange = e => loadFile(e.target.files[0]);
-
-      document.querySelectorAll('.ratio-btn').forEach(btn => {
-        btn.onclick = () => {
-          document.querySelectorAll('.ratio-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active');
-          ratio = btn.dataset.ratio === 'free' ? null : eval(btn.dataset.ratio.replace(':', '/'));
-          if (ratio && srcImg) {
-            if (ratio >= 1) sel.h = sel.w / ratio; else sel.w = sel.h * ratio;
-            updateUI();
-          }
-        };
-      });
-
-      function updateUI() {
-        selEl.style.left = sel.x + 'px'; selEl.style.top = sel.y + 'px'; selEl.style.width = sel.w + 'px'; selEl.style.height = sel.h + 'px';
-        const s = 1 / displayScale;
-        document.getElementById('crop-x').value = Math.round(sel.x*s); document.getElementById('crop-y').value = Math.round(sel.y*s);
-        document.getElementById('crop-w').value = Math.round(sel.w*s); document.getElementById('crop-h').value = Math.round(sel.h*s);
-        const pscale = Math.min(1, 160 / (sel.h/displayScale), 240 / (sel.w/displayScale));
-        previewCanvas.width = (sel.w/displayScale)*pscale; previewCanvas.height = (sel.h/displayScale)*pscale;
-        pctx.drawImage(srcImg, sel.x/displayScale, sel.y/displayScale, sel.w/displayScale, sel.h/displayScale, 0, 0, previewCanvas.width, previewCanvas.height);
+      function loadGoogleScripts() {
+        if (document.getElementById("ga-script")) return;
+        var gaScript = document.createElement("script");
+        gaScript.id = "ga-script";
+        gaScript.async = true;
+        gaScript.src =
+          "https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ";
+        document.head.appendChild(gaScript);
+        gtag("js", new Date());
+        gtag("config", "G-G40QDCGTTZ", { anonymize_ip: true });
       }
-
-      selEl.onmousedown = e => { if (!e.target.classList.contains('crop-handle')) dragging = { type: 'move', sx: e.clientX - sel.x, sy: e.clientY - sel.y }; };
-      document.querySelectorAll('.crop-handle').forEach(h => h.onmousedown = e => { dragging = { type: 'resize', dir: h.dataset.dir, os: {...sel}, sx: e.clientX, sy: e.clientY }; e.stopPropagation(); });
-      imgCanvas.onmousedown = e => { drawing = true; const r = imgCanvas.getBoundingClientRect(); drawStart = { x: e.clientX - r.left, y: e.clientY - r.top }; sel = { ...drawStart, w: 0, h: 0 }; };
-
-      document.onmousemove = e => {
-        if (drawing) {
-          const r = imgCanvas.getBoundingClientRect(); const x2 = Math.max(0, Math.min(imgCanvas.width, e.clientX - r.left)), y2 = Math.max(0, Math.min(imgCanvas.height, e.clientY - r.top));
-          sel.x = Math.min(drawStart.x, x2); sel.y = Math.min(drawStart.y, y2); sel.w = Math.abs(x2 - drawStart.x); sel.h = Math.abs(y2 - drawStart.y);
-          if (ratio) { if (sel.w/sel.h > ratio) sel.h = sel.w/ratio; else sel.w = sel.h*ratio; }
-          updateUI();
-        } else if (dragging) {
-          if (dragging.type === 'move') { sel.x = Math.max(0, Math.min(imgCanvas.width - sel.w, e.clientX - dragging.sx)); sel.y = Math.max(0, Math.min(imgCanvas.height - sel.h, e.clientY - dragging.sy)); }
-          else {
-            const dx = e.clientX - dragging.sx, dy = e.clientY - dragging.sy, o = dragging.os;
-            if (dragging.dir.includes('e')) sel.w = Math.max(20, o.w + dx); if (dragging.dir.includes('s')) sel.h = Math.max(20, o.h + dy);
-            if (dragging.dir.includes('w')) { sel.x = Math.max(0, o.x + dx); sel.w = Math.max(20, o.w - dx); }
-            if (dragging.dir.includes('n')) { sel.y = Math.max(0, o.y + dy); sel.h = Math.max(20, o.h - dy); }
-            if (ratio) sel.h = sel.w/ratio;
-          }
-          updateUI();
+    </script>
+    <style>
+      .crop-tool {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 32px 24px 60px;
+      }
+      .ratio-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 20px 0;
+      }
+      .ratio-btn {
+        padding: 7px 14px;
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius-sm);
+        background: var(--bg-surface);
+        color: var(--text-secondary);
+        font-family: inherit;
+        font-size: 0.8rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.12s;
+      }
+      .ratio-btn:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+      .ratio-btn.active {
+        border-color: var(--accent);
+        background: rgba(254, 44, 85, 0.09);
+        color: var(--accent);
+      }
+      .crop-workspace {
+        display: grid;
+        grid-template-columns: 1fr 280px;
+        gap: 24px;
+      }
+      @media (max-width: 720px) {
+        .crop-workspace {
+          grid-template-columns: 1fr;
         }
-      };
-      document.onmouseup = () => { drawing = false; dragging = null; };
-
-      btnDl.onclick = () => {
-        const out = document.createElement('canvas'); out.width = sel.w/displayScale; out.height = sel.h/displayScale;
-        out.getContext('2d').drawImage(srcImg, sel.x/displayScale, sel.y/displayScale, out.width, out.height, 0, 0, out.width, out.height);
-        out.toBlob(b => { const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = 'cropped.jpg'; a.click(); }, 'image/jpeg', 0.92);
-      };
-
-      // Cookie Consent
-      var banner = document.getElementById('cookie-consent');
-      if (!localStorage.getItem('pss_cookie_consent')) {
-        banner.classList.add('visible');
-      } else if (localStorage.getItem('pss_cookie_consent') === 'accepted') {
-        if (typeof loadGoogleScripts === 'function') loadGoogleScripts();
       }
-      document.getElementById('cookie-accept').onclick = function() { 
-        localStorage.setItem('pss_cookie_consent', 'accepted'); 
-        banner.classList.remove('visible'); 
-        if (typeof loadGoogleScripts === 'function') loadGoogleScripts();
-      };
-      document.getElementById('cookie-decline').onclick = function() { 
-        localStorage.setItem('pss_cookie_consent', 'declined'); 
-        banner.classList.remove('visible'); 
-      };
-    }());
-  </script>
-</body>
+      #crop-upload-zone {
+        border: 2px dashed var(--border-strong);
+        border-radius: var(--radius-lg);
+        padding: 48px 24px;
+        text-align: center;
+        cursor: pointer;
+        transition:
+          border-color 0.2s,
+          background 0.2s;
+      }
+      #crop-upload-zone:hover,
+      #crop-upload-zone.drag-over {
+        border-color: var(--accent);
+        background: rgba(254, 44, 85, 0.05);
+      }
+      #crop-upload-zone p {
+        color: var(--text-muted);
+        margin: 8px 0 0;
+        font-size: 0.85rem;
+      }
+      #crop-canvas-wrap {
+        position: relative;
+        background: #111;
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        user-select: none;
+        display: none;
+      }
+      #crop-img-canvas {
+        display: block;
+        max-width: 100%;
+      }
+      #crop-selection {
+        position: absolute;
+        border: 2px solid #fe2c55;
+        box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.45);
+        cursor: move;
+      }
+      .crop-handle {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: #fe2c55;
+        border: 2px solid #fff;
+        border-radius: 2px;
+      }
+      .crop-handle.nw {
+        top: -5px;
+        left: -5px;
+        cursor: nw-resize;
+      }
+      .crop-handle.ne {
+        top: -5px;
+        right: -5px;
+        cursor: ne-resize;
+      }
+      .crop-handle.sw {
+        bottom: -5px;
+        left: -5px;
+        cursor: sw-resize;
+      }
+      .crop-handle.se {
+        bottom: -5px;
+        right: -5px;
+        cursor: se-resize;
+      }
+      .crop-panel {
+        background: var(--bg-surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        height: fit-content;
+      }
+      .crop-panel label {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        display: block;
+        margin-bottom: 4px;
+      }
+      .crop-dims-row {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+      .crop-dims-row span {
+        color: var(--text-muted);
+        padding-top: 18px;
+      }
+      .dim-group {
+        flex: 1;
+      }
+      .dim-group input {
+        width: 100%;
+        padding: 7px 8px;
+        background: var(--bg-surface-2);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        color: var(--text-primary);
+        font-family: inherit;
+        font-size: 0.88rem;
+      }
+      .btn-crop-action {
+        background: linear-gradient(135deg, #fe2c55, #ff375f);
+        color: #fff;
+        border: none;
+        border-radius: 99px;
+        padding: 13px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        cursor: pointer;
+        width: 100%;
+        box-shadow: 0 3px 14px rgba(254, 44, 85, 0.35);
+        transition: all 0.15s;
+      }
+      .btn-crop-action:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 20px rgba(254, 44, 85, 0.45);
+      }
+      .crop-preview {
+        background: var(--bg-base);
+        border-radius: var(--radius-sm);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 80px;
+      }
+      #crop-preview-canvas {
+        max-width: 100%;
+        max-height: 160px;
+        display: block;
+      }
+    </style>
+    <link href="/css/style-premium.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header id="site-header">
+      <button
+        aria-label="Toggle navigation"
+        class="icon-btn"
+        id="sidebar-toggle"
+      >
+        <svg
+          fill="none"
+          height="20"
+          stroke="currentColor"
+          stroke-width="2"
+          viewbox="0 0 24 24"
+          width="20"
+        >
+          <path d="M3 12h18M3 6h18M3 18h18"></path>
+        </svg>
+      </button>
+      <a class="logo" href="/">
+        <img
+          alt="PhotoSplit Logo"
+          class="logo-img"
+          src="/assets/images/logo-animated.svg"
+          style="width: 32px; height: 32px"
+        />
+        PhotoSplit Studio
+      </a>
+      <div class="header-spacer"></div>
+      <div class="privacy-badge">
+        <svg
+          fill="none"
+          height="14"
+          stroke="currentColor"
+          stroke-width="2.5"
+          viewbox="0 0 24 24"
+          width="14"
+        >
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+        <span>100% Private · No Uploads</span>
+      </div>
+      <nav class="main-nav">
+        <a href="/app" class="">Split Photos</a>
+        <a href="/resize" class="">Resize</a>
+        <a href="/blog/" class="">Blog</a>
+        <a href="/tips" class="">Tips</a>
+        <a href="/about" class="">About</a>
+        <a href="/contact" class="">Contact</a>
+      </nav>
+
+      <button
+        class="icon-btn"
+        id="theme-toggle"
+        onclick="if (typeof toggleTheme === 'function') toggleTheme();"
+        title="Toggle Dark/Light Mode"
+      >
+        🌓
+      </button>
+    </header>
+
+    <main>
+      <section class="hero-utility">
+        <h1>Free Online Image Cropper</h1>
+        <p>
+          Crop any photo to a custom size or aspect ratio instantly. Free &amp;
+          private.
+        </p>
+      </section>
+      <!-- AdSense &mdash; Below Hero -->
+      <div class="page-with-sidebar">
+        <div class="page-main-content">
+          <div
+            style="
+              max-width: 1250px;
+              margin: var(--space-md) auto;
+              padding: 0 24px;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              gap: 20px;
+              align-items: center;
+            "
+          >
+            <div class="ad-item">
+              <script>
+                atOptions = {
+                  key: "033703f2c2dfe7a5fa4501cd3ba1417e",
+                  format: "iframe",
+                  height: 90,
+                  width: 728,
+                  params: {},
+                };
+              </script>
+              <script src="https://www.highperformanceformat.com/033703f2c2dfe7a5fa4501cd3ba1417e/invoke.js"></script>
+            </div>
+            <div class="ad-item">
+              <script>
+                atOptions = {
+                  key: "eefa27f757f4d0772d979fca1074f12a",
+                  format: "iframe",
+                  height: 60,
+                  width: 468,
+                  params: {},
+                };
+              </script>
+              <script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
+            </div>
+          </div>
+          <div class="crop-tool">
+            <div class="section-label">Aspect Ratio Presets</div>
+            <div class="ratio-row">
+              <button class="ratio-btn active" data-ratio="free">
+                Freeform
+              </button>
+              <button class="ratio-btn" data-ratio="1:1">1:1 Square</button>
+              <button class="ratio-btn" data-ratio="4:3">4:3</button>
+              <button class="ratio-btn" data-ratio="16:9">16:9</button>
+              <button class="ratio-btn" data-ratio="9:16">9:16 Story</button>
+              <button class="ratio-btn" data-ratio="3:2">3:2</button>
+            </div>
+            <div class="crop-workspace">
+              <div>
+                <div
+                  id="crop-upload-zone"
+                  onclick="document.getElementById('crop-file-input').click()"
+                >
+                  <div style="font-size: 2.5rem">??</div>
+                  <div
+                    style="
+                      font-weight: 700;
+                      font-size: 1rem;
+                      color: var(--text-primary);
+                      margin-top: 8px;
+                    "
+                  >
+                    Drop image here or click to upload
+                  </div>
+                  <p>JPEG, PNG, WebP supported × or paste with Ctrl+V</p>
+                  <input
+                    accept="image/*"
+                    id="crop-file-input"
+                    style="display: none"
+                    type="file"
+                  />
+                </div>
+                <div id="crop-canvas-wrap">
+                  <canvas id="crop-img-canvas"></canvas>
+                  <div id="crop-selection">
+                    <div class="crop-handle nw" data-dir="nw"></div>
+                    <div class="crop-handle ne" data-dir="ne"></div>
+                    <div class="crop-handle sw" data-dir="sw"></div>
+                    <div class="crop-handle se" data-dir="se"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="crop-panel">
+                <div>
+                  <div class="section-label" style="margin-bottom: 10px">
+                    Crop Area
+                  </div>
+                  <div class="crop-dims-row">
+                    <div class="dim-group">
+                      <label>X</label
+                      ><input id="crop-x" type="number" value="0" />
+                    </div>
+                    <div class="dim-group">
+                      <label>Y</label
+                      ><input id="crop-y" type="number" value="0" />
+                    </div>
+                  </div>
+                  <div class="crop-dims-row" style="margin-top: 8px">
+                    <div class="dim-group">
+                      <label>Width</label
+                      ><input id="crop-w" type="number" value="0" />
+                    </div>
+                    <span>×</span>
+                    <div class="dim-group">
+                      <label>Height</label
+                      ><input id="crop-h" type="number" value="0" />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <label>Preview</label>
+                  <div class="crop-preview">
+                    <canvas id="crop-preview-canvas"></canvas>
+                  </div>
+                </div>
+                <button
+                  class="btn-crop-action"
+                  disabled=""
+                  id="btn-crop-download"
+                >
+                  💾 Download Cropped Image
+                </button>
+              </div>
+            </div>
+          </div>
+          <article
+            class="seo-wrapper"
+            style="
+              max-width: 980px;
+              margin: 20px auto 40px;
+              padding: 24px;
+              background: var(--bg-surface);
+              border-radius: var(--radius-lg);
+              border: 1px solid var(--border);
+            "
+          >
+            <h2 style="margin-top: 0">Free Online Image Cropper</h2>
+            <p style="color: var(--text-secondary); line-height: 1.6">
+              Cropping an image is the easiest way to improve composition or fit
+              a photo into a specific frame. PhotoSplit Studio's free online
+              image cropper lets you quickly trim unwanted edges, focus on your
+              subject, and change the aspect ratio of any photo without
+              installing software. Since all processing happens in your browser,
+              your photos remain 100% private and are never uploaded to our
+              servers.
+            </p>
+            <h3 style="margin-top: 32px; margin-bottom: 16px">
+              The Rule of Thirds and Composition
+            </h3>
+            <p style="color: var(--text-secondary); line-height: 1.6">
+              When cropping a photo, it's helpful to keep the
+              <strong>Rule of Thirds</strong> in mind. Imagine your image
+              divided into nine equal segments by two vertical and two
+              horizontal lines. Positioning the most important elements of your
+              photo along these lines, or at their intersections, creates more
+              tension, energy, and interest than simply centering the subject.
+            </p>
+            <h3 style="margin-top: 32px; margin-bottom: 16px">
+              Common Aspect Ratios Explained
+            </h3>
+            <ul
+              style="
+                color: var(--text-secondary);
+                line-height: 1.6;
+                padding-left: 20px;
+                margin-bottom: 32px;
+              "
+            >
+              <li>
+                <strong>1:1 Square:</strong> The classic format for Instagram
+                posts and profile pictures. It focuses the viewer's eye directly
+                on the center of the image.
+              </li>
+              <li>
+                <strong>16:9 Widescreen:</strong> The standard aspect ratio for
+                YouTube video thumbnails, TV screens, presentations, and desktop
+                wallpapers. It is excellent for landscapes.
+              </li>
+              <li>
+                <strong>4:3 Standard:</strong> The default aspect ratio for most
+                smartphone cameras and digital point-and-shoot cameras. It's a
+                versatile ratio that works well for both portraits and
+                landscapes.
+              </li>
+              <li>
+                <strong>9:16 Vertical:</strong> The standard format for
+                mobile-first content, including Instagram Stories, Reels,
+                TikTok, and YouTube Shorts.
+              </li>
+              <li>
+                <strong>3:2 Classic 35mm:</strong> The standard aspect ratio of
+                35mm film and modern DSLR cameras. It provides a slightly wider
+                frame than 4:3, which is often preferred by professional
+                photographers.
+              </li>
+            </ul>
+            <h3 style="margin-top: 32px; margin-bottom: 16px">
+              Why Use a Browser-Based Cropper?
+            </h3>
+            <p style="color: var(--text-secondary); line-height: 1.6">
+              Most online croppers force you to upload your image to a remote
+              server. This can be slow, wastes data, and poses a privacy risk if
+              the photo is sensitive. PhotoSplit Studio uses HTML5 Canvas to
+              crop your images entirely on your device. It's faster, uses less
+              bandwidth, and guarantees your privacy.
+            </p>
+            <div
+              class="related-section"
+              style="
+                margin-top: 40px;
+                border-top: 1px solid var(--border);
+                padding-top: 32px;
+              "
+            >
+              <h2 style="font-size: 1.5rem; margin-top: 0; margin-bottom: 24px">
+                Related Guides &amp; Tutorials
+              </h2>
+              <div
+                class="related-grid"
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                  gap: 16px;
+                "
+              >
+                <a
+                  class="related-card"
+                  href="/blog/understanding-dpi-and-resolution"
+                  style="
+                    background: var(--bg-surface);
+                    border: 1px solid var(--border);
+                    border-radius: 12px;
+                    padding: 18px;
+                    text-decoration: none;
+                    color: inherit;
+                    display: block;
+                    transition:
+                      transform 0.2s,
+                      box-shadow 0.2s;
+                  "
+                >
+                  <h3
+                    style="
+                      font-size: 0.95rem;
+                      font-weight: 600;
+                      margin: 0 0 8px;
+                    "
+                  >
+                    Understanding DPI and Resolution
+                  </h3>
+                  <p
+                    style="
+                      font-size: 0.85rem;
+                      color: var(--text-secondary);
+                      margin: 0;
+                      line-height: 1.5;
+                    "
+                  >
+                    Learn how to choose the perfect scanner settings for your
+                    archival project.
+                  </p>
+                </a>
+                <a
+                  class="related-card"
+                  href="/blog/restore-water-damaged-photos"
+                  style="
+                    background: var(--bg-surface);
+                    border: 1px solid var(--border);
+                    border-radius: 12px;
+                    padding: 18px;
+                    text-decoration: none;
+                    color: inherit;
+                    display: block;
+                    transition:
+                      transform 0.2s,
+                      box-shadow 0.2s;
+                  "
+                >
+                  <h3
+                    style="
+                      font-size: 0.95rem;
+                      font-weight: 600;
+                      margin: 0 0 8px;
+                    "
+                  >
+                    Restoring Water-Damaged Photos
+                  </h3>
+                  <p
+                    style="
+                      font-size: 0.85rem;
+                      color: var(--text-secondary);
+                      margin: 0;
+                      line-height: 1.5;
+                    "
+                  >
+                    Safe physical separation and digital restoration techniques
+                    for wet photographs.
+                  </p>
+                </a>
+                <a
+                  class="related-card"
+                  href="/blog/choosing-the-right-scanner"
+                  style="
+                    background: var(--bg-surface);
+                    border: 1px solid var(--border);
+                    border-radius: 12px;
+                    padding: 18px;
+                    text-decoration: none;
+                    color: inherit;
+                    display: block;
+                    transition:
+                      transform 0.2s,
+                      box-shadow 0.2s;
+                  "
+                >
+                  <h3
+                    style="
+                      font-size: 0.95rem;
+                      font-weight: 600;
+                      margin: 0 0 8px;
+                    "
+                  >
+                    Choosing the Right Photo Scanner
+                  </h3>
+                  <p
+                    style="
+                      font-size: 0.85rem;
+                      color: var(--text-secondary);
+                      margin: 0;
+                      line-height: 1.5;
+                    "
+                  >
+                    Flatbed vs Auto-feed vs Smartphone apps: an in-depth buying
+                    guide.
+                  </p>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <aside class="page-sidebar">
+          <div class="ad-sidebar-sticky">
+            <span class="ad-sidebar-label">Advertisement</span>
+            <div
+              id="ad-sidebar"
+              style="
+                margin: 0;
+                min-height: 250px;
+                background: var(--bg-surface-2);
+                border: 1px dashed var(--border-strong);
+                border-radius: var(--radius-md);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <div class="ad-item">
+                <script>
+                  atOptions = {
+                    key: "eefa27f757f4d0772d979fca1074f12a",
+                    format: "iframe",
+                    height: 250,
+                    width: 300,
+                    params: {},
+                  };
+                </script>
+                <script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <section class="gear-section">
+      <div class="gear-section-inner">
+        <h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
+        <p class="gear-section-sub">
+          Pair PhotoSplit Studio with the best hardware for fast, high-quality
+          archiving and secure backups.
+        </p>
+        <div class="gear-cards-grid"></div>
+        <p class="affiliate-disclosure">
+          As an Amazon Associate, PhotoSplit Studio earns from qualifying
+          purchases.
+        </p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="/app">App</a>
+          <a href="/blog/">Blog</a>
+          <a href="/tips">Scanning Tips</a>
+          <a href="/contact">Contact</a>
+          <a href="/terms">Terms</a>
+          <a href="/privacy-policy">Privacy</a>
+          <a href="/about">About</a>
+          <a
+            href="#"
+            onclick="
+              if (typeof openTextModal === 'function')
+                openTextModal('feedback-modal', event);
+            "
+            >Feedback</a
+          >
+        </div>
+        <div class="footer-copy">
+          © 2026 PhotoSplit Studio. All rights reserved.
+        </div>
+      </div>
+      <div class="site-status-bar">
+        <div class="status-item">
+          <span class="status-label">Is it dark outside?</span
+          ><span class="status-value" id="dark-status-answer">...</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Global Visitors:</span
+          ><img
+            alt="Visitor Count"
+            class="visitor-badge"
+            src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"
+          />
+        </div>
+      </div>
+      <script>
+        (function () {
+          var h = new Date().getHours();
+          var ans = h >= 18 || h < 6 ? "YES" : "NO";
+          var el = document.getElementById("dark-status-answer");
+          if (el) el.textContent = ans;
+        })();
+      </script>
+    </footer>
+
+    <!-- MODALS START -->
+    <div
+      class="text-modal-backdrop"
+      id="feedback-modal"
+      onclick="
+        if (event.target === this && typeof closeTextModal === 'function')
+          closeTextModal('feedback-modal');
+      "
+    >
+      <div class="text-modal-box">
+        <div class="text-modal-header">
+          <h2>Provide Feedback</h2>
+          <button
+            class="icon-btn"
+            onclick="
+              if (typeof closeTextModal === 'function')
+                closeTextModal('feedback-modal');
+            "
+          >
+            ✕
+          </button>
+        </div>
+        <div class="text-modal-content" id="feedback-form-view">
+          <form
+            onsubmit="
+              if (typeof handleFeedbackSubmit === 'function')
+                handleFeedbackSubmit(event);
+            "
+          >
+            <input
+              class="form-control mb-12"
+              id="fb-name"
+              placeholder="Your Name"
+              required=""
+              type="text"
+              style="margin-bottom: 12px"
+            />
+            <input
+              class="form-control mb-12"
+              id="fb-email"
+              placeholder="your@email.com"
+              required=""
+              type="email"
+              style="margin-bottom: 12px"
+            />
+            <textarea
+              class="form-control mb-12"
+              id="fb-desc"
+              placeholder="Your feedback..."
+              required=""
+              rows="4"
+              style="margin-bottom: 12px"
+            ></textarea>
+            <button class="btn btn-primary" style="width: 100%" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+        <div
+          class="text-modal-content"
+          id="feedback-success-view"
+          style="display: none; text-align: center"
+        >
+          <h3>✅ Thank you!</h3>
+          <p>Your feedback has been received.</p>
+          <button
+            class="btn btn-secondary"
+            onclick="
+              if (typeof closeTextModal === 'function')
+                closeTextModal('feedback-modal');
+            "
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="cookie-consent" role="dialog">
+      <div id="cookie-consent-inner">
+        <p>
+          🍪 We use cookies to improve your experience. See our
+          <a href="/privacy-policy">Privacy Policy</a>.
+        </p>
+        <div id="cookie-consent-actions">
+          <button class="cookie-btn" id="cookie-decline">Decline</button>
+          <button class="cookie-btn cookie-btn-accept" id="cookie-accept">
+            Accept All
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        if (!localStorage.getItem("ps_counted")) {
+          localStorage.setItem("ps_counted", "true");
+          var img = new Image();
+          img.src =
+            "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
+        }
+
+        window.handleFeedbackSubmit = function (e) {
+          e.preventDefault();
+          var params = new URLSearchParams();
+          params.append(
+            "entry.1051903221",
+            document.getElementById("fb-name").value,
+          );
+          params.append(
+            "entry.371950700",
+            document.getElementById("fb-email").value,
+          );
+          params.append(
+            "entry.852578852",
+            document.getElementById("fb-desc").value,
+          );
+          fetch(
+            "https://docs.google.com/forms/d/e/1FAIpQLSeJe_jw0IHHXeT4w4hzcZJ2WXREaT8aD4_R4LFBGVZNazsehg/formResponse",
+            { method: "POST", mode: "no-cors", body: params },
+          );
+          document.getElementById("feedback-form-view").style.display = "none";
+          document.getElementById("feedback-success-view").style.display =
+            "block";
+        };
+
+        // Cookie Consent
+        var banner = document.getElementById("cookie-consent");
+        if (banner) {
+          if (!localStorage.getItem("pss_cookie_consent")) {
+            banner.classList.add("visible");
+          } else if (
+            localStorage.getItem("pss_cookie_consent") === "accepted"
+          ) {
+            if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+            if (typeof loadGoogleAnalytics === "function")
+              loadGoogleAnalytics();
+          }
+          var acceptBtn = document.getElementById("cookie-accept");
+          if (acceptBtn) {
+            acceptBtn.onclick = function () {
+              localStorage.setItem("pss_cookie_consent", "accepted");
+              banner.classList.remove("visible");
+              if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+              if (typeof loadGoogleAnalytics === "function")
+                loadGoogleAnalytics();
+            };
+          }
+          var declineBtn = document.getElementById("cookie-decline");
+          if (declineBtn) {
+            declineBtn.onclick = function () {
+              localStorage.setItem("pss_cookie_consent", "declined");
+              banner.classList.remove("visible");
+            };
+          }
+        }
+      })();
+    </script>
+    <!-- MODALS END -->
+  </body>
 </html>
