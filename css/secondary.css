@@ -50,10 +50,17 @@
 .site-nav .cta:hover { opacity: 0.9; text-decoration: none; color: #fff; }
 
 /* HERO */
+@keyframes meshGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 .hero {
-  background: #010101;
+  background: linear-gradient(-45deg, #010101, #1a0810, #010101, #001212);
+  background-size: 400% 400%;
+  animation: meshGradient 15s ease infinite;
   color: #fff;
-  padding: 72px 24px;
+  padding: 80px 24px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -62,8 +69,8 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 30% 50%, rgba(254,44,85,0.14) 0%, transparent 60%),
-              radial-gradient(ellipse at 70% 50%, rgba(37,244,238,0.09) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 30% 50%, rgba(254,44,85,0.18) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 50%, rgba(37,244,238,0.12) 0%, transparent 60%);
   pointer-events: none;
 }
 .hero.tips-hero { background: #010101; }
@@ -104,7 +111,15 @@
   padding: 24px;
   margin: 24px 0;
   box-shadow: var(--shadow-sm);
+  transition: all var(--dur-normal) var(--ease-spring);
+  position: relative;
+  z-index: 1;
 }
+.tip-card::after, .card::after {
+  content: ''; position: absolute; inset: -1px; background: var(--accent-grad); border-radius: inherit; z-index: -1; opacity: 0; transition: opacity var(--dur-normal);
+}
+.tip-card:hover, .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: transparent; }
+.tip-card:hover::after, .card:hover::after { opacity: 0.8; }
 .tip-card h3 { margin-top: 0; color: var(--accent); }
 
 .callout {
