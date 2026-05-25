@@ -2,16 +2,6 @@
 
 <html data-theme="" lang="en">
 <head>
-<!-- Ezoic Privacy & Integration Scripts -->
-<script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
-<script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
-<script async="" src="https://www.ezojs.com/ezoic/sa.min.js"></script>
-<script>
-      window.ezstandalone = window.ezstandalone || {};
-      ezstandalone.cmd = ezstandalone.cmd || [];
-  </script>
-<script src="https://ezoicanalytics.com/analytics.js"></script>
-<!-- End Ezoic Scripts -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <!-- ═══ PRIMARY SEO ═══════════════════════════════════════════════════════ -->
@@ -249,6 +239,10 @@
 </div>
 <label class="form-label">Base filename</label>
 <input aria-label="Base filename" class="form-control" id="filename-input" title="Base filename" type="text" value="photo_"/>
+<div style="margin-top: 24px; text-align: center; padding: 16px; background: rgba(254,44,85,0.05); border-radius: 12px; border: 1px solid rgba(254,44,85,0.1);">
+  <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0; margin-bottom: 12px;">Did PhotoSplit save you hours of work?</p>
+  <a href="https://buymeacoffee.com/codey" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #FFDD00; color: #000; font-weight: 700; text-decoration: none; padding: 8px 16px; border-radius: 8px; font-size: 0.9rem; box-shadow: 0 2px 8px rgba(255,221,0,0.4); transition: transform 0.2s;">☕ Buy me a coffee</a>
+</div>
 </section>
 </aside>
 <div id="sidebar-overlay"></div>
@@ -318,8 +312,77 @@
 </div>
 <!-- Ezoic Ad — App Page -->
 <div class="ad-wrap ad-app-wrapper">
-<div id="ezoic-pub-ad-placeholder-125"></div>
+<script>
+  atOptions = {
+    'key' : '1616e9416e1938ab8fa16f0ac161a303',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/1616e9416e1938ab8fa16f0ac161a303/invoke.js"></script>
 </div>
+
+<article class="seo-wrapper" id="seo-content" style="max-width: 900px; margin: 40px auto; padding: 0 24px; line-height: 1.8;">
+  <h2 style="font-size: 2rem; margin-bottom: 24px;">How the PhotoSplit Scanner Works</h2>
+  <p>PhotoSplit Studio utilizes advanced computer vision via <strong>OpenCV.js</strong> to automatically detect the edges of your physical photographs against the background of your scanner bed. Unlike traditional desktop software that requires tedious manual drawing of bounding boxes, our browser-based app instantly analyzes the contrast differentials to isolate each print.</p>
+  
+  <h3 style="font-size: 1.5rem; margin-top: 32px; margin-bottom: 16px;">Step-by-Step Guide to Digitizing Your Archives</h3>
+  <ol style="padding-left: 24px; margin-bottom: 32px;">
+    <li><strong>Prepare Your Scanner:</strong> Wipe the scanner glass with a microfiber cloth. Dust and smudges can trick the edge detection algorithm.</li>
+    <li><strong>Arrange the Photos:</strong> Place 3-4 photos on the scanner bed. Ensure there is at least a quarter-inch (5mm) gap between each photo, and keep them away from the extreme edges of the glass.</li>
+    <li><strong>Scan at High Resolution:</strong> We recommend <strong>300 DPI</strong> for standard 4x6 prints, or <strong>600 DPI</strong> if you plan to enlarge or reprint the photos later. Save the file as a high-quality JPEG or lossless TIFF.</li>
+    <li><strong>Upload and Split:</strong> Drag the scanned image into PhotoSplit Studio. The app will immediately draw blue bounding boxes around the detected photos.</li>
+    <li><strong>Review and Save:</strong> If a photo was scanned slightly skewed, check the "Auto-straighten" box. Click "Save All" to instantly download your separated photos in a ZIP archive.</li>
+  </ol>
+
+  <h3 style="font-size: 1.5rem; margin-top: 32px; margin-bottom: 16px;">Troubleshooting Detection Issues</h3>
+  <p>If the app is failing to detect your photos accurately, try the following adjustments:</p>
+  <ul style="padding-left: 24px; margin-bottom: 32px;">
+    <li><strong>Adjust the Background Threshold:</strong> If your scanner lid is dark, you may need to lower the threshold slider. If the lid is white, a higher threshold (around 240) usually works best.</li>
+    <li><strong>Change the Minimum Area:</strong> If the tool is picking up dust specks as photos, increase the "Min photo area" slider to ignore small artifacts.</li>
+    <li><strong>Dark Photos on a Dark Background:</strong> If your photo has very dark edges (like night shots) and your scanner lid is also dark, the algorithm won't find the edge. In this case, simply use the <strong>"Add Crop"</strong> button to manually draw the box.</li>
+  </ul>
+
+  <h3 style="font-size: 1.5rem; margin-top: 32px; margin-bottom: 16px;">Privacy First: No Server Uploads</h3>
+  <p>Most online photo tools process your images on their servers. This means your private family memories are uploaded, processed remotely, and temporarily stored in the cloud. <strong>PhotoSplit Studio is entirely different.</strong></p>
+  <p>Thanks to modern <strong>WebAssembly (WASM)</strong> technology, the entire image processing engine runs locally inside your web browser. When you drop a file into the app, it is loaded directly into your device's RAM. It never crosses the internet, ensuring 100% privacy and security for your family archives.</p>
+
+  <h3 style="font-size: 1.5rem; margin-top: 32px; margin-bottom: 16px;">Frequently Asked Questions</h3>
+  <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 48px;">
+    <div style="background: var(--bg-sunken); padding: 20px; border-radius: 8px; border: 1px solid var(--border);">
+      <h4 style="margin: 0 0 8px 0;">What file formats are supported?</h4>
+      <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary);">You can upload JPEG, PNG, TIFF, BMP, WebP, GIF, and even PDF files containing scanned images. You can export the split photos as high-quality JPEGs, lossless PNGs, or combine them back into a multi-page PDF.</p>
+    </div>
+    <div style="background: var(--bg-sunken); padding: 20px; border-radius: 8px; border: 1px solid var(--border);">
+      <h4 style="margin: 0 0 8px 0;">Is this tool really free?</h4>
+      <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary);">Yes! PhotoSplit Studio is completely free to use. There are no subscriptions, no watermarks, and no arbitrary limits on how many photos you can process.</p>
+    </div>
+    <div style="background: var(--bg-sunken); padding: 20px; border-radius: 8px; border: 1px solid var(--border);">
+      <h4 style="margin: 0 0 8px 0;">How does the auto-color enhancement work?</h4>
+      <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary);">Vintage photographs often suffer from color fading and a yellow/red color cast over time. Our auto-enhance feature applies a Contrast Limited Adaptive Histogram Equalization (CLAHE) algorithm to automatically balance the white point and restore contrast.</p>
+    </div>
+  </div>
+<div class="related-section" style="margin-top: 40px; border-top: 1px solid var(--border); padding-top: 32px;">
+<h2 style="font-size: 1.5rem; margin-top: 0; margin-bottom: 24px;">Related Guides & Tutorials</h2>
+<div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+<a class="related-card" href="/blog/understanding-dpi-and-resolution" style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; text-decoration: none; color: inherit; display: block; transition: transform 0.2s, box-shadow 0.2s;">
+<h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 8px;">Understanding DPI and Resolution</h3>
+<p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Learn how to choose the perfect scanner settings for your archival project.</p>
+</a>
+<a class="related-card" href="/blog/restore-water-damaged-photos" style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; text-decoration: none; color: inherit; display: block; transition: transform 0.2s, box-shadow 0.2s;">
+<h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 8px;">Restoring Water-Damaged Photos</h3>
+<p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Safe physical separation and digital restoration techniques for wet photographs.</p>
+</a>
+<a class="related-card" href="/blog/choosing-the-right-scanner" style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; text-decoration: none; color: inherit; display: block; transition: transform 0.2s, box-shadow 0.2s;">
+<h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 8px;">Choosing the Right Photo Scanner</h3>
+<p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Flatbed vs Auto-feed vs Smartphone apps: an in-depth buying guide.</p>
+</a>
+</div>
+</div>
+</article>
+
 <section class="gear-section">
 <div class="gear-section-inner">
 <h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
@@ -470,12 +533,6 @@
         document.getElementById('feedback-success-view').style.display='block';
       };
     })();
-  </script>
-<!-- Ezoic Ad Placement Init -->
-<script>
-    ezstandalone.cmd.push(function() {
-      ezstandalone.showAds(125);
-    });
   </script>
 <script>
     if (!localStorage.getItem("ps_counted")) {
