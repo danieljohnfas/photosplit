@@ -17,6 +17,28 @@
 <meta content="https://photosplitstudio.com/resize" property="og:url"/>
 <meta content="https://photosplitstudio.com/assets/images/og-image.png" property="og:image"/>
 <meta content="summary_large_image" name="twitter:card"/>
+<!-- ═══ STRUCTURED DATA ═════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "PhotoSplit Studio Image Resizer",
+      "url": "https://photosplitstudio.com/resize",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "All",
+      "description": "Free browser-based tool to resize images for social media platforms like Instagram, TikTok, and YouTube. Processing is local and 100% private.",
+      "browserRequirements": "Requires a modern web browser with JavaScript and Canvas support.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "featureList": [
+        "Resize photos for Instagram, TikTok, YouTube, Twitter/X, Facebook, and LinkedIn",
+        "Multiple fit modes: Letterbox (Fit), Crop (Fill), and Stretch",
+        "100% private local processing \u2014 photos never leave your device",
+        "Support for JPEG, PNG, BMP, and WebP"
+      ]
+    }
+  ]
+</script>
 <link href="/assets/images/logo.png" rel="icon" type="image/png"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -317,6 +339,22 @@
         img.src = url;
       }
       fileInput.addEventListener('change', e => loadFile(e.target.files[0]));
+
+      drop.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        drop.classList.add('drag-over');
+      });
+      drop.addEventListener('dragleave', (e) => {
+        e.preventDefault();
+        drop.classList.remove('drag-over');
+      });
+      drop.addEventListener('drop', (e) => {
+        e.preventDefault();
+        drop.classList.remove('drag-over');
+        if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+          loadFile(e.dataTransfer.files[0]);
+        }
+      });
 
       document.getElementById('platform-picker').querySelectorAll('.plat-btn').forEach(btn => {
         btn.addEventListener('click', () => {
