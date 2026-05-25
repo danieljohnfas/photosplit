@@ -119,7 +119,7 @@
 </svg>
 </button>
 <a class="logo" href="/">
-<img alt="PhotoSplit Logo" class="logo-img" src="/assets/images/logo-animated.svg"/>
+<img alt="PhotoSplit Logo" class="logo-img" src="/assets/images/logo-animated.svg" style="width:32px;height:32px;"/>
       PhotoSplit Studio
     </a>
 <div class="header-spacer"></div>
@@ -130,25 +130,19 @@
 <span>100% Private · No Uploads</span>
 </div>
 <nav class="main-nav">
-<button class="btn btn-secondary btn-sm btn-voice-toggle" id="btn-voice-toggle" onclick="PremiumEngine.toggleVoice()">
-        🎙️ Voice Control
-      </button>
-<a class="active" href="/app">Split Photos</a>
-<a href="/resize">Resize</a>
-<a href="/blog/">Blog</a>
-<a href="/tips">Tips</a>
-<a href="/about">About</a>
-<a href="/contact">Contact</a>
+<button class="btn btn-secondary btn-sm btn-voice-toggle" id="btn-voice-toggle" onclick="PremiumEngine.toggleVoice()">🎙️ Voice Control</button>
+<a href="/app" class="active">Split Photos</a>
+<a href="/resize" class="">Resize</a>
+<a href="/blog/" class="">Blog</a>
+<a href="/tips" class="">Tips</a>
+<a href="/about" class="">About</a>
+<a href="/contact" class="">Contact</a>
 </nav>
 <button aria-label="Toggle sounds" class="icon-btn" id="sound-toggle" title="Mute sounds">🔊</button>
-<button class="icon-btn" id="theme-toggle" title="Toggle Dark/Light Mode">🌓</button>
-<button aria-label="Show keyboard shortcuts" class="icon-btn" id="btn-shortcuts" title="Keyboard shortcuts">
-<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
-<rect height="12" rx="2" width="20" x="2" y="6"></rect>
-<path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M8 14h8"></path>
-</svg>
-</button>
+<button class="icon-btn" id="theme-toggle" onclick="if(typeof toggleTheme === 'function') toggleTheme()" title="Toggle Dark/Light Mode">🌓</button>
+<button aria-label="Show keyboard shortcuts" class="icon-btn" id="btn-shortcuts" title="Keyboard shortcuts"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="16"><rect height="12" rx="2" width="20" x="2" y="6"></rect><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M8 14h8"></path></svg></button>
 </header>
+
 <div id="app-shell">
 <main id="main-body">
 <!-- SIDEBAR -->
@@ -418,6 +412,7 @@
 <p class="affiliate-disclosure">As an Amazon Associate, PhotoSplit Studio earns from qualifying purchases.</p>
 </div>
 </section>
+
 <footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-links">
@@ -428,12 +423,17 @@
 <a href="/terms">Terms</a>
 <a href="/privacy-policy">Privacy</a>
 <a href="/about">About</a>
-<a href="#" onclick="openTextModal('feedback-modal', event)">Feedback</a>
+<a href="#" onclick="if(typeof openTextModal === 'function') openTextModal('feedback-modal', event)">Feedback</a>
 </div>
 <div class="footer-copy">© 2026 PhotoSplit Studio. All rights reserved.</div>
 </div>
-<div class="site-status-bar"><div class="status-item"><span class="status-label">Is it dark outside?</span><span class="status-value" id="dark-status-answer">...</span></div><div class="status-item"><span class="status-label">Global Visitors:</span><img alt="Visitor Count" class="visitor-badge" src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"/></div></div><script>(function(){ var h=new Date().getHours(); var ans=(h>=18||h<6)?"YES":"NO"; var el=document.getElementById("dark-status-answer"); if(el) el.textContent=ans; })();</script>
+<div class="site-status-bar">
+  <div class="status-item"><span class="status-label">Is it dark outside?</span><span class="status-value" id="dark-status-answer">...</span></div>
+  <div class="status-item"><span class="status-label">Global Visitors:</span><img alt="Visitor Count" class="visitor-badge" src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"/></div>
+</div>
+<script>(function(){ var h=new Date().getHours(); var ans=(h>=18||h<6)?"YES":"NO"; var el=document.getElementById("dark-status-answer"); if(el) el.textContent=ans; })();</script>
 </footer>
+
 <!-- Modals -->
 <div class="modal-backdrop" id="modal-backdrop" onclick="if(event.target===this)closeModal()">
 <div class="modal-content-card" id="modal-box">

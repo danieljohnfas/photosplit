@@ -78,7 +78,7 @@
 </svg>
 </button>
 <a class="logo" href="/">
-<img alt="PhotoSplit Logo" class="nav-icon" src="/assets/images/logo-animated.svg"/>
+<img alt="PhotoSplit Logo" class="logo-img" src="/assets/images/logo-animated.svg" style="width:32px;height:32px;"/>
       PhotoSplit Studio
     </a>
 <div class="header-spacer"></div>
@@ -89,15 +89,19 @@
 <span>100% Private · No Uploads</span>
 </div>
 <nav class="main-nav">
-<a href="/app">Split Photos</a>
-<a class="active" href="/resize">Resize</a>
-<a href="/blog/">Blog</a>
-<a href="/tips">Tips</a>
-<a href="/about">About</a>
-<a href="/contact">Contact</a>
+
+<a href="/app" class="">Split Photos</a>
+<a href="/resize" class="active">Resize</a>
+<a href="/blog/" class="">Blog</a>
+<a href="/tips" class="">Tips</a>
+<a href="/about" class="">About</a>
+<a href="/contact" class="">Contact</a>
 </nav>
-<button class="icon-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">🌓</button>
+
+<button class="icon-btn" id="theme-toggle" onclick="if(typeof toggleTheme === 'function') toggleTheme()" title="Toggle Dark/Light Mode">🌓</button>
+
 </header>
+
 <main>
 <section class="hero-utility">
 <h1>Social Media Image Resizer</h1>
@@ -261,6 +265,7 @@
 <p class="affiliate-disclosure">As an Amazon Associate, PhotoSplit Studio earns from qualifying purchases.</p>
 </div>
 </section>
+
 <footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-links">
@@ -271,12 +276,17 @@
 <a href="/terms">Terms</a>
 <a href="/privacy-policy">Privacy</a>
 <a href="/about">About</a>
-<a href="#" onclick="openTextModal('feedback-modal', event)">Feedback</a>
+<a href="#" onclick="if(typeof openTextModal === 'function') openTextModal('feedback-modal', event)">Feedback</a>
 </div>
 <div class="footer-copy">© 2026 PhotoSplit Studio. All rights reserved.</div>
 </div>
-<div class="site-status-bar"><div class="status-item"><span class="status-label">Is it dark outside?</span><span class="status-value" id="dark-status-answer">...</span></div><div class="status-item"><span class="status-label">Global Visitors:</span><img alt="Visitor Count" class="visitor-badge" src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"/></div></div><script>(function(){ var h=new Date().getHours(); var ans=(h>=18||h<6)?"YES":"NO"; var el=document.getElementById("dark-status-answer"); if(el) el.textContent=ans; })();</script>
+<div class="site-status-bar">
+  <div class="status-item"><span class="status-label">Is it dark outside?</span><span class="status-value" id="dark-status-answer">...</span></div>
+  <div class="status-item"><span class="status-label">Global Visitors:</span><img alt="Visitor Count" class="visitor-badge" src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"/></div>
+</div>
+<script>(function(){ var h=new Date().getHours(); var ans=(h>=18||h<6)?"YES":"NO"; var el=document.getElementById("dark-status-answer"); if(el) el.textContent=ans; })();</script>
 </footer>
+
 <div id="cookie-consent" role="dialog">
 <div id="cookie-consent-inner">
 <p>🍪 We use cookies to improve your experience. See our <a href="/privacy-policy">Privacy Policy</a>.</p>
