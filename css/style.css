@@ -2271,3 +2271,38 @@ kbd {
 
 /* -- Ad Utility Classes -- */
 .ad-app-wrapper { max-width: 960px; margin: 32px auto 0; padding: 0 24px; }
+/* -- Sidebar Ad Layout ------------------------------------------------------ */
+.page-with-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.page-sidebar {
+  display: none; /* Hide on mobile by default to remain non-invasive */
+}
+.ad-sidebar-sticky {
+  position: sticky;
+  top: calc(var(--header-h) + 24px);
+}
+.ad-sidebar-label {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .page-with-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    align-items: start;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .page-sidebar {
+    display: block;
+  }
+}

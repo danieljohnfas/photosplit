@@ -20,7 +20,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="/css/style.css" rel="stylesheet"/>
-<script src="/js/gear.js" defer></script>
+<script defer="" src="/js/gear.js"></script>
 <!-- Scripts loaded dynamically after consent -->
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -70,7 +70,7 @@
     .bg-swatch { width: 28px; height: 28px; border-radius: 4px; border: 2px solid transparent; cursor: pointer; transition: border-color 0.12s; }
     .bg-swatch.active { border-color: var(--accent); }
   </style>
-</head>
+<link href="/css/style-premium.css" rel="stylesheet"/></head>
 <body>
 <header id="site-header">
 <button aria-label="Toggle navigation" class="icon-btn" id="sidebar-toggle">
@@ -105,7 +105,7 @@
 <p>Create compliant passport photos for 10+ countries instantly in your browser. Free &amp; private.</p>
 </section>
 <!-- AdSense &mdash; Below Hero -->
-<div style="max-width: 1250px; margin: var(--space-md) auto; padding: 0 24px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; align-items: center;">
+<div class="page-with-sidebar"><div class="page-main-content"><div style="max-width: 1250px; margin: var(--space-md) auto; padding: 0 24px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; align-items: center;">
 <div class="ad-item"><script>
   atOptions = {
     'key' : '033703f2c2dfe7a5fa4501cd3ba1417e',
@@ -126,8 +126,7 @@
   };
 </script>
 <script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script></div>
-</div>
-<div class="passport-tool">
+</div><div class="passport-tool">
 <div class="section-label">Select Country / Document Type</div>
 <div class="country-picker" id="country-picker">
 <button class="country-btn active" data-bg="#ffffff" data-dpi="300" data-hmm="51" data-name="US Passport" data-wmm="51">
@@ -166,14 +165,11 @@
 <button class="btn-pp-dl" disabled="" id="btn-pp-dl">💾 Download Photo</button>
 </div>
 </div>
-</div>
-<article class="seo-wrapper" style="max-width:960px;margin:40px auto;padding:24px;background:var(--bg-surface);border-radius:var(--radius-lg);border:1px solid var(--border);">
+</div><article class="seo-wrapper" style="max-width:960px;margin:40px auto;padding:24px;background:var(--bg-surface);border-radius:var(--radius-lg);border:1px solid var(--border);">
 <h2 style="margin-top:0">Free Passport Photo Maker</h2>
 <p style="color:var(--text-secondary);line-height:1.6">Creating your own passport or visa photos at home saves time and money. Our free passport photo maker instantly crops your photo to the exact government-mandated dimensions for the US (2x2 inches), UK (35x45 mm), EU Schengen visa, and more. All processing is done locally in your browser, ensuring your sensitive biometric photos are completely private and never uploaded.</p>
-
 <h3 style="margin-top:32px; margin-bottom:16px;">Official Passport Photo Guidelines</h3>
 <p style="color:var(--text-secondary);line-height:1.6">To ensure your application is not delayed or rejected, you must follow strict guidelines set by government agencies. Here are the universal rules for almost all passports and visas:</p>
-
 <ul style="color:var(--text-secondary);line-height:1.6;padding-left:20px; margin-bottom: 32px;">
 <li><strong>Lighting:</strong> Face a window for natural, even lighting. Avoid harsh shadows on your face or on the background behind you. The photo must be clear and in color.</li>
 <li><strong>Background:</strong> Stand about 1.5 feet away from a plain white or off-white wall. This distance helps eliminate shadows cast on the wall.</li>
@@ -181,23 +177,21 @@
 <li><strong>Glasses &amp; Headwear:</strong> Most countries (including the US and UK) no longer allow glasses of any kind in passport photos. Take them off to avoid rejection. Hats and head coverings are only allowed for religious or medical purposes, and must not cast shadows on the face.</li>
 <li><strong>Attire:</strong> Wear normal everyday clothing. Uniforms are generally not permitted.</li>
 </ul>
-
 <h3 style="margin-top:32px; margin-bottom:16px;">Specific Country Requirements</h3>
 <div style="display: flex; flex-direction: column; gap: 16px;">
-  <div style="background: var(--bg-sunken); padding: 20px; border-radius: 8px; border: 1px solid var(--border);">
-    <h4 style="margin: 0 0 8px 0;">United States Passport (2 x 2 inches)</h4>
-    <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary);">The image size must be exactly 2 x 2 inches (51 x 51 mm). The head must be between 1 inch and 1 3/8 inches (25 - 35 mm) from the bottom of the chin to the top of the head.</p>
-  </div>
-  <div style="background: var(--bg-sunken); padding: 20px; border-radius: 8px; border: 1px solid var(--border);">
-    <h4 style="margin: 0 0 8px 0;">UK, EU, and Schengen Visa (35 x 45 mm)</h4>
-    <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary);">The image must be 35mm wide by 45mm high. The head should take up between 29mm and 34mm of the height.</p>
-  </div>
+<div style="background: var(--bg-sunken); padding: 20px; border-radius: 8px; border: 1px solid var(--border);">
+<h4 style="margin: 0 0 8px 0;">United States Passport (2 x 2 inches)</h4>
+<p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary);">The image size must be exactly 2 x 2 inches (51 x 51 mm). The head must be between 1 inch and 1 3/8 inches (25 - 35 mm) from the bottom of the chin to the top of the head.</p>
 </div>
-
+<div style="background: var(--bg-sunken); padding: 20px; border-radius: 8px; border: 1px solid var(--border);">
+<h4 style="margin: 0 0 8px 0;">UK, EU, and Schengen Visa (35 x 45 mm)</h4>
+<p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary);">The image must be 35mm wide by 45mm high. The head should take up between 29mm and 34mm of the height.</p>
+</div>
+</div>
 <h3 style="margin-top:32px; margin-bottom:16px;">How to Print Your Photos</h3>
 <p style="color:var(--text-secondary);line-height:1.6">After cropping your photo to the correct dimensions, click <strong>Create Print Sheet</strong>. This will automatically tile your passport photos onto a standard 4x6 inch (10x15 cm) layout. You can then print this 4x6 sheet at home on photo paper, or take it to a local pharmacy or print shop for pennies, instead of paying premium prices for dedicated passport photo services.</p>
 <div class="related-section" style="margin-top: 40px; border-top: 1px solid var(--border); padding-top: 32px;">
-<h2 style="font-size: 1.5rem; margin-top: 0; margin-bottom: 24px;">Related Guides & Tutorials</h2>
+<h2 style="font-size: 1.5rem; margin-top: 0; margin-bottom: 24px;">Related Guides &amp; Tutorials</h2>
 <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
 <a class="related-card" href="/blog/understanding-dpi-and-resolution" style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; text-decoration: none; color: inherit; display: block; transition: transform 0.2s, box-shadow 0.2s;">
 <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 8px;">Understanding DPI and Resolution</h3>
@@ -213,7 +207,27 @@
 </a>
 </div>
 </div>
-</article>
+</article></div>
+<aside class="page-sidebar">
+<div class="ad-sidebar-sticky">
+<span class="ad-sidebar-label">Advertisement</span>
+<div id="ad-sidebar" style="margin:0; min-height:250px; background:var(--bg-surface-2); border:1px dashed var(--border-strong); border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center;">
+<div class="ad-item">
+<script>
+          atOptions = {
+            'key' : 'eefa27f757f4d0772d979fca1074f12a',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+          };
+        </script>
+<script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
+</div>
+</div>
+</div>
+</aside>
+</div>
 </main>
 <section class="gear-section">
 <div class="gear-section-inner">

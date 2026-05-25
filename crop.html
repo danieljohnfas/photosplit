@@ -20,7 +20,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="/css/style.css" rel="stylesheet"/>
-<script src="/js/gear.js" defer></script>
+<script defer="" src="/js/gear.js"></script>
 <!-- Scripts loaded dynamically after consent -->
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -67,7 +67,7 @@
     .crop-preview { background: var(--bg-base); border-radius: var(--radius-sm); overflow: hidden; display: flex; align-items: center; justify-content: center; min-height: 80px; }
     #crop-preview-canvas { max-width: 100%; max-height: 160px; display: block; }
   </style>
-</head>
+<link href="/css/style-premium.css" rel="stylesheet"/></head>
 <body>
 <header id="site-header">
 <button aria-label="Toggle navigation" class="icon-btn" id="sidebar-toggle">
@@ -102,7 +102,7 @@
 <p>Crop any photo to a custom size or aspect ratio instantly. Free &amp; private.</p>
 </section>
 <!-- AdSense &mdash; Below Hero -->
-<div style="max-width: 1250px; margin: var(--space-md) auto; padding: 0 24px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; align-items: center;">
+<div class="page-with-sidebar"><div class="page-main-content"><div style="max-width: 1250px; margin: var(--space-md) auto; padding: 0 24px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; align-items: center;">
 <div class="ad-item"><script>
   atOptions = {
     'key' : '033703f2c2dfe7a5fa4501cd3ba1417e',
@@ -123,8 +123,7 @@
   };
 </script>
 <script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script></div>
-</div>
-<div class="crop-tool">
+</div><div class="crop-tool">
 <div class="section-label">Aspect Ratio Presets</div>
 <div class="ratio-row">
 <button class="ratio-btn active" data-ratio="free">Freeform</button>
@@ -172,14 +171,11 @@
 <button class="btn-crop-action" disabled="" id="btn-crop-download">💾 Download Cropped Image</button>
 </div>
 </div>
-</div>
-<article class="seo-wrapper" style="max-width:980px;margin:20px auto 40px;padding:24px;background:var(--bg-surface);border-radius:var(--radius-lg);border:1px solid var(--border);">
+</div><article class="seo-wrapper" style="max-width:980px;margin:20px auto 40px;padding:24px;background:var(--bg-surface);border-radius:var(--radius-lg);border:1px solid var(--border);">
 <h2 style="margin-top:0">Free Online Image Cropper</h2>
 <p style="color:var(--text-secondary);line-height:1.6">Cropping an image is the easiest way to improve composition or fit a photo into a specific frame. PhotoSplit Studio's free online image cropper lets you quickly trim unwanted edges, focus on your subject, and change the aspect ratio of any photo without installing software. Since all processing happens in your browser, your photos remain 100% private and are never uploaded to our servers.</p>
-
 <h3 style="margin-top:32px; margin-bottom:16px;">The Rule of Thirds and Composition</h3>
 <p style="color:var(--text-secondary);line-height:1.6">When cropping a photo, it's helpful to keep the <strong>Rule of Thirds</strong> in mind. Imagine your image divided into nine equal segments by two vertical and two horizontal lines. Positioning the most important elements of your photo along these lines, or at their intersections, creates more tension, energy, and interest than simply centering the subject.</p>
-
 <h3 style="margin-top:32px; margin-bottom:16px;">Common Aspect Ratios Explained</h3>
 <ul style="color:var(--text-secondary);line-height:1.6;padding-left:20px; margin-bottom: 32px;">
 <li><strong>1:1 Square:</strong> The classic format for Instagram posts and profile pictures. It focuses the viewer's eye directly on the center of the image.</li>
@@ -188,11 +184,10 @@
 <li><strong>9:16 Vertical:</strong> The standard format for mobile-first content, including Instagram Stories, Reels, TikTok, and YouTube Shorts.</li>
 <li><strong>3:2 Classic 35mm:</strong> The standard aspect ratio of 35mm film and modern DSLR cameras. It provides a slightly wider frame than 4:3, which is often preferred by professional photographers.</li>
 </ul>
-
 <h3 style="margin-top:32px; margin-bottom:16px;">Why Use a Browser-Based Cropper?</h3>
 <p style="color:var(--text-secondary);line-height:1.6">Most online croppers force you to upload your image to a remote server. This can be slow, wastes data, and poses a privacy risk if the photo is sensitive. PhotoSplit Studio uses HTML5 Canvas to crop your images entirely on your device. It's faster, uses less bandwidth, and guarantees your privacy.</p>
 <div class="related-section" style="margin-top: 40px; border-top: 1px solid var(--border); padding-top: 32px;">
-<h2 style="font-size: 1.5rem; margin-top: 0; margin-bottom: 24px;">Related Guides & Tutorials</h2>
+<h2 style="font-size: 1.5rem; margin-top: 0; margin-bottom: 24px;">Related Guides &amp; Tutorials</h2>
 <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
 <a class="related-card" href="/blog/understanding-dpi-and-resolution" style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; text-decoration: none; color: inherit; display: block; transition: transform 0.2s, box-shadow 0.2s;">
 <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 8px;">Understanding DPI and Resolution</h3>
@@ -208,7 +203,27 @@
 </a>
 </div>
 </div>
-</article>
+</article></div>
+<aside class="page-sidebar">
+<div class="ad-sidebar-sticky">
+<span class="ad-sidebar-label">Advertisement</span>
+<div id="ad-sidebar" style="margin:0; min-height:250px; background:var(--bg-surface-2); border:1px dashed var(--border-strong); border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center;">
+<div class="ad-item">
+<script>
+          atOptions = {
+            'key' : 'eefa27f757f4d0772d979fca1074f12a',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+          };
+        </script>
+<script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
+</div>
+</div>
+</div>
+</aside>
+</div>
 </main>
 <section class="gear-section">
 <div class="gear-section-inner">
