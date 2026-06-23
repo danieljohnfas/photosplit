@@ -14,7 +14,8 @@ const gameStripTpl = fs.readFileSync(path.join(COMPONENTS_DIR, "game-strip.html"
 const socialShareTpl = fs.readFileSync(path.join(COMPONENTS_DIR, "social-share.html"), "utf8");
 const adScriptsTpl = fs.readFileSync(path.join(COMPONENTS_DIR, "ad-scripts.html"), "utf8");
 
-const toolPages = ['app.html', 'convert.html', 'crop.html', 'resize.html', 'passport.html', 'transcribe.html'];
+// Pages that should NOT have a right sidebar
+const noSidebarPages = ['app.html', 'convert.html', 'crop.html', 'resize.html', 'passport.html', 'transcribe.html', 'index.html'];
 
 const files = fs.readdirSync(DIR).filter((f) => f.endsWith(".html"));
 
@@ -22,7 +23,7 @@ files.forEach((file) => {
   const filePath = path.join(DIR, file);
   let content = fs.readFileSync(filePath, "utf8");
   let originalContent = content;
-  const isToolPage = toolPages.includes(file);
+  const isNoSidebar = noSidebarPages.includes(file);
 
   let pageHeader = headerTpl;
   const baseName = file.replace(".html", "").toUpperCase();
@@ -45,29 +46,19 @@ files.forEach((file) => {
   content = content.replace(/<!-- SOCIAL SHARE COMPONENT -->[\s\S]*?<!-- END SOCIAL SHARE COMPONENT -->\s*/gi, '');
   content = content.replace(/<!-- GAME STRIP COMPONENT -->[\s\S]*?<!-- END GAME STRIP COMPONENT -->\s*/gi, '');
   
-  // Header injection
+  // Header injection (just the ad top, NO game strip)
   let headerInjection = pageHeader + "\n" + adTopTpl + "\n";
-  // If it's NOT a tool page, put the game strip right under the top ad banner for maximum visibility!
-  if (!isToolPage) {
-    headerInjection += gameStripTpl + "\n";
-  }
 
   content = content.replace(/<header id="site-header">[\s\S]*?<\/header>/i, headerInjection);
   content = content.replace(/<nav class="site-nav">[\s\S]*?<\/nav>/i, headerInjection);
 
-  // Footer injection
-  let footerInjection = adBottomTpl + "\n" + footerTpl;
-  // If it IS a tool page, put the games at the bottom
-  if (isToolPage) {
-    footerInjection = gameStripTpl + "\n" + footerInjection;
-  }
+  // Footer injection (Game strip goes ABOVE footer)
+  let footerInjection = gameStripTpl + "\n" + adBottomTpl + "\n" + footerTpl;
   content = content.replace(/<footer class="site-footer">[\s\S]*?<\/footer>/i, footerInjection);
 
   // Sidebar injection
-  if (!isToolPage) {
+  if (!isNoSidebar) {
     content = content.replace(/<aside class="page-sidebar">[\s\S]*?<\/aside>/i, `<aside class="page-sidebar">\n${adSidebarTpl}\n</aside>`);
-  } else {
-    // Tool pages had their sidebars stripped by remove_tool_sidebar.js
   }
 
   content = content.replace(/<section class="gear-section">[\s\S]*?<\/section>\s*/gi, '');
@@ -115,14 +106,16 @@ if (fs.existsSync(BLOG_DIR)) {
     content = content.replace(/<!-- SOCIAL SHARE COMPONENT -->[\s\S]*?<!-- END SOCIAL SHARE COMPONENT -->\s*/gi, '');
     content = content.replace(/<!-- GAME STRIP COMPONENT -->[\s\S]*?<!-- END GAME STRIP COMPONENT -->\s*/gi, '');
 
-    // Blog is content, so games go up top!
-    let headerInjection = pageHeader + "\n" + adTopTpl + "\n" + gameStripTpl + "\n" + socialShareTpl + "\n";
+    // Blog Header: No game strip!
+    let headerInjection = pageHeader + "\n" + adTopTpl + "\n" + socialShareTpl + "\n";
     content = content.replace(/<header id="site-header">[\s\S]*?<\/header>/i, headerInjection);
     content = content.replace(/<nav class="site-nav">[\s\S]*?<\/nav>/i, headerInjection);
 
-    let footerInjection = adBottomTpl + "\n" + footerTpl;
+    // Blog Footer: Game strip ABOVE footer!
+    let footerInjection = gameStripTpl + "\n" + adBottomTpl + "\n" + footerTpl;
     content = content.replace(/<footer class="site-footer">[\s\S]*?<\/footer>/i, footerInjection);
     
+    // Blog gets sidebar
     content = content.replace(/<aside class="page-sidebar">[\s\S]*?<\/aside>/i, `<aside class="page-sidebar">\n${adSidebarTpl}\n</aside>`);
     content = content.replace(/<section class="gear-section">[\s\S]*?<\/section>\s*/gi, '');
     content = content.replace(/<script[^>]*src="\/js\/gear\.js"[^>]*><\/script>\s*/gi, '');
