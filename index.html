@@ -298,7 +298,7 @@
 </header>
 
 <!-- TOP AD BANNER -->
-<div class="ad-container ad-banner-top">
+<div class="ad-container ad-banner-top glass-ad-panel">
   <span class="ad-label">Advertisement</span>
   
   <!-- Desktop Ad: 728x90 -->
@@ -346,18 +346,8 @@
           overflow: hidden;
         "
       >
-        <div
-          style="
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(
-              circle at 50% 50%,
-              rgba(254, 44, 85, 0.12) 0%,
-              transparent 70%
-            );
-            pointer-events: none;
-          "
-        ></div>
+        <div class="hero-glow-blob"></div>
+        <div class="hero-glow-blob" style="animation-delay: -4s; background: radial-gradient(circle, rgba(37,244,238,0.15) 0%, rgba(254,44,85,0.1) 50%, transparent 70%);"></div>
         <div
           style="
             max-width: 900px;
@@ -386,11 +376,12 @@
           <h1
             style="
               font-family: &quot;Outfit&quot;, sans-serif;
-              font-size: clamp(2.2rem, 7vw, 4.2rem);
+              font-size: clamp(2.8rem, 8vw, 5.5rem);
               font-weight: 900;
               line-height: 1.05;
               margin-bottom: 24px;
-              letter-spacing: -0.04em;
+              letter-spacing: -0.05em;
+              text-shadow: 0 4px 24px rgba(254, 44, 85, 0.3);
             "
           >
             Split Scanned Photos <br /><span
@@ -429,9 +420,12 @@
               class="btn btn-primary"
               href="/app"
               style="
-                padding: 18px 48px;
-                font-size: 1.15rem;
+                padding: 20px 52px;
+                font-size: 1.25rem;
+                font-weight: 700;
                 border-radius: 99px;
+                box-shadow: 0 8px 32px rgba(254, 44, 85, 0.4);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
               "
               >Open PhotoSplit App →</a
             >
@@ -453,44 +447,6 @@
       <div class="page-with-sidebar">
         <div class="page-main-content">
           <article class="seo-wrapper" id="seo-content">
-            <!-- AdSense &mdash; Below Hero -->
-            <div
-              style="
-                max-width: 1250px;
-                margin: var(--space-md) auto;
-                padding: 0 24px;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 20px;
-                align-items: center;
-              "
-            >
-              <div class="ad-item">
-                <script>
-                  atOptions = {
-                    key: "033703f2c2dfe7a5fa4501cd3ba1417e",
-                    format: "iframe",
-                    height: 90,
-                    width: 728,
-                    params: {},
-                  };
-                </script>
-                <script src="https://www.highperformanceformat.com/033703f2c2dfe7a5fa4501cd3ba1417e/invoke.js"></script>
-              </div>
-              <div class="ad-item">
-                <script>
-                  atOptions = {
-                    key: "eefa27f757f4d0772d979fca1074f12a",
-                    format: "iframe",
-                    height: 60,
-                    width: 468,
-                    params: {},
-                  };
-                </script>
-                <script src="https://www.highperformanceformat.com/eefa27f757f4d0772d979fca1074f12a/invoke.js"></script>
-              </div>
-            </div>
             <!-- ═══ FEATURE HUB ════════════════════════════════════════════════════════════ -->
             <section
               style="padding: var(--space-lg) 24px; background: var(--bg-base)"
@@ -1006,7 +962,7 @@
 
       </main>
     <!-- BOTTOM AD BANNER -->
-<div class="ad-container ad-banner-bottom">
+<div class="ad-container ad-banner-bottom glass-ad-panel">
   <span class="ad-label">Advertisement</span>
   
   <!-- Native Banner -->
