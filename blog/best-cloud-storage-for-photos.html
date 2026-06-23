@@ -132,7 +132,8 @@
       }
     </style>
     <link href="/css/style-premium.css" rel="stylesheet" />
-  </head>
+    <link rel="manifest" href="/manifest.json">
+</head>
   <body>
     <nav class="site-nav">
       <a class="logo blog-logo-link" href="/"
@@ -364,21 +365,23 @@
         a local drive.
       </p>
       <section class="gear-section">
-        <div class="gear-section-inner">
-          <h2 class="gear-section-title">
-            Recommended Photo Preservation Gear
-          </h2>
-          <p class="gear-section-sub">
-            Pair PhotoSplit Studio with the best hardware for fast, high-quality
-            archiving and secure backups.
-          </p>
-          <div class="gear-cards-grid"></div>
-          <p class="affiliate-disclosure">
-            As an Amazon Associate, PhotoSplit Studio earns from qualifying
-            purchases.
-          </p>
-        </div>
-      </section>
+  <div class="gear-section-inner">
+    <h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
+    <p class="gear-section-sub">
+      Pair PhotoSplit Studio with the best hardware for fast, high-quality
+      archiving and secure backups.
+    </p>
+    <div class="gear-cards-grid"></div>
+    <p class="affiliate-disclosure">
+      As an Amazon Associate, PhotoSplit Studio earns from qualifying purchases.
+    </p>
+  </div>
+</section>
+
+
+
+
+
 
       <h2>Conclusion</h2>
       <p>
@@ -419,210 +422,216 @@
       </div>
     </div>
     <footer class="site-footer">
-      <div class="footer-inner">
-        <div class="footer-links">
-          <a href="/app">App</a>
-          <a href="/blog/">Blog</a>
-          <a href="/tips">Scanning Tips</a>
-          <a href="/contact">Contact</a>
-          <a href="/terms">Terms</a>
-          <a href="/privacy-policy">Privacy</a>
-          <a href="/about">About</a>
-          <a
-            href="#"
-            onclick="
-              if (typeof openTextModal === 'function')
-                openTextModal('feedback-modal', event);
-            "
-            >Feedback</a
-          >
-        </div>
-        <div class="footer-copy">
-          © 2026 PhotoSplit Studio. All rights reserved.
-        </div>
-      </div>
-      <div class="site-status-bar">
-        <div class="status-item">
-          <span class="status-label">Is it dark outside?</span
-          ><span class="status-value" id="dark-status-answer">...</span>
-        </div>
-        <div class="status-item">
-          <span class="status-label">Global Visitors:</span
-          ><img
-            alt="Visitor Count"
-            class="visitor-badge"
-            src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"
-          />
-        </div>
-      </div>
-      <script>
-        (function () {
-          var h = new Date().getHours();
-          var ans = h >= 18 || h < 6 ? "YES" : "NO";
-          var el = document.getElementById("dark-status-answer");
-          if (el) el.textContent = ans;
-        })();
-      </script>
-    </footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/app">App</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tips">Scanning Tips</a>
+      <a href="/contact">Contact</a>
+      <a href="/terms">Terms</a>
+      <a href="/privacy-policy">Privacy</a>
+      <a href="/about">About</a>
+      <a
+        href="#"
+        onclick="
+          if (typeof openTextModal === 'function')
+            openTextModal('feedback-modal', event);
+        "
+        >Feedback</a
+      >
+    </div>
+    <div class="footer-copy">
+      © 2026 PhotoSplit Studio. All rights reserved.
+    </div>
+  </div>
+  <div class="site-status-bar">
+    <div class="status-item">
+      <span class="status-label">Is it dark outside?</span
+      ><span class="status-value" id="dark-status-answer">...</span>
+    </div>
+    <div class="status-item">
+      <span class="status-label">Global Visitors:</span
+      ><img
+        alt="Visitor Count"
+        class="visitor-badge"
+        src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"
+      />
+    </div>
+  </div>
+  <script>
+    (function () {
+      var h = new Date().getHours();
+      var ans = h >= 18 || h < 6 ? "YES" : "NO";
+      var el = document.getElementById("dark-status-answer");
+      if (el) el.textContent = ans;
 
-    <!-- MODALS START -->
+      // Register Service Worker for PWA / Offline caching
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js').then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
+    })();
+  </script>
+</footer>
+<!-- MODALS START -->
+<div
+  class="text-modal-backdrop"
+  id="feedback-modal"
+  onclick="
+    if (event.target === this && typeof closeTextModal === 'function')
+      closeTextModal('feedback-modal');
+  "
+>
+  <div class="text-modal-box">
+    <div class="text-modal-header">
+      <h2>Provide Feedback</h2>
+      <button
+        class="icon-btn"
+        onclick="
+          if (typeof closeTextModal === 'function')
+            closeTextModal('feedback-modal');
+        "
+      >
+        ✕
+      </button>
+    </div>
+    <div class="text-modal-content" id="feedback-form-view">
+      <form
+        onsubmit="
+          if (typeof handleFeedbackSubmit === 'function')
+            handleFeedbackSubmit(event);
+        "
+      >
+        <input
+          class="form-control mb-12"
+          id="fb-name"
+          placeholder="Your Name"
+          required=""
+          type="text"
+          style="margin-bottom: 12px"
+        />
+        <input
+          class="form-control mb-12"
+          id="fb-email"
+          placeholder="your@email.com"
+          required=""
+          type="email"
+          style="margin-bottom: 12px"
+        />
+        <textarea
+          class="form-control mb-12"
+          id="fb-desc"
+          placeholder="Your feedback..."
+          required=""
+          rows="4"
+          style="margin-bottom: 12px"
+        ></textarea>
+        <button class="btn btn-primary" style="width: 100%" type="submit">
+          Submit
+        </button>
+      </form>
+    </div>
     <div
-      class="text-modal-backdrop"
-      id="feedback-modal"
-      onclick="
-        if (event.target === this && typeof closeTextModal === 'function')
-          closeTextModal('feedback-modal');
-      "
+      class="text-modal-content"
+      id="feedback-success-view"
+      style="display: none; text-align: center"
     >
-      <div class="text-modal-box">
-        <div class="text-modal-header">
-          <h2>Provide Feedback</h2>
-          <button
-            class="icon-btn"
-            onclick="
-              if (typeof closeTextModal === 'function')
-                closeTextModal('feedback-modal');
-            "
-          >
-            ✕
-          </button>
-        </div>
-        <div class="text-modal-content" id="feedback-form-view">
-          <form
-            onsubmit="
-              if (typeof handleFeedbackSubmit === 'function')
-                handleFeedbackSubmit(event);
-            "
-          >
-            <input
-              class="form-control mb-12"
-              id="fb-name"
-              placeholder="Your Name"
-              required=""
-              type="text"
-              style="margin-bottom: 12px"
-            />
-            <input
-              class="form-control mb-12"
-              id="fb-email"
-              placeholder="your@email.com"
-              required=""
-              type="email"
-              style="margin-bottom: 12px"
-            />
-            <textarea
-              class="form-control mb-12"
-              id="fb-desc"
-              placeholder="Your feedback..."
-              required=""
-              rows="4"
-              style="margin-bottom: 12px"
-            ></textarea>
-            <button class="btn btn-primary" style="width: 100%" type="submit">
-              Submit
-            </button>
-          </form>
-        </div>
-        <div
-          class="text-modal-content"
-          id="feedback-success-view"
-          style="display: none; text-align: center"
-        >
-          <h3>✅ Thank you!</h3>
-          <p>Your feedback has been received.</p>
-          <button
-            class="btn btn-secondary"
-            onclick="
-              if (typeof closeTextModal === 'function')
-                closeTextModal('feedback-modal');
-            "
-          >
-            Close
-          </button>
-        </div>
-      </div>
+      <h3>✅ Thank you!</h3>
+      <p>Your feedback has been received.</p>
+      <button
+        class="btn btn-secondary"
+        onclick="
+          if (typeof closeTextModal === 'function')
+            closeTextModal('feedback-modal');
+        "
+      >
+        Close
+      </button>
     </div>
+  </div>
+</div>
 
-    <div id="cookie-consent" role="dialog">
-      <div id="cookie-consent-inner">
-        <p>
-          🍪 We use cookies to improve your experience. See our
-          <a href="/privacy-policy">Privacy Policy</a>.
-        </p>
-        <div id="cookie-consent-actions">
-          <button class="cookie-btn" id="cookie-decline">Decline</button>
-          <button class="cookie-btn cookie-btn-accept" id="cookie-accept">
-            Accept All
-          </button>
-        </div>
-      </div>
+<div id="cookie-consent" role="dialog">
+  <div id="cookie-consent-inner">
+    <p>
+      🍪 We use cookies to improve your experience. See our
+      <a href="/privacy-policy">Privacy Policy</a>.
+    </p>
+    <div id="cookie-consent-actions">
+      <button class="cookie-btn" id="cookie-decline">Decline</button>
+      <button class="cookie-btn cookie-btn-accept" id="cookie-accept">
+        Accept All
+      </button>
     </div>
+  </div>
+</div>
 
-    <script>
-      (function () {
-        if (!localStorage.getItem("ps_counted")) {
-          localStorage.setItem("ps_counted", "true");
-          var img = new Image();
-          img.src =
-            "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
-        }
+<script>
+  (function () {
+    if (!localStorage.getItem("ps_counted")) {
+      localStorage.setItem("ps_counted", "true");
+      var img = new Image();
+      img.src =
+        "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
+    }
 
-        window.handleFeedbackSubmit = function (e) {
-          e.preventDefault();
-          var params = new URLSearchParams();
-          params.append(
-            "entry.1051903221",
-            document.getElementById("fb-name").value,
-          );
-          params.append(
-            "entry.371950700",
-            document.getElementById("fb-email").value,
-          );
-          params.append(
-            "entry.852578852",
-            document.getElementById("fb-desc").value,
-          );
-          fetch(
-            "https://docs.google.com/forms/d/e/1FAIpQLSeJe_jw0IHHXeT4w4hzcZJ2WXREaT8aD4_R4LFBGVZNazsehg/formResponse",
-            { method: "POST", mode: "no-cors", body: params },
-          );
-          document.getElementById("feedback-form-view").style.display = "none";
-          document.getElementById("feedback-success-view").style.display =
-            "block";
+    window.handleFeedbackSubmit = function (e) {
+      e.preventDefault();
+      var params = new URLSearchParams();
+      params.append(
+        "entry.1051903221",
+        document.getElementById("fb-name").value,
+      );
+      params.append(
+        "entry.371950700",
+        document.getElementById("fb-email").value,
+      );
+      params.append(
+        "entry.852578852",
+        document.getElementById("fb-desc").value,
+      );
+      fetch(
+        "https://docs.google.com/forms/d/e/1FAIpQLSeJe_jw0IHHXeT4w4hzcZJ2WXREaT8aD4_R4LFBGVZNazsehg/formResponse",
+        { method: "POST", mode: "no-cors", body: params },
+      );
+      document.getElementById("feedback-form-view").style.display = "none";
+      document.getElementById("feedback-success-view").style.display = "block";
+    };
+
+    // Cookie Consent
+    var banner = document.getElementById("cookie-consent");
+    if (banner) {
+      if (!localStorage.getItem("pss_cookie_consent")) {
+        banner.classList.add("visible");
+      } else if (localStorage.getItem("pss_cookie_consent") === "accepted") {
+        if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+        if (typeof loadGoogleAnalytics === "function") loadGoogleAnalytics();
+      }
+      var acceptBtn = document.getElementById("cookie-accept");
+      if (acceptBtn) {
+        acceptBtn.onclick = function () {
+          localStorage.setItem("pss_cookie_consent", "accepted");
+          banner.classList.remove("visible");
+          if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+          if (typeof loadGoogleAnalytics === "function") loadGoogleAnalytics();
         };
+      }
+      var declineBtn = document.getElementById("cookie-decline");
+      if (declineBtn) {
+        declineBtn.onclick = function () {
+          localStorage.setItem("pss_cookie_consent", "declined");
+          banner.classList.remove("visible");
+        };
+      }
+    }
+  })();
+</script>
+<!-- MODALS END -->
 
-        // Cookie Consent
-        var banner = document.getElementById("cookie-consent");
-        if (banner) {
-          if (!localStorage.getItem("pss_cookie_consent")) {
-            banner.classList.add("visible");
-          } else if (
-            localStorage.getItem("pss_cookie_consent") === "accepted"
-          ) {
-            if (typeof loadGoogleScripts === "function") loadGoogleScripts();
-            if (typeof loadGoogleAnalytics === "function")
-              loadGoogleAnalytics();
-          }
-          var acceptBtn = document.getElementById("cookie-accept");
-          if (acceptBtn) {
-            acceptBtn.onclick = function () {
-              localStorage.setItem("pss_cookie_consent", "accepted");
-              banner.classList.remove("visible");
-              if (typeof loadGoogleScripts === "function") loadGoogleScripts();
-              if (typeof loadGoogleAnalytics === "function")
-                loadGoogleAnalytics();
-            };
-          }
-          var declineBtn = document.getElementById("cookie-decline");
-          if (declineBtn) {
-            declineBtn.onclick = function () {
-              localStorage.setItem("pss_cookie_consent", "declined");
-              banner.classList.remove("visible");
-            };
-          }
-        }
-      })();
-    </script>
-    <!-- MODALS END -->
-  </body>
+</body>
 </html>

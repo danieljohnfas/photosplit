@@ -67,20 +67,35 @@ files.forEach((file) => {
     gearTpl,
   );
 
-  // Strip hardcoded old cookie consent and scripts if they exist (non-standardized versions)
+  // Strip ALL existing MODALS blocks (handles multiple injections)
+  let prevContent;
+  do {
+    prevContent = content;
+    content = content.replace(
+      /<!-- MODALS START -->[\s\S]*?<!-- MODALS END -->\s*/i,
+      '',
+    );
+  } while (content !== prevContent);
+
+  // Strip hardcoded old cookie consent div and trailing script before </body>
   content = content.replace(
-    /<div id="cookie-consent" role="dialog">[\s\S]*?(<\/script>\s*)?<\/body>/i,
-    "</body>",
+    /<!-- Modals & Scripts -->[\s\S]*?(?=<!-- MODALS START -->|<div id="cookie-consent"|<\/body>)/i,
+    '',
   );
 
-  // Also strip any old modals block we might have injected previously
+  // Strip hardcoded old cookie consent div and trailing script before </body>
   content = content.replace(
-    /<!-- MODALS START -->[\s\S]*?<!-- MODALS END -->\s*/i,
-    "",
+    /(<div id="cookie-consent"[\s\S]*?<\/div>\s*<\/div>\s*)(<script>[\s\S]*?<\/script>\s*)?(?=<\/body>)/i,
+    '',
   );
 
   // Inject the standardized modals just before the closing body tag
-  content = content.replace(/<\/body>/i, modalsTpl + "\n</body>");
+  content = content.replace(/\s*<\/body>/i, '\n' + modalsTpl + '\n</body>');
+
+  // Inject Web App Manifest
+  if (!content.includes('rel="manifest"')) {
+    content = content.replace(/<\/head>/i, '  <link rel="manifest" href="/manifest.json">\n</head>');
+  }
 
   if (content !== originalContent) {
     fs.writeFileSync(filePath, content, "utf8");
@@ -119,15 +134,30 @@ if (fs.existsSync(BLOG_DIR)) {
       gearTpl,
     );
 
+    // Strip ALL existing MODALS blocks
+    let prevContent;
+    do {
+      prevContent = content;
+      content = content.replace(
+        /<!-- MODALS START -->[\s\S]*?<!-- MODALS END -->\s*/i,
+        '',
+      );
+    } while (content !== prevContent);
+
     content = content.replace(
-      /<div id="cookie-consent" role="dialog">[\s\S]*?(<\/script>\s*)?<\/body>/i,
-      "</body>",
+      /<!-- Modals & Scripts -->[\s\S]*?(?=<!-- MODALS START -->|<div id="cookie-consent"|<\/body>)/i,
+      '',
     );
+
     content = content.replace(
-      /<!-- MODALS START -->[\s\S]*?<!-- MODALS END -->\s*/i,
-      "",
+      /(<div id="cookie-consent"[\s\S]*?<\/div>\s*<\/div>\s*)(<script>[\s\S]*?<\/script>\s*)?(?=<\/body>)/i,
+      '',
     );
-    content = content.replace(/<\/body>/i, modalsTpl + "\n</body>");
+    content = content.replace(/\s*<\/body>/i, '\n' + modalsTpl + '\n</body>');
+
+    if (!content.includes('rel="manifest"')) {
+      content = content.replace(/<\/head>/i, '  <link rel="manifest" href="/manifest.json">\n</head>');
+    }
 
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, "utf8");

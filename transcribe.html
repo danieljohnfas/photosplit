@@ -1,0 +1,1277 @@
+<!doctype html>
+
+<html data-theme="" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+    <meta content="#010101" name="theme-color" />
+    <title>
+      Audio to Text Transcriber — Meeting Notes & Reports Free Online |
+      PhotoSplit Studio
+    </title>
+    <meta
+      content="Free online audio transcriber. Upload a meeting recording (MP3, MP4, WAV, M4A) or record live — get an instant transcript, Markdown report, or Word document. Powered by Whisper AI. Runs 100% locally in your browser. No uploads, no API key required."
+      name="description"
+    />
+    <meta
+      content="audio to text online free, meeting transcription, transcribe audio to text, voice to text, speech to text, meeting notes generator, audio transcriber, mp3 to text, wav to text, m4a to text, whisper transcription, meeting report generator, record and transcribe"
+      name="keywords"
+    />
+    <meta content="index,follow" name="robots" />
+    <link href="https://photosplitstudio.com/transcribe" rel="canonical" />
+    <meta content="website" property="og:type" />
+    <meta
+      content="Audio to Text Transcriber — PhotoSplit Studio"
+      property="og:title"
+    />
+    <meta
+      content="Turn any meeting recording into a clean transcript or document. Upload MP3, MP4, WAV, M4A — or record live. Free, powered by Whisper AI."
+      property="og:description"
+    />
+    <meta content="https://photosplitstudio.com/transcribe" property="og:url" />
+    <meta
+      content="https://photosplitstudio.com/assets/images/og-image.png"
+      property="og:image"
+    />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta
+      content="Audio to Text Transcriber — PhotoSplit Studio"
+      name="twitter:title"
+    />
+    <meta
+      content="Transcribe meeting recordings instantly. Upload audio or record live. Free & private."
+      name="twitter:description"
+    />
+    <link href="/assets/images/logo.png" rel="icon" type="image/png" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <script defer="" src="/js/gear.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      function loadGoogleScripts() {
+        if (document.getElementById("ga-script")) return;
+        var gaScript = document.createElement("script");
+        gaScript.id = "ga-script";
+        gaScript.async = true;
+        gaScript.src =
+          "https://www.googletagmanager.com/gtag/js?id=G-G40QDCGTTZ";
+        document.head.appendChild(gaScript);
+        gtag("js", new Date());
+        gtag("config", "G-G40QDCGTTZ", { anonymize_ip: true });
+      }
+    </script>
+    <style>
+      /* ── Page-specific styles ─────────────────────────────────────────────── */
+      .transcribe-tool {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 32px 24px 80px;
+      }
+
+
+      /* ── Options Row ──────────────────────────────────────────────────────── */
+      .options-row {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+      }
+      .options-row label {
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        white-space: nowrap;
+      }
+      .options-row select {
+        padding: 9px 14px;
+        background: var(--bg-surface-2);
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius-sm);
+        color: var(--text-primary);
+        font-family: inherit;
+        font-size: 0.88rem;
+        outline: none;
+        cursor: pointer;
+        transition: border-color 0.15s;
+      }
+      .options-row select:focus {
+        border-color: var(--accent);
+      }
+      .toggle-group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .toggle-switch {
+        position: relative;
+        width: 38px;
+        height: 22px;
+        flex-shrink: 0;
+      }
+      .toggle-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        position: absolute;
+      }
+      .toggle-track {
+        position: absolute;
+        inset: 0;
+        background: var(--bg-surface-2);
+        border: 1.5px solid var(--border);
+        border-radius: 99px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .toggle-track::after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 14px;
+        height: 14px;
+        background: var(--text-muted);
+        border-radius: 50%;
+        transition: all 0.2s;
+      }
+      .toggle-switch input:checked + .toggle-track {
+        background: var(--accent);
+        border-color: var(--accent);
+      }
+      .toggle-switch input:checked + .toggle-track::after {
+        transform: translateX(16px);
+        background: #fff;
+      }
+
+      /* ── Drop Zone ────────────────────────────────────────────────────────── */
+      #transcribe-drop {
+        border: 2px dashed var(--border-strong);
+        border-radius: var(--radius-lg);
+        padding: 52px 24px;
+        text-align: center;
+        cursor: pointer;
+        transition:
+          border-color 0.2s,
+          background 0.2s,
+          transform 0.2s;
+        position: relative;
+        margin-bottom: 20px;
+      }
+      #transcribe-drop:hover,
+      #transcribe-drop.drag-over {
+        border-color: var(--accent);
+        background: rgba(254, 44, 85, 0.04);
+        transform: scale(1.005);
+      }
+      .drop-icon {
+        font-size: 3rem;
+        margin-bottom: 12px;
+        display: block;
+        animation: float 3s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-6px);
+        }
+      }
+      #transcribe-drop h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 6px;
+      }
+      #transcribe-drop p {
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        margin: 0;
+      }
+      #transcribe-drop .drop-formats {
+        display: flex;
+        gap: 6px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 14px;
+      }
+      .format-tag {
+        background: var(--bg-surface-2);
+        border: 1px solid var(--border);
+        border-radius: 99px;
+        padding: 3px 10px;
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        letter-spacing: 0.04em;
+      }
+
+      /* ── File Info ────────────────────────────────────────────────────────── */
+      #file-info {
+        display: none;
+        align-items: center;
+        gap: 12px;
+        background: var(--bg-surface);
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 14px 18px;
+        margin-bottom: 20px;
+      }
+      .file-info-icon {
+        font-size: 1.5rem;
+      }
+      .file-info-details {
+        flex: 1;
+        min-width: 0;
+      }
+      .file-info-details .file-name {
+        font-weight: 700;
+        color: var(--text-primary);
+        font-size: 0.95rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .file-info-details .file-meta {
+        font-size: 0.78rem;
+        color: var(--text-muted);
+        margin-top: 2px;
+      }
+      #btn-remove-file {
+        background: none;
+        border: none;
+        color: var(--text-muted);
+        cursor: pointer;
+        font-size: 1.1rem;
+        padding: 4px;
+        border-radius: var(--radius-sm);
+        transition: color 0.15s;
+        line-height: 1;
+      }
+      #btn-remove-file:hover {
+        color: var(--danger);
+      }
+
+      /* ── Action Buttons ───────────────────────────────────────────────────── */
+      .transcribe-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        align-items: center;
+      }
+      .btn-transcribe {
+        background: var(--accent-grad);
+        color: #fff;
+        border: none;
+        border-radius: 99px;
+        padding: 13px 32px;
+        font-size: 1rem;
+        font-weight: 700;
+        font-family: inherit;
+        cursor: pointer;
+        box-shadow: 0 3px 14px rgba(254, 44, 85, 0.38);
+        transition: all 0.15s var(--ease-spring);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .btn-transcribe:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 22px rgba(254, 44, 85, 0.5);
+      }
+      .btn-transcribe:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none;
+      }
+      .btn-record {
+        background: var(--bg-surface);
+        border: 1.5px solid var(--accent);
+        color: var(--accent);
+        border-radius: 99px;
+        padding: 12px 24px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        font-family: inherit;
+        cursor: pointer;
+        transition: all 0.15s;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .btn-record:hover:not(:disabled) {
+        background: var(--accent);
+        color: #fff;
+        box-shadow: 0 3px 14px rgba(254, 44, 85, 0.3);
+      }
+      .btn-record.recording {
+        background: var(--danger);
+        border-color: var(--danger);
+        color: #fff;
+        animation: pulse-record 1.5s ease-in-out infinite;
+      }
+      @keyframes pulse-record {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+        }
+        50% {
+          box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+        }
+      }
+      .btn-record:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      .divider-or {
+        color: var(--text-muted);
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      /* ── Progress ─────────────────────────────────────────────────────────── */
+      #progress-wrap {
+        display: none;
+        margin-bottom: 20px;
+      }
+      .progress-track {
+        width: 100%;
+        height: 8px;
+        background: var(--bg-surface-2);
+        border-radius: 99px;
+        overflow: hidden;
+        margin-bottom: 8px;
+      }
+      #transcribe-progress-bar {
+        height: 100%;
+        background: var(--accent-grad);
+        border-radius: 99px;
+        width: 0%;
+        transition: width 0.3s ease;
+        box-shadow: 0 0 12px rgba(254, 44, 85, 0.5);
+      }
+      #transcribe-progress-text {
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        font-weight: 600;
+      }
+
+      /* ── Error Box ────────────────────────────────────────────────────────── */
+      #transcribe-error {
+        display: none;
+        align-items: flex-start;
+        gap: 10px;
+        background: rgba(239, 68, 68, 0.08);
+        border: 1px solid rgba(239, 68, 68, 0.3);
+        border-radius: var(--radius-md);
+        padding: 14px 18px;
+        margin-bottom: 16px;
+        color: #ef4444;
+        font-size: 0.88rem;
+        line-height: 1.5;
+      }
+
+      /* ── Output Panel ─────────────────────────────────────────────────────── */
+      #output-wrap {
+        display: none;
+      }
+      .output-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 12px;
+        flex-wrap: wrap;
+      }
+      .output-header h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        flex: 1;
+      }
+      #word-count {
+        background: rgba(254, 44, 85, 0.1);
+        color: var(--accent);
+        border-radius: 99px;
+        padding: 3px 10px;
+        font-size: 0.75rem;
+        font-weight: 700;
+      }
+      #detected-lang {
+        display: none;
+        background: rgba(37, 244, 238, 0.1);
+        color: var(--accent-2);
+        border-radius: 99px;
+        padding: 3px 10px;
+        font-size: 0.75rem;
+        font-weight: 700;
+      }
+      #transcript-output {
+        width: 100%;
+        min-height: 280px;
+        padding: 18px;
+        background: var(--bg-surface);
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius-md);
+        color: var(--text-primary);
+        font-family: inherit;
+        font-size: 0.92rem;
+        line-height: 1.75;
+        resize: vertical;
+        outline: none;
+        transition: border-color 0.15s;
+      }
+      #transcript-output:focus {
+        border-color: var(--accent);
+      }
+      #live-interim {
+        font-style: italic;
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        margin-top: 6px;
+        min-height: 1.2em;
+        padding: 0 4px;
+      }
+
+      /* ── Export Actions ───────────────────────────────────────────────────── */
+      .export-actions {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 14px;
+        align-items: center;
+      }
+      .btn-export {
+        background: var(--bg-surface-2);
+        border: 1.5px solid var(--border);
+        color: var(--text-primary);
+        border-radius: 99px;
+        padding: 9px 18px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        font-family: inherit;
+        cursor: pointer;
+        transition: all 0.15s;
+        white-space: nowrap;
+      }
+      .btn-export:hover:not(:disabled) {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: rgba(254, 44, 85, 0.05);
+        transform: translateY(-1px);
+      }
+      .btn-export:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+      }
+      .btn-export.primary {
+        background: rgba(254, 44, 85, 0.1);
+        border-color: rgba(254, 44, 85, 0.35);
+        color: var(--accent);
+      }
+      .btn-export.primary:hover:not(:disabled) {
+        background: var(--accent);
+        color: #fff;
+      }
+      .btn-clear-transcript {
+        margin-left: auto;
+        background: none;
+        border: none;
+        color: var(--text-muted);
+        font-size: 0.78rem;
+        cursor: pointer;
+        font-family: inherit;
+        padding: 4px 8px;
+        border-radius: var(--radius-sm);
+        transition: color 0.15s;
+      }
+      .btn-clear-transcript:hover {
+        color: var(--danger);
+      }
+
+      /* ── Privacy Notice ───────────────────────────────────────────────────── */
+      .privacy-notice {
+        background: rgba(37, 244, 238, 0.06);
+        border: 1px solid rgba(37, 244, 238, 0.2);
+        border-radius: var(--radius-md);
+        padding: 14px 18px;
+        margin-top: 24px;
+        font-size: 0.82rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+      }
+      .privacy-notice .icon {
+        font-size: 1.1rem;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+
+      /* ── FAQ ──────────────────────────────────────────────────────────────── */
+      .faq-section {
+        margin-top: 60px;
+      }
+      .faq-section h2 {
+        font-size: 1.4rem;
+        font-weight: 800;
+        margin-bottom: 24px;
+        color: var(--text-primary);
+      }
+      details.faq-item {
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        margin-bottom: 10px;
+        overflow: hidden;
+        transition: border-color 0.2s;
+      }
+      details.faq-item[open] {
+        border-color: var(--accent);
+      }
+      details.faq-item summary {
+        padding: 16px 20px;
+        font-weight: 600;
+        font-size: 0.92rem;
+        color: var(--text-primary);
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        user-select: none;
+      }
+      details.faq-item summary::after {
+        content: "+";
+        font-size: 1.2rem;
+        color: var(--accent);
+        font-weight: 300;
+        transition: transform 0.2s;
+        flex-shrink: 0;
+      }
+      details.faq-item[open] summary::after {
+        content: "−";
+      }
+      details.faq-item summary::-webkit-details-marker {
+        display: none;
+      }
+      .faq-body {
+        padding: 0 20px 18px;
+        font-size: 0.88rem;
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+      .faq-body a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      .faq-body a:hover {
+        text-decoration: underline;
+      }
+
+      /* ── How It Works ─────────────────────────────────────────────────────── */
+      .how-it-works {
+        margin-top: 48px;
+      }
+      .how-it-works h2 {
+        font-size: 1.4rem;
+        font-weight: 800;
+        margin-bottom: 24px;
+        color: var(--text-primary);
+      }
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 16px;
+      }
+      .step-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 24px 20px;
+        text-align: center;
+        transition:
+          border-color 0.2s,
+          transform 0.2s;
+      }
+      .step-card:hover {
+        border-color: var(--accent);
+        transform: translateY(-2px);
+      }
+      .step-num {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--accent-grad);
+        color: #fff;
+        font-size: 0.85rem;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 12px;
+      }
+      .step-icon {
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+      }
+      .step-card h4 {
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 6px;
+      }
+      .step-card p {
+        font-size: 0.78rem;
+        color: var(--text-muted);
+        line-height: 1.5;
+      }
+
+      /* ── Responsive ───────────────────────────────────────────────────────── */
+      @media (max-width: 600px) {
+        .transcribe-tool {
+          padding: 20px 16px 60px;
+        }
+        #transcribe-drop {
+          padding: 36px 16px;
+        }
+        .transcribe-actions {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .btn-transcribe,
+        .btn-record {
+          justify-content: center;
+        }
+        .divider-or {
+          text-align: center;
+        }
+        .export-actions {
+          justify-content: flex-start;
+        }
+      }
+    </style>
+    <link href="/css/style-premium.css" rel="stylesheet" />
+    <link rel="manifest" href="/manifest.json">
+</head>
+  <body>
+    <header id="site-header">
+  <button aria-label="Toggle navigation" class="icon-btn" id="sidebar-toggle">
+    <svg
+      fill="none"
+      height="20"
+      stroke="currentColor"
+      stroke-width="2"
+      viewbox="0 0 24 24"
+      width="20"
+    >
+      <path d="M3 12h18M3 6h18M3 18h18"></path>
+    </svg>
+  </button>
+  <a class="logo" href="/">
+    <img
+      alt="PhotoSplit Logo"
+      class="logo-img"
+      src="/assets/images/logo-animated.svg"
+      style="width: 32px; height: 32px"
+    />
+    PhotoSplit Studio
+  </a>
+  <div class="header-spacer"></div>
+  <div class="privacy-badge">
+    <svg
+      fill="none"
+      height="14"
+      stroke="currentColor"
+      stroke-width="2.5"
+      viewbox="0 0 24 24"
+      width="14"
+    >
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+    </svg>
+    <span>100% Private · No Uploads</span>
+  </div>
+  <nav class="main-nav">
+    
+    <a href="/app" class="">Split Photos</a>
+    <a href="/resize" class="">Resize</a>
+    <a href="/transcribe" class="active">Transcribe</a>
+    <a href="/blog/" class="">Blog</a>
+    <a href="/tips" class="">Tips</a>
+    <a href="/about" class="">About</a>
+    <a href="/contact" class="">Contact</a>
+  </nav>
+  
+  <button
+    class="icon-btn"
+    id="theme-toggle"
+    onclick="if (typeof toggleTheme === 'function') toggleTheme();"
+    title="Toggle Dark/Light Mode"
+  >
+    🌓
+  </button>
+  
+</header>
+
+
+
+
+    <main>
+      <section class="hero-utility">
+        <h1>Audio to Text Transcriber</h1>
+        <p>
+          Upload a meeting recording or record live — get an instant transcript,
+          Markdown report, or Word document.
+        </p>
+      </section>
+
+      <div class="page-with-sidebar">
+        <div class="page-main-content">
+          <div class="transcribe-tool">
+            <!-- ── API Key Panel Removed (Fully Local) ─────────────────────── -->
+
+            <!-- ── Options ─────────────────────────────────────────────────── -->
+            <div class="options-row">
+              <label for="model-select">AI Model:</label>
+              <select id="model-select" aria-label="Whisper AI Model">
+                <option value="whisper-tiny">
+                  Tiny (Fastest, ~150MB download)
+                </option>
+                <option value="whisper-base">
+                  Base (More accurate, ~300MB download)
+                </option>
+              </select>
+
+              <label for="transcribe-language" style="margin-left: 8px"
+                >Language:</label
+              >
+              <select id="transcribe-language" aria-label="Source language">
+                <option value="">Auto-detect</option>
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="it">Italian</option>
+                <option value="pt">Portuguese</option>
+                <option value="nl">Dutch</option>
+                <option value="pl">Polish</option>
+                <option value="ru">Russian</option>
+                <option value="ja">Japanese</option>
+                <option value="ko">Korean</option>
+                <option value="zh">Chinese</option>
+                <option value="ar">Arabic</option>
+                <option value="hi">Hindi</option>
+                <option value="tr">Turkish</option>
+                <option value="sv">Swedish</option>
+                <option value="da">Danish</option>
+                <option value="fi">Finnish</option>
+                <option value="uk">Ukrainian</option>
+              </select>
+
+              <div class="toggle-group">
+                <label
+                  class="toggle-switch"
+                  title="Include timestamps in the transcript"
+                >
+                  <input type="checkbox" id="timestamps-toggle" />
+                  <span class="toggle-track"></span>
+                </label>
+                <label for="timestamps-toggle">Timestamps</label>
+              </div>
+            </div>
+
+            <!-- ── Drop Zone ───────────────────────────────────────────────── -->
+            <div
+              id="transcribe-drop"
+              role="button"
+              tabindex="0"
+              aria-label="Drop audio file here or click to browse"
+            >
+              <span class="drop-icon">🎵</span>
+              <h3>Drop your audio or video file here</h3>
+              <p>or click to browse</p>
+              <div class="drop-formats">
+                <span class="format-tag">MP3</span>
+                <span class="format-tag">MP4</span>
+                <span class="format-tag">WAV</span>
+                <span class="format-tag">M4A</span>
+                <span class="format-tag">OGG</span>
+                <span class="format-tag">WEBM</span>
+                <span class="format-tag">MOV</span>
+                <span class="format-tag">FLAC</span>
+              </div>
+            </div>
+            <input
+              type="file"
+              id="transcribe-file-input"
+              accept=".mp3,.mp4,.m4a,.wav,.ogg,.webm,.mov,.flac,audio/*,video/mp4,video/webm"
+              style="display: none"
+              aria-label="Audio file input"
+            />
+
+            <!-- ── File Info ───────────────────────────────────────────────── -->
+            <div id="file-info">
+              <span class="file-info-icon">🎵</span>
+              <div class="file-info-details">
+                <div class="file-name" id="file-name">—</div>
+                <div class="file-meta">
+                  <span id="file-size"></span>
+                  <span id="file-duration" style="display: none">
+                    · <span id="file-duration-value"></span
+                  ></span>
+                </div>
+              </div>
+              <button
+                id="btn-remove-file"
+                title="Remove file"
+                aria-label="Remove file"
+              >
+                ✕
+              </button>
+            </div>
+
+            <!-- ── Error Box ───────────────────────────────────────────────── -->
+            <div id="transcribe-error" role="alert">
+              <span>⚠️</span>
+              <span id="transcribe-error-text"></span>
+            </div>
+
+            <!-- ── Action Buttons ──────────────────────────────────────────── -->
+            <div class="transcribe-actions">
+              <button class="btn-transcribe" id="btn-transcribe" disabled>
+                ✨ <span>Transcribe</span>
+              </button>
+              <span class="divider-or">or</span>
+              <button class="btn-record" id="btn-record">
+                🎙️ <span>Start Recording</span>
+              </button>
+            </div>
+
+            <!-- ── Progress ────────────────────────────────────────────────── -->
+            <div id="progress-wrap">
+              <div class="progress-track">
+                <div id="transcribe-progress-bar"></div>
+              </div>
+              <div id="transcribe-progress-text">Preparing…</div>
+            </div>
+
+            <!-- ── Output Panel ────────────────────────────────────────────── -->
+            <div id="output-wrap">
+              <div class="output-header">
+                <h3>📄 Transcript</h3>
+                <span id="word-count">0 words</span>
+                <span id="detected-lang"></span>
+              </div>
+              <textarea
+                id="transcript-output"
+                spellcheck="true"
+                aria-label="Transcript text, editable"
+                placeholder="Your transcript will appear here…"
+              ></textarea>
+              <div id="live-interim" aria-live="polite"></div>
+              <div class="export-actions">
+                <button class="btn-export primary" id="btn-copy" disabled>
+                  📋 Copy
+                </button>
+                <button class="btn-export" id="btn-download-txt" disabled>
+                  ⬇️ .txt
+                </button>
+                <button class="btn-export" id="btn-download-md" disabled>
+                  📝 Markdown
+                </button>
+                <button class="btn-export" id="btn-download-docx" disabled>
+                  📄 Word / RTF
+                </button>
+                <button class="btn-export" id="btn-print" disabled>
+                  🖨️ Print / PDF
+                </button>
+                <button class="btn-clear-transcript" id="btn-clear">
+                  Clear all
+                </button>
+              </div>
+            </div>
+
+            <!-- ── Privacy Notice ──────────────────────────────────────────── -->
+            <div class="privacy-notice">
+              <span class="icon">🔒</span>
+              <span>
+                <strong>Privacy:</strong> Your audio is processed
+                <strong>entirely locally</strong> inside your browser using
+                WebAssembly and WebGPU. Audio files and transcripts are never
+                uploaded to any server. PhotoSplit Studio does not store, log,
+                or access your data.
+              </span>
+            </div>
+
+            <!-- ── How It Works ────────────────────────────────────────────── -->
+            <div class="how-it-works">
+              <h2>How It Works</h2>
+              <div class="steps-grid">
+                <div class="step-card">
+                  <div class="step-num">1</div>
+                  <div class="step-icon">🤖</div>
+                  <h4>Local AI Model</h4>
+                  <p>
+                    Your browser downloads a compressed Whisper AI model
+                    (one-time download, cached locally).
+                  </p>
+                </div>
+                <div class="step-card">
+                  <div class="step-num">2</div>
+                  <div class="step-icon">🎵</div>
+                  <h4>Upload or Record</h4>
+                  <p>
+                    Drop a meeting recording (MP3, MP4, WAV…) or record live
+                    with your microphone.
+                  </p>
+                </div>
+                <div class="step-card">
+                  <div class="step-num">3</div>
+                  <div class="step-icon">✨</div>
+                  <h4>Transcribe Offline</h4>
+                  <p>
+                    The AI model runs directly on your device's hardware to
+                    generate the text privately.
+                  </p>
+                </div>
+                <div class="step-card">
+                  <div class="step-num">4</div>
+                  <div class="step-icon">📄</div>
+                  <h4>Export</h4>
+                  <p>
+                    Download as plain text, Markdown report, Word document, or
+                    print to PDF.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ── FAQ ────────────────────────────────────────────────────── -->
+            <div class="faq-section">
+              <h2>Frequently Asked Questions</h2>
+
+              <details class="faq-item">
+                <summary>Is this tool free and private?</summary>
+                <div class="faq-body">
+                  Yes, 100% free and 100% private. Unlike other services, we do
+                  not upload your audio to the cloud. The transcription happens
+                  completely on your device using your CPU or GPU.
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary>Why does it say "Loading Model"?</summary>
+                <div class="faq-body">
+                  The first time you use the tool, your browser downloads a
+                  compressed version of the AI model (~150MB for Tiny, ~300MB
+                  for Base). It is saved in your browser's cache so it loads
+                  instantly next time.
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary>What audio formats are supported?</summary>
+                <div class="faq-body">
+                  MP3, MP4, M4A, WAV, OGG, WebM, MOV, and FLAC — up to 50 MB per
+                  file. Because the processing happens in your browser,
+                  extremely long files might cause your browser to slow down.
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary>How accurate is the transcription?</summary>
+                <div class="faq-body">
+                  We use an optimized version of the famous OpenAI Whisper
+                  model. The "Base" model is highly accurate for clear speech.
+                  The "Tiny" model is faster but might make more mistakes with
+                  heavy accents or background noise.
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary>
+                  Can it identify who is speaking (diarization)?
+                </summary>
+                <div class="faq-body">
+                  The current browser-based Whisper models do not support
+                  speaker identification. If you need "who said what" labels,
+                  you'll currently need an external service.
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary>What output formats can I download?</summary>
+                <div class="faq-body">
+                  <strong>Plain text (.txt)</strong> — the raw transcript.<br />
+                  <strong>Markdown (.md)</strong> — a structured report with
+                  metadata, word count, and date.<br />
+                  <strong>Word / RTF</strong> — opens in Microsoft Word, Google
+                  Docs, LibreOffice.<br />
+                  <strong>Print / PDF</strong> — opens a print dialog so you can
+                  save as PDF. You can also edit the transcript directly in the
+                  text area before exporting.
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary>Does live recording work in all browsers?</summary>
+                <div class="faq-body">
+                  Live microphone transcription uses the Web Speech API, which
+                  is supported in
+                  <strong>Chrome, Edge, and Safari</strong>. It is not supported
+                  in Firefox. For file-based transcription (upload), all modern
+                  browsers are supported.
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        <aside class="page-sidebar">
+          <!-- Gear section filled by gear.js -->
+        </aside>
+      </div>
+
+      <section class="gear-section">
+  <div class="gear-section-inner">
+    <h2 class="gear-section-title">Recommended Photo Preservation Gear</h2>
+    <p class="gear-section-sub">
+      Pair PhotoSplit Studio with the best hardware for fast, high-quality
+      archiving and secure backups.
+    </p>
+    <div class="gear-cards-grid"></div>
+    <p class="affiliate-disclosure">
+      As an Amazon Associate, PhotoSplit Studio earns from qualifying purchases.
+    </p>
+  </div>
+</section>
+
+
+
+    </main>
+
+    <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/app">App</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tips">Scanning Tips</a>
+      <a href="/contact">Contact</a>
+      <a href="/terms">Terms</a>
+      <a href="/privacy-policy">Privacy</a>
+      <a href="/about">About</a>
+      <a
+        href="#"
+        onclick="
+          if (typeof openTextModal === 'function')
+            openTextModal('feedback-modal', event);
+        "
+        >Feedback</a
+      >
+    </div>
+    <div class="footer-copy">
+      © 2026 PhotoSplit Studio. All rights reserved.
+    </div>
+  </div>
+  <div class="site-status-bar">
+    <div class="status-item">
+      <span class="status-label">Is it dark outside?</span
+      ><span class="status-value" id="dark-status-answer">...</span>
+    </div>
+    <div class="status-item">
+      <span class="status-label">Global Visitors:</span
+      ><img
+        alt="Visitor Count"
+        class="visitor-badge"
+        src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"
+      />
+    </div>
+  </div>
+  <script>
+    (function () {
+      var h = new Date().getHours();
+      var ans = h >= 18 || h < 6 ? "YES" : "NO";
+      var el = document.getElementById("dark-status-answer");
+      if (el) el.textContent = ans;
+
+      // Register Service Worker for PWA / Offline caching
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js').then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
+    })();
+  </script>
+</footer>
+
+
+
+
+    <script defer src="/js/transcribe.js"></script>
+<!-- MODALS START -->
+<div
+  class="text-modal-backdrop"
+  id="feedback-modal"
+  onclick="
+    if (event.target === this && typeof closeTextModal === 'function')
+      closeTextModal('feedback-modal');
+  "
+>
+  <div class="text-modal-box">
+    <div class="text-modal-header">
+      <h2>Provide Feedback</h2>
+      <button
+        class="icon-btn"
+        onclick="
+          if (typeof closeTextModal === 'function')
+            closeTextModal('feedback-modal');
+        "
+      >
+        ✕
+      </button>
+    </div>
+    <div class="text-modal-content" id="feedback-form-view">
+      <form
+        onsubmit="
+          if (typeof handleFeedbackSubmit === 'function')
+            handleFeedbackSubmit(event);
+        "
+      >
+        <input
+          class="form-control mb-12"
+          id="fb-name"
+          placeholder="Your Name"
+          required=""
+          type="text"
+          style="margin-bottom: 12px"
+        />
+        <input
+          class="form-control mb-12"
+          id="fb-email"
+          placeholder="your@email.com"
+          required=""
+          type="email"
+          style="margin-bottom: 12px"
+        />
+        <textarea
+          class="form-control mb-12"
+          id="fb-desc"
+          placeholder="Your feedback..."
+          required=""
+          rows="4"
+          style="margin-bottom: 12px"
+        ></textarea>
+        <button class="btn btn-primary" style="width: 100%" type="submit">
+          Submit
+        </button>
+      </form>
+    </div>
+    <div
+      class="text-modal-content"
+      id="feedback-success-view"
+      style="display: none; text-align: center"
+    >
+      <h3>✅ Thank you!</h3>
+      <p>Your feedback has been received.</p>
+      <button
+        class="btn btn-secondary"
+        onclick="
+          if (typeof closeTextModal === 'function')
+            closeTextModal('feedback-modal');
+        "
+      >
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+
+<div id="cookie-consent" role="dialog">
+  <div id="cookie-consent-inner">
+    <p>
+      🍪 We use cookies to improve your experience. See our
+      <a href="/privacy-policy">Privacy Policy</a>.
+    </p>
+    <div id="cookie-consent-actions">
+      <button class="cookie-btn" id="cookie-decline">Decline</button>
+      <button class="cookie-btn cookie-btn-accept" id="cookie-accept">
+        Accept All
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    if (!localStorage.getItem("ps_counted")) {
+      localStorage.setItem("ps_counted", "true");
+      var img = new Image();
+      img.src =
+        "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
+    }
+
+    window.handleFeedbackSubmit = function (e) {
+      e.preventDefault();
+      var params = new URLSearchParams();
+      params.append(
+        "entry.1051903221",
+        document.getElementById("fb-name").value,
+      );
+      params.append(
+        "entry.371950700",
+        document.getElementById("fb-email").value,
+      );
+      params.append(
+        "entry.852578852",
+        document.getElementById("fb-desc").value,
+      );
+      fetch(
+        "https://docs.google.com/forms/d/e/1FAIpQLSeJe_jw0IHHXeT4w4hzcZJ2WXREaT8aD4_R4LFBGVZNazsehg/formResponse",
+        { method: "POST", mode: "no-cors", body: params },
+      );
+      document.getElementById("feedback-form-view").style.display = "none";
+      document.getElementById("feedback-success-view").style.display = "block";
+    };
+
+    // Cookie Consent
+    var banner = document.getElementById("cookie-consent");
+    if (banner) {
+      if (!localStorage.getItem("pss_cookie_consent")) {
+        banner.classList.add("visible");
+      } else if (localStorage.getItem("pss_cookie_consent") === "accepted") {
+        if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+        if (typeof loadGoogleAnalytics === "function") loadGoogleAnalytics();
+      }
+      var acceptBtn = document.getElementById("cookie-accept");
+      if (acceptBtn) {
+        acceptBtn.onclick = function () {
+          localStorage.setItem("pss_cookie_consent", "accepted");
+          banner.classList.remove("visible");
+          if (typeof loadGoogleScripts === "function") loadGoogleScripts();
+          if (typeof loadGoogleAnalytics === "function") loadGoogleAnalytics();
+        };
+      }
+      var declineBtn = document.getElementById("cookie-decline");
+      if (declineBtn) {
+        declineBtn.onclick = function () {
+          localStorage.setItem("pss_cookie_consent", "declined");
+          banner.classList.remove("visible");
+        };
+      }
+    }
+  })();
+</script>
+<!-- MODALS END -->
+
+</body>
+</html>
