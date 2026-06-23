@@ -3109,12 +3109,15 @@ kbd {
 }
 /* -- Sidebar Ad Layout ------------------------------------------------------ */
 .page-with-sidebar {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 .page-sidebar {
-  display: none; /* Hide on mobile by default to remain non-invasive */
+  display: none;
 }
 .ad-sidebar-sticky {
   position: sticky;
@@ -3131,14 +3134,84 @@ kbd {
 }
 @media (min-width: 1024px) {
   .page-with-sidebar {
-    display: grid;
-    grid-template-columns: 1fr 300px;
+    grid-template-columns: 1fr 320px;
     align-items: start;
-    max-width: 1250px;
-    margin: 0 auto;
-    padding: 0 24px;
   }
   .page-sidebar {
     display: block;
+  }
+}
+
+/* -- Game Strip -------------------------------------------------------------- */
+.game-strip-container {
+  max-width: 1280px;
+  margin: 48px auto 0;
+  padding: 0 24px;
+}
+.game-strip-inner {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.game-strip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: var(--bg-surface-2);
+  border-bottom: 1px solid var(--border);
+}
+.game-strip-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.game-strip-shuffle {
+  padding: 7px 16px;
+  border-radius: 99px;
+  font-size: 0.8rem;
+  background: var(--accent-grad);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.game-strip-shuffle:hover {
+  opacity: 0.9;
+  transform: scale(1.04);
+}
+.game-strip-frame-wrap {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  background: var(--bg-sunken);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.game-strip-frame-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.game-strip-footer {
+  padding: 8px 20px;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-align: center;
+  background: var(--bg-surface-2);
+  border-top: 1px solid var(--border);
+}
+@media (max-width: 640px) {
+  .game-strip-frame-wrap {
+    height: 320px;
   }
 }

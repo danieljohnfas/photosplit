@@ -264,20 +264,10 @@
       <aside class="page-sidebar">
 <!-- SIDEBAR AD BANNER -->
 <div class="ad-sidebar-sticky">
-  <span class="ad-sidebar-label" style="display: block; font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; text-align: center;">Advertisement</span>
-  <div
-    class="glass-ad-panel"
-    style="
-      margin: 0;
-      min-height: 250px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      overflow: hidden;
-    "
-  >
-    <div class="ad-item">
+  <!-- Primary 300x250 rectangle -->
+  <div style="margin-bottom: 20px;">
+    <span class="ad-sidebar-label">Advertisement</span>
+    <div class="glass-ad-panel" style="min-height: 250px; display: flex; align-items: center; justify-content: center; padding: 0; overflow: hidden;">
       <script>
         atOptions = {
           'key' : '1616e9416e1938ab8fa16f0ac161a303',
@@ -288,6 +278,23 @@
         };
       </script>
       <script src="https://www.highperformanceformat.com/1616e9416e1938ab8fa16f0ac161a303/invoke.js"></script>
+    </div>
+  </div>
+
+  <!-- Secondary 160x600 skyscraper -->
+  <div>
+    <span class="ad-sidebar-label">Advertisement</span>
+    <div class="glass-ad-panel" style="min-height: 600px; display: flex; align-items: center; justify-content: center; padding: 0; overflow: hidden;">
+      <script>
+        atOptions = {
+          'key' : 'bc3a6264f99bc0ffb35ad3a7a687d2f1',
+          'format' : 'iframe',
+          'height' : 600,
+          'width' : 160,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/bc3a6264f99bc0ffb35ad3a7a687d2f1/invoke.js"></script>
     </div>
   </div>
 </div>
@@ -463,54 +470,93 @@
       </div>
     </div>
     <!-- GAME STRIP COMPONENT -->
-<div class="game-strip-container" style="max-width: 860px; margin: 40px auto; padding: 0 24px;">
-  <div class="glass-ad-panel" style="padding: 16px; border: 1px solid var(--border-strong); display: flex; flex-direction: column; gap: 12px; background: var(--bg-surface-2);">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <h3 style="margin: 0; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
-        🎮 Take a Break & Play!
-      </h3>
-      <button onclick="shuffleGame()" class="btn btn-secondary btn-sm" style="padding: 6px 12px; border-radius: 20px; font-size: 0.8rem;">
-        🎲 Shuffle Game
-      </button>
+<div class="game-strip-container">
+  <div class="game-strip-inner">
+    <div class="game-strip-header">
+      <h3 class="game-strip-title">🎮 Take a Break &amp; Play!</h3>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span id="game-strip-name" style="font-size:0.8rem;color:var(--text-muted);"></span>
+        <button class="game-strip-shuffle" onclick="shuffleGame()">🎲 New Game</button>
+      </div>
     </div>
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; background: var(--bg-sunken);">
-      <iframe 
+    <div class="game-strip-frame-wrap">
+      <iframe
         id="mini-game-frame"
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-        allow="gamepad *;"
+        allow="gamepad *; fullscreen *"
         scrolling="no"
         frameborder="0"
+        loading="lazy"
+        title="Free mini-game"
       ></iframe>
     </div>
-    <p style="margin: 0; font-size: 0.75rem; color: var(--text-muted); text-align: center;">
-      Free mini-games provided by CrazyGames. Play right in your browser.
-    </p>
+    <p class="game-strip-footer">Free browser games — no download, no sign-up. Click "New Game" to shuffle to a different one.</p>
   </div>
 </div>
 
 <script>
-  const gamePool = [
-    "https://www.crazygames.com/embed/2048",
-    "https://www.crazygames.com/embed/uno-online",
-    "https://www.crazygames.com/embed/smash-karts",
-    "https://www.crazygames.com/embed/cubes-2048-io",
-    "https://www.crazygames.com/embed/basket-random",
-    "https://www.crazygames.com/embed/slope",
-    "https://www.crazygames.com/embed/tetris",
-    "https://www.crazygames.com/embed/wordle"
+(function() {
+  var games = [
+    { name: "2048", url: "https://www.crazygames.com/embed/2048" },
+    { name: "Uno Online", url: "https://www.crazygames.com/embed/uno-online" },
+    { name: "Smash Karts", url: "https://www.crazygames.com/embed/smash-karts" },
+    { name: "Cubes 2048", url: "https://www.crazygames.com/embed/cubes-2048-io" },
+    { name: "Basket Random", url: "https://www.crazygames.com/embed/basket-random" },
+    { name: "Slope", url: "https://www.crazygames.com/embed/slope" },
+    { name: "Tetris", url: "https://www.crazygames.com/embed/tetris" },
+    { name: "Wordle", url: "https://www.crazygames.com/embed/wordle" },
+    { name: "Moto X3M", url: "https://www.crazygames.com/embed/moto-x3m" },
+    { name: "Subway Surfers", url: "https://www.crazygames.com/embed/subway-surfers" },
+    { name: "Snake", url: "https://www.crazygames.com/embed/snake-io" },
+    { name: "Bob The Robber", url: "https://www.crazygames.com/embed/bob-the-robber" },
+    { name: "Fireboy & Watergirl", url: "https://www.crazygames.com/embed/fireboy-and-watergirl-in-the-forest-temple" },
+    { name: "Stickman Hook", url: "https://www.crazygames.com/embed/stickman-hook" },
+    { name: "Drift Boss", url: "https://www.crazygames.com/embed/drift-boss" },
+    { name: "Pizza Clicker", url: "https://www.crazygames.com/embed/pizza-clicker" },
+    { name: "Dino Game", url: "https://www.crazygames.com/embed/dino-game" },
+    { name: "Vex 5", url: "https://www.crazygames.com/embed/vex-5" },
+    { name: "Gold Miner", url: "https://www.crazygames.com/embed/gold-miner" },
+    { name: "Crossy Road", url: "https://www.crazygames.com/embed/crossy-road" },
+    { name: "Flappy Bird", url: "https://www.crazygames.com/embed/flappy-bird" },
+    { name: "Traffic Jam 3D", url: "https://www.crazygames.com/embed/traffic-jam-3d" },
+    { name: "Tiny Fishing", url: "https://www.crazygames.com/embed/tiny-fishing" },
+    { name: "Stack Ball", url: "https://www.crazygames.com/embed/stack-ball" },
+    { name: "Word Search", url: "https://www.crazygames.com/embed/word-search" },
+    { name: "Solitaire", url: "https://www.crazygames.com/embed/solitaire" },
+    { name: "Mahjong Classic", url: "https://www.crazygames.com/embed/mahjong-classic" },
+    { name: "Bubble Shooter", url: "https://www.crazygames.com/embed/bubble-shooter" },
+    { name: "Fruit Ninja", url: "https://www.crazygames.com/embed/fruit-ninja" },
+    { name: "Raft Wars", url: "https://www.crazygames.com/embed/raft-wars" },
+    { name: "Bad Ice Cream", url: "https://www.crazygames.com/embed/bad-ice-cream" },
+    { name: "Bloons Tower Defense", url: "https://www.crazygames.com/embed/bloons-tower-defense" },
+    { name: "Parking Fury", url: "https://www.crazygames.com/embed/parking-fury" },
+    { name: "Run 3", url: "https://www.crazygames.com/embed/run-3" },
+    { name: "Penalty Shooters", url: "https://www.crazygames.com/embed/penalty-shooters-2" }
   ];
 
+  var lastIndex = -1;
+
   function shuffleGame() {
-    const frame = document.getElementById("mini-game-frame");
+    var frame = document.getElementById('mini-game-frame');
+    var label = document.getElementById('game-strip-name');
     if (!frame) return;
-    const randomGame = gamePool[Math.floor(Math.random() * gamePool.length)];
-    frame.src = randomGame;
+    var idx;
+    do { idx = Math.floor(Math.random() * games.length); } while (idx === lastIndex && games.length > 1);
+    lastIndex = idx;
+    var game = games[idx];
+    frame.src = game.url;
+    if (label) label.textContent = game.name;
   }
 
+  // Expose globally for onclick
+  window.shuffleGame = shuffleGame;
+
   // Load a random game on initialization
-  document.addEventListener("DOMContentLoaded", () => {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', shuffleGame);
+  } else {
     shuffleGame();
-  });
+  }
+})();
 </script>
 <!-- END GAME STRIP COMPONENT -->
 
