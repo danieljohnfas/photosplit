@@ -99,6 +99,8 @@
     <a href="/app" class="">Split Photos</a>
     <a href="/resize" class="">Resize</a>
     <a href="/convert" class="">Convert</a>
+    <a href="/passport" class="">Passport</a>
+    <a href="/transcribe" class="">Transcribe</a>
     <a href="/games" class="" style="color: var(--accent); font-weight: bold;">🎮 Games</a>
     <a href="/blog/" class="">Blog</a>
     <a href="/tips" class="">Tips</a>
@@ -316,7 +318,7 @@
       </div>
     </main>
     <!-- GAME STRIP COMPONENT -->
-<div class="game-strip-container" style="max-width: 1280px; margin: 48px auto; padding: 0 24px;">
+<div class="game-strip-container" style="max-width: 1400px; margin: 48px auto; padding: 0 24px;">
   <div class="game-strip-inner" style="background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
     <div class="game-strip-header" style="display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; background: var(--bg-surface-2); border-bottom: 1px solid var(--border);">
       <h3 class="game-strip-title" style="margin: 0; font-size: 1.1rem; font-weight: 700;">🎮 Arcade &amp; Sponsors</h3>
@@ -369,6 +371,50 @@
         <script type="text/javascript" src="https://www.highperformanceformat.com/1616e9416e1938ab8fa16f0ac161a303/invoke.js"></script>
       </div>
 
+      <!-- Slot 5: Game -->
+      <div id="game-slot-3" onclick="openGlobalGame(2)" style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; height: 250px; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.2s; text-align: center;">
+        <div id="game-icon-3" style="font-size: 4rem; margin-bottom: 16px;">🎲</div>
+        <div id="game-name-3" style="font-weight: 700; font-size: 1.2rem;">Game 3</div>
+        <div style="font-size: 0.8rem; color: var(--accent); margin-top: 8px;">Play Now ▶</div>
+      </div>
+
+      <!-- Slot 6: Ad -->
+      <div style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+        <span style="position: absolute; top: 4px; left: 8px; font-size: 0.6rem; color: var(--text-muted);">ADVERTISEMENT</span>
+        <script>
+          atOptions = {
+            'key' : '1616e9416e1938ab8fa16f0ac161a303',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+          };
+        </script>
+        <script type="text/javascript" src="https://www.highperformanceformat.com/1616e9416e1938ab8fa16f0ac161a303/invoke.js"></script>
+      </div>
+
+      <!-- Slot 7: Game -->
+      <div id="game-slot-4" onclick="openGlobalGame(3)" style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; height: 250px; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.2s; text-align: center;">
+        <div id="game-icon-4" style="font-size: 4rem; margin-bottom: 16px;">🎯</div>
+        <div id="game-name-4" style="font-weight: 700; font-size: 1.2rem;">Game 4</div>
+        <div style="font-size: 0.8rem; color: var(--accent); margin-top: 8px;">Play Now ▶</div>
+      </div>
+
+      <!-- Slot 8: Ad -->
+      <div style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+        <span style="position: absolute; top: 4px; left: 8px; font-size: 0.6rem; color: var(--text-muted);">ADVERTISEMENT</span>
+        <script>
+          atOptions = {
+            'key' : '1616e9416e1938ab8fa16f0ac161a303',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+          };
+        </script>
+        <script type="text/javascript" src="https://www.highperformanceformat.com/1616e9416e1938ab8fa16f0ac161a303/invoke.js"></script>
+      </div>
+
     </div>
   </div>
 </div>
@@ -398,17 +444,25 @@
 
   window.shuffleGames = function() {
     let list = window.arcadeGamesList;
-    let idx1 = Math.floor(Math.random() * list.length);
-    let idx2;
-    do { idx2 = Math.floor(Math.random() * list.length); } while (idx1 === idx2);
+    let selected = [];
+    while(selected.length < 4) {
+      let idx = Math.floor(Math.random() * list.length);
+      if(!selected.includes(list[idx])) {
+        selected.push(list[idx]);
+      }
+    }
     
-    currentSlotGames = [list[idx1], list[idx2]];
+    currentSlotGames = selected;
     
-    document.getElementById('game-icon-1').textContent = currentSlotGames[0].icon;
-    document.getElementById('game-name-1').textContent = currentSlotGames[0].name;
-    
-    document.getElementById('game-icon-2').textContent = currentSlotGames[1].icon;
-    document.getElementById('game-name-2').textContent = currentSlotGames[1].name;
+    for(let i=1; i<=4; i++) {
+      const g = currentSlotGames[i-1];
+      const iconEl = document.getElementById('game-icon-' + i);
+      const nameEl = document.getElementById('game-name-' + i);
+      if(iconEl && nameEl) {
+        iconEl.textContent = g.icon;
+        nameEl.textContent = g.name;
+      }
+    }
   };
 
   window.openGlobalGame = function(slotIndex) {

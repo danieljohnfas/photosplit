@@ -46,8 +46,8 @@
   --space-xs: 8px;
   --space-sm: 16px;
   --space-md: 24px;
-  --space-lg: 40px;
-  --space-xl: 64px;
+  --space-lg: 32px;
+  --space-xl: 48px;
 
   /* Shadows */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
@@ -3112,7 +3112,7 @@ kbd {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -3144,7 +3144,7 @@ kbd {
 
 /* -- Game Strip -------------------------------------------------------------- */
 .game-strip-container {
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 48px auto 0;
   padding: 0 24px;
 }
@@ -3211,11 +3211,9 @@ kbd {
   border-top: 1px solid var(--border);
 }
 .ad-wrap-bottom {
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  position: relative;
   width: 100%;
-  z-index: 9999;
+  z-index: 900;
   background: var(--bg-surface);
   border-top: 1px solid var(--border-strong);
   box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
@@ -3224,9 +3222,7 @@ kbd {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-body {
-  padding-bottom: 120px; /* Make room for sticky ad */
+  margin-top: auto;
 }
 @media (max-width: 640px) {
   .game-strip-frame-wrap {
