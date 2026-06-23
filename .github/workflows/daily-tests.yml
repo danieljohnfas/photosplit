@@ -1,0 +1,42 @@
+name: Daily Automated Tests
+
+on:
+  schedule:
+    - cron: '0 6 * * *' # Run at 06:00 UTC daily
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  test-and-improve:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: ./tests
+        run: npm ci || npm install
+
+      - name: Install Playwright Browsers
+        working-directory: ./tests
+        run: npx playwright install --with-deps chromium
+
+      - name: Run test suite
+        run: node tests/runner.js
+
+      - name: Generate improvement report
+        run: node tests/analyze.js
+
+      - name: Commit test logs and report
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add logs/ reports/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: save daily test logs and improvement report" && git push)

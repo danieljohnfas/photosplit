@@ -187,16 +187,16 @@
     <span>100% Private · No Uploads</span>
   </div>
   <nav class="main-nav">
-    <button class="btn btn-secondary btn-sm btn-voice-toggle" id="btn-voice-toggle" onclick="PremiumEngine.toggleVoice()">🎙️ Voice Control</button>
+    <button aria-label="Toggle sounds" class="icon-btn" id="sound-toggle" title="Mute sounds">🔊</button>
     <a href="/app" class="active">Split Photos</a>
     <a href="/resize" class="">Resize</a>
-    <a href="/transcribe" class="">Transcribe</a>
+    <a href="/convert" class="">Convert</a>
+    <a href="/games" class="" style="color: var(--accent); font-weight: bold;">🎮 Games</a>
     <a href="/blog/" class="">Blog</a>
     <a href="/tips" class="">Tips</a>
     <a href="/about" class="">About</a>
-    <a href="/contact" class="">Contact</a>
   </nav>
-  <button aria-label="Toggle sounds" class="icon-btn" id="sound-toggle" title="Mute sounds">🔊</button>
+  <!-- INJECT_APP_TOOLS -->
   <button
     class="icon-btn"
     id="theme-toggle"
@@ -1049,6 +1049,9 @@ fill="none"
     })();
   </script>
 </footer>
+
+
+
 
 
 
