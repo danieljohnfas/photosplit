@@ -95,6 +95,33 @@ files.forEach((file) => {
     content = content.replace(/<\/head>/i, '  <link rel="manifest" href="/manifest.json">\n</head>');
   }
 
+  // Inject JSON-LD if not present (only for blog pages)
+  if (file.includes('blog') && !content.includes('application/ld+json')) {
+    const titleMatch = content.match(/<title>([^<]+)<\/title>/i);
+    const descMatch = content.match(/<meta[^>]*name="description"[^>]*content="([^"]*)"/i) || content.match(/<meta[^>]*content="([^"]*)"[^>]*name="description"/i);
+    if (titleMatch) {
+      const title = titleMatch[1].trim();
+      const description = descMatch ? descMatch[1].trim() : "PhotoSplit Studio Blog";
+      const schema = `<script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "${title}",
+        "description": "${description}",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PhotoSplit Studio",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://photosplitstudio.com/assets/images/logo.png"
+          }
+        }
+      }
+      </script>`;
+      content = content.replace(/<\/head>/i, `  ${schema}\n</head>`);
+    }
+  }
+
   if (content !== originalContent) {
     fs.writeFileSync(filePath, content, "utf8");
     console.log(`Updated ${file}`);

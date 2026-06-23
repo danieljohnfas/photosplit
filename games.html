@@ -58,58 +58,10 @@
         color: var(--text-primary);
       }
       
-      /* Fullscreen Game Modal */
-      #game-modal {
-        display: none;
-        position: fixed;
-        inset: 0;
-        z-index: 9999;
-        background: rgba(0,0,0,0.9);
-        backdrop-filter: blur(10px);
-        align-items: center;
-        justify-content: center;
-      }
-      .game-modal-content {
-        width: 100%;
-        max-width: 1200px;
-        height: 85vh;
-        background: var(--bg-surface);
-        border-radius: var(--radius-lg);
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-      }
-      .game-modal-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 16px 24px;
-        background: var(--bg-surface-2);
-        border-bottom: 1px solid var(--border);
-      }
-      .close-game-btn {
-        background: rgba(255,255,255,0.1);
-        border: none;
-        color: var(--text-primary);
-        padding: 8px 16px;
-        border-radius: 99px;
-        cursor: pointer;
-        font-weight: 600;
-      }
-      .close-game-btn:hover {
-        background: var(--accent);
-        color: white;
-      }
-      #game-modal-iframe {
-        flex: 1;
-        width: 100%;
-        border: none;
-      }
     </style>
     <link rel="manifest" href="/manifest.json">
 </head>
   <body>
-    <header id="site-header">
   <button aria-label="Toggle navigation" class="icon-btn" id="sidebar-toggle">
     <svg
       fill="none"

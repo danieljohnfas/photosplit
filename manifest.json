@@ -2,7 +2,7 @@
   "name": "PhotoSplit Studio",
   "short_name": "PhotoSplit",
   "description": "Privacy-first local web tools for photos, audio transcription, and more. Processing happens securely in your browser.",
-  "start_url": "/app.html",
+  "start_url": "/app",
   "display": "standalone",
   "background_color": "#121212",
   "theme_color": "#121212",

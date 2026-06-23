@@ -3452,7 +3452,9 @@ function initNegativeTools() {
       if (box.audioNote) {
         $("btn-record-audio").textContent = "🔴 Replace Audio";
         $("audio-playback-container").style.display = "flex";
-        $("audio-playback").src = URL.createObjectURL(box.audioNote);
+        const audioUrl = URL.createObjectURL(box.audioNote);
+        $("audio-playback").src = audioUrl;
+        setTimeout(() => URL.revokeObjectURL(audioUrl), 5000);
       } else {
         $("btn-record-audio").textContent = "🔴 Record Audio";
         $("audio-playback-container").style.display = "none";
