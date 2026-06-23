@@ -17,6 +17,10 @@ const modalsTpl = fs.readFileSync(
   path.join(COMPONENTS_DIR, "modals.html"),
   "utf8",
 );
+const adTopTpl = fs.readFileSync(path.join(COMPONENTS_DIR, "ad-banner-top.html"), "utf8");
+const adBottomTpl = fs.readFileSync(path.join(COMPONENTS_DIR, "ad-banner-bottom.html"), "utf8");
+const socialShareTpl = fs.readFileSync(path.join(COMPONENTS_DIR, "social-share.html"), "utf8");
+const adScriptsTpl = fs.readFileSync(path.join(COMPONENTS_DIR, "ad-scripts.html"), "utf8");
 
 const files = fs.readdirSync(DIR).filter((f) => f.endsWith(".html"));
 
@@ -54,13 +58,18 @@ files.forEach((file) => {
     pageHeader = pageHeader.replace("<!-- INJECT_APP_SHORTCUTS -->", "");
   }
 
+  // Strip old injected components to prevent duplicates
+  content = content.replace(/<!-- TOP AD BANNER -->[\s\S]*?<!-- END TOP AD BANNER -->\s*/gi, '');
+  content = content.replace(/<!-- BOTTOM AD BANNER -->[\s\S]*?<!-- END BOTTOM AD BANNER -->\s*/gi, '');
+  content = content.replace(/<!-- SOCIAL SHARE COMPONENT -->[\s\S]*?<!-- END SOCIAL SHARE COMPONENT -->\s*/gi, '');
+
   content = content.replace(
     /<header id="site-header">[\s\S]*?<\/header>/i,
-    pageHeader,
+    pageHeader + "\n" + adTopTpl + "\n"
   );
   content = content.replace(
     /<footer class="site-footer">[\s\S]*?<\/footer>/i,
-    footerTpl,
+    adBottomTpl + "\n" + footerTpl
   );
   content = content.replace(
     /<section class="gear-section">[\s\S]*?<\/section>/i,
@@ -89,8 +98,11 @@ files.forEach((file) => {
     '',
   );
 
-  // Inject the standardized modals just before the closing body tag
-  content = content.replace(/\s*<\/body>/i, '\n' + modalsTpl + '\n</body>');
+  // Strip existing ad scripts
+  content = content.replace(/<!-- GLOBAL AD SCRIPTS \(Popunder & Social Bar\) -->[\s\S]*?<!-- END GLOBAL AD SCRIPTS -->\s*/gi, '');
+
+  // Inject the standardized modals and ad scripts just before the closing body tag
+  content = content.replace(/\s*<\/body>/i, '\n' + adScriptsTpl + '\n' + modalsTpl + '\n</body>');
 
   // Inject Web App Manifest
   if (!content.includes('rel="manifest"')) {
@@ -119,15 +131,20 @@ if (fs.existsSync(BLOG_DIR)) {
     pageHeader = pageHeader.replace("<!-- INJECT_APP_TOOLS -->", "");
     pageHeader = pageHeader.replace("<!-- INJECT_APP_SHORTCUTS -->", "");
 
+    // Strip old injected components
+    content = content.replace(/<!-- TOP AD BANNER -->[\s\S]*?<!-- END TOP AD BANNER -->\s*/gi, '');
+    content = content.replace(/<!-- BOTTOM AD BANNER -->[\s\S]*?<!-- END BOTTOM AD BANNER -->\s*/gi, '');
+    content = content.replace(/<!-- SOCIAL SHARE COMPONENT -->[\s\S]*?<!-- END SOCIAL SHARE COMPONENT -->\s*/gi, '');
+
     // Blog paths need relative adjustments for assets, but actually all links are absolute starting with /
     // So we can use the same templates
     content = content.replace(
       /<header id="site-header">[\s\S]*?<\/header>/i,
-      pageHeader,
+      pageHeader + "\n" + adTopTpl + "\n" + socialShareTpl + "\n"
     );
     content = content.replace(
       /<footer class="site-footer">[\s\S]*?<\/footer>/i,
-      footerTpl,
+      adBottomTpl + "\n" + footerTpl
     );
     content = content.replace(
       /<section class="gear-section">[\s\S]*?<\/section>/i,
@@ -153,7 +170,11 @@ if (fs.existsSync(BLOG_DIR)) {
       /(<div id="cookie-consent"[\s\S]*?<\/div>\s*<\/div>\s*)(<script>[\s\S]*?<\/script>\s*)?(?=<\/body>)/i,
       '',
     );
-    content = content.replace(/\s*<\/body>/i, '\n' + modalsTpl + '\n</body>');
+
+    // Strip existing ad scripts
+    content = content.replace(/<!-- GLOBAL AD SCRIPTS \(Popunder & Social Bar\) -->[\s\S]*?<!-- END GLOBAL AD SCRIPTS -->\s*/gi, '');
+
+    content = content.replace(/\s*<\/body>/i, '\n' + adScriptsTpl + '\n' + modalsTpl + '\n</body>');
 
     if (!content.includes('rel="manifest"')) {
       content = content.replace(/<\/head>/i, '  <link rel="manifest" href="/manifest.json">\n</head>');

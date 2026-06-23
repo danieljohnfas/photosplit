@@ -2866,12 +2866,90 @@ kbd {
   box-shadow: 0 2px 6px rgba(254, 44, 85, 0.25);
 }
 .affiliate-disclosure {
-  font-size: 0.73rem;
+  font-size: 0.72rem;
   color: var(--text-muted);
-  font-style: italic;
-  margin-top: 12px;
   text-align: center;
+  margin-top: 8px;
 }
+
+/* -- Ad Banner & Social Share Styling --------------------------------------- */
+.ad-container {
+  width: 100%;
+  max-width: 960px;
+  margin: 24px auto;
+  text-align: center;
+  background: var(--bg-surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  box-sizing: border-box;
+}
+.ad-banner-top {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.ad-banner-bottom {
+  margin-top: 48px;
+  margin-bottom: 24px;
+}
+.ad-desktop {
+  display: block;
+}
+.ad-mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .ad-desktop {
+    display: none !important;
+  }
+  .ad-mobile {
+    display: block !important;
+  }
+}
+.ad-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.social-share-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 24px auto;
+  padding: 12px;
+  max-width: 600px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+}
+.social-share-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-body);
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+.share-btn:hover {
+  transform: translateY(-2px);
+  color: white;
+}
+.share-twitter:hover { background: #1DA1F2; }
+.share-facebook:hover { background: #1877F2; }
+.share-linkedin:hover { background: #0A66C2; }
+
 @media (max-width: 600px) {
   .product-card {
     flex-direction: column;
