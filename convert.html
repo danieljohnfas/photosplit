@@ -314,7 +314,44 @@
       </section>
       <!-- AdSense &mdash; Below Hero -->
       <div class="tool-workspace">
-        <div class="page-main-content">
+<!-- IN-TOOL AD -->
+<!-- TOP AD BANNER -->
+<div class="ad-container ad-banner-top glass-ad-panel">
+  <span class="ad-label">Advertisement</span>
+  
+  <!-- Desktop Ad: 728x90 -->
+  <div class="ad-desktop">
+    <script>
+      atOptions = {
+        'key' : '033703f2c2dfe7a5fa4501cd3ba1417e',
+        'format' : 'iframe',
+        'height' : 90,
+        'width' : 728,
+        'params' : {}
+      };
+    </script>
+    <script src="https://www.highperformanceformat.com/033703f2c2dfe7a5fa4501cd3ba1417e/invoke.js"></script>
+  </div>
+
+  <!-- Mobile Ad: 320x50 -->
+  <div class="ad-mobile">
+    <script>
+      atOptions = {
+        'key' : '6d8af2947ee9db4b41c711742cf896b6',
+        'format' : 'iframe',
+        'height' : 50,
+        'width' : 320,
+        'params' : {}
+      };
+    </script>
+    <script src="https://www.highperformanceformat.com/6d8af2947ee9db4b41c711742cf896b6/invoke.js"></script>
+  </div>
+
+</div>
+<!-- END TOP AD BANNER -->
+
+<!-- END IN-TOOL AD -->
+<div class="page-main-content">
           
           <div class="convert-tool">
             <div class="format-selector">
@@ -593,91 +630,119 @@
       </div>
     </main>
     <!-- GAME STRIP COMPONENT -->
-<div class="game-strip-container">
-  <div class="game-strip-inner">
-    <div class="game-strip-header">
-      <h3 class="game-strip-title">🎮 Take a Break &amp; Play!</h3>
-      <div style="display:flex;align-items:center;gap:10px;">
-        <span id="game-strip-name" style="font-size:0.8rem;color:var(--text-muted);"></span>
-        <button class="game-strip-shuffle" onclick="shuffleGame()">🎲 New Game</button>
+<div class="game-strip-container" style="max-width: 1280px; margin: 48px auto; padding: 0 24px;">
+  <div class="game-strip-inner" style="background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+    <div class="game-strip-header" style="display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; background: var(--bg-surface-2); border-bottom: 1px solid var(--border);">
+      <h3 class="game-strip-title" style="margin: 0; font-size: 1.1rem; font-weight: 700;">🎮 Arcade &amp; Sponsors</h3>
+      <button class="game-strip-shuffle" onclick="shuffleGames()" style="padding: 7px 16px; border-radius: 99px; font-size: 0.8rem; background: var(--accent-grad); color: white; border: none; cursor: pointer; font-weight: 600;">🎲 Shuffle Games</button>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; padding: 16px; background: var(--bg-sunken);">
+      
+      <!-- Slot 1: Game -->
+      <div id="game-slot-1" onclick="openGlobalGame(0)" style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; height: 250px; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.2s; text-align: center;">
+        <div id="game-icon-1" style="font-size: 4rem; margin-bottom: 16px;">🕹️</div>
+        <div id="game-name-1" style="font-weight: 700; font-size: 1.2rem;">Game 1</div>
+        <div style="font-size: 0.8rem; color: var(--accent); margin-top: 8px;">Play Now ▶</div>
       </div>
+
+      <!-- Slot 2: Ad -->
+      <div style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+        <span style="position: absolute; top: 4px; left: 8px; font-size: 0.6rem; color: var(--text-muted);">ADVERTISEMENT</span>
+        <script>
+          atOptions = {
+            'key' : '1616e9416e1938ab8fa16f0ac161a303',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+          };
+        </script>
+        <script type="text/javascript" src="https://www.highperformanceformat.com/1616e9416e1938ab8fa16f0ac161a303/invoke.js"></script>
+      </div>
+
+      <!-- Slot 3: Game -->
+      <div id="game-slot-2" onclick="openGlobalGame(1)" style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; height: 250px; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.2s; text-align: center;">
+        <div id="game-icon-2" style="font-size: 4rem; margin-bottom: 16px;">🎮</div>
+        <div id="game-name-2" style="font-weight: 700; font-size: 1.2rem;">Game 2</div>
+        <div style="font-size: 0.8rem; color: var(--accent); margin-top: 8px;">Play Now ▶</div>
+      </div>
+
+      <!-- Slot 4: Ad -->
+      <div style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+        <span style="position: absolute; top: 4px; left: 8px; font-size: 0.6rem; color: var(--text-muted);">ADVERTISEMENT</span>
+        <script>
+          atOptions = {
+            'key' : '1616e9416e1938ab8fa16f0ac161a303',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+          };
+        </script>
+        <script type="text/javascript" src="https://www.highperformanceformat.com/1616e9416e1938ab8fa16f0ac161a303/invoke.js"></script>
+      </div>
+
     </div>
-    <div class="game-strip-frame-wrap">
-      <iframe
-        id="mini-game-frame"
-        allow="gamepad *; fullscreen *"
-        scrolling="no"
-        frameborder="0"
-        loading="lazy"
-        title="Free mini-game"
-      ></iframe>
-    </div>
-    <p class="game-strip-footer">Free browser games — no download, no sign-up. Click "New Game" to shuffle to a different one.</p>
   </div>
 </div>
 
 <script>
 (function() {
-  var games = [
-    { name: "2048", url: "https://www.crazygames.com/embed/2048" },
-    { name: "Uno Online", url: "https://www.crazygames.com/embed/uno-online" },
-    { name: "Smash Karts", url: "https://www.crazygames.com/embed/smash-karts" },
-    { name: "Cubes 2048", url: "https://www.crazygames.com/embed/cubes-2048-io" },
-    { name: "Basket Random", url: "https://www.crazygames.com/embed/basket-random" },
-    { name: "Slope", url: "https://www.crazygames.com/embed/slope" },
-    { name: "Tetris", url: "https://www.crazygames.com/embed/tetris" },
-    { name: "Wordle", url: "https://www.crazygames.com/embed/wordle" },
-    { name: "Moto X3M", url: "https://www.crazygames.com/embed/moto-x3m" },
-    { name: "Subway Surfers", url: "https://www.crazygames.com/embed/subway-surfers" },
-    { name: "Snake", url: "https://www.crazygames.com/embed/snake-io" },
-    { name: "Bob The Robber", url: "https://www.crazygames.com/embed/bob-the-robber" },
-    { name: "Fireboy & Watergirl", url: "https://www.crazygames.com/embed/fireboy-and-watergirl-in-the-forest-temple" },
-    { name: "Stickman Hook", url: "https://www.crazygames.com/embed/stickman-hook" },
-    { name: "Drift Boss", url: "https://www.crazygames.com/embed/drift-boss" },
-    { name: "Pizza Clicker", url: "https://www.crazygames.com/embed/pizza-clicker" },
-    { name: "Dino Game", url: "https://www.crazygames.com/embed/dino-game" },
-    { name: "Vex 5", url: "https://www.crazygames.com/embed/vex-5" },
-    { name: "Gold Miner", url: "https://www.crazygames.com/embed/gold-miner" },
-    { name: "Crossy Road", url: "https://www.crazygames.com/embed/crossy-road" },
-    { name: "Flappy Bird", url: "https://www.crazygames.com/embed/flappy-bird" },
-    { name: "Traffic Jam 3D", url: "https://www.crazygames.com/embed/traffic-jam-3d" },
-    { name: "Tiny Fishing", url: "https://www.crazygames.com/embed/tiny-fishing" },
-    { name: "Stack Ball", url: "https://www.crazygames.com/embed/stack-ball" },
-    { name: "Word Search", url: "https://www.crazygames.com/embed/word-search" },
-    { name: "Solitaire", url: "https://www.crazygames.com/embed/solitaire" },
-    { name: "Mahjong Classic", url: "https://www.crazygames.com/embed/mahjong-classic" },
-    { name: "Bubble Shooter", url: "https://www.crazygames.com/embed/bubble-shooter" },
-    { name: "Fruit Ninja", url: "https://www.crazygames.com/embed/fruit-ninja" },
-    { name: "Raft Wars", url: "https://www.crazygames.com/embed/raft-wars" },
-    { name: "Bad Ice Cream", url: "https://www.crazygames.com/embed/bad-ice-cream" },
-    { name: "Bloons Tower Defense", url: "https://www.crazygames.com/embed/bloons-tower-defense" },
-    { name: "Parking Fury", url: "https://www.crazygames.com/embed/parking-fury" },
-    { name: "Run 3", url: "https://www.crazygames.com/embed/run-3" },
-    { name: "Penalty Shooters", url: "https://www.crazygames.com/embed/penalty-shooters-2" }
+  window.arcadeGamesList = [
+    { name: "Moto X3M", url: "https://www.crazygames.com/embed/moto-x3m", icon: "🏍️" },
+    { name: "Subway Surfers", url: "https://www.crazygames.com/embed/subway-surfers", icon: "🛹" },
+    { name: "Snake", url: "https://www.crazygames.com/embed/snake-io", icon: "🐍" },
+    { name: "Fireboy & Watergirl", url: "https://www.crazygames.com/embed/fireboy-and-watergirl-in-the-forest-temple", icon: "🔥💧" },
+    { name: "2048", url: "https://www.crazygames.com/embed/2048", icon: "🔢" },
+    { name: "Uno Online", url: "https://www.crazygames.com/embed/uno-online", icon: "🎴" },
+    { name: "Smash Karts", url: "https://www.crazygames.com/embed/smash-karts", icon: "🏎️" },
+    { name: "Basket Random", url: "https://www.crazygames.com/embed/basket-random", icon: "🏀" },
+    { name: "Slope", url: "https://www.crazygames.com/embed/slope", icon: "🟢" },
+    { name: "Tetris", url: "https://www.crazygames.com/embed/tetris", icon: "🧱" },
+    { name: "Wordle", url: "https://www.crazygames.com/embed/wordle", icon: "📝" },
+    { name: "Stickman Hook", url: "https://www.crazygames.com/embed/stickman-hook", icon: "🪝" },
+    { name: "Drift Boss", url: "https://www.crazygames.com/embed/drift-boss", icon: "🚗" },
+    { name: "Dino Game", url: "https://www.crazygames.com/embed/dino-game", icon: "🦖" },
+    { name: "Crossy Road", url: "https://www.crazygames.com/embed/crossy-road", icon: "🐔" },
+    { name: "Flappy Bird", url: "https://www.crazygames.com/embed/flappy-bird", icon: "🦅" }
   ];
 
-  var lastIndex = -1;
+  let currentSlotGames = [];
 
-  function shuffleGame() {
-    var frame = document.getElementById('mini-game-frame');
-    var label = document.getElementById('game-strip-name');
-    if (!frame) return;
-    var idx;
-    do { idx = Math.floor(Math.random() * games.length); } while (idx === lastIndex && games.length > 1);
-    lastIndex = idx;
-    var game = games[idx];
-    frame.src = game.url;
-    if (label) label.textContent = game.name;
-  }
+  window.shuffleGames = function() {
+    let list = window.arcadeGamesList;
+    let idx1 = Math.floor(Math.random() * list.length);
+    let idx2;
+    do { idx2 = Math.floor(Math.random() * list.length); } while (idx1 === idx2);
+    
+    currentSlotGames = [list[idx1], list[idx2]];
+    
+    document.getElementById('game-icon-1').textContent = currentSlotGames[0].icon;
+    document.getElementById('game-name-1').textContent = currentSlotGames[0].name;
+    
+    document.getElementById('game-icon-2').textContent = currentSlotGames[1].icon;
+    document.getElementById('game-name-2').textContent = currentSlotGames[1].name;
+  };
 
-  // Expose globally for onclick
-  window.shuffleGame = shuffleGame;
+  window.openGlobalGame = function(slotIndex) {
+    if(!currentSlotGames[slotIndex]) return;
+    const game = currentSlotGames[slotIndex];
+    const modal = document.getElementById('global-game-modal');
+    const iframe = document.getElementById('global-game-iframe');
+    const title = document.getElementById('global-game-title');
+    if(modal && iframe) {
+      title.textContent = game.name;
+      iframe.src = game.url;
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+  };
 
-  // Load a random game on initialization
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', shuffleGame);
+    document.addEventListener('DOMContentLoaded', window.shuffleGames);
   } else {
-    shuffleGame();
+    window.shuffleGames();
   }
 })();
 </script>
@@ -911,6 +976,75 @@
       }
     }
   })();
+</script>
+
+<!-- GLOBAL GAME MODAL -->
+<style>
+  #global-game-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0,0,0,0.95);
+    backdrop-filter: blur(15px);
+    align-items: center;
+    justify-content: center;
+  }
+  .global-game-content {
+    width: 100%;
+    max-width: 1400px;
+    height: 90vh;
+    background: var(--bg-surface);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+  .global-game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: var(--bg-surface-2);
+    border-bottom: 1px solid var(--border);
+  }
+  .close-global-game-btn {
+    background: rgba(254,44,85,0.15);
+    border: 1px solid rgba(254,44,85,0.3);
+    color: #fe2c55;
+    padding: 8px 24px;
+    border-radius: 99px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.2s;
+  }
+  .close-global-game-btn:hover {
+    background: #fe2c55;
+    color: white;
+  }
+</style>
+
+<div id="global-game-modal">
+  <div class="global-game-content">
+    <div class="global-game-header">
+      <h3 id="global-game-title" style="margin:0; font-size: 1.4rem; font-weight: 800;">Arcade</h3>
+      <button class="close-global-game-btn" onclick="closeGlobalGame()">✖ Close Game</button>
+    </div>
+    <iframe id="global-game-iframe" style="flex: 1; width: 100%; border: none;" allow="gamepad *; fullscreen *" scrolling="no"></iframe>
+  </div>
+</div>
+
+<script>
+  window.closeGlobalGame = function() {
+    const modal = document.getElementById('global-game-modal');
+    const iframe = document.getElementById('global-game-iframe');
+    if(modal && iframe) {
+      iframe.src = '';
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  };
 </script>
 <!-- MODALS END -->
 

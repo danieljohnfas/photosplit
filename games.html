@@ -217,17 +217,6 @@
       </div>
     </main>
 
-    <!-- Game Modal -->
-    <div id="game-modal">
-      <div class="game-modal-content">
-        <div class="game-modal-header">
-          <h3 id="modal-game-title" style="margin:0; font-size: 1.2rem;">Game</h3>
-          <button class="close-game-btn" onclick="closeGame()">✖ Close Game</button>
-        </div>
-        <iframe id="game-modal-iframe" allow="gamepad *; fullscreen *" scrolling="no"></iframe>
-      </div>
-    </div>
-
     <script>
       const gamesList = [
         { name: "Moto X3M", url: "https://www.crazygames.com/embed/moto-x3m", icon: "🏍️" },
@@ -264,9 +253,6 @@
       ];
 
       const grid = document.getElementById('games-grid');
-      const modal = document.getElementById('game-modal');
-      const iframe = document.getElementById('game-modal-iframe');
-      const modalTitle = document.getElementById('modal-game-title');
 
       gamesList.forEach(game => {
         const card = document.createElement('div');
@@ -280,16 +266,21 @@
       });
 
       function openGame(name, url) {
-        modalTitle.textContent = name;
-        iframe.src = url;
-        modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
+        const modal = document.getElementById('global-game-modal');
+        const iframe = document.getElementById('global-game-iframe');
+        const title = document.getElementById('global-game-title');
+        if(modal && iframe) {
+          title.textContent = name;
+          iframe.src = url;
+          modal.style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        }
       }
 
       function closeGame() {
-        iframe.src = '';
-        modal.style.display = 'none';
-        document.body.style.overflow = '';
+        if(typeof window.closeGlobalGame === 'function') {
+          window.closeGlobalGame();
+        }
       }
     </script>
 <!-- GLOBAL AD SCRIPTS (Popunder & Social Bar) -->
@@ -452,6 +443,75 @@
       }
     }
   })();
+</script>
+
+<!-- GLOBAL GAME MODAL -->
+<style>
+  #global-game-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0,0,0,0.95);
+    backdrop-filter: blur(15px);
+    align-items: center;
+    justify-content: center;
+  }
+  .global-game-content {
+    width: 100%;
+    max-width: 1400px;
+    height: 90vh;
+    background: var(--bg-surface);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+  .global-game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: var(--bg-surface-2);
+    border-bottom: 1px solid var(--border);
+  }
+  .close-global-game-btn {
+    background: rgba(254,44,85,0.15);
+    border: 1px solid rgba(254,44,85,0.3);
+    color: #fe2c55;
+    padding: 8px 24px;
+    border-radius: 99px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.2s;
+  }
+  .close-global-game-btn:hover {
+    background: #fe2c55;
+    color: white;
+  }
+</style>
+
+<div id="global-game-modal">
+  <div class="global-game-content">
+    <div class="global-game-header">
+      <h3 id="global-game-title" style="margin:0; font-size: 1.4rem; font-weight: 800;">Arcade</h3>
+      <button class="close-global-game-btn" onclick="closeGlobalGame()">✖ Close Game</button>
+    </div>
+    <iframe id="global-game-iframe" style="flex: 1; width: 100%; border: none;" allow="gamepad *; fullscreen *" scrolling="no"></iframe>
+  </div>
+</div>
+
+<script>
+  window.closeGlobalGame = function() {
+    const modal = document.getElementById('global-game-modal');
+    const iframe = document.getElementById('global-game-iframe');
+    if(modal && iframe) {
+      iframe.src = '';
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  };
 </script>
 <!-- MODALS END -->
 
