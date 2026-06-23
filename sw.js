@@ -10,7 +10,6 @@ const ASSETS_TO_CACHE = [
   '/transcribe.html',
   '/css/style.css',
   '/js/app.js',
-  '/js/gear.js',
   '/js/worker.js',
   '/js/transcribe.js',
   '/js/whisper-worker.js',

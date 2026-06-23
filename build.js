@@ -12,7 +12,6 @@ const footerTpl = fs.readFileSync(
   path.join(COMPONENTS_DIR, "footer.html"),
   "utf8",
 );
-const gearTpl = fs.readFileSync(path.join(COMPONENTS_DIR, "gear.html"), "utf8");
 const modalsTpl = fs.readFileSync(
   path.join(COMPONENTS_DIR, "modals.html"),
   "utf8",
@@ -72,8 +71,12 @@ files.forEach((file) => {
     adBottomTpl + "\n" + footerTpl
   );
   content = content.replace(
-    /<section class="gear-section">[\s\S]*?<\/section>/i,
-    gearTpl,
+    /<section class="gear-section">[\s\S]*?<\/section>\s*/gi,
+    '',
+  );
+  content = content.replace(
+    /<script[^>]*src="\/js\/gear\.js"[^>]*><\/script>\s*/gi,
+    '',
   );
 
   // Strip ALL existing MODALS blocks (handles multiple injections)
@@ -147,8 +150,12 @@ if (fs.existsSync(BLOG_DIR)) {
       adBottomTpl + "\n" + footerTpl
     );
     content = content.replace(
-      /<section class="gear-section">[\s\S]*?<\/section>/i,
-      gearTpl,
+      /<section class="gear-section">[\s\S]*?<\/section>\s*/gi,
+      '',
+    );
+    content = content.replace(
+      /<script[^>]*src="\/js\/gear\.js"[^>]*><\/script>\s*/gi,
+      '',
     );
 
     // Strip ALL existing MODALS blocks
