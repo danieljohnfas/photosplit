@@ -18,6 +18,8 @@ const modalsTpl = fs.readFileSync(
 );
 const adTopTpl = fs.readFileSync(path.join(COMPONENTS_DIR, "ad-banner-top.html"), "utf8");
 const adBottomTpl = fs.readFileSync(path.join(COMPONENTS_DIR, "ad-banner-bottom.html"), "utf8");
+const adSidebarTpl = fs.readFileSync(path.join(COMPONENTS_DIR, "ad-sidebar.html"), "utf8");
+const gameStripTpl = fs.readFileSync(path.join(COMPONENTS_DIR, "game-strip.html"), "utf8");
 const socialShareTpl = fs.readFileSync(path.join(COMPONENTS_DIR, "social-share.html"), "utf8");
 const adScriptsTpl = fs.readFileSync(path.join(COMPONENTS_DIR, "ad-scripts.html"), "utf8");
 
@@ -62,13 +64,23 @@ files.forEach((file) => {
   content = content.replace(/<!-- BOTTOM AD BANNER -->[\s\S]*?<!-- END BOTTOM AD BANNER -->\s*/gi, '');
   content = content.replace(/<!-- SOCIAL SHARE COMPONENT -->[\s\S]*?<!-- END SOCIAL SHARE COMPONENT -->\s*/gi, '');
 
+  content = content.replace(/<!-- GAME STRIP COMPONENT -->[\s\S]*?<!-- END GAME STRIP COMPONENT -->\s*/gi, '');
+
   content = content.replace(
     /<header id="site-header">[\s\S]*?<\/header>/i,
     pageHeader + "\n" + adTopTpl + "\n"
   );
   content = content.replace(
+    /<nav class="site-nav">[\s\S]*?<\/nav>/i,
+    pageHeader + "\n" + adTopTpl + "\n"
+  );
+  content = content.replace(
     /<footer class="site-footer">[\s\S]*?<\/footer>/i,
-    adBottomTpl + "\n" + footerTpl
+    gameStripTpl + "\n" + adBottomTpl + "\n" + footerTpl
+  );
+  content = content.replace(
+    /<aside class="page-sidebar">[\s\S]*?<\/aside>/i,
+    `<aside class="page-sidebar">\n${adSidebarTpl}\n</aside>`
   );
   content = content.replace(
     /<section class="gear-section">[\s\S]*?<\/section>\s*/gi,
@@ -139,6 +151,8 @@ if (fs.existsSync(BLOG_DIR)) {
     content = content.replace(/<!-- BOTTOM AD BANNER -->[\s\S]*?<!-- END BOTTOM AD BANNER -->\s*/gi, '');
     content = content.replace(/<!-- SOCIAL SHARE COMPONENT -->[\s\S]*?<!-- END SOCIAL SHARE COMPONENT -->\s*/gi, '');
 
+    content = content.replace(/<!-- GAME STRIP COMPONENT -->[\s\S]*?<!-- END GAME STRIP COMPONENT -->\s*/gi, '');
+
     // Blog paths need relative adjustments for assets, but actually all links are absolute starting with /
     // So we can use the same templates
     content = content.replace(
@@ -146,8 +160,16 @@ if (fs.existsSync(BLOG_DIR)) {
       pageHeader + "\n" + adTopTpl + "\n" + socialShareTpl + "\n"
     );
     content = content.replace(
+      /<nav class="site-nav">[\s\S]*?<\/nav>/i,
+      pageHeader + "\n" + adTopTpl + "\n" + socialShareTpl + "\n"
+    );
+    content = content.replace(
       /<footer class="site-footer">[\s\S]*?<\/footer>/i,
-      adBottomTpl + "\n" + footerTpl
+      gameStripTpl + "\n" + adBottomTpl + "\n" + footerTpl
+    );
+    content = content.replace(
+      /<aside class="page-sidebar">[\s\S]*?<\/aside>/i,
+      `<aside class="page-sidebar">\n${adSidebarTpl}\n</aside>`
     );
     content = content.replace(
       /<section class="gear-section">[\s\S]*?<\/section>\s*/gi,
