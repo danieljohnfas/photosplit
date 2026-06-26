@@ -22,7 +22,7 @@ module.exports = async function(context, baseUrl) {
 
     try {
       const startTime = Date.now();
-      const response = await pageObj.goto(url, { waitUntil: 'networkidle' });
+      const response = await pageObj.goto(url, { waitUntil: 'load' });
       loadMs = Date.now() - startTime;
       
       if (!response.ok()) {

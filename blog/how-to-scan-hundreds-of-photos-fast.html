@@ -759,7 +759,7 @@
       ><img
         alt="Visitor Count"
         class="visitor-badge"
-        src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&amp;label=Visitors&amp;color=%23fe2c55&amp;style=flat-square"
+        src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com%2Fpageviews&amp;label=Page%20Views&amp;color=%23fe2c55&amp;style=flat-square"
       />
     </div>
   </div>
@@ -886,12 +886,14 @@
 
 <script>
   (function () {
-    if (!localStorage.getItem("ps_counted")) {
-      localStorage.setItem("ps_counted", "true");
-      var img = new Image();
-      img.src =
-        "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
-    }
+    window.loadHitTracker = function () {
+      if (!localStorage.getItem("ps_counted")) {
+        localStorage.setItem("ps_counted", "true");
+        var img = new Image();
+        img.src =
+          "https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com&label=Visits&color=%23002d72&style=flat-square&tz=UTC";
+      }
+    };
 
     window.handleFeedbackSubmit = function (e) {
       e.preventDefault();
@@ -924,6 +926,7 @@
       } else if (localStorage.getItem("pss_cookie_consent") === "accepted") {
         if (typeof loadGoogleScripts === "function") loadGoogleScripts();
         if (typeof loadGoogleAnalytics === "function") loadGoogleAnalytics();
+        loadHitTracker();
       }
       var acceptBtn = document.getElementById("cookie-accept");
       if (acceptBtn) {
@@ -932,6 +935,7 @@
           banner.classList.remove("visible");
           if (typeof loadGoogleScripts === "function") loadGoogleScripts();
           if (typeof loadGoogleAnalytics === "function") loadGoogleAnalytics();
+          loadHitTracker();
         };
       }
       var declineBtn = document.getElementById("cookie-decline");

@@ -2954,11 +2954,6 @@ const SocialManager = {
 
 // ═══ INITIALIZATION ══════════════════════════════════════════════════════════
 document.addEventListener("DOMContentLoaded", () => {
-  UIController.initTheme();
-  FileManager.init();
-  BoundingBoxEditor.init();
-  UIController.initShortcuts();
-
   // Sound toggle init
   const soundBtn = $("sound-toggle");
   if (soundBtn) {

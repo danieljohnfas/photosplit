@@ -9,7 +9,7 @@ module.exports = async function(context, baseUrl) {
     const pageObj = await context.newPage();
     const url = `${baseUrl}${page}`;
     
-    await pageObj.goto(url, { waitUntil: 'networkidle' });
+    await pageObj.goto(url, { waitUntil: 'load' });
 
     // Check if ads exist
     const adTop = await pageObj.$('.ad-banner-top');

@@ -89,6 +89,7 @@ files.forEach((file) => {
   content = content.replace(/<!-- Modals & Scripts -->[\s\S]*?(?=<!-- MODALS START -->|<div id="cookie-consent"|<\/body>)/i, '');
   content = content.replace(/(<div id="cookie-consent"[\s\S]*?<\/div>\s*<\/div>\s*)(<script>[\s\S]*?<\/script>\s*)?(?=<\/body>)/i, '');
   content = content.replace(/<!-- GLOBAL AD SCRIPTS \(Popunder & Social Bar\) -->[\s\S]*?<!-- END GLOBAL AD SCRIPTS -->\s*/gi, '');
+  content = content.replace(/<!-- Hit Tracker \(Unique Visitors Only\) -->[\s\S]*?<\/script>\s*/gi, '');
   content = content.replace(/\s*<\/body>/i, '\n' + adScriptsTpl + '\n' + modalsTpl + '\n</body>');
 
   if (!content.includes('rel="manifest"')) {
@@ -184,6 +185,7 @@ if (fs.existsSync(BLOG_DIR)) {
     content = content.replace(/<!-- Modals & Scripts -->[\s\S]*?(?=<!-- MODALS START -->|<div id="cookie-consent"|<\/body>)/i, '');
     content = content.replace(/(<div id="cookie-consent"[\s\S]*?<\/div>\s*<\/div>\s*)(<script>[\s\S]*?<\/script>\s*)?(?=<\/body>)/i, '');
     content = content.replace(/<!-- GLOBAL AD SCRIPTS \(Popunder & Social Bar\) -->[\s\S]*?<!-- END GLOBAL AD SCRIPTS -->\s*/gi, '');
+    content = content.replace(/<!-- Hit Tracker \(Unique Visitors Only\) -->[\s\S]*?<\/script>\s*/gi, '');
     content = content.replace(/\s*<\/body>/i, '\n' + adScriptsTpl + '\n' + modalsTpl + '\n</body>');
 
     if (!content.includes('rel="manifest"')) {
