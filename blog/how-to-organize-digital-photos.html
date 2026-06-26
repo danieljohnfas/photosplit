@@ -768,27 +768,8 @@
       © 2026 PhotoSplit Studio. All rights reserved.
     </div>
   </div>
-  <div class="site-status-bar">
-    <div class="status-item">
-      <span class="status-label">Is it dark outside?</span
-      ><span class="status-value" id="dark-status-answer">...</span>
-    </div>
-    <div class="status-item">
-      <span class="status-label">Global Visitors:</span
-      ><img
-        alt="Visitor Count"
-        class="visitor-badge"
-        src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fphotosplitstudio.com%2Fpageviews&amp;label=Page%20Views&amp;color=%23fe2c55&amp;style=flat-square"
-      />
-    </div>
-  </div>
   <script>
     (function () {
-      var h = new Date().getHours();
-      var ans = h >= 18 || h < 6 ? "YES" : "NO";
-      var el = document.getElementById("dark-status-answer");
-      if (el) el.textContent = ans;
-
       // Register Service Worker for PWA / Offline caching
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
