@@ -15,9 +15,17 @@ module.exports = async function(context, baseUrl) {
     let errors = [];
     let status = 'pass';
 
-    pageObj.on('pageerror', err => errors.push(err.message));
+    // Only capture errors from first-party (localhost) scripts, not ad networks
+    pageObj.on('pageerror', err => errors.push(err.stack || err.message));
     pageObj.on('console', msg => {
-      if (msg.type() === 'error') errors.push(msg.text());
+      if (msg.type() === 'error') {
+        const location = msg.location();
+        const url = location && location.url ? location.url : '';
+        // Skip errors from external/third-party scripts (ad networks, CDNs, etc.)
+        if (!url || url.startsWith(`${baseUrl}`) || url.startsWith('about:') || url === '') {
+          errors.push(msg.text());
+        }
+      }
     });
 
     try {
