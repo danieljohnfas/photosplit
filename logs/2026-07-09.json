@@ -1,0 +1,141 @@
+{
+  "date": "2026-07-09",
+  "timestamp": "2026-07-09T09:53:16.613Z",
+  "suites": {
+    "pages": [
+      {
+        "page": "/",
+        "url": "http://localhost:8080/",
+        "loadMs": 396,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/app",
+        "url": "http://localhost:8080/app",
+        "loadMs": 437,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/convert",
+        "url": "http://localhost:8080/convert",
+        "loadMs": 177,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/crop",
+        "url": "http://localhost:8080/crop",
+        "loadMs": 125,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/resize",
+        "url": "http://localhost:8080/resize",
+        "loadMs": 136,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/passport",
+        "url": "http://localhost:8080/passport",
+        "loadMs": 120,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/transcribe",
+        "url": "http://localhost:8080/transcribe",
+        "loadMs": 137,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/about",
+        "url": "http://localhost:8080/about",
+        "loadMs": 502,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/contact",
+        "url": "http://localhost:8080/contact",
+        "loadMs": 226,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/tips",
+        "url": "http://localhost:8080/tips",
+        "loadMs": 239,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/games",
+        "url": "http://localhost:8080/games",
+        "loadMs": 235,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/privacy-policy",
+        "url": "http://localhost:8080/privacy-policy",
+        "loadMs": 432,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/terms",
+        "url": "http://localhost:8080/terms",
+        "loadMs": 1322,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/blog/",
+        "url": "http://localhost:8080/blog/",
+        "loadMs": 404,
+        "errors": [],
+        "status": "pass"
+      }
+    ],
+    "ads": [
+      {
+        "page": "/",
+        "hasAdTop": true,
+        "hasAdBottom": true,
+        "hasAdSidebar": false,
+        "status": "pass"
+      },
+      {
+        "page": "/app",
+        "hasAdTop": true,
+        "hasAdBottom": true,
+        "hasAdSidebar": false,
+        "status": "pass"
+      },
+      {
+        "page": "/blog/",
+        "hasAdTop": true,
+        "hasAdBottom": true,
+        "hasAdSidebar": true,
+        "status": "pass"
+      },
+      {
+        "page": "/convert",
+        "hasAdTop": true,
+        "hasAdBottom": true,
+        "hasAdSidebar": false,
+        "status": "pass"
+      }
+    ]
+  },
+  "summary": {
+    "passed": 18,
+    "failed": 0,
+    "warnings": 0
+  }
+}
