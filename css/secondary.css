@@ -621,6 +621,15 @@ tr:hover td {
   text-align: center;
   background: var(--bg-sunken);
   border-bottom: 1px solid var(--border);
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0;
+}
+.hero-utility > * {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero-utility h1 {
   font-size: 2.5rem;
