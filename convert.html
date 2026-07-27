@@ -84,18 +84,21 @@
       }
       #convert-drop {
         border: 2px dashed var(--border-strong);
+        background: color-mix(in srgb, var(--bg-surface) 50%, transparent);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         border-radius: var(--radius-lg);
         padding: 48px 24px;
         text-align: center;
         cursor: pointer;
-        transition:
-          border-color 0.2s,
-          background 0.2s;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
       #convert-drop:hover,
       #convert-drop.drag-over {
         border-color: var(--accent);
-        background: rgba(254, 44, 85, 0.05);
+        background: color-mix(in srgb, var(--accent) 10%, transparent);
+        transform: translateY(-2px) scale(1.01);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
       }
       #convert-drop p {
         color: var(--text-muted);
@@ -145,7 +148,8 @@
         flex-wrap: wrap;
       }
       .btn-convert-all {
-        background: linear-gradient(135deg, #fe2c55, #ff375f);
+        background: linear-gradient(135deg, #fe2c55, #ff375f, #fe2c55);
+        background-size: 200% 200%;
         color: #fff;
         border: none;
         border-radius: 99px;
@@ -153,12 +157,18 @@
         font-size: 0.95rem;
         font-weight: 700;
         cursor: pointer;
-        box-shadow: 0 3px 14px rgba(254, 44, 85, 0.35);
-        transition: all 0.15s;
+        box-shadow: 0 4px 15px rgba(254, 44, 85, 0.4);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        animation: gradientShift 4s ease infinite;
       }
       .btn-convert-all:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 5px 20px rgba(254, 44, 85, 0.45);
+        transform: translateY(-2px) scale(1.05);
+        box-shadow: 0 8px 25px rgba(254, 44, 85, 0.55);
+      }
+      @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
       }
       .btn-convert-zip {
         background: linear-gradient(135deg, #f59e0b, #d97706);
@@ -169,11 +179,12 @@
         font-size: 0.95rem;
         font-weight: 700;
         cursor: pointer;
-        box-shadow: 0 3px 8px rgba(245, 158, 11, 0.3);
-        transition: all 0.15s;
+        box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
       .btn-convert-zip:hover {
-        transform: translateY(-1px);
+        transform: translateY(-2px) scale(1.05);
+        box-shadow: 0 6px 18px rgba(245, 158, 11, 0.6);
       }
       .btn-clear {
         background: var(--bg-surface-2);

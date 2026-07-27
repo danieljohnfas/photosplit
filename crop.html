@@ -100,18 +100,21 @@
       }
       #crop-upload-zone {
         border: 2px dashed var(--border-strong);
+        background: color-mix(in srgb, var(--bg-surface) 50%, transparent);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         border-radius: var(--radius-lg);
         padding: 48px 24px;
         text-align: center;
         cursor: pointer;
-        transition:
-          border-color 0.2s,
-          background 0.2s;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
       #crop-upload-zone:hover,
       #crop-upload-zone.drag-over {
         border-color: var(--accent);
-        background: rgba(254, 44, 85, 0.05);
+        background: color-mix(in srgb, var(--accent) 10%, transparent);
+        transform: translateY(-2px) scale(1.01);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
       }
       #crop-upload-zone p {
         color: var(--text-muted);
@@ -165,8 +168,11 @@
         cursor: se-resize;
       }
       .crop-panel {
-        background: var(--bg-surface);
-        border: 1px solid var(--border);
+        background: color-mix(in srgb, var(--bg-surface) 65%, transparent);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
         border-radius: var(--radius-lg);
         padding: 20px;
         display: flex;
@@ -204,7 +210,8 @@
         font-size: 0.88rem;
       }
       .btn-crop-action {
-        background: linear-gradient(135deg, #fe2c55, #ff375f);
+        background: linear-gradient(135deg, #fe2c55, #ff375f, #fe2c55);
+        background-size: 200% 200%;
         color: #fff;
         border: none;
         border-radius: 99px;
@@ -213,12 +220,18 @@
         font-weight: 700;
         cursor: pointer;
         width: 100%;
-        box-shadow: 0 3px 14px rgba(254, 44, 85, 0.35);
-        transition: all 0.15s;
+        box-shadow: 0 4px 15px rgba(254, 44, 85, 0.4);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        animation: gradientShift 4s ease infinite;
       }
       .btn-crop-action:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 5px 20px rgba(254, 44, 85, 0.45);
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 8px 25px rgba(254, 44, 85, 0.55);
+      }
+      @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
       }
       .crop-preview {
         background: var(--bg-base);
