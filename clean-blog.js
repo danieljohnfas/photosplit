@@ -34,7 +34,7 @@ function processDir(dir) {
                 modified = true;
             }
             if (content.includes('<span>✨ </span>')) {
-                content = content.replace(/<span>✨ <\/span>/g, "<span>Jan 15, 2024</span>");
+                content = content.replace(/<span>✨ <\/span>/g, "<span>Jan 15, 2026</span>");
                 modified = true;
             }
             if (content.includes('✨ ')) {
