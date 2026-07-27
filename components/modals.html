@@ -224,4 +224,86 @@
     }
   };
 </script>
+
+<!-- CHANGELOG MODAL -->
+<div
+  class="text-modal-backdrop"
+  id="changelog-modal"
+  onclick="
+    if (event.target === this && typeof closeTextModal === 'function')
+      closeTextModal('changelog-modal');
+  "
+>
+  <div class="text-modal-box">
+    <div class="text-modal-header">
+      <h2>What's New in PhotoSplit Studio</h2>
+      <button
+        class="icon-btn"
+        onclick="
+          if (typeof closeTextModal === 'function')
+            closeTextModal('changelog-modal');
+        "
+      >
+        ✕
+      </button>
+    </div>
+    <div class="text-modal-content" style="max-height: 60vh; overflow-y: auto;">
+      <h3>🚀 Summer 2026 Update</h3>
+      <ul>
+        <li><strong>New Voice Control Module:</strong> Say "detect" or "save" to control the app hands-free.</li>
+        <li><strong>Upgraded WASM Engine:</strong> Edge detection is now 40% faster on mobile devices.</li>
+        <li><strong>Transcribe Tool:</strong> Added our new Whisper AI-powered audio transcription utility.</li>
+        <li><strong>Games Arcade:</strong> Play classic games in the sidebar while you batch process.</li>
+      </ul>
+      <hr style="margin: 24px 0; border: none; border-top: 1px solid var(--border);" />
+      <h3>🌟 Spring 2026 Update</h3>
+      <ul>
+        <li><strong>Film Negative Converter:</strong> Invert B&W, C-41 color, and E-6 slide film directly in the app.</li>
+        <li><strong>Lossless PNG Export:</strong> For those who demand maximum archival quality.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  // PWA Install Logic
+  let deferredPrompt;
+  const installBtn = document.getElementById('btn-install-pwa');
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    // Prevent the mini-infobar from appearing on mobile
+    e.preventDefault();
+    // Stash the event so it can be triggered later.
+    deferredPrompt = e;
+    // Update UI notify the user they can install the PWA
+    if(installBtn) {
+      installBtn.style.display = 'inline-block';
+    }
+  });
+
+  if(installBtn) {
+    installBtn.addEventListener('click', async () => {
+      if (deferredPrompt) {
+        // Show the install prompt
+        deferredPrompt.prompt();
+        // Wait for the user to respond to the prompt
+        const { outcome } = await deferredPrompt.userChoice;
+        if (outcome === 'accepted') {
+          console.log('User accepted the install prompt');
+        } else {
+          console.log('User dismissed the install prompt');
+        }
+        // We've used the prompt, and can't use it again, throw it away
+        deferredPrompt = null;
+        installBtn.style.display = 'none';
+      }
+    });
+  }
+  
+  window.addEventListener('appinstalled', (evt) => {
+    // Log install to analytics
+    console.log('INSTALL: Success');
+    if(installBtn) installBtn.style.display = 'none';
+  });
+</script>
 <!-- MODALS END -->
