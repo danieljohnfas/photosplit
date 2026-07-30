@@ -64,11 +64,15 @@ function getAmazonLink(asin) {
 }
 
 function getAmazonImageUrl(asin) {
-  return `//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL250_&ASIN=${asin}&MarketPlace=US&ID=AsinImage&WS=1&tag=${AMAZON_TAG}&ServiceVersion=20070822`;
+  // Use the standard Amazon product image URL which is not blocked by ad blockers
+  return `https://images-na.ssl-images-amazon.com/images/P/${asin}.01.LZZZZZZZ.jpg`;
 }
 
 function getTrackingPixel(asin) {
-  return `<img src="https://ir-na.amazon-adsystem.com/e/ir?t=${AMAZON_TAG}&l=li3&o=1&a=${asin}" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important; position:absolute;" />`;
+  // We omit the ir-na tracking pixel because aggressive ad blockers 
+  // sometimes hide the entire parent container if they detect it.
+  // The affiliate ?tag= parameter on the link is sufficient for tracking.
+  return '';
 }
 
 function renderSidebarWidgets() {
