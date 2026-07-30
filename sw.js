@@ -1,4 +1,4 @@
-const CACHE_NAME = 'photosplit-v2';
+const CACHE_NAME = 'photosplit-v3';
 const ASSETS_TO_CACHE = [
   '/',
   '/app',
@@ -58,8 +58,8 @@ self.addEventListener('fetch', event => {
   const acceptHeader = event.request.headers.get('accept') || '';
   const isHtml = acceptHeader.includes('text/html');
 
-  if (isHtml) {
-    // Network-first for HTML pages so users get the latest version
+  if (isHtml || event.request.url.includes('amazon-products.js')) {
+    // Network-first for HTML pages and dynamic products so users get the latest version
     event.respondWith(
       fetch(event.request)
         .then(response => {
