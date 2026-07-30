@@ -1,11 +1,11 @@
 const AMAZON_TAG = 'photoid03-20';
 
 let AMAZON_PRODUCTS = [
-  { asin: 'B07DLX26BB', title: 'Epson FastFoto FF-680W', desc: 'The world\'s fastest personal photo scanner. Scan thousands of photos.', badge: 'Top Pick', btnClass: 'btn-primary', img: 'https://m.media-amazon.com/images/I/71HoX18AByL.jpg' },
-  { asin: 'B08GTYFC37', title: 'SanDisk 2TB Portable SSD', desc: 'Backup your precious digitized memories securely and fast.', badge: 'Storage', btnClass: 'btn-secondary', img: 'https://m.media-amazon.com/images/I/41OUh0ZU1NL.jpg' },
-  { asin: 'B00009R6TQ', title: 'Kodak Slide N Scan', desc: 'Digitize your old film negatives and slides in high resolution.', badge: 'Negatives', btnClass: 'btn-secondary', img: 'https://m.media-amazon.com/images/I/11RNLXhvOXL.jpg' },
+  { asin: 'B07DLX26BB', title: 'Epson FastFoto FF-680W', desc: 'The world\'s fastest personal photo scanner. Scan thousands of photos.', badge: 'Top Pick', btnClass: 'btn-primary', img: 'https://images.unsplash.com/photo-1590483736622-398541c49b6b?q=80&w=400&auto=format&fit=crop' },
+  { asin: 'B08GTYFC37', title: 'SanDisk 2TB Portable SSD', desc: 'Backup your precious digitized memories securely and fast.', badge: 'Storage', btnClass: 'btn-secondary', img: 'https://images.unsplash.com/photo-1597848212624-a19eb35e2651?q=80&w=400&auto=format&fit=crop' },
+  { asin: 'B00009R6TQ', title: 'Kodak Slide N Scan', desc: 'Digitize your old film negatives and slides in high resolution.', badge: 'Negatives', btnClass: 'btn-secondary', img: 'https://images.unsplash.com/photo-1505322022379-7c3353ee6291?q=80&w=400&auto=format&fit=crop' },
   { asin: 'B002K6P168', title: 'Pioneer Photo Albums', desc: 'Store your physical originals safely in archival quality sleeves.', badge: 'Archival', btnClass: 'btn-secondary', img: 'https://images.unsplash.com/photo-1518133527749-e58f01c70e0b?q=80&w=400&auto=format&fit=crop' },
-  { asin: 'B0050R67U0', title: 'SanDisk 128GB SDXC', desc: 'Ultra high-speed storage card for modern mirrorless cameras.', badge: 'Essential', btnClass: 'btn-secondary', img: 'https://m.media-amazon.com/images/I/71BN8DugeVL.jpg' },
+  { asin: 'B0050R67U0', title: 'SanDisk 128GB SDXC', desc: 'Ultra high-speed storage card for modern mirrorless cameras.', badge: 'Essential', btnClass: 'btn-secondary', img: 'https://images.unsplash.com/photo-1624467026045-81423405b0be?q=80&w=400&auto=format&fit=crop' },
   { asin: 'B015AHE5FA', title: 'Lens Cleaning Kit', desc: 'Keep your scanner glass spotless for the clearest digitized photos.', badge: 'Cleaning', btnClass: 'btn-secondary', img: 'https://images.unsplash.com/photo-1582216091047-975a5eefcba2?q=80&w=400&auto=format&fit=crop' },
   { asin: 'B085KV7LHQ', title: 'Aura Digital Frame', desc: 'Display your freshly digitized photos on a beautiful smart frame.', badge: 'Display', btnClass: 'btn-primary', img: 'https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=400&auto=format&fit=crop' },
   { asin: 'B07V22XVDM', title: 'WD 4TB My Passport', desc: 'Massive portable storage for your entire digitized family photo history.', badge: 'Storage', btnClass: 'btn-secondary', img: 'https://images.unsplash.com/photo-1620245053156-55e1c8b3f271?q=80&w=400&auto=format&fit=crop' },
@@ -129,7 +129,7 @@ function renderBottomBanner() {
   const products = AMAZON_PRODUCTS.slice(5, 7); // 2 products
   
   let html = `
-    <div class="ad-container ad-banner-bottom ad-wrap-bottom glass-ad-panel" id="sticky-bottom-banner" style="position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999; margin: 0; border-radius: 0; text-align: center; box-shadow: 0 -8px 32px rgba(0,0,0,0.4); background: var(--bg-surface); padding: 16px 0; border-top: 1px solid var(--border-strong); display: flex; justify-content: center; align-items: center; gap: 24px; flex-wrap: wrap;">
+    <div class="ad-container ad-banner-bottom ad-wrap-bottom glass-ad-panel" id="sticky-bottom-banner" style="margin: 0; border-radius: 0; text-align: center; box-shadow: 0 -8px 32px rgba(0,0,0,0.4); background: var(--bg-surface); padding: 16px 0; border-top: 1px solid var(--border-strong); display: flex; justify-content: center; align-items: center; gap: 24px; flex-wrap: wrap; margin-top: 2rem;">
       <span class="ad-label" style="font-size: 0.65rem; position:absolute; top: -20px; background: var(--bg-surface-2); border: 1px solid var(--border-strong); border-bottom: none; color: var(--text-primary); padding: 4px 12px; border-radius: 8px 8px 0 0; right: 24px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;">You Might Also Like</span>
   `;
 
