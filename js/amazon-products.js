@@ -4,7 +4,7 @@ let AMAZON_PRODUCTS = [
   {
     asin: 'B07DLX26BB',
     title: 'Epson FastFoto FF-680W',
-    desc: 'The world's fastest personal photo scanner. Scan thousands of photos.',
+    desc: "The world's fastest personal photo scanner. Scan thousands of photos.",
     badge: 'Top Pick',
     btnClass: 'btn-primary',
     img: 'https://images.unsplash.com/photo-1590483736622-398541c49b6b?q=80&w=400&auto=format&fit=crop'

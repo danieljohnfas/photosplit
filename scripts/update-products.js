@@ -119,8 +119,7 @@ async function run() {
   // 4. Rewrite the file
   if (deadCount > 0 || updatedCount > 0) {
     const newArrayString = JSON.stringify(activeProducts, null, 2)
-      .replace(/"([^"]+)":/g, '$1:') // Remove quotes from keys
-      .replace(/"/g, "'"); // Use single quotes for consistency
+      .replace(/"([^"]+)":/g, '$1:'); // Remove quotes from keys
 
     const newContent = content.replace(match[1], newArrayString);
     fs.writeFileSync(JS_FILE, newContent, 'utf8');
