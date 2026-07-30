@@ -156,74 +156,6 @@
   })();
 </script>
 
-<!-- GLOBAL GAME MODAL -->
-<style>
-  #global-game-modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    z-index: 99999;
-    background: rgba(0,0,0,0.95);
-    backdrop-filter: blur(15px);
-    align-items: center;
-    justify-content: center;
-  }
-  .global-game-content {
-    width: 100%;
-    max-width: 1400px;
-    height: 90vh;
-    background: var(--bg-surface);
-    border-radius: var(--radius-lg);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-  }
-  .global-game-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 24px;
-    background: var(--bg-surface-2);
-    border-bottom: 1px solid var(--border);
-  }
-  .close-global-game-btn {
-    background: rgba(254,44,85,0.15);
-    border: 1px solid rgba(254,44,85,0.3);
-    color: #fe2c55;
-    padding: 8px 24px;
-    border-radius: 99px;
-    cursor: pointer;
-    font-weight: 700;
-    transition: all 0.2s;
-  }
-  .close-global-game-btn:hover {
-    background: #fe2c55;
-    color: white;
-  }
-</style>
-
-<div id="global-game-modal">
-  <div class="global-game-content">
-    <div class="global-game-header">
-      <h3 id="global-game-title" style="margin:0; font-size: 1.4rem; font-weight: 800;">Arcade</h3>
-      <button class="close-global-game-btn" onclick="closeGlobalGame()">✖ Close Game</button>
-    </div>
-    <iframe id="global-game-iframe" style="flex: 1; width: 100%; border: none;" allow="gamepad *; fullscreen *" scrolling="no"></iframe>
-  </div>
-</div>
-
-<script>
-  window.closeGlobalGame = function() {
-    const modal = document.getElementById('global-game-modal');
-    const iframe = document.getElementById('global-game-iframe');
-    if(modal && iframe) {
-      iframe.src = '';
-      modal.style.display = 'none';
-      document.body.style.overflow = '';
-    }
-  };
-</script>
 
 <!-- CHANGELOG MODAL -->
 <div
@@ -253,7 +185,7 @@
         <li><strong>New Voice Control Module:</strong> Say "detect" or "save" to control the app hands-free.</li>
         <li><strong>Upgraded WASM Engine:</strong> Edge detection is now 40% faster on mobile devices.</li>
         <li><strong>Transcribe Tool:</strong> Added our new Whisper AI-powered audio transcription utility.</li>
-        <li><strong>Games Arcade:</strong> Play classic games in the sidebar while you batch process.</li>
+
       </ul>
       <hr style="margin: 24px 0; border: none; border-top: 1px solid var(--border);" />
       <h3>🌟 Spring 2026 Update</h3>
