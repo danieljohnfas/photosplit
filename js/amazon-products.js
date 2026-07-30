@@ -7,7 +7,8 @@ const AMAZON_PRODUCTS = [
     title: 'Epson FastFoto FF-680W',
     desc: 'The world\'s fastest personal photo scanner. Scan thousands of photos.',
     badge: 'Top Pick',
-    btnClass: 'btn-primary'
+    btnClass: 'btn-primary',
+    img: 'https://m.media-amazon.com/images/I/71HoX18AByL.jpg'
   },
   // Product 2 (Top Banner 2)
   {
@@ -15,7 +16,8 @@ const AMAZON_PRODUCTS = [
     title: 'SanDisk 2TB Portable SSD',
     desc: 'Backup your precious digitized memories securely and fast.',
     badge: 'Storage',
-    btnClass: 'btn-secondary'
+    btnClass: 'btn-secondary',
+    img: 'https://m.media-amazon.com/images/I/41OUh0ZU1NL.jpg'
   },
   // Product 3 (Top Banner 3)
   {
@@ -23,7 +25,8 @@ const AMAZON_PRODUCTS = [
     title: 'Kodak Slide N Scan',
     desc: 'Digitize your old film negatives and slides in high resolution.',
     badge: 'Negatives',
-    btnClass: 'btn-secondary'
+    btnClass: 'btn-secondary',
+    img: 'https://m.media-amazon.com/images/I/11RNLXhvOXL.jpg'
   },
   // Product 4 (Sidebar 1)
   {
@@ -31,7 +34,8 @@ const AMAZON_PRODUCTS = [
     title: 'Pioneer Photo Albums',
     desc: 'Store your physical originals safely in archival quality sleeves.',
     badge: 'Archival',
-    btnClass: 'btn-secondary'
+    btnClass: 'btn-secondary',
+    img: 'https://images.unsplash.com/photo-1518133527749-e58f01c70e0b?q=80&w=400&auto=format&fit=crop'
   },
   // Product 5 (Sidebar 2)
   {
@@ -39,7 +43,8 @@ const AMAZON_PRODUCTS = [
     title: 'SanDisk 128GB SDXC',
     desc: 'Ultra high-speed storage card for modern mirrorless cameras.',
     badge: 'Essential',
-    btnClass: 'btn-secondary'
+    btnClass: 'btn-secondary',
+    img: 'https://m.media-amazon.com/images/I/71BN8DugeVL.jpg'
   },
   // Product 6 (Bottom Banner 1)
   {
@@ -47,7 +52,8 @@ const AMAZON_PRODUCTS = [
     title: 'Lens Cleaning Kit',
     desc: 'Keep your scanner glass spotless for the clearest digitized photos.',
     badge: 'Cleaning',
-    btnClass: 'btn-secondary'
+    btnClass: 'btn-secondary',
+    img: 'https://images.unsplash.com/photo-1582216091047-975a5eefcba2?q=80&w=400&auto=format&fit=crop'
   },
   // Product 7 (Bottom Banner 2)
   {
@@ -55,7 +61,8 @@ const AMAZON_PRODUCTS = [
     title: 'Aura Digital Frame',
     desc: 'Display your freshly digitized photos on a beautiful smart frame.',
     badge: 'Display',
-    btnClass: 'btn-primary'
+    btnClass: 'btn-primary',
+    img: 'https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=400&auto=format&fit=crop'
   }
 ];
 
@@ -64,8 +71,10 @@ function getAmazonLink(asin) {
 }
 
 function getAmazonImageUrl(asin) {
-  // Use the standard Amazon product image URL which is not blocked by ad blockers
-  return `https://images-na.ssl-images-amazon.com/images/P/${asin}.01._SCLZZZZZZZ_.jpg`;
+  // We now define images directly in the AMAZON_PRODUCTS array for maximum reliability,
+  // bypassing ad blockers and handling legacy ASINs that don't have .01 variants.
+  const product = AMAZON_PRODUCTS.find(p => p.asin === asin);
+  return product && product.img ? product.img : `https://images-na.ssl-images-amazon.com/images/P/${asin}.01._SCLZZZZZZZ_.jpg`;
 }
 
 function getTrackingPixel(asin) {
