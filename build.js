@@ -70,7 +70,7 @@ files.forEach((file) => {
 
   // Footer injection (Game strip goes ABOVE footer)
   let footerInjection = gameStripTpl + "\n" + adBottomTpl + "\n" + footerTpl;
-  content = content.replace(/<footer class="site-footer">[\s\S]*?<\/footer>/i, footerInjection);
+  content = content.replace(/<footer class="site-footer"[^>]*>[\s\S]*?<\/footer>/i, footerInjection);
 
   // Sidebar injection
   if (!isNoSidebar) {
@@ -169,7 +169,7 @@ if (fs.existsSync(BLOG_DIR)) {
 
     // Blog Footer: Game strip ABOVE footer!
     let footerInjection = gameStripTpl + "\n" + adBottomTpl + "\n" + footerTpl;
-    content = content.replace(/<footer class="site-footer">[\s\S]*?<\/footer>/i, footerInjection);
+    content = content.replace(/<footer class="site-footer"[^>]*>[\s\S]*?<\/footer>/i, footerInjection);
     
     // Blog gets sidebar
     content = content.replace(/<aside class="page-sidebar">[\s\S]*?<\/aside>/i, `<aside class="page-sidebar">\n${adSidebarTpl}\n</aside>`);
