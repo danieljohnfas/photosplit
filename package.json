@@ -20,5 +20,11 @@
   "homepage": "https://github.com/danieljohnfas/photosplit#readme",
   "devDependencies": {
     "prettier": "^3.8.3"
+  },
+  "dependencies": {
+    "puppeteer": "^22.0.0"
+  },
+  "directories": {
+    "test": "tests"
   }
 }
