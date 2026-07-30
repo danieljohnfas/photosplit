@@ -65,7 +65,7 @@ function getAmazonLink(asin) {
 
 function getAmazonImageUrl(asin) {
   // Use the standard Amazon product image URL which is not blocked by ad blockers
-  return `https://images-na.ssl-images-amazon.com/images/P/${asin}.01.LZZZZZZZ.jpg`;
+  return `https://images-na.ssl-images-amazon.com/images/P/${asin}.01._SCLZZZZZZZ_.jpg`;
 }
 
 function getTrackingPixel(asin) {
@@ -94,8 +94,8 @@ function renderSidebarWidgets() {
     html += `
       <div style="margin-bottom: 24px; position: relative;">
         <div style="position: absolute; top: -10px; left: 16px; background: ${badgeBg}; color: ${badgeColor}; border: ${badgeBorder}; padding: 4px 12px; border-radius: 99px; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; z-index: 10; box-shadow: ${badgeShadow};">${product.badge}</div>
-        <div class="glass-ad-panel" style="padding: 24px 16px 16px; border: 1px solid var(--border-strong); border-radius: var(--radius-lg); text-align: center; background: var(--bg-surface); box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-          <a href="${link}" target="_blank" rel="nofollow noopener" style="display:block; text-decoration:none; color:inherit; outline:none;" onmouseover="this.parentElement.style.transform='translateY(-4px)'; this.parentElement.style.boxShadow='var(--shadow-md)';" onmouseout="this.parentElement.style.transform='translateY(0)'; this.parentElement.style.boxShadow='var(--shadow-sm)';">
+        <div class="glass-ad-panel" style="padding: 24px 16px 16px; border: 1px solid var(--border-strong); border-radius: var(--radius-lg); text-align: center; background: var(--bg-surface); box-shadow: var(--shadow-sm);">
+          <a href="${link}" target="_blank" rel="nofollow noopener" style="display:block; text-decoration:none; color:inherit; outline:none;">
             <div style="background: white; border-radius: var(--radius-md); padding: 12px; margin-bottom: 16px; display:flex; justify-content:center; align-items:center; min-height:160px;">
               <img src="${img}" alt="${product.title}" style="width:100%; object-fit: contain; max-height: 140px; border: none;">
             </div>
@@ -132,7 +132,7 @@ function renderTopBanner() {
     const pixel = getTrackingPixel(product.asin);
 
     html += `
-      <a href="${link}" target="_blank" rel="nofollow noopener" style="flex: 1; min-width: 280px; display:flex; align-items:center; text-decoration:none; color:inherit; background:var(--bg-surface); padding: 16px; border-radius: var(--radius-lg); border: 1px solid var(--border-strong); gap: 16px; box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease; outline:none; position:relative;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)';">
+      <a href="${link}" target="_blank" rel="nofollow noopener" style="flex: 1; min-width: 280px; display:flex; align-items:center; text-decoration:none; color:inherit; background:var(--bg-surface); padding: 16px; border-radius: var(--radius-lg); border: 1px solid var(--border-strong); gap: 16px; box-shadow: var(--shadow-sm); outline:none; position:relative;">
         <div style="background: white; border-radius: var(--radius-sm); padding: 8px; flex-shrink: 0; width: 90px; height: 90px; display:flex; justify-content:center; align-items:center;">
           <img src="${img}" alt="${product.title}" style="max-height: 100%; max-width: 100%; object-fit: contain; border: none;">
         </div>
@@ -170,7 +170,7 @@ function renderBottomBanner() {
     const pixel = getTrackingPixel(product.asin);
 
     html += `
-      <a href="${link}" target="_blank" rel="nofollow noopener" style="display:flex; align-items:center; text-decoration:none; color:inherit; gap: 16px; background: var(--bg-surface-2); padding: 8px 16px; border-radius: 99px; border: 1px solid var(--border); transition: border-color 0.2s ease, transform 0.2s ease;" onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='scale(1.02)';" onmouseout="this.style.borderColor='var(--border)'; this.style.transform='scale(1)';">
+      <a href="${link}" target="_blank" rel="nofollow noopener" style="display:flex; align-items:center; text-decoration:none; color:inherit; gap: 16px; background: var(--bg-surface-2); padding: 8px 16px; border-radius: 99px; border: 1px solid var(--border);">
         <div style="background: white; border-radius: 50%; padding: 4px; width: 48px; height: 48px; display:flex; justify-content:center; align-items:center;">
           <img src="${img}" alt="${product.title}" style="height:36px; max-width: 36px; object-fit: contain; border: none;">
         </div>
@@ -185,7 +185,7 @@ function renderBottomBanner() {
   });
 
   html += `
-      <button onclick="document.getElementById('sticky-bottom-banner').style.display='none'; document.body.style.paddingBottom='0';" style="position:absolute; right: 24px; top: 12px; background:none; border:none; color:var(--text-muted); cursor:pointer; font-size:1.5rem; transition: color 0.2s ease;" onmouseover="this.style.color='var(--accent)';" onmouseout="this.style.color='var(--text-muted)';">&times;</button>
+      <button onclick="document.getElementById('sticky-bottom-banner').style.display='none'; document.body.style.paddingBottom='0';" style="position:absolute; right: 24px; top: 12px; background:none; border:none; color:var(--text-muted); cursor:pointer; font-size:1.5rem;">&times;</button>
       <style>
           body { padding-bottom: 90px !important; }
       </style>
