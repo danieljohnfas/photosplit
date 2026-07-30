@@ -707,13 +707,13 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 
 .btn:active {
-  transform: scale(0.94);
+  transform: scale(0.97);
 }
 
 .btn-primary {
   background: var(--accent-grad);
   color: #fff;
-  box-shadow: 0 4px 12px var(--accent-glow);
+  box-shadow: 0 4px 14px var(--accent-glow);
   position: relative;
   overflow: hidden;
 }
@@ -721,13 +721,13 @@ input[type="range"]::-webkit-slider-thumb:active {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(rgba(255, 255, 255, 0.3), transparent);
   opacity: 0;
   transition: opacity var(--dur-fast);
 }
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px var(--accent-glow);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px var(--accent-glow);
 }
 .btn-primary:hover::after {
   opacity: 1;
