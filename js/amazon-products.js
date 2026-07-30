@@ -42,14 +42,6 @@ let AMAZON_PRODUCTS = [
     img: "https://m.media-amazon.com/images/I/11Z0Z4SK3ML.jpg"
   },
   {
-    asin: "https://partner.pcloud.com/affiliate/create",
-    title: "pCloud Affiliate",
-    desc: "Join the pCloud affiliate program and earn recurring commissions.",
-    badge: "Affiliate",
-    btnClass: "btn-primary",
-    img: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=400&auto=format&fit=crop"
-  },
-  {
     asin: "https://www.pcloud.com/",
     title: "pCloud Storage",
     desc: "Secure European cloud storage. The safest place for your digitized memories.",
