@@ -68,9 +68,9 @@
 /* ── TikTok Noir — Dark Mode Tokens ───────────────────────────────────── */
 [data-theme="dark"] {
   --bg-base: #010101;
-  --bg-surface: #0d0d0d;
+  --bg-surface: #09090b;
   --bg-surface-2: #1a1a1a;
-  --bg-glass: rgba(13, 13, 13, 0.9);
+  --bg-glass: rgba(13, 13, 13, 0.55);
   --bg-glass-border: rgba(254, 44, 85, 0.18);
   --border: rgba(254, 44, 85, 0.12);
   --border-strong: rgba(254, 44, 85, 0.3);
@@ -675,7 +675,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 .btn-primary {
   background: var(--accent-grad);
   color: #fff;
-  box-shadow: 0 4px 14px var(--accent-glow);
+  box-shadow: 0 0 24px rgba(254, 44, 85, 0.5), 0 4px 12px rgba(254, 44, 85, 0.3);
   position: relative;
   overflow: hidden;
 }
