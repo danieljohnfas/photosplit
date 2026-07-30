@@ -1,12 +1,79 @@
 const fs = require('fs');
-const puppeteer = require('puppeteer');
 
 const JS_FILE = 'js/amazon-products.js';
+const RAINFOREST_API_KEY = '27B62A167713461DBA9D2C7423CE8BF8';
+
+const SEARCH_TERMS = [
+  'photo scanner',
+  'external hard drive 2tb',
+  'sd card 128gb',
+  'digital photo frame',
+  'film scanner',
+  'photo album',
+  'portable ssd',
+  'usb flash drive',
+  'camera cleaning kit'
+];
 
 async function run() {
-  console.log('Starting product update job...');
+  console.log('Starting daily product rotation job...');
 
-  // 1. Read existing file
+  const term = SEARCH_TERMS[Math.floor(Math.random() * SEARCH_TERMS.length)];
+  console.log(`Selected search term: "${term}"`);
+
+  const rfUrl = `https://api.rainforestapi.com/request?api_key=${RAINFOREST_API_KEY}&type=search&amazon_domain=amazon.com&search_term=${encodeURIComponent(term)}`;
+  
+  let data;
+  try {
+    const response = await fetch(rfUrl);
+    data = await response.json();
+  } catch (error) {
+    console.error('❌ Error fetching from Rainforest API:', error);
+    process.exit(1);
+  }
+
+  if (!data || !data.search_results || data.search_results.length === 0) {
+    console.error('❌ No search results found or API error.');
+    process.exit(1);
+  }
+
+  const results = data.search_results;
+  console.log(`Fetched ${results.length} products from Rainforest API.`);
+
+  // Create the new AMAZON_PRODUCTS array (up to 50 products)
+  const newProducts = [];
+  for (let i = 0; i < Math.min(results.length, 50); i++) {
+    const p = results[i];
+    if (!p.asin || !p.title || !p.image) continue;
+    
+    // Assign random badges to some
+    const badges = ['Top Pick', 'Storage', 'Essential', 'Pro Choice', 'Deal', 'Popular'];
+    const badge = badges[Math.floor(Math.random() * badges.length)];
+    const btnClass = Math.random() > 0.5 ? 'btn-primary' : 'btn-secondary';
+    
+    // Default description based on price and rating
+    const price = p.price ? p.price.raw : '';
+    const rating = p.rating ? `${p.rating} ⭐` : '';
+    const desc = `${rating} ${price}. Get the best gear for your photography workflow.`.trim();
+
+    newProducts.push({
+      asin: p.asin,
+      title: p.title.length > 50 ? p.title.substring(0, 47) + '...' : p.title,
+      desc: desc,
+      badge: badge,
+      btnClass: btnClass,
+      img: p.image
+    });
+  }
+
+  if (newProducts.length < 10) {
+    console.error('❌ Not enough valid products found.');
+    process.exit(1);
+  }
+
+  console.log(`Generated ${newProducts.length} formatted products.`);
+
+  // Read existing file
   const content = fs.readFileSync(JS_FILE, 'utf8');
   
   // Extract the AMAZON_PRODUCTS array using regex
@@ -16,117 +83,13 @@ async function run() {
     process.exit(1);
   }
 
-  // Parse the array
-  let products;
-  try {
-    products = eval(match[1]);
-  } catch (e) {
-    console.error('Error parsing products:', e);
-    process.exit(1);
-  }
+  // Rewrite the file
+  const newArrayString = JSON.stringify(newProducts, null, 2)
+    .replace(/"([^"]+)":/g, '$1:'); // Remove quotes from keys
 
-  // 2. Setup Puppeteer
-  const browser = await puppeteer.launch({
-    headless: "new",
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
-  });
-  
-  const page = await browser.newPage();
-  await page.setViewport({ width: 1280, height: 800 });
-  await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36');
-
-  let updatedCount = 0;
-  let deadCount = 0;
-  let activeProducts = [];
-
-  const RAINFOREST_API_KEY = '27B62A167713461DBA9D2C7423CE8BF8';
-
-  // 3. Process each product
-  for (const p of products) {
-    const isAmazon = !p.asin.startsWith('http');
-    
-    if (isAmazon) {
-      console.log(`\nChecking Amazon API for: ${p.title}`);
-      try {
-        const rfUrl = `https://api.rainforestapi.com/request?api_key=${RAINFOREST_API_KEY}&type=product&amazon_domain=amazon.com&asin=${p.asin}`;
-        const response = await fetch(rfUrl);
-        const data = await response.json();
-        
-        if (data && data.product && data.product.main_image && data.product.main_image.link) {
-          const imageUrl = data.product.main_image.link;
-          console.log(`   Found new Amazon image: ${imageUrl}`);
-          if (p.img !== imageUrl) {
-            p.img = imageUrl;
-            updatedCount++;
-          }
-        } else {
-          console.log(`   No new image found from API, keeping existing.`);
-        }
-        activeProducts.push(p);
-      } catch (error) {
-        console.log(`❌ Error fetching from Rainforest API: ${error.message}`);
-        activeProducts.push(p);
-      }
-    } else {
-      const url = p.asin;
-      console.log(`\nChecking external link: ${p.title} (${url})`);
-      
-      try {
-        const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
-        const status = response ? response.status() : null;
-
-        if (status === 404 || status === 410) {
-          console.log(`❌ DEAD LINK (${status}). Removing product.`);
-          deadCount++;
-          continue; 
-        }
-        
-        console.log(`✅ Alive (${status}). Extracting image...`);
-        
-        const imageUrl = await page.evaluate(() => {
-          const ogImage = document.querySelector('meta[property="og:image"]');
-          if (ogImage) return ogImage.content;
-          return null; 
-        });
-
-        if (imageUrl && imageUrl.startsWith('http')) {
-          console.log(`   Found new image: ${imageUrl}`);
-          if (p.img !== imageUrl) {
-            p.img = imageUrl;
-            updatedCount++;
-          }
-        } else {
-          console.log(`   No new image found, keeping existing.`);
-        }
-
-        activeProducts.push(p);
-
-      } catch (error) {
-        console.log(`❌ Error visiting ${url}: ${error.message}`);
-        console.log('   Keeping product but skipping update.');
-        activeProducts.push(p);
-      }
-    }
-    
-    // Add a small delay to avoid rate limiting
-    await new Promise(r => setTimeout(r, 2000));
-  }
-
-  await browser.close();
-
-  console.log(`\nJob complete. Active: ${activeProducts.length}, Dead removed: ${deadCount}, Images updated: ${updatedCount}`);
-
-  // 4. Rewrite the file
-  if (deadCount > 0 || updatedCount > 0) {
-    const newArrayString = JSON.stringify(activeProducts, null, 2)
-      .replace(/"([^"]+)":/g, '$1:'); // Remove quotes from keys
-
-    const newContent = content.replace(match[1], newArrayString);
-    fs.writeFileSync(JS_FILE, newContent, 'utf8');
-    console.log(`Updated ${JS_FILE}.`);
-  } else {
-    console.log('No changes needed.');
-  }
+  const newContent = content.replace(match[1], newArrayString);
+  fs.writeFileSync(JS_FILE, newContent, 'utf8');
+  console.log(`Successfully updated ${JS_FILE} with 50 new products!`);
 }
 
 run();
