@@ -39,64 +39,73 @@ async function run() {
   let deadCount = 0;
   let activeProducts = [];
 
+  const RAINFOREST_API_KEY = '27B62A167713461DBA9D2C7423CE8BF8';
+
   // 3. Process each product
   for (const p of products) {
     const isAmazon = !p.asin.startsWith('http');
-    const url = isAmazon ? `https://www.amazon.com/dp/${p.asin}/` : p.asin;
     
-    console.log(`\nChecking: ${p.title} (${url})`);
-    
-    try {
-      const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
-      const status = response ? response.status() : null;
-
-      // Handle common Amazon bot blocking (503 Service Unavailable) or normal 404s
-      if (status === 404 || status === 410) {
-        console.log(`❌ DEAD LINK (${status}). Removing product.`);
-        deadCount++;
-        continue; // Skip adding to activeProducts
-      }
-      
-      if (status === 503 && isAmazon) {
-        console.log(`⚠️ Amazon blocked the request (503). Keeping product for now without updating image.`);
+    if (isAmazon) {
+      console.log(`\nChecking Amazon API for: ${p.title}`);
+      try {
+        const rfUrl = `https://api.rainforestapi.com/request?api_key=${RAINFOREST_API_KEY}&type=product&amazon_domain=amazon.com&asin=${p.asin}`;
+        const response = await fetch(rfUrl);
+        const data = await response.json();
+        
+        if (data && data.product && data.product.main_image && data.product.main_image.link) {
+          const imageUrl = data.product.main_image.link;
+          console.log(`   Found new Amazon image: ${imageUrl}`);
+          if (p.img !== imageUrl) {
+            p.img = imageUrl;
+            updatedCount++;
+          }
+        } else {
+          console.log(`   No new image found from API, keeping existing.`);
+        }
         activeProducts.push(p);
-        continue;
+      } catch (error) {
+        console.log(`❌ Error fetching from Rainforest API: ${error.message}`);
+        activeProducts.push(p);
       }
-
-      console.log(`✅ Alive (${status}). Extracting image...`);
+    } else {
+      const url = p.asin;
+      console.log(`\nChecking external link: ${p.title} (${url})`);
       
-      let imageUrl = null;
-      if (isAmazon) {
-        // Amazon usually uses #landingImage
-        imageUrl = await page.evaluate(() => {
-          const img = document.querySelector('#landingImage');
-          return img ? img.src : null;
-        });
-      } else {
-        // Fallback for pCloud/external sites: Check OpenGraph tags or main images
-        imageUrl = await page.evaluate(() => {
+      try {
+        const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+        const status = response ? response.status() : null;
+
+        if (status === 404 || status === 410) {
+          console.log(`❌ DEAD LINK (${status}). Removing product.`);
+          deadCount++;
+          continue; 
+        }
+        
+        console.log(`✅ Alive (${status}). Extracting image...`);
+        
+        const imageUrl = await page.evaluate(() => {
           const ogImage = document.querySelector('meta[property="og:image"]');
           if (ogImage) return ogImage.content;
-          return null; // fallback to original if not found
+          return null; 
         });
-      }
 
-      if (imageUrl && imageUrl.startsWith('http')) {
-        console.log(`   Found new image: ${imageUrl}`);
-        if (p.img !== imageUrl) {
-          p.img = imageUrl;
-          updatedCount++;
+        if (imageUrl && imageUrl.startsWith('http')) {
+          console.log(`   Found new image: ${imageUrl}`);
+          if (p.img !== imageUrl) {
+            p.img = imageUrl;
+            updatedCount++;
+          }
+        } else {
+          console.log(`   No new image found, keeping existing.`);
         }
-      } else {
-        console.log(`   No new image found, keeping existing.`);
+
+        activeProducts.push(p);
+
+      } catch (error) {
+        console.log(`❌ Error visiting ${url}: ${error.message}`);
+        console.log('   Keeping product but skipping update.');
+        activeProducts.push(p);
       }
-
-      activeProducts.push(p);
-
-    } catch (error) {
-      console.log(`❌ Error visiting ${url}: ${error.message}`);
-      console.log('   Keeping product but skipping update.');
-      activeProducts.push(p);
     }
     
     // Add a small delay to avoid rate limiting
