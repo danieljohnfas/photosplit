@@ -30,20 +30,7 @@ let AMAZON_PRODUCTS = [
   { asin: 'https://www.pcloud.com/business-registration.html', title: 'pCloud Business', desc: 'Professional cloud storage for photography studios and creative teams.', badge: 'Business', btnClass: 'btn-secondary', img: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=400&auto=format&fit=crop' },
   { asin: 'https://www.pcloud.com/encrypted-cloud-storage.html', title: 'pCloud Crypto', desc: 'Military-grade client-side encryption to keep your private photos truly private.', badge: 'Security', btnClass: 'btn-secondary', img: 'https://images.unsplash.com/photo-1510511459019-5d01ab0b69bc?q=80&w=400&auto=format&fit=crop' },
   { asin: 'https://www.pcloud.com/cloud-storage-pricing-plans.html', title: 'pCloud Pricing', desc: 'Flexible storage plans for every need. Never run out of space again.', badge: 'Plans', btnClass: 'btn-secondary', img: 'https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=400&auto=format&fit=crop' },
-  { asin: 'https://www.pcloud.com/lifetime', title: 'pCloud Lifetime', desc: 'Pay once, keep your photos secure forever. The ultimate digital photo archive.', badge: 'Lifetime', btnClass: 'btn-primary', img: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=400&auto=format&fit=crop' },
-  
-  // Dev Tools
-  { asin: 'https://github.com/coderabbitai/coderabbit', title: 'CodeRabbit', desc: 'AI code review + security tool that catches bugs and suggests fixes.', badge: 'Dev Tool', btnClass: 'btn-primary', img: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=400&auto=format&fit=crop' },
-  { asin: 'https://21st.dev', title: '21st.dev', desc: 'A library of modern React components and UI designs to avoid AI slop.', badge: 'Design', btnClass: 'btn-secondary', img: 'https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?q=80&w=400&auto=format&fit=crop' },
-  { asin: 'https://github.com/joshua-ui/ui-ux-pro-max', title: 'UI UX Pro Max', desc: 'MCP server that helps AI generate better UI/UX with modern frameworks.', badge: 'AI Tool', btnClass: 'btn-secondary', img: 'https://images.unsplash.com/photo-1618761714954-0b8cd0026356?q=80&w=400&auto=format&fit=crop' },
-
-  // Framer Templates
-  { asin: 'https://framer.com/templates/nexflow', title: 'Nexflow Framer Template', desc: 'Clean SaaS/product landing page with sections for features, pricing, testimonials.', badge: 'Template', btnClass: 'btn-primary', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=400&auto=format&fit=crop' },
-  { asin: 'https://framer.com/templates/fintechx', title: 'FintechX Framer Template', desc: 'Fintech-focused template with dashboard previews and trust badges.', badge: 'Template', btnClass: 'btn-secondary', img: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=400&auto=format&fit=crop' },
-  { asin: 'https://framer.com/templates/verseo', title: 'Verseo Framer Template', desc: 'Minimal, modern agency/portfolio style template for creatives.', badge: 'Template', btnClass: 'btn-secondary', img: 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=400&auto=format&fit=crop' },
-  { asin: 'https://framer.com/templates/galilee', title: 'Galilee Framer Template', desc: 'Bold startup template with strong hero section and gradients.', badge: 'Template', btnClass: 'btn-primary', img: 'https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=400&auto=format&fit=crop' },
-  { asin: 'https://framer.com/templates/dreammotion', title: 'DreamMotion Framer Template', desc: 'Motion-heavy template with animations and scroll effects.', badge: 'Template', btnClass: 'btn-secondary', img: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=400&auto=format&fit=crop' },
-  { asin: 'https://framer.com/templates/cloudcraft', title: 'cloud.craft Framer Template', desc: 'Cloud/SaaS template with a softer, more minimal aesthetic.', badge: 'Template', btnClass: 'btn-secondary', img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=400&auto=format&fit=crop' }
+  { asin: 'https://www.pcloud.com/lifetime', title: 'pCloud Lifetime', desc: 'Pay once, keep your photos secure forever. The ultimate digital photo archive.', badge: 'Lifetime', btnClass: 'btn-primary', img: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=400&auto=format&fit=crop' }
 ];
 
 // Shuffle the array immediately so each page load gets a random selection
@@ -180,5 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
   renderTopBanner();
   renderBottomBanner();
 });
+
 
 
