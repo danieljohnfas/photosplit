@@ -1,4 +1,4 @@
-const CACHE_NAME = 'photosplit-v1';
+const CACHE_NAME = 'photosplit-v2';
 const ASSETS_TO_CACHE = [
   '/',
   '/app',
