@@ -66,6 +66,34 @@ async function run() {
     });
   }
 
+  // Inject pCloud products
+  const pCloudProducts = [
+    {
+      asin: "https://www.pcloud.com/",
+      title: "pCloud - Secure Cloud Storage",
+      desc: "Swiss data protection. Store, share and access all your files.",
+      badge: "Storage",
+      btnClass: "btn-primary",
+      img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/home.png"
+    },
+    {
+      asin: "https://www.pcloud.com/family",
+      title: "pCloud Family Plan",
+      desc: "Share up to 2TB with up to 5 family members. Lifetime access.",
+      badge: "Family",
+      btnClass: "btn-secondary",
+      img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/family.png"
+    },
+    {
+      asin: "https://www.pcloud.com/crypto",
+      title: "pCloud Crypto",
+      desc: "Unbreakable client-side encryption for your most sensitive files.",
+      badge: "Security",
+      btnClass: "btn-secondary",
+      img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
+    }
+  ];
+  newProducts.unshift(...pCloudProducts);
   if (newProducts.length < 10) {
     console.error('❌ Not enough valid products found.');
     process.exit(1);

@@ -1,6 +1,31 @@
 const AMAZON_TAG = 'photoid03-20';
 
 let AMAZON_PRODUCTS = [
+
+  {
+    asin: "https://www.pcloud.com/",
+    title: "pCloud - Secure Cloud Storage",
+    desc: "Swiss data protection. Store, share and access all your files.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/home.png"
+  },
+  {
+    asin: "https://www.pcloud.com/family",
+    title: "pCloud Family Plan",
+    desc: "Share up to 2TB with up to 5 family members. Lifetime access.",
+    badge: "Family",
+    btnClass: "btn-secondary",
+    img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/family.png"
+  },
+  {
+    asin: "https://www.pcloud.com/crypto",
+    title: "pCloud Crypto",
+    desc: "Unbreakable client-side encryption for your most sensitive files.",
+    badge: "Security",
+    btnClass: "btn-secondary",
+    img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
+  },
   {
     asin: "B01N7ENHO6",
     title: "Skylight Frame – WiFi Digital Picture Frame Cus...",
@@ -251,8 +276,36 @@ let AMAZON_PRODUCTS = [
   }
 ];
 
-// Shuffle the array immediately so each page load gets a random selection
-AMAZON_PRODUCTS = AMAZON_PRODUCTS.sort(() => 0.5 - Math.random());
+// Enhanced contextual shuffle algorithm
+function getContextualProducts() {
+  let products = [...AMAZON_PRODUCTS];
+  
+  // URL Context matching
+  const url = window.location.href.toLowerCase();
+  let boostKeyword = '';
+  
+  if (url.includes('convert')) boostKeyword = 'scanner';
+  else if (url.includes('crop') || url.includes('resize')) boostKeyword = 'frame';
+  else if (url.includes('blog')) boostKeyword = 'pcloud';
+  
+  // Shuffle randomly first
+  products = products.sort(() => 0.5 - Math.random());
+  
+  // Boost matching products to the front
+  if (boostKeyword) {
+    products.sort((a, b) => {
+      const aMatch = (a.title + ' ' + a.desc).toLowerCase().includes(boostKeyword);
+      const bMatch = (b.title + ' ' + b.desc).toLowerCase().includes(boostKeyword);
+      if (aMatch && !bMatch) return -1;
+      if (!aMatch && bMatch) return 1;
+      return 0;
+    });
+  }
+  
+  return products;
+}
+
+AMAZON_PRODUCTS = getContextualProducts();
 
 function getAmazonLink(asin) {
   if (asin.startsWith('http')) return asin;
