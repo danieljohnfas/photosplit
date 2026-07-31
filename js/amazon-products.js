@@ -333,7 +333,7 @@ function renderSidebarWidgets() {
   const container = document.getElementById('amazon-widget-sidebar');
   if (!container) return;
 
-  const products = AMAZON_PRODUCTS.slice(4, 7); // 3 products
+  const products = AMAZON_PRODUCTS.slice(4, 5); // 1 product
   let html = '<div class="ad-sidebar-sticky">';
   
   products.forEach(product => {
@@ -484,10 +484,27 @@ function renderGridWidget() {
   container.innerHTML = html;
 }
 
+function setActiveNavLink() {
+  const currentPath = window.location.pathname;
+  const navLinks = document.querySelectorAll('#site-header .main-nav a');
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPath || (currentPath === '/' && href === '/') || (href !== '/' && currentPath.startsWith(href))) {
+      link.classList.add('active');
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  setActiveNavLink();
   renderSidebarWidgets();
   renderTopBanner();
-  renderBottomBanner();
+  
+  // Delay sticky bottom banner by 10 seconds to avoid popup friction on load
+  setTimeout(() => {
+    renderBottomBanner();
+  }, 10000);
+  
   renderInlineBanner();
   renderGridWidget();
 });
