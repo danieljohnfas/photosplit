@@ -245,13 +245,14 @@ function detectPhotosOpenCV(imageData, opts = {}) {
   cv.Canny(blurred, canny, lowerThresh, upperThresh, 3, false);
 
   // Pass B: Adaptive Threshold (captures faint white-bordered photos by looking for regional density)
+  const threshMode = bgThreshold < 128 ? cv.THRESH_BINARY : cv.THRESH_BINARY_INV;
   const thresh = new cv.Mat();
   cv.adaptiveThreshold(
     gray,
     thresh,
     255,
     cv.ADAPTIVE_THRESH_GAUSSIAN_C,
-    cv.THRESH_BINARY_INV,
+    threshMode,
     71,
     6,
   );
