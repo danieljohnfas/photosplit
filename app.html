@@ -172,7 +172,121 @@
     />
     PhotoSplit Studio
   </a>
-  <div class="header-spacer"></div>
+  
+            <div
+              class="ad-sidebar-sticky"
+              style="margin-top: 24px; padding: 0 16px 16px"
+            >
+              <span class="ad-sidebar-label">Advertisement</span>
+              <div
+                id="ad-sidebar"
+                style="
+                  margin: 0;
+                  min-height: 250px;
+                  background: var(--bg-surface-2);
+                  border: 1px dashed var(--border-strong);
+                  border-radius: var(--radius-md);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+
+</div>
+            </div>
+          </section>
+        </aside>
+        <div id="sidebar-overlay"></div>
+        <!-- CANVAS AREA -->
+        <section id="canvas-area">
+          <div id="canvas-toolbar">
+            <div class="toolbar-group">
+              <button class="btn btn-secondary" onclick="rotateScan(-90)">
+                ↺ Rotate CCW
+              </button>
+              <button class="btn btn-secondary" onclick="rotateScan(90)">
+                ↻ Rotate CW
+              </button>
+            </div>
+            <div class="toolbar-sep"></div>
+            <div class="toolbar-group">
+              <button class="btn btn-primary" id="btn-detect">
+                🔍 Re-detect
+              </button>
+              <button class="btn btn-secondary" id="btn-detect-all">
+                ⚡ Detect All
+              </button>
+            </div>
+            <div class="toolbar-sep"></div>
+            <div class="toolbar-group">
+              <button class="btn btn-secondary" id="btn-add-crop">
+                ✏️ Add Crop
+              </button>
+            </div>
+            <div class="toolbar-sep"></div>
+            <div class="toolbar-group">
+              <button
+                class="btn btn-secondary"
+                disabled=""
+                id="btn-undo"
+                title="Undo (Ctrl+Z)"
+              >
+                Undo
+              </button>
+              <input
+                class="undo-scrubber"
+                id="undo-scrubber"
+                max="0"
+                min="0"
+                title="Visual Undo Timeline"
+                type="range"
+                value="0"
+              />
+              <button
+                class="btn btn-secondary"
+                disabled=""
+                id="btn-redo"
+                title="Redo (Ctrl+Y)"
+              >
+                Redo
+              </button>
+            </div>
+            <div class="toolbar-spacer"></div>
+            <div class="toolbar-group">
+              <button class="btn btn-success" id="btn-save-all">
+                ⬇️ Save All
+              </button>
+              <button class="btn btn-zip" id="btn-save-zip">🗜️ ZIP</button>
+              <button class="btn btn-pdf" id="btn-save-pdf">📄 PDF</button>
+            </div>
+          </div>
+          <div id="canvas-scroll">
+            <div id="empty-state">
+              <div class="empty-icon">🖼️</div>
+              <h2>No scan loaded</h2>
+              <p>Upload a scanned image on the left to get started.</p>
+              <button
+                class="btn btn-primary"
+                onclick="document.getElementById('file-input').click()"
+              >
+                📂 Upload Scans
+              </button>
+            </div>
+            <div class="canvas-wrapper-hidden" id="canvas-wrapper">
+              <canvas id="main-canvas"></canvas>
+              <svg class="scissor-cursor" id="overlay-svg"></svg>
+              <div id="draw-overlay"></div>
+              <div id="draw-preview-rect"></div>
+            </div>
+          </div>
+      <div id="amazon-widget-inline"></div>
+          <div id="progress-container">
+            <div id="progress-bar-track">
+              <div id="progress-bar-fill"></div>
+            </div>
+            <div id="progress-label">Processing…</div>
+          </div>
+          <div class="header-spacer"></div>
   <div class="privacy-badge">
     <svg
       fill="none"
@@ -455,119 +569,6 @@
                 >☕ Buy me a coffee</a
               >
             </div>
-            <div
-              class="ad-sidebar-sticky"
-              style="margin-top: 24px; padding: 0 16px 16px"
-            >
-              <span class="ad-sidebar-label">Advertisement</span>
-              <div
-                id="ad-sidebar"
-                style="
-                  margin: 0;
-                  min-height: 250px;
-                  background: var(--bg-surface-2);
-                  border: 1px dashed var(--border-strong);
-                  border-radius: var(--radius-md);
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                "
-              >
-
-</div>
-            </div>
-          </section>
-        </aside>
-        <div id="sidebar-overlay"></div>
-        <!-- CANVAS AREA -->
-        <section id="canvas-area">
-          <div id="canvas-toolbar">
-            <div class="toolbar-group">
-              <button class="btn btn-secondary" onclick="rotateScan(-90)">
-                ↺ Rotate CCW
-              </button>
-              <button class="btn btn-secondary" onclick="rotateScan(90)">
-                ↻ Rotate CW
-              </button>
-            </div>
-            <div class="toolbar-sep"></div>
-            <div class="toolbar-group">
-              <button class="btn btn-primary" id="btn-detect">
-                🔍 Re-detect
-              </button>
-              <button class="btn btn-secondary" id="btn-detect-all">
-                ⚡ Detect All
-              </button>
-            </div>
-            <div class="toolbar-sep"></div>
-            <div class="toolbar-group">
-              <button class="btn btn-secondary" id="btn-add-crop">
-                ✏️ Add Crop
-              </button>
-            </div>
-            <div class="toolbar-sep"></div>
-            <div class="toolbar-group">
-              <button
-                class="btn btn-secondary"
-                disabled=""
-                id="btn-undo"
-                title="Undo (Ctrl+Z)"
-              >
-                Undo
-              </button>
-              <input
-                class="undo-scrubber"
-                id="undo-scrubber"
-                max="0"
-                min="0"
-                title="Visual Undo Timeline"
-                type="range"
-                value="0"
-              />
-              <button
-                class="btn btn-secondary"
-                disabled=""
-                id="btn-redo"
-                title="Redo (Ctrl+Y)"
-              >
-                Redo
-              </button>
-            </div>
-            <div class="toolbar-spacer"></div>
-            <div class="toolbar-group">
-              <button class="btn btn-success" id="btn-save-all">
-                ⬇️ Save All
-              </button>
-              <button class="btn btn-zip" id="btn-save-zip">🗜️ ZIP</button>
-              <button class="btn btn-pdf" id="btn-save-pdf">📄 PDF</button>
-            </div>
-          </div>
-          <div id="canvas-scroll">
-            <div id="empty-state">
-              <div class="empty-icon">🖼️</div>
-              <h2>No scan loaded</h2>
-              <p>Upload a scanned image on the left to get started.</p>
-              <button
-                class="btn btn-primary"
-                onclick="document.getElementById('file-input').click()"
-              >
-                📂 Upload Scans
-              </button>
-            </div>
-            <div class="canvas-wrapper-hidden" id="canvas-wrapper">
-              <canvas id="main-canvas"></canvas>
-              <svg class="scissor-cursor" id="overlay-svg"></svg>
-              <div id="draw-overlay"></div>
-              <div id="draw-preview-rect"></div>
-            </div>
-          </div>
-      <div id="amazon-widget-inline"></div>
-          <div id="progress-container">
-            <div id="progress-bar-track">
-              <div id="progress-bar-fill"></div>
-            </div>
-            <div id="progress-label">Processing…</div>
-          </div>
           <section id="splits-panel">
             <div id="splits-header">
               <h3>Detected Splits</h3>

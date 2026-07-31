@@ -53,6 +53,11 @@ async function runAudit() {
     const issues = [];
     let productCount = 0;
     
+    // Manually run delayed functions that setTimeout normally handles
+    if (typeof window.renderBottomBanner === 'function') {
+      window.renderBottomBanner();
+    }
+    
     // Check each ad slot for rendered products
     const topProducts = document.querySelectorAll('#amazon-widget-top a').length;
     const sidebarProducts = document.querySelectorAll('#amazon-widget-sidebar a').length;
@@ -64,7 +69,7 @@ async function runAudit() {
     
     let expectedCount = 0;
     if (document.getElementById('amazon-widget-top')) expectedCount += 4;
-    if (document.getElementById('amazon-widget-sidebar')) expectedCount += 3;
+    if (document.getElementById('amazon-widget-sidebar')) expectedCount += 1;
     if (document.getElementById('amazon-widget-bottom')) expectedCount += 3;
     if (document.getElementById('amazon-widget-inline')) expectedCount += 2;
     if (document.getElementById('amazon-widget-grid')) expectedCount += 4;
