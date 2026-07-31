@@ -2,132 +2,252 @@ const AMAZON_TAG = 'photoid03-20';
 
 let AMAZON_PRODUCTS = [
   {
-    asin: "B01LZJH63M",
-    title: "Plustek Photo Scanner ePhoto Z300, Scans 4x6 in...",
-    desc: "4.5 ⭐ $219.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81E0YcY1MQL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0C364K1SC",
-    title: "Epson Perfection V19 II Flatbed Photo Scanner 4...",
-    desc: "3.9 ⭐ $89.00. Get the best gear for your photography workflow.",
+    asin: "B01N7ENHO6",
+    title: "Skylight Frame – WiFi Digital Picture Frame Cus...",
+    desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71iyq3c0OiL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UY218_.jpg"
   },
   {
-    asin: "B07DLX26BB",
-    title: "Epson FastFoto FF-680W High-Speed Duplex Photo ...",
-    desc: "4.5 ⭐ $598.00. Get the best gear for your photography workflow.",
+    asin: "B088NHSVJN",
+    title: "BIGASUO Digital Picture Frame, 10.1\" Frameo Dig...",
+    desc: "4.5 ⭐ $59.49. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71r2DZgtA1L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GJ5D2XP6",
+    title: "AEEZO Digital Picture Frame, 10.1 Inch Digital ...",
+    desc: "4.6 ⭐ $47.45. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71mEui6zWUL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0D8JDPKKS",
+    title: "Frameo 10.1 Inch WiFi Digital Picture Frame, Sm...",
+    desc: "4.7 ⭐ $59.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81mhPUK4EGL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B083SH697H",
+    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ...",
+    desc: "4.6 ⭐ $54.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71v8cZ36vwL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0F8B93ZBM",
+    title: "64GB 15.6\" Frameo Digital Picture Frame WiFi, L...",
+    desc: "4.6 ⭐ $99.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71Ulr9Z9S6L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71WqsM-Og7L._AC_UY218_.jpg"
   },
   {
-    asin: "B07G5XZVLQ",
-    title: "Canon Canoscan Lide 300 Scanner (PDF, AUTOSCAN,...",
-    desc: "4.2 ⭐ $75.00. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61p8GOXK6IS._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0C35V1CLK",
-    title: "Epson Perfection V39 II Flatbed Photo Scanner 4...",
-    desc: "3.7 ⭐ $117.00. Get the best gear for your photography workflow.",
+    asin: "B083SH697H",
+    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ...",
+    desc: "4.6 ⭐ $54.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71cV59d0gOL._AC_UY218_.jpg"
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71v8cZ36vwL._AC_UY218_.jpg"
   },
   {
-    asin: "B0FS3BRMB3",
-    title: "ScanSnap iX2500 Photo Edition Wireless or USB H...",
-    desc: "4.4 ⭐ $474.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61HLpjQQjuL._AC_UY218_.jpg"
+    asin: "B0CQN2PKQR",
+    title: "Digital Picture Frame, Frameo 15.6'' Digital Ph...",
+    desc: "4.5 ⭐ $99.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71oBxFQf-RL._AC_UY218_.jpg"
   },
   {
-    asin: "B0F9B1H5VN",
-    title: "ScanSnap iX2500 Wireless or USB High-Speed Docu...",
-    desc: "4.4 ⭐ . Get the best gear for your photography workflow.",
+    asin: "B01N7ENHO6",
+    title: "Skylight Frame – WiFi Digital Picture Frame Cus...",
+    desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0H49BPRBT",
+    title: "Digital Picture Frame, WiFi 10.1\" HD IPS Touch ...",
+    desc: "$39.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71ReL7cw0wL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0CRRHQD2T",
+    title: "Uhale 10.1 inch WiFi Touch Screen Digital Pictu...",
+    desc: "4.2 ⭐ $39.99. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/612vJX1V61L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71sa5bVRtDL._AC_UY218_.jpg"
   },
   {
-    asin: "B07G5YBS1W",
-    title: "Canon CanoScan LiDE 400 Slim Scanner, 7.7\" x 14...",
-    desc: "4.1 ⭐ $89.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71ZSDHv9NRS._AC_UY218_.jpg"
-  },
-  {
-    asin: "B084NVRHYQ",
-    title: "KODAK Slide N Scan Film & Slide Scanner, 22MP, ...",
-    desc: "4.4 ⭐ $189.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81RdTfBiqfL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B091MDDQK9",
-    title: "Canon imageFORMULA RS40 - Photo and Document Sc...",
-    desc: "4 ⭐ $329.00. Get the best gear for your photography workflow.",
+    asin: "B0D8JDPKKS",
+    title: "Frameo 10.1 Inch WiFi Digital Picture Frame, Sm...",
+    desc: "4.7 ⭐ $59.99. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/41maiQDzKYL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81mhPUK4EGL._AC_UY218_.jpg"
   },
   {
-    asin: "B0BBVQ2HN5",
-    title: "Portable Scanner, Photo Scanner for A4 Document...",
-    desc: "3.9 ⭐ $53.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71wQAbEJY0L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B09FX5SRQT",
-    title: "ScanSnap iX1300 Wireless or USB Double-Sided Co...",
-    desc: "4.2 ⭐ $279.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71oy8z4sajL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B09FX5DWBK",
-    title: "ScanSnap iX1300 Wireless or USB Double-Sided Co...",
-    desc: "4.2 ⭐ $279.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71-1eaMzjuL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07KQZWPYN",
-    title: "Epson Workforce ES-50 Compact & Lightweight Mob...",
-    desc: "4.3 ⭐ $129.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/5186q1u92zL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FWGTB3S3",
-    title: "ScanSnap iX2400 High-Speed One-Touch Button Col...",
-    desc: "4.5 ⭐ $349.99. Get the best gear for your photography workflow.",
+    asin: "B01N7ENHO6",
+    title: "Skylight Frame – WiFi Digital Picture Frame Cus...",
+    desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71F4K-EyYNL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UL320_.jpg"
   },
   {
-    asin: "B08P3Z4M6Q",
-    title: "Epson Workforce ES-500W II Wireless Color Duple...",
-    desc: "4.4 ⭐ $349.99. Get the best gear for your photography workflow.",
+    asin: "B083SH697H",
+    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ...",
+    desc: "4.6 ⭐ $54.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71v8cZ36vwL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B088NHSVJN",
+    title: "BIGASUO Digital Picture Frame, 10.1\" Frameo Dig...",
+    desc: "4.5 ⭐ $59.49. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71r2DZgtA1L._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0FX9SR5N3",
+    title: "Miroir 10.1 Inch WiFi Digital Photo Frame via F...",
+    desc: "4.8 ⭐ $54.95. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71+zmYjpNYL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0FV857P1H",
+    title: "Digital Picture Frame, 10.1 Inch Picture Frame ...",
+    desc: "4.5 ⭐ $47.94. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71dRBhjR34L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GR6YMKHX",
+    title: "Aura HD Digital Picture Frame | Carver: The Bes...",
+    desc: "4.7 ⭐ $148.70. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81xccqjBJKL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0FPS8GTVP",
+    title: "Aura HD Digital Picture Frame | Limited Edition...",
+    desc: "4.7 ⭐ $199.00. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71IwejOen7S._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71sPcPTOYRL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GTZ1Z4N3",
+    title: "LeaMea Digital Picture Frame 1280x800 HD IPS To...",
+    desc: "4.8 ⭐ $45.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71p6LbTcA3L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0H25WSGS6",
+    title: "ARZOPA 2K Digital Picture Frame 14 Inch Free Cl...",
+    desc: "4.4 ⭐ $224.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71omJKBdLgL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0CY8FJCFN",
+    title: "Uhale 21.5 Inch Large Digital Picture Frame WiF...",
+    desc: "4.5 ⭐ $169.94. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81X8LMktLtL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GJ2XCZV2",
+    title: "Digital Picture Frame 15.6 Inch Digital Photo F...",
+    desc: "4.5 ⭐ $99.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71eAGFCg+KL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0CYZLWG1S",
+    title: "Dragon Touch 10.1'' WIFI Digital Picture Frame ...",
+    desc: "4.5 ⭐ $49.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/712uVn8vstL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B09X4L9TDP",
+    title: "Nixplay Digital Picture Frame | 10.1\" Stunning ...",
+    desc: "4.5 ⭐ $99.00. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/817pxOgxpdL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0F8B93ZBM",
+    title: "64GB 15.6\" Frameo Digital Picture Frame WiFi, L...",
+    desc: "4.6 ⭐ $99.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71WqsM-Og7L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B01N7ENHO6",
+    title: "Skylight Frame – WiFi Digital Picture Frame Cus...",
+    desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B083SH697H",
+    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ...",
+    desc: "4.6 ⭐ $54.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71v8cZ36vwL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0H3QVRMDR",
+    title: "Aura HD Digital Picture Frame | Aspen: The Best...",
+    desc: "4.7 ⭐ $229.00. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81dIeVijoLL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B088NHSVJN",
+    title: "BIGASUO Digital Picture Frame, 10.1\" Frameo Dig...",
+    desc: "4.5 ⭐ $59.49. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71r2DZgtA1L._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0FX9SR5N3",
+    title: "Miroir 10.1 Inch WiFi Digital Photo Frame via F...",
+    desc: "4.8 ⭐ $54.95. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71+zmYjpNYL._AC_UL320_.jpg"
   }
 ];
 
