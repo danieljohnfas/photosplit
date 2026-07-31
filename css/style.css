@@ -3044,3 +3044,13 @@ kbd {
   text-align: center;
   margin: 0 auto;
 }
+
+
+#amazon-widget-grid, .amazon-widget-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}

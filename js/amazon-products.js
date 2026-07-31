@@ -28,7 +28,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B01N7ENHO6",
-    title: "Skylight Frame – WiFi Digital Picture Frame Cus...",
+    title: "Skylight Frame – WiFi Digital Picture Frame Cus",
     desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
@@ -36,7 +36,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B088NHSVJN",
-    title: "BIGASUO Digital Picture Frame, 10.1\" Frameo Dig...",
+    title: "BIGASUO Digital Picture Frame, 10.1\" Frameo Dig",
     desc: "4.5 ⭐ $59.49. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-secondary",
@@ -44,7 +44,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B0GJ5D2XP6",
-    title: "AEEZO Digital Picture Frame, 10.1 Inch Digital ...",
+    title: "AEEZO Digital Picture Frame, 10.1 Inch Digital ",
     desc: "4.6 ⭐ $47.45. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
@@ -52,7 +52,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B0D8JDPKKS",
-    title: "Frameo 10.1 Inch WiFi Digital Picture Frame, Sm...",
+    title: "Frameo 10.1 Inch WiFi Digital Picture Frame, Sm",
     desc: "4.7 ⭐ $59.99. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-secondary",
@@ -60,7 +60,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B083SH697H",
-    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ...",
+    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ",
     desc: "4.6 ⭐ $54.99. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
@@ -68,7 +68,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B0F8B93ZBM",
-    title: "64GB 15.6\" Frameo Digital Picture Frame WiFi, L...",
+    title: "64GB 15.6\" Frameo Digital Picture Frame WiFi, L",
     desc: "4.6 ⭐ $99.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
@@ -76,7 +76,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B083SH697H",
-    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ...",
+    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ",
     desc: "4.6 ⭐ $54.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
@@ -84,7 +84,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B0CQN2PKQR",
-    title: "Digital Picture Frame, Frameo 15.6'' Digital Ph...",
+    title: "Digital Picture Frame, Frameo 15.6'' Digital Ph",
     desc: "4.5 ⭐ $99.99. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-primary",
@@ -92,7 +92,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B01N7ENHO6",
-    title: "Skylight Frame – WiFi Digital Picture Frame Cus...",
+    title: "Skylight Frame – WiFi Digital Picture Frame Cus",
     desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
@@ -100,7 +100,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B0H49BPRBT",
-    title: "Digital Picture Frame, WiFi 10.1\" HD IPS Touch ...",
+    title: "Digital Picture Frame, WiFi 10.1\" HD IPS Touch ",
     desc: "$39.99. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
@@ -108,7 +108,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B0CRRHQD2T",
-    title: "Uhale 10.1 inch WiFi Touch Screen Digital Pictu...",
+    title: "Uhale 10.1 inch WiFi Touch Screen Digital Pictu",
     desc: "4.2 ⭐ $39.99. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-primary",
@@ -116,7 +116,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B0D8JDPKKS",
-    title: "Frameo 10.1 Inch WiFi Digital Picture Frame, Sm...",
+    title: "Frameo 10.1 Inch WiFi Digital Picture Frame, Sm",
     desc: "4.7 ⭐ $59.99. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-secondary",
@@ -124,7 +124,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B01N7ENHO6",
-    title: "Skylight Frame – WiFi Digital Picture Frame Cus...",
+    title: "Skylight Frame – WiFi Digital Picture Frame Cus",
     desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-secondary",
@@ -132,7 +132,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B083SH697H",
-    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ...",
+    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ",
     desc: "4.6 ⭐ $54.99. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-secondary",
@@ -140,7 +140,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B088NHSVJN",
-    title: "BIGASUO Digital Picture Frame, 10.1\" Frameo Dig...",
+    title: "BIGASUO Digital Picture Frame, 10.1\" Frameo Dig",
     desc: "4.5 ⭐ $59.49. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-primary",
@@ -148,7 +148,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B0FX9SR5N3",
-    title: "Miroir 10.1 Inch WiFi Digital Photo Frame via F...",
+    title: "Miroir 10.1 Inch WiFi Digital Photo Frame via F",
     desc: "4.8 ⭐ $54.95. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-secondary",
@@ -156,7 +156,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B0FV857P1H",
-    title: "Digital Picture Frame, 10.1 Inch Picture Frame ...",
+    title: "Digital Picture Frame, 10.1 Inch Picture Frame ",
     desc: "4.5 ⭐ $47.94. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
@@ -164,7 +164,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B0GR6YMKHX",
-    title: "Aura HD Digital Picture Frame | Carver: The Bes...",
+    title: "Aura HD Digital Picture Frame | Carver: The Bes",
     desc: "4.7 ⭐ $148.70. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-primary",
@@ -172,7 +172,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B0FPS8GTVP",
-    title: "Aura HD Digital Picture Frame | Limited Edition...",
+    title: "Aura HD Digital Picture Frame | Limited Edition",
     desc: "4.7 ⭐ $199.00. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-primary",
@@ -180,7 +180,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B0GTZ1Z4N3",
-    title: "LeaMea Digital Picture Frame 1280x800 HD IPS To...",
+    title: "LeaMea Digital Picture Frame 1280x800 HD IPS To",
     desc: "4.8 ⭐ $45.99. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-secondary",
@@ -188,7 +188,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B0H25WSGS6",
-    title: "ARZOPA 2K Digital Picture Frame 14 Inch Free Cl...",
+    title: "ARZOPA 2K Digital Picture Frame 14 Inch Free Cl",
     desc: "4.4 ⭐ $224.99. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-primary",
@@ -196,7 +196,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B0CY8FJCFN",
-    title: "Uhale 21.5 Inch Large Digital Picture Frame WiF...",
+    title: "Uhale 21.5 Inch Large Digital Picture Frame WiF",
     desc: "4.5 ⭐ $169.94. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-primary",
@@ -204,7 +204,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B0GJ2XCZV2",
-    title: "Digital Picture Frame 15.6 Inch Digital Photo F...",
+    title: "Digital Picture Frame 15.6 Inch Digital Photo F",
     desc: "4.5 ⭐ $99.99. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-secondary",
@@ -212,7 +212,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B0CYZLWG1S",
-    title: "Dragon Touch 10.1'' WIFI Digital Picture Frame ...",
+    title: "Dragon Touch 10.1'' WIFI Digital Picture Frame ",
     desc: "4.5 ⭐ $49.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
@@ -220,7 +220,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B09X4L9TDP",
-    title: "Nixplay Digital Picture Frame | 10.1\" Stunning ...",
+    title: "Nixplay Digital Picture Frame | 10.1\" Stunning ",
     desc: "4.5 ⭐ $99.00. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-primary",
@@ -228,7 +228,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B0F8B93ZBM",
-    title: "64GB 15.6\" Frameo Digital Picture Frame WiFi, L...",
+    title: "64GB 15.6\" Frameo Digital Picture Frame WiFi, L",
     desc: "4.6 ⭐ $99.99. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-secondary",
@@ -236,7 +236,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B01N7ENHO6",
-    title: "Skylight Frame – WiFi Digital Picture Frame Cus...",
+    title: "Skylight Frame – WiFi Digital Picture Frame Cus",
     desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-primary",
@@ -244,7 +244,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B083SH697H",
-    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ...",
+    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ",
     desc: "4.6 ⭐ $54.99. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-secondary",
@@ -252,7 +252,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B0H3QVRMDR",
-    title: "Aura HD Digital Picture Frame | Aspen: The Best...",
+    title: "Aura HD Digital Picture Frame | Aspen: The Best",
     desc: "4.7 ⭐ $229.00. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-secondary",
@@ -260,7 +260,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B088NHSVJN",
-    title: "BIGASUO Digital Picture Frame, 10.1\" Frameo Dig...",
+    title: "BIGASUO Digital Picture Frame, 10.1\" Frameo Dig",
     desc: "4.5 ⭐ $59.49. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-secondary",
@@ -268,7 +268,7 @@ let AMAZON_PRODUCTS = [
   },
   {
     asin: "B0FX9SR5N3",
-    title: "Miroir 10.1 Inch WiFi Digital Photo Frame via F...",
+    title: "Miroir 10.1 Inch WiFi Digital Photo Frame via F",
     desc: "4.8 ⭐ $54.95. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-primary",
