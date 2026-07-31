@@ -219,7 +219,7 @@ body {
   color: var(--text-secondary);
   text-decoration: none;
   transition: color var(--dur-fast) var(--ease-smooth);
-  white-space: nowrap;
+  /* white-space: nowrap removed */
   padding: 6px 12px;
   border-radius: 99px;
 }
@@ -270,7 +270,7 @@ body {
   font-weight: 600;
   color: var(--success);
   letter-spacing: 0.03em;
-  white-space: nowrap;
+  /* white-space: nowrap removed */
 }
 
 .privacy-badge svg {
@@ -451,9 +451,8 @@ body {
   font-size: 0.75rem;
   font-weight: 500;
   color: var(--text-primary);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
   flex: 1;
 }
 .file-chip-remove {
@@ -678,7 +677,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   cursor: pointer;
   border: 1px solid transparent;
   transition: all var(--dur-normal) var(--ease-spring);
-  white-space: nowrap;
+  /* white-space: nowrap removed */
   outline: none;
 }
 
@@ -1153,21 +1152,18 @@ kbd {
 
 /* ── Zoom Controls ────────────────────────────────────────────────────────── */
 #zoom-controls {
-  position: fixed;
-  bottom: 24px;
-  left: calc(var(--sidebar-w) + 24px);
-  z-index: 50;
+  position: static;
   display: flex;
   align-items: center;
-  gap: 6px;
-  background: var(--bg-glass);
-  -webkit-backdrop-filter: blur(16px);
-  backdrop-filter: blur(16px);
-  border: 1px solid var(--border-strong);
-  border-radius: 99px;
-  padding: 5px 10px;
-  box-shadow: var(--shadow-md);
-  display: none;
+  justify-content: center;
+  gap: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  margin: 1rem auto;
+  width: fit-content;
 }
 #zoom-controls.visible {
   display: flex;
@@ -2232,21 +2228,12 @@ kbd {
 
 /* ── GDPR Cookie Consent Banner ─────────────────────────────────────────── */
 #cookie-consent {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 10000;
-  background: var(--bg-surface);
-  border-top: 2px solid var(--accent);
-  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.2);
-  padding: 14px 24px;
-  opacity: 0;
-  transform: translateY(100%);
-  transition:
-    opacity 0.35s var(--ease-smooth),
-    transform 0.35s var(--ease-smooth);
-  pointer-events: none;
+  position: static;
+  background: var(--surface-light);
+  border-top: 1px solid var(--border-color);
+  padding: 1rem;
+  z-index: 1000;
+  margin-top: 2rem;
 }
 #cookie-consent.visible {
   opacity: 1;
@@ -2302,7 +2289,7 @@ kbd {
   transition: all var(--dur-fast) var(--ease-smooth);
   text-decoration: none;
   border: 1.5px solid transparent;
-  white-space: nowrap;
+  /* white-space: nowrap removed */
 }
 .cookie-btn-link {
   color: var(--text-muted);
@@ -3041,4 +3028,19 @@ kbd {
   .game-strip-frame-wrap {
     height: 320px;
   }
+}
+
+
+/* --- UI STANDARDIZATION --- */
+.main-content, .tool-container, main {
+  margin: 0 auto !important;
+  max-width: 1200px !important;
+}
+.hero, .empty-state, .split-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
 }
