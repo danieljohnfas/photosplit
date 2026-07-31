@@ -2,306 +2,204 @@ const AMAZON_TAG = 'photoid03-20';
 
 let AMAZON_PRODUCTS = [
 
+  // ── Cloud Storage ───────────────────────────────────────────────────────────
   {
     asin: "https://www.pcloud.com/",
-    title: "pCloud - Secure Cloud Storage",
-    desc: "Swiss data protection. Store, share and access all your files.",
+    title: "pCloud — Secure Lifetime Cloud Storage",
+    desc: "Swiss-hosted, zero-knowledge encryption. Store and share your digitized photo archive safely forever.",
     badge: "Storage",
     btnClass: "btn-primary",
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/home.png"
   },
   {
     asin: "https://www.pcloud.com/family",
-    title: "pCloud Family Plan",
-    desc: "Share up to 2TB with up to 5 family members. Lifetime access.",
+    title: "pCloud Family Plan — 2TB Shared Storage",
+    desc: "Share up to 2TB with 5 family members. Ideal for collaborative photo preservation projects.",
     badge: "Family",
     btnClass: "btn-secondary",
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/family.png"
   },
   {
     asin: "https://www.pcloud.com/crypto",
-    title: "pCloud Crypto",
-    desc: "Unbreakable client-side encryption for your most sensitive files.",
+    title: "pCloud Crypto — Client-Side Encryption",
+    desc: "Add an unbreakable encryption layer to your most sensitive family photos and documents.",
     badge: "Security",
     btnClass: "btn-secondary",
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
+
+  // ── Flatbed Scanners ────────────────────────────────────────────────────────
+  {
+    asin: "B002OEBMRU",
+    title: "Epson Perfection V600 Photo Scanner",
+    desc: "4.7 ⭐ The gold standard for digitizing prints, negatives & slides. 6400 DPI optical resolution.",
+    badge: "Top Scanner",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81H1lORQx4L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07G5X1N1H",
+    title: "Epson Perfection V39 Color Photo Scanner",
+    desc: "4.5 ⭐ Compact, affordable flatbed scanner for everyday photo digitizing at up to 4800 DPI.",
+    badge: "Best Value",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61xIHrRLLVL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B00017LSPI",
+    title: "Epson Perfection V550 Photo Scanner",
+    desc: "4.5 ⭐ Scan photos, film negatives & slides with Digital ICE technology for dust & scratch removal.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81sNVfJBHmL._AC_UY218_.jpg"
+  },
+
+  // ── Digital Photo Frames ────────────────────────────────────────────────────
   {
     asin: "B01N7ENHO6",
-    title: "Skylight Frame – WiFi Digital Picture Frame Cus",
-    desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
+    title: "Skylight Frame 10\" WiFi Digital Photo Frame",
+    desc: "4.7 ⭐ $139.99. Send photos from your phone instantly — perfect for sharing your digitized archive with family.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
     img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UY218_.jpg"
   },
   {
     asin: "B088NHSVJN",
-    title: "BIGASUO Digital Picture Frame, 10.1\" Frameo Dig",
-    desc: "4.5 ⭐ $59.49. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
+    title: "BIGASUO 10.1\" Frameo WiFi Digital Photo Frame",
+    desc: "4.5 ⭐ $59.49. IPS touchscreen, app-controlled. A great gift for grandparents with your scanned family photos.",
+    badge: "Deal",
     btnClass: "btn-secondary",
     img: "https://m.media-amazon.com/images/I/71r2DZgtA1L._AC_UY218_.jpg"
   },
   {
     asin: "B0GJ5D2XP6",
-    title: "AEEZO Digital Picture Frame, 10.1 Inch Digital ",
-    desc: "4.6 ⭐ $47.45. Get the best gear for your photography workflow.",
+    title: "AEEZO 10.1\" WiFi Digital Picture Frame 2K",
+    desc: "4.6 ⭐ $47.45. Crystal-clear 2K display — your scanned family photos look better than the originals.",
     badge: "Popular",
     btnClass: "btn-secondary",
     img: "https://m.media-amazon.com/images/I/71mEui6zWUL._AC_UY218_.jpg"
   },
   {
     asin: "B0D8JDPKKS",
-    title: "Frameo 10.1 Inch WiFi Digital Picture Frame, Sm",
-    desc: "4.7 ⭐ $59.99. Get the best gear for your photography workflow.",
+    title: "Frameo 10.1\" Smart WiFi Digital Picture Frame",
+    desc: "4.7 ⭐ $59.99. Multi-user photo sharing with the Frameo app — stream from your digitized archive directly.",
     badge: "Essential",
     btnClass: "btn-secondary",
     img: "https://m.media-amazon.com/images/I/81mhPUK4EGL._AC_UY218_.jpg"
   },
   {
     asin: "B083SH697H",
-    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ",
-    desc: "4.6 ⭐ $54.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
+    title: "32GB FRAMEO 10.1\" Smart WiFi Digital Photo Frame",
+    desc: "4.6 ⭐ $54.99. Built-in 32GB storage — enough for thousands of your split and restored family photos.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
     img: "https://m.media-amazon.com/images/I/71v8cZ36vwL._AC_UY218_.jpg"
   },
   {
     asin: "B0F8B93ZBM",
-    title: "64GB 15.6\" Frameo Digital Picture Frame WiFi, L",
-    desc: "4.6 ⭐ $99.99. Get the best gear for your photography workflow.",
+    title: "64GB 15.6\" Frameo WiFi Digital Photo Frame",
+    desc: "4.6 ⭐ $99.99. Large 15.6\" display with 64GB storage — a stunning centrepiece for your photo archive.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
     img: "https://m.media-amazon.com/images/I/71WqsM-Og7L._AC_UY218_.jpg"
   },
   {
-    asin: "B083SH697H",
-    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ",
-    desc: "4.6 ⭐ $54.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71v8cZ36vwL._AC_UY218_.jpg"
-  },
-  {
     asin: "B0CQN2PKQR",
-    title: "Digital Picture Frame, Frameo 15.6'' Digital Ph",
-    desc: "4.5 ⭐ $99.99. Get the best gear for your photography workflow.",
+    title: "15.6\" Frameo WiFi Digital Picture Frame — IPS",
+    desc: "4.5 ⭐ $99.99. Full HD IPS display, smooth Frameo app integration, ideal for showcasing your archive.",
     badge: "Popular",
     btnClass: "btn-primary",
     img: "https://m.media-amazon.com/images/I/71oBxFQf-RL._AC_UY218_.jpg"
   },
   {
-    asin: "B01N7ENHO6",
-    title: "Skylight Frame – WiFi Digital Picture Frame Cus",
-    desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0H49BPRBT",
-    title: "Digital Picture Frame, WiFi 10.1\" HD IPS Touch ",
-    desc: "$39.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71ReL7cw0wL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0CRRHQD2T",
-    title: "Uhale 10.1 inch WiFi Touch Screen Digital Pictu",
-    desc: "4.2 ⭐ $39.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71sa5bVRtDL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0D8JDPKKS",
-    title: "Frameo 10.1 Inch WiFi Digital Picture Frame, Sm",
-    desc: "4.7 ⭐ $59.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81mhPUK4EGL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B01N7ENHO6",
-    title: "Skylight Frame – WiFi Digital Picture Frame Cus",
-    desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B083SH697H",
-    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ",
-    desc: "4.6 ⭐ $54.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71v8cZ36vwL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B088NHSVJN",
-    title: "BIGASUO Digital Picture Frame, 10.1\" Frameo Dig",
-    desc: "4.5 ⭐ $59.49. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71r2DZgtA1L._AC_UL320_.jpg"
-  },
-  {
     asin: "B0FX9SR5N3",
-    title: "Miroir 10.1 Inch WiFi Digital Photo Frame via F",
-    desc: "4.8 ⭐ $54.95. Get the best gear for your photography workflow.",
+    title: "Miroir 10.1\" WiFi Digital Photo Frame via Frameo",
+    desc: "4.8 ⭐ $54.95. Highest-rated compact frame — vivid IPS display and whisper-quiet performance.",
     badge: "Top Pick",
     btnClass: "btn-secondary",
     img: "https://m.media-amazon.com/images/I/71+zmYjpNYL._AC_UL320_.jpg"
   },
   {
-    asin: "B0FV857P1H",
-    title: "Digital Picture Frame, 10.1 Inch Picture Frame ",
-    desc: "4.5 ⭐ $47.94. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71dRBhjR34L._AC_UY218_.jpg"
-  },
-  {
     asin: "B0GR6YMKHX",
-    title: "Aura HD Digital Picture Frame | Carver: The Bes",
-    desc: "4.7 ⭐ $148.70. Get the best gear for your photography workflow.",
-    badge: "Deal",
+    title: "Aura HD Carver Digital Picture Frame — 10.1\"",
+    desc: "4.7 ⭐ $148.70. Premium Aura frame with free unlimited cloud storage for all your photos.",
+    badge: "Premium",
     btnClass: "btn-primary",
     img: "https://m.media-amazon.com/images/I/81xccqjBJKL._AC_UY218_.jpg"
   },
   {
-    asin: "B0FPS8GTVP",
-    title: "Aura HD Digital Picture Frame | Limited Edition",
-    desc: "4.7 ⭐ $199.00. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71sPcPTOYRL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GTZ1Z4N3",
-    title: "LeaMea Digital Picture Frame 1280x800 HD IPS To",
-    desc: "4.8 ⭐ $45.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71p6LbTcA3L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0H25WSGS6",
-    title: "ARZOPA 2K Digital Picture Frame 14 Inch Free Cl",
-    desc: "4.4 ⭐ $224.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71omJKBdLgL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0CY8FJCFN",
-    title: "Uhale 21.5 Inch Large Digital Picture Frame WiF",
-    desc: "4.5 ⭐ $169.94. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81X8LMktLtL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GJ2XCZV2",
-    title: "Digital Picture Frame 15.6 Inch Digital Photo F",
-    desc: "4.5 ⭐ $99.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71eAGFCg+KL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0CYZLWG1S",
-    title: "Dragon Touch 10.1'' WIFI Digital Picture Frame ",
-    desc: "4.5 ⭐ $49.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/712uVn8vstL._AC_UY218_.jpg"
-  },
-  {
     asin: "B09X4L9TDP",
-    title: "Nixplay Digital Picture Frame | 10.1\" Stunning ",
-    desc: "4.5 ⭐ $99.00. Get the best gear for your photography workflow.",
+    title: "Nixplay 10.1\" Smart Digital Photo Frame",
+    desc: "4.5 ⭐ $99.00. Alexa-compatible digital frame with subscription-free cloud sharing for your archive.",
     badge: "Essential",
     btnClass: "btn-primary",
     img: "https://m.media-amazon.com/images/I/817pxOgxpdL._AC_UY218_.jpg"
   },
+
+  // ── Photo Storage & Archiving ───────────────────────────────────────────────
   {
-    asin: "B0F8B93ZBM",
-    title: "64GB 15.6\" Frameo Digital Picture Frame WiFi, L",
-    desc: "4.6 ⭐ $99.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71WqsM-Og7L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B01N7ENHO6",
-    title: "Skylight Frame – WiFi Digital Picture Frame Cus",
-    desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
+    asin: "B07MVVLBTF",
+    title: "SanDisk 256GB Portable SSD Flash Drive",
+    desc: "4.7 ⭐ Rugged, pocket-sized SSD backup drive. The perfect place to store your split photo archive.",
     badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61cKaQF9u5L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B08L5G3YKP",
+    title: "Archival Photo Storage Boxes — Acid-Free (Set of 3)",
+    desc: "4.6 ⭐ Museum-quality, acid-free boxes to protect original prints during and after digitizing.",
+    badge: "Archival",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71kBRBKjekL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B09X4L9TDP",
+    title: "Epson EcoTank ET-7700 Wireless Photo Printer",
+    desc: "4.4 ⭐ Print your digitized photos at home. Borderless printing up to 8×10\" with vibrant ink.",
+    badge: "Print",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B083SH697H",
-    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ",
-    desc: "4.6 ⭐ $54.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71v8cZ36vwL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0H3QVRMDR",
-    title: "Aura HD Digital Picture Frame | Aspen: The Best",
-    desc: "4.7 ⭐ $229.00. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81dIeVijoLL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B088NHSVJN",
-    title: "BIGASUO Digital Picture Frame, 10.1\" Frameo Dig",
-    desc: "4.5 ⭐ $59.49. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71r2DZgtA1L._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0FX9SR5N3",
-    title: "Miroir 10.1 Inch WiFi Digital Photo Frame via F",
-    desc: "4.8 ⭐ $54.95. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71+zmYjpNYL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/817pxOgxpdL._AC_UY218_.jpg"
   }
 ];
+
+// Deduplicate by asin just in case
+(function dedupeProducts() {
+  const seen = new Set();
+  AMAZON_PRODUCTS = AMAZON_PRODUCTS.filter(p => {
+    if (seen.has(p.asin)) return false;
+    seen.add(p.asin);
+    return true;
+  });
+})();
 
 // Enhanced contextual shuffle algorithm
 function getContextualProducts() {
   let products = [...AMAZON_PRODUCTS];
-  
+
   // URL Context matching
   const url = window.location.href.toLowerCase();
   let boostKeyword = '';
-  
-  if (url.includes('convert')) boostKeyword = 'scanner';
-  else if (url.includes('crop') || url.includes('resize')) boostKeyword = 'frame';
+
+  if (url.includes('convert') || url.includes('transcribe')) boostKeyword = 'storage';
+  else if (url.includes('crop') || url.includes('resize') || url.includes('passport')) boostKeyword = 'frame';
+  else if (url.includes('app')) boostKeyword = 'scanner';
   else if (url.includes('blog')) boostKeyword = 'pcloud';
-  
+
   // Shuffle randomly first
   products = products.sort(() => 0.5 - Math.random());
-  
+
   // Boost matching products to the front
   if (boostKeyword) {
     products.sort((a, b) => {
-      const aMatch = (a.title + ' ' + a.desc).toLowerCase().includes(boostKeyword);
-      const bMatch = (b.title + ' ' + b.desc).toLowerCase().includes(boostKeyword);
+      const aMatch = (a.title + ' ' + a.desc + ' ' + a.badge).toLowerCase().includes(boostKeyword);
+      const bMatch = (b.title + ' ' + b.desc + ' ' + b.badge).toLowerCase().includes(boostKeyword);
       if (aMatch && !bMatch) return -1;
       if (!aMatch && bMatch) return 1;
       return 0;
     });
   }
-  
+
   return products;
 }
 
@@ -335,7 +233,7 @@ function renderSidebarWidgets() {
 
   const products = AMAZON_PRODUCTS.slice(4, 5); // 1 product
   let html = '<div class="ad-sidebar-sticky">';
-  
+
   products.forEach(product => {
     const link = getAmazonLink(product.asin);
     const img = getAmazonImageUrl(product.asin);
@@ -410,9 +308,9 @@ function renderBottomBanner() {
   if (!container) return;
 
   const products = AMAZON_PRODUCTS.slice(7, 10); // 3 products
-  
+
   let html = `
-    <div class="ad-container ad-banner-bottom ad-wrap-bottom glass-ad-panel" id="sticky-bottom-banner" style="margin: 0; border-radius: 0; text-align: center; box-shadow: 0 -8px 32px rgba(0,0,0,0.4); background: var(--bg-surface); padding: 16px 0; border-top: 1px solid var(--border-strong); display: flex; justify-content: center; align-items: center; gap: 24px; flex-wrap: wrap; margin-top: 2rem;">
+    <div class="ad-container ad-banner-bottom ad-wrap-bottom glass-ad-panel" id="sticky-bottom-banner" style="margin: 0; border-radius: 0; text-align: center; box-shadow: 0 -8px 32px rgba(0,0,0,0.4); background: var(--bg-surface); padding: 16px 0; border-top: 1px solid var(--border-strong); display: flex; justify-content: center; align-items: center; gap: 24px; flex-wrap: wrap; margin-top: 2rem; position: relative;">
       <span class="ad-label" style="font-size: 0.65rem; position:absolute; top: -20px; background: var(--bg-surface-2); border: 1px solid var(--border-strong); border-bottom: none; color: var(--text-primary); padding: 4px 12px; border-radius: 8px 8px 0 0; right: 24px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;">You Might Also Like</span>
   `;
 
@@ -454,6 +352,7 @@ function renderInlineBanner() {
         <img src="${img}" loading="lazy" style="width:60px; height:60px; object-fit:contain; background:white; padding:4px; border-radius:var(--radius-sm); margin-right:16px;" alt="${p.title}">
         <div>
           <h4 style="margin:0 0 4px; font-size:0.9rem; font-weight:800; color:var(--text-primary);">${p.title}</h4>
+          <p style="margin:0 0 6px; font-size:0.78rem; color:var(--text-secondary);">${p.desc}</p>
           <span class="btn ${p.btnClass} btn-sm" style="font-size:0.7rem; padding:4px 10px;">View</span>
         </div>
       </a>
@@ -476,6 +375,7 @@ function renderGridWidget() {
       <a href="${link}" target="_blank" rel="nofollow noopener" onclick="trackAdClick('${p.asin}', 'grid')" style="display:flex; flex-direction:column; align-items:center; background:var(--bg-surface); padding:16px; border-radius:var(--radius-lg); border:1px solid var(--border-strong); box-shadow:var(--shadow-sm); text-decoration:none; color:inherit; text-align:center;">
         <img src="${img}" loading="lazy" style="width:100px; height:100px; object-fit:contain; background:white; padding:8px; border-radius:var(--radius-md); margin-bottom:12px;" alt="${p.title}">
         <h4 style="margin:0 0 8px; font-size:0.85rem; font-weight:700; color:var(--text-primary);">${p.title}</h4>
+        <p style="margin:0 0 8px; font-size:0.75rem; color:var(--text-secondary); line-height:1.3;">${p.desc}</p>
         <span class="btn ${p.btnClass} btn-sm" style="font-size:0.75rem; padding:6px 12px;">${btnText}</span>
       </a>
     `;
@@ -499,12 +399,12 @@ document.addEventListener('DOMContentLoaded', () => {
   setActiveNavLink();
   renderSidebarWidgets();
   renderTopBanner();
-  
+
   // Delay sticky bottom banner by 10 seconds to avoid popup friction on load
   setTimeout(() => {
     renderBottomBanner();
   }, 10000);
-  
+
   renderInlineBanner();
   renderGridWidget();
 });

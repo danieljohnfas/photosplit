@@ -172,30 +172,49 @@
     />
     PhotoSplit Studio
   </a>
-  
-            <div
-              class="ad-sidebar-sticky"
-              style="margin-top: 24px; padding: 0 16px 16px"
-            >
-              <span class="ad-sidebar-label">Advertisement</span>
-              <div
-                id="ad-sidebar"
-                style="
-                  margin: 0;
-                  min-height: 250px;
-                  background: var(--bg-surface-2);
-                  border: 1px dashed var(--border-strong);
-                  border-radius: var(--radius-md);
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                "
-              >
-
-</div>
-            </div>
-          </section>
-        </aside>
+          <div class="header-spacer"></div>
+  <div class="privacy-badge">
+    <svg
+      fill="none"
+      height="14"
+      stroke="currentColor"
+      stroke-width="2.5"
+      viewbox="0 0 24 24"
+      width="14"
+    >
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+    </svg>
+    <span>100% Private · No Uploads</span>
+  </div>
+  <nav class="main-nav">
+    <button aria-label="Toggle sounds" class="icon-btn" id="sound-toggle" title="Mute sounds">🔊</button>
+    <a href="/app" class="active">Split Photos</a>
+    <a href="/resize" class="">Resize</a>
+    <a href="/convert" class="">Convert</a>
+    <a href="/passport" class="">Passport</a>
+    <a href="/transcribe" class="">Transcribe</a>
+    <a href="/blog/" class="">Blog</a>
+    <a href="/tips" class="">Tips</a>
+    <a href="/about" class="">About</a>
+  </nav>
+  <!-- INJECT_APP_TOOLS -->
+  <button
+    class="icon-btn"
+    id="theme-toggle"
+    onclick="if (typeof toggleTheme === 'function') toggleTheme();"
+    title="Toggle Dark/Light Mode"
+  >
+    🌓
+  </button>
+  <button
+    class="btn btn-secondary btn-sm"
+    id="btn-install-pwa"
+    style="display: none; margin-left: 8px; font-weight: 700;"
+  >
+    ⬇️ Install App
+  </button>
+  <button aria-label="Show keyboard shortcuts" class="icon-btn" id="btn-shortcuts" title="Keyboard shortcuts"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="16"><rect height="12" rx="2" width="20" x="2" y="6"></rect><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M8 14h8"></path></svg></button>
+</header>
         <div id="sidebar-overlay"></div>
         <!-- CANVAS AREA -->
         <section id="canvas-area">
@@ -285,49 +304,6 @@
             </div>
             <div id="progress-label">Processing…</div>
           </div>
-          <div class="header-spacer"></div>
-  <div class="privacy-badge">
-    <svg
-      fill="none"
-      height="14"
-      stroke="currentColor"
-      stroke-width="2.5"
-      viewbox="0 0 24 24"
-      width="14"
-    >
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-    </svg>
-    <span>100% Private · No Uploads</span>
-  </div>
-  <nav class="main-nav">
-    <button aria-label="Toggle sounds" class="icon-btn" id="sound-toggle" title="Mute sounds">🔊</button>
-    <a href="/app" class="active">Split Photos</a>
-    <a href="/resize" class="">Resize</a>
-    <a href="/convert" class="">Convert</a>
-    <a href="/passport" class="">Passport</a>
-    <a href="/transcribe" class="">Transcribe</a>
-    <a href="/blog/" class="">Blog</a>
-    <a href="/tips" class="">Tips</a>
-    <a href="/about" class="">About</a>
-  </nav>
-  <!-- INJECT_APP_TOOLS -->
-  <button
-    class="icon-btn"
-    id="theme-toggle"
-    onclick="if (typeof toggleTheme === 'function') toggleTheme();"
-    title="Toggle Dark/Light Mode"
-  >
-    🌓
-  </button>
-  <button
-    class="btn btn-secondary btn-sm"
-    id="btn-install-pwa"
-    style="display: none; margin-left: 8px; font-weight: 700;"
-  >
-    ⬇️ Install App
-  </button>
-  <button aria-label="Show keyboard shortcuts" class="icon-btn" id="btn-shortcuts" title="Keyboard shortcuts"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="16"><rect height="12" rx="2" width="20" x="2" y="6"></rect><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M8 14h8"></path></svg></button>
-</header>
 
 <!-- TOP AD BANNER -->
 <div id="amazon-widget-top"></div>
@@ -582,6 +558,29 @@
             <div id="splits-strip"></div>
           </section>
         </section>
+
+  
+            <div
+              class="ad-sidebar-sticky"
+              style="margin-top: 24px; padding: 0 16px 16px"
+            >
+              <span class="ad-sidebar-label">Advertisement</span>
+              <div
+                id="amazon-widget-sidebar"
+                style="
+                  margin: 0;
+                  min-height: 250px;
+                  background: var(--bg-surface-2);
+                  border: 1px dashed var(--border-strong);
+                  border-radius: var(--radius-md);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+
+</div>
+            </div>
 </main>
 <div id="amazon-widget-grid"></div>
       <div id="zoom-controls">
