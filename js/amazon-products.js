@@ -1,165 +1,197 @@
 const AMAZON_TAG = 'photoid03-20';
 
 let AMAZON_PRODUCTS = [
-
-  // ── Cloud Storage ───────────────────────────────────────────────────────────
   {
     asin: "https://www.pcloud.com/",
-    title: "pCloud — Secure Lifetime Cloud Storage",
-    desc: "Swiss-hosted, zero-knowledge encryption. Store and share your digitized photo archive safely forever.",
+    title: "pCloud - Secure Cloud Storage",
+    desc: "Swiss data protection. Store, share and access all your files.",
     badge: "Storage",
     btnClass: "btn-primary",
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/home.png"
   },
   {
     asin: "https://www.pcloud.com/family",
-    title: "pCloud Family Plan — 2TB Shared Storage",
-    desc: "Share up to 2TB with 5 family members. Ideal for collaborative photo preservation projects.",
+    title: "pCloud Family Plan",
+    desc: "Share up to 2TB with up to 5 family members. Lifetime access.",
     badge: "Family",
     btnClass: "btn-secondary",
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/family.png"
   },
   {
     asin: "https://www.pcloud.com/crypto",
-    title: "pCloud Crypto — Client-Side Encryption",
-    desc: "Add an unbreakable encryption layer to your most sensitive family photos and documents.",
+    title: "pCloud Crypto",
+    desc: "Unbreakable client-side encryption for your most sensitive files.",
     badge: "Security",
     btnClass: "btn-secondary",
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
-
-  // ── Flatbed Scanners ────────────────────────────────────────────────────────
   {
-    asin: "B002OEBMRU",
-    title: "Epson Perfection V600 Photo Scanner",
-    desc: "4.7 ⭐ The gold standard for digitizing prints, negatives & slides. 6400 DPI optical resolution.",
-    badge: "Top Scanner",
+    asin: "B084NVRHYQ",
+    title: "KODAK Slide N Scan Film & Slide Scanner, 22MP, ...",
+    desc: "4.4 ⭐ $189.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81H1lORQx4L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81RdTfBiqfL._AC_UY218_.jpg"
   },
   {
-    asin: "B07G5X1N1H",
-    title: "Epson Perfection V39 Color Photo Scanner",
-    desc: "4.5 ⭐ Compact, affordable flatbed scanner for everyday photo digitizing at up to 4800 DPI.",
-    badge: "Best Value",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61xIHrRLLVL._AC_UY218_.jpg"
+    asin: "B086DX4253",
+    title: "Magnasonic All-in-One 24MP Film Scanner with La...",
+    desc: "4.3 ⭐ $129.98. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61BV-3K26RL._AC_UY218_.jpg"
   },
   {
-    asin: "B00017LSPI",
-    title: "Epson Perfection V550 Photo Scanner",
-    desc: "4.5 ⭐ Scan photos, film negatives & slides with Digital ICE technology for dust & scratch removal.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81sNVfJBHmL._AC_UY218_.jpg"
-  },
-
-  // ── Digital Photo Frames ────────────────────────────────────────────────────
-  {
-    asin: "B01N7ENHO6",
-    title: "Skylight Frame 10\" WiFi Digital Photo Frame",
-    desc: "4.7 ⭐ $139.99. Send photos from your phone instantly — perfect for sharing your digitized archive with family.",
+    asin: "B0FHDDP3P2",
+    title: "BEONEGLOBAL ClearScan MINI Film Scanner 16MP Sl...",
+    desc: "4.2 ⭐ $69.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61g7AsjFetL._AC_UY218_.jpg"
   },
   {
-    asin: "B088NHSVJN",
-    title: "BIGASUO 10.1\" Frameo WiFi Digital Photo Frame",
-    desc: "4.5 ⭐ $59.49. IPS touchscreen, app-controlled. A great gift for grandparents with your scanned family photos.",
+    asin: "B0B3F6KJJ2",
+    title: "KODAK Slide N Scan Max Negative & Slide Scanner...",
+    desc: "4.2 ⭐ $209.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61wezHCZynL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B008ASJ2Z8",
+    title: "Plustek OpticFilm 8200i SE , 35mm Film & Slide ...",
+    desc: "4 ⭐ $399.00. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/816yvfCOXwL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07MTKNTPK",
+    title: "KODAK Mobile Film Scanner, 35mm Negative Scanne...",
+    desc: "3.8 ⭐ $39.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71z8cGgjj-L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B00O2BU8PK",
+    title: "KODAK SCANZA Film & Slide Scanner, 3.5\" LCD, 35...",
+    desc: "4.2 ⭐ $158.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71EndQiuq-L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GJSBC2MR",
+    title: "PORTTA Film Scanner with 5\" LCD Screen, 22MP Sl...",
+    desc: "4.1 ⭐ $118.98. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61CCPl4oZnL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B09L7NDNFG",
+    title: "Plustek OpticFilm 8300i Ai Film Scanner - Ai St...",
+    desc: "4 ⭐ $539.00. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71r2DZgtA1L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81hYLRFLDwL._AC_UY218_.jpg"
   },
   {
-    asin: "B0GJ5D2XP6",
-    title: "AEEZO 10.1\" WiFi Digital Picture Frame 2K",
-    desc: "4.6 ⭐ $47.45. Crystal-clear 2K display — your scanned family photos look better than the originals.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71mEui6zWUL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0D8JDPKKS",
-    title: "Frameo 10.1\" Smart WiFi Digital Picture Frame",
-    desc: "4.7 ⭐ $59.99. Multi-user photo sharing with the Frameo app — stream from your digitized archive directly.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81mhPUK4EGL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B083SH697H",
-    title: "32GB FRAMEO 10.1\" Smart WiFi Digital Photo Frame",
-    desc: "4.6 ⭐ $54.99. Built-in 32GB storage — enough for thousands of your split and restored family photos.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71v8cZ36vwL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F8B93ZBM",
-    title: "64GB 15.6\" Frameo WiFi Digital Photo Frame",
-    desc: "4.6 ⭐ $99.99. Large 15.6\" display with 64GB storage — a stunning centrepiece for your photo archive.",
+    asin: "B0F8D5LXQ3",
+    title: "HP Film & Slide Scanner, 5\" Touchscreen, 13MP/2...",
+    desc: "4.3 ⭐ $229.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71WqsM-Og7L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71ZFXQmDFDL._AC_UY218_.jpg"
   },
   {
-    asin: "B0CQN2PKQR",
-    title: "15.6\" Frameo WiFi Digital Picture Frame — IPS",
-    desc: "4.5 ⭐ $99.99. Full HD IPS display, smooth Frameo app integration, ideal for showcasing your archive.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71oBxFQf-RL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FX9SR5N3",
-    title: "Miroir 10.1\" WiFi Digital Photo Frame via Frameo",
-    desc: "4.8 ⭐ $54.95. Highest-rated compact frame — vivid IPS display and whisper-quiet performance.",
+    asin: "B0FPMR96X6",
+    title: "HP Film & Slide Scanner, 7\" Touchscreen, 13MP/2...",
+    desc: "4.1 ⭐ $259.99. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71+zmYjpNYL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71xaLbJk3+L._AC_UY218_.jpg"
   },
   {
-    asin: "B0GR6YMKHX",
-    title: "Aura HD Carver Digital Picture Frame — 10.1\"",
-    desc: "4.7 ⭐ $148.70. Premium Aura frame with free unlimited cloud storage for all your photos.",
-    badge: "Premium",
+    asin: "B07ZXZRR24",
+    title: "Plustek OpticFilm 135i - Automatic Film & Slide...",
+    desc: "4.2 ⭐ $529.00. Get the best gear for your photography workflow.",
+    badge: "Storage",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81xccqjBJKL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81iOWstYVUL._AC_UY218_.jpg"
   },
   {
-    asin: "B09X4L9TDP",
-    title: "Nixplay 10.1\" Smart Digital Photo Frame",
-    desc: "4.5 ⭐ $99.00. Alexa-compatible digital frame with subscription-free cloud sharing for your archive.",
+    asin: "B0GCYJ3YJ5",
+    title: "35mm Film Scanner & Slide Scanner with 2.4\" LCD...",
+    desc: "3.8 ⭐ $54.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61fYt-TgMgL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07JJBGG1D",
+    title: "KODAK Mini Digital Film & Slide Scanner, 35mm, ...",
+    desc: "4.2 ⭐ $139.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71VVcLrr-jL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B09MHK6Q7D",
+    title: "Plustek OpticFilm 8300i SE - 35mm Negative Film...",
+    desc: "4 ⭐ $429.00. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81n6vOWEzNL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07GY1XCDY",
+    title: "KODAK SCANZA Digital Film & Slide Scanner (Rene...",
+    desc: "4.1 ⭐ $127.99. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/817pxOgxpdL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71f2yGDFRBL._AC_UY218_.jpg"
   },
-
-  // ── Photo Storage & Archiving ───────────────────────────────────────────────
   {
-    asin: "B07MVVLBTF",
-    title: "SanDisk 256GB Portable SSD Flash Drive",
-    desc: "4.7 ⭐ Rugged, pocket-sized SSD backup drive. The perfect place to store your split photo archive.",
-    badge: "Storage",
+    asin: "B084NVRHYQ",
+    title: "KODAK Slide N Scan Film & Slide Scanner, 22MP, ...",
+    desc: "4.4 ⭐ $189.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61cKaQF9u5L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81RdTfBiqfL._AC_UL320_.jpg"
   },
   {
-    asin: "B08L5G3YKP",
-    title: "Archival Photo Storage Boxes — Acid-Free (Set of 3)",
-    desc: "4.6 ⭐ Museum-quality, acid-free boxes to protect original prints during and after digitizing.",
-    badge: "Archival",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71kBRBKjekL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B09X4L9TDP",
-    title: "Epson EcoTank ET-7700 Wireless Photo Printer",
-    desc: "4.4 ⭐ Print your digitized photos at home. Borderless printing up to 8×10\" with vibrant ink.",
-    badge: "Print",
+    asin: "B0GJSBC2MR",
+    title: "PORTTA Film Scanner with 5\" LCD Screen, 22MP Sl...",
+    desc: "4.1 ⭐ $118.98. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/817pxOgxpdL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61CCPl4oZnL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0FPMR96X6",
+    title: "HP Film & Slide Scanner, 7\" Touchscreen, 13MP/2...",
+    desc: "4.1 ⭐ $259.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71xaLbJk3+L._AC_UL320_.jpg"
+  },
+  {
+    asin: "B07ZXZRR24",
+    title: "Plustek OpticFilm 135i - Automatic Film & Slide...",
+    desc: "4.2 ⭐ $529.00. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81iOWstYVUL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0FHDDP3P2",
+    title: "BEONEGLOBAL ClearScan MINI Film Scanner 16MP Sl...",
+    desc: "4.2 ⭐ $69.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61g7AsjFetL._AC_UL320_.jpg"
   }
 ];
 
