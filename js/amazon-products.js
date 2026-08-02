@@ -26,172 +26,132 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B084NVRHYQ",
-    title: "KODAK Slide N Scan Film & Slide Scanner, 22MP, ...",
-    desc: "4.4 ⭐ $189.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81RdTfBiqfL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B086DX4253",
-    title: "Magnasonic All-in-One 24MP Film Scanner with La...",
-    desc: "4.3 ⭐ $129.98. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61BV-3K26RL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FHDDP3P2",
-    title: "BEONEGLOBAL ClearScan MINI Film Scanner 16MP Sl...",
-    desc: "4.2 ⭐ $69.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61g7AsjFetL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0B3F6KJJ2",
-    title: "KODAK Slide N Scan Max Negative & Slide Scanner...",
-    desc: "4.2 ⭐ $209.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61wezHCZynL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B008ASJ2Z8",
-    title: "Plustek OpticFilm 8200i SE , 35mm Film & Slide ...",
-    desc: "4 ⭐ $399.00. Get the best gear for your photography workflow.",
+    asin: "B07S4GGHNR",
+    title: "SIMMAX 32GB Memory Stick USB 2.0 Flash Drives S...",
+    desc: "4.6 ⭐ $9.99. Get the best gear for your photography workflow.",
     badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/816yvfCOXwL._AC_UY218_.jpg"
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61AZvkftK7L._AC_UY218_.jpg"
   },
   {
-    asin: "B07MTKNTPK",
-    title: "KODAK Mobile Film Scanner, 35mm Negative Scanne...",
-    desc: "3.8 ⭐ $39.99. Get the best gear for your photography workflow.",
+    asin: "B08CRMBD93",
+    title: "SamData USB Flash Drive 8GB 1 Pack USB 2.0 Thum...",
+    desc: "4.6 ⭐ $7.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/613KCjhtiFL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B015CH1PJU",
+    title: "SANDISK 128GB Ultra Flair USB 3.0 Flash Drive, ...",
+    desc: "4.6 ⭐ $24.15. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71z8cGgjj-L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61DaP3ryRKL._AC_UY218_.jpg"
   },
   {
-    asin: "B00O2BU8PK",
-    title: "KODAK SCANZA Film & Slide Scanner, 3.5\" LCD, 35...",
-    desc: "4.2 ⭐ $158.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71EndQiuq-L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GJSBC2MR",
-    title: "PORTTA Film Scanner with 5\" LCD Screen, 22MP Sl...",
-    desc: "4.1 ⭐ $118.98. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61CCPl4oZnL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B09L7NDNFG",
-    title: "Plustek OpticFilm 8300i Ai Film Scanner - Ai St...",
-    desc: "4 ⭐ $539.00. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81hYLRFLDwL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F8D5LXQ3",
-    title: "HP Film & Slide Scanner, 5\" Touchscreen, 13MP/2...",
-    desc: "4.3 ⭐ $229.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71ZFXQmDFDL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FPMR96X6",
-    title: "HP Film & Slide Scanner, 7\" Touchscreen, 13MP/2...",
-    desc: "4.1 ⭐ $259.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71xaLbJk3+L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07ZXZRR24",
-    title: "Plustek OpticFilm 135i - Automatic Film & Slide...",
-    desc: "4.2 ⭐ $529.00. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81iOWstYVUL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GCYJ3YJ5",
-    title: "35mm Film Scanner & Slide Scanner with 2.4\" LCD...",
-    desc: "3.8 ⭐ $54.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61fYt-TgMgL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07JJBGG1D",
-    title: "KODAK Mini Digital Film & Slide Scanner, 35mm, ...",
-    desc: "4.2 ⭐ $139.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71VVcLrr-jL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B09MHK6Q7D",
-    title: "Plustek OpticFilm 8300i SE - 35mm Negative Film...",
-    desc: "4 ⭐ $429.00. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81n6vOWEzNL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07GY1XCDY",
-    title: "KODAK SCANZA Digital Film & Slide Scanner (Rene...",
-    desc: "4.1 ⭐ $127.99. Get the best gear for your photography workflow.",
+    asin: "B0F6NX2P3F",
+    title: "Kingston Exodia S USB Flash Drive 64GB",
+    desc: "4.4 ⭐ $8.95. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71f2yGDFRBL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61jFQyC+AfL._AC_UY218_.jpg"
   },
   {
-    asin: "B084NVRHYQ",
-    title: "KODAK Slide N Scan Film & Slide Scanner, 22MP, ...",
-    desc: "4.4 ⭐ $189.99. Get the best gear for your photography workflow.",
+    asin: "B07XSGNQ2X",
+    title: "2 Pack 64GB USB Flash Drive USB 2.0 Thumb Drive...",
+    desc: "4.5 ⭐ $17.04. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81RdTfBiqfL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/5175s67dwwL._AC_UY218_.jpg"
   },
   {
-    asin: "B0GJSBC2MR",
-    title: "PORTTA Film Scanner with 5\" LCD Screen, 22MP Sl...",
-    desc: "4.1 ⭐ $118.98. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
+    asin: "B09DBTWWSF",
+    title: "PNY 128GB Turbo Attaché 3 USB 3.0 Flash Drive, ...",
+    desc: "4.6 ⭐ $28.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61CCPl4oZnL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/61s1hIk7tXL._AC_UY218_.jpg"
   },
   {
-    asin: "B0FPMR96X6",
-    title: "HP Film & Slide Scanner, 7\" Touchscreen, 13MP/2...",
-    desc: "4.1 ⭐ $259.99. Get the best gear for your photography workflow.",
+    asin: "B0DH1MKVQV",
+    title: "Lexar D40E 128GB Dual USB 3.2 Gen 1 Type-C Jump...",
+    desc: "4.4 ⭐ $29.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/5170woTzckL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0H1G8JBBW",
+    title: "8GB Flash Drive ENUODA 1 Pack Thumb Drive 8GB U...",
+    desc: "4.4 ⭐ $6.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61UCH9EB+BL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07WGD7VW5",
+    title: "USB Flash Drive 32GB, Maspen Thumb Drive 2.0 Hi...",
+    desc: "4.5 ⭐ $8.99. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71xaLbJk3+L._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/51DKaFP6bEL._AC_UY218_.jpg"
   },
   {
-    asin: "B07ZXZRR24",
-    title: "Plustek OpticFilm 135i - Automatic Film & Slide...",
-    desc: "4.2 ⭐ $529.00. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81iOWstYVUL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0FHDDP3P2",
-    title: "BEONEGLOBAL ClearScan MINI Film Scanner 16MP Sl...",
-    desc: "4.2 ⭐ $69.99. Get the best gear for your photography workflow.",
+    asin: "B0F8VWPYNC",
+    title: "Swivel Design 16GB USB Flash Drive with Keychai...",
+    desc: "4.6 ⭐ $7.73. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61g7AsjFetL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/5182C62G4QL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B00BX5FOCK",
+    title: "SANDISK Cruzer Blade 64GB USB 2.0 Flash Drive- ...",
+    desc: "4.6 ⭐ $13.32. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61ERDR3tATL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0F989V56N",
+    title: "Lexar A30E USB 3.2 Gen 1 Flash Drive 64GB 3-Pac...",
+    desc: "4.6 ⭐ $33.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61nhW-Moj8L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0DHVQBQLQ",
+    title: "8GB Flash Drive 10 Pack Bulk USB Flash Drives, ...",
+    desc: "4.5 ⭐ $29.88. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71blLwEjZ9L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0DH1RGJY9",
+    title: "Lexar D40E 256GB Dual USB 3.2 Gen 1 Type-C Jump...",
+    desc: "4.4 ⭐ $49.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/51Kbs+Y2hcL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B007YX9O9E",
+    title: "SANDISK 32GB Cruzer Glide USB 2.0 Flash Drive -...",
+    desc: "4.7 ⭐ $13.83. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/711aQ7oxvhL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B083ZLJ5MG",
+    title: "SANDISK 512GB Ultra USB 3.0 Flash Drive - SDCZ4...",
+    desc: "4.6 ⭐ $78.00. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61T85CGI4ZL._AC_UY218_.jpg"
   }
 ];
 
