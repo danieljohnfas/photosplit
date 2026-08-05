@@ -26,220 +26,212 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B084SD48DM",
-    title: "Blink USB Flash Drive for local video storage w...",
-    desc: "4.5 ⭐ $14.99. Get the best gear for your photography workflow.",
+    asin: "B01LZJH63M",
+    title: "Plustek Photo Scanner ePhoto Z300, Scans 4x6 in...",
+    desc: "4.5 ⭐ $219.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/4181StaKQnL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81E0YcY1MQL._AC_UY218_.jpg"
   },
   {
-    asin: "B07DFYZ8FF",
-    title: "Aiibe 10 Pieces 32GB USB Flash Drive 10 Pack US...",
-    desc: "4.6 ⭐ $53.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71kBggJ6-uL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B015CH1PJU",
-    title: "SANDISK 128GB Ultra Flair USB 3.0 Flash Drive, ...",
-    desc: "4.6 ⭐ $24.15. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61DaP3ryRKL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0DH1MKVQV",
-    title: "Lexar D40E 128GB Dual USB 3.2 Gen 1 Type-C Jump...",
-    desc: "4.4 ⭐ $29.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/5170woTzckL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07XSGNQ2X",
-    title: "2 Pack 64GB USB Flash Drive USB 2.0 Thumb Drive...",
-    desc: "4.5 ⭐ $18.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/5175s67dwwL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07S4GGHNR",
-    title: "SIMMAX 32GB Memory Stick USB 2.0 Flash Drives S...",
-    desc: "4.6 ⭐ $9.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61AZvkftK7L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07C5P6K6V",
-    title: "KEXIN 16GB Flash Drive 10 Pack USB Flash Drive ...",
-    desc: "4.6 ⭐ $39.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61jFbOnmejL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B09DBTWWSF",
-    title: "PNY 128GB Turbo Attaché 3 USB 3.0 Flash Drive, ...",
-    desc: "4.6 ⭐ $27.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61s1hIk7tXL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B08CGXYNKV",
-    title: "128GB Flash Drive Aiibe USB Flash Drive 128 GB ...",
-    desc: "4.4 ⭐ $16.19. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51SmhZjEI0L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0DH1RGJY9",
-    title: "Lexar D40E 256GB Dual USB 3.2 Gen 1 Type-C Jump...",
-    desc: "4.4 ⭐ $49.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51Kbs+Y2hcL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F8VWPYNC",
-    title: "Swivel Design 16GB USB Flash Drive with Keychai...",
-    desc: "4.6 ⭐ $7.73. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/5182C62G4QL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07DFYZ8FF",
-    title: "Aiibe 10 Pieces 32GB USB Flash Drive 10 Pack US...",
-    desc: "4.6 ⭐ $53.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71kBggJ6-uL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0F989V56N",
-    title: "Lexar A30E USB 3.2 Gen 1 Flash Drive 64GB 3-Pac...",
-    desc: "4.6 ⭐ $33.99. Get the best gear for your photography workflow.",
+    asin: "B0CQ7D2DLX",
+    title: "Visioneer High-Speed Color Photo and Document S...",
+    desc: "4.2 ⭐ $499.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61nhW-Moj8L._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/61-hTTwPpWL._AC_UY218_.jpg"
   },
   {
-    asin: "B07PQF9X75",
-    title: "Aiibe 10 Pack 8GB USB Flash Drive Flash Drives ...",
-    desc: "4.6 ⭐ $35.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
+    asin: "B01LZJH63M",
+    title: "Plustek Photo Scanner ePhoto Z300, Scans 4x6 in...",
+    desc: "4.5 ⭐ $219.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71H3NZVlEPL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/81E0YcY1MQL._AC_UY218_.jpg"
   },
   {
-    asin: "B07C5P6K6V",
-    title: "KEXIN 16GB Flash Drive 10 Pack USB Flash Drive ...",
-    desc: "4.6 ⭐ $39.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61jFbOnmejL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0CSW6375K",
-    title: "JOIOT 128GB USB C Flash Drive Dual USB 3.0 Flas...",
-    desc: "4.4 ⭐ $25.99. Get the best gear for your photography workflow.",
+    asin: "B07DLX26BB",
+    title: "Epson FastFoto FF-680W High-Speed Duplex Photo ...",
+    desc: "4.5 ⭐ $598.00. Get the best gear for your photography workflow.",
     badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51GkKZt1VlL._AC_UL320_.jpg"
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71Ulr9Z9S6L._AC_UY218_.jpg"
   },
   {
-    asin: "B0CSW6375K",
-    title: "JOIOT 128GB USB C Flash Drive Dual USB 3.0 Flas...",
-    desc: "4.4 ⭐ $25.99. Get the best gear for your photography workflow.",
+    asin: "B0C364K1SC",
+    title: "Epson Perfection V19 II Flatbed Photo Scanner 4...",
+    desc: "3.9 ⭐ $70.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71iyq3c0OiL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07G5XZVLQ",
+    title: "Canon Canoscan Lide 300 Scanner (PDF, AUTOSCAN,...",
+    desc: "4.2 ⭐ $69.99. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51GkKZt1VlL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61p8GOXK6IS._AC_UY218_.jpg"
   },
   {
-    asin: "B0F989V56N",
-    title: "Lexar A30E USB 3.2 Gen 1 Flash Drive 64GB 3-Pac...",
-    desc: "4.6 ⭐ $33.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61nhW-Moj8L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0DHVQBQLQ",
-    title: "8GB Flash Drive 10 Pack Bulk USB Flash Drives, ...",
-    desc: "4.5 ⭐ $29.88. Get the best gear for your photography workflow.",
+    asin: "B073V879J5",
+    title: "ClearClick QuickConvert 2.0 Photo, Slide, and N...",
+    desc: "4.3 ⭐ $229.95. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71blLwEjZ9L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/A1jCgBfecRL._AC_UY218_.jpg"
   },
   {
-    asin: "B0DRXNKSD5",
-    title: "Amazon Basics 256GB USB Flash Drive, Thumb Driv...",
-    desc: "4.6 ⭐ $37.99. Get the best gear for your photography workflow.",
+    asin: "B0GVL1J22M",
+    title: "AMBIR Photo Scanner with Photo Cleaning Kit Bun...",
+    desc: "4.5 ⭐ $149.95. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61e5DyeexnL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0FS3BRMB3",
+    title: "ScanSnap iX2500 Photo Edition Wireless or USB H...",
+    desc: "4.4 ⭐ $474.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61HLpjQQjuL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07G5YBS1W",
+    title: "Canon CanoScan LiDE 400 Slim Scanner, 7.7\" x 14...",
+    desc: "4.1 ⭐ $89.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71ZSDHv9NRS._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0C35V1CLK",
+    title: "Epson Perfection V39 II Flatbed Photo Scanner 4...",
+    desc: "3.7 ⭐ $107.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71cV59d0gOL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GX1DZ6HB",
+    title: "Photo Scanner and Film Digitizer with 5” Large ...",
+    desc: "3.8 ⭐ $169.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61T+HCZrbnL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B091MDDQK9",
+    title: "Canon imageFORMULA RS40 - Photo and Document Sc...",
+    desc: "4 ⭐ $329.00. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/41maiQDzKYL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0F9B1H5VN",
+    title: "ScanSnap iX2500 Wireless or USB High-Speed Docu...",
+    desc: "4.4 ⭐ . Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/612vJX1V61L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B084NVRHYQ",
+    title: "KODAK Slide N Scan Film & Slide Scanner, 22MP, ...",
+    desc: "4.4 ⭐ $189.99. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/614CQHbdKcL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81RdTfBiqfL._AC_UY218_.jpg"
   },
   {
-    asin: "B00JES3MO0",
-    title: "Enfain 16GB USB 2.0 Flash Drive 10 Pack | Swive...",
-    desc: "4.6 ⭐ $35.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61SXsXKraVL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F989V56N",
-    title: "Lexar A30E USB 3.2 Gen 1 Flash Drive 64GB 3-Pac...",
-    desc: "4.6 ⭐ $33.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
+    asin: "B002Y4Z244",
+    title: "Epson Perfection V600 Photo Wired USB Connectiv...",
+    desc: "4 ⭐ $1,088.00. Get the best gear for your photography workflow.",
+    badge: "Essential",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61nhW-Moj8L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61IK69emp2L._AC_UY218_.jpg"
   },
   {
-    asin: "B007YX9O9E",
-    title: "SANDISK 32GB Cruzer Glide USB 2.0 Flash Drive -...",
-    desc: "4.7 ⭐ $14.99. Get the best gear for your photography workflow.",
+    asin: "B0C6NL3HFX",
+    title: "HP Small USB Document & Photo Scanner for Porta...",
+    desc: "4.3 ⭐ $139.99. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/711aQ7oxvhL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61q-Yvq-cKL._AC_UY218_.jpg"
   },
   {
-    asin: "B0DH1CQ5RL",
-    title: "Lexar D40E 64GB Dual USB 3.2 Gen 1 Type-C Jump ...",
-    desc: "4.4 ⭐ $22.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51ohr+jN+BL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0DSR9D4PL",
-    title: "PNY 256GB Attaché X USB 3.2 Gen 1 Flash Drive, ...",
-    desc: "4.5 ⭐ $29.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
+    asin: "B00E1O74SW",
+    title: "Epson Perfection V550 Color Photo, Image, Film,...",
+    desc: "4.3 ⭐ $1,014.00. Get the best gear for your photography workflow.",
+    badge: "Deal",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/41Oo++SA0+L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61TSYEi3eeL._AC_UY218_.jpg"
   },
   {
-    asin: "B00BX5FOCK",
-    title: "SANDISK Cruzer Blade 64GB USB 2.0 Flash Drive- ...",
-    desc: "4.6 ⭐ $13.90. Get the best gear for your photography workflow.",
+    asin: "B00OCEJMG8",
+    title: "Epson Perfection V850 Pro Photo Scanner 6400 DP...",
+    desc: "4.4 ⭐ $1,840.57. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61ERDR3tATL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71q34nS25rL._AC_UY218_.jpg"
   },
   {
-    asin: "B0DW8F12BW",
-    title: "32GB USB C Flash Drive Dual USB 3.0 Type C + US...",
-    desc: "4.4 ⭐ $15.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
+    asin: "B01HR89FNK",
+    title: "Epson FastFoto FF-640 High-Speed Photo Scanning...",
+    desc: "4.5 ⭐ $839.96. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51ruGlRQeVL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81iHJjQW1QL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B00OCEJM9K",
+    title: "Epson Perfection V800 Photo scanner",
+    desc: "4.3 ⭐ $1,278.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/715Mv0mJYUL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0CJY2RCMT",
+    title: "CZUR ET16 Plus Advanced Book & Document Scanner...",
+    desc: "4 ⭐ $409.00. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/716KNwkt4+L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B01LZJH63M",
+    title: "Plustek Photo Scanner ePhoto Z300, Scans 4x6 in...",
+    desc: "4.5 ⭐ $219.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81E0YcY1MQL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0CQ7D2DLX",
+    title: "Visioneer High-Speed Color Photo and Document S...",
+    desc: "4.2 ⭐ $499.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61-hTTwPpWL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B073V879J5",
+    title: "ClearClick QuickConvert 2.0 Photo, Slide, and N...",
+    desc: "4.3 ⭐ $229.95. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/A1jCgBfecRL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B07RKJ2V3N",
+    title: "CZUR Aura Pro Book & Document Scanner, Capture ...",
+    desc: "4.4 ⭐ $289.00. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61QaNM-ssUL._AC_UL320_.jpg"
   }
 ];
 
