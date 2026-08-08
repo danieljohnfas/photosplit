@@ -26,260 +26,132 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B01N7ENHO6",
-    title: "Skylight Digital Picture Frame, Load from Phone...",
-    desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0D8JDPKKS",
-    title: "Frameo 10.1 Inch WiFi Digital Picture Frame, Sm...",
-    desc: "4.7 ⭐ $59.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81mhPUK4EGL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B083SH697H",
-    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ...",
-    desc: "4.6 ⭐ $54.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71v8cZ36vwL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GJ5D2XP6",
-    title: "AEEZO Digital Picture Frame, 10.1 Inch Digital ...",
-    desc: "4.6 ⭐ $47.42. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71mEui6zWUL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0H4VR1949",
-    title: "10.1\" Battery-Powered Digital Picture Frame | 1...",
-    desc: "$99.00. Get the best gear for your photography workflow.",
+    asin: "B0GDQRNTF3",
+    title: "SANDISK 128GB Extreme PRO SD UHS-I Card - Up to...",
+    desc: "4.7 ⭐ $51.99. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71RT3YPgAOL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/719J6w3pB5L._AC_UY218_.jpg"
   },
   {
-    asin: "B0CRRHQD2T",
-    title: "Uhale 10.1 inch WiFi Touch Screen Digital Pictu...",
-    desc: "4.2 ⭐ $39.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71sa5bVRtDL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B09X4L9TDP",
-    title: "Nixplay Digital Picture Frame | 10.1\" Stunning ...",
-    desc: "4.5 ⭐ $139.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/817pxOgxpdL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0D8JDPKKS",
-    title: "Frameo 10.1 Inch WiFi Digital Picture Frame, Sm...",
-    desc: "4.7 ⭐ $59.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81mhPUK4EGL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F8B93ZBM",
-    title: "64GB 15.6\" Frameo Digital Picture Frame WiFi, L...",
-    desc: "4.5 ⭐ $129.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71WqsM-Og7L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GHHSLLSC",
-    title: "Digital Picture Frame 10.1 Inch Smart WiFi Phot...",
-    desc: "5 ⭐ $69.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71GRdSD-hTL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0CQN2PKQR",
-    title: "Digital Picture Frame, Frameo 15.6'' Digital Ph...",
-    desc: "4.5 ⭐ $99.96. Get the best gear for your photography workflow.",
+    asin: "B0G8L1RNPF",
+    title: "SANDISK 128GB Ultra microSD UHS-I Card - Up to ...",
+    desc: "4.7 ⭐ $34.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71oBxFQf-RL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/51UsBWNwbPL._AC_UY218_.jpg"
   },
   {
-    asin: "B01N7ENHO6",
-    title: "Skylight Digital Picture Frame, Load from Phone...",
-    desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
+    asin: "B0G8LS3LXG",
+    title: "SANDISK 128GB Ultra SDHC UHS-I Card and SDXC UH...",
+    desc: "4.4 ⭐ $35.99. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71HtQWwG1DL._AC_UY218_.jpg"
   },
   {
-    asin: "B0D8JDPKKS",
-    title: "Frameo 10.1 Inch WiFi Digital Picture Frame, Sm...",
-    desc: "4.7 ⭐ $59.99. Get the best gear for your photography workflow.",
+    asin: "B09X7FXHVJ",
+    title: "SANDISK 128GB Extreme PRO SDXC UHS-I Memory Car...",
+    desc: "4.8 ⭐ . Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81mhPUK4EGL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/81wwLOgkLgL._AC_UY218_.jpg"
   },
   {
-    asin: "B0F8B93ZBM",
-    title: "64GB 15.6\" Frameo Digital Picture Frame WiFi, L...",
-    desc: "4.5 ⭐ $129.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71WqsM-Og7L._AC_UL320_.jpg"
-  },
-  {
-    asin: "B088NHSVJN",
-    title: "BIGASUO Digital Picture Frame, 10.1\" Frameo Dig...",
-    desc: "4.5 ⭐ $69.99. Get the best gear for your photography workflow.",
+    asin: "B0C43XLSWX",
+    title: "SanDisk 128GB SDXC Memory Card 200MB/ | 200MB/s...",
+    desc: "4.7 ⭐ $99.99. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71r2DZgtA1L._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71Tk8ARHOHL._AC_UY218_.jpg"
   },
   {
-    asin: "B0D4TLG3GD",
-    title: "Euphro 15.6'' Digital Picture Frame with 1920x1...",
-    desc: "4.4 ⭐ $99.99. Get the best gear for your photography workflow.",
+    asin: "B0D6KKG2RK",
+    title: "2 Pack TF Card 128GB with Adapter, High Speed M...",
+    desc: "4.5 ⭐ $44.99. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71hrQeSBR8L._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/51DObjekhlL._AC_UY218_.jpg"
   },
   {
-    asin: "B088NHSVJN",
-    title: "BIGASUO Digital Picture Frame, 10.1\" Frameo Dig...",
-    desc: "4.5 ⭐ $69.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71r2DZgtA1L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B00442VXCO",
-    title: "Aluratek 8 Inch LCD Digital Photo Frame with Au...",
-    desc: "4.2 ⭐ $34.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61RIfxXptqL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0CY8FJCFN",
-    title: "Uhale 21.5 Inch Large Digital Picture Frame WiF...",
-    desc: "4.5 ⭐ $169.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81X8LMktLtL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FV857P1H",
-    title: "Digital Picture Frame, 10.1 Inch Picture Frame ...",
-    desc: "4.5 ⭐ $47.97. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71dRBhjR34L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B01N7ENHO6",
-    title: "Skylight Digital Picture Frame, Load from Phone...",
-    desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
+    asin: "B07YFGG1SD",
+    title: "SanDisk 128GB Ultra SDXC UHS-I Memory Card - 10...",
+    desc: "4.7 ⭐ $32.41. Get the best gear for your photography workflow.",
     badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UY218_.jpg"
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/619vrnD+NoL._AC_UY218_.jpg"
   },
   {
-    asin: "B0F8B93ZBM",
-    title: "64GB 15.6\" Frameo Digital Picture Frame WiFi, L...",
-    desc: "4.5 ⭐ $129.99. Get the best gear for your photography workflow.",
+    asin: "B0GRZVVHWM",
+    title: "5-Pack 128GB Micro SD Card for Dashcam & Securi...",
+    desc: "4.1 ⭐ $88.89. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71WqsM-Og7L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/716tr7zmxkL._AC_UY218_.jpg"
   },
   {
-    asin: "B0GJ2XCZV2",
-    title: "Digital Picture Frame 15.6 Inch Digital Photo F...",
-    desc: "4.5 ⭐ $99.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71eAGFCg+KL._AC_UY218_.jpg"
+    asin: "B0D6KJH17Y",
+    title: "2 Pack Memory Card 128GB with Adapter, High Spe...",
+    desc: "4.5 ⭐ $39.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/51n7oi7GDzL._AC_UY218_.jpg"
   },
   {
-    asin: "B0CYZLWG1S",
-    title: "Dragon Touch 10.1'' WIFI Digital Picture Frame ...",
-    desc: "4.5 ⭐ $49.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/712uVn8vstL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FN7TSXN2",
-    title: "64GB Frameo 15.6\" Digital Picture Frame Large 1...",
-    desc: "4.5 ⭐ $99.97. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81Ek-j3N5pL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0DHCZ3L9F",
-    title: "Uhale Digital Picture Frame 10.1 Inch HD Touch ...",
-    desc: "4.2 ⭐ $39.99. Get the best gear for your photography workflow.",
+    asin: "B09S52Y575",
+    title: "PNY 128GB Elite C10 U1 V10 SDXC Flash Memory Ca...",
+    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71kBWuvAKKL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61rmxqy6XsL._AC_UY218_.jpg"
   },
   {
-    asin: "B0H25WSGS6",
-    title: "ARZOPA 2K Digital Picture Frame 14 Inch Free Cl...",
-    desc: "4.6 ⭐ $214.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
+    asin: "B08TJRVWV1",
+    title: "Amazon Basics microSDXC Memory Card with Full S...",
+    desc: "4.7 ⭐ $33.24. Get the best gear for your photography workflow.",
+    badge: "Popular",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71omJKBdLgL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61VgI87HGgL._AC_UY218_.jpg"
   },
   {
-    asin: "B01N7ENHO6",
-    title: "Skylight Digital Picture Frame, Load from Phone...",
-    desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
+    asin: "B0G8LT6J46",
+    title: "SANDISK 128GB Extreme SD UHS-I Card - Up to 230...",
+    desc: "4.5 ⭐ $44.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71hkTYnMGcL._AC_UY218_.jpg"
   },
   {
-    asin: "B09X4L9TDP",
-    title: "Nixplay Digital Picture Frame | 10.1\" Stunning ...",
-    desc: "4.5 ⭐ $139.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/817pxOgxpdL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0D8JDPKKS",
-    title: "Frameo 10.1 Inch WiFi Digital Picture Frame, Sm...",
-    desc: "4.7 ⭐ $59.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81mhPUK4EGL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B088NHSVJN",
-    title: "BIGASUO Digital Picture Frame, 10.1\" Frameo Dig...",
-    desc: "4.5 ⭐ $69.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71r2DZgtA1L._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0F8B93ZBM",
-    title: "64GB 15.6\" Frameo Digital Picture Frame WiFi, L...",
-    desc: "4.5 ⭐ $129.99. Get the best gear for your photography workflow.",
+    asin: "B0FS1D5VG4",
+    title: "Micro SDXC 128GB Memory Card, MindStor 90MB/s R...",
+    desc: "4.4 ⭐ $23.99. Get the best gear for your photography workflow.",
     badge: "Essential",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/613a+WwQc0L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0B7NVV55M",
+    title: "SANDISK 128GB (2-Pack) Ultra microSDXC UHS-I Me...",
+    desc: "4.7 ⭐ $65.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71WqsM-Og7L._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71Ow-Ih7KNL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0B7NTY2S6",
+    title: "SANDISK 128GB Ultra microSDXC UHS-I Memory Card...",
+    desc: "4.7 ⭐ $36.50. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71HMMAm+TlL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0F596VYR3",
+    title: "Micro SDXC Memory Card 128GB 5 Pack, Speederlas...",
+    desc: "4.6 ⭐ $99.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61hBwaa5mUL._AC_UY218_.jpg"
   }
 ];
 
