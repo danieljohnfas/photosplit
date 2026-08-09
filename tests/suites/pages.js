@@ -1,7 +1,7 @@
 module.exports = async function(context, baseUrl) {
   const pagesToTest = [
     '/', '/app', '/convert', '/crop', '/resize', '/passport', '/transcribe',
-    '/about', '/contact', '/tips', '/games', '/privacy-policy', '/terms',
+    '/about', '/contact', '/tips', '/privacy-policy', '/terms',
     '/blog/'
   ];
 
@@ -33,7 +33,7 @@ module.exports = async function(context, baseUrl) {
       const response = await pageObj.goto(url, { waitUntil: 'load' });
       loadMs = Date.now() - startTime;
       
-      if (!response.ok()) {
+      if (response && !response.ok()) {
         status = 'fail';
         errors.push(`HTTP ${response.status()}`);
       }

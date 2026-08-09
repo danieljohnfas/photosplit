@@ -17,7 +17,9 @@ const mimeTypes = {
 };
 
 const server = http.createServer((req, res) => {
-  let filePath = path.join(ROOT, req.url === '/' ? 'index.html' : req.url);
+  const parsedUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+  const pathname = parsedUrl.pathname;
+  let filePath = path.join(ROOT, pathname === '/' ? 'index.html' : pathname);
   
   // Handle extensionless HTML paths
   if (!path.extname(filePath) && fs.existsSync(filePath + '.html')) {
