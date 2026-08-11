@@ -26,172 +26,260 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B08HN37XC1",
-    title: "SANDISK 2TB Extreme Portable SSD (Old Model) - ...",
-    desc: "4.6 ⭐ $316.96. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61zuR3UMnWL._AC_UY218_.jpg"
+    asin: "B07XG2X54Z",
+    title: "GIGASTONE 128GB Micro SD Card 2-Pack, A1 V30 4K...",
+    desc: "4.6 ⭐ $68.98. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/6135X0P2cML._AC_UY218_.jpg"
   },
   {
-    asin: "B0GMWYYRQL",
-    title: "SANDISK 1TB Extreme Portable SSD (New Model) - ...",
-    desc: "4.6 ⭐ $221.61. Get the best gear for your photography workflow.",
+    asin: "B0CPDH6YVR",
+    title: "Lexar E-Series 128GB 5 PK Micro SD Card microSD...",
+    desc: "4.7 ⭐ $149.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/713UXyxpxtL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GDQRNTF3",
+    title: "SANDISK 128GB Extreme PRO SD UHS-I Card - Up to...",
+    desc: "4.7 ⭐ $51.99. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71u6LfJqm-L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/719J6w3pB5L._AC_UY218_.jpg"
   },
   {
-    asin: "B0DMTVGPH8",
-    title: "OWC Envoy Ultra 2TB Thunderbolt 5 Portable NVMe...",
-    desc: "4.3 ⭐ $699.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
+    asin: "B0G8LS3LXG",
+    title: "SANDISK 128GB Ultra SDHC UHS-I Card and SDXC UH...",
+    desc: "4.5 ⭐ $35.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61hcV+gPsmL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71HtQWwG1DL._AC_UY218_.jpg"
   },
   {
-    asin: "B0FV8D5Y4D",
-    title: "UnionSine 500GB Ultra Slim Portable External Ha...",
-    desc: "4.4 ⭐ $37.46. Get the best gear for your photography workflow.",
+    asin: "B07YFGG1SD",
+    title: "SanDisk 128GB Ultra SDXC UHS-I Memory Card - 10...",
+    desc: "4.7 ⭐ $32.49. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/619vrnD+NoL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0G8L1RNPF",
+    title: "SANDISK 128GB Ultra microSD UHS-I Card - Up to ...",
+    desc: "4.6 ⭐ $34.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/51UsBWNwbPL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B093BTSZ55",
+    title: "【5-Years Data Recovery】 GIGASTONE 128GB SD Card...",
+    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61XbnUE8ipL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/51RvgV9EgWL._AC_UY218_.jpg"
   },
   {
-    asin: "B0CF4SQY1X",
-    title: "Aiolo Innovation 500GB External Hard Drive Ultr...",
-    desc: "4.5 ⭐ $39.58. Get the best gear for your photography workflow.",
-    badge: "Essential",
+    asin: "B0B7NS71G2",
+    title: "SANDISK 128GB Ultra SDXC UHS-I Memory Card - Up...",
+    desc: "4.7 ⭐ $33.13. Get the best gear for your photography workflow.",
+    badge: "Storage",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81RoNL1vovL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/61U2kZ3XZnL._AC_UY218_.jpg"
   },
   {
-    asin: "B07C812LHQ",
-    title: "Maxone 1TB Ultra Slim Portable External Hard Dr...",
-    desc: "4.4 ⭐ $77.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/512GIzpH8lL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0FPHRQLD2",
-    title: "Lexar 2TB ES5 Magnetic External SSD, Up to 2000...",
-    desc: "4.5 ⭐ $269.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/41BwcHrf8KL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0C5JQ68FY",
-    title: "SANDISK 1TB Portable SSD - Up to 800MB/s, USB-C...",
-    desc: "4.5 ⭐ $165.70. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71bBCTIvIIL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0874XN4D8",
-    title: "Samsung T7 Portable SSD 1TB Titan Gray, USB 3.2...",
-    desc: "4.7 ⭐ $213.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/91YfRIy7kYL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0BGKXX9TK",
-    title: "SSK Portable SSD 500GB External Solid State Har...",
-    desc: "4.5 ⭐ $89.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71VtTtHU7DL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07CRG94G3",
-    title: "Seagate Portable 2TB External Hard Drive HDD — ...",
-    desc: "4.6 ⭐ $129.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/41MuI-7iHIL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0BGL4SHY8",
-    title: "SSK Portable SSD 1TB External Solid State Hard ...",
-    desc: "4.5 ⭐ $143.99. Get the best gear for your photography workflow.",
+    asin: "B0D6KKG2RK",
+    title: "2 Pack TF Card 128GB with Adapter, High Speed M...",
+    desc: "4.5 ⭐ $44.99. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71-8LPwxb7L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/51DObjekhlL._AC_UY218_.jpg"
   },
   {
-    asin: "B0CHFSWM2P",
-    title: "Samsung T9 Portable SSD 1TB, USB 3.2 Gen 2x2 Ex...",
-    desc: "4.6 ⭐ $234.72. Get the best gear for your photography workflow.",
-    badge: "Essential",
+    asin: "B08TJRVWV1",
+    title: "Amazon Basics microSDXC Memory Card with Full S...",
+    desc: "4.7 ⭐ $33.24. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61VgI87HGgL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B09X7FXHVJ",
+    title: "SANDISK 128GB Extreme PRO SDXC UHS-I Memory Car...",
+    desc: "4.8 ⭐ $46.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81wwLOgkLgL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B093BTSZ55",
+    title: "【5-Years Data Recovery】 GIGASTONE 128GB SD Card...",
+    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71EESd1deTL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/51RvgV9EgWL._AC_UL320_.jpg"
   },
   {
-    asin: "B0F3368QFL",
-    title: "Crucial X10 6TB Portable SSD, Up to 2,100MB/s, ...",
-    desc: "4.5 ⭐ . Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/41rI1J9FcZL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0874XWW23",
-    title: "Samsung T7 Portable SSD 2TB Titan Gray, USB 3.2...",
-    desc: "4.7 ⭐ $394.89. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/91YfRIy7kYL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B08GTYFC37",
-    title: "SANDISK 1TB Extreme Portable SSD (Old Model) - ...",
-    desc: "4.6 ⭐ . Get the best gear for your photography workflow.",
+    asin: "B07XD1WCQP",
+    title: "GIGASTONE 128GB SD Card 2-Pack, Camera Plus, UH...",
+    desc: "4.6 ⭐ $78.98. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61zuR3UMnWL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/51PF1wlBVhL._AC_UL320_.jpg"
   },
   {
-    asin: "B0CGW1FQV4",
-    title: "Crucial X9 1TB Portable SSD, Up to 1050MB/s, US...",
-    desc: "4.5 ⭐ $152.77. Get the best gear for your photography workflow.",
+    asin: "B07XG2X54Z",
+    title: "GIGASTONE 128GB Micro SD Card 2-Pack, A1 V30 4K...",
+    desc: "4.6 ⭐ $68.98. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/6135X0P2cML._AC_UL320_.jpg"
+  },
+  {
+    asin: "B07LBSBX5L",
+    title: "【5-Years Data Recovery】 GIGASTONE 128GB Micro S...",
+    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71+nKH03X0S._AC_UL320_.jpg"
+  },
+  {
+    asin: "B09XR2MTHK",
+    title: "Lexar E-Series 128GB 2 PK Micro SD Card microSD...",
+    desc: "4.7 ⭐ $69.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/51fwmXWGrNL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B07XD1WCQP",
+    title: "GIGASTONE 128GB SD Card 2-Pack, Camera Plus, UH...",
+    desc: "4.6 ⭐ $78.98. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/51PF1wlBVhL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0G8LT6J46",
+    title: "SANDISK 128GB Extreme SD UHS-I Card - Up to 230...",
+    desc: "4.6 ⭐ $44.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71hkTYnMGcL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B09S52Y575",
+    title: "PNY 128GB Elite C10 U1 V10 SDXC Flash Memory Ca...",
+    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61rmxqy6XsL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0D6KJH17Y",
+    title: "2 Pack Memory Card 128GB with Adapter, High Spe...",
+    desc: "4.5 ⭐ $39.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/51n7oi7GDzL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0H8CLCKZV",
+    title: "SD Card 128GB with Adapter,Memory Card 128GB,UH...",
+    desc: "5 ⭐ $19.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/51xS7AcpSuL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07LBSBX5L",
+    title: "【5-Years Data Recovery】 GIGASTONE 128GB Micro S...",
+    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71+nKH03X0S._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0B7NVV55M",
+    title: "SANDISK 128GB (2-Pack) Ultra microSDXC UHS-I Me...",
+    desc: "4.7 ⭐ $67.82. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71Ow-Ih7KNL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GRZVVHWM",
+    title: "5-Pack 128GB Micro SD Card for Dashcam & Securi...",
+    desc: "4.1 ⭐ $88.89. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/716tr7zmxkL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0BDYVC5TD",
+    title: "SanDisk 128GB Ultra microSDXC UHS-I Memory Card...",
+    desc: "4.8 ⭐ $30.89. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/51FeeXHe1nL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0G8LLXFJH",
+    title: "SANDISK 128GB Extreme microSD UHS-I Card - Up t...",
+    desc: "4.8 ⭐ $39.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61Eo50aAKpL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0BZSCQH41",
+    title: "【5-Years Data Recovery】 GIGASTONE 128GB SD Card...",
+    desc: "4.5 ⭐ $54.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/51PuiQVEoXL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B093BTSZ55",
+    title: "【5-Years Data Recovery】 GIGASTONE 128GB SD Card...",
+    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/41n+bV47yGL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/51RvgV9EgWL._AC_UL320_.jpg"
   },
   {
-    asin: "B0DYDHLN81",
-    title: "Lexar ES3 1TB Portable SSD Silver, USB 3.2 Gen ...",
-    desc: "4.4 ⭐ $169.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
+    asin: "B07XD1WCQP",
+    title: "GIGASTONE 128GB SD Card 2-Pack, Camera Plus, UH...",
+    desc: "4.6 ⭐ $78.98. Get the best gear for your photography workflow.",
+    badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51xD2RTskKL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/51PF1wlBVhL._AC_UL320_.jpg"
   },
   {
-    asin: "B0FPHRQLD2",
-    title: "Lexar 2TB ES5 Magnetic External SSD, Up to 2000...",
-    desc: "4.5 ⭐ $269.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
+    asin: "B07XG2X54Z",
+    title: "GIGASTONE 128GB Micro SD Card 2-Pack, A1 V30 4K...",
+    desc: "4.6 ⭐ $68.98. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/41BwcHrf8KL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/6135X0P2cML._AC_UL320_.jpg"
   },
   {
-    asin: "B08GV9M64L",
-    title: "SANDISK 1TB Extreme PRO Portable SSD - Up to 20...",
-    desc: "4.5 ⭐ $237.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
+    asin: "B07LBSBX5L",
+    title: "【5-Years Data Recovery】 GIGASTONE 128GB Micro S...",
+    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71z2lEHwfNL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71+nKH03X0S._AC_UL320_.jpg"
   },
   {
-    asin: "B09VLHR4JC",
-    title: "Samsung T7 Shield Portable SSD 2TB, USB 3.2 Gen...",
-    desc: "4.7 ⭐ $526.46. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61CKrZWOcrL._AC_UY218_.jpg"
+    asin: "B09XR2MTHK",
+    title: "Lexar E-Series 128GB 2 PK Micro SD Card microSD...",
+    desc: "4.7 ⭐ $69.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/51fwmXWGrNL._AC_UL320_.jpg"
   }
 ];
 
