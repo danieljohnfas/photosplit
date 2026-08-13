@@ -26,132 +26,212 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B01LZJH63M",
-    title: "Plustek Photo Scanner ePhoto Z300, Scans 4x6 in...",
-    desc: "4.5 ⭐ $219.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81E0YcY1MQL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07DLX26BB",
-    title: "Epson FastFoto FF-680W High-Speed Duplex Photo ...",
-    desc: "4.5 ⭐ $629.00. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/712gmXfm-9L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07G5XZVLQ",
-    title: "Canon Canoscan Lide 300 Scanner (PDF, AUTOSCAN,...",
-    desc: "4.2 ⭐ $75.00. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61p8GOXK6IS._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0C364K1SC",
-    title: "Epson Perfection V19 II Flatbed Photo Scanner 4...",
-    desc: "3.9 ⭐ $89.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71iyq3c0OiL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GVL1J22M",
-    title: "AMBIR Photo Scanner with Photo Cleaning Kit Bun...",
-    desc: "4.5 ⭐ $149.95. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61e5DyeexnL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FS3BRMB3",
-    title: "ScanSnap iX2500 Photo Edition Wireless or USB H...",
-    desc: "4.4 ⭐ $474.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61HLpjQQjuL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B091MDDQK9",
-    title: "Canon imageFORMULA RS40 - Photo and Document Sc...",
-    desc: "4 ⭐ $329.00. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/41maiQDzKYL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07G5YBS1W",
-    title: "Canon CanoScan LiDE 400 Slim Scanner, 7.7\" x 14...",
-    desc: "4.1 ⭐ $97.00. Get the best gear for your photography workflow.",
+    asin: "B07CRG94G3",
+    title: "Seagate Portable 2TB External Hard Drive HDD — ...",
+    desc: "4.6 ⭐ $129.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71ZSDHv9NRS._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0C35V1CLK",
-    title: "Epson Perfection V39 II Flatbed Photo Scanner 4...",
-    desc: "3.7 ⭐ $119.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71cV59d0gOL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/41MuI-7iHIL._AC_UY218_.jpg"
   },
   {
-    asin: "B073V879J5",
-    title: "ClearClick QuickConvert 2.0 Photo, Slide, and N...",
-    desc: "4.2 ⭐ $229.95. Get the best gear for your photography workflow.",
+    asin: "B0DMTVGPH8",
+    title: "OWC Envoy Ultra 2TB Thunderbolt 5 Portable NVMe...",
+    desc: "4.3 ⭐ $699.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61hcV+gPsmL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0BGXZRKQN",
+    title: "Toshiba Canvio Partner 2TB Portable 2.5’’ Exter...",
+    desc: "4.5 ⭐ $114.23. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/A1jCgBfecRL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/817eP8ZuvrL._AC_UY218_.jpg"
   },
   {
-    asin: "B0F9B1H5VN",
-    title: "ScanSnap iX2500 Wireless or USB High-Speed Docu...",
-    desc: "4.3 ⭐ . Get the best gear for your photography workflow.",
+    asin: "B0744NCY4K",
+    title: "ADATA HD710 Pro - 2 TB External Hard Drive - Sh...",
+    desc: "4.6 ⭐ $124.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71DI8ShgwTL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07CRG94G3",
+    title: "Seagate Portable 2TB External Hard Drive HDD — ...",
+    desc: "4.6 ⭐ $129.99. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/612vJX1V61L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/41MuI-7iHIL._AC_UY218_.jpg"
   },
   {
-    asin: "B084NVRHYQ",
-    title: "KODAK Slide N Scan Film & Slide Scanner, 22MP, ...",
-    desc: "4.4 ⭐ $189.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81RdTfBiqfL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B083R36CY4",
-    title: "Brother DS-640 Compact Mobile Document Scanner,...",
-    desc: "4.3 ⭐ $134.99. Get the best gear for your photography workflow.",
+    asin: "B07CRGSR16",
+    title: "Seagate 4TB Portable Hard Drive | USB 3.0 (STGX...",
+    desc: "4.6 ⭐ $159.99. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51Gy2ymW70L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/41MuI-7iHIL._AC_UY218_.jpg"
   },
   {
-    asin: "B07KQZWPYN",
-    title: "Epson Workforce ES-50 Compact & Lightweight Mob...",
-    desc: "4.3 ⭐ $129.99. Get the best gear for your photography workflow.",
+    asin: "B0B9MRHDRP",
+    title: "iDiskk MFi Certified 2TB External Hard Drive fo...",
+    desc: "4.3 ⭐ $179.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61LeQjpJs5L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07VTFN6HM",
+    title: "WD 2TB My Passport, Portable External Hard Driv...",
+    desc: "4.6 ⭐ $141.00. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/510+J06fz0L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B01N7QFZLQ",
+    title: "LaCie Rugged USB-C 2TB External Hard Drive Port...",
+    desc: "4.7 ⭐ $149.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/5186q1u92zL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71k9PA7B3nL._AC_UY218_.jpg"
   },
   {
-    asin: "B00E1O74SW",
-    title: "Epson Perfection V550 Color Photo, Image, Film,...",
-    desc: "4.2 ⭐ $1,025.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
+    asin: "B06W55K9N6",
+    title: "WD 2TB Elements Portable External Hard Drive fo...",
+    desc: "4.7 ⭐ $143.88. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/6136gJAGRbL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07DD5TJXM",
+    title: "ADATA HD330 2TB USB 3.1 Shock-Resistant Extra S...",
+    desc: "4.7 ⭐ $127.39. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61TSYEi3eeL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71-VW-rTXfL._AC_UY218_.jpg"
   },
   {
-    asin: "B002Y4Z244",
-    title: "Epson Perfection V600 Photo Wired USB Connectiv...",
-    desc: "4 ⭐ . Get the best gear for your photography workflow.",
+    asin: "B07VHZX45J",
+    title: "Avolusion 2TB USB 3.0 Portable External Hard Dr...",
+    desc: "4 ⭐ $129.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/413ugLttlgL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07VS8QCXC",
+    title: "Seagate Portable 5TB External Hard Drive HDD – ...",
+    desc: "4.6 ⭐ $219.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/41MuI-7iHIL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0G56476HZ",
+    title: "Avolusion M3 Series 2TB USB 3.0 Portable Extern...",
+    desc: "3.5 ⭐ $93.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/51TKXUgWylL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B08HN37XC1",
+    title: "SANDISK 2TB Extreme Portable SSD (Old Model) - ...",
+    desc: "4.6 ⭐ $296.44. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61zuR3UMnWL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07B4KXTQK",
+    title: "Transcend StoreJet 2TB Rugged External Hard Dri...",
+    desc: "4.6 ⭐ $145.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71ANWItmjuL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B087PXF8NC",
+    title: "Avolusion HD250U3 2TB USB 3.0 Portable External...",
+    desc: "4 ⭐ $129.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/41ujq+CIZeL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B08JKGG97R",
+    title: "Toshiba Canvio Advance 2TB Portable External Ha...",
+    desc: "4.6 ⭐ $139.00. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81EFDYBAkyL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B06XH2ZDXW",
+    title: "SP Silicon Power 2TB Rugged Portable External H...",
+    desc: "4.7 ⭐ $159.97. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61G0W6lqlWL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B08JKJ9XLN",
+    title: "Toshiba Canvio Gaming 2TB Portable External Har...",
+    desc: "4.7 ⭐ $168.41. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71sqw3qtLkL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07CRG7BBH",
+    title: "Seagate Portable 1TB External Hard Drive HDD – ...",
+    desc: "4.6 ⭐ $112.84. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/41MuI-7iHIL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0FV8D5Y4D",
+    title: "UnionSine 500GB Ultra Slim Portable External Ha...",
+    desc: "4.4 ⭐ $37.46. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61XbnUE8ipL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0DMTVGPH8",
+    title: "OWC Envoy Ultra 2TB Thunderbolt 5 Portable NVMe...",
+    desc: "4.3 ⭐ $699.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61IK69emp2L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61hcV+gPsmL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0B9MRHDRP",
+    title: "iDiskk MFi Certified 2TB External Hard Drive fo...",
+    desc: "4.3 ⭐ $179.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61LeQjpJs5L._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0GSDNJ9HD",
+    title: "iDiskk App-le Certified 500GB External Hard Dri...",
+    desc: "4 ⭐ $94.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61PMXOqjqkL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0H85XNXXM",
+    title: "1TB External Hard Drive,USB 3.0 for PC, Mac, De...",
+    desc: "4.7 ⭐ $73.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71xymMewl5L._AC_UL320_.jpg"
   }
 ];
 
