@@ -26,260 +26,132 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B07XG2X54Z",
-    title: "GIGASTONE 128GB Micro SD Card 2-Pack, A1 V30 4K...",
-    desc: "4.6 ⭐ $68.98. Get the best gear for your photography workflow.",
+    asin: "B01LZJH63M",
+    title: "Plustek Photo Scanner ePhoto Z300, Scans 4x6 in...",
+    desc: "4.5 ⭐ $219.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81E0YcY1MQL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07DLX26BB",
+    title: "Epson FastFoto FF-680W High-Speed Duplex Photo ...",
+    desc: "4.5 ⭐ $629.00. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/712gmXfm-9L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0HCB5S3N4",
+    title: "Photo, Slide & Negative Scanner with 5” Large S...",
+    desc: "5 ⭐ $169.99. Get the best gear for your photography workflow.",
     badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/6135X0P2cML._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GX271Z3Y",
-    title: "2 Pack 128GB Micro SD Card with Adapter High Sp...",
-    desc: "3.9 ⭐ $45.98. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51SpA2p9+WL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71Q1KiPfbcL._AC_UY218_.jpg"
   },
   {
-    asin: "B0GDQRNTF3",
-    title: "SANDISK 128GB Extreme PRO SD UHS-I Card - Up to...",
-    desc: "4.7 ⭐ $51.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/719J6w3pB5L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07YFGG1SD",
-    title: "SanDisk 128GB Ultra SDXC UHS-I Memory Card - 10...",
-    desc: "4.7 ⭐ $33.06. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/619vrnD+NoL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0G8LS3LXG",
-    title: "SANDISK 128GB Ultra SDHC UHS-I Card and SDXC UH...",
-    desc: "4.5 ⭐ $35.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71HtQWwG1DL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0G8L1RNPF",
-    title: "SANDISK 128GB Ultra microSD UHS-I Card - Up to ...",
-    desc: "4.6 ⭐ $34.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51UsBWNwbPL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B093BTSZ55",
-    title: "【5-Years Data Recovery】 GIGASTONE 128GB SD Card...",
-    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51RvgV9EgWL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B08TJRVWV1",
-    title: "Amazon Basics microSDXC Memory Card with Full S...",
-    desc: "4.7 ⭐ $33.24. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61VgI87HGgL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0D6KKG2RK",
-    title: "2 Pack TF Card 128GB with Adapter, High Speed M...",
-    desc: "4.5 ⭐ $44.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51DObjekhlL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0HBKP3CTS",
-    title: "2-Pack 128G Micro SD Card, microSDXC TF Card UH...",
-    desc: "5 ⭐ $39.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71mLBJWxL9L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B09S52Y575",
-    title: "PNY 128GB Elite C10 U1 V10 SDXC Flash Memory Ca...",
-    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61rmxqy6XsL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07XD1WCQP",
-    title: "GIGASTONE 128GB SD Card 2-Pack, Camera Plus, UH...",
-    desc: "4.6 ⭐ $78.98. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51PF1wlBVhL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B09X7FXHVJ",
-    title: "SANDISK 128GB Extreme PRO SDXC UHS-I Memory Car...",
-    desc: "4.8 ⭐ $46.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81wwLOgkLgL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B093BTSZ55",
-    title: "【5-Years Data Recovery】 GIGASTONE 128GB SD Card...",
-    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51RvgV9EgWL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B07XD1WCQP",
-    title: "GIGASTONE 128GB SD Card 2-Pack, Camera Plus, UH...",
-    desc: "4.6 ⭐ $78.98. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51PF1wlBVhL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B07XG2X54Z",
-    title: "GIGASTONE 128GB Micro SD Card 2-Pack, A1 V30 4K...",
-    desc: "4.6 ⭐ $68.98. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/6135X0P2cML._AC_UL320_.jpg"
-  },
-  {
-    asin: "B09XR2MTHK",
-    title: "Lexar E-Series 128GB 2 PK Micro SD Card microSD...",
-    desc: "4.7 ⭐ $69.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51fwmXWGrNL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B07LBSBX5L",
-    title: "【5-Years Data Recovery】 GIGASTONE 128GB Micro S...",
-    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71+nKH03X0S._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0GRZVVHWM",
-    title: "5-Pack 128GB Micro SD Card for Dashcam & Securi...",
-    desc: "4.1 ⭐ $89.89. Get the best gear for your photography workflow.",
+    asin: "B0C364K1SC",
+    title: "Epson Perfection V19 II Flatbed Photo Scanner 4...",
+    desc: "3.9 ⭐ $89.00. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/716tr7zmxkL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71iyq3c0OiL._AC_UY218_.jpg"
   },
   {
-    asin: "B0H7CQSVNX",
-    title: "2-Pack 128GB Micro SD Card with Adapter, for Ca...",
-    desc: "$25.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61tZS+lYCpL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0G8LT6J46",
-    title: "SANDISK 128GB Extreme SD UHS-I Card - Up to 230...",
-    desc: "4.6 ⭐ $44.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71hkTYnMGcL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07LBSBX5L",
-    title: "【5-Years Data Recovery】 GIGASTONE 128GB Micro S...",
-    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71+nKH03X0S._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0BDYVC5TD",
-    title: "SanDisk 128GB Ultra microSDXC UHS-I Memory Card...",
-    desc: "4.8 ⭐ $30.91. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51FeeXHe1nL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0B7NVV55M",
-    title: "SANDISK 128GB (2-Pack) Ultra microSDXC UHS-I Me...",
-    desc: "4.7 ⭐ $67.82. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71Ow-Ih7KNL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0C43XLSWX",
-    title: "SanDisk 128GB SDXC Memory Card 200MB/ | 200MB/s...",
-    desc: "4.7 ⭐ . Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71Tk8ARHOHL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07NY23WBG",
-    title: "SANDISK 128GB High Endurance Video microSDXC Ca...",
-    desc: "4.7 ⭐ $34.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51+e7-JlQ4L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B09XR2MTHK",
-    title: "Lexar E-Series 128GB 2 PK Micro SD Card microSD...",
-    desc: "4.7 ⭐ $69.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51fwmXWGrNL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B093BTSZ55",
-    title: "【5-Years Data Recovery】 GIGASTONE 128GB SD Card...",
-    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
+    asin: "B0FS3BRMB3",
+    title: "ScanSnap iX2500 Photo Edition Wireless or USB H...",
+    desc: "4.4 ⭐ $474.99. Get the best gear for your photography workflow.",
     badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51RvgV9EgWL._AC_UL320_.jpg"
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61HLpjQQjuL._AC_UY218_.jpg"
   },
   {
-    asin: "B07XD1WCQP",
-    title: "GIGASTONE 128GB SD Card 2-Pack, Camera Plus, UH...",
-    desc: "4.6 ⭐ $78.98. Get the best gear for your photography workflow.",
+    asin: "B07G5XZVLQ",
+    title: "Canon Canoscan Lide 300 Scanner (PDF, AUTOSCAN,...",
+    desc: "4.2 ⭐ $75.00. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61p8GOXK6IS._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GVL1J22M",
+    title: "AMBIR Photo Scanner with Photo Cleaning Kit Bun...",
+    desc: "4.5 ⭐ $149.95. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51PF1wlBVhL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/61e5DyeexnL._AC_UY218_.jpg"
   },
   {
-    asin: "B07XG2X54Z",
-    title: "GIGASTONE 128GB Micro SD Card 2-Pack, A1 V30 4K...",
-    desc: "4.6 ⭐ $68.98. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
+    asin: "B091MDDQK9",
+    title: "Canon imageFORMULA RS40 - Photo and Document Sc...",
+    desc: "4 ⭐ $329.00. Get the best gear for your photography workflow.",
+    badge: "Storage",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/6135X0P2cML._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/41maiQDzKYL._AC_UY218_.jpg"
   },
   {
-    asin: "B0CPDH6YVR",
-    title: "Lexar E-Series 128GB 5 PK Micro SD Card microSD...",
-    desc: "4.7 ⭐ $149.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
+    asin: "B07G5YBS1W",
+    title: "Canon CanoScan LiDE 400 Slim Scanner, 7.7\" x 14...",
+    desc: "4.1 ⭐ $97.00. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/713UXyxpxtL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71ZSDHv9NRS._AC_UY218_.jpg"
   },
   {
-    asin: "B07LBSBX5L",
-    title: "【5-Years Data Recovery】 GIGASTONE 128GB Micro S...",
-    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
+    asin: "B0F9B1H5VN",
+    title: "ScanSnap iX2500 Wireless or USB High-Speed Docu...",
+    desc: "4.3 ⭐ . Get the best gear for your photography workflow.",
     badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/612vJX1V61L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0C35V1CLK",
+    title: "Epson Perfection V39 II Flatbed Photo Scanner 4...",
+    desc: "3.7 ⭐ $116.00. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71+nKH03X0S._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71cV59d0gOL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B01HR89FNK",
+    title: "Epson FastFoto FF-640 High-Speed Photo Scanning...",
+    desc: "4.5 ⭐ . Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81iHJjQW1QL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B00E1O74SW",
+    title: "Epson Perfection V550 Color Photo, Image, Film,...",
+    desc: "4.2 ⭐ $1,010.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61TSYEi3eeL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B002Y4Z244",
+    title: "Epson Perfection V600 Photo Wired USB Connectiv...",
+    desc: "3.9 ⭐ . Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61IK69emp2L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B00OCEJMG8",
+    title: "Epson Perfection V850 Pro Photo Scanner 6400 DP...",
+    desc: "4.4 ⭐ $1,999.00. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71q34nS25rL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0007Y79GC",
+    title: "Epson Perfection 4990 Photo Scanner",
+    desc: "3.3 ⭐ . Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/41rfgRBwxjS._AC_UY218_.jpg"
   }
 ];
 
