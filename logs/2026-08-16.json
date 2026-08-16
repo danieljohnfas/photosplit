@@ -1,0 +1,134 @@
+{
+  "date": "2026-08-16",
+  "timestamp": "2026-08-16T06:51:46.542Z",
+  "suites": {
+    "pages": [
+      {
+        "page": "/",
+        "url": "http://localhost:8080/",
+        "loadMs": 250,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/app",
+        "url": "http://localhost:8080/app",
+        "loadMs": 307,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/convert",
+        "url": "http://localhost:8080/convert",
+        "loadMs": 131,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/crop",
+        "url": "http://localhost:8080/crop",
+        "loadMs": 79,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/resize",
+        "url": "http://localhost:8080/resize",
+        "loadMs": 73,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/passport",
+        "url": "http://localhost:8080/passport",
+        "loadMs": 90,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/transcribe",
+        "url": "http://localhost:8080/transcribe",
+        "loadMs": 75,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/about",
+        "url": "http://localhost:8080/about",
+        "loadMs": 58,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/contact",
+        "url": "http://localhost:8080/contact",
+        "loadMs": 97,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/tips",
+        "url": "http://localhost:8080/tips",
+        "loadMs": 52,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/privacy-policy",
+        "url": "http://localhost:8080/privacy-policy",
+        "loadMs": 52,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/terms",
+        "url": "http://localhost:8080/terms",
+        "loadMs": 53,
+        "errors": [],
+        "status": "pass"
+      },
+      {
+        "page": "/blog/",
+        "url": "http://localhost:8080/blog/",
+        "loadMs": 80,
+        "errors": [],
+        "status": "pass"
+      }
+    ],
+    "ads": [
+      {
+        "page": "/",
+        "hasAdTop": true,
+        "hasAdBottom": false,
+        "hasAdSidebar": false,
+        "status": "pass"
+      },
+      {
+        "page": "/app",
+        "hasAdTop": true,
+        "hasAdBottom": false,
+        "hasAdSidebar": false,
+        "status": "pass"
+      },
+      {
+        "page": "/blog/",
+        "hasAdTop": true,
+        "hasAdBottom": false,
+        "hasAdSidebar": true,
+        "status": "pass"
+      },
+      {
+        "page": "/convert",
+        "hasAdTop": true,
+        "hasAdBottom": false,
+        "hasAdSidebar": false,
+        "status": "pass"
+      }
+    ]
+  },
+  "summary": {
+    "passed": 17,
+    "failed": 0,
+    "warnings": 0
+  }
+}
