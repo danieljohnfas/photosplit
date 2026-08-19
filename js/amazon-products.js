@@ -26,252 +26,220 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B0FKBH97T5",
-    title: "VSGO DKL-20F Sensor Cleaning Kit for Full Frame...",
-    desc: "4.9 ⭐ $31.99. Get the best gear for your photography workflow.",
+    asin: "B07CRG94G3",
+    title: "Seagate 2TB Portable Hard Drive | USB 3.0 (STGX...",
+    desc: "4.6 ⭐ $129.99. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71AF9omt8nL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/41MuI-7iHIL._AC_UY218_.jpg"
   },
   {
-    asin: "B01FWNEUIM",
-    title: "Altura Photo Camera Cleaning Kit, APS-C Sensor ...",
-    desc: "4.7 ⭐ $34.98. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81P17Y2zbEL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FJFVKKWJ",
-    title: "Camera Lens Cleaning kit，Camera Accessories，Cam...",
-    desc: "4.5 ⭐ $9.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81W9Aj1SGdL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B083NND39J",
-    title: "14-in-1 Camera Lens Cleaning Kit - Mirrorless &...",
-    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71Hwb6bTyRL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B00JL4IWXI",
-    title: "K&F CONCEPT 4 in 1 Camera Lens Cleaning Kit for...",
-    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/713L5amT-3L._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0FC28H2LN",
-    title: "K&F CONCEPT 25 in 1 Camera Pro Cleaning Kit, AP...",
-    desc: "4.7 ⭐ $29.99. Get the best gear for your photography workflow.",
+    asin: "B08D9W2KDW",
+    title: "Fantom Drives Extreme 2TB External SSD - 2800MB...",
+    desc: "4.4 ⭐ $338.35. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71bj6u-krfL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71oINOBjxSL._AC_UY218_.jpg"
   },
   {
-    asin: "B0DX25Y9GT",
-    title: "K&F CONCEPT 15 in 1 Camera Pro Cleaning Kit for...",
-    desc: "4.7 ⭐ $19.79. Get the best gear for your photography workflow.",
-    badge: "Deal",
+    asin: "B07CRG94G3",
+    title: "Seagate 2TB Portable Hard Drive | USB 3.0 (STGX...",
+    desc: "4.6 ⭐ $129.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/712TW5m0k7L._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/41MuI-7iHIL._AC_UY218_.jpg"
   },
   {
-    asin: "B0CQBYVDLR",
-    title: "K&F CONCEPT 10-in-1 Photo Camera Cleaning Kit f...",
-    desc: "4.8 ⭐ $29.99. Get the best gear for your photography workflow.",
+    asin: "B01N7QFZLQ",
+    title: "LaCie Rugged USB-C 2TB External Hard Drive Port...",
+    desc: "4.7 ⭐ $149.99. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71XoPN6st2L._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71k9PA7B3nL._AC_UY218_.jpg"
   },
   {
-    asin: "B0G52L21QD",
-    title: "llano 5-in-1 Camera Cleaning Kit Lens Cleaning ...",
-    desc: "4.6 ⭐ $16.99. Get the best gear for your photography workflow.",
+    asin: "B07VTFN6HM",
+    title: "WD 2TB My Passport, Portable External Hard Driv...",
+    desc: "4.6 ⭐ $142.00. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/510+J06fz0L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07CRGSR16",
+    title: "Seagate Portable 4TB External Hard Drive HDD – ...",
+    desc: "4.6 ⭐ $189.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/41MuI-7iHIL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0FV8GKG5T",
+    title: "UnionSine 2TB Ultra Slim Portable External Hard...",
+    desc: "4.4 ⭐ $148.53. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61XbnUE8ipL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B06W55K9N6",
+    title: "WD 2TB Elements Portable External Hard Drive fo...",
+    desc: "4.7 ⭐ $142.00. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/6136gJAGRbL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07VS8QCXC",
+    title: "Seagate Portable 5TB External Hard Drive HDD – ...",
+    desc: "4.6 ⭐ $219.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/41MuI-7iHIL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0BQX6NNVC",
+    title: "Toshiba Canvio Basics 2TB Portable External Har...",
+    desc: "4.6 ⭐ $146.65. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/91e-WNUpH0L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B08HN37XC1",
+    title: "SANDISK 2TB Extreme Portable SSD (Old Model) - ...",
+    desc: "4.6 ⭐ $306.50. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61zuR3UMnWL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0B9MRHDRP",
+    title: "iDiskk MFi Certified 2TB External Hard Drive fo...",
+    desc: "4.2 ⭐ $179.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71oc8K7etxL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/61LeQjpJs5L._AC_UY218_.jpg"
   },
   {
-    asin: "B0098QH2BC",
-    title: "Altura Photo Camera Lens Cleaning Kit, Lens Cle...",
-    desc: "4.7 ⭐ $18.98. Get the best gear for your photography workflow.",
+    asin: "B0G56476HZ",
+    title: "Avolusion M3 Series 2TB USB 3.0 Portable Extern...",
+    desc: "3.4 ⭐ $99.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/51TKXUgWylL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0744NCY4K",
+    title: "ADATA HD710 Pro - 2 TB External Hard Drive - Sh...",
+    desc: "4.6 ⭐ $126.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71DI8ShgwTL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0BGXZRKQN",
+    title: "Toshiba Canvio Partner 2TB Portable 2.5’’ Exter...",
+    desc: "4.5 ⭐ $128.30. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/817eP8ZuvrL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B01MSSJ32J",
+    title: "LaCie Rugged USB-C, 4TB, Portable External Hard...",
+    desc: "4.4 ⭐ $209.54. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/91bati0rB3L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0FJRK328F",
+    title: "2TB External Hard Drive, Up to 2100MB/s, USB 3....",
+    desc: "4.2 ⭐ $269.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71yntsjILxL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/619a3cNxf6L._AC_UY218_.jpg"
   },
   {
-    asin: "B00JL4IWXI",
-    title: "K&F CONCEPT 4 in 1 Camera Lens Cleaning Kit for...",
-    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
+    asin: "B08JKGG97R",
+    title: "Toshiba Canvio Advance 2TB Portable External Ha...",
+    desc: "4.6 ⭐ $139.00. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81EFDYBAkyL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0C5JNWF58",
+    title: "SANDISK 2TB Portable SSD - Up to 800MB/s, USB-C...",
+    desc: "4.5 ⭐ $279.95. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71bBCTIvIIL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0874XWW23",
+    title: "Samsung T7 Portable SSD 2TB Titan Gray, USB 3.2...",
+    desc: "4.7 ⭐ $391.86. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/91YfRIy7kYL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07CRG7BBH",
+    title: "Seagate Portable 1TB External Hard Drive HDD – ...",
+    desc: "4.6 ⭐ $119.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/41MuI-7iHIL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0DT31KYBR",
+    title: "ThePhotoStick® Omni 32GB Photo Backup for iPhon...",
+    desc: "4.1 ⭐ $44.99. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/713L5amT-3L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61DZ6LWGs3L._AC_UY218_.jpg"
   },
   {
-    asin: "B07TY5H7CK",
-    title: "WHOOSH! Screen Shine Go XL – Screen Cleaner Spr...",
-    desc: "4.6 ⭐ $14.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81e9XtOhc0L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B092642ZS9",
-    title: "Aispour Camera Lens Cleaning Kit, 10-in-1 Camer...",
-    desc: "4.7 ⭐ $8.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71GdTf1qDOL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0DX25Y9GT",
-    title: "K&F CONCEPT 15 in 1 Camera Pro Cleaning Kit for...",
-    desc: "4.7 ⭐ $19.79. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/712TW5m0k7L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FKBH97T5",
-    title: "VSGO DKL-20F Sensor Cleaning Kit for Full Frame...",
-    desc: "4.9 ⭐ $31.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71AF9omt8nL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F5GJYTVS",
-    title: "Camera Lens Cleaning Kit - Mirrorless and DSLR ...",
-    desc: "4.6 ⭐ $9.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81uc4txvPML._AC_UY218_.jpg"
-  },
-  {
-    asin: "B00JL4IWXI",
-    title: "K&F CONCEPT 4 in 1 Camera Lens Cleaning Kit for...",
-    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/713L5amT-3L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B01FWNEUIM",
-    title: "Altura Photo Camera Cleaning Kit, APS-C Sensor ...",
-    desc: "4.7 ⭐ $34.98. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81P17Y2zbEL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FC28VCYM",
-    title: "K&F CONCEPT 25 in 1 Camera Cleaning Kit, Full F...",
-    desc: "4.7 ⭐ $29.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71BbeNzVaaL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B01JQQCTQQ",
-    title: "Altura Photo Camera Cleaning Kit, Full Frame Se...",
-    desc: "4.7 ⭐ $34.98. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81UVBzXSwoL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0CQBYVDLR",
-    title: "K&F CONCEPT 10-in-1 Photo Camera Cleaning Kit f...",
-    desc: "4.8 ⭐ $29.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71XoPN6st2L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B089QXQ6YF",
-    title: "UES 21-in-1 Professional Full Frame Camera Clea...",
-    desc: "4.7 ⭐ $29.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61j3Xmy0PvL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FC28H2LN",
-    title: "K&F CONCEPT 25 in 1 Camera Pro Cleaning Kit, AP...",
-    desc: "4.7 ⭐ $29.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71bj6u-krfL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B08HN9LS5P",
-    title: "18-in-1 Professional Camera Cleaning Kit for Mo...",
-    desc: "4.7 ⭐ $22.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71EVCPjObVL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0G39N4CTT",
-    title: "llano Camera Cleaning Kit, 25-in-1 DSLR Mirrorl...",
-    desc: "4.8 ⭐ $34.99. Get the best gear for your photography workflow.",
+    asin: "B07CRG94G3",
+    title: "Seagate 2TB Portable Hard Drive | USB 3.0 (STGX...",
+    desc: "4.6 ⭐ $129.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71fOiXZmgRL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/41MuI-7iHIL._AC_UL320_.jpg"
   },
   {
-    asin: "B08D6CVPB4",
-    title: "VSGO Full Frame Sensor Cleaning Kit VS-S03-12 |...",
-    desc: "4.7 ⭐ $23.59. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51nQ0ub0cVL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0G39N4CTT",
-    title: "llano Camera Cleaning Kit, 25-in-1 DSLR Mirrorl...",
-    desc: "4.8 ⭐ $34.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71fOiXZmgRL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0B15NZVJR",
-    title: "Purity Eyeglass Lens Cleaner Kit - 2 x 8oz and ...",
-    desc: "4.6 ⭐ $15.99. Get the best gear for your photography workflow.",
+    asin: "B0B9MRHDRP",
+    title: "iDiskk MFi Certified 2TB External Hard Drive fo...",
+    desc: "4.2 ⭐ $179.99. Get the best gear for your photography workflow.",
     badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71XpTkQ0T3L._AC_UL320_.jpg"
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61LeQjpJs5L._AC_UL320_.jpg"
   },
   {
-    asin: "B07K4R213M",
-    title: "Koala Eyeglass Lens Cleaner Spray Kit | Japanes...",
-    desc: "4.6 ⭐ $9.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
+    asin: "B0GSDNJ9HD",
+    title: "iDiskk App-le Certified 500GB External Hard Dri...",
+    desc: "4 ⭐ $94.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81PuR5AvkKL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/61PMXOqjqkL._AC_UL320_.jpg"
   },
   {
-    asin: "B0CHN32L1H",
-    title: "MagicFiber Glasses Cleaner Spray & Cloth Kit, E...",
-    desc: "4.6 ⭐ $9.49. Get the best gear for your photography workflow.",
+    asin: "B0B9MXQGMT",
+    title: "iDiskk App-le Certified 2TB External Hard Drive...",
+    desc: "4.3 ⭐ $179.99. Get the best gear for your photography workflow.",
     badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81P6tVpd4-L._AC_UL320_.jpg"
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61Ujauxsp8L._AC_UL320_.jpg"
   },
   {
-    asin: "B0DCB6P9L2",
-    title: "SmoTecQ Glasses Cleaner Kit – Alcohol-Free, Pla...",
-    desc: "4.6 ⭐ $6.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71AACxB5qlL._AC_UL320_.jpg"
+    asin: "B0GCGSKMMP",
+    title: "2TB Magnetic Portable SSD, Up to 2000MB/s – Ext...",
+    desc: "4.2 ⭐ $269.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71fp55ghXML._AC_UL320_.jpg"
   }
 ];
 
