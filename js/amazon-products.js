@@ -26,404 +26,212 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B0B9G29PJ3",
-    title: "Popotop Large Photo Album Self Adhesive 4x6 5x7...",
-    desc: "4.6 ⭐ $15.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/91kMkWlnoxL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0CGCWY7ZJ",
-    title: "Popotop Photo Album 4x6 200 Pockets for Wedding...",
-    desc: "4.4 ⭐ $12.61. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/710a1XchpeL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0GWPXBSRZ",
-    title: "Photo Album Large 4x6 Pictures,Artificial Leath...",
-    desc: "4.8 ⭐ $19.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81x25jNVzxL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0BW876C87",
-    title: "Popotop Photo Album Self Adhesive Scrapbook Alb...",
-    desc: "4.6 ⭐ $13.49. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/91mdXUTZ+9L._AC_UL320_.jpg"
-  },
-  {
-    asin: "B07W5F37GZ",
-    title: "Ywlake Photo Album 4x6 500 Pockets Photo, Extra...",
-    desc: "4.6 ⭐ $14.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61pci7+wR5L._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0CGCWY7ZJ",
-    title: "Popotop Photo Album 4x6 200 Pockets for Wedding...",
-    desc: "4.4 ⭐ $12.61. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/710a1XchpeL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0GZHYRYSR",
-    title: "Honeymoon Photo Album Book 400 4x6 Photos Linen...",
-    desc: "$35.99. Get the best gear for your photography workflow.",
+    asin: "B01N7ENHO6",
+    title: "Skylight Digital Picture Frame, Load from Phone...",
+    desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/910hDPhLX3L._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UY218_.jpg"
   },
   {
-    asin: "B0C4F4ZHCT",
-    title: "Artfeel Photo Album 4x6 with 300 Pockets,Slip-i...",
-    desc: "4.6 ⭐ $14.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81olagqUSDL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B001VGH44C",
-    title: "Pioneer Photo Albums STC-504 Navy Blue Photo Al...",
-    desc: "4.6 ⭐ $11.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81FRcaCf+uL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0BW876C87",
-    title: "Popotop Photo Album Self Adhesive Scrapbook Alb...",
-    desc: "4.6 ⭐ $13.49. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/91mdXUTZ+9L._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0H4Y4RFXH",
-    title: "8 x 8in Pink Scrapbook Album, 60 Pages Striped ...",
-    desc: "4.8 ⭐ $7.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71zucg6P1SL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B08F21W5KH",
-    title: "potricher Photo Album 4x6 Pictures, 600 Pockets...",
-    desc: "4.7 ⭐ $21.59. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/91-+KhZBfQL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0FT7YJBFW",
-    title: "Popotop 2 Pack Photo Album 4x6 Pictures, Small ...",
-    desc: "4.6 ⭐ $5.69. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/8131DpUU1lL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0BXDQKD5C",
-    title: "Large Photo Album Self Adhesive Scrapbook Album...",
-    desc: "4.7 ⭐ $14.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81SGTWVrSxL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0B9G29PJ3",
-    title: "Popotop Large Photo Album Self Adhesive 4x6 5x7...",
-    desc: "4.6 ⭐ $15.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/91kMkWlnoxL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0D78XY39C",
-    title: "Holoary Photo Album 4x6 500 Photos 5 Pictures P...",
-    desc: "4.8 ⭐ $23.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81CYuZdhedL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B09TKQVCV1",
-    title: "Artmag Fabric Photo Album 4x6 300 Large Capacit...",
-    desc: "4.6 ⭐ $15.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71Rqd+jauWL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0BJTZQ861",
-    title: "Lanpn Photo Album 4x6 600 Pockets Photos, Linen...",
-    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/711Gb5xep+L._AC_UL320_.jpg"
-  },
-  {
-    asin: "B07W5F37GZ",
-    title: "Ywlake Photo Album 4x6 500 Pockets Photo, Extra...",
-    desc: "4.6 ⭐ $14.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61pci7+wR5L._AC_UL320_.jpg"
-  },
-  {
-    asin: "B07Q1L8DBG",
-    title: "Artmag Photo Picutre Album 4x6 400 Photos, Extr...",
-    desc: "4.7 ⭐ $22.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/A1YukpLg3lL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0CCD71M4J",
-    title: "Artfeel Photo Album Self Adhesive Scrapbook,Lar...",
-    desc: "4.6 ⭐ $14.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81cv-4DCAEL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0BZYQ1MLV",
-    title: "Artfeel Photo Album Self Adhesive Scrapbook Alb...",
-    desc: "4.6 ⭐ $12.17. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81fRwGeptbL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B07BKXBGL7",
-    title: "Vienrose Large Photo Album Self Adhesive for 4x...",
-    desc: "4.7 ⭐ $11.00. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81Rp0TJqT7L._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0BR7SMMBC",
-    title: "Popotop Photo Album 4x6-300 Photos Linen Cover ...",
-    desc: "4.6 ⭐ $14.23. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/7196mkbSS+L._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0F1FDKLBL",
-    title: "Artmag Photo Album 4x6 200 Photos, Thick Leathe...",
-    desc: "4.3 ⭐ $22.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71CBVI-TQfL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B09FZ2QQJL",
-    title: "Ywlake Photo Album 4x6 300 Pockets, Linen Photo...",
-    desc: "4.6 ⭐ $12.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/7157bVx1EjL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0GY7K5NJK",
-    title: "Popotop Linen Scrapbook Photo Album, 8x8in 60Pa...",
-    desc: "4.9 ⭐ $7.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81wg4l5qesL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B09YY686TV",
-    title: "Spbapr Large Photo Album Self Adhesive Linen Co...",
-    desc: "4.6 ⭐ $15.98. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/91pjfCbQDfL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B003WSWFBY",
-    title: "Pioneer Photo Albums Magnetic Self-Stick 3-Ring...",
-    desc: "4.6 ⭐ $16.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/91pMvmUnanL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0C5C5V3PF",
-    title: "4x6 Photo Album Holds 240 Photos Writing Space,...",
-    desc: "4.6 ⭐ $13.98. Get the best gear for your photography workflow.",
+    asin: "B0GR6YMKHX",
+    title: "Aura HD Digital Picture Frame | Carver: The Bes...",
+    desc: "4.7 ⭐ $149.00. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71WxroqTYsL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/81xccqjBJKL._AC_UY218_.jpg"
   },
   {
-    asin: "B0FDK2DJJX",
-    title: "Holoary Photo Album 4x6 500 Photos 5 Pictures P...",
-    desc: "4.8 ⭐ $23.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
+    asin: "B0D8JDPKKS",
+    title: "Frameo 10.1 Inch WiFi Digital Picture Frame, Sm...",
+    desc: "4.7 ⭐ $59.47. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61eea+dWBkL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/81mhPUK4EGL._AC_UY218_.jpg"
   },
   {
-    asin: "B0956PXVB9",
-    title: "Large Photo Album Self Adhesive for 4x6 5x7 8x1...",
-    desc: "4.7 ⭐ $11.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81EOJjRZW4L._AC_UL320_.jpg"
+    asin: "B0H6FYNXZX",
+    title: "AEEZO Digital Picture Frame, 10.1'' WiFi Electr...",
+    desc: "4.7 ⭐ $48.98. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/715sBTNKh0L._AC_UY218_.jpg"
   },
   {
-    asin: "B091YKMS28",
-    title: "JIMBON Our Adventure Book Scrapbook Photo Album...",
-    desc: "4.7 ⭐ $25.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/916M9ABLibL._AC_UL320_.jpg"
+    asin: "B083SH697H",
+    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ...",
+    desc: "4.6 ⭐ $56.00. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71v8cZ36vwL._AC_UY218_.jpg"
   },
   {
-    asin: "B08Z76J9YT",
-    title: "Bstorify Scrapbook Album 60 Pages (8 x 8 Inch) ...",
-    desc: "4.6 ⭐ $5.33. Get the best gear for your photography workflow.",
+    asin: "B01N7ENHO6",
+    title: "Skylight Digital Picture Frame, Load from Phone...",
+    desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/811vh6RIoVL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UY218_.jpg"
   },
   {
-    asin: "B0FSL27H7Y",
-    title: "4x6 Slip In Photo Album Holds 200 Pockets Cloth...",
-    desc: "4.5 ⭐ $9.99. Get the best gear for your photography workflow.",
+    asin: "B088NHSVJN",
+    title: "BIGASUO Digital Picture Frame, 10.1\" Frameo Dig...",
+    desc: "4.5 ⭐ $59.49. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71r2DZgtA1L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GJ5D2XP6",
+    title: "AEEZO Digital Picture Frame, 10.1 Inch Digital ...",
+    desc: "4.6 ⭐ $68.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71mEui6zWUL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GR6YMKHX",
+    title: "Aura HD Digital Picture Frame | Carver: The Bes...",
+    desc: "4.7 ⭐ $149.00. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81xccqjBJKL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0H4VR1949",
+    title: "2K Digital Picture Frame, 10.1 Inch Digital Pho...",
+    desc: "5 ⭐ $99.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71RT3YPgAOL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0F8B93ZBM",
+    title: "64GB 15.6\" Frameo Digital Picture Frame WiFi, L...",
+    desc: "4.5 ⭐ $99.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71WqsM-Og7L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0D8JDPKKS",
+    title: "Frameo 10.1 Inch WiFi Digital Picture Frame, Sm...",
+    desc: "4.7 ⭐ $59.47. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81mhPUK4EGL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0CQN2PKQR",
+    title: "Digital Picture Frame, Frameo 15.6'' Digital Ph...",
+    desc: "4.5 ⭐ $99.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71oBxFQf-RL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0FV857P1H",
+    title: "Digital Picture Frame, 10.1 Inch Picture Frame ...",
+    desc: "4.4 ⭐ $47.95. Get the best gear for your photography workflow.",
     badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81py8wo-FWL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B09FHT8TZ8",
-    title: "Our Adventure Book Vintage Scrapbook Journal | ...",
-    desc: "4.8 ⭐ $25.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/813o3E45ASL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71dRBhjR34L._AC_UY218_.jpg"
   },
   {
-    asin: "B08F1ND8QD",
-    title: "potricher Photo Album 4x6 Pictures, 600 Pockets...",
-    desc: "4.7 ⭐ $21.59. Get the best gear for your photography workflow.",
+    asin: "B0CRRHQD2T",
+    title: "Uhale 10.1 inch WiFi Touch Screen Digital Pictu...",
+    desc: "4.1 ⭐ $39.99. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/91ZfmIileZL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71sa5bVRtDL._AC_UY218_.jpg"
   },
   {
-    asin: "B08N4T6N54",
-    title: "potricher Photo Album 4x6 Pictures, 1000 Pocket...",
-    desc: "4.7 ⭐ $28.79. Get the best gear for your photography workflow.",
+    asin: "B088NHSVJN",
+    title: "BIGASUO Digital Picture Frame, 10.1\" Frameo Dig...",
+    desc: "4.5 ⭐ $59.49. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71r2DZgtA1L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B083SH697H",
+    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ...",
+    desc: "4.6 ⭐ $56.00. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71v8cZ36vwL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GJ2XCZV2",
+    title: "Digital Picture Frame 15.6 Inch Digital Photo F...",
+    desc: "4.4 ⭐ $89.97. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/91-+KhZBfQL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71eAGFCg+KL._AC_UY218_.jpg"
   },
   {
-    asin: "B0D4YYWHJ7",
-    title: "Beautiful Linen Photo Album For 4x6 Photos - Ho...",
-    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/91Mj-OajSqL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B08BTR1RQ3",
-    title: "Fintie Photo Album 4x6 Photos - 112 Pockets Wal...",
-    desc: "4.8 ⭐ $12.99. Get the best gear for your photography workflow.",
+    asin: "B0DHCZ3L9F",
+    title: "Uhale Digital Picture Frame 10.1 Inch HD Touch ...",
+    desc: "4.2 ⭐ $35.99. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71Se2MaXbpL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71kBWuvAKKL._AC_UY218_.jpg"
   },
   {
-    asin: "B09T816MTD",
-    title: "4x6 Photo Albums - (Set of 8), by Paper Plan, M...",
-    desc: "4.7 ⭐ $7.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81fTVEi0j9L._AC_UL320_.jpg"
-  },
-  {
-    asin: "B08BJMBBKV",
-    title: "RECUTMS Photo Albums 4x6 Pictures, 600 Pockets ...",
-    desc: "4.8 ⭐ $23.99. Get the best gear for your photography workflow.",
+    asin: "B0D73VMZM5",
+    title: "Smart White Digital Picture Frame WiFi Send Pho...",
+    desc: "4.4 ⭐ $48.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71cFdeNrrPL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71otULPu4TL._AC_UY218_.jpg"
   },
   {
-    asin: "B01GW311GK",
-    title: "Magnetic Self-Stick 3-Ring Photo Album 100 Page...",
-    desc: "4.6 ⭐ $14.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/91cX2b83owL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0CJXNGY4T",
-    title: "8\"x8\" Scrapbook Photo Album Linen Cover 20 Shee...",
-    desc: "4.7 ⭐ $9.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81yOD7UNG3L._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0CSMDS9RQ",
-    title: "Photo Album 4x6 300 Photos, Genuine Leather Pho...",
-    desc: "4.6 ⭐ $26.98. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71jKdqEobIL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B00004ZBOJ",
-    title: "Spiral Bound Photo Album 300 Bi-Directional Mem...",
-    desc: "4.7 ⭐ $15.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71uKKCLjXtL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0GYNHNB5F",
-    title: "Vienrose Photo Album 4x6 600 Photos Cover Windo...",
-    desc: "4.6 ⭐ $14.99. Get the best gear for your photography workflow.",
+    asin: "B0H6FWFQK7",
+    title: "AEEZO Digital Picture Frame, 10.1'' WiFi Electr...",
+    desc: "4.7 ⭐ $48.98. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71GguyNDf6L._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/710Bs7UjnwL._AC_UY218_.jpg"
   },
   {
-    asin: "B08LKJ31GT",
-    title: "Vienrose 4x6 Photo Album,300 Pockets,Linen Cove...",
-    desc: "4.6 ⭐ $12.34. Get the best gear for your photography workflow.",
-    badge: "Popular",
+    asin: "B0GJ2XCZV2",
+    title: "Digital Picture Frame 15.6 Inch Digital Photo F...",
+    desc: "4.4 ⭐ $89.97. Get the best gear for your photography workflow.",
+    badge: "Essential",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/91EliDDPoOL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71eAGFCg+KL._AC_UY218_.jpg"
   },
   {
-    asin: "B0CJ4J8RQY",
-    title: "450 Pocket 4x6 Photo Album with Writing Space, ...",
-    desc: "4.7 ⭐ $21.99. Get the best gear for your photography workflow.",
+    asin: "B01N7ENHO6",
+    title: "Skylight Digital Picture Frame, Load from Phone...",
+    desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0H3QVRMDR",
+    title: "Aura HD Digital Picture Frame | Aspen: The Best...",
+    desc: "4.8 ⭐ $195.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81dIeVijoLL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0GRV3T8P6",
+    title: "BIGASUO 15.6\" Digital Picture Frame, 64GB WiFi ...",
+    desc: "4.5 ⭐ $99.99. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71Urmt2YuRL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71sbUcyfp5L._AC_UL320_.jpg"
   },
   {
-    asin: "B004IFYA90",
-    title: "Fabric Frame Cover Photo Album 200 Pockets Hold...",
-    desc: "4.7 ⭐ $17.76. Get the best gear for your photography workflow.",
-    badge: "Popular",
+    asin: "B0H5FT3ZMZ",
+    title: "Heart Frame - 32GB 10.1” Frameo Digital Picture...",
+    desc: "4.8 ⭐ $99.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71sJVY+PFML._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/81iXda2ugKL._AC_UL320_.jpg"
   }
 ];
 
