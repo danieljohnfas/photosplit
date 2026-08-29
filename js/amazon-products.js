@@ -26,220 +26,252 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B0D8JDPKKS",
-    title: "Frameo 10.1 Inch WiFi Digital Picture Frame, Sm...",
-    desc: "4.7 ⭐ $59.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81mhPUK4EGL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B088NHSVJN",
-    title: "BIGASUO Digital Picture Frame, 10.1\" Frameo Dig...",
-    desc: "4.5 ⭐ $59.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71r2DZgtA1L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0D8JDPKKS",
-    title: "Frameo 10.1 Inch WiFi Digital Picture Frame, Sm...",
-    desc: "4.7 ⭐ $59.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81mhPUK4EGL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B01N7ENHO6",
-    title: "Skylight Digital Picture Frame, Load from Phone...",
-    desc: "4.7 ⭐ $99.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0H4VR1949",
-    title: "2K Digital Picture Frame, 10.1 Inch Digital Pho...",
-    desc: "5 ⭐ $99.99. Get the best gear for your photography workflow.",
+    asin: "B084NVRHYQ",
+    title: "KODAK Slide N Scan Film & Slide Scanner, 22MP, ...",
+    desc: "4.3 ⭐ $189.99. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71RT3YPgAOL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81RdTfBiqfL._AC_UY218_.jpg"
   },
   {
-    asin: "B0GJ5D2XP6",
-    title: "AEEZO Digital Picture Frame, 10.1 Inch Digital ...",
-    desc: "4.5 ⭐ $47.91. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71mEui6zWUL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GJ2XCZV2",
-    title: "Digital Picture Frame 15.6 Inch Digital Photo F...",
-    desc: "4.5 ⭐ $139.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71eAGFCg+KL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B083SH697H",
-    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ...",
-    desc: "4.6 ⭐ $56.00. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71v8cZ36vwL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0CQN2PKQR",
-    title: "Digital Picture Frame, Frameo 15.6'' Digital Ph...",
-    desc: "4.5 ⭐ $99.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71oBxFQf-RL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GR6YMKHX",
-    title: "Aura HD Digital Picture Frame | Carver: The Bes...",
-    desc: "4.7 ⭐ $149.00. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81xccqjBJKL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F8B93ZBM",
-    title: "64GB 15.6\" Frameo Digital Picture Frame WiFi, L...",
-    desc: "4.5 ⭐ $99.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71WqsM-Og7L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GJ5D2XP6",
-    title: "AEEZO Digital Picture Frame, 10.1 Inch Digital ...",
-    desc: "4.5 ⭐ $47.91. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71mEui6zWUL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0CRRHQD2T",
-    title: "Uhale 10.1 inch WiFi Touch Screen Digital Pictu...",
-    desc: "4.1 ⭐ $39.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71sa5bVRtDL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FV857P1H",
-    title: "Digital Picture Frame, 10.1 Inch Picture Frame ...",
-    desc: "4.4 ⭐ $47.94. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71dRBhjR34L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0H6FYNXZX",
-    title: "AEEZO Digital Picture Frame, 10.1'' WiFi Electr...",
-    desc: "4.7 ⭐ $78.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/715sBTNKh0L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B088NHSVJN",
-    title: "BIGASUO Digital Picture Frame, 10.1\" Frameo Dig...",
-    desc: "4.5 ⭐ $59.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71r2DZgtA1L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B08PB5QWMV",
-    title: "FRAMEO 10.1 inch 32GB Digital Picture Frame, IP...",
-    desc: "4.6 ⭐ $54.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/714bXNiDwoL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0D47CSQXJ",
-    title: "Digital Picture Frame,10.1Inch WiFi Digital Pho...",
-    desc: "4.2 ⭐ $36.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71GAcPNCP4L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0D73VMZM5",
-    title: "Smart White Digital Picture Frame WiFi Send Pho...",
-    desc: "4.4 ⭐ $48.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71otULPu4TL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0DHCZ3L9F",
-    title: "Uhale Digital Picture Frame 10.1 Inch HD Touch ...",
-    desc: "4.2 ⭐ $37.99. Get the best gear for your photography workflow.",
+    asin: "B0F8D5LXQ3",
+    title: "HP Film & Slide Scanner HPFS500, Negative Scann...",
+    desc: "4.2 ⭐ $229.99. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71kBWuvAKKL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71ZFXQmDFDL._AC_UY218_.jpg"
   },
   {
-    asin: "B08Z7J1SH7",
-    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ...",
-    desc: "4.5 ⭐ $59.98. Get the best gear for your photography workflow.",
+    asin: "B084NVRHYQ",
+    title: "KODAK Slide N Scan Film & Slide Scanner, 22MP, ...",
+    desc: "4.3 ⭐ $189.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81RdTfBiqfL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B086DX4253",
+    title: "Magnasonic All-in-One 24MP Film Scanner with La...",
+    desc: "4.3 ⭐ $129.98. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61BV-3K26RL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B084NVRHYQ",
+    title: "KODAK Slide N Scan Film & Slide Scanner, 22MP, ...",
+    desc: "4.3 ⭐ $189.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81RdTfBiqfL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0FHDDP3P2",
+    title: "BEONEGLOBAL ClearScan MINI Film Scanner 16MP Sl...",
+    desc: "4.1 ⭐ $69.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61g7AsjFetL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B008ASJ2Z8",
+    title: "Plustek OpticFilm 8200i SE , 35mm Film & Slide ...",
+    desc: "4 ⭐ $399.00. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/816yvfCOXwL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B07ZXZRR24",
+    title: "Plustek OpticFilm 135i - Automatic Film & Slide...",
+    desc: "4.1 ⭐ $529.00. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/7196zeZx7SL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81iOWstYVUL._AC_UL320_.jpg"
   },
   {
-    asin: "B0GJD3KQ32",
-    title: "Digital Picture Frame 10.1 Inch Digital Photo F...",
-    desc: "4.5 ⭐ $47.96. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71FWg+2SA1L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GJ2XCZV2",
-    title: "Digital Picture Frame 15.6 Inch Digital Photo F...",
-    desc: "4.5 ⭐ $139.99. Get the best gear for your photography workflow.",
+    asin: "B0GLXW1VXW",
+    title: "Plustek OpticFilm 9000i Ai Film Scanner – 3rd G...",
+    desc: "4.2 ⭐ $599.00. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71eAGFCg+KL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/81NXp1OuZEL._AC_UL320_.jpg"
   },
   {
-    asin: "B0D8JDPKKS",
-    title: "Frameo 10.1 Inch WiFi Digital Picture Frame, Sm...",
-    desc: "4.7 ⭐ $59.99. Get the best gear for your photography workflow.",
+    asin: "B07MTKNTPK",
+    title: "KODAK Mobile Film Scanner, 35mm Negative Scanne...",
+    desc: "3.7 ⭐ $39.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71z8cGgjj-L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0B3F6KJJ2",
+    title: "KODAK Slide N Scan Max Film Scanner, Slide Scan...",
+    desc: "4.2 ⭐ $209.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61wezHCZynL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GJSBC2MR",
+    title: "PORTTA Film Scanner with 5\" LCD Screen, 22MP Sl...",
+    desc: "3.9 ⭐ $139.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61CCPl4oZnL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0FHDDP3P2",
+    title: "BEONEGLOBAL ClearScan MINI Film Scanner 16MP Sl...",
+    desc: "4.1 ⭐ $69.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61g7AsjFetL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B00O2BU8PK",
+    title: "KODAK SCANZA Film & Slide Scanner, 3.5\" LCD, 35...",
+    desc: "4.2 ⭐ $159.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71EndQiuq-L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B008ASJ2Z8",
+    title: "Plustek OpticFilm 8200i SE , 35mm Film & Slide ...",
+    desc: "4 ⭐ $399.00. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/816yvfCOXwL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GCYJ3YJ5",
+    title: "DigitConvert 35mm Film Scanner & Slide Scanner ...",
+    desc: "3.9 ⭐ $54.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61fYt-TgMgL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B009PHCWL4",
+    title: "Plustek OpticFilm 8100-35mm Negative Film/Slide...",
+    desc: "4 ⭐ $349.00. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71f3zQ5hn+L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B09L7NDNFG",
+    title: "Plustek OpticFilm 8300i Ai Film Scanner - Ai St...",
+    desc: "4 ⭐ $539.00. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81hYLRFLDwL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07ZXZRR24",
+    title: "Plustek OpticFilm 135i - Automatic Film & Slide...",
+    desc: "4.1 ⭐ $529.00. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81mhPUK4EGL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/81iOWstYVUL._AC_UY218_.jpg"
   },
   {
-    asin: "B088NHSVJN",
-    title: "BIGASUO Digital Picture Frame, 10.1\" Frameo Dig...",
-    desc: "4.5 ⭐ $59.99. Get the best gear for your photography workflow.",
+    asin: "B0F8D5LXQ3",
+    title: "HP Film & Slide Scanner HPFS500, Negative Scann...",
+    desc: "4.2 ⭐ $229.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71ZFXQmDFDL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0FPMR96X6",
+    title: "HP Film & Slide Scanner, Photo Scanner, 7\" Touc...",
+    desc: "3.9 ⭐ $259.99. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71r2DZgtA1L._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71xaLbJk3+L._AC_UY218_.jpg"
   },
   {
-    asin: "B0GR6YMKHX",
-    title: "Aura HD Digital Picture Frame | Carver: The Bes...",
-    desc: "4.7 ⭐ $149.00. Get the best gear for your photography workflow.",
+    asin: "B0FHDDP3P2",
+    title: "BEONEGLOBAL ClearScan MINI Film Scanner 16MP Sl...",
+    desc: "4.1 ⭐ $69.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61g7AsjFetL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07JJBGG1D",
+    title: "KODAK Mini Digital Film & Slide Scanner, 35mm, ...",
+    desc: "4.2 ⭐ $139.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71VVcLrr-jL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B00E1O74SW",
+    title: "Epson Perfection V550 Color Photo, Image, Film,...",
+    desc: "4.2 ⭐ . Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61TSYEi3eeL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B002Y4Z244",
+    title: "Epson Perfection V600 Photo Wired USB Connectiv...",
+    desc: "3.9 ⭐ $1,200.00. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61IK69emp2L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GLXW1VXW",
+    title: "Plustek OpticFilm 9000i Ai Film Scanner – 3rd G...",
+    desc: "4.2 ⭐ $599.00. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81NXp1OuZEL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B008ASJ2Z8",
+    title: "Plustek OpticFilm 8200i SE , 35mm Film & Slide ...",
+    desc: "4 ⭐ $399.00. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81xccqjBJKL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/816yvfCOXwL._AC_UY218_.jpg"
   },
   {
-    asin: "B01N7ENHO6",
-    title: "Skylight Digital Picture Frame, Load from Phone...",
-    desc: "4.7 ⭐ $99.99. Get the best gear for your photography workflow.",
+    asin: "B084NVRHYQ",
+    title: "KODAK Slide N Scan Film & Slide Scanner, 22MP, ...",
+    desc: "4.3 ⭐ $189.99. Get the best gear for your photography workflow.",
     badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81RdTfBiqfL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B009PHCWL4",
+    title: "Plustek OpticFilm 8100-35mm Negative Film/Slide...",
+    desc: "4 ⭐ $349.00. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71f3zQ5hn+L._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0FPMR96X6",
+    title: "HP Film & Slide Scanner, Photo Scanner, 7\" Touc...",
+    desc: "3.9 ⭐ $259.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71xaLbJk3+L._AC_UL320_.jpg"
+  },
+  {
+    asin: "B07ZXZRR24",
+    title: "Plustek OpticFilm 135i - Automatic Film & Slide...",
+    desc: "4.1 ⭐ $529.00. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81iOWstYVUL._AC_UL320_.jpg"
   }
 ];
 
