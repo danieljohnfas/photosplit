@@ -26,252 +26,260 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B084NVRHYQ",
-    title: "KODAK Slide N Scan Film & Slide Scanner, 22MP, ...",
-    desc: "4.3 ⭐ $189.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81RdTfBiqfL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0B786237W",
-    title: "KODAK REELS 8mm & Super 8 Film Digitizer, 1080p...",
-    desc: "4.1 ⭐ $419.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/717Fm6hVbYL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B084NVRHYQ",
-    title: "KODAK Slide N Scan Film & Slide Scanner, 22MP, ...",
-    desc: "4.3 ⭐ $189.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81RdTfBiqfL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B086DX4253",
-    title: "Magnasonic All-in-One 24MP Film Scanner with La...",
-    desc: "4.3 ⭐ $129.98. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61BV-3K26RL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0B3F6KJJ2",
-    title: "KODAK Slide N Scan Max Film Scanner, Slide Scan...",
-    desc: "4.1 ⭐ $209.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61wezHCZynL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07MTKNTPK",
-    title: "KODAK Mobile Film Scanner, 35mm Negative Scanne...",
-    desc: "3.7 ⭐ $39.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71z8cGgjj-L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GJSBC2MR",
-    title: "PORTTA Film Scanner with 5\" LCD Screen, 22MP Sl...",
-    desc: "3.9 ⭐ $139.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61CCPl4oZnL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FHDDP3P2",
-    title: "BEONEGLOBAL ClearScan MINI Film Scanner 16MP Sl...",
-    desc: "4.1 ⭐ $69.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61g7AsjFetL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B00O2BU8PK",
-    title: "KODAK SCANZA Film & Slide Scanner, 3.5\" LCD, 35...",
-    desc: "4.2 ⭐ $159.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71EndQiuq-L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B008ASJ2Z8",
-    title: "Plustek OpticFilm 8200i SE , 35mm Film & Slide ...",
-    desc: "4 ⭐ $399.00. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/816yvfCOXwL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FHH8DP53",
-    title: "22MP Film & Slide Scanner with 5\" LCD, Converts...",
-    desc: "4.3 ⭐ $99.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61+NqReSr7L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B084NVRHYQ",
-    title: "KODAK Slide N Scan Film & Slide Scanner, 22MP, ...",
-    desc: "4.3 ⭐ $189.99. Get the best gear for your photography workflow.",
+    asin: "B0FKBH97T5",
+    title: "VSGO DKL-20F Sensor Cleaning Kit for Full Frame...",
+    desc: "4.8 ⭐ $32.99. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81RdTfBiqfL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71AF9omt8nL._AC_UY218_.jpg"
   },
   {
-    asin: "B008ASJ2Z8",
-    title: "Plustek OpticFilm 8200i SE , 35mm Film & Slide ...",
-    desc: "4 ⭐ $399.00. Get the best gear for your photography workflow.",
+    asin: "B01FWNEUIM",
+    title: "Altura Photo Camera Cleaning Kit, APS-C Sensor ...",
+    desc: "4.7 ⭐ $37.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81P17Y2zbEL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0FJFVKKWJ",
+    title: "Camera Lens Cleaning kit，Camera Accessories，Cam...",
+    desc: "4.5 ⭐ $9.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81W9Aj1SGdL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B00JL4IWXI",
+    title: "K&F CONCEPT 4 in 1 Camera Lens Cleaning Kit for...",
+    desc: "4.7 ⭐ $17.99. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/816yvfCOXwL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/713L5amT-3L._AC_UY218_.jpg"
   },
   {
-    asin: "B0FHDDP3P2",
-    title: "BEONEGLOBAL ClearScan MINI Film Scanner 16MP Sl...",
-    desc: "4.1 ⭐ $69.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61g7AsjFetL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B07ZXZRR24",
-    title: "Plustek OpticFilm 135i - Automatic Film & Slide...",
-    desc: "4.1 ⭐ $529.00. Get the best gear for your photography workflow.",
+    asin: "B0098QH2BC",
+    title: "Altura Photo Camera Lens Cleaning Kit, Lens Cle...",
+    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81iOWstYVUL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71yntsjILxL._AC_UY218_.jpg"
   },
   {
-    asin: "B0B786237W",
-    title: "KODAK REELS 8mm & Super 8 Film Digitizer, 1080p...",
-    desc: "4.1 ⭐ $419.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/717Fm6hVbYL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0H22NVFVQ",
-    title: "Memory Vault Box Negative Scanner, Converts 135...",
-    desc: "3.4 ⭐ $150.00. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61qhUDRqIWL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07ZXZRR24",
-    title: "Plustek OpticFilm 135i - Automatic Film & Slide...",
-    desc: "4.1 ⭐ $529.00. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81iOWstYVUL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FPMR96X6",
-    title: "HP Film & Slide Scanner, Photo Scanner, 7\" Touc...",
-    desc: "3.9 ⭐ $259.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71xaLbJk3+L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0B786237W",
-    title: "KODAK REELS 8mm & Super 8 Film Digitizer, 1080p...",
-    desc: "4.1 ⭐ $419.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/717Fm6hVbYL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F8D5LXQ3",
-    title: "HP Film & Slide Scanner HPFS500, Negative Scann...",
-    desc: "4.2 ⭐ $229.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71ZFXQmDFDL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B009PHCWL4",
-    title: "Plustek OpticFilm 8100-35mm Negative Film/Slide...",
-    desc: "4 ⭐ $349.00. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71f3zQ5hn+L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B09L7NDNFG",
-    title: "Plustek OpticFilm 8300i Ai Film Scanner - Ai St...",
-    desc: "4 ⭐ $539.00. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81hYLRFLDwL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B09MHK6Q7D",
-    title: "Plustek OpticFilm 8300i SE - 35mm Negative Film...",
-    desc: "4 ⭐ $429.00. Get the best gear for your photography workflow.",
+    asin: "B00JL4IWXI",
+    title: "K&F CONCEPT 4 in 1 Camera Lens Cleaning Kit for...",
+    desc: "4.7 ⭐ $17.99. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81n6vOWEzNL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/713L5amT-3L._AC_UL320_.jpg"
   },
   {
-    asin: "B07JJBGG1D",
-    title: "KODAK Mini Digital Film & Slide Scanner, 35mm, ...",
-    desc: "4.2 ⭐ $139.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
+    asin: "B0FKBH97T5",
+    title: "VSGO DKL-20F Sensor Cleaning Kit for Full Frame...",
+    desc: "4.8 ⭐ $32.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71AF9omt8nL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0G39N4CTT",
+    title: "llano Camera Cleaning Kit, 25-in-1 DSLR Mirrorl...",
+    desc: "4.8 ⭐ $34.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71fOiXZmgRL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0FC28H2LN",
+    title: "K&F CONCEPT 25 in 1 Camera Pro Cleaning Kit, AP...",
+    desc: "4.7 ⭐ $29.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71VVcLrr-jL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71bj6u-krfL._AC_UL320_.jpg"
   },
   {
-    asin: "B008DLXAFA",
-    title: "Kodak ScanMate i940 Scanner - 1960988",
-    desc: "3.7 ⭐ $229.99. Get the best gear for your photography workflow.",
+    asin: "B0DX25Y9GT",
+    title: "K&F CONCEPT 15 in 1 Camera Pro Cleaning Kit for...",
+    desc: "4.7 ⭐ $21.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/712TW5m0k7L._AC_UL320_.jpg"
+  },
+  {
+    asin: "B083NND39J",
+    title: "14-in-1 Camera Lens Cleaning Kit - Mirrorless &...",
+    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71Hwb6bTyRL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0G39N4CTT",
+    title: "llano Camera Cleaning Kit, 25-in-1 DSLR Mirrorl...",
+    desc: "4.8 ⭐ $34.99. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71LcsahhKrS._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71fOiXZmgRL._AC_UY218_.jpg"
   },
   {
-    asin: "B008ASJ2Z8",
-    title: "Plustek OpticFilm 8200i SE , 35mm Film & Slide ...",
-    desc: "4 ⭐ $399.00. Get the best gear for your photography workflow.",
+    asin: "B092642ZS9",
+    title: "Aispour Camera Lens Cleaning Kit, 10-in-1 Camer...",
+    desc: "4.7 ⭐ $8.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71GdTf1qDOL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0DX25Y9GT",
+    title: "K&F CONCEPT 15 in 1 Camera Pro Cleaning Kit for...",
+    desc: "4.7 ⭐ $21.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/712TW5m0k7L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0H3V26DN2",
+    title: "6-in-1 Camera Lens Cleaning Kit for Camera, Dro...",
+    desc: "4 ⭐ $19.89. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61lfjvA0EjL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B01JQQCTQQ",
+    title: "Altura Photo Camera Cleaning Kit, Full Frame Se...",
+    desc: "4.7 ⭐ $37.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81UVBzXSwoL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B092642ZS9",
+    title: "Aispour Camera Lens Cleaning Kit, 10-in-1 Camer...",
+    desc: "4.7 ⭐ $8.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/816yvfCOXwL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71GdTf1qDOL._AC_UY218_.jpg"
   },
   {
-    asin: "B009PHCWL4",
-    title: "Plustek OpticFilm 8100-35mm Negative Film/Slide...",
-    desc: "4 ⭐ $349.00. Get the best gear for your photography workflow.",
-    badge: "Essential",
+    asin: "B0FC28VCYM",
+    title: "K&F CONCEPT 25 in 1 Camera Cleaning Kit, Full F...",
+    desc: "4.7 ⭐ $29.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71f3zQ5hn+L._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71BbeNzVaaL._AC_UY218_.jpg"
   },
   {
-    asin: "B07ZXZRR24",
-    title: "Plustek OpticFilm 135i - Automatic Film & Slide...",
-    desc: "4.1 ⭐ $529.00. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81iOWstYVUL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B09L7NDNFG",
-    title: "Plustek OpticFilm 8300i Ai Film Scanner - Ai St...",
-    desc: "4 ⭐ $539.00. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81hYLRFLDwL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0B786237W",
-    title: "KODAK REELS 8mm & Super 8 Film Digitizer, 1080p...",
-    desc: "4.1 ⭐ $419.99. Get the best gear for your photography workflow.",
+    asin: "B00CHHJQ0O",
+    title: "CamKix Camera Lens Cleaning Kit, Air Blower, 2-...",
+    desc: "4.5 ⭐ $7.79. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/717Fm6hVbYL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/619bbPBdymL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0FKBH97T5",
+    title: "VSGO DKL-20F Sensor Cleaning Kit for Full Frame...",
+    desc: "4.8 ⭐ $32.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71AF9omt8nL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B01FWNEUIM",
+    title: "Altura Photo Camera Cleaning Kit, APS-C Sensor ...",
+    desc: "4.7 ⭐ $37.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81P17Y2zbEL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B00JL4IWXI",
+    title: "K&F CONCEPT 4 in 1 Camera Lens Cleaning Kit for...",
+    desc: "4.7 ⭐ $17.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/713L5amT-3L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0F5GJYTVS",
+    title: "Camera Lens Cleaning Kit - Mirrorless and DSLR ...",
+    desc: "4.6 ⭐ $9.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81uc4txvPML._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0CQBYVDLR",
+    title: "K&F CONCEPT 10-in-1 Photo Camera Cleaning Kit f...",
+    desc: "4.7 ⭐ $29.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71XoPN6st2L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B08HN9LS5P",
+    title: "18-in-1 Professional Camera Cleaning Kit for Mo...",
+    desc: "4.7 ⭐ $22.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71EVCPjObVL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0FWRKFZK4",
+    title: "Camera Cleaning kit - Professional Camera Lens ...",
+    desc: "4.3 ⭐ $9.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/715hUKqS9vL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07TY5H7CK",
+    title: "WHOOSH! Screen Shine Go XL – Screen Cleaner Spr...",
+    desc: "4.6 ⭐ $14.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81e9XtOhc0L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0FKBH97T5",
+    title: "VSGO DKL-20F Sensor Cleaning Kit for Full Frame...",
+    desc: "4.8 ⭐ $32.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71AF9omt8nL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0G39N4CTT",
+    title: "llano Camera Cleaning Kit, 25-in-1 DSLR Mirrorl...",
+    desc: "4.8 ⭐ $34.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71fOiXZmgRL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0BMW6KHRV",
+    title: "Bodno Magicard Cleaning Kit, Cards, and Pen for...",
+    desc: "4.5 ⭐ $35.25. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61sF5wj-jmL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B08DNN5XDF",
+    title: "VSGO Microfiber Camera Cleaning Gloves for Prof...",
+    desc: "4.5 ⭐ $9.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71r8zrVQpxL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B00JL4IWXI",
+    title: "K&F CONCEPT 4 in 1 Camera Lens Cleaning Kit for...",
+    desc: "4.7 ⭐ $17.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/713L5amT-3L._AC_UL320_.jpg"
   }
 ];
 
