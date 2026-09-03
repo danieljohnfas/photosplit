@@ -26,260 +26,132 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B0FKBH97T5",
-    title: "VSGO DKL-20F Sensor Cleaning Kit for Full Frame...",
-    desc: "4.8 ⭐ $32.99. Get the best gear for your photography workflow.",
+    asin: "B01LZJH63M",
+    title: "Plustek Photo Scanner ePhoto Z300, Scans 4x6 in...",
+    desc: "4.5 ⭐ $219.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81E0YcY1MQL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07DLX26BB",
+    title: "Epson FastFoto FF-680W High-Speed Duplex Photo ...",
+    desc: "4.5 ⭐ $559.00. Get the best gear for your photography workflow.",
     badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71AF9omt8nL._AC_UY218_.jpg"
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/712gmXfm-9L._AC_UY218_.jpg"
   },
   {
-    asin: "B01FWNEUIM",
-    title: "Altura Photo Camera Cleaning Kit, APS-C Sensor ...",
-    desc: "4.7 ⭐ $37.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
+    asin: "B0C364K1SC",
+    title: "Epson Perfection V19 II Flatbed Photo Scanner 4...",
+    desc: "3.9 ⭐ $89.00. Get the best gear for your photography workflow.",
+    badge: "Deal",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81P17Y2zbEL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71iyq3c0OiL._AC_UY218_.jpg"
   },
   {
-    asin: "B0FJFVKKWJ",
-    title: "Camera Lens Cleaning kit，Camera Accessories，Cam...",
-    desc: "4.5 ⭐ $9.99. Get the best gear for your photography workflow.",
+    asin: "B07G5YBS1W",
+    title: "Canon CanoScan LiDE 400 Slim Scanner, 7.7\" x 14...",
+    desc: "4.1 ⭐ $97.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71ZSDHv9NRS._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07G5XZVLQ",
+    title: "Canon Canoscan Lide 300 Scanner (PDF, AUTOSCAN,...",
+    desc: "4.2 ⭐ $75.00. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61p8GOXK6IS._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GVL1J22M",
+    title: "AMBIR Photo Scanner with Photo Cleaning Kit Bun...",
+    desc: "3.7 ⭐ $149.95. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81W9Aj1SGdL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61e5DyeexnL._AC_UY218_.jpg"
   },
   {
-    asin: "B00JL4IWXI",
-    title: "K&F CONCEPT 4 in 1 Camera Lens Cleaning Kit for...",
-    desc: "4.7 ⭐ $17.99. Get the best gear for your photography workflow.",
+    asin: "B0FS3BRMB3",
+    title: "ScanSnap iX2500 Photo Edition Wireless or USB H...",
+    desc: "4.5 ⭐ $474.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61HLpjQQjuL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B091MDDQK9",
+    title: "Canon imageFORMULA RS40 - Photo and Document Sc...",
+    desc: "4 ⭐ $329.00. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/41maiQDzKYL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0HCB5S3N4",
+    title: "Photo, Slide & Negative Scanner with 5” Large S...",
+    desc: "4.7 ⭐ $169.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71Q1KiPfbcL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0C35V1CLK",
+    title: "Epson Perfection V39 II Flatbed Photo Scanner 4...",
+    desc: "3.7 ⭐ $119.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71cV59d0gOL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0F9B1H5VN",
+    title: "ScanSnap iX2500 Wireless or USB High-Speed Docu...",
+    desc: "4.3 ⭐ $379.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/612vJX1V61L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07KQZWPYN",
+    title: "Epson Workforce ES-50 Compact & Lightweight Mob...",
+    desc: "4.3 ⭐ $129.99. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/713L5amT-3L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/5186q1u92zL._AC_UY218_.jpg"
   },
   {
-    asin: "B0098QH2BC",
-    title: "Altura Photo Camera Lens Cleaning Kit, Lens Cle...",
-    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
+    asin: "B084NVRHYQ",
+    title: "KODAK Slide N Scan Film & Slide Scanner, 22MP, ...",
+    desc: "4.3 ⭐ $189.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71yntsjILxL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81RdTfBiqfL._AC_UY218_.jpg"
   },
   {
-    asin: "B00JL4IWXI",
-    title: "K&F CONCEPT 4 in 1 Camera Lens Cleaning Kit for...",
-    desc: "4.7 ⭐ $17.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/713L5amT-3L._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0FKBH97T5",
-    title: "VSGO DKL-20F Sensor Cleaning Kit for Full Frame...",
-    desc: "4.8 ⭐ $32.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
+    asin: "B0C6NL3HFX",
+    title: "HP Small USB Document & Photo Scanner for Porta...",
+    desc: "4.2 ⭐ $139.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71AF9omt8nL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/61q-Yvq-cKL._AC_UY218_.jpg"
   },
   {
-    asin: "B0G39N4CTT",
-    title: "llano Camera Cleaning Kit, 25-in-1 DSLR Mirrorl...",
-    desc: "4.8 ⭐ $34.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
+    asin: "B002Y4Z244",
+    title: "Epson Perfection V600 Photo Wired USB Connectiv...",
+    desc: "3.9 ⭐ $1,200.00. Get the best gear for your photography workflow.",
+    badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71fOiXZmgRL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/61IK69emp2L._AC_UY218_.jpg"
   },
   {
-    asin: "B0FC28H2LN",
-    title: "K&F CONCEPT 25 in 1 Camera Pro Cleaning Kit, AP...",
-    desc: "4.7 ⭐ $29.99. Get the best gear for your photography workflow.",
+    asin: "B00E1O74SW",
+    title: "Epson Perfection V550 Color Photo, Image, Film,...",
+    desc: "4.2 ⭐ $1,033.99. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71bj6u-krfL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0DX25Y9GT",
-    title: "K&F CONCEPT 15 in 1 Camera Pro Cleaning Kit for...",
-    desc: "4.7 ⭐ $21.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/712TW5m0k7L._AC_UL320_.jpg"
-  },
-  {
-    asin: "B083NND39J",
-    title: "14-in-1 Camera Lens Cleaning Kit - Mirrorless &...",
-    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71Hwb6bTyRL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0G39N4CTT",
-    title: "llano Camera Cleaning Kit, 25-in-1 DSLR Mirrorl...",
-    desc: "4.8 ⭐ $34.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71fOiXZmgRL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B092642ZS9",
-    title: "Aispour Camera Lens Cleaning Kit, 10-in-1 Camer...",
-    desc: "4.7 ⭐ $8.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71GdTf1qDOL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0DX25Y9GT",
-    title: "K&F CONCEPT 15 in 1 Camera Pro Cleaning Kit for...",
-    desc: "4.7 ⭐ $21.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/712TW5m0k7L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0H3V26DN2",
-    title: "6-in-1 Camera Lens Cleaning Kit for Camera, Dro...",
-    desc: "4 ⭐ $19.89. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61lfjvA0EjL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B01JQQCTQQ",
-    title: "Altura Photo Camera Cleaning Kit, Full Frame Se...",
-    desc: "4.7 ⭐ $37.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81UVBzXSwoL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B092642ZS9",
-    title: "Aispour Camera Lens Cleaning Kit, 10-in-1 Camer...",
-    desc: "4.7 ⭐ $8.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71GdTf1qDOL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FC28VCYM",
-    title: "K&F CONCEPT 25 in 1 Camera Cleaning Kit, Full F...",
-    desc: "4.7 ⭐ $29.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71BbeNzVaaL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B00CHHJQ0O",
-    title: "CamKix Camera Lens Cleaning Kit, Air Blower, 2-...",
-    desc: "4.5 ⭐ $7.79. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/619bbPBdymL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FKBH97T5",
-    title: "VSGO DKL-20F Sensor Cleaning Kit for Full Frame...",
-    desc: "4.8 ⭐ $32.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71AF9omt8nL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B01FWNEUIM",
-    title: "Altura Photo Camera Cleaning Kit, APS-C Sensor ...",
-    desc: "4.7 ⭐ $37.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81P17Y2zbEL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B00JL4IWXI",
-    title: "K&F CONCEPT 4 in 1 Camera Lens Cleaning Kit for...",
-    desc: "4.7 ⭐ $17.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/713L5amT-3L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F5GJYTVS",
-    title: "Camera Lens Cleaning Kit - Mirrorless and DSLR ...",
-    desc: "4.6 ⭐ $9.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81uc4txvPML._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0CQBYVDLR",
-    title: "K&F CONCEPT 10-in-1 Photo Camera Cleaning Kit f...",
-    desc: "4.7 ⭐ $29.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71XoPN6st2L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B08HN9LS5P",
-    title: "18-in-1 Professional Camera Cleaning Kit for Mo...",
-    desc: "4.7 ⭐ $22.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71EVCPjObVL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FWRKFZK4",
-    title: "Camera Cleaning kit - Professional Camera Lens ...",
-    desc: "4.3 ⭐ $9.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/715hUKqS9vL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07TY5H7CK",
-    title: "WHOOSH! Screen Shine Go XL – Screen Cleaner Spr...",
-    desc: "4.6 ⭐ $14.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81e9XtOhc0L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FKBH97T5",
-    title: "VSGO DKL-20F Sensor Cleaning Kit for Full Frame...",
-    desc: "4.8 ⭐ $32.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71AF9omt8nL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0G39N4CTT",
-    title: "llano Camera Cleaning Kit, 25-in-1 DSLR Mirrorl...",
-    desc: "4.8 ⭐ $34.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71fOiXZmgRL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0BMW6KHRV",
-    title: "Bodno Magicard Cleaning Kit, Cards, and Pen for...",
-    desc: "4.5 ⭐ $35.25. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61sF5wj-jmL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B08DNN5XDF",
-    title: "VSGO Microfiber Camera Cleaning Gloves for Prof...",
-    desc: "4.5 ⭐ $9.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71r8zrVQpxL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B00JL4IWXI",
-    title: "K&F CONCEPT 4 in 1 Camera Lens Cleaning Kit for...",
-    desc: "4.7 ⭐ $17.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/713L5amT-3L._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/61TSYEi3eeL._AC_UY218_.jpg"
   }
 ];
 
