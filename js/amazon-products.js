@@ -26,220 +26,212 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B01N7ENHO6",
-    title: "Skylight Digital Picture Frame, Load from Phone...",
-    desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0D8JDPKKS",
-    title: "Frameo 10.1 Inch WiFi Digital Picture Frame, Sm...",
-    desc: "4.7 ⭐ $69.99. Get the best gear for your photography workflow.",
+    asin: "B0H2PZ1MSZ",
+    title: "2TB Portable External HDD - USB 3.0/2.0 Compati...",
+    desc: "5 ⭐ $102.50. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81mhPUK4EGL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/51kpMA9Kd1L._AC_UY218_.jpg"
   },
   {
-    asin: "B0GJ5D2XP6",
-    title: "AEEZO Digital Picture Frame, 10.1 Inch Digital ...",
-    desc: "4.5 ⭐ $47.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71mEui6zWUL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0D8JDPKKS",
-    title: "Frameo 10.1 Inch WiFi Digital Picture Frame, Sm...",
-    desc: "4.7 ⭐ $69.99. Get the best gear for your photography workflow.",
+    asin: "B0B9MXQGMT",
+    title: "iDiskk App-le Certified 2TB External Hard Drive...",
+    desc: "4.3 ⭐ $179.99. Get the best gear for your photography workflow.",
     badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81mhPUK4EGL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0H7K456CR",
-    title: "10.1‑Inch WiFi Digital Picture Frame, 32GB, Fra...",
-    desc: "4.9 ⭐ $69.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81HDX3Zcu3L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B01N7ENHO6",
-    title: "Skylight Digital Picture Frame, Load from Phone...",
-    desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61Ujauxsp8L._AC_UY218_.jpg"
   },
   {
-    asin: "B0GR6YMKHX",
-    title: "Aura HD Digital Picture Frame | Carver: The Bes...",
-    desc: "4.7 ⭐ $149.00. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81xccqjBJKL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B083SH697H",
-    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ...",
-    desc: "4.6 ⭐ $69.98. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71v8cZ36vwL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GR6YMKHX",
-    title: "Aura HD Digital Picture Frame | Carver: The Bes...",
-    desc: "4.7 ⭐ $149.00. Get the best gear for your photography workflow.",
+    asin: "B07CRG94G3",
+    title: "Seagate 2TB Portable Hard Drive | USB 3.0 (STGX...",
+    desc: "4.6 ⭐ $129.99. Get the best gear for your photography workflow.",
     badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81xccqjBJKL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0H4GZK9QS",
-    title: "Digital Calendar 10.1\" Smart Calendar, 1280 * 8...",
-    desc: "$54.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71MPVIISwZL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/41OUh0ZU1NL._AC_UY218_.jpg"
   },
   {
-    asin: "B0DHCZ3L9F",
-    title: "Uhale Digital Picture Frame 10.1 Inch HD Touch ...",
-    desc: "4.2 ⭐ $39.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71kBWuvAKKL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B088NHSVJN",
-    title: "BIGASUO Digital Picture Frame, 10.1\" Frameo Dig...",
-    desc: "4.5 ⭐ $69.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71r2DZgtA1L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0CRRHQD2T",
-    title: "Uhale 10.1 inch WiFi Touch Screen Digital Pictu...",
-    desc: "4.1 ⭐ $42.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71sa5bVRtDL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GTJGFZ28",
-    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ...",
-    desc: "4.6 ⭐ $49.49. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71mpzpRlKbL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B08Z7J1SH7",
-    title: "FRAMEO Digital Picture Frame,10.1\" Digital Phot...",
-    desc: "4.5 ⭐ $59.98. Get the best gear for your photography workflow.",
+    asin: "B07VTFN6HM",
+    title: "WD 2TB My Passport, Portable External Hard Driv...",
+    desc: "4.6 ⭐ $134.90. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/7196zeZx7SL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/510+J06fz0L._AC_UY218_.jpg"
   },
   {
-    asin: "B0CQN2PKQR",
-    title: "Digital Picture Frame, Frameo 15.6'' Digital Ph...",
-    desc: "4.5 ⭐ $129.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71oBxFQf-RL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GJ2XCZV2",
-    title: "Digital Picture Frame 15.6 Inch Digital Photo F...",
-    desc: "4.4 ⭐ $129.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
+    asin: "B06W55K9N6",
+    title: "WD 2TB Elements Portable External Hard Drive fo...",
+    desc: "4.7 ⭐ $135.50. Get the best gear for your photography workflow.",
+    badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71eAGFCg+KL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61EunJBqIkL._AC_UY218_.jpg"
   },
   {
-    asin: "B0FC5S16YM",
-    title: "Frameo 10.1\" WiFi Digital Picture Frame, Gift f...",
-    desc: "4.7 ⭐ $53.99. Get the best gear for your photography workflow.",
+    asin: "B07CRGSR16",
+    title: "Seagate Portable 4TB External Hard Drive HDD – ...",
+    desc: "4.6 ⭐ $189.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/41OUh0ZU1NL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0FV8GKG5T",
+    title: "UnionSine 2TB Ultra Slim Portable External Hard...",
+    desc: "4.4 ⭐ $137.87. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71S45M0fwKL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61XbnUE8ipL._AC_UY218_.jpg"
   },
   {
-    asin: "B0D41ZMYB2",
-    title: "Frameo Digital Picture Frame, 10.1'' Frameo Dig...",
-    desc: "4.6 ⭐ $69.99. Get the best gear for your photography workflow.",
+    asin: "B0BQX6NNVC",
+    title: "Toshiba Canvio Basics 2TB Portable External Har...",
+    desc: "4.6 ⭐ $133.99. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71X7HDVaWLL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/91e-WNUpH0L._AC_UY218_.jpg"
   },
   {
-    asin: "B0F8B93ZBM",
-    title: "64GB 15.6\" Frameo Digital Picture Frame WiFi, L...",
-    desc: "4.5 ⭐ $129.99. Get the best gear for your photography workflow.",
+    asin: "B08HN37XC1",
+    title: "Sandisk 2TB Extreme Portable SSD, Up to 1050MB/...",
+    desc: "4.6 ⭐ $289.99. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71WqsM-Og7L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61zuR3UMnWL._AC_UY218_.jpg"
   },
   {
-    asin: "B0D73VMZM5",
-    title: "Smart White Digital Picture Frame WiFi Send Pho...",
-    desc: "4.4 ⭐ $49.99. Get the best gear for your photography workflow.",
+    asin: "B0G56476HZ",
+    title: "Avolusion M3 Series 2TB USB 3.0 Portable Extern...",
+    desc: "3.7 ⭐ $89.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/51TKXUgWylL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07CRG7BBH",
+    title: "Seagate Portable 1TB External Hard Drive HDD – ...",
+    desc: "4.6 ⭐ $119.99. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71otULPu4TL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/41MuI-7iHIL._AC_UY218_.jpg"
   },
   {
-    asin: "B0CRQWW4VX",
-    title: "KoxSmar Custom Picture Frame, Personalized Phot...",
-    desc: "4.6 ⭐ $12.98. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81yGhSNeR4L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B01N7ENHO6",
-    title: "Skylight Digital Picture Frame, Load from Phone...",
-    desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
+    asin: "B0B9MRHDRP",
+    title: "iDiskk MFi Certified 2TB External Hard Drive fo...",
+    desc: "4.2 ⭐ $179.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/61LeQjpJs5L._AC_UY218_.jpg"
   },
   {
-    asin: "B0GR6YMKHX",
-    title: "Aura HD Digital Picture Frame | Carver: The Bes...",
-    desc: "4.7 ⭐ $149.00. Get the best gear for your photography workflow.",
+    asin: "B0DMLP8768",
+    title: "YOTUO 1TB External Hard Drive, USB C Multiport ...",
+    desc: "4.2 ⭐ $79.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81xccqjBJKL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71RUiiIALeL._AC_UY218_.jpg"
   },
   {
-    asin: "B0D8JDPKKS",
-    title: "Frameo 10.1 Inch WiFi Digital Picture Frame, Sm...",
-    desc: "4.7 ⭐ $69.99. Get the best gear for your photography workflow.",
+    asin: "B01N7QFZLQ",
+    title: "LaCie Rugged USB-C 2TB External Hard Drive Port...",
+    desc: "4.7 ⭐ $149.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71k9PA7B3nL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07VS8QCXC",
+    title: "Seagate Portable 5TB External Hard Drive HDD – ...",
+    desc: "4.6 ⭐ $219.98. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/41OUh0ZU1NL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0713WPGLL",
+    title: "WD 4TB Elements Portable External Hard Drive fo...",
+    desc: "4.6 ⭐ $184.00. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/91mlqrT75WL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0G6YYTTVF",
+    title: "Ediloca EP1000 External Hard Drive 2TB,Portable...",
+    desc: "4.3 ⭐ $219.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/613t8FefSpL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0874XWW23",
+    title: "Samsung T7 Portable SSD 2TB Titan Gray, USB 3.2...",
+    desc: "4.7 ⭐ $409.00. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81mhPUK4EGL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/91YfRIy7kYL._AC_UY218_.jpg"
   },
   {
-    asin: "B0DB1BM71Q",
-    title: "Pexar Black 11'' 2K WiFi Digital Picture Frame ...",
-    desc: "4.4 ⭐ $149.98. Get the best gear for your photography workflow.",
+    asin: "B08JKHPV1V",
+    title: "Toshiba Canvio Flex 2TB Portable External Hard ...",
+    desc: "4.6 ⭐ $147.26. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/31HfyrjYpwL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B06XH2ZDXW",
+    title: "SP Silicon Power 2TB Rugged Portable External H...",
+    desc: "4.7 ⭐ $159.97. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61G0W6lqlWL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GMX4CN7X",
+    title: "Sandisk 2TB Extreme Portable SSD, Up to 2000MB/...",
+    desc: "4.6 ⭐ $473.62. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71u6LfJqm-L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0F8P4DWDV",
+    title: "2-Pack 128GB USB C Flash Drive Dual Type C + US...",
+    desc: "4.1 ⭐ $29.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/51Z3u2SmWyL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0FRLZ35TR",
+    title: "Aiibe 128GB USB Flash Drive USB Drive 128GB USB...",
+    desc: "4.2 ⭐ $26.99. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71fNbk6XalL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/51jSM9uYkDL._AC_UL320_.jpg"
   },
   {
-    asin: "B0H5FT3ZMZ",
-    title: "Heart Frame Premium 32GB 10.1” Frameo Digital P...",
-    desc: "4.7 ⭐ $129.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
+    asin: "B07XSGNQ2X",
+    title: "2 Pack 64GB USB Flash Drive USB 2.0 Thumb Drive...",
+    desc: "4.5 ⭐ $17.04. Get the best gear for your photography workflow.",
+    badge: "Storage",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81iXda2ugKL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/5175s67dwwL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0H39CPJRN",
+    title: "KEXIN 128GB Type C Solid State Drive up to 450M...",
+    desc: "4.5 ⭐ $34.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/613xH1milmL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0B9MRHDRP",
+    title: "iDiskk MFi Certified 2TB External Hard Drive fo...",
+    desc: "4.2 ⭐ $179.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61LeQjpJs5L._AC_UL320_.jpg"
   }
 ];
 
