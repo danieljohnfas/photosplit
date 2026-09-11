@@ -26,220 +26,260 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B09XR2MTHK",
-    title: "Lexar E-Series 128GB 2 PK Micro SD Card microSD...",
-    desc: "4.7 ⭐ $58.49. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51fwmXWGrNL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0D4C7PFRD",
-    title: "Lexar 128GB Silver SD Memory Card, 225MB/s Read...",
-    desc: "4.7 ⭐ $60.00. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81c8beoxACL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GDQRNTF3",
-    title: "SANDISK 128GB Extreme PRO SD Memory Card, Up to...",
-    desc: "4.8 ⭐ $51.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/719J6w3pB5L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0G8L1RNPF",
-    title: "SANDISK 128GB Ultra microSD Card + Adapter, Up ...",
-    desc: "4.7 ⭐ $35.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51UsBWNwbPL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0HF3STK2T",
-    title: "SD Card 128GB with Adapter, TF Memory Card, UHS...",
-    desc: "5 ⭐ $19.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51QKBWcfLLL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0B7NS71G2",
-    title: "SANDISK 128GB Ultra SD Memory Card, Up to 140MB...",
-    desc: "4.7 ⭐ $33.83. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61U2kZ3XZnL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B093BTSZ55",
-    title: "【5-Years Data Recovery】GIGASTONE 128GB SD Card ...",
-    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51RvgV9EgWL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B08TJRVWV1",
-    title: "Amazon Basics microSDXC Memory Card with Full S...",
-    desc: "4.7 ⭐ $35.14. Get the best gear for your photography workflow.",
+    asin: "B0FKBH97T5",
+    title: "VSGO DKL-20F Sensor Cleaning Kit for Full Frame...",
+    desc: "4.8 ⭐ $32.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61VgI87HGgL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71AF9omt8nL._AC_UY218_.jpg"
   },
   {
-    asin: "B0G8LS3LXG",
-    title: "SANDISK 128GB Ultra SD Memory Card, Up to 195MB...",
-    desc: "4.5 ⭐ $35.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71HtQWwG1DL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07YFGG1SD",
-    title: "SanDisk 128GB Ultra SDXC UHS-I Memory Card - 10...",
-    desc: "4.7 ⭐ $33.37. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/619vrnD+NoL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GRZVVHWM",
-    title: "5-Pack 128GB Micro SD Card for Dashcam & Securi...",
-    desc: "4.2 ⭐ $89.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/716tr7zmxkL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07XG2X54Z",
-    title: "GIGASTONE 128GB Micro SD Card 2-Pack, A1 V30 4K...",
-    desc: "4.7 ⭐ $68.98. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/6135X0P2cML._AC_UY218_.jpg"
-  },
-  {
-    asin: "B09XZ6BCYG",
-    title: "PNY 128GB Elite-X C10 U3 V30 SDXC Flash Memory ...",
-    desc: "4.6 ⭐ $59.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61kykQSnnSL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0G8LT6J46",
-    title: "SANDISK 128GB Extreme SD Memory Card, Up to 230...",
-    desc: "4.6 ⭐ $44.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71hkTYnMGcL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B013TMNPBQ",
-    title: "Made for Amazon SanDisk 128GB microSD Memory Ca...",
-    desc: "4.6 ⭐ $25.39. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81dQGd03YHL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B09S52Y575",
-    title: "PNY 128GB Elite C10 U1 V10 SDXC Flash Memory Ca...",
-    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61rmxqy6XsL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07XD1WCQP",
-    title: "GIGASTONE 128GB SD Card 2-Pack, Camera Plus, UH...",
-    desc: "4.6 ⭐ $88.98. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51PF1wlBVhL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0CPDH6YVR",
-    title: "Lexar E-Series 128GB 5 PK Micro SD Card microSD...",
-    desc: "4.7 ⭐ $127.49. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/713UXyxpxtL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0BJRVB9Y4",
-    title: "SanDisk SDSDXXD-128G-ANCIN 128gb Extreme Pro Sd...",
-    desc: "4.8 ⭐ $49.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61lvlfaYsPL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0BDYVC5TD",
-    title: "SanDisk 128GB Ultra microSDXC UHS-I Memory Card...",
-    desc: "4.7 ⭐ $30.20. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51FeeXHe1nL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07NY23WBG",
-    title: "SANDISK 128GB High Endurance Video microSDXC Ca...",
-    desc: "4.7 ⭐ $36.99. Get the best gear for your photography workflow.",
+    asin: "B01FWNEUIM",
+    title: "Altura Photo Camera Cleaning Kit, APS-C Sensor ...",
+    desc: "4.7 ⭐ $34.98. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51+e7-JlQ4L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81P17Y2zbEL._AC_UY218_.jpg"
   },
   {
-    asin: "B0DB14DZN9",
-    title: "Nextorage Japan SD Card UHS-II 256GB 2-Pack Mem...",
-    desc: "4.6 ⭐ $767.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61MqfFgF43L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B093BTSZ55",
-    title: "【5-Years Data Recovery】GIGASTONE 128GB SD Card ...",
-    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51RvgV9EgWL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B07XD1WCQP",
-    title: "GIGASTONE 128GB SD Card 2-Pack, Camera Plus, UH...",
-    desc: "4.6 ⭐ $88.98. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51PF1wlBVhL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B09XR2MTHK",
-    title: "Lexar E-Series 128GB 2 PK Micro SD Card microSD...",
-    desc: "4.7 ⭐ $58.49. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51fwmXWGrNL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0D4C9QL28",
-    title: "Lexar 256GB Silver SD Memory Card, 225MB/s Read...",
-    desc: "4.7 ⭐ $114.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81F57d3ynCL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0BY3YQSBY",
-    title: "Nextorage Japan SD Card UHS-II 256GB Memory Car...",
-    desc: "4.6 ⭐ $399.99. Get the best gear for your photography workflow.",
+    asin: "B0FJFVKKWJ",
+    title: "Camera Lens Cleaning kit，Camera Accessories，Cam...",
+    desc: "4.5 ⭐ $9.99. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71WX4+Gb1bL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/81W9Aj1SGdL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B00JL4IWXI",
+    title: "K&F CONCEPT 4 in 1 Camera Lens Cleaning Kit for...",
+    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/713L5amT-3L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0098QH2BC",
+    title: "Altura Photo Camera Lens Cleaning Kit, Lens Cle...",
+    desc: "4.7 ⭐ $18.98. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71yntsjILxL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B01JQQCTQQ",
+    title: "Altura Photo Camera Cleaning Kit, Full Frame Se...",
+    desc: "4.7 ⭐ $34.98. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81UVBzXSwoL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0G39N4CTT",
+    title: "llano Camera Cleaning Kit, 25-in-1 DSLR Mirrorl...",
+    desc: "4.8 ⭐ $23.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71fOiXZmgRL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0FKBH97T5",
+    title: "VSGO DKL-20F Sensor Cleaning Kit for Full Frame...",
+    desc: "4.8 ⭐ $32.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71AF9omt8nL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B00JL4IWXI",
+    title: "K&F CONCEPT 4 in 1 Camera Lens Cleaning Kit for...",
+    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/713L5amT-3L._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0DX25Y9GT",
+    title: "K&F CONCEPT 15 in 1 Camera Pro Cleaning Kit for...",
+    desc: "4.7 ⭐ $21.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/712TW5m0k7L._AC_UL320_.jpg"
+  },
+  {
+    asin: "B083NND39J",
+    title: "14-in-1 Camera Lens Cleaning Kit - Mirrorless &...",
+    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71TpPoSWq+L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0G39N4CTT",
+    title: "llano Camera Cleaning Kit, 25-in-1 DSLR Mirrorl...",
+    desc: "4.8 ⭐ $23.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71fOiXZmgRL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B092642ZS9",
+    title: "Aispour Camera Lens Cleaning Kit, 10-in-1 Camer...",
+    desc: "4.7 ⭐ $8.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71GdTf1qDOL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0FC28VCYM",
+    title: "K&F CONCEPT 25 in 1 Camera Cleaning Kit, Full F...",
+    desc: "4.7 ⭐ $29.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71BbeNzVaaL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B01JQQCTQQ",
+    title: "Altura Photo Camera Cleaning Kit, Full Frame Se...",
+    desc: "4.7 ⭐ $34.98. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81UVBzXSwoL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0FWRKFZK4",
+    title: "Camera Cleaning kit - Professional Camera Lens ...",
+    desc: "4.4 ⭐ $9.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/715hUKqS9vL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07TY5H7CK",
+    title: "WHOOSH! Screen Shine Go XL – Screen Cleaner Spr...",
+    desc: "4.6 ⭐ $14.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81e9XtOhc0L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0FKBH97T5",
+    title: "VSGO DKL-20F Sensor Cleaning Kit for Full Frame...",
+    desc: "4.8 ⭐ $32.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71AF9omt8nL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B00CHHJQ0O",
+    title: "CamKix Camera Lens Cleaning Kit, Air Blower, 2-...",
+    desc: "4.5 ⭐ $7.79. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/619bbPBdymL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0DX25Y9GT",
+    title: "K&F CONCEPT 15 in 1 Camera Pro Cleaning Kit for...",
+    desc: "4.7 ⭐ $21.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/712TW5m0k7L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B01FWNEUIM",
+    title: "Altura Photo Camera Cleaning Kit, APS-C Sensor ...",
+    desc: "4.7 ⭐ $34.98. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81P17Y2zbEL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B00JL4IWXI",
+    title: "K&F CONCEPT 4 in 1 Camera Lens Cleaning Kit for...",
+    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/713L5amT-3L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0F5GJYTVS",
+    title: "Camera Lens Cleaning Kit - Mirrorless and DSLR ...",
+    desc: "4.6 ⭐ $9.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81uc4txvPML._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0CQBYVDLR",
+    title: "K&F CONCEPT 10-in-1 Photo Camera Cleaning Kit f...",
+    desc: "4.7 ⭐ $29.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71XoPN6st2L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0F1D54P52",
+    title: "K&F CONCEPT APS-C Sensor Cleaning Kit, with Sen...",
+    desc: "4.7 ⭐ $14.39. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71M1QD27iKL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B00006JN3G",
+    title: "Nikon 7072 Lens Pen Cleaning System, Black | Le...",
+    desc: "4.6 ⭐ $7.08. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/41s9lF1qNXL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B092642ZS9",
+    title: "Aispour Camera Lens Cleaning Kit, 10-in-1 Camer...",
+    desc: "4.7 ⭐ $8.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71GdTf1qDOL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07TY5H7CK",
+    title: "WHOOSH! Screen Shine Go XL – Screen Cleaner Spr...",
+    desc: "4.6 ⭐ $14.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81e9XtOhc0L._AC_UL320_.jpg"
+  },
+  {
+    asin: "B01JQQCTQQ",
+    title: "Altura Photo Camera Cleaning Kit, Full Frame Se...",
+    desc: "4.7 ⭐ $34.98. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81UVBzXSwoL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0G39N4CTT",
+    title: "llano Camera Cleaning Kit, 25-in-1 DSLR Mirrorl...",
+    desc: "4.8 ⭐ $23.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71fOiXZmgRL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0FKBH97T5",
+    title: "VSGO DKL-20F Sensor Cleaning Kit for Full Frame...",
+    desc: "4.8 ⭐ $32.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71AF9omt8nL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B08DNN5XDF",
+    title: "VSGO Microfiber Camera Cleaning Gloves for Prof...",
+    desc: "4.5 ⭐ $9.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71r8zrVQpxL._AC_UL320_.jpg"
   }
 ];
 
