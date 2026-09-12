@@ -26,260 +26,172 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B0FKBH97T5",
-    title: "VSGO DKL-20F Sensor Cleaning Kit for Full Frame...",
-    desc: "4.8 ⭐ $32.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71AF9omt8nL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B01FWNEUIM",
-    title: "Altura Photo Camera Cleaning Kit, APS-C Sensor ...",
-    desc: "4.7 ⭐ $34.98. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81P17Y2zbEL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FJFVKKWJ",
-    title: "Camera Lens Cleaning kit，Camera Accessories，Cam...",
-    desc: "4.5 ⭐ $9.99. Get the best gear for your photography workflow.",
+    asin: "B0D8JDPKKS",
+    title: "Frameo 10.1 Inch WiFi Digital Picture Frame, Sm...",
+    desc: "4.7 ⭐ $69.99. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81W9Aj1SGdL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81mhPUK4EGL._AC_UY218_.jpg"
   },
   {
-    asin: "B00JL4IWXI",
-    title: "K&F CONCEPT 4 in 1 Camera Lens Cleaning Kit for...",
-    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
+    asin: "B083SH697H",
+    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ...",
+    desc: "4.6 ⭐ $59.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71v8cZ36vwL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0F8B93ZBM",
+    title: "64GB 15.6\" Frameo Digital Picture Frame WiFi, L...",
+    desc: "4.5 ⭐ $99.98. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71WqsM-Og7L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0H9RV1M63",
+    title: "WiFi Digital Picture Frame, 10.1 Inch 1280×800 ...",
+    desc: "4.3 ⭐ $59.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71OhXyqXQwL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0HC2MH3DQ",
+    title: "WiFi Digital Picture Frame, 15.6 Inch Large Dis...",
+    desc: "5 ⭐ $149.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71WRbgCdDwL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0H79JLK97",
+    title: "Grownsy Sonogram Digital Picture Frame,7‑Inch U...",
+    desc: "4.4 ⭐ $59.99. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/713L5amT-3L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71QPteuubFL._AC_UL320_.jpg"
   },
   {
-    asin: "B0098QH2BC",
-    title: "Altura Photo Camera Lens Cleaning Kit, Lens Cle...",
-    desc: "4.7 ⭐ $18.98. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71yntsjILxL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B01JQQCTQQ",
-    title: "Altura Photo Camera Cleaning Kit, Full Frame Se...",
-    desc: "4.7 ⭐ $34.98. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81UVBzXSwoL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0G39N4CTT",
-    title: "llano Camera Cleaning Kit, 25-in-1 DSLR Mirrorl...",
-    desc: "4.8 ⭐ $23.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71fOiXZmgRL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0FKBH97T5",
-    title: "VSGO DKL-20F Sensor Cleaning Kit for Full Frame...",
-    desc: "4.8 ⭐ $32.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71AF9omt8nL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B00JL4IWXI",
-    title: "K&F CONCEPT 4 in 1 Camera Lens Cleaning Kit for...",
-    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
+    asin: "B0H8YK9KQM",
+    title: "Baseball Picture Frame 4x6, 3D Raised Wooden Sp...",
+    desc: "4 ⭐ $12.99. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/713L5amT-3L._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/61V+xBQ2REL._AC_UL320_.jpg"
   },
   {
-    asin: "B0DX25Y9GT",
-    title: "K&F CONCEPT 15 in 1 Camera Pro Cleaning Kit for...",
-    desc: "4.7 ⭐ $21.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/712TW5m0k7L._AC_UL320_.jpg"
-  },
-  {
-    asin: "B083NND39J",
-    title: "14-in-1 Camera Lens Cleaning Kit - Mirrorless &...",
-    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71TpPoSWq+L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0G39N4CTT",
-    title: "llano Camera Cleaning Kit, 25-in-1 DSLR Mirrorl...",
-    desc: "4.8 ⭐ $23.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71fOiXZmgRL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B092642ZS9",
-    title: "Aispour Camera Lens Cleaning Kit, 10-in-1 Camer...",
-    desc: "4.7 ⭐ $8.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71GdTf1qDOL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FC28VCYM",
-    title: "K&F CONCEPT 25 in 1 Camera Cleaning Kit, Full F...",
-    desc: "4.7 ⭐ $29.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71BbeNzVaaL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B01JQQCTQQ",
-    title: "Altura Photo Camera Cleaning Kit, Full Frame Se...",
-    desc: "4.7 ⭐ $34.98. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81UVBzXSwoL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FWRKFZK4",
-    title: "Camera Cleaning kit - Professional Camera Lens ...",
-    desc: "4.4 ⭐ $9.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/715hUKqS9vL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07TY5H7CK",
-    title: "WHOOSH! Screen Shine Go XL – Screen Cleaner Spr...",
-    desc: "4.6 ⭐ $14.99. Get the best gear for your photography workflow.",
+    asin: "B0HB16DL8B",
+    title: "Neiman Marcus Picture Frame Modern Faux Leather...",
+    desc: "4.2 ⭐ $12.99. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81e9XtOhc0L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71iGh8RD0yL._AC_UL320_.jpg"
   },
   {
-    asin: "B0FKBH97T5",
-    title: "VSGO DKL-20F Sensor Cleaning Kit for Full Frame...",
-    desc: "4.8 ⭐ $32.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71AF9omt8nL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B00CHHJQ0O",
-    title: "CamKix Camera Lens Cleaning Kit, Air Blower, 2-...",
-    desc: "4.5 ⭐ $7.79. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/619bbPBdymL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0DX25Y9GT",
-    title: "K&F CONCEPT 15 in 1 Camera Pro Cleaning Kit for...",
-    desc: "4.7 ⭐ $21.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/712TW5m0k7L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B01FWNEUIM",
-    title: "Altura Photo Camera Cleaning Kit, APS-C Sensor ...",
-    desc: "4.7 ⭐ $34.98. Get the best gear for your photography workflow.",
-    badge: "Deal",
+    asin: "B09P8BPPQW",
+    title: "Digital Picture Frame WiFi 10.1 Inch Digital Ph...",
+    desc: "4.4 ⭐ $39.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81P17Y2zbEL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71lRdYHx7HL._AC_UY218_.jpg"
   },
   {
-    asin: "B00JL4IWXI",
-    title: "K&F CONCEPT 4 in 1 Camera Lens Cleaning Kit for...",
-    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/713L5amT-3L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F5GJYTVS",
-    title: "Camera Lens Cleaning Kit - Mirrorless and DSLR ...",
-    desc: "4.6 ⭐ $9.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
+    asin: "B0GR6YMKHX",
+    title: "Aura HD Digital Picture Frame | Carver: The Bes...",
+    desc: "4.7 ⭐ $149.00. Get the best gear for your photography workflow.",
+    badge: "Storage",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81uc4txvPML._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81xccqjBJKL._AC_UY218_.jpg"
   },
   {
-    asin: "B0CQBYVDLR",
-    title: "K&F CONCEPT 10-in-1 Photo Camera Cleaning Kit f...",
-    desc: "4.7 ⭐ $29.99. Get the best gear for your photography workflow.",
+    asin: "B01N7ENHO6",
+    title: "Skylight Digital Picture Frame, Load from Phone...",
+    desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GJ5D2XP6",
+    title: "AEEZO Digital Picture Frame, 10.1 Inch Digital ...",
+    desc: "4.5 ⭐ $59.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71mEui6zWUL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0FV857P1H",
+    title: "Digital Picture Frame, 10.1 Inch Picture Frame ...",
+    desc: "4.4 ⭐ $47.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71dRBhjR34L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0CQN2PKQR",
+    title: "Digital Picture Frame, Frameo 15.6'' Digital Ph...",
+    desc: "4.5 ⭐ $99.96. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71oBxFQf-RL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0DHCZ3L9F",
+    title: "Uhale Smart WiFi Digital Picture Frame 10″ Touc...",
+    desc: "4.2 ⭐ $39.99. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71XoPN6st2L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71kBWuvAKKL._AC_UY218_.jpg"
   },
   {
-    asin: "B0F1D54P52",
-    title: "K&F CONCEPT APS-C Sensor Cleaning Kit, with Sen...",
-    desc: "4.7 ⭐ $14.39. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71M1QD27iKL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B00006JN3G",
-    title: "Nikon 7072 Lens Pen Cleaning System, Black | Le...",
-    desc: "4.6 ⭐ $7.08. Get the best gear for your photography workflow.",
+    asin: "B0D8VTQKQX",
+    title: "Frameo 10.1 Inch WiFi Digital Picture Frame wit...",
+    desc: "4.8 ⭐ $59.49. Get the best gear for your photography workflow.",
     badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/41s9lF1qNXL._AC_UY218_.jpg"
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/815khBRRSTL._AC_UY218_.jpg"
   },
   {
-    asin: "B092642ZS9",
-    title: "Aispour Camera Lens Cleaning Kit, 10-in-1 Camer...",
-    desc: "4.7 ⭐ $8.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71GdTf1qDOL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07TY5H7CK",
-    title: "WHOOSH! Screen Shine Go XL – Screen Cleaner Spr...",
-    desc: "4.6 ⭐ $14.99. Get the best gear for your photography workflow.",
+    asin: "B0D9NLT5LQ",
+    title: "Frameo 10.1\" Digital Picture Frame with 32GB Me...",
+    desc: "4.5 ⭐ $53.99. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81e9XtOhc0L._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/81nVmJSR4xL._AC_UY218_.jpg"
   },
   {
-    asin: "B01JQQCTQQ",
-    title: "Altura Photo Camera Cleaning Kit, Full Frame Se...",
-    desc: "4.7 ⭐ $34.98. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
+    asin: "B0CYZLWG1S",
+    title: "Dragon Touch 10.1'' WiFi Digital Picture Frame ...",
+    desc: "4.5 ⭐ $53.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81UVBzXSwoL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/712uVn8vstL._AC_UY218_.jpg"
   },
   {
-    asin: "B0G39N4CTT",
-    title: "llano Camera Cleaning Kit, 25-in-1 DSLR Mirrorl...",
-    desc: "4.8 ⭐ $23.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
+    asin: "B0CRRHQD2T",
+    title: "10.1 inch Smart WiFi Digital Picture Frame-Load...",
+    desc: "4.2 ⭐ $42.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71fOiXZmgRL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71sa5bVRtDL._AC_UY218_.jpg"
   },
   {
-    asin: "B0FKBH97T5",
-    title: "VSGO DKL-20F Sensor Cleaning Kit for Full Frame...",
-    desc: "4.8 ⭐ $32.99. Get the best gear for your photography workflow.",
+    asin: "B0H6FYNXZX",
+    title: "AEEZO Digital Picture Frame, 10.1'' WiFi Electr...",
+    desc: "4.5 ⭐ $48.87. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/715sBTNKh0L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B00442VXCO",
+    title: "Aluratek 8 Inch LCD Digital Photo Frame with Au...",
+    desc: "4.1 ⭐ $34.99. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71AF9omt8nL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B08DNN5XDF",
-    title: "VSGO Microfiber Camera Cleaning Gloves for Prof...",
-    desc: "4.5 ⭐ $9.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71r8zrVQpxL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/61RIfxXptqL._AC_UY218_.jpg"
   }
 ];
 
