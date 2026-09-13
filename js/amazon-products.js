@@ -26,172 +26,212 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B0D8JDPKKS",
-    title: "Frameo 10.1 Inch WiFi Digital Picture Frame, Sm...",
-    desc: "4.7 ⭐ $69.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81mhPUK4EGL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B083SH697H",
-    title: "32GB FRAMEO 10.1 Inch Smart WiFi Digital Photo ...",
-    desc: "4.6 ⭐ $59.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71v8cZ36vwL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F8B93ZBM",
-    title: "64GB 15.6\" Frameo Digital Picture Frame WiFi, L...",
-    desc: "4.5 ⭐ $99.98. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71WqsM-Og7L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0H9RV1M63",
-    title: "WiFi Digital Picture Frame, 10.1 Inch 1280×800 ...",
-    desc: "4.3 ⭐ $59.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71OhXyqXQwL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0HC2MH3DQ",
-    title: "WiFi Digital Picture Frame, 15.6 Inch Large Dis...",
-    desc: "5 ⭐ $149.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71WRbgCdDwL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0H79JLK97",
-    title: "Grownsy Sonogram Digital Picture Frame,7‑Inch U...",
-    desc: "4.4 ⭐ $59.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71QPteuubFL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0H8YK9KQM",
-    title: "Baseball Picture Frame 4x6, 3D Raised Wooden Sp...",
-    desc: "4 ⭐ $12.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61V+xBQ2REL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0HB16DL8B",
-    title: "Neiman Marcus Picture Frame Modern Faux Leather...",
-    desc: "4.2 ⭐ $12.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71iGh8RD0yL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B09P8BPPQW",
-    title: "Digital Picture Frame WiFi 10.1 Inch Digital Ph...",
-    desc: "4.4 ⭐ $39.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71lRdYHx7HL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GR6YMKHX",
-    title: "Aura HD Digital Picture Frame | Carver: The Bes...",
-    desc: "4.7 ⭐ $149.00. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81xccqjBJKL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B01N7ENHO6",
-    title: "Skylight Digital Picture Frame, Load from Phone...",
-    desc: "4.7 ⭐ $139.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81FdGU7uWPL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GJ5D2XP6",
-    title: "AEEZO Digital Picture Frame, 10.1 Inch Digital ...",
-    desc: "4.5 ⭐ $59.99. Get the best gear for your photography workflow.",
+    asin: "B0GPS7DKDC",
+    title: "Lexar 128GB Dual Drive D500 External SSD, 400MB...",
+    desc: "3.6 ⭐ $34.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71mEui6zWUL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/718-o8d1HcL._AC_UY218_.jpg"
   },
   {
-    asin: "B0FV857P1H",
-    title: "Digital Picture Frame, 10.1 Inch Picture Frame ...",
-    desc: "4.4 ⭐ $47.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
+    asin: "B0FLJFRTPS",
+    title: "Gigastone USB-C+A Portable SSD 2TB USB 3.2 Gen ...",
+    desc: "$249.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71dRBhjR34L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/41TXGMbTiXL._AC_UY218_.jpg"
   },
   {
-    asin: "B0CQN2PKQR",
-    title: "Digital Picture Frame, Frameo 15.6'' Digital Ph...",
-    desc: "4.5 ⭐ $99.96. Get the best gear for your photography workflow.",
+    asin: "B08HN37XC1",
+    title: "Sandisk 2TB Extreme Portable SSD, Up to 1050MB/...",
+    desc: "4.6 ⭐ $289.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61zuR3UMnWL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GMWYYRQL",
+    title: "Sandisk 1TB Extreme Portable SSD, Up to 2000MB/...",
+    desc: "4.6 ⭐ $252.78. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71u6LfJqm-L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07CRG94G3",
+    title: "Seagate 2TB Portable Hard Drive | USB 3.0 (STGX...",
+    desc: "4.6 ⭐ $129.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/41OUh0ZU1NL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0BJV16HC6",
+    title: "SSK Portable SSD 250GB External Solid State Har...",
+    desc: "4.5 ⭐ $58.99. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71oBxFQf-RL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71v+Y7oYZSL._AC_UY218_.jpg"
   },
   {
-    asin: "B0DHCZ3L9F",
-    title: "Uhale Smart WiFi Digital Picture Frame 10″ Touc...",
-    desc: "4.2 ⭐ $39.99. Get the best gear for your photography workflow.",
+    asin: "B0874XN4D8",
+    title: "Samsung T7 Portable SSD 1TB Titan Gray, USB 3.2...",
+    desc: "4.7 ⭐ $244.00. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71kBWuvAKKL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/91YfRIy7kYL._AC_UY218_.jpg"
   },
   {
-    asin: "B0D8VTQKQX",
-    title: "Frameo 10.1 Inch WiFi Digital Picture Frame wit...",
-    desc: "4.8 ⭐ $59.49. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/815khBRRSTL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0D9NLT5LQ",
-    title: "Frameo 10.1\" Digital Picture Frame with 32GB Me...",
-    desc: "4.5 ⭐ $53.99. Get the best gear for your photography workflow.",
+    asin: "B0BGKXX9TK",
+    title: "SSK Portable SSD 500GB External Solid State Har...",
+    desc: "4.5 ⭐ $92.99. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81nVmJSR4xL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71VtTtHU7DL._AC_UY218_.jpg"
   },
   {
-    asin: "B0CYZLWG1S",
-    title: "Dragon Touch 10.1'' WiFi Digital Picture Frame ...",
-    desc: "4.5 ⭐ $53.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/712uVn8vstL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0CRRHQD2T",
-    title: "10.1 inch Smart WiFi Digital Picture Frame-Load...",
-    desc: "4.2 ⭐ $42.99. Get the best gear for your photography workflow.",
+    asin: "B0H6MF2MTN",
+    title: "Sandisk 500GB Extreme Portable SSD, Up to 2000M...",
+    desc: "4.6 ⭐ $159.99. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71sa5bVRtDL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71u6LfJqm-L._AC_UY218_.jpg"
   },
   {
-    asin: "B0H6FYNXZX",
-    title: "AEEZO Digital Picture Frame, 10.1'' WiFi Electr...",
-    desc: "4.5 ⭐ $48.87. Get the best gear for your photography workflow.",
+    asin: "B0H4HKMBB4",
+    title: "Sandisk 500GB Portable SSD, Up to 1000MB/s Read...",
+    desc: "3.5 ⭐ $99.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81AU7KLC+kL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0874XN4D8",
+    title: "Samsung T7 Portable SSD 1TB Titan Gray, USB 3.2...",
+    desc: "4.7 ⭐ $244.00. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/91YfRIy7kYL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0FLJX1YP2",
+    title: "Gigastone USB-C+A Portable SSD 512GB (2-Pack) U...",
+    desc: "$148.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/51Yl7Y4ayML._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0CHFSWM2P",
+    title: "Samsung T9 Portable SSD 1TB, USB 3.2 Gen 2x2 Ex...",
+    desc: "4.6 ⭐ $259.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71EESd1deTL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0DYDHLN81",
+    title: "Lexar ES3 1TB Portable SSD Silver, USB 3.2 Gen ...",
+    desc: "4.4 ⭐ $179.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/51xD2RTskKL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0D7MJQL82",
+    title: "SSK 128GB Portable SSD External Hard Drive Soli...",
+    desc: "4 ⭐ $38.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61SucdqsPFL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0H2B1PCG4",
+    title: "Verbatim Pocket 512GB External SSD USB 3.2 Gen ...",
+    desc: "4.4 ⭐ $87.99. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/715sBTNKh0L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/51HSmMrMznL._AC_UY218_.jpg"
   },
   {
-    asin: "B00442VXCO",
-    title: "Aluratek 8 Inch LCD Digital Photo Frame with Au...",
-    desc: "4.1 ⭐ $34.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
+    asin: "B0CHFSWM2P",
+    title: "Samsung T9 Portable SSD 1TB, USB 3.2 Gen 2x2 Ex...",
+    desc: "4.6 ⭐ $259.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71EESd1deTL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0C5JQ68FY",
+    title: "Sandisk 1TB Portable SSD, Up to 800MB/s Read Sp...",
+    desc: "4.5 ⭐ $165.70. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61RIfxXptqL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71bBCTIvIIL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B09VLK9W3S",
+    title: "Samsung T7 Shield Portable SSD 1TB, USB 3.2 Gen...",
+    desc: "4.7 ⭐ $266.96. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61CKrZWOcrL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0H4HHBHY8",
+    title: "Sandisk 2TB Portable SSD, Up to 1000MB/s Read S...",
+    desc: "$289.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81AU7KLC+kL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B08GV9M64L",
+    title: "Sandisk 1TB Extreme PRO Portable SSD, Up to 200...",
+    desc: "4.5 ⭐ $224.25. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71z2lEHwfNL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0FL7PK55D",
+    title: "fanxiang 1TB External SSD, Portable Solid State...",
+    desc: "4.3 ⭐ $151.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61v3KTtWV4L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0874XN4D8",
+    title: "Samsung T7 Portable SSD 1TB Titan Gray, USB 3.2...",
+    desc: "4.7 ⭐ $244.00. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/91YfRIy7kYL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0GCH24KHL",
+    title: "1TB Magnetic External SSD, Up to 2000MB/s Porta...",
+    desc: "4.3 ⭐ $199.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71T1otL7OcL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0CSW6375K",
+    title: "JOIOT 128GB USB C Flash Drive Dual USB 3.0 Flas...",
+    desc: "4.4 ⭐ $25.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/51GkKZt1VlL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B07XSGNQ2X",
+    title: "2 Pack 64GB USB Flash Drive USB 2.0 Thumb Drive...",
+    desc: "4.5 ⭐ $18.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/5175s67dwwL._AC_UL320_.jpg"
   }
 ];
 
