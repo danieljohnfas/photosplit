@@ -26,132 +26,132 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B0GDQRNTF3",
-    title: "SanDisk 128GB Extreme PRO SD UHS-I Card, Up to ...",
-    desc: "4.8 ⭐ $51.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/719J6w3pB5L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0B7NS71G2",
-    title: "SanDisk 128GB Ultra SDXC UHS-I Memory Card, Up ...",
-    desc: "4.7 ⭐ $35.51. Get the best gear for your photography workflow.",
+    asin: "B07CRG94G3",
+    title: "Seagate 2TB Portable Hard Drive | USB 3.0 (STGX...",
+    desc: "4.6 ⭐ $129.99. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61U2kZ3XZnL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/41OUh0ZU1NL._AC_UY218_.jpg"
   },
   {
-    asin: "B0G8L1RNPF",
-    title: "SANDISK 128GB Ultra microSD Card + Adapter, Up ...",
-    desc: "4.6 ⭐ $35.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
+    asin: "B07VTFN6HM",
+    title: "WD 2TB My Passport, Portable External Hard Driv...",
+    desc: "4.6 ⭐ $131.00. Get the best gear for your photography workflow.",
+    badge: "Storage",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51UsBWNwbPL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/510+J06fz0L._AC_UY218_.jpg"
   },
   {
-    asin: "B07YFGG1SD",
-    title: "SanDisk 128GB Ultra SDXC UHS-I Memory Card - 10...",
-    desc: "4.7 ⭐ $33.50. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
+    asin: "B06W55K9N6",
+    title: "WD 2TB Elements Portable External Hard Drive fo...",
+    desc: "4.7 ⭐ $134.50. Get the best gear for your photography workflow.",
+    badge: "Storage",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/619vrnD+NoL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61EunJBqIkL._AC_UY218_.jpg"
   },
   {
-    asin: "B08TJRVWV1",
-    title: "Amazon Basics microSDXC Memory Card with Full S...",
-    desc: "4.7 ⭐ $35.14. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61VgI87HGgL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0G8LS3LXG",
-    title: "SANDISK 128GB Ultra SD Memory Card, Up to 195MB...",
-    desc: "4.4 ⭐ $35.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71HtQWwG1DL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0G8LT6J46",
-    title: "SANDISK 128GB Extreme SD Memory Card, Up to 230...",
-    desc: "4.6 ⭐ $44.99. Get the best gear for your photography workflow.",
+    asin: "B07CRGSR16",
+    title: "Seagate Portable 4TB External Hard Drive HDD – ...",
+    desc: "4.6 ⭐ $189.99. Get the best gear for your photography workflow.",
     badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71hkTYnMGcL._AC_UY218_.jpg"
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/41OUh0ZU1NL._AC_UY218_.jpg"
   },
   {
-    asin: "B0GRZVVHWM",
-    title: "5-Pack 128GB Micro SD Card for Dashcam & Securi...",
-    desc: "4.3 ⭐ $89.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/716tr7zmxkL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0BJRVB9Y4",
-    title: "SanDisk SDSDXXD-128G-ANCIN 128gb Extreme Pro Sd...",
-    desc: "4.8 ⭐ $59.99. Get the best gear for your photography workflow.",
+    asin: "B01N7QFZLQ",
+    title: "LaCie Rugged USB-C 2TB External Hard Drive Port...",
+    desc: "4.7 ⭐ $149.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61lvlfaYsPL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71T6RhHsuNL._AC_UY218_.jpg"
   },
   {
-    asin: "B09XZ6BCYG",
-    title: "PNY 128GB Elite-X C10 U3 V30 SDXC Flash Memory ...",
-    desc: "4.6 ⭐ $56.99. Get the best gear for your photography workflow.",
+    asin: "B08HN37XC1",
+    title: "Sandisk 2TB Extreme Portable SSD, Up to 1050MB/...",
+    desc: "4.6 ⭐ $289.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61zuR3UMnWL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0BQX6NNVC",
+    title: "Toshiba Canvio Basics 2TB Portable External Har...",
+    desc: "4.6 ⭐ $133.85. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/91e-WNUpH0L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0G56476HZ",
+    title: "Avolusion M3 Series 2TB USB 3.0 Portable Extern...",
+    desc: "3.7 ⭐ $89.99. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61kykQSnnSL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/51TKXUgWylL._AC_UY218_.jpg"
   },
   {
-    asin: "B09S52Y575",
-    title: "PNY 128GB Elite C10 U1 V10 SDXC Flash Memory Ca...",
-    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
+    asin: "B097TWBP9V",
+    title: "Portable SATA External Hard Drive HDD 2TB 1TB 5...",
+    desc: "2.8 ⭐ $59.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61rmxqy6XsL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71rdM6M+aWS._AC_UY218_.jpg"
   },
   {
-    asin: "B0DF36N6QD",
-    title: "SanDisk 128GB UHS-I Ultra Memory Card Class 10 ...",
-    desc: "4.6 ⭐ $30.02. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61YUAJrOulL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0B7NVV55M",
-    title: "SANDISK 128GB Ultra microSD Card + Adapter Up t...",
-    desc: "4.7 ⭐ $64.84. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71Ow-Ih7KNL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B013TMNPBQ",
-    title: "Made for Amazon SanDisk 128GB microSD Memory Ca...",
-    desc: "4.6 ⭐ $26.75. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81dQGd03YHL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07NY23WBG",
-    title: "SANDISK 128GB High Endurance Video microSDXC Ca...",
-    desc: "4.7 ⭐ $36.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51+e7-JlQ4L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0BDYVC5TD",
-    title: "SanDisk 128GB Ultra microSDXC UHS-I Memory Card...",
-    desc: "4.7 ⭐ $30.50. Get the best gear for your photography workflow.",
+    asin: "B07CRG7BBH",
+    title: "Seagate Portable 1TB External Hard Drive HDD – ...",
+    desc: "4.6 ⭐ $119.80. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51FeeXHe1nL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/41OUh0ZU1NL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07VS8QCXC",
+    title: "Seagate Portable 5TB External Hard Drive HDD – ...",
+    desc: "4.6 ⭐ . Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/41OUh0ZU1NL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B094QZLJQ6",
+    title: "Seagate One Touch, 2TB, Password activated hard...",
+    desc: "4.5 ⭐ . Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71VDyTlZCwL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B094QZMM69",
+    title: "Seagate One Touch, 2TB, Password Activated Hard...",
+    desc: "4.5 ⭐ $138.77. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71U5CNhRzdL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07MY4KWFP",
+    title: "Seagate Backup Plus Slim 2TB External Hard Driv...",
+    desc: "4.7 ⭐ $189.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71BttNwa3tL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B00FRHTTIA",
+    title: "Seagate Backup Plus Slim 2TB External Hard Driv...",
+    desc: "4.5 ⭐ $199.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71eBPwetWcL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0DMLP8768",
+    title: "YOTUO 1TB External Hard Drive, USB C Multiport ...",
+    desc: "4.2 ⭐ $94.75. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71RUiiIALeL._AC_UY218_.jpg"
   }
 ];
 
