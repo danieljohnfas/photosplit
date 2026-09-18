@@ -26,132 +26,252 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B0FJFVKKWJ",
-    title: "Camera Lens Cleaning kit，Camera Accessories，Cam...",
-    desc: "4.4 ⭐ $9.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
+    asin: "B084SD48DM",
+    title: "Blink USB Flash Drive for local video storage w...",
+    desc: "4.5 ⭐ $14.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81W9Aj1SGdL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/4181StaKQnL._AC_UY218_.jpg"
   },
   {
-    asin: "B00JL4IWXI",
-    title: "K&F CONCEPT 4 in 1 Camera Lens Cleaning Kit for...",
-    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
+    asin: "B0F98YGMV7",
+    title: "Lexar A30E USB 3.2 Gen 1 Flash Drive 128GB 2-Pack",
+    desc: "4.6 ⭐ $35.99. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/713L5amT-3L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61cXbsJvF9L._AC_UY218_.jpg"
   },
   {
-    asin: "B0098QH2BC",
-    title: "Altura Photo Camera Lens Cleaning Kit, Lens Cle...",
-    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
+    asin: "B0DH1MKVQV",
+    title: "Lexar D40E 128GB Dual USB 3.2 Gen 1 Type-C Jump...",
+    desc: "4.4 ⭐ $29.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/5170woTzckL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B015CH1PJU",
+    title: "SANDISK 128GB Ultra Flair, USB-A Flash Drive, U...",
+    desc: "4.6 ⭐ $25.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61DaP3ryRKL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0HC2VYBF5",
+    title: "Vezzio 64GB USB C Flash Drive 100MB/S,USB 3.2 G...",
+    desc: "4.3 ⭐ $16.69. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/51p62grMNqL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07S4GGHNR",
+    title: "SIMMAX 32GB Memory Stick USB 2.0 Flash Drives S...",
+    desc: "4.5 ⭐ $9.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61AZvkftK7L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0DW8F12BW",
+    title: "32GB USB C Flash Drive Dual USB 3.0 Type C + US...",
+    desc: "4.5 ⭐ $15.19. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/51ruGlRQeVL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B09DBTWWSF",
+    title: "PNY 128GB Turbo Attaché 3 USB 3.0 Flash Drive 2...",
+    desc: "4.6 ⭐ $27.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61s1hIk7tXL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0DH1RGJY9",
+    title: "Lexar D40E 256GB Dual USB 3.2 Gen 1 Type-C Jump...",
+    desc: "4.4 ⭐ $49.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/51Kbs+Y2hcL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B09RG1TNM7",
+    title: "PNY 64GB Turbo Attaché 3 USB 3.0 Flash Drive 5-...",
+    desc: "4.6 ⭐ $39.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/51qNgGQLpIL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0F8VWPYNC",
+    title: "Swivel Design 16GB USB Flash Drive with Keychai...",
+    desc: "4.5 ⭐ $8.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/5182C62G4QL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0H8Y2C6DZ",
+    title: "256GB Flash Drive for iPhone Photo Stick Thumb ...",
+    desc: "4.6 ⭐ $46.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61idzihM-HL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0DH1CQ5RL",
+    title: "Lexar D40E 64GB Dual USB 3.2 Gen 1 Type-C Jump ...",
+    desc: "4.4 ⭐ $22.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/51ohr+jN+BL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0BY317K3Z",
+    title: "GIGASTONE 128GB USB 3.2 Flash Drive 5-Pack, 100...",
+    desc: "4.6 ⭐ $99.99. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71yntsjILxL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/51O8YA-wWCL._AC_UL320_.jpg"
   },
   {
-    asin: "B083NND39J",
-    title: "14-in-1 Camera Lens Cleaning Kit - Mirrorless &...",
-    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71TpPoSWq+L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B092642ZS9",
-    title: "Aispour Camera Lens Cleaning Kit, 10-in-1 Camer...",
-    desc: "4.7 ⭐ $8.99. Get the best gear for your photography workflow.",
+    asin: "B0F98YGMV7",
+    title: "Lexar A30E USB 3.2 Gen 1 Flash Drive 128GB 2-Pack",
+    desc: "4.6 ⭐ $35.99. Get the best gear for your photography workflow.",
     badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71GdTf1qDOL._AC_UY218_.jpg"
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61cXbsJvF9L._AC_UL320_.jpg"
   },
   {
-    asin: "B0FKBH97T5",
-    title: "VSGO DKL-20F Sensor Cleaning Kit for Full Frame...",
-    desc: "4.8 ⭐ $32.99. Get the best gear for your photography workflow.",
+    asin: "B0GG4BTNXY",
+    title: "Lexar D50E 128GB Solid State Dual Drive, Up to ...",
+    desc: "4.5 ⭐ $39.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61MTxoD2iIL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0D5VCJY87",
+    title: "USB C Flash Drive 32GB 10 Pack, Wooolken Type-C...",
+    desc: "4.4 ⭐ $58.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71QMYl+NkhL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0CJFYF6VG",
+    title: "256GB Blink USB Flash Drive & Wall Mount for Bl...",
+    desc: "4.5 ⭐ $20.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/51-ZBjmITLL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B015CH1NAQ",
+    title: "SANDISK 64GB Ultra Flair, USB-A Flash Drive, Up...",
+    desc: "4.6 ⭐ $18.60. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71AF9omt8nL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61DaP3ryRKL._AC_UY218_.jpg"
   },
   {
-    asin: "B01JQQCTQQ",
-    title: "Altura Photo Camera Cleaning Kit, Full Frame Se...",
-    desc: "4.7 ⭐ $37.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
+    asin: "B08CGXYNKV",
+    title: "128GB Flash Drive Aiibe USB Flash Drive 128 GB ...",
+    desc: "4.3 ⭐ $16.19. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/51SmhZjEI0L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0F98YGMV7",
+    title: "Lexar A30E USB 3.2 Gen 1 Flash Drive 128GB 2-Pack",
+    desc: "4.6 ⭐ $35.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81UVBzXSwoL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61cXbsJvF9L._AC_UY218_.jpg"
   },
   {
-    asin: "B0FC28VCYM",
-    title: "K&F CONCEPT 25 in 1 Camera Cleaning Kit, Full F...",
-    desc: "4.6 ⭐ $29.99. Get the best gear for your photography workflow.",
+    asin: "B0F9YGYJDL",
+    title: "GIGASTONE 64GB Dual USB Flash Drive 5-Pack, USB...",
+    desc: "4.7 ⭐ $69.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/513vC0c4MML._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0DHVQBQLQ",
+    title: "8GB Flash Drive 10 Pack Bulk USB Flash Drives, ...",
+    desc: "4.5 ⭐ $30.88. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71BbeNzVaaL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71blLwEjZ9L._AC_UY218_.jpg"
   },
   {
-    asin: "B0FWRKFZK4",
-    title: "Camera Cleaning kit - Professional Camera Lens ...",
-    desc: "4.4 ⭐ $9.99. Get the best gear for your photography workflow.",
+    asin: "B0DDYCT5YS",
+    title: "PNY 128GB Turbo Attaché 3 USB 3.0 Flash Drive 5...",
+    desc: "4.6 ⭐ $59.99. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/715hUKqS9vL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/6155RbbYkAL._AC_UY218_.jpg"
   },
   {
-    asin: "B0DX25Y9GT",
-    title: "K&F CONCEPT 15 in 1 Camera Pro Cleaning Kit for...",
-    desc: "4.7 ⭐ $21.99. Get the best gear for your photography workflow.",
+    asin: "B0HDVW3716",
+    title: "PNY 32GB Attaché X USB 3.2 Gen 1 Flash Drive 2-...",
+    desc: "4.4 ⭐ $15.28. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/712TW5m0k7L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/7186j0925cL._AC_UY218_.jpg"
   },
   {
-    asin: "B0FC28H2LN",
-    title: "K&F CONCEPT 25 in 1 Camera Pro Cleaning Kit, AP...",
-    desc: "4.6 ⭐ $29.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
+    asin: "B08HSQP37L",
+    title: "SANDISK 64GB Ultra, USB-A Flash Drive, Up to 13...",
+    desc: "4.6 ⭐ $33.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71bj6u-krfL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71jzP3WDwbL._AC_UY218_.jpg"
   },
   {
-    asin: "B00CHHJQ0O",
-    title: "CamKix Camera Lens Cleaning Kit, Air Blower, 2-...",
-    desc: "4.5 ⭐ $7.79. Get the best gear for your photography workflow.",
+    asin: "B07C5P6K6V",
+    title: "KEXIN 16GB Flash Drive 10 Pack USB Flash Drive ...",
+    desc: "4.6 ⭐ $39.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61jFbOnmejL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0F98YGMV7",
+    title: "Lexar A30E USB 3.2 Gen 1 Flash Drive 128GB 2-Pack",
+    desc: "4.6 ⭐ $35.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61cXbsJvF9L._AC_UL320_.jpg"
+  },
+  {
+    asin: "B07J23YQLC",
+    title: "KOOTION 20pcs 4GB USB Flash Drives - 4GB Thumb ...",
+    desc: "4.6 ⭐ $56.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61VHlnEV6WL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0GCZM7YBZ",
+    title: "KEXIN 512GB USB C Flash Drive up to 1000MB/s Du...",
+    desc: "4.3 ⭐ $89.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61N+Mz3IvLL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0D7C5V5MW",
+    title: "KEXIN 128GB Flash Drive 5 Pack Thumb Drive Bulk...",
+    desc: "4.6 ⭐ $51.29. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/619bbPBdymL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F5GJYTVS",
-    title: "Camera Lens Cleaning Kit - Mirrorless and DSLR ...",
-    desc: "4.6 ⭐ $9.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81uc4txvPML._AC_UY218_.jpg"
-  },
-  {
-    asin: "B01FWNEUIM",
-    title: "Altura Photo Camera Cleaning Kit, APS-C Sensor ...",
-    desc: "4.7 ⭐ $37.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81P17Y2zbEL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F1D54P52",
-    title: "K&F CONCEPT APS-C Sensor Cleaning Kit, with Sen...",
-    desc: "4.7 ⭐ $15.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71M1QD27iKL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B00006JN3G",
-    title: "Nikon 7072 Lens Pen Cleaning System, Black",
-    desc: "4.6 ⭐ $7.08. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/41s9lF1qNXL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61+XJMd-JnL._AC_UL320_.jpg"
   }
 ];
 
