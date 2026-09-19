@@ -26,252 +26,132 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B084SD48DM",
-    title: "Blink USB Flash Drive for local video storage w...",
-    desc: "4.5 ⭐ $14.99. Get the best gear for your photography workflow.",
+    asin: "B07CRG94G3",
+    title: "Seagate 2TB Portable Hard Drive | USB 3.0 (STGX...",
+    desc: "4.6 ⭐ $129.99. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/4181StaKQnL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/41OUh0ZU1NL._AC_UY218_.jpg"
   },
   {
-    asin: "B0F98YGMV7",
-    title: "Lexar A30E USB 3.2 Gen 1 Flash Drive 128GB 2-Pack",
-    desc: "4.6 ⭐ $35.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61cXbsJvF9L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0DH1MKVQV",
-    title: "Lexar D40E 128GB Dual USB 3.2 Gen 1 Type-C Jump...",
-    desc: "4.4 ⭐ $29.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/5170woTzckL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B015CH1PJU",
-    title: "SANDISK 128GB Ultra Flair, USB-A Flash Drive, U...",
-    desc: "4.6 ⭐ $25.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61DaP3ryRKL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0HC2VYBF5",
-    title: "Vezzio 64GB USB C Flash Drive 100MB/S,USB 3.2 G...",
-    desc: "4.3 ⭐ $16.69. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51p62grMNqL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07S4GGHNR",
-    title: "SIMMAX 32GB Memory Stick USB 2.0 Flash Drives S...",
-    desc: "4.5 ⭐ $9.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61AZvkftK7L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0DW8F12BW",
-    title: "32GB USB C Flash Drive Dual USB 3.0 Type C + US...",
-    desc: "4.5 ⭐ $15.19. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51ruGlRQeVL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B09DBTWWSF",
-    title: "PNY 128GB Turbo Attaché 3 USB 3.0 Flash Drive 2...",
-    desc: "4.6 ⭐ $27.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61s1hIk7tXL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0DH1RGJY9",
-    title: "Lexar D40E 256GB Dual USB 3.2 Gen 1 Type-C Jump...",
-    desc: "4.4 ⭐ $49.99. Get the best gear for your photography workflow.",
+    asin: "B06W55K9N6",
+    title: "WD 2TB Elements Portable External Hard Drive fo...",
+    desc: "4.7 ⭐ $133.90. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51Kbs+Y2hcL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61EunJBqIkL._AC_UY218_.jpg"
   },
   {
-    asin: "B09RG1TNM7",
-    title: "PNY 64GB Turbo Attaché 3 USB 3.0 Flash Drive 5-...",
-    desc: "4.6 ⭐ $39.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51qNgGQLpIL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F8VWPYNC",
-    title: "Swivel Design 16GB USB Flash Drive with Keychai...",
-    desc: "4.5 ⭐ $8.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/5182C62G4QL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0H8Y2C6DZ",
-    title: "256GB Flash Drive for iPhone Photo Stick Thumb ...",
-    desc: "4.6 ⭐ $46.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61idzihM-HL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0DH1CQ5RL",
-    title: "Lexar D40E 64GB Dual USB 3.2 Gen 1 Type-C Jump ...",
-    desc: "4.4 ⭐ $22.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51ohr+jN+BL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0BY317K3Z",
-    title: "GIGASTONE 128GB USB 3.2 Flash Drive 5-Pack, 100...",
-    desc: "4.6 ⭐ $99.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51O8YA-wWCL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0F98YGMV7",
-    title: "Lexar A30E USB 3.2 Gen 1 Flash Drive 128GB 2-Pack",
-    desc: "4.6 ⭐ $35.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61cXbsJvF9L._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0GG4BTNXY",
-    title: "Lexar D50E 128GB Solid State Dual Drive, Up to ...",
-    desc: "4.5 ⭐ $39.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61MTxoD2iIL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0D5VCJY87",
-    title: "USB C Flash Drive 32GB 10 Pack, Wooolken Type-C...",
-    desc: "4.4 ⭐ $58.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71QMYl+NkhL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0CJFYF6VG",
-    title: "256GB Blink USB Flash Drive & Wall Mount for Bl...",
-    desc: "4.5 ⭐ $20.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51-ZBjmITLL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B015CH1NAQ",
-    title: "SANDISK 64GB Ultra Flair, USB-A Flash Drive, Up...",
-    desc: "4.6 ⭐ $18.60. Get the best gear for your photography workflow.",
+    asin: "B07CRGSR16",
+    title: "Seagate Portable 4TB External Hard Drive HDD – ...",
+    desc: "4.6 ⭐ $189.98. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61DaP3ryRKL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/41OUh0ZU1NL._AC_UY218_.jpg"
   },
   {
-    asin: "B08CGXYNKV",
-    title: "128GB Flash Drive Aiibe USB Flash Drive 128 GB ...",
-    desc: "4.3 ⭐ $16.19. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51SmhZjEI0L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F98YGMV7",
-    title: "Lexar A30E USB 3.2 Gen 1 Flash Drive 128GB 2-Pack",
-    desc: "4.6 ⭐ $35.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61cXbsJvF9L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F9YGYJDL",
-    title: "GIGASTONE 64GB Dual USB Flash Drive 5-Pack, USB...",
-    desc: "4.7 ⭐ $69.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/513vC0c4MML._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0DHVQBQLQ",
-    title: "8GB Flash Drive 10 Pack Bulk USB Flash Drives, ...",
-    desc: "4.5 ⭐ $30.88. Get the best gear for your photography workflow.",
+    asin: "B07VTFN6HM",
+    title: "WD 2TB My Passport, Portable External Hard Driv...",
+    desc: "4.6 ⭐ $131.00. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71blLwEjZ9L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/510+J06fz0L._AC_UY218_.jpg"
   },
   {
-    asin: "B0DDYCT5YS",
-    title: "PNY 128GB Turbo Attaché 3 USB 3.0 Flash Drive 5...",
-    desc: "4.6 ⭐ $59.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/6155RbbYkAL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0HDVW3716",
-    title: "PNY 32GB Attaché X USB 3.2 Gen 1 Flash Drive 2-...",
-    desc: "4.4 ⭐ $15.28. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/7186j0925cL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B08HSQP37L",
-    title: "SANDISK 64GB Ultra, USB-A Flash Drive, Up to 13...",
-    desc: "4.6 ⭐ $33.99. Get the best gear for your photography workflow.",
+    asin: "B08HN37XC1",
+    title: "Sandisk 2TB Extreme Portable SSD, Up to 1050MB/...",
+    desc: "4.6 ⭐ $289.99. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71jzP3WDwbL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61zuR3UMnWL._AC_UY218_.jpg"
   },
   {
-    asin: "B07C5P6K6V",
-    title: "KEXIN 16GB Flash Drive 10 Pack USB Flash Drive ...",
-    desc: "4.6 ⭐ $39.99. Get the best gear for your photography workflow.",
+    asin: "B0BQX6NNVC",
+    title: "Toshiba Canvio Basics 2TB Portable External Har...",
+    desc: "4.6 ⭐ $133.80. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/91e-WNUpH0L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0G56476HZ",
+    title: "Avolusion M3 Series 2TB USB 3.0 Portable Extern...",
+    desc: "3.7 ⭐ $95.99. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61jFbOnmejL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/51TKXUgWylL._AC_UY218_.jpg"
   },
   {
-    asin: "B0F98YGMV7",
-    title: "Lexar A30E USB 3.2 Gen 1 Flash Drive 128GB 2-Pack",
-    desc: "4.6 ⭐ $35.99. Get the best gear for your photography workflow.",
+    asin: "B07CRG7BBH",
+    title: "Seagate Portable 1TB External Hard Drive HDD – ...",
+    desc: "4.6 ⭐ $119.80. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61cXbsJvF9L._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/41OUh0ZU1NL._AC_UY218_.jpg"
   },
   {
-    asin: "B07J23YQLC",
-    title: "KOOTION 20pcs 4GB USB Flash Drives - 4GB Thumb ...",
-    desc: "4.6 ⭐ $56.99. Get the best gear for your photography workflow.",
+    asin: "B093BVXYSV",
+    title: "Seagate Expansion Desktop, 4TB, External Hard D...",
+    desc: "4.5 ⭐ $194.95. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61VHlnEV6WL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/81906M53GdS._AC_UY218_.jpg"
   },
   {
-    asin: "B0GCZM7YBZ",
-    title: "KEXIN 512GB USB C Flash Drive up to 1000MB/s Du...",
-    desc: "4.3 ⭐ $89.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
+    asin: "B094QZMM69",
+    title: "Seagate One Touch, 2TB, Password Activated Hard...",
+    desc: "4.5 ⭐ $197.88. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71U5CNhRzdL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07MY4KWFP",
+    title: "Seagate Backup Plus Slim 2TB External Hard Driv...",
+    desc: "4.7 ⭐ . Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71BttNwa3tL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07DQ91XNK",
+    title: "Seagate Portable Drive, 2TB, External Hard Driv...",
+    desc: "4.6 ⭐ $161.24. Get the best gear for your photography workflow.",
+    badge: "Storage",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61N+Mz3IvLL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/31M8CW2ZVkL._AC_UY218_.jpg"
   },
   {
-    asin: "B0D7C5V5MW",
-    title: "KEXIN 128GB Flash Drive 5 Pack Thumb Drive Bulk...",
-    desc: "4.6 ⭐ $51.29. Get the best gear for your photography workflow.",
+    asin: "B00KWHMQV2",
+    title: "Seagate Backup Plus Slim for Mac 2TB External H...",
+    desc: "4.3 ⭐ . Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71Ukro5If9L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0DMLP8768",
+    title: "YOTUO 1TB External Hard Drive, USB C Multiport ...",
+    desc: "4.2 ⭐ $88.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71RUiiIALeL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B097TWBP9V",
+    title: "Portable SATA External Hard Drive HDD 2TB 1TB 5...",
+    desc: "2.8 ⭐ $59.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71rdM6M+aWS._AC_UY218_.jpg"
+  },
+  {
+    asin: "B01MSSJ32J",
+    title: "LaCie Rugged USB-C, 4TB, Portable External Hard...",
+    desc: "4.4 ⭐ $209.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61+XJMd-JnL._AC_UL320_.jpg"
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/91bati0rB3L._AC_UY218_.jpg"
   }
 ];
 
