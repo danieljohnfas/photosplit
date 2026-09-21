@@ -26,22 +26,6 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B0DMTVGPH8",
-    title: "OWC Envoy Ultra 2TB Thunderbolt 5 Portable NVMe...",
-    desc: "4.4 ⭐ $799.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61hcV+gPsmL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0H4HHBHY8",
-    title: "Sandisk 2TB Portable SSD, Up to 1000MB/s Read S...",
-    desc: "4.5 ⭐ $299.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81AU7KLC+kL._AC_UY218_.jpg"
-  },
-  {
     asin: "B08HN37XC1",
     title: "Sandisk 2TB Extreme Portable SSD, Up to 1050MB/...",
     desc: "4.6 ⭐ $289.99. Get the best gear for your photography workflow.",
@@ -53,233 +37,121 @@ let AMAZON_PRODUCTS = [
     asin: "B07CRG94G3",
     title: "Seagate 2TB Portable Hard Drive | USB 3.0 (STGX...",
     desc: "4.6 ⭐ $129.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/41OUh0ZU1NL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0H4HKMBB4",
-    title: "Sandisk 500GB Portable SSD, Up to 1000MB/s Read...",
-    desc: "4.5 ⭐ $99.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81AU7KLC+kL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FPHRQLD2",
-    title: "Lexar 2TB ES5 Magnetic External SSD, Up to 2000...",
-    desc: "4.5 ⭐ $384.07. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/41BwcHrf8KL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0DMTVGPH8",
-    title: "OWC Envoy Ultra 2TB Thunderbolt 5 Portable NVMe...",
-    desc: "4.4 ⭐ $799.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61hcV+gPsmL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0H8D3BBZ7",
-    title: "SSK 256GB External SSD Drive up to 550MB/s Dual...",
-    desc: "4.5 ⭐ $58.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/616mrqkpLFL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0CHFSWM2P",
-    title: "Samsung T9 Portable SSD 1TB, USB 3.2 Gen 2x2 Ex...",
-    desc: "4.6 ⭐ $255.92. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71EESd1deTL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0874XN4D8",
-    title: "Samsung T7 Portable SSD 1TB Titan Gray, USB 3.2...",
-    desc: "4.7 ⭐ $229.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/91YfRIy7kYL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0GMWYYRQL",
-    title: "Sandisk 1TB Extreme Portable SSD, Up to 2000MB/...",
-    desc: "4.6 ⭐ $269.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71u6LfJqm-L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FPHRQLD2",
-    title: "Lexar 2TB ES5 Magnetic External SSD, Up to 2000...",
-    desc: "4.5 ⭐ $384.07. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/41BwcHrf8KL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0H4H1SNMY",
-    title: "Sandisk 1TB Portable SSD, Up to 1000MB/s Read S...",
-    desc: "4.5 ⭐ $159.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81AU7KLC+kL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0BJV16HC6",
-    title: "SSK Portable SSD 250GB External Solid State Har...",
-    desc: "4.5 ⭐ $58.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71v+Y7oYZSL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/41OUh0ZU1NL._AC_UY218_.jpg"
   },
   {
     asin: "B0H8RSRCM3",
     title: "256GB External SSD USB Drive, 520MB/s USB-C & U...",
     desc: "4.6 ⭐ $56.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
+    badge: "Storage",
     btnClass: "btn-primary",
     img: "https://m.media-amazon.com/images/I/51zfM8uzFhL._AC_UY218_.jpg"
   },
   {
-    asin: "B0BGKXX9TK",
-    title: "SSK Portable SSD 500GB External Solid State Har...",
-    desc: "4.5 ⭐ $89.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
+    asin: "B0GMWYYRQL",
+    title: "Sandisk 1TB Extreme Portable SSD, Up to 2000MB/...",
+    desc: "4.6 ⭐ $267.94. Get the best gear for your photography workflow.",
+    badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71VtTtHU7DL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71u6LfJqm-L._AC_UY218_.jpg"
   },
   {
-    asin: "B0H8D3BBZ7",
-    title: "SSK 256GB External SSD Drive up to 550MB/s Dual...",
-    desc: "4.5 ⭐ $58.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
+    asin: "B0H4HKMBB4",
+    title: "Sandisk 500GB Portable SSD, Up to 1000MB/s Read...",
+    desc: "4.5 ⭐ $109.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/616mrqkpLFL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81AU7KLC+kL._AC_UY218_.jpg"
   },
   {
     asin: "B0874XN4D8",
     title: "Samsung T7 Portable SSD 1TB Titan Gray, USB 3.2...",
     desc: "4.7 ⭐ $229.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
+    badge: "Essential",
     btnClass: "btn-secondary",
     img: "https://m.media-amazon.com/images/I/91YfRIy7kYL._AC_UY218_.jpg"
   },
   {
-    asin: "B0CHFSWM2P",
-    title: "Samsung T9 Portable SSD 1TB, USB 3.2 Gen 2x2 Ex...",
-    desc: "4.6 ⭐ $255.92. Get the best gear for your photography workflow.",
+    asin: "B0HCJHLD81",
+    title: "1TB Dual Drive External SSD, Up to 500/s Read 4...",
+    desc: "5 ⭐ $139.99. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/714sMqYI17L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0H4H1SNMY",
+    title: "Sandisk 1TB Portable SSD, Up to 1000MB/s Read S...",
+    desc: "4.5 ⭐ $159.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81AU7KLC+kL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0BGKXX9TK",
+    title: "SSK Portable SSD 500GB External Solid State Har...",
+    desc: "4.5 ⭐ $89.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71VtTtHU7DL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0BJV16HC6",
+    title: "SSK Portable SSD 250GB External Solid State Har...",
+    desc: "4.5 ⭐ $58.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71v+Y7oYZSL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0CHFSWM2P",
+    title: "Samsung T9 Portable SSD 1TB, USB 3.2 Gen 2x2 Ex...",
+    desc: "4.6 ⭐ $252.43. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
     img: "https://m.media-amazon.com/images/I/71EESd1deTL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0874XWW23",
+    title: "Samsung T7 Portable SSD 2TB Titan Gray, USB 3.2...",
+    desc: "4.7 ⭐ $389.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/91YfRIy7kYL._AC_UY218_.jpg"
   },
   {
     asin: "B0H6MF2MTN",
     title: "Sandisk 500GB Extreme Portable SSD, Up to 2000M...",
     desc: "4.6 ⭐ $159.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
     img: "https://m.media-amazon.com/images/I/71u6LfJqm-L._AC_UY218_.jpg"
   },
   {
     asin: "B0CHFSZX9W",
     title: "Samsung T9 Portable SSD 4TB, USB 3.2 Gen 2x2 Ex...",
-    desc: "4.6 ⭐ $979.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71EESd1deTL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0CHFSWM2P",
-    title: "Samsung T9 Portable SSD 1TB, USB 3.2 Gen 2x2 Ex...",
-    desc: "4.6 ⭐ $255.92. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71EESd1deTL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0CHFS9K14",
-    title: "Samsung T9 Portable SSD 2TB, USB 3.2 Gen 2x2 Ex...",
-    desc: "4.6 ⭐ $472.48. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71EESd1deTL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B08GTYFC37",
-    title: "Sandisk 1TB Extreme Portable SSD, Up to 1050MB/...",
-    desc: "4.6 ⭐ $215.99. Get the best gear for your photography workflow.",
+    desc: "4.6 ⭐ $984.40. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71EESd1deTL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0DLK38TR9",
+    title: "Sandisk 8TB Extreme Portable SSD, Up to 1050MB/...",
+    desc: "4.6 ⭐ $1,537.90. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
     img: "https://m.media-amazon.com/images/I/61zuR3UMnWL._AC_UY218_.jpg"
   },
   {
-    asin: "B0H3XD9351",
-    title: "Sandisk 1TB Portable Drive, Up to 600MB/s Read ...",
-    desc: "4.8 ⭐ $129.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61aMWmiQPPL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0C5JNWF58",
-    title: "Sandisk 2TB Portable SSD, Up to 800MB/s Read Sp...",
-    desc: "4.5 ⭐ $277.95. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71bBCTIvIIL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0H9KTL86H",
-    title: "Fikwot WU350 256GB Portable SSD USB Flash Drive...",
-    desc: "4.6 ⭐ $59.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71IyXwMW1-L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0DMTVGPH8",
-    title: "OWC Envoy Ultra 2TB Thunderbolt 5 Portable NVMe...",
-    desc: "4.4 ⭐ $799.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61hcV+gPsmL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0FPHRQLD2",
-    title: "Lexar 2TB ES5 Magnetic External SSD, Up to 2000...",
-    desc: "4.5 ⭐ $384.07. Get the best gear for your photography workflow.",
+    asin: "B08RX4QKXS",
+    title: "Sandisk 4TB Extreme Portable SSD, Up to 1050MB/...",
+    desc: "4.6 ⭐ $725.00. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/41BwcHrf8KL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0H8D3BBZ7",
-    title: "SSK 256GB External SSD Drive up to 550MB/s Dual...",
-    desc: "4.5 ⭐ $58.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/616mrqkpLFL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0GFVKMFX1",
-    title: "Lexar D50E 256GB Solid State Dual Drive, Up to ...",
-    desc: "4.5 ⭐ $69.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61MTxoD2iIL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0FL7PK55D",
-    title: "fanxiang 1TB External SSD, Portable Solid State...",
-    desc: "4.2 ⭐ $151.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61v3KTtWV4L._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/61zuR3UMnWL._AC_UY218_.jpg"
   }
 ];
 
