@@ -26,132 +26,404 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B07CRG94G3",
-    title: "Seagate 2TB Portable Hard Drive | USB 3.0 (STGX...",
-    desc: "4.6 ⭐ $129.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/41OUh0ZU1NL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B06W55K9N6",
-    title: "WD 2TB Elements Portable External Hard Drive fo...",
-    desc: "4.7 ⭐ $134.50. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61EunJBqIkL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07CRGSR16",
-    title: "Seagate Portable 4TB External Hard Drive HDD – ...",
-    desc: "4.6 ⭐ $189.98. Get the best gear for your photography workflow.",
+    asin: "B07W5F37GZ",
+    title: "Ywlake Photo Album 4x6 500 Pockets Photo, Extra...",
+    desc: "4.6 ⭐ $14.99. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/41OUh0ZU1NL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61pci7+wR5L._AC_UL320_.jpg"
   },
   {
-    asin: "B07VTFN6HM",
-    title: "WD 2TB My Passport, Portable External Hard Driv...",
-    desc: "4.6 ⭐ $132.00. Get the best gear for your photography workflow.",
-    badge: "Storage",
+    asin: "B0CGCWY7ZJ",
+    title: "Popotop Photo Album 4x6 200 Pockets for Wedding...",
+    desc: "4.4 ⭐ $11.97. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/510+J06fz0L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/710a1XchpeL._AC_UL320_.jpg"
   },
   {
-    asin: "B08HN37XC1",
-    title: "Sandisk 2TB Extreme Portable SSD, Up to 1050MB/...",
-    desc: "4.6 ⭐ $289.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
+    asin: "B0C4F4ZHCT",
+    title: "Artfeel Photo Album 4x6 with 300 Pockets,Slip-i...",
+    desc: "4.6 ⭐ $14.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61zuR3UMnWL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81olagqUSDL._AC_UL320_.jpg"
   },
   {
-    asin: "B0BQX6NNVC",
-    title: "Toshiba Canvio Basics 2TB Portable External Har...",
-    desc: "4.6 ⭐ $133.78. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/91e-WNUpH0L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B01N7QFZLQ",
-    title: "LaCie Rugged USB-C 2TB External Hard Drive Port...",
-    desc: "4.7 ⭐ $149.99. Get the best gear for your photography workflow.",
+    asin: "B0838FRQMP",
+    title: "Artmag Photo Album 4x6 1000 Photos, Large Capac...",
+    desc: "4.7 ⭐ $33.99. Get the best gear for your photography workflow.",
     badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71T6RhHsuNL._AC_UY218_.jpg"
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/91X6cZ+YFgL._AC_UL320_.jpg"
   },
   {
-    asin: "B074JD3XV3",
-    title: "ADATA HD710 Pro, External Hard Drive, Blue, 2TB",
-    desc: "4.5 ⭐ $120.00. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71C8v6tgsxL._AC_UY218_.jpg"
+    asin: "B08799TV85",
+    title: "Photo Album Holds 3X5, 4X6, 5X7, 6X8, 8X10 Phot...",
+    desc: "4.7 ⭐ $27.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/91n-B6ls5dL._AC_UL320_.jpg"
   },
   {
-    asin: "B0874XWW23",
-    title: "Samsung T7 Portable SSD 2TB Titan Gray, USB 3.2...",
-    desc: "4.7 ⭐ $384.00. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/91YfRIy7kYL._AC_UY218_.jpg"
+    asin: "B07HGW2P7X",
+    title: "potricher Self Adhesive Photo Album 40 Pages, L...",
+    desc: "4.7 ⭐ $17.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/91Qep6S+TTL._AC_UL320_.jpg"
   },
   {
-    asin: "B0GMX4CN7X",
-    title: "Sandisk 2TB Extreme Portable SSD, Up to 2000MB/...",
-    desc: "4.6 ⭐ $446.24. Get the best gear for your photography workflow.",
+    asin: "B077N244XL",
+    title: "Zoview Self-Adhesive Photo Album, Dust-free, gl...",
+    desc: "4.8 ⭐ $26.99. Get the best gear for your photography workflow.",
     badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71u6LfJqm-L._AC_UY218_.jpg"
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81vxPYbGi-L._AC_UL320_.jpg"
   },
   {
-    asin: "B0C5JNWF58",
-    title: "Sandisk 2TB Portable SSD, Up to 800MB/s Read Sp...",
-    desc: "4.5 ⭐ $277.90. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71bBCTIvIIL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0CHFS9K14",
-    title: "Samsung T9 Portable SSD 2TB, USB 3.2 Gen 2x2 Ex...",
-    desc: "4.6 ⭐ $466.99. Get the best gear for your photography workflow.",
+    asin: "B099FGHMGH",
+    title: "Zesthouse Photo Album Self Adhesive Pages, 60 P...",
+    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
     badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71EESd1deTL._AC_UY218_.jpg"
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81m7KOA3NsL._AC_UL320_.jpg"
   },
   {
-    asin: "B09VLHR4JC",
-    title: "Samsung T7 Shield Portable SSD 2TB, USB 3.2 Gen...",
-    desc: "4.7 ⭐ $542.62. Get the best gear for your photography workflow.",
+    asin: "B0B9G29PJ3",
+    title: "Popotop Large Photo Album Self Adhesive 4x6 5x7...",
+    desc: "4.6 ⭐ $14.39. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/91kMkWlnoxL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0BW876C87",
+    title: "Popotop Photo Album Self Adhesive Scrapbook Alb...",
+    desc: "4.6 ⭐ $12.99. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61CKrZWOcrL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/91mdXUTZ+9L._AC_UL320_.jpg"
   },
   {
-    asin: "B0DXQJS2QB",
-    title: "SanDisk Extreme Portable SSD - 2TB",
-    desc: "3.6 ⭐ $274.69. Get the best gear for your photography workflow.",
+    asin: "B0956PXVB9",
+    title: "Large Photo Album Self Adhesive for 4x6 5x7 8x1...",
+    desc: "4.7 ⭐ $9.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81EOJjRZW4L._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0H5JR6JMD",
+    title: "Large Polaroid Photo Album with Writing Space f...",
+    desc: "5 ⭐ $35.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81ttyLJZ4sL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0FDK2DJJX",
+    title: "Holoary Photo Album 4x6 500 Photos 5 Pictures P...",
+    desc: "4.8 ⭐ $23.99. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51rV-CkeUJL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61eea+dWBkL._AC_UL320_.jpg"
   },
   {
-    asin: "B094JH6H77",
-    title: "SanDisk Professional 2TB G-DRIVE ArmorATD - Rug...",
-    desc: "4.4 ⭐ $299.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
+    asin: "B0BZYQ1MLV",
+    title: "Artfeel Photo Album Self Adhesive Scrapbook Alb...",
+    desc: "4.7 ⭐ $12.17. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81fRwGeptbL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0FT7YJBFW",
+    title: "Popotop 2 Pack Photo Album 4x6 Pictures, Small ...",
+    desc: "4.6 ⭐ $5.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/8131DpUU1lL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B001VGH44C",
+    title: "Pioneer Photo Albums STC-504 Navy Blue Photo Al...",
+    desc: "4.6 ⭐ $11.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81RNeK6JrrL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81FRcaCf+uL._AC_UL320_.jpg"
   },
   {
-    asin: "B0G56476HZ",
-    title: "Avolusion M3 Series 2TB USB 3.0 Portable Extern...",
-    desc: "3.7 ⭐ $95.99. Get the best gear for your photography workflow.",
+    asin: "B0BXDQKD5C",
+    title: "Large Photo Album Self Adhesive Scrapbook Album...",
+    desc: "4.7 ⭐ $14.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81SGTWVrSxL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B001VGJ4DG",
+    title: "3-ring pocket BURGUNDY album for 504 photos - 4...",
+    desc: "4.6 ⭐ $9.95. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51TKXUgWylL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81kliYyfuLL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0BR7SMMBC",
+    title: "Popotop Photo Album 4x6-300 Photos Linen Cover ...",
+    desc: "4.6 ⭐ $12.81. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/7196mkbSS+L._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0CSMDS9RQ",
+    title: "Photo Album 4x6 300 Photos, Genuine Leather Pho...",
+    desc: "4.6 ⭐ $26.98. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71jKdqEobIL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B00L9IPEI0",
+    title: "Magnetic Self-Stick 3-Ring Photo Album 100 Page...",
+    desc: "4.6 ⭐ $15.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/91hPCP+mK8L._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0D78XY39C",
+    title: "Holoary Photo Album 4x6 500 Photos 5 Pictures P...",
+    desc: "4.8 ⭐ $23.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81CYuZdhedL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B091YKMS28",
+    title: "JIMBON Our Adventure Book Scrapbook Photo Album...",
+    desc: "4.7 ⭐ $25.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/916M9ABLibL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B09FHT8TZ8",
+    title: "Our Adventure Book Vintage Scrapbook Journal",
+    desc: "4.8 ⭐ $25.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/813o3E45ASL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0FM8S2948",
+    title: "Wedding Photo Album 4x6 Pictures & Custom 2026 ...",
+    desc: "4.8 ⭐ $37.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/91rkDGIuaoL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B08F21W5KH",
+    title: "potricher Photo Album 4x6 Pictures, 600 Pockets...",
+    desc: "4.7 ⭐ $23.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/91-+KhZBfQL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0FSL27H7Y",
+    title: "4x6 Slip In Photo Album Holds 200 Pockets Cloth...",
+    desc: "4.5 ⭐ $9.49. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81py8wo-FWL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B001AUA5XQ",
+    title: "Pioneer Sewn Bonded Leather BookBound Bi-Direct...",
+    desc: "4.6 ⭐ $19.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71FvqmoghkL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B001AU845W",
+    title: "Pioneer Photo Albums Sewn Bonded Leather Bookbo...",
+    desc: "4.6 ⭐ $19.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81mVU3fKPyL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B08BTR1RQ3",
+    title: "Fintie Photo Album 4x6 Photos - 112 Pockets Wal...",
+    desc: "4.8 ⭐ $12.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71Se2MaXbpL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0CLTPMH21",
+    title: "Aevdor Large Capacity 4x6 Photo Album, 1000 Pho...",
+    desc: "4.7 ⭐ $27.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81yyHOlpDTL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B003WSWFBY",
+    title: "Pioneer Photo Albums Magnetic Self-Stick 3-Ring...",
+    desc: "4.6 ⭐ $16.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/91pMvmUnanL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B08BJMBBKV",
+    title: "RECUTMS Photo Albums 4x6 Pictures, 600 Pockets ...",
+    desc: "4.8 ⭐ $21.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71cFdeNrrPL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0GYNBN1GC",
+    title: "4x6 Photo Album, 600 Pockets, PU Leather, Green",
+    desc: "4.9 ⭐ $23.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/91c+1-02uIL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0C5C5V3PF",
+    title: "4x6 Photo Album Holds 240 Photos Writing Space,...",
+    desc: "4.6 ⭐ $13.98. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71WxroqTYsL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B004IFYA90",
+    title: "Fabric Frame Cover Photo Album 200 Pockets Hold...",
+    desc: "4.7 ⭐ $15.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71sJVY+PFML._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0CJXNGY4T",
+    title: "8\"x8\" Scrapbook Photo Album Linen Cover 20 Shee...",
+    desc: "4.7 ⭐ $7.54. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71ZMamgObTL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0CCD71M4J",
+    title: "Artfeel Photo Album Self Adhesive Scrapbook,Lar...",
+    desc: "4.6 ⭐ . Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81cv-4DCAEL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B07BKXBGL7",
+    title: "Vienrose Self Adhesive Photo Album, 40 Pages, 1...",
+    desc: "4.7 ⭐ $11.00. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81Rp0TJqT7L._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0CP52R6VY",
+    title: "potricher 10 x 10 Inch DIY Scrapbook Photo Albu...",
+    desc: "4.7 ⭐ $14.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71NiJlf30pL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0D4YYWHJ7",
+    title: "Beautiful Linen Photo Album For 4x6 Photos - Ho...",
+    desc: "4.7 ⭐ $19.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/91Mj-OajSqL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B00004ZBOJ",
+    title: "Spiral Bound Photo Album 300 Bi-Directional Mem...",
+    desc: "4.7 ⭐ $15.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71uKKCLjXtL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0GGJ55XSK",
+    title: "Beautiful Linen Photo Album For 4x6 Photos - Ho...",
+    desc: "4.7 ⭐ $12.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/91B-LzWPiyL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0CJ4J8RQY",
+    title: "450 Pocket 4x6 Photo Album with Writing Space, ...",
+    desc: "4.7 ⭐ $21.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71Urmt2YuRL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B077N244XL",
+    title: "Zoview Self-Adhesive Photo Album, Dust-free, gl...",
+    desc: "4.8 ⭐ $26.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81vxPYbGi-L._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0GGHQ47WP",
+    title: "Beautiful Photo Album Set of 3 For 4x6 Pictures...",
+    desc: "4.3 ⭐ $7.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81dHVCfb6XL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B08F1ND8QD",
+    title: "potricher Photo Album 4x6 Pictures, 600 Pockets...",
+    desc: "4.7 ⭐ $23.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/91ZfmIileZL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B001VGE2H4",
+    title: "3-Ring Photo Album 504 Pockets Hold 4x6 Photos,...",
+    desc: "4.6 ⭐ $14.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81vvPk2GrwL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B08LKJ31GT",
+    title: "Vienrose 4x6 Photo Album,300 Pockets,Linen Cove...",
+    desc: "4.6 ⭐ $11.72. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/91EliDDPoOL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0DT474DCB",
+    title: "Photo Album 4x6 300 Pockets, Genuine Leather Ph...",
+    desc: "4.8 ⭐ $24.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/91+Jv3EaR5L._AC_UL320_.jpg"
   }
 ];
 
