@@ -26,252 +26,260 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B009PHCWL4",
-    title: "Plustek OpticFilm 8100-35mm Negative Film/Slide...",
-    desc: "4 ⭐ $349.00. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71f3zQ5hn+L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GLXW1VXW",
-    title: "Plustek OpticFilm 9000i Ai Film Scanner – 3rd G...",
-    desc: "4.2 ⭐ $599.00. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81NXp1OuZEL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B086DX4253",
-    title: "Magnasonic All-in-One 24MP Film Scanner with La...",
-    desc: "4.3 ⭐ $129.98. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61BV-3K26RL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B084NVRHYQ",
-    title: "KODAK Slide N Scan Film & Slide Scanner, 22MP, ...",
-    desc: "4.3 ⭐ $189.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81RdTfBiqfL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0B3F6KJJ2",
-    title: "KODAK Slide N Scan Max Film Scanner, Slide Scan...",
-    desc: "4.2 ⭐ $209.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61wezHCZynL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0HFVK4TPT",
-    title: "TCNEWCL 35mm Negative Slide Scanner, Mobile Fil...",
-    desc: "4.3 ⭐ $16.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71hynpF8a+L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GJSBC2MR",
-    title: "PORTTA Film Scanner with 5\" LCD Screen, 22MP Sl...",
-    desc: "3.9 ⭐ $139.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61CCPl4oZnL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FHH8DP53",
-    title: "22MP Film & Slide Scanner with 5\" LCD, Converts...",
-    desc: "4.3 ⭐ $105.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61+NqReSr7L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FHDDP3P2",
-    title: "BEONEGLOBAL ClearScan MINI Film Scanner 16MP Sl...",
-    desc: "4.2 ⭐ $69.99. Get the best gear for your photography workflow.",
+    asin: "B01LZJH63M",
+    title: "Plustek Photo Scanner ePhoto Z300, Scans 4x6 in...",
+    desc: "4.5 ⭐ $219.99. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61g7AsjFetL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81E0YcY1MQL._AC_UY218_.jpg"
   },
   {
-    asin: "B0GLXW1VXW",
-    title: "Plustek OpticFilm 9000i Ai Film Scanner – 3rd G...",
-    desc: "4.2 ⭐ $599.00. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81NXp1OuZEL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F8D5LXQ3",
-    title: "HP Film & Slide Scanner HPFS500, Negative Scann...",
-    desc: "4.3 ⭐ $219.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
+    asin: "B07DLX26BB",
+    title: "Epson FastFoto FF-680W High-Speed Duplex Photo ...",
+    desc: "4.5 ⭐ $629.00. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71ZFXQmDFDL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71Ulr9Z9S6L._AC_UY218_.jpg"
   },
   {
-    asin: "B008ASJ2Z8",
-    title: "Plustek OpticFilm 8200i SE , 35mm Film & Slide ...",
-    desc: "4 ⭐ $399.00. Get the best gear for your photography workflow.",
+    asin: "B01LZJH63M",
+    title: "Plustek Photo Scanner ePhoto Z300, Scans 4x6 in...",
+    desc: "4.5 ⭐ $219.99. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/816yvfCOXwL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81E0YcY1MQL._AC_UY218_.jpg"
   },
   {
-    asin: "B0GCYJ3YJ5",
-    title: "DigitConvert 35mm Film Scanner & Slide Scanner ...",
-    desc: "3.5 ⭐ $54.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61fYt-TgMgL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FHDDP3P2",
-    title: "BEONEGLOBAL ClearScan MINI Film Scanner 16MP Sl...",
-    desc: "4.2 ⭐ $69.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61g7AsjFetL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B008ASJ2Z8",
-    title: "Plustek OpticFilm 8200i SE , 35mm Film & Slide ...",
-    desc: "4 ⭐ $399.00. Get the best gear for your photography workflow.",
+    asin: "B07DLX26BB",
+    title: "Epson FastFoto FF-680W High-Speed Duplex Photo ...",
+    desc: "4.5 ⭐ $629.00. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/816yvfCOXwL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71Ulr9Z9S6L._AC_UY218_.jpg"
   },
   {
-    asin: "B084NVRHYQ",
-    title: "KODAK Slide N Scan Film & Slide Scanner, 22MP, ...",
-    desc: "4.3 ⭐ $189.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81RdTfBiqfL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B07ZXZRR24",
-    title: "Plustek OpticFilm 135i - Automatic Film & Slide...",
-    desc: "4 ⭐ $529.00. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81iOWstYVUL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0GLXW1VXW",
-    title: "Plustek OpticFilm 9000i Ai Film Scanner – 3rd G...",
-    desc: "4.2 ⭐ $599.00. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81NXp1OuZEL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B09L7NDNFG",
-    title: "Plustek OpticFilm 8300i Ai Film Scanner - Ai St...",
-    desc: "4 ⭐ $539.00. Get the best gear for your photography workflow.",
+    asin: "B0C364K1SC",
+    title: "Epson Perfection V19 II Flatbed Photo Scanner 4...",
+    desc: "3.9 ⭐ $89.00. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81hYLRFLDwL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71iyq3c0OiL._AC_UY218_.jpg"
   },
   {
-    asin: "B00O2BU8PK",
-    title: "KODAK SCANZA Film & Slide Scanner, 3.5\" LCD, 35...",
-    desc: "4.2 ⭐ $159.99. Get the best gear for your photography workflow.",
+    asin: "B01LZJH63M",
+    title: "Plustek Photo Scanner ePhoto Z300, Scans 4x6 in...",
+    desc: "4.5 ⭐ $219.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81E0YcY1MQL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B07DLX26BB",
+    title: "Epson FastFoto FF-680W High-Speed Duplex Photo ...",
+    desc: "4.5 ⭐ $629.00. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71EndQiuq-L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71Ulr9Z9S6L._AC_UL320_.jpg"
   },
   {
-    asin: "B0GJSBC2MR",
-    title: "PORTTA Film Scanner with 5\" LCD Screen, 22MP Sl...",
-    desc: "3.9 ⭐ $139.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61CCPl4oZnL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FHDDP3P2",
-    title: "BEONEGLOBAL ClearScan MINI Film Scanner 16MP Sl...",
-    desc: "4.2 ⭐ $69.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
+    asin: "B0FS3BRMB3",
+    title: "ScanSnap iX2500 Photo Edition Wireless or USB H...",
+    desc: "4.5 ⭐ $474.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61g7AsjFetL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61HLpjQQjuL._AC_UL320_.jpg"
   },
   {
-    asin: "B0B786237W",
-    title: "KODAK REELS 8mm & Super 8 Film Digitizer, 1080p...",
-    desc: "4.1 ⭐ $419.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/717Fm6hVbYL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FPMR96X6",
-    title: "HP Film & Slide Scanner, Photo Scanner, 7\" Touc...",
-    desc: "4 ⭐ $249.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71xaLbJk3+L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07JJBGG1D",
-    title: "KODAK Mini Digital Film & Slide Scanner, 35mm, ...",
+    asin: "B0C6NL3HFX",
+    title: "HP Small USB Document & Photo Scanner for Porta...",
     desc: "4.2 ⭐ $139.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61q-Yvq-cKL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B073V879J5",
+    title: "ClearClick QuickConvert 2.0 Photo, Slide, and N...",
+    desc: "4.2 ⭐ $219.95. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/A1jCgBfecRL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B07G5YBS1W",
+    title: "Canon CanoScan LiDE 400 Slim Scanner, 7.7\" x 14...",
+    desc: "4.1 ⭐ $97.00. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71ZSDHv9NRS._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0FS3BRMB3",
+    title: "ScanSnap iX2500 Photo Edition Wireless or USB H...",
+    desc: "4.5 ⭐ $474.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71VVcLrr-jL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61HLpjQQjuL._AC_UY218_.jpg"
   },
   {
-    asin: "B07MTKNTPK",
-    title: "KODAK Mobile Film Scanner, 35mm Negative Scanne...",
-    desc: "3.7 ⭐ $39.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
+    asin: "B07G5XZVLQ",
+    title: "Canon Canoscan Lide 300 Scanner (PDF, AUTOSCAN,...",
+    desc: "4.2 ⭐ $75.00. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61p8GOXK6IS._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GVL1J22M",
+    title: "AMBIR Photo Scanner with Photo Cleaning Kit Bun...",
+    desc: "4.2 ⭐ $149.95. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61e5DyeexnL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0HCB5S3N4",
+    title: "Photo, Slide & Negative Scanner with 5” Large S...",
+    desc: "4.4 ⭐ $169.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71z8cGgjj-L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71Q1KiPfbcL._AC_UY218_.jpg"
   },
   {
-    asin: "B09L7NDNFG",
-    title: "Plustek OpticFilm 8300i Ai Film Scanner - Ai St...",
-    desc: "4 ⭐ $539.00. Get the best gear for your photography workflow.",
+    asin: "B0FS3BRMB3",
+    title: "ScanSnap iX2500 Photo Edition Wireless or USB H...",
+    desc: "4.5 ⭐ $474.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61HLpjQQjuL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B073V879J5",
+    title: "ClearClick QuickConvert 2.0 Photo, Slide, and N...",
+    desc: "4.2 ⭐ $219.95. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/A1jCgBfecRL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0C35V1CLK",
+    title: "Epson Perfection V39 II Flatbed Photo Scanner 4...",
+    desc: "3.7 ⭐ $106.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71cV59d0gOL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B091MDDQK9",
+    title: "Canon imageFORMULA RS40 - Photo and Document Sc...",
+    desc: "4 ⭐ $329.00. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81hYLRFLDwL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/41maiQDzKYL._AC_UY218_.jpg"
   },
   {
-    asin: "B009PHCWL4",
-    title: "Plustek OpticFilm 8100-35mm Negative Film/Slide...",
+    asin: "B0C6NL3HFX",
+    title: "HP Small USB Document & Photo Scanner for Porta...",
+    desc: "4.2 ⭐ $139.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61q-Yvq-cKL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B083R36CY4",
+    title: "Brother DS-640 Compact Mobile Document Scanner,...",
+    desc: "4.3 ⭐ $134.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/51Gy2ymW70L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B01GO0AJZ0",
+    title: "RICOH fi-7480 High-Performance Wide-Format Colo...",
+    desc: "5 ⭐ $2,949.00. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61FIwPdlpfL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B00UK4835U",
+    title: "Canon imageFORMULA P-208II Personal Document Sc...",
+    desc: "4.1 ⭐ $149.00. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/51DoqL2oi9L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B00OCEJMG8",
+    title: "Epson Perfection V850 Pro Photo Scanner, 6400 d...",
+    desc: "4.4 ⭐ $1,999.00. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71q34nS25rL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B002Y4Z244",
+    title: "Epson Perfection V600 Photo Wired USB Connectiv...",
+    desc: "4 ⭐ $1,179.96. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61IK69emp2L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B00SSXQ7Q2",
+    title: "Epson Perfection V39 Color Photo & Document Sca...",
+    desc: "4.2 ⭐ $122.00. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/5116JYA674L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B08K993G24",
+    title: "Plustek OpticPro A320E Large Format Flatbed Sca...",
+    desc: "3.8 ⭐ $649.00. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81cp3lKYPIL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B01LZJH63M",
+    title: "Plustek Photo Scanner ePhoto Z300, Scans 4x6 in...",
+    desc: "4.5 ⭐ $219.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81E0YcY1MQL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B07DLX26BB",
+    title: "Epson FastFoto FF-680W High-Speed Duplex Photo ...",
+    desc: "4.5 ⭐ $629.00. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71Ulr9Z9S6L._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0FS3BRMB3",
+    title: "ScanSnap iX2500 Photo Edition Wireless or USB H...",
+    desc: "4.5 ⭐ $474.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61HLpjQQjuL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B01MZXE0OV",
+    title: "Plustek OS1180 - Flat Scanner for Graphics and ...",
     desc: "4 ⭐ $349.00. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71f3zQ5hn+L._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71AFi95Pr8L._AC_UL320_.jpg"
   },
   {
-    asin: "B07ZXZRR24",
-    title: "Plustek OpticFilm 135i - Automatic Film & Slide...",
-    desc: "4 ⭐ $529.00. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81iOWstYVUL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B008ASJ2Z8",
-    title: "Plustek OpticFilm 8200i SE , 35mm Film & Slide ...",
-    desc: "4 ⭐ $399.00. Get the best gear for your photography workflow.",
-    badge: "Storage",
+    asin: "B09FX5SRQT",
+    title: "ScanSnap iX1300 Wireless or USB Double-Sided Co...",
+    desc: "4.2 ⭐ $279.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/816yvfCOXwL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0GLXW1VXW",
-    title: "Plustek OpticFilm 9000i Ai Film Scanner – 3rd G...",
-    desc: "4.2 ⭐ $599.00. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81NXp1OuZEL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71oy8z4sajL._AC_UL320_.jpg"
   }
 ];
 
