@@ -26,252 +26,220 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B01LZJH63M",
-    title: "Plustek Photo Scanner ePhoto Z300, Scans 4x6 in...",
-    desc: "4.5 ⭐ $219.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
+    asin: "B0FMF1TXQ8",
+    title: "1TB External SSD - Portable SSD External Solid ...",
+    desc: "4.4 ⭐ $145.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61rPgKeBl2L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GCMKJQBD",
+    title: "Orlian 250GB External Portable SSD Solid State ...",
+    desc: "4.3 ⭐ $43.69. Get the best gear for your photography workflow.",
+    badge: "Essential",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81E0YcY1MQL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/51Tpyb+YLNL._AC_UY218_.jpg"
   },
   {
-    asin: "B0CQ7D2DLX",
-    title: "Visioneer High-Speed Color Photo and Document S...",
-    desc: "4.4 ⭐ $499.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61-hTTwPpWL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B01LZJH63M",
-    title: "Plustek Photo Scanner ePhoto Z300, Scans 4x6 in...",
-    desc: "4.5 ⭐ $219.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81E0YcY1MQL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07DLX26BB",
-    title: "Epson FastFoto FF-680W High-Speed Duplex Photo ...",
-    desc: "4.5 ⭐ $629.00. Get the best gear for your photography workflow.",
+    asin: "B08HN37XC1",
+    title: "Sandisk 2TB Extreme Portable SSD, Up to 1050MB/...",
+    desc: "4.6 ⭐ $278.25. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71Ulr9Z9S6L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61zuR3UMnWL._AC_UY218_.jpg"
   },
   {
-    asin: "B07G5YBS1W",
-    title: "Canon CanoScan LiDE 400 Slim Scanner, 7.7\" x 14...",
-    desc: "4.1 ⭐ $97.00. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71ZSDHv9NRS._AC_UY218_.jpg"
-  },
-  {
-    asin: "B01LZJH63M",
-    title: "Plustek Photo Scanner ePhoto Z300, Scans 4x6 in...",
-    desc: "4.5 ⭐ $219.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81E0YcY1MQL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0FS3BRMB3",
-    title: "ScanSnap iX2500 Photo Edition Wireless or USB H...",
-    desc: "4.5 ⭐ $474.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61HLpjQQjuL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B09FX5DWBK",
-    title: "ScanSnap iX1300 Wireless or USB Double-Sided Co...",
-    desc: "4.2 ⭐ $279.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71-1eaMzjuL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0C6NL3HFX",
-    title: "HP Small USB Document & Photo Scanner for Porta...",
-    desc: "4.2 ⭐ $139.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61q-Yvq-cKL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B073V879J5",
-    title: "ClearClick QuickConvert 2.0 Photo, Slide, and N...",
-    desc: "4.2 ⭐ $219.95. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/A1jCgBfecRL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0C364K1SC",
-    title: "Epson Perfection V19 II Flatbed Photo Scanner 4...",
-    desc: "3.9 ⭐ $89.00. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71iyq3c0OiL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B09FX5DWBK",
-    title: "ScanSnap iX1300 Wireless or USB Double-Sided Co...",
-    desc: "4.2 ⭐ $279.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71-1eaMzjuL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07G5XZVLQ",
-    title: "Canon Canoscan Lide 300 Scanner (PDF, AUTOSCAN,...",
-    desc: "4.2 ⭐ $75.00. Get the best gear for your photography workflow.",
+    asin: "B07CRG94G3",
+    title: "Seagate 2TB Portable Hard Drive | USB 3.0 (STGX...",
+    desc: "4.6 ⭐ $129.99. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61p8GOXK6IS._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/41OUh0ZU1NL._AC_UY218_.jpg"
   },
   {
-    asin: "B0GVL1J22M",
-    title: "AMBIR Photo Scanner with Photo Cleaning Kit Bun...",
-    desc: "4.2 ⭐ $149.95. Get the best gear for your photography workflow.",
+    asin: "B0GMWYYRQL",
+    title: "Sandisk 1TB Extreme Portable SSD, Up to 2000MB/...",
+    desc: "4.6 ⭐ $254.47. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71u6LfJqm-L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0874XN4D8",
+    title: "Samsung T7 Portable SSD 1TB Titan Gray, USB 3.2...",
+    desc: "4.7 ⭐ $229.99. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61e5DyeexnL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/91YfRIy7kYL._AC_UY218_.jpg"
   },
   {
-    asin: "B0HCB5S3N4",
-    title: "Photo, Slide & Negative Scanner with 5” Large S...",
-    desc: "4.4 ⭐ $169.99. Get the best gear for your photography workflow.",
+    asin: "B0GCJNYGPR",
+    title: "KEXIN 256GB External SSD Hard Drive USB 3.1 Typ...",
+    desc: "3.8 ⭐ $45.11. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71Q1KiPfbcL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/51obksEU3HL._AC_UY218_.jpg"
   },
   {
-    asin: "B0FS3BRMB3",
-    title: "ScanSnap iX2500 Photo Edition Wireless or USB H...",
-    desc: "4.5 ⭐ $474.99. Get the best gear for your photography workflow.",
+    asin: "B0H4H1SNMY",
+    title: "Sandisk 1TB Portable SSD, Up to 1000MB/s Read S...",
+    desc: "4.7 ⭐ $159.99. Get the best gear for your photography workflow.",
     badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61HLpjQQjuL._AC_UY218_.jpg"
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81AU7KLC+kL._AC_UY218_.jpg"
   },
   {
-    asin: "B08DQYSNGQ",
-    title: "VIISAN 3120 A3 Flatbed Scanner, 1200 DPI, CIS S...",
-    desc: "3.7 ⭐ $339.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
+    asin: "B0H4HKMBB4",
+    title: "Sandisk 500GB Portable SSD, Up to 1000MB/s Read...",
+    desc: "4.7 ⭐ $109.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61NuwUVaFNL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/81AU7KLC+kL._AC_UY218_.jpg"
   },
   {
-    asin: "B091MDDQK9",
-    title: "Canon imageFORMULA RS40 - Photo and Document Sc...",
-    desc: "4 ⭐ $329.00. Get the best gear for your photography workflow.",
+    asin: "B0HCJHLD81",
+    title: "1TB Dual Drive External SSD, Up to 500/s Read 4...",
+    desc: "5 ⭐ $139.99. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/41maiQDzKYL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/714sMqYI17L._AC_UY218_.jpg"
   },
   {
-    asin: "B0C35V1CLK",
-    title: "Epson Perfection V39 II Flatbed Photo Scanner 4...",
-    desc: "3.7 ⭐ $106.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71cV59d0gOL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F9B1H5VN",
-    title: "ScanSnap iX2500 Wireless or USB High-Speed Docu...",
-    desc: "4.3 ⭐ $379.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/612vJX1V61L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0C6NL3HFX",
-    title: "HP Small USB Document & Photo Scanner for Porta...",
-    desc: "4.2 ⭐ $139.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61q-Yvq-cKL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FHDDP3P2",
-    title: "BEONEGLOBAL ClearScan MINI Film Scanner 16MP Sl...",
-    desc: "4.2 ⭐ $69.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61g7AsjFetL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0D9YS2RJZ",
-    title: "AMBIR Photo Scanner with PICTURESTUDIO Photo Ed...",
-    desc: "3.4 ⭐ $199.95. Get the best gear for your photography workflow.",
+    asin: "B0874XWW23",
+    title: "Samsung T7 Portable SSD 2TB Titan Gray, USB 3.2...",
+    desc: "4.7 ⭐ $384.41. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/614-UNOYTRL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/91YfRIy7kYL._AC_UY218_.jpg"
   },
   {
-    asin: "B07KQZWPYN",
-    title: "Epson Workforce ES-50 Compact & Lightweight Mob...",
-    desc: "4.3 ⭐ $139.99. Get the best gear for your photography workflow.",
+    asin: "B088BS3BDD",
+    title: "Netac ZSlim 250GB Portable SSD, Up to 550MB/s R...",
+    desc: "4.3 ⭐ $63.64. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/51w6WEbOuxL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0BGKXX9TK",
+    title: "SSK Portable SSD 500GB External Solid State Har...",
+    desc: "4.5 ⭐ $89.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71VtTtHU7DL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0CHFSWM2P",
+    title: "Samsung T9 Portable SSD 1TB, USB 3.2 Gen 2x2 Ex...",
+    desc: "4.6 ⭐ $244.41. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71EESd1deTL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GMX4CN7X",
+    title: "Sandisk 2TB Extreme Portable SSD, Up to 2000MB/...",
+    desc: "4.6 ⭐ $409.25. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71u6LfJqm-L._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0H3XD9351",
+    title: "Sandisk 1TB Portable Drive, Up to 600MB/s Read ...",
+    desc: "4.6 ⭐ $129.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61aMWmiQPPL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0HC32KMFB",
+    title: "Netac ZX20III EVO 256GB Portable SSD, Up to 550...",
+    desc: "5 ⭐ $65.16. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/5186q1u92zL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/51L+ZzLKEWL._AC_UY218_.jpg"
   },
   {
-    asin: "B00SSXQ7Q2",
-    title: "Epson Perfection V39 Color Photo & Document Sca...",
-    desc: "4.2 ⭐ . Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/5116JYA674L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B002Y4Z244",
-    title: "Epson Perfection V600 Photo Wired USB Connectiv...",
-    desc: "4 ⭐ $1,129.94. Get the best gear for your photography workflow.",
+    asin: "B0BJV16HC6",
+    title: "SSK Portable SSD 250GB External Solid State Har...",
+    desc: "4.5 ⭐ $58.99. Get the best gear for your photography workflow.",
     badge: "Storage",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61IK69emp2L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71v+Y7oYZSL._AC_UY218_.jpg"
   },
   {
-    asin: "B0CJY2RCMT",
-    title: "CZUR ET16 Plus Advanced Book & Document Scanner...",
-    desc: "4 ⭐ $409.00. Get the best gear for your photography workflow.",
+    asin: "B0C5JNWF58",
+    title: "Sandisk 2TB Portable SSD, Up to 800MB/s Read Sp...",
+    desc: "4.6 ⭐ $250.00. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/716KNwkt4+L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/71bBCTIvIIL._AC_UY218_.jpg"
   },
   {
-    asin: "B01LZJH63M",
-    title: "Plustek Photo Scanner ePhoto Z300, Scans 4x6 in...",
-    desc: "4.5 ⭐ $219.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
+    asin: "B0CHFSZX9W",
+    title: "Samsung T9 Portable SSD 4TB, USB 3.2 Gen 2x2 Ex...",
+    desc: "4.6 ⭐ $979.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71EESd1deTL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0C5JQ68FY",
+    title: "Sandisk 1TB Portable SSD, Up to 800MB/s Read Sp...",
+    desc: "4.6 ⭐ $179.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81E0YcY1MQL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/71bBCTIvIIL._AC_UY218_.jpg"
   },
   {
-    asin: "B097VP1PHR",
-    title: "Xerox Visioneer Xerox D35 Scanner, USB Office D...",
-    desc: "4.1 ⭐ $299.99. Get the best gear for your photography workflow.",
+    asin: "B0H398P7VH",
+    title: "Aiibe 128GB Solid State Dual Drive up to 450MB/...",
+    desc: "5 ⭐ $32.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61ZaFaNIYKL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0FMF1TXQ8",
+    title: "1TB External SSD - Portable SSD External Solid ...",
+    desc: "4.4 ⭐ $145.99. Get the best gear for your photography workflow.",
     badge: "Popular",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/41oSrNuFnWL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/61rPgKeBl2L._AC_UL320_.jpg"
   },
   {
-    asin: "B09FX5DWBK",
-    title: "ScanSnap iX1300 Wireless or USB Double-Sided Co...",
-    desc: "4.2 ⭐ $279.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71-1eaMzjuL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B01MZXE0OV",
-    title: "Plustek OS1180 - Flat Scanner for Graphics and ...",
-    desc: "4 ⭐ $349.00. Get the best gear for your photography workflow.",
+    asin: "B09FFM2LBR",
+    title: "Glyph Production Technologies Atom Pro 2, Exter...",
+    desc: "4.4 ⭐ $1,899.99. Get the best gear for your photography workflow.",
     badge: "Pro Choice",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71AFi95Pr8L._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/51cedEeX40L._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0B9M6VBWN",
+    title: "iDiskk App-le Certified 4TB External Hard Drive...",
+    desc: "4.2 ⭐ $289.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/612vUP6VVOL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0B9MXQGMT",
+    title: "iDiskk App-le Certified 2TB External Hard Drive...",
+    desc: "4.3 ⭐ $181.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61Ujauxsp8L._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0FL7PK55D",
+    title: "fanxiang 1TB External SSD, Portable Solid State...",
+    desc: "4.2 ⭐ $151.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61v3KTtWV4L._AC_UL320_.jpg"
   }
 ];
 
