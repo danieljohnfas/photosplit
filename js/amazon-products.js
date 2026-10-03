@@ -26,260 +26,252 @@ let AMAZON_PRODUCTS = [
     img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
   },
   {
-    asin: "B0F8D5LXQ3",
-    title: "HP Film & Slide Scanner HPFS500, Negative Scann...",
-    desc: "4.3 ⭐ $219.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71ZFXQmDFDL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B09L7NDNFG",
-    title: "Plustek OpticFilm 8300i Ai Film Scanner - Ai St...",
-    desc: "4 ⭐ $539.00. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81hYLRFLDwL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B084NVRHYQ",
-    title: "KODAK Slide N Scan Film & Slide Scanner, 22MP, ...",
-    desc: "4.3 ⭐ $189.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81RdTfBiqfL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B086DX4253",
-    title: "Magnasonic All-in-One 24MP Film Scanner with La...",
-    desc: "4.3 ⭐ $129.98. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61BV-3K26RL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0HFVK4TPT",
-    title: "TCNEWCL 35mm Negative Slide Scanner, Mobile Fil...",
-    desc: "4.3 ⭐ $16.99. Get the best gear for your photography workflow.",
+    asin: "B09XR2MTHK",
+    title: "Lexar E-Series 128GB 2 PK Micro SD Card microSD...",
+    desc: "4.7 ⭐ $64.99. Get the best gear for your photography workflow.",
     badge: "Deal",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71hynpF8a+L._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/61FOBS-FZbL._AC_UY218_.jpg"
   },
   {
-    asin: "B008ASJ2Z8",
-    title: "Plustek OpticFilm 8200i SE , 35mm Film & Slide ...",
-    desc: "4 ⭐ $399.00. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/816yvfCOXwL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B084NVRHYQ",
-    title: "KODAK Slide N Scan Film & Slide Scanner, 22MP, ...",
-    desc: "4.3 ⭐ $189.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81RdTfBiqfL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0FHDDP3P2",
-    title: "BEONEGLOBAL ClearScan MINI Film Scanner 16MP Sl...",
-    desc: "4.2 ⭐ $69.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61g7AsjFetL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B07ZXZRR24",
-    title: "Plustek OpticFilm 135i - Automatic Film & Slide...",
-    desc: "4 ⭐ $529.00. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81iOWstYVUL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0F8D5LXQ3",
-    title: "HP Film & Slide Scanner HPFS500, Negative Scann...",
-    desc: "4.3 ⭐ $219.99. Get the best gear for your photography workflow.",
+    asin: "B07LBSBX5L",
+    title: "【5-Yrs Free Data Recovery】 GIGASTONE 128GB Micr...",
+    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
     badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71ZFXQmDFDL._AC_UL320_.jpg"
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71+nKH03X0S._AC_UY218_.jpg"
   },
   {
-    asin: "B0B3F6KJJ2",
-    title: "KODAK Slide N Scan Max Film Scanner, Slide Scan...",
-    desc: "4.1 ⭐ $209.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61wezHCZynL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GJSBC2MR",
-    title: "PORTTA Film Scanner with 5\" LCD Screen, 22MP Sl...",
-    desc: "3.9 ⭐ $139.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61CCPl4oZnL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FHDDP3P2",
-    title: "BEONEGLOBAL ClearScan MINI Film Scanner 16MP Sl...",
-    desc: "4.2 ⭐ $69.99. Get the best gear for your photography workflow.",
+    asin: "B0GDQRNTF3",
+    title: "SanDisk 128GB Extreme PRO SD UHS-I Card, Up to ...",
+    desc: "4.8 ⭐ $51.99. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61g7AsjFetL._AC_UY218_.jpg"
+    img: "https://m.media-amazon.com/images/I/719J6w3pB5L._AC_UY218_.jpg"
   },
   {
-    asin: "B0FHH8DP53",
-    title: "22MP Film & Slide Scanner with 5\" LCD, Converts...",
-    desc: "4.3 ⭐ $105.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61+NqReSr7L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GLXW1VXW",
-    title: "Plustek OpticFilm 9000i Ai Film Scanner – 3rd G...",
-    desc: "4.2 ⭐ $599.00. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81NXp1OuZEL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B09L7NDNFG",
-    title: "Plustek OpticFilm 8300i Ai Film Scanner - Ai St...",
-    desc: "4 ⭐ $539.00. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81hYLRFLDwL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B009PHCWL4",
-    title: "Plustek OpticFilm 8100-35mm Negative Film/Slide...",
-    desc: "4 ⭐ $349.00. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71f3zQ5hn+L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F8D5LXQ3",
-    title: "HP Film & Slide Scanner HPFS500, Negative Scann...",
-    desc: "4.3 ⭐ $219.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71ZFXQmDFDL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B00O2BU8PK",
-    title: "KODAK SCANZA Film & Slide Scanner, 3.5\" LCD, 35...",
-    desc: "4.2 ⭐ $159.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71EndQiuq-L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0H69TFVRL",
-    title: "Slide & Negative Film Scanner, Converts 35mm Sl...",
-    desc: "4.4 ⭐ $109.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61aSTgNw4wL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07MTKNTPK",
-    title: "KODAK Mobile Film Scanner, 35mm Negative Scanne...",
-    desc: "3.7 ⭐ $39.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71z8cGgjj-L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0GFN8PQ4X",
-    title: "35mm Film & Slide Scanner with 2.4\" LCD Screen,...",
-    desc: "3.7 ⭐ $69.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61tX1vET2LL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07ZXZRR24",
-    title: "Plustek OpticFilm 135i - Automatic Film & Slide...",
-    desc: "4 ⭐ $529.00. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81iOWstYVUL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B09MHK6Q7D",
-    title: "Plustek OpticFilm 8300i SE - 35mm Negative Film...",
-    desc: "4 ⭐ $429.00. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81n6vOWEzNL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B00E1O74SW",
-    title: "Epson Perfection V550 Color Photo, Image, Film,...",
-    desc: "4.2 ⭐ $998.00. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61TSYEi3eeL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B002Y4Z244",
-    title: "Epson Perfection V600 Photo Wired USB Connectiv...",
-    desc: "4 ⭐ $1,150.00. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61IK69emp2L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0FPMR96X6",
-    title: "HP Film & Slide Scanner, Photo Scanner, 7\" Touc...",
-    desc: "4 ⭐ $249.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71xaLbJk3+L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B09L7NDNFG",
-    title: "Plustek OpticFilm 8300i Ai Film Scanner - Ai St...",
-    desc: "4 ⭐ $539.00. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81hYLRFLDwL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B009PHCWL4",
-    title: "Plustek OpticFilm 8100-35mm Negative Film/Slide...",
-    desc: "4 ⭐ $349.00. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71f3zQ5hn+L._AC_UL320_.jpg"
-  },
-  {
-    asin: "B07ZXZRR24",
-    title: "Plustek OpticFilm 135i - Automatic Film & Slide...",
-    desc: "4 ⭐ $529.00. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/81iOWstYVUL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B008ASJ2Z8",
-    title: "Plustek OpticFilm 8200i SE , 35mm Film & Slide ...",
-    desc: "4 ⭐ $399.00. Get the best gear for your photography workflow.",
+    asin: "B07YFGG1SD",
+    title: "SanDisk 128GB Ultra SDXC UHS-I Memory Card - 10...",
+    desc: "4.7 ⭐ $32.95. Get the best gear for your photography workflow.",
     badge: "Top Pick",
     btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/816yvfCOXwL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/619vrnD+NoL._AC_UY218_.jpg"
   },
   {
-    asin: "B0GLXW1VXW",
-    title: "Plustek OpticFilm 9000i Ai Film Scanner – 3rd G...",
-    desc: "4.2 ⭐ $599.00. Get the best gear for your photography workflow.",
+    asin: "B0G8LT6J46",
+    title: "SANDISK 128GB Extreme SD Memory Card, Up to 230...",
+    desc: "4.7 ⭐ $44.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/71hkTYnMGcL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0B7NS71G2",
+    title: "SanDisk 128GB Ultra SDXC UHS-I Memory Card, Up ...",
+    desc: "4.7 ⭐ $33.91. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61U2kZ3XZnL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B093BTSZ55",
+    title: "【5-Years Data Recovery】GIGASTONE 128GB SD Card ...",
+    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/51RvgV9EgWL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B08TJRVWV1",
+    title: "Amazon Basics microSDXC Memory Card with Full S...",
+    desc: "4.7 ⭐ $35.14. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61VgI87HGgL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B09X7FXHVJ",
+    title: "SANDISK 128GB Extreme PRO SD Memory Card, Up to...",
+    desc: "4.8 ⭐ $62.49. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81wwLOgkLgL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0G8L1RNPF",
+    title: "SANDISK 128GB Ultra microSD UHS-I Card - Up to ...",
+    desc: "4.6 ⭐ $35.99. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/51UsBWNwbPL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0G8LS3LXG",
+    title: "SANDISK 128GB Ultra SD Memory Card, Up to 195MB...",
+    desc: "4.5 ⭐ $35.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71HtQWwG1DL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07XD1WCQP",
+    title: "GIGASTONE 128GB SD Card 2-Pack, Camera Plus, UH...",
+    desc: "4.6 ⭐ $88.98. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/51PF1wlBVhL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0GRZVVHWM",
+    title: "5-Pack 128GB Micro SD Card for Dashcam & Securi...",
+    desc: "4.2 ⭐ $89.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/716tr7zmxkL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B093BTSZ55",
+    title: "【5-Years Data Recovery】GIGASTONE 128GB SD Card ...",
+    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/51RvgV9EgWL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B07XD1WCQP",
+    title: "GIGASTONE 128GB SD Card 2-Pack, Camera Plus, UH...",
+    desc: "4.6 ⭐ $88.98. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/51PF1wlBVhL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B08GGFCZPW",
+    title: "Lexar 128GB 2000x SD Memory Card, 300MB/s Read,...",
+    desc: "4.7 ⭐ $201.90. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81SPE0qDcnL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B07XG2X54Z",
+    title: "GIGASTONE 128GB Micro SD Card 2-Pack, A1 V30 4K...",
+    desc: "4.6 ⭐ $68.98. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/6135X0P2cML._AC_UL320_.jpg"
+  },
+  {
+    asin: "B09XZ6BCYG",
+    title: "PNY 128GB Elite-X C10 U3 V30 SDXC Flash Memory ...",
+    desc: "4.6 ⭐ $57.75. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61kykQSnnSL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B013TMNPBQ",
+    title: "Made for Amazon SanDisk 128GB microSD Memory Ca...",
+    desc: "4.6 ⭐ $25.95. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/81dQGd03YHL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0B7NVV55M",
+    title: "SANDISK 128GB Ultra microSD Card + Adapter Up t...",
+    desc: "4.7 ⭐ $66.61. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/71Ow-Ih7KNL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B07XG2X54Z",
+    title: "GIGASTONE 128GB Micro SD Card 2-Pack, A1 V30 4K...",
+    desc: "4.6 ⭐ $68.98. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/6135X0P2cML._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0G8LLXFJH",
+    title: "SANDISK 128GB Extreme microSD Card + Adapter, U...",
+    desc: "4.7 ⭐ $42.99. Get the best gear for your photography workflow.",
+    badge: "Pro Choice",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/61Eo50aAKpL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0BDYVC5TD",
+    title: "SanDisk 128GB Ultra microSDXC UHS-I Memory Card...",
+    desc: "4.7 ⭐ $29.99. Get the best gear for your photography workflow.",
+    badge: "Deal",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/51FeeXHe1nL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0BJRVB9Y4",
+    title: "SanDisk SDSDXXD-128G-ANCIN 128gb Extreme Pro Sd...",
+    desc: "4.8 ⭐ $64.95. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/61lvlfaYsPL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0D6KJH17Y",
+    title: "2 Pack Memory Card 128GB with Adapter, High Spe...",
+    desc: "4.4 ⭐ $39.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/51n7oi7GDzL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B0BZS4G11Z",
+    title: "【5-Yrs Free Data Recovery】 GIGASTONE 64GB SD Ca...",
+    desc: "4.7 ⭐ $39.99. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/41hk3QPZYIL._AC_UY218_.jpg"
+  },
+  {
+    asin: "B093BTSZ55",
+    title: "【5-Years Data Recovery】GIGASTONE 128GB SD Card ...",
+    desc: "4.6 ⭐ $49.99. Get the best gear for your photography workflow.",
+    badge: "Top Pick",
+    btnClass: "btn-secondary",
+    img: "https://m.media-amazon.com/images/I/51RvgV9EgWL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B08GGFCZPW",
+    title: "Lexar 128GB 2000x SD Memory Card, 300MB/s Read,...",
+    desc: "4.7 ⭐ $201.90. Get the best gear for your photography workflow.",
+    badge: "Popular",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/81SPE0qDcnL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B09XR2MTHK",
+    title: "Lexar E-Series 128GB 2 PK Micro SD Card microSD...",
+    desc: "4.7 ⭐ $64.99. Get the best gear for your photography workflow.",
     badge: "Essential",
     btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/81NXp1OuZEL._AC_UL320_.jpg"
+    img: "https://m.media-amazon.com/images/I/61FOBS-FZbL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B0GRZVVHWM",
+    title: "5-Pack 128GB Micro SD Card for Dashcam & Securi...",
+    desc: "4.2 ⭐ $89.99. Get the best gear for your photography workflow.",
+    badge: "Essential",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/716tr7zmxkL._AC_UL320_.jpg"
+  },
+  {
+    asin: "B07XG2X54Z",
+    title: "GIGASTONE 128GB Micro SD Card 2-Pack, A1 V30 4K...",
+    desc: "4.6 ⭐ $68.98. Get the best gear for your photography workflow.",
+    badge: "Storage",
+    btnClass: "btn-primary",
+    img: "https://m.media-amazon.com/images/I/6135X0P2cML._AC_UL320_.jpg"
   }
 ];
 
