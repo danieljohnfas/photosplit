@@ -35,7 +35,7 @@ files.forEach((file) => {
   pageHeader = pageHeader.replace(/<!-- NAV_ACTIVE_[A-Z]+ -->/g, "");
 
   if (file === "app.html") {
-    pageHeader = pageHeader.replace("<!-- INJECT_APP_VOICE_TOGGLE -->", `<button class="btn btn-secondary btn-sm btn-voice-toggle" id="btn-voice-toggle" onclick="PremiumEngine.toggleVoice()">🎙️ Voice Control</button>`);
+    pageHeader = pageHeader.replace("<!-- INJECT_APP_VOICE_TOGGLE -->", "");
     pageHeader = pageHeader.replace("<!-- INJECT_APP_TOOLS -->", `<button aria-label="Toggle sounds" class="icon-btn" id="sound-toggle" title="Mute sounds">🔊</button>`);
     pageHeader = pageHeader.replace("<!-- INJECT_APP_SHORTCUTS -->", `<button aria-label="Show keyboard shortcuts" class="icon-btn" id="btn-shortcuts" title="Keyboard shortcuts"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="16"><rect height="12" rx="2" width="20" x="2" y="6"></rect><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M8 14h8"></path></svg></button>`);
   } else {

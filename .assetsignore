@@ -10,3 +10,20 @@ wrangler.jsonc
 .idea/
 .vscode/
 scratch/
+
+# Internal files (never public)
+/reports/
+/logs/
+/scripts/
+/tests/
+/package.json
+/package-lock.json
+/*.md
+/build.js
+/clean-blog.js
+/add_lazy_loading.js
+/fix_index.js
+/remove_tool_sidebar.js
+/scrape.js
+/test_jsdom.js
+/widen.js

@@ -1,285 +1,91 @@
 const AMAZON_TAG = 'photoid03-20';
 
+function amazonSearch(query) {
+  return `https://www.amazon.com/s?k=${encodeURIComponent(query)}&tag=${AMAZON_TAG}`;
+}
+
+// Photo-digitising gear on Amazon. Each entry is an Amazon search with our tag, so no prices,
+// ratings or product images are copied onto the site (Amazon requires those to be live).
 let AMAZON_PRODUCTS = [
   {
-    asin: "https://www.pcloud.com/",
-    title: "pCloud - Secure Cloud Storage",
-    desc: "Swiss data protection. Store, share and access all your files.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/home.png"
+    asin: amazonSearch('Epson FastFoto FF-680W'),
+    title: 'Epson FastFoto FF-680W',
+    desc: 'Feeds a whole stack of prints in one pass. The fastest way to scan a shoebox of photos.',
+    badge: 'Scanner',
+    icon: '🗂️',
+    btnClass: "btn-secondary"
   },
   {
-    asin: "https://www.pcloud.com/family",
-    title: "pCloud Family Plan",
-    desc: "Share up to 2TB with up to 5 family members. Lifetime access.",
-    badge: "Family",
-    btnClass: "btn-secondary",
-    img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/family.png"
+    asin: amazonSearch('flatbed photo scanner'),
+    title: 'Flatbed photo scanner',
+    desc: 'Lay several prints on the glass, scan once, then split them here.',
+    badge: 'Scanner',
+    icon: '🖨️',
+    btnClass: "btn-secondary"
   },
   {
-    asin: "https://www.pcloud.com/crypto",
-    title: "pCloud Crypto",
-    desc: "Unbreakable client-side encryption for your most sensitive files.",
-    badge: "Security",
-    btnClass: "btn-secondary",
-    img: "https://www.pcloud.com/pcdn-www.pcloud.com/ZWa5E/images/social_img/crypto.png"
+    asin: amazonSearch('35mm film negative scanner'),
+    title: '35mm film negative scanner',
+    desc: 'Turn negatives and slides into digital photos.',
+    badge: 'Film',
+    icon: '🎞️',
+    btnClass: "btn-secondary"
   },
   {
-    asin: "B084SD48DM",
-    title: "Blink USB Flash Drive for local video storage w...",
-    desc: "4.5 ⭐ $14.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/4181StaKQnL._AC_UY218_.jpg"
+    asin: amazonSearch('archival photo storage box acid free'),
+    title: 'Archival photo storage box acid free',
+    desc: 'Keep the originals safe after scanning.',
+    badge: 'Storage',
+    icon: '📦',
+    btnClass: "btn-secondary"
   },
   {
-    asin: "B0CSW6375K",
-    title: "JOIOT 128GB USB C Flash Drive Dual USB 3.0 Flas...",
-    desc: "4.4 ⭐ $24.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51GkKZt1VlL._AC_UY218_.jpg"
+    asin: amazonSearch('portable ssd 1tb'),
+    title: 'Portable ssd 1tb',
+    desc: 'A fast backup drive for your scanned archive.',
+    badge: 'Storage',
+    icon: '💾',
+    btnClass: "btn-secondary"
   },
   {
-    asin: "B0DH1MKVQV",
-    title: "Lexar D40E 128GB Dual USB 3.2 Gen 1 Type-C Jump...",
-    desc: "4.3 ⭐ $26.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/5170woTzckL._AC_UY218_.jpg"
+    asin: amazonSearch('wifi digital photo frame'),
+    title: 'Wifi digital photo frame',
+    desc: 'Share the scanned photos with family on a frame.',
+    badge: 'Frame',
+    icon: '🖼️',
+    btnClass: "btn-secondary"
   },
   {
-    asin: "B09DBTWWSF",
-    title: "PNY 128GB Turbo Attaché 3 USB 3.0 Flash Drive 2...",
-    desc: "4.6 ⭐ $27.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61s1hIk7tXL._AC_UY218_.jpg"
+    asin: amazonSearch('anti static brush photo cleaning'),
+    title: 'Anti static brush photo cleaning',
+    desc: 'Remove dust before scanning for cleaner results.',
+    badge: 'Scanner care',
+    icon: '🧹',
+    btnClass: "btn-secondary"
   },
   {
-    asin: "B0HJ8HHM1Q",
-    title: "USB Flash Drive 64GB Dual Thumb Drive,USB C and...",
-    desc: "$14.89. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/41gYzqhNZrL._AC_UY218_.jpg"
+    asin: amazonSearch('archival photo album'),
+    title: 'Archival photo album',
+    desc: 'Re-house prints in acid-free pages.',
+    badge: 'Album',
+    icon: '📔',
+    btnClass: "btn-secondary"
   },
   {
-    asin: "B015CH1PJU",
-    title: "SANDISK 128GB Ultra Flair, USB-A Flash Drive, U...",
-    desc: "4.6 ⭐ $25.01. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61DaP3ryRKL._AC_UY218_.jpg"
+    asin: amazonSearch('cotton gloves photo handling'),
+    title: 'Cotton gloves photo handling',
+    desc: 'Handle old prints without leaving fingerprints.',
+    badge: 'Handling',
+    icon: '🧤',
+    btnClass: "btn-secondary"
   },
   {
-    asin: "B0DW8F12BW",
-    title: "32GB USB C Flash Drive Dual USB 3.0 Type C + US...",
-    desc: "4.5 ⭐ $15.19. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51ruGlRQeVL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F8VWPYNC",
-    title: "Swivel Design 16GB USB Flash Drive with Keychai...",
-    desc: "4.6 ⭐ $8.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/5182C62G4QL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0DH1CQ5RL",
-    title: "Lexar D40E 64GB Dual USB 3.2 Gen 1 Type-C Jump ...",
-    desc: "4.3 ⭐ $20.80. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51ohr+jN+BL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07S4GGHNR",
-    title: "SIMMAX 32GB Memory Stick USB 2.0 Flash Drives S...",
-    desc: "4.6 ⭐ $9.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61AZvkftK7L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0DHVQBQLQ",
-    title: "8GB Flash Drive 10 Pack Bulk USB Flash Drives, ...",
-    desc: "4.5 ⭐ $30.88. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/71blLwEjZ9L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B07XSGNQ2X",
-    title: "2 Pack 64GB USB Flash Drive USB 2.0 Thumb Drive...",
-    desc: "4.5 ⭐ $18.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/5175s67dwwL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B00BX5FOCK",
-    title: "SANDISK 64GB Cruzer Blade, USB-A Flash Drive, B...",
-    desc: "4.6 ⭐ $12.50. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61ERDR3tATL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F9YGYJDL",
-    title: "GIGASTONE 64GB Dual USB Flash Drive 5-Pack, USB...",
-    desc: "4.8 ⭐ $69.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/513vC0c4MML._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0CSW6375K",
-    title: "JOIOT 128GB USB C Flash Drive Dual USB 3.0 Flas...",
-    desc: "4.4 ⭐ $24.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51GkKZt1VlL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0F98YGMV7",
-    title: "Lexar A30E USB 3.2 Gen 1 Flash Drive 128GB 2-Pack",
-    desc: "4.6 ⭐ $39.99. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61cXbsJvF9L._AC_UL320_.jpg"
-  },
-  {
-    asin: "B07XSGNQ2X",
-    title: "2 Pack 64GB USB Flash Drive USB 2.0 Thumb Drive...",
-    desc: "4.5 ⭐ $18.99. Get the best gear for your photography workflow.",
-    badge: "Top Pick",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/5175s67dwwL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0DW8F12BW",
-    title: "32GB USB C Flash Drive Dual USB 3.0 Type C + US...",
-    desc: "4.5 ⭐ $15.19. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51ruGlRQeVL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B082ZGHXK8",
-    title: "SamData 32GB USB Flash Drives 2 Pack 32GB Thumb...",
-    desc: "4.5 ⭐ $16.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/71ULtE83xWL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B015CH1NAQ",
-    title: "SANDISK 64GB Ultra Flair, USB-A Flash Drive, Up...",
-    desc: "4.6 ⭐ $18.15. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61DaP3ryRKL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B08HW32VG6",
-    title: "PNY 32GB Turbo Attaché 3 USB 3.0 Flash Drive 5-...",
-    desc: "4.6 ⭐ $32.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/517pH++UAjL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F9YGYJDL",
-    title: "GIGASTONE 64GB Dual USB Flash Drive 5-Pack, USB...",
-    desc: "4.8 ⭐ $69.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/513vC0c4MML._AC_UY218_.jpg"
-  },
-  {
-    asin: "B08CGXYNKV",
-    title: "128GB Flash Drive Aiibe USB Flash Drive 128 GB ...",
-    desc: "4.3 ⭐ $17.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51SmhZjEI0L._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0BPJVH88Y",
-    title: "PNY 32GB Turbo Attaché 3 USB 3.0 Flash Drive 10...",
-    desc: "4.6 ⭐ $50.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/616cOXMmVZL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0H1G8JBBW",
-    title: "8GB Flash Drive ENUODA 1 Pack Thumb Drive 8GB U...",
-    desc: "4.3 ⭐ $6.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61UCH9EB+BL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0DDYCT5YS",
-    title: "PNY 128GB Turbo Attaché 3 USB 3.0 Flash Drive 5...",
-    desc: "4.6 ⭐ $59.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/6155RbbYkAL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0F6MXMDVX",
-    title: "32GB Dual Flash Drive, USB-A + Type-C Thumb Drive",
-    desc: "4.2 ⭐ $14.99. Get the best gear for your photography workflow.",
-    badge: "Essential",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51XilkJELoL._AC_UY218_.jpg"
-  },
-  {
-    asin: "B0CSW6375K",
-    title: "JOIOT 128GB USB C Flash Drive Dual USB 3.0 Flas...",
-    desc: "4.4 ⭐ $24.99. Get the best gear for your photography workflow.",
-    badge: "Popular",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/51GkKZt1VlL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0BY317K3Z",
-    title: "GIGASTONE 128GB Flash Drive 5-Pack, USB 3.2 Gen...",
-    desc: "4.6 ⭐ $99.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/51O8YA-wWCL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B07PXQ81YH",
-    title: "USB 3.0 Flash Drive KOOTION 10 Pack 32GB Thumb ...",
-    desc: "4.5 ⭐ $67.44. Get the best gear for your photography workflow.",
-    badge: "Pro Choice",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61G7boSqjQL._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0BWSJKXHB",
-    title: "ThePhotoStick® Omni 128GB Photo Backup for iPho...",
-    desc: "4.2 ⭐ $169.99. Get the best gear for your photography workflow.",
-    badge: "Deal",
-    btnClass: "btn-secondary",
-    img: "https://m.media-amazon.com/images/I/61K3vk790-L._AC_UL320_.jpg"
-  },
-  {
-    asin: "B0F98YGMV7",
-    title: "Lexar A30E USB 3.2 Gen 1 Flash Drive 128GB 2-Pack",
-    desc: "4.6 ⭐ $39.99. Get the best gear for your photography workflow.",
-    badge: "Storage",
-    btnClass: "btn-primary",
-    img: "https://m.media-amazon.com/images/I/61cXbsJvF9L._AC_UL320_.jpg"
+    asin: amazonSearch('microfiber lens cloth scanner glass'),
+    title: 'Microfiber lens cloth scanner glass',
+    desc: 'Keep the scanner glass streak-free.',
+    badge: 'Scanner care',
+    icon: '✨',
+    btnClass: "btn-secondary"
   }
 ];
 
@@ -304,7 +110,7 @@ function getContextualProducts() {
   if (url.includes('convert') || url.includes('transcribe')) boostKeyword = 'storage';
   else if (url.includes('crop') || url.includes('resize') || url.includes('passport')) boostKeyword = 'frame';
   else if (url.includes('app')) boostKeyword = 'scanner';
-  else if (url.includes('blog')) boostKeyword = 'pcloud';
+  else if (url.includes('blog')) boostKeyword = 'storage';
 
   // Shuffle randomly first
   products = products.sort(() => 0.5 - Math.random());
@@ -330,9 +136,9 @@ function getAmazonLink(asin) {
   return `https://www.amazon.com/dp/${asin}/?tag=${AMAZON_TAG}`;
 }
 
-function getAmazonImageUrl(asin) {
-  const product = AMAZON_PRODUCTS.find(p => p.asin === asin);
-  return product && product.img ? product.img : `https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=400&auto=format&fit=crop`;
+// Products carry an emoji icon instead of a copied product photo.
+function productVisual(product, fontSize) {
+  return `<span aria-hidden="true" style="font-size:${fontSize}; line-height:1;">${product.icon || '📷'}</span>`;
 }
 
 function trackAdClick(asin, slot) {
@@ -356,8 +162,7 @@ function renderSidebarWidgets() {
 
   products.forEach(product => {
     const link = getAmazonLink(product.asin);
-    const img = getAmazonImageUrl(product.asin);
-    const btnText = product.asin.startsWith('http') ? 'View Details' : 'View on Amazon';
+    const btnText = 'Shop on Amazon';
     const badgeBg = product.badge === 'Top Pick' ? 'var(--accent-grad)' : 'var(--bg-surface-2)';
     const badgeColor = product.badge === 'Top Pick' ? '#fff' : 'var(--text-primary)';
     const badgeBorder = product.badge === 'Top Pick' ? 'none' : '1px solid var(--border-strong)';
@@ -367,9 +172,9 @@ function renderSidebarWidgets() {
       <div style="margin-bottom: 24px; position: relative;">
         <div style="position: absolute; top: -10px; left: 16px; background: ${badgeBg}; color: ${badgeColor}; border: ${badgeBorder}; padding: 4px 12px; border-radius: 99px; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; z-index: 10; box-shadow: ${badgeShadow};">${product.badge}</div>
         <div class="glass-ad-panel" style="padding: 24px 16px 16px; border: 1px solid var(--border-strong); border-radius: var(--radius-lg); text-align: center; background: var(--bg-surface); box-shadow: var(--shadow-sm);">
-          <a href="${link}" target="_blank" rel="nofollow noopener" onclick="trackAdClick('${product.asin}', 'sidebar')" style="display:block; text-decoration:none; color:inherit; outline:none;">
+          <a href="${link}" target="_blank" rel="sponsored nofollow noopener" onclick="trackAdClick('${product.asin}', 'sidebar')" style="display:block; text-decoration:none; color:inherit; outline:none;">
             <div style="background: white; border-radius: var(--radius-md); padding: 12px; margin-bottom: 16px; display:flex; justify-content:center; align-items:center; min-height:160px;">
-              <img src="${img}" loading="lazy" alt="${product.title}" style="width:100%; object-fit: contain; max-height: 140px; border: none;">
+              ${productVisual(product, "4rem")}
             </div>
             <h4 style="font-weight: 800; font-size: 1.05rem; margin: 0 0 8px; color: var(--text-primary);">${product.title}</h4>
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0 0 16px; line-height: 1.4;">${product.desc}</p>
@@ -399,13 +204,12 @@ function renderTopBanner() {
 
   products.forEach(product => {
     const link = getAmazonLink(product.asin);
-    const img = getAmazonImageUrl(product.asin);
-    const btnText = product.asin.startsWith('http') ? 'View Details' : 'View on Amazon';
+    const btnText = 'Shop on Amazon';
 
     html += `
-      <a href="${link}" target="_blank" rel="nofollow noopener" onclick="trackAdClick('${product.asin}', 'top')" style="flex: 1; min-width: 250px; display:flex; align-items:center; text-decoration:none; color:inherit; background:var(--bg-surface); padding: 16px; border-radius: var(--radius-lg); border: 1px solid var(--border-strong); gap: 16px; box-shadow: var(--shadow-sm); outline:none; position:relative;">
+      <a href="${link}" target="_blank" rel="sponsored nofollow noopener" onclick="trackAdClick('${product.asin}', 'top')" style="flex: 1; min-width: 250px; display:flex; align-items:center; text-decoration:none; color:inherit; background:var(--bg-surface); padding: 16px; border-radius: var(--radius-lg); border: 1px solid var(--border-strong); gap: 16px; box-shadow: var(--shadow-sm); outline:none; position:relative;">
         <div style="background: white; border-radius: var(--radius-sm); padding: 8px; flex-shrink: 0; width: 90px; height: 90px; display:flex; justify-content:center; align-items:center;">
-          <img src="${img}" loading="lazy" alt="${product.title}" style="max-height: 100%; max-width: 100%; object-fit: contain; border: none;">
+          ${productVisual(product, "2.5rem")}
         </div>
         <div style="text-align:left; flex: 1;">
           <h4 style="font-weight:800; font-size: 1rem; margin: 0 0 6px; color: var(--text-primary);">${product.title}</h4>
@@ -436,12 +240,11 @@ function renderBottomBanner() {
 
   products.forEach(product => {
     const link = getAmazonLink(product.asin);
-    const img = getAmazonImageUrl(product.asin);
 
     html += `
-      <a href="${link}" target="_blank" rel="nofollow noopener" onclick="trackAdClick('${product.asin}', 'bottom')" style="display:flex; align-items:center; text-decoration:none; color:inherit; gap: 16px; background: var(--bg-surface-2); padding: 8px 16px; border-radius: 99px; border: 1px solid var(--border-strong);">
+      <a href="${link}" target="_blank" rel="sponsored nofollow noopener" onclick="trackAdClick('${product.asin}', 'bottom')" style="display:flex; align-items:center; text-decoration:none; color:inherit; gap: 16px; background: var(--bg-surface-2); padding: 8px 16px; border-radius: 99px; border: 1px solid var(--border-strong);">
         <div style="background: white; border-radius: 50%; padding: 4px; width: 48px; height: 48px; display:flex; justify-content:center; align-items:center;">
-          <img src="${img}" loading="lazy" alt="${product.title}" style="height:36px; max-width: 36px; object-fit: contain; border: none;">
+          ${productVisual(product, "1.6rem")}
         </div>
         <div style="text-align:left;">
           <p style="font-weight:700; font-size: 0.9em; margin: 0 0 2px;">${product.title}</p>
@@ -466,10 +269,9 @@ function renderInlineBanner() {
   let html = `<div class="ad-container ad-banner-inline" style="display:flex; flex-wrap:wrap; gap:16px; margin:24px 0;">`;
   products.forEach(p => {
     const link = getAmazonLink(p.asin);
-    const img = getAmazonImageUrl(p.asin);
     html += `
-      <a href="${link}" target="_blank" rel="nofollow noopener" onclick="trackAdClick('${p.asin}', 'inline')" style="flex:1; min-width:250px; display:flex; align-items:center; background:var(--bg-surface); padding:12px; border-radius:var(--radius-lg); border:1px solid var(--border-strong); box-shadow:var(--shadow-sm); text-decoration:none; color:inherit;">
-        <img src="${img}" loading="lazy" style="width:60px; height:60px; object-fit:contain; background:white; padding:4px; border-radius:var(--radius-sm); margin-right:16px;" alt="${p.title}">
+      <a href="${link}" target="_blank" rel="sponsored nofollow noopener" onclick="trackAdClick('${p.asin}', 'inline')" style="flex:1; min-width:250px; display:flex; align-items:center; background:var(--bg-surface); padding:12px; border-radius:var(--radius-lg); border:1px solid var(--border-strong); box-shadow:var(--shadow-sm); text-decoration:none; color:inherit;">
+        ${productVisual(p, "2.5rem")}
         <div>
           <h4 style="margin:0 0 4px; font-size:0.9rem; font-weight:800; color:var(--text-primary);">${p.title}</h4>
           <p style="margin:0 0 6px; font-size:0.78rem; color:var(--text-secondary);">${p.desc}</p>
@@ -489,11 +291,10 @@ function renderGridWidget() {
   let html = `<div class="ad-container ad-widget-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:16px; margin:24px 0;">`;
   products.forEach(p => {
     const link = getAmazonLink(p.asin);
-    const img = getAmazonImageUrl(p.asin);
     const btnText = p.asin.startsWith('http') ? 'View Details' : 'View on Amazon';
     html += `
-      <a href="${link}" target="_blank" rel="nofollow noopener" onclick="trackAdClick('${p.asin}', 'grid')" style="display:flex; flex-direction:column; align-items:center; background:var(--bg-surface); padding:16px; border-radius:var(--radius-lg); border:1px solid var(--border-strong); box-shadow:var(--shadow-sm); text-decoration:none; color:inherit; text-align:center;">
-        <img src="${img}" loading="lazy" style="width:100px; height:100px; object-fit:contain; background:white; padding:8px; border-radius:var(--radius-md); margin-bottom:12px;" alt="${p.title}">
+      <a href="${link}" target="_blank" rel="sponsored nofollow noopener" onclick="trackAdClick('${p.asin}', 'grid')" style="display:flex; flex-direction:column; align-items:center; background:var(--bg-surface); padding:16px; border-radius:var(--radius-lg); border:1px solid var(--border-strong); box-shadow:var(--shadow-sm); text-decoration:none; color:inherit; text-align:center;">
+        ${productVisual(p, "3rem")}
         <h4 style="margin:0 0 8px; font-size:0.85rem; font-weight:700; color:var(--text-primary);">${p.title}</h4>
         <p style="margin:0 0 8px; font-size:0.75rem; color:var(--text-secondary); line-height:1.3;">${p.desc}</p>
         <span class="btn ${p.btnClass} btn-sm" style="font-size:0.75rem; padding:6px 12px;">${btnText}</span>
