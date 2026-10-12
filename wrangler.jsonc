@@ -6,6 +6,16 @@
     "enabled": true,
   },
   "assets": {
-    "directory": ".",
+    "directory": "."
   },
+  "routes": [
+    {
+      "pattern": "photosplitstudio.com",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.photosplitstudio.com",
+      "custom_domain": true
+    }
+  ]
 }
