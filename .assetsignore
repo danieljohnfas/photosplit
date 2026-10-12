@@ -24,6 +24,5 @@ scratch/
 /add_lazy_loading.js
 /fix_index.js
 /remove_tool_sidebar.js
-/scrape.js
 /test_jsdom.js
 /widen.js
